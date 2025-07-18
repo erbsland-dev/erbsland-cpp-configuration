@@ -1,0 +1,15 @@
+# Copyright (c) 2023-2025 Tobias Erbsland - https://erbsland.dev
+# SPDX-License-Identifier: Apache-2.0
+
+
+header = """
+// Copyright © {year} Tobias Erbsland - https://erbsland.dev
+// SPDX-License-Identifier: Apache-2.0
+#pragma once
+
+
+"""
+
+excluded_directories = ["impl"]
+create_global_includes = false
+create_all_base_dir = ''
