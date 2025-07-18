@@ -1,10 +1,10 @@
-# Copyright (c) 2024 Tobias Erbsland - https://erbsland.dev
+# Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
 # SPDX-License-Identifier: Apache-2.0
 
 cmake_minimum_required(VERSION 3.23)
 
 project(erbsland-configuration-parser CXX)
-option(ERBSLAND_CONFIGURATION_ENABLE_TESTS "Enable unit tests" ON)
+option(ERBSLAND_CONFIGURATION_ENABLE_TESTS "Enable unit tests" OFF)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
