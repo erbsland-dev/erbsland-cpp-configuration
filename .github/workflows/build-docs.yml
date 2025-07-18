@@ -23,6 +23,13 @@ jobs:
       - name: Build documentation
         run: sphinx-build doc _build
 
+      - name: Set CNAME if in public repo
+        id: cname
+        run: |
+          if [ "${{ github.repository }}" = "erbsland-dev/erbsland-cpp-configuration" ]; then
+            echo "CNAME=cpp-configuration.erbsland.dev" >> $GITHUB_ENV
+          fi
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
@@ -31,3 +38,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _build/
           force_orphan: true
+          cname: ${{ env.CNAME }}
