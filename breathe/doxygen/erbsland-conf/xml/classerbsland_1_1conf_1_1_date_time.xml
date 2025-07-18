@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_date_time" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::DateTime</compoundname>
+    <includes refid="_date_time_8hpp" local="no">erbsland/conf/DateTime.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_date_time_1a46161e9bbffdbd23c0d2e17f8bfd7c11" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref></type>
+        <definition>Date erbsland::conf::DateTime::_date</definition>
+        <argsstring></argsstring>
+        <name>_date</name>
+        <qualifiedname>erbsland::conf::DateTime::_date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="79" column="10" bodyfile="erbsland/conf/DateTime.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_date_time_1ac330571caba84f1362fb8154ea0cb750" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time erbsland::conf::DateTime::_time</definition>
+        <argsstring></argsstring>
+        <name>_time</name>
+        <qualifiedname>erbsland::conf::DateTime::_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="80" column="10" bodyfile="erbsland/conf/DateTime.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1ad5d7893dea306ef69cf72b7bf6a6e70a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::DateTime::DateTime</definition>
+        <argsstring>()=default</argsstring>
+        <name>DateTime</name>
+        <qualifiedname>erbsland::conf::DateTime::DateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an undefined date-time value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1a33d92e9ca85a9dc0be934526a0901780" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FwdDate</type>
+          </param>
+          <param>
+            <type>typename FwdTime</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>erbsland::conf::DateTime::DateTime</definition>
+        <argsstring>(FwdDate &amp;&amp;date, FwdTime &amp;&amp;time)</argsstring>
+        <name>DateTime</name>
+        <qualifiedname>erbsland::conf::DateTime::DateTime</qualifiedname>
+        <param>
+          <type>FwdDate &amp;&amp;</type>
+          <declname>date</declname>
+        </param>
+        <param>
+          <type>FwdTime &amp;&amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new date-time value.</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FwdDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A date type that can be forwarded to the internal <computeroutput><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref></computeroutput> constructor. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FwdTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A time type that can be forwarded to the internal <computeroutput><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref></computeroutput> constructor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The date component. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time component. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="37" column="5" bodyfile="erbsland/conf/DateTime.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1aa25b5873988bc4f74fea074f502bb81e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::DateTime::~DateTime</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DateTime</name>
+        <qualifiedname>erbsland::conf::DateTime::~DateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1a9666f770f6956b00df1b45a9d0d1eb17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::DateTime::DateTime</definition>
+        <argsstring>(const DateTime &amp;)=default</argsstring>
+        <name>DateTime</name>
+        <qualifiedname>erbsland::conf::DateTime::DateTime</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="43" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1a3eee07e5508bcf6374665e90c80e6de0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::DateTime::operator=</definition>
+        <argsstring>(const DateTime &amp;other) -&gt; DateTime &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::DateTime::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1a84c0a3d055c8df67e1310165421719e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::DateTime::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(const DateTime &amp;other, valueForComparison(), other.valueForComparison())</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::DateTime::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>valueForComparison()</type>
+        </param>
+        <param>
+          <type>other.</type>
+          <declname>valueForComparison</declname>
+          <array>()</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="47" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1a4c1aeee4bc29b27540db23c0dc8733cf" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::DateTime::isUndefined</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isUndefined</name>
+        <qualifiedname>erbsland::conf::DateTime::isUndefined</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="50" column="11" bodyfile="erbsland/conf/DateTime.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1aea23f4b0a06717e3a5075e86f5dfbb49" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::DateTime::date</definition>
+        <argsstring>() const noexcept -&gt; const Date &amp;</argsstring>
+        <name>date</name>
+        <qualifiedname>erbsland::conf::DateTime::date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="51" column="11" bodyfile="erbsland/conf/DateTime.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1a13da38408891320ad7992fa7e8d0a881" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::DateTime::time</definition>
+        <argsstring>() const noexcept -&gt; const Time &amp;</argsstring>
+        <name>time</name>
+        <qualifiedname>erbsland::conf::DateTime::time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="52" column="11" bodyfile="erbsland/conf/DateTime.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1ada8232d7b17460a1a69c566e9903e9b1" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::DateTime::toText</definition>
+        <argsstring>() const noexcept -&gt; String</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::DateTime::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this date-time into text.</para>
+<para>Uses the ISO format yyyy-mm-dd hh:mm:ss.zzz, with these rules:<itemizedlist>
+<listitem><para>If there are second fraction, only the minimum required digits for the fractions are displayed.</para>
+</listitem><listitem><para>For UTC times, the suffix <computeroutput>z</computeroutput> is added.</para>
+</listitem><listitem><para>For times with offset, the offset with hours and minutes <computeroutput>+02:00</computeroutput> is added.</para>
+</listitem><listitem><para>Local times have no suffix.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>The formatted date-time or an empty string for undefined date-times. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="65" column="11" bodyfile="erbsland/conf/DateTime.cpp" bodystart="9" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_time_1a95242510c840feff17be9860451f8edd" prot="private" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::DateTime::valueForComparison</definition>
+        <argsstring>() const noexcept -&gt; std::pair&lt; int64_t, int64_t &gt;</argsstring>
+        <name>valueForComparison</name>
+        <qualifiedname>erbsland::conf::DateTime::valueForComparison</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a pair for comparison. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DateTime.hpp" line="70" column="11" bodyfile="erbsland/conf/DateTime.hpp" bodystart="70" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A date-time value.</para>
+<para><simplesect kind="note"><para>As this date-time class is a simple wrapper, for time-comparison, local-time is assumed to be UTC. Query the current offset for a local-time, can be an expensive operation. To keep this wrapper simple, comparison is kept minimalistic. Date-times with different offsets are properly compared, with the offset applied to the compared point-in-time.</para>
+</simplesect>
+@tested <computeroutput>DateTimeTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/DateTime.hpp" line="22" column="1" bodyfile="erbsland/conf/DateTime.hpp" bodystart="22" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a46161e9bbffdbd23c0d2e17f8bfd7c11" prot="private" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>_date</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1ac330571caba84f1362fb8154ea0cb750" prot="private" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>_time</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1aea23f4b0a06717e3a5075e86f5dfbb49" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>date</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1ad5d7893dea306ef69cf72b7bf6a6e70a" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>DateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a33d92e9ca85a9dc0be934526a0901780" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>DateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a9666f770f6956b00df1b45a9d0d1eb17" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>DateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a84c0a3d055c8df67e1310165421719e2" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a4c1aeee4bc29b27540db23c0dc8733cf" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>isUndefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a3eee07e5508bcf6374665e90c80e6de0" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a13da38408891320ad7992fa7e8d0a881" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>time</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1ada8232d7b17460a1a69c566e9903e9b1" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1a95242510c840feff17be9860451f8edd" prot="private" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>valueForComparison</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_time_1aa25b5873988bc4f74fea074f502bb81e" prot="public" virt="non-virtual"><scope>erbsland::conf::DateTime</scope><name>~DateTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

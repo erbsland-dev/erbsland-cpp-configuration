@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structstd_1_1hash_3_01erbsland_1_1conf_1_1_bytes_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt; erbsland::conf::Bytes &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_01erbsland_1_1conf_1_1_bytes_01_4_1a52118939b10c94599f4bf12614a1c74e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto std::hash&lt; erbsland::conf::Bytes &gt;::operator()</definition>
+        <argsstring>(const erbsland::conf::Bytes &amp;bytes) const noexcept -&gt; std::size_t</argsstring>
+        <name>operator()</name>
+        <qualifiedname>std::hash&lt; erbsland::conf::Bytes &gt;::operator()</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">erbsland::conf::Bytes</ref> &amp;</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="157" column="10" bodyfile="erbsland/conf/Bytes.cpp" bodystart="118" bodyend="124"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/Bytes.hpp" line="156" column="1" bodyfile="erbsland/conf/Bytes.hpp" bodystart="156" bodyend="158"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_bytes_01_4_1a52118939b10c94599f4bf12614a1c74e" prot="public" virt="non-virtual"><scope>std::hash&lt; erbsland::conf::Bytes &gt;</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_value_type_8hpp" kind="file" language="C++">
+    <compoundname>ValueType.hpp</compoundname>
+    <includes refid="_string_8hpp" local="yes">String.hpp</includes>
+    <includes local="yes">impl/ComparisonHelper.hpp</includes>
+    <includes local="no">array</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_value_8hpp" local="yes">erbsland/conf/Value.hpp</includedby>
+    <includedby refid="_value_type_8cpp" local="yes">erbsland/conf/ValueType.cpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/ValueType.hpp</label>
+        <link refid="_value_type_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>format</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>impl/Char.hpp</label>
+      </node>
+      <node id="7">
+        <label>impl/ComparisonHelper.hpp</label>
+      </node>
+      <node id="8">
+        <label>impl/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="9">
+        <label>impl/PrivateTag.hpp</label>
+      </node>
+      <node id="11">
+        <label>ranges</label>
+      </node>
+      <node id="12">
+        <label>span</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/ValueType.hpp</label>
+        <link refid="_value_type_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_value_type" prot="public">erbsland::conf::ValueType</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_value_type_01_4" prot="public">std::hash&lt; erbsland::conf::ValueType &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_value_type_01_4" prot="public">std::formatter&lt; erbsland::conf::ValueType &gt;</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;String.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/ComparisonHelper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classerbsland_1_1conf_1_1_value_type" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref><sp/>:<sp/>uint8_t<sp/>{</highlight></codeline>
+<codeline lineno="24" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">Undefined</ref>,<sp/></highlight></codeline>
+<codeline lineno="25" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a6d4abf67909f4ab77943b195950f4278" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a6d4abf67909f4ab77943b195950f4278" kindref="member">Integer</ref>,<sp/></highlight></codeline>
+<codeline lineno="26" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" kindref="member">Boolean</ref>,<sp/></highlight></codeline>
+<codeline lineno="27" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a511d337895e97a4a194e23de7706bfff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a511d337895e97a4a194e23de7706bfff" kindref="member">Float</ref>,<sp/></highlight></codeline>
+<codeline lineno="28" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" kindref="member">Text</ref>,<sp/></highlight></codeline>
+<codeline lineno="29" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1b786bf2abf01f864066b4241b00bcca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1b786bf2abf01f864066b4241b00bcca" kindref="member">Date</ref>,<sp/></highlight></codeline>
+<codeline lineno="30" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a9fe19b5e3c7ae680c49b254a18ab96e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a9fe19b5e3c7ae680c49b254a18ab96e3" kindref="member">Time</ref>,<sp/></highlight></codeline>
+<codeline lineno="31" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1f8a79df0b06bfa910462ca0f5a904f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1f8a79df0b06bfa910462ca0f5a904f4" kindref="member">DateTime</ref>,<sp/></highlight></codeline>
+<codeline lineno="32" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ac2d8d76746222b3c28efb0b99ab86fd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ac2d8d76746222b3c28efb0b99ab86fd0" kindref="member">Bytes</ref>,<sp/></highlight></codeline>
+<codeline lineno="33" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a09c83bc8f80df12ba50f97e344b08b6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a09c83bc8f80df12ba50f97e344b08b6b" kindref="member">TimeDelta</ref>,<sp/></highlight></codeline>
+<codeline lineno="34" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" kindref="member">RegEx</ref>,<sp/></highlight></codeline>
+<codeline lineno="35" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" kindref="member">ValueList</ref>,<sp/></highlight></codeline>
+<codeline lineno="36" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" kindref="member">SectionList</ref>,<sp/></highlight></codeline>
+<codeline lineno="37" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434acc74814b39bf4cf31ec5620b4a6be3b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434acc74814b39bf4cf31ec5620b4a6be3b6" kindref="member">IntermediateSection</ref>,<sp/></highlight></codeline>
+<codeline lineno="38" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" kindref="member">SectionWithNames</ref>,<sp/></highlight></codeline>
+<codeline lineno="39" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" kindref="member">SectionWithTexts</ref>,<sp/></highlight></codeline>
+<codeline lineno="40" refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a3fef6257976ae5255feac9157a84941b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a3fef6257976ae5255feac9157a84941b" kindref="member">Document</ref>,<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46" refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classerbsland_1_1conf_1_1_value_type_1a98f4f6c286d515226abda97f2e6091bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a98f4f6c286d515226abda97f2e6091bd" kindref="member">ValueType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref><sp/>value)<sp/>noexcept<sp/>:<sp/>_value{value}<sp/>{}<sp/></highlight><highlight class="comment">//<sp/>NOLINT(*-explicit-constructor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>defaults</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>~ValueType()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref><sp/>&amp;)<sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref>&amp;<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref><sp/>value)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref>&amp;<sp/>{<sp/>_value<sp/>=<sp/>value;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value;<sp/>}<sp/></highlight><highlight class="comment">//<sp/>NOLINT(*-explicit-constructor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>comparison</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ERBSLAND_CONF_COMPARE_MEMBER(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref><sp/>&amp;other,<sp/>_value,<sp/>other._value);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>ERBSLAND_CONF_COMPARE_MEMBER(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref><sp/>value,<sp/>_value,<sp/>value);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>ERBSLAND_CONF_COMPARE_FRIEND(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref><sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" kindref="member">ValueType</ref><sp/>&amp;b,<sp/>a,<sp/>b._value);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>tests</highlight></codeline>
+<codeline lineno="69" refid="classerbsland_1_1conf_1_1_value_type_1afb17235251388e8a9af28758b25ed518" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1afb17235251388e8a9af28758b25ed518" kindref="member">isUndefined</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">Undefined</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classerbsland_1_1conf_1_1_value_type_1ab71af0e2a9cee5833a216dbdbc94eaf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1ab71af0e2a9cee5833a216dbdbc94eaf0" kindref="member">isMap</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" kindref="member">SectionWithTexts</ref><sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" kindref="member">SectionWithNames</ref><sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434acc74814b39bf4cf31ec5620b4a6be3b6" kindref="member">IntermediateSection</ref></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a3fef6257976ae5255feac9157a84941b" kindref="member">Document</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classerbsland_1_1conf_1_1_value_type_1a6ca4723c5f6e03d708e95c531f928c4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a6ca4723c5f6e03d708e95c531f928c4b" kindref="member">isList</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value<sp/>==<sp/>ValueList<sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" kindref="member">SectionList</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classerbsland_1_1conf_1_1_value_type_1a781cae0ccf37f00cd51a09d92cc05ef4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a781cae0ccf37f00cd51a09d92cc05ef4" kindref="member">isSingle</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value<sp/>==<sp/>Integer<sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" kindref="member">Boolean</ref><sp/>||<sp/>_value<sp/>==<sp/>Float<sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" kindref="member">Text</ref><sp/>||</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref><sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref><sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref><sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/>||</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>||<sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" kindref="member">RegEx</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>transformation</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a7466c35141a881d005a1304c17b94150" kindref="member">toText</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>const<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>&amp;;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>enumeration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>static<sp/>auto<sp/>all()<sp/>noexcept<sp/>-&gt;<sp/>const<sp/>std::array&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>,<sp/>17&gt;&amp;<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;ValueType,<sp/>17&gt;<sp/>values<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">Undefined</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a6d4abf67909f4ab77943b195950f4278" kindref="member">Integer</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" kindref="member">Boolean</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a511d337895e97a4a194e23de7706bfff" kindref="member">Float</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" kindref="member">Text</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1b786bf2abf01f864066b4241b00bcca" kindref="member">Date</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a9fe19b5e3c7ae680c49b254a18ab96e3" kindref="member">Time</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1f8a79df0b06bfa910462ca0f5a904f4" kindref="member">DateTime</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ac2d8d76746222b3c28efb0b99ab86fd0" kindref="member">Bytes</ref>,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a09c83bc8f80df12ba50f97e344b08b6b" kindref="member">TimeDelta</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" kindref="member">RegEx</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" kindref="member">ValueList</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" kindref="member">SectionList</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434acc74814b39bf4cf31ec5620b4a6be3b6" kindref="member">IntermediateSection</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" kindref="member">SectionWithNames</ref>,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" kindref="member">SectionWithTexts</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_document" kindref="compound">Document</ref></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref><sp/>_value{<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">Undefined</ref>};<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ValueToTextEntry<sp/>=<sp/>std::tuple&lt;Enum,<sp/>String&gt;;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ValueToTextMap<sp/>=<sp/>std::array&lt;ValueToTextEntry,<sp/>17&gt;;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ValueToTextMap<sp/>_valueToTextMap;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="119" refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_value_type_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::hash&lt;erbsland::conf::ValueType&gt;<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator()(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">erbsland::conf::ValueType</ref>&amp;<sp/>unit)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>-&gt;<sp/>std::size_t<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::hash&lt;std::underlying_type_t&lt;erbsland::conf::ValueType::Enum&gt;&gt;{}(</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">erbsland::conf::ValueType::Enum</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(unit));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="128" refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_value_type_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::formatter&lt;erbsland::conf::ValueType&gt;<sp/>:<sp/>std::formatter&lt;std::string&gt;<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">erbsland::conf::ValueType</ref><sp/>valueType,<sp/>format_context&amp;<sp/>ctx)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::formatter&lt;std::string&gt;::format(valueType.<ref refid="classerbsland_1_1conf_1_1_value_type_1a7466c35141a881d005a1304c17b94150" kindref="member">toText</ref>().toCharString(),<sp/>ctx);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/ValueType.hpp"/>
+  </compounddef>
+</doxygen>

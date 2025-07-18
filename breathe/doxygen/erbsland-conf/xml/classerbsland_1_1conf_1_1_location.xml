@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_location" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::Location</compoundname>
+    <includes refid="_location_8hpp" local="no">erbsland/conf/Location.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_location_1a7a195b7d0b8d4475d5465e60c6bcadec" prot="private" static="no" mutable="no">
+        <type>SourceIdentifierPtr</type>
+        <definition>SourceIdentifierPtr erbsland::conf::Location::_sourceIdentifier</definition>
+        <argsstring></argsstring>
+        <name>_sourceIdentifier</name>
+        <qualifiedname>erbsland::conf::Location::_sourceIdentifier</qualifiedname>
+        <briefdescription>
+<para>The source identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="85" column="25" bodyfile="erbsland/conf/Location.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_location_1ac85f33d3bedc09bfb752ab24f5208ade" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref></type>
+        <definition>Position erbsland::conf::Location::_position</definition>
+        <argsstring></argsstring>
+        <name>_position</name>
+        <qualifiedname>erbsland::conf::Location::_position</qualifiedname>
+        <briefdescription>
+<para>The position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="86" column="14" bodyfile="erbsland/conf/Location.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1ab8eacfa148d635d64a7cb7eb56821675" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Location::Location</definition>
+        <argsstring>()=default</argsstring>
+        <name>Location</name>
+        <qualifiedname>erbsland::conf::Location::Location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an undefined location.</para>
+<para>Can be tested with <computeroutput><ref refid="classerbsland_1_1conf_1_1_location_1a3d21283fbb23c3991c2955dc9a64efdb" kindref="member">isUndefined()</ref></computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="26" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a9e69387384bae68b4244b7360247ac42" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Location::Location</definition>
+        <argsstring>(SourceIdentifierPtr sourceIdentifier, const Position position={}) noexcept</argsstring>
+        <name>Location</name>
+        <qualifiedname>erbsland::conf::Location::Location</qualifiedname>
+        <param>
+          <type>SourceIdentifierPtr</type>
+          <declname>sourceIdentifier</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref></type>
+          <declname>position</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new location object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sourceIdentifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position in the document. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="33" column="14" bodyfile="erbsland/conf/Location.hpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a109b9fe3a15b13676231cdfb6ae00130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Location::Location</definition>
+        <argsstring>(const Location &amp;)=default</argsstring>
+        <name>Location</name>
+        <qualifiedname>erbsland::conf::Location::Location</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a11b774b0d18ed61186f6ab327d16cb20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Location::Location</definition>
+        <argsstring>(Location &amp;&amp;)=default</argsstring>
+        <name>Location</name>
+        <qualifiedname>erbsland::conf::Location::Location</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1ad036d69f040270e196a0a3475d319ffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Location::operator=</definition>
+        <argsstring>(const Location &amp;) -&gt; Location &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Location::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a3b4bfcf505e14bba602df3208f2983b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Location::operator=</definition>
+        <argsstring>(Location &amp;&amp;) -&gt; Location &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Location::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a6ddbb506a69bd2d2f3abb70bee99054c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Location::operator==</definition>
+        <argsstring>(const Location &amp;other) const noexcept -&gt; bool</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::Location::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="43" column="10" bodyfile="erbsland/conf/Location.hpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a671752a459bd742ad06f100a55bfc493" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Location::operator!=</definition>
+        <argsstring>(const Location &amp;other) const noexcept -&gt; bool</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::Location::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="46" column="10" bodyfile="erbsland/conf/Location.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a3d21283fbb23c3991c2955dc9a64efdb" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Location::isUndefined</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isUndefined</name>
+        <qualifiedname>erbsland::conf::Location::isUndefined</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this location is undefined.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if undefined, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="55" column="11" bodyfile="erbsland/conf/Location.hpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a91bdc031a85c8c0cd446ca8342ebe05c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Location::sourceIdentifier</definition>
+        <argsstring>() const noexcept -&gt; const SourceIdentifierPtr &amp;</argsstring>
+        <name>sourceIdentifier</name>
+        <qualifiedname>erbsland::conf::Location::sourceIdentifier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The source identifier for this location. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="61" column="11" bodyfile="erbsland/conf/Location.hpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1ad7173a31d3e7c8523887928d7320910e" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::Location::position</definition>
+        <argsstring>() const noexcept -&gt; Position</argsstring>
+        <name>position</name>
+        <qualifiedname>erbsland::conf::Location::position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the position. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="67" column="21" bodyfile="erbsland/conf/Location.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_location_1a674a46c319561de3740a16e30191d16f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Location::toText</definition>
+        <argsstring>() const -&gt; String</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::Location::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get this location as a text.</para>
+<para>The location is formatted as: (source identifier):(line):(column). If no source identifier is specified, it is replaced by the text <computeroutput>&lt;unknown&gt;</computeroutput>.</para>
+<para><simplesect kind="return"><para>A string with this location information. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Location.hpp" line="77" column="11" bodyfile="erbsland/conf/Location.cpp" bodystart="12" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents the location in a parsed document.</para>
+<para>@tested <computeroutput>LocationTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/Location.hpp" line="20" column="1" bodyfile="erbsland/conf/Location.hpp" bodystart="20" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_location_1ac85f33d3bedc09bfb752ab24f5208ade" prot="private" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>_position</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a7a195b7d0b8d4475d5465e60c6bcadec" prot="private" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>_sourceIdentifier</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a3d21283fbb23c3991c2955dc9a64efdb" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>isUndefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1ab8eacfa148d635d64a7cb7eb56821675" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>Location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a9e69387384bae68b4244b7360247ac42" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>Location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a109b9fe3a15b13676231cdfb6ae00130" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>Location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a11b774b0d18ed61186f6ab327d16cb20" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>Location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a671752a459bd742ad06f100a55bfc493" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1ad036d69f040270e196a0a3475d319ffb" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a3b4bfcf505e14bba602df3208f2983b0" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a6ddbb506a69bd2d2f3abb70bee99054c" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1ad7173a31d3e7c8523887928d7320910e" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>position</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a91bdc031a85c8c0cd446ca8342ebe05c" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>sourceIdentifier</name></member>
+      <member refid="classerbsland_1_1conf_1_1_location_1a674a46c319561de3740a16e30191d16f" prot="public" virt="non-virtual"><scope>erbsland::conf::Location</scope><name>toText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

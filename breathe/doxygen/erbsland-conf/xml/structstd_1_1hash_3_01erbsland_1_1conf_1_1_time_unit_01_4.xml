@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structstd_1_1hash_3_01erbsland_1_1conf_1_1_time_unit_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt; erbsland::conf::TimeUnit &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_01erbsland_1_1conf_1_1_time_unit_01_4_1a7ea2acab78fcccfd0cd9df590549579a" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto std::hash&lt; erbsland::conf::TimeUnit &gt;::operator()</definition>
+        <argsstring>(const erbsland::conf::TimeUnit &amp;unit) const noexcept -&gt; std::size_t</argsstring>
+        <name>operator()</name>
+        <qualifiedname>std::hash&lt; erbsland::conf::TimeUnit &gt;::operator()</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">erbsland::conf::TimeUnit</ref> &amp;</type>
+          <declname>unit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="94" column="10" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/TimeUnit.hpp" line="93" column="1" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="93" bodyend="98"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_time_unit_01_4_1a7ea2acab78fcccfd0cd9df590549579a" prot="public" virt="non-virtual"><scope>std::hash&lt; erbsland::conf::TimeUnit &gt;</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

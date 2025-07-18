@@ -1,0 +1,489 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_time" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::Time</compoundname>
+    <includes refid="_time_8hpp" local="no">erbsland/conf/Time.hpp</includes>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classerbsland_1_1conf_1_1_time_1ae3d4a8787eced68c65a23f5906c11add" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class DateTime</definition>
+        <argsstring></argsstring>
+        <name>DateTime</name>
+        <qualifiedname>erbsland::conf::Time::DateTime</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="29" column="18" bodyfile="erbsland/conf/Time.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_time_1ad81e320d98bb042b77584c51db67c90a" prot="private" static="no" mutable="no">
+        <type>std::chrono::nanoseconds</type>
+        <definition>std::chrono::nanoseconds erbsland::conf::Time::_nanoseconds</definition>
+        <argsstring></argsstring>
+        <name>_nanoseconds</name>
+        <qualifiedname>erbsland::conf::Time::_nanoseconds</qualifiedname>
+        <initializer>{-1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="116" column="30" bodyfile="erbsland/conf/Time.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_time_1a465077db11d0ad8cc0a75b68a01b1f8d" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref></type>
+        <definition>TimeOffset erbsland::conf::Time::_offset</definition>
+        <argsstring></argsstring>
+        <name>_offset</name>
+        <qualifiedname>erbsland::conf::Time::_offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="117" column="16" bodyfile="erbsland/conf/Time.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1ab9c2e9a83a27e8184bebabfaef9f4dab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Time::Time</definition>
+        <argsstring>()=default</argsstring>
+        <name>Time</name>
+        <qualifiedname>erbsland::conf::Time::Time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an undefined time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a46d71207461e524cb3bbbf56f6449a1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Time::Time</definition>
+        <argsstring>(int hour, int minute, int second, int nanosecond, TimeOffset offset)</argsstring>
+        <name>Time</name>
+        <qualifiedname>erbsland::conf::Time::Time</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>second</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nanosecond</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new time from the given elements.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hour in the range 0-23. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minute in the range 0-59. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second in the range 0-59. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nanosecond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second fraction in the range 0-999&apos;999&apos;999 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time offset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if any of the parameters is out of the valid range. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="45" column="5" bodyfile="erbsland/conf/Time.cpp" bodystart="14" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1aa6c73a9e5ae2b356933a18a4d2734bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Time::Time</definition>
+        <argsstring>(int64_t nanoseconds, TimeOffset offset)</argsstring>
+        <name>Time</name>
+        <qualifiedname>erbsland::conf::Time::Time</qualifiedname>
+        <param>
+          <type>int64_t</type>
+          <declname>nanoseconds</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref></type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a time from nanoseconds.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nanoseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time in nanoseconds since midnight in the range 0-5&apos;183&apos;999&apos;999&apos;999&apos;999. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time offset. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in case the nanoseconds exceed 24h or is negative. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="53" column="5" bodyfile="erbsland/conf/Time.cpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a81c4a7f28b47bf96207deff9204e2c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Time::~Time</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Time</name>
+        <qualifiedname>erbsland::conf::Time::~Time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a2471aa8ba133531cb3b185bf13b77fab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Time::Time</definition>
+        <argsstring>(const Time &amp;)=default</argsstring>
+        <name>Time</name>
+        <qualifiedname>erbsland::conf::Time::Time</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a40160121eca572a2f029e2501e7ef23c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::operator=</definition>
+        <argsstring>(const Time &amp;) -&gt; Time &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Time::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1aaeaf53d04787ef07b979f18c1a2a9f03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Time::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(const Time &amp;other, nanosecondsForComparison(), other.nanosecondsForComparison())</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::Time::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>nanosecondsForComparison()</type>
+        </param>
+        <param>
+          <type>other.</type>
+          <declname>nanosecondsForComparison</declname>
+          <array>()</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="61" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a448ed7a87d4a0ef44c065a21b0401d4a" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::isUndefined</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isUndefined</name>
+        <qualifiedname>erbsland::conf::Time::isUndefined</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this time is undefined (created with default constructor). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="66" column="11" bodyfile="erbsland/conf/Time.hpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a2e31224085c7a7f21bc7cff6738de564" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::hour</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>hour</name>
+        <qualifiedname>erbsland::conf::Time::hour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The hour part of this time (0-23). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="72" column="11" bodyfile="erbsland/conf/Time.cpp" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1aa1955434ecc7eae1fa17672a630e27e9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::minute</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>minute</name>
+        <qualifiedname>erbsland::conf::Time::minute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The minute part of this time (0-59). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="76" column="11" bodyfile="erbsland/conf/Time.cpp" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1aa4c019ef1cc69bdde94f310124871955" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::second</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>second</name>
+        <qualifiedname>erbsland::conf::Time::second</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The second part of this time (0-59). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="80" column="11" bodyfile="erbsland/conf/Time.cpp" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a65382f7e833c592a3eb4c18be4bcfff8" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::secondFraction</definition>
+        <argsstring>() const noexcept -&gt; std::chrono::nanoseconds</argsstring>
+        <name>secondFraction</name>
+        <qualifiedname>erbsland::conf::Time::secondFraction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The second fractions in nanoseconds (0-999&apos;999&apos;999) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="84" column="11" bodyfile="erbsland/conf/Time.cpp" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1aef824cbc7f91dfb3096d3efa011f04b3" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::offset</definition>
+        <argsstring>() const noexcept -&gt; const TimeOffset &amp;</argsstring>
+        <name>offset</name>
+        <qualifiedname>erbsland::conf::Time::offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The offset for this time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="88" column="11" bodyfile="erbsland/conf/Time.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a60faffa57d773eb25526f2483adc0c46" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::toNanoseconds</definition>
+        <argsstring>() const noexcept -&gt; std::chrono::nanoseconds</argsstring>
+        <name>toNanoseconds</name>
+        <qualifiedname>erbsland::conf::Time::toNanoseconds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this time into nanoseconds since midnight. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="93" column="11" bodyfile="erbsland/conf/Time.cpp" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1ad3d219ad8b72d4ede3fcf1460b4c5e35" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::toText</definition>
+        <argsstring>() const noexcept -&gt; String</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::Time::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this time into text.</para>
+<para>Uses the ISO format hh:mm:ss.zzz. Adds the minimum number of second fractions. Always adds the offset or &quot;z&quot; for UTC times, unless this is a local time.</para>
+<para><simplesect kind="return"><para>The formatted time or an empty string for undefined times. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="102" column="11" bodyfile="erbsland/conf/Time.cpp" bodystart="86" bodyend="101"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1a7b307c162d86458285b2ee5fa6af6b18" prot="private" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::nanosecondsFromTime</definition>
+        <argsstring>(int hour, int minute, int second, int nanosecond) noexcept -&gt; int64_t</argsstring>
+        <name>nanosecondsFromTime</name>
+        <qualifiedname>erbsland::conf::Time::nanosecondsFromTime</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>second</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nanosecond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculate the number of nanoseconds since midnight from the given time elements. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="107" column="17" bodyfile="erbsland/conf/Time.cpp" bodystart="104" bodyend="109"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_1abc814796d98488a6a1a8df8998a9489f" prot="private" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Time::nanosecondsForComparison</definition>
+        <argsstring>() const noexcept -&gt; std::chrono::nanoseconds</argsstring>
+        <name>nanosecondsForComparison</name>
+        <qualifiedname>erbsland::conf::Time::nanosecondsForComparison</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert the nanoseconds for comparison. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Time.hpp" line="111" column="11" bodyfile="erbsland/conf/Time.hpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A time value with nanosecond precision and optional offset.</para>
+<para><simplesect kind="note"><para>About the implementation of the comparison operators: Comparison of two times, without date and/or mixed offsets is very limited and usually makes no sense, as for a proper comparison of a point-in-time the date for the given time is required as well. Therefore, as this time class is a simple wrapper, for time-comparison, local-time is assumed to be UTC. @tested <computeroutput>TimeTest</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/Time.hpp" line="28" column="1" bodyfile="erbsland/conf/Time.hpp" bodystart="28" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_time_1ad81e320d98bb042b77584c51db67c90a" prot="private" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>_nanoseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a465077db11d0ad8cc0a75b68a01b1f8d" prot="private" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>_offset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1ae3d4a8787eced68c65a23f5906c11add" prot="private" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>DateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1aaeaf53d04787ef07b979f18c1a2a9f03" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a2e31224085c7a7f21bc7cff6738de564" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>hour</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a448ed7a87d4a0ef44c065a21b0401d4a" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>isUndefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1aa1955434ecc7eae1fa17672a630e27e9" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>minute</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1abc814796d98488a6a1a8df8998a9489f" prot="private" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>nanosecondsForComparison</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a7b307c162d86458285b2ee5fa6af6b18" prot="private" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>nanosecondsFromTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1aef824cbc7f91dfb3096d3efa011f04b3" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>offset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a40160121eca572a2f029e2501e7ef23c" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1aa4c019ef1cc69bdde94f310124871955" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>second</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a65382f7e833c592a3eb4c18be4bcfff8" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>secondFraction</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1ab9c2e9a83a27e8184bebabfaef9f4dab" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>Time</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a46d71207461e524cb3bbbf56f6449a1b" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>Time</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1aa6c73a9e5ae2b356933a18a4d2734bec" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>Time</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a2471aa8ba133531cb3b185bf13b77fab" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>Time</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a60faffa57d773eb25526f2483adc0c46" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>toNanoseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1ad3d219ad8b72d4ede3fcf1460b4c5e35" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_1a81c4a7f28b47bf96207deff9204e2c2d" prot="public" virt="non-virtual"><scope>erbsland::conf::Time</scope><name>~Time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

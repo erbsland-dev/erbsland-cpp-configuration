@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_error_category_8cpp" kind="file" language="C++">
+    <compoundname>ErrorCategory.cpp</compoundname>
+    <includes refid="_error_category_8hpp" local="yes">ErrorCategory.hpp</includes>
+    <includes local="no">cassert</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>erbsland/conf/ErrorCategory.cpp</label>
+        <link refid="_error_category_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ErrorCategory.hpp</label>
+        <link refid="_error_category_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>array</label>
+      </node>
+      <node id="16">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>format</label>
+      </node>
+      <node id="11">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>impl/Char.hpp</label>
+      </node>
+      <node id="8">
+        <label>impl/ComparisonHelper.hpp</label>
+      </node>
+      <node id="9">
+        <label>impl/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="10">
+        <label>impl/PrivateTag.hpp</label>
+      </node>
+      <node id="12">
+        <label>ranges</label>
+      </node>
+      <node id="13">
+        <label>span</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ErrorCategory.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">ErrorCategory::ValueMap<sp/>ErrorCategory::_valueMap<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(IO,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;IO&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Encoding,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Encoding&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(UnexpectedEnd,<sp/><sp/><sp/><sp/><sp/><sp/>3,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;UnexpectedEnd&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Character,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Character&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Syntax,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Syntax&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(LimitExceeded,<sp/><sp/><sp/><sp/><sp/><sp/>6,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;LimitExceeded&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(NameConflict,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>7,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;NameConflict&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Indentation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Indentation&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Unsupported,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Unsupported&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Signature,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Signature&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Access,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Access&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Validation,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Validation&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(Internal,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>99,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;Internal&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Additional<sp/>categories<sp/>for<sp/>the<sp/>API<sp/>of<sp/>this<sp/>parser.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(ValueNotFound,<sp/><sp/><sp/><sp/>101,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;ValueNotFound&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::make_tuple(WrongType,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>102,<sp/>String{u8</highlight><highlight class="stringliteral">&quot;WrongType&quot;</highlight><highlight class="normal">}),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error_category_1aa4e3f50828a5404302ae08eea0e4e559" kindref="member">ErrorCategory::toText</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>const<sp/>String&amp;<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>std::ranges::find_if(_valueMap,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ValueEntry<sp/>&amp;entry)<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;0&gt;(entry)<sp/>==<sp/>_value;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(it<sp/>!=<sp/>_valueMap.end());</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;2&gt;(*it);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error_category_1aa3135595cff88587e3d87a4d6cc63ac0" kindref="member">ErrorCategory::toCode</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>std::ranges::find_if(_valueMap,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ValueEntry<sp/>&amp;entry)<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;0&gt;(entry)<sp/>==<sp/>_value;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(it<sp/>!=<sp/>_valueMap.end());</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::get&lt;1&gt;(*it);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/ErrorCategory.cpp"/>
+  </compounddef>
+</doxygen>

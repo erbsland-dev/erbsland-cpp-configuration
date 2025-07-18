@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_error_category" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::ErrorCategory</compoundname>
+    <includes refid="_error_category_8hpp" local="no">erbsland/conf/ErrorCategory.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>Enum</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::Enum</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af54c675aef04f12889398a8593ab2c66" prot="public">
+          <name>IO</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>A problem occurred while reading data from an I/O stream. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af5a35167b07cf67b73f856f422ee41bb" prot="public">
+          <name>Encoding</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>The document contains a problem with UTF-8 encoding. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a3aa38a94d051d866ddaa774d691de986" prot="public">
+          <name>UnexpectedEnd</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>The document ended unexpectedly. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493acd9fce4e937f06edbae6d48d62656324" prot="public">
+          <name>Character</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>The document contains a control character that is not allowed. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a" prot="public">
+          <name>Syntax</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>The document has a syntax error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a94bffbef93a2ce79226c6cee581664f8" prot="public">
+          <name>LimitExceeded</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>The size of a name, text, or buffer exceeds the permitted limit. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a05b41f0f40e3fda9c1eace82462fdc14" prot="public">
+          <name>NameConflict</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>The same name has already been defined earlier in the document. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493ad60cee61ec645fefcbee254c3a58cf6f" prot="public">
+          <name>Indentation</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>The indentation of a continued line does not match the previous line. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a4983393422505a01c89211a9712d8a1e" prot="public">
+          <name>Unsupported</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>The requested feature/version is not supported by this parser. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a2f312d0109e223272247a7d45514c0ed" prot="public">
+          <name>Signature</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>The document’s signature was rejected. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" prot="public">
+          <name>Access</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>The document was rejected due to an access check. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a1bcb4284b8131f826528df6b2959cf38" prot="public">
+          <name>Validation</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para>The document did not meet one of the validation rules. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a0bcbcac219b1df2b6c76e274ab146b59" prot="public">
+          <name>Internal</name>
+          <initializer>= 99</initializer>
+          <briefdescription>
+<para>The parser encountered an unexpected internal error. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a744e0b81ef3a8794126baba6ccda8d82" prot="public">
+          <name>ValueNotFound</name>
+          <initializer>= 101</initializer>
+          <briefdescription>
+<para>A value with a given name-path couldn&apos;t be found. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493ab7ca7b1eec503336e56b8f5a4083b2f9" prot="public">
+          <name>WrongType</name>
+          <initializer>= 102</initializer>
+          <briefdescription>
+<para>A value exists but has the wrong type for a conversion. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="23" column="5" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="23" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_error_category_1adb21d734068ec6376104177ba8ea6907" prot="private" static="no">
+        <type>std::tuple&lt; <ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" kindref="member">Enum</ref>, int, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &gt;</type>
+        <definition>using erbsland::conf::ErrorCategory::ValueEntry =  std::tuple&lt;Enum, int, String&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValueEntry</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ValueEntry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="81" column="5" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_error_category_1add478c352c0a04ae5538cd68a8e97bc2" prot="private" static="no">
+        <type>std::array&lt; ValueEntry, _enumCount &gt;</type>
+        <definition>using erbsland::conf::ErrorCategory::ValueMap =  std::array&lt;ValueEntry, _enumCount&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValueMap</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ValueMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="82" column="5" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_category_1a2e7ddb7572b6972af403f9b96769383b" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::ErrorCategory::_enumCount</definition>
+        <argsstring></argsstring>
+        <name>_enumCount</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::_enumCount</qualifiedname>
+        <initializer>= 15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="44" column="27" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_category_1a1043ef222f9a2fa21f99bc86acc16175" prot="private" static="yes" mutable="no">
+        <type>ValueMap</type>
+        <definition>ErrorCategory::ValueMap erbsland::conf::ErrorCategory::_valueMap</definition>
+        <argsstring></argsstring>
+        <name>_valueMap</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::_valueMap</qualifiedname>
+        <initializer>= {
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af54c675aef04f12889398a8593ab2c66" kindref="member">IO</ref>,                 1, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;IO&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af5a35167b07cf67b73f856f422ee41bb" kindref="member">Encoding</ref>,           2, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Encoding&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a3aa38a94d051d866ddaa774d691de986" kindref="member">UnexpectedEnd</ref>,      3, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;UnexpectedEnd&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493acd9fce4e937f06edbae6d48d62656324" kindref="member">Character</ref>,          4, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Character&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a" kindref="member">Syntax</ref>,             5, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Syntax&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a94bffbef93a2ce79226c6cee581664f8" kindref="member">LimitExceeded</ref>,      6, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;LimitExceeded&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a05b41f0f40e3fda9c1eace82462fdc14" kindref="member">NameConflict</ref>,       7, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;NameConflict&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493ad60cee61ec645fefcbee254c3a58cf6f" kindref="member">Indentation</ref>,        8, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Indentation&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a4983393422505a01c89211a9712d8a1e" kindref="member">Unsupported</ref>,        9, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Unsupported&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a2f312d0109e223272247a7d45514c0ed" kindref="member">Signature</ref>,         10, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Signature&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" kindref="member">Access</ref>,            11, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Access&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a1bcb4284b8131f826528df6b2959cf38" kindref="member">Validation</ref>,        12, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Validation&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a0bcbcac219b1df2b6c76e274ab146b59" kindref="member">Internal</ref>,          99, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Internal&quot;}),
+    
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a744e0b81ef3a8794126baba6ccda8d82" kindref="member">ValueNotFound</ref>,    101, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;ValueNotFound&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493ab7ca7b1eec503336e56b8f5a4083b2f9" kindref="member">WrongType</ref>,        102, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;WrongType&quot;}),
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="83" column="21" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_category_1a7dcabddb63b97e7885e843565118d6a0" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" kindref="member">Enum</ref></type>
+        <definition>Enum erbsland::conf::ErrorCategory::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::_value</qualifiedname>
+        <initializer>{<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a0bcbcac219b1df2b6c76e274ab146b59" kindref="member">Internal</ref>}</initializer>
+        <briefdescription>
+<para>The internal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="80" column="10" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="80" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1af8aafe0269d721c9440d41af330782b5" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::ErrorCategory::ErrorCategory</definition>
+        <argsstring>()=default</argsstring>
+        <name>ErrorCategory</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ErrorCategory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an undefined value type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="49" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1ab94fae3f1f36cb671e18e86603580e2d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::ErrorCategory::ErrorCategory</definition>
+        <argsstring>(Enum value) noexcept</argsstring>
+        <name>ErrorCategory</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ErrorCategory</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new value type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="53" column="15" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1a1bf8e06badd3d4bfd741f69f5154c42b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ErrorCategory::~ErrorCategory</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ErrorCategory</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::~ErrorCategory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1a0415cb0d693ddb027c34e9f621fcc9b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ErrorCategory::ErrorCategory</definition>
+        <argsstring>(const ErrorCategory &amp;)=default</argsstring>
+        <name>ErrorCategory</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ErrorCategory</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1af6a68b59d695b497638884412f91468a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ErrorCategory::operator=</definition>
+        <argsstring>(const ErrorCategory &amp;) -&gt; ErrorCategory &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="58" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1a5839704e597c67ada3c824a600ae44d0" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ErrorCategory::operator=</definition>
+        <argsstring>(Enum value) noexcept -&gt; ErrorCategory &amp;</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="61" column="10" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1a86af35d83142ef3e7735d39eb52932de" prot="public" static="no" constexpr="yes" const="yes" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::ErrorCategory::operator Enum</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator Enum</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::operator Enum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="62" column="24" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1abbca9bf5528657a0577790712164ff2f" prot="public" static="no" const="yes" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ErrorCategory::operator int</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator int</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::operator int</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="63" column="14" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1abfa21bd35f98b78e98a4197af7f23035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ErrorCategory::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(const ErrorCategory &amp;other, _value, other._value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>_value</type>
+        </param>
+        <param>
+          <type>other.</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="66" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1a82bb38ee1aeb91b63003c2cfe321cce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ErrorCategory::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(Enum value, _value, value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>_value</type>
+        </param>
+        <param>
+          <type>value</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="67" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1ac4c90161bed26a3eefd82a3a938b21f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ErrorCategory::ERBSLAND_CONF_COMPARE_FRIEND</definition>
+        <argsstring>(Enum a, const ErrorCategory &amp;b, a, b._value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_FRIEND</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::ERBSLAND_CONF_COMPARE_FRIEND</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" kindref="member">Enum</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>a</type>
+        </param>
+        <param>
+          <type>b.</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="68" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1aa4e3f50828a5404302ae08eea0e4e559" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ErrorCategory::toText</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the text representation of this error category. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="73" column="11" bodyfile="erbsland/conf/ErrorCategory.cpp" bodystart="32" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_category_1aa3135595cff88587e3d87a4d6cc63ac0" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ErrorCategory::toCode</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>toCode</name>
+        <qualifiedname>erbsland::conf::ErrorCategory::toCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the code for this error category. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ErrorCategory.hpp" line="77" column="11" bodyfile="erbsland/conf/ErrorCategory.cpp" bodystart="41" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The category of an error.</para>
+<para>@tested <computeroutput>ErrorCategoryTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/ErrorCategory.hpp" line="21" column="1" bodyfile="erbsland/conf/ErrorCategory.hpp" bodystart="21" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a2e7ddb7572b6972af403f9b96769383b" prot="private" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>_enumCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a7dcabddb63b97e7885e843565118d6a0" prot="private" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>_value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a1043ef222f9a2fa21f99bc86acc16175" prot="private" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>_valueMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Access</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493acd9fce4e937f06edbae6d48d62656324" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Character</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af5a35167b07cf67b73f856f422ee41bb" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Encoding</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Enum</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1ac4c90161bed26a3eefd82a3a938b21f9" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ERBSLAND_CONF_COMPARE_FRIEND</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1abfa21bd35f98b78e98a4197af7f23035" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a82bb38ee1aeb91b63003c2cfe321cce4" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1af8aafe0269d721c9440d41af330782b5" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ErrorCategory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1ab94fae3f1f36cb671e18e86603580e2d" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ErrorCategory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0415cb0d693ddb027c34e9f621fcc9b0" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ErrorCategory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493ad60cee61ec645fefcbee254c3a58cf6f" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Indentation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a0bcbcac219b1df2b6c76e274ab146b59" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Internal</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af54c675aef04f12889398a8593ab2c66" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>IO</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a94bffbef93a2ce79226c6cee581664f8" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>LimitExceeded</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a05b41f0f40e3fda9c1eace82462fdc14" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>NameConflict</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a86af35d83142ef3e7735d39eb52932de" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>operator Enum</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1abbca9bf5528657a0577790712164ff2f" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>operator int</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1af6a68b59d695b497638884412f91468a" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a5839704e597c67ada3c824a600ae44d0" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a2f312d0109e223272247a7d45514c0ed" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Signature</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Syntax</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1aa3135595cff88587e3d87a4d6cc63ac0" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>toCode</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1aa4e3f50828a5404302ae08eea0e4e559" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a3aa38a94d051d866ddaa774d691de986" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>UnexpectedEnd</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a4983393422505a01c89211a9712d8a1e" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Unsupported</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a1bcb4284b8131f826528df6b2959cf38" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>Validation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1adb21d734068ec6376104177ba8ea6907" prot="private" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ValueEntry</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1add478c352c0a04ae5538cd68a8e97bc2" prot="private" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ValueMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a744e0b81ef3a8794126baba6ccda8d82" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>ValueNotFound</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493ab7ca7b1eec503336e56b8f5a4083b2f9" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>WrongType</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_category_1a1bf8e06badd3d4bfd741f69f5154c42b" prot="public" virt="non-virtual"><scope>erbsland::conf::ErrorCategory</scope><name>~ErrorCategory</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

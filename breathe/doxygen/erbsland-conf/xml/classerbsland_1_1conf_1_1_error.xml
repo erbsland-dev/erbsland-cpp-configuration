@@ -1,0 +1,674 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_error" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::Error</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+    <includes refid="_error_8hpp" local="no">erbsland/conf/Error.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_1a439837b7254b178d6b7207da044adb64" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref></type>
+        <definition>ErrorCategory erbsland::conf::Error::_category</definition>
+        <argsstring></argsstring>
+        <name>_category</name>
+        <qualifiedname>erbsland::conf::Error::_category</qualifiedname>
+        <initializer>{<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a0bcbcac219b1df2b6c76e274ab146b59" kindref="member">ErrorCategory::Internal</ref>}</initializer>
+        <briefdescription>
+<para>The error category. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="127" column="19" bodyfile="erbsland/conf/Error.hpp" bodystart="127" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_1a1daab01999a888885e1e6cf39b46ad13" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::Error::_message</definition>
+        <argsstring></argsstring>
+        <name>_message</name>
+        <qualifiedname>erbsland::conf::Error::_message</qualifiedname>
+        <briefdescription>
+<para>The message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="128" column="12" bodyfile="erbsland/conf/Error.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_1a6c2da1b98bf5e1f8dc15013fa5e6f89d" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &gt;</type>
+        <definition>std::optional&lt;Location&gt; erbsland::conf::Error::_location</definition>
+        <argsstring></argsstring>
+        <name>_location</name>
+        <qualifiedname>erbsland::conf::Error::_location</qualifiedname>
+        <briefdescription>
+<para>The optional location of the error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="129" column="19" bodyfile="erbsland/conf/Error.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_1a8ac24a787c01f238eac884a881338ebb" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &gt;</type>
+        <definition>std::optional&lt;NamePath&gt; erbsland::conf::Error::_namePath</definition>
+        <argsstring></argsstring>
+        <name>_namePath</name>
+        <qualifiedname>erbsland::conf::Error::_namePath</qualifiedname>
+        <briefdescription>
+<para>The optional name path of the error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="130" column="19" bodyfile="erbsland/conf/Error.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_1a466b35c2cb1c3496f7182088620aceb9" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; std::filesystem::path &gt;</type>
+        <definition>std::optional&lt;std::filesystem::path&gt; erbsland::conf::Error::_filePath</definition>
+        <argsstring></argsstring>
+        <name>_filePath</name>
+        <qualifiedname>erbsland::conf::Error::_filePath</qualifiedname>
+        <briefdescription>
+<para>The optional file path of the error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="131" column="19" bodyfile="erbsland/conf/Error.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_1aa2d27bd3a40e0ad4ebade1d80cd629a1" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; std::error_code &gt;</type>
+        <definition>std::optional&lt;std::error_code&gt; erbsland::conf::Error::_errorCode</definition>
+        <argsstring></argsstring>
+        <name>_errorCode</name>
+        <qualifiedname>erbsland::conf::Error::_errorCode</qualifiedname>
+        <briefdescription>
+<para>The optional error code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="132" column="19" bodyfile="erbsland/conf/Error.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_error_1a85a93cd65f4a677d769d629e50dbfe53" prot="private" static="no" mutable="yes">
+        <type>std::string</type>
+        <definition>std::string erbsland::conf::Error::_whatBuffer</definition>
+        <argsstring></argsstring>
+        <name>_whatBuffer</name>
+        <qualifiedname>erbsland::conf::Error::_whatBuffer</qualifiedname>
+        <briefdescription>
+<para>An internal buffer for the <computeroutput>what()</computeroutput> method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="133" column="25" bodyfile="erbsland/conf/Error.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1ae7e5520c64642c0c739141da27040f9a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Msg</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>erbsland::conf::Error::Error</definition>
+        <argsstring>(const ErrorCategory category, Msg &amp;&amp;message) noexcept</argsstring>
+        <name>Error</name>
+        <qualifiedname>erbsland::conf::Error::Error</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>Msg &amp;&amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new error with the given message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error category. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="31" column="5" bodyfile="erbsland/conf/Error.hpp" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a18082c82fd80f20da6975c3107b7fc99" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Msg</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>erbsland::conf::Error::Error</definition>
+        <argsstring>(const ErrorCategory category, Msg &amp;&amp;message, Args &amp;&amp;... args) noexcept</argsstring>
+        <name>Error</name>
+        <qualifiedname>erbsland::conf::Error::Error</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>Msg &amp;&amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+    <requiresclause>((std::is_same_v&lt;std::decay_t&lt;Args&gt;, Location&gt; || std::is_same_v&lt;std::decay_t&lt;Args&gt;, NamePath&gt; || std::is_same_v&lt;std::decay_t&lt;Args&gt;, std::filesystem::path&gt; || std::is_same_v&lt;std::decay_t&lt;Args&gt;, std::error_code&gt;) &amp;&amp; ...)    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new error with the given message, location and file path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error category. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional arguments for the error message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="50" column="5" bodyfile="erbsland/conf/Error.hpp" bodystart="50" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a161bb2ac9b20f59bf2dbb4366f2e5144" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Error::Error</definition>
+        <argsstring>(const Error &amp;) noexcept=default</argsstring>
+        <name>Error</name>
+        <qualifiedname>erbsland::conf::Error::Error</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="61" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a654ce86214a8278a00e79727800c020b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Error::Error</definition>
+        <argsstring>(Error &amp;&amp;) noexcept=default</argsstring>
+        <name>Error</name>
+        <qualifiedname>erbsland::conf::Error::Error</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="62" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a084913126a29f591709952ca7c7d9dc6" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Error::~Error</definition>
+        <argsstring>() noexcept override=default</argsstring>
+        <name>~Error</name>
+        <qualifiedname>erbsland::conf::Error::~Error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1ac2addb6c91832fa0a9bbc20f962524de" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::operator=</definition>
+        <argsstring>(const Error &amp;) noexcept -&gt; Error &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Error::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="64" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a66084383040a15f2dba62609aa004dc1" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::operator=</definition>
+        <argsstring>(Error &amp;&amp;) noexcept -&gt; Error &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Error::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="65" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a915ff6ace711e6bb251b731f94eae275" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::category</definition>
+        <argsstring>() const noexcept -&gt; ErrorCategory</argsstring>
+        <name>category</name>
+        <qualifiedname>erbsland::conf::Error::category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the error category. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="70" column="11" bodyfile="erbsland/conf/Error.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a49102f2cbeb70745389f3e29a76875b3" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::message</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>message</name>
+        <qualifiedname>erbsland::conf::Error::message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="74" column="11" bodyfile="erbsland/conf/Error.hpp" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1ad59cc982b3416a2ea1f7f7af92676c3f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::location</definition>
+        <argsstring>() const noexcept -&gt; Location</argsstring>
+        <name>location</name>
+        <qualifiedname>erbsland::conf::Error::location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the location. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="78" column="11" bodyfile="erbsland/conf/Error.hpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a9f8a5d63545de0e06fb274faba3b1851" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::namePath</definition>
+        <argsstring>() const noexcept -&gt; NamePath</argsstring>
+        <name>namePath</name>
+        <qualifiedname>erbsland::conf::Error::namePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the name-path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="84" column="11" bodyfile="erbsland/conf/Error.hpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1aae733281a6969327321beb60f4c2f7af" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::filePath</definition>
+        <argsstring>() const noexcept -&gt; std::filesystem::path</argsstring>
+        <name>filePath</name>
+        <qualifiedname>erbsland::conf::Error::filePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the file path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="90" column="11" bodyfile="erbsland/conf/Error.hpp" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1aa35ee3c6beec8db0dc1e94ed9002c7dd" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::errorCode</definition>
+        <argsstring>() const noexcept -&gt; std::error_code</argsstring>
+        <name>errorCode</name>
+        <qualifiedname>erbsland::conf::Error::errorCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the error code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="96" column="11" bodyfile="erbsland/conf/Error.hpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1af7694421ab96a33e9b546d5b386d0491" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::withLocation</definition>
+        <argsstring>(const Location &amp;location) const noexcept -&gt; Error</argsstring>
+        <name>withLocation</name>
+        <qualifiedname>erbsland::conf::Error::withLocation</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a copy with the given location added or replaced. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="103" column="11" bodyfile="erbsland/conf/Error.cpp" bodystart="13" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1aa74efef21164d67cdd6713bead9c1156" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::toText</definition>
+        <argsstring>() const noexcept -&gt; String</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::Error::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this error to a string.</para>
+<para><simplesect kind="return"><para>The string representation of this error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="110" column="11" bodyfile="erbsland/conf/Error.cpp" bodystart="20" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a323708a35bafc7b25e3eb3475458e89b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Error::what</definition>
+        <argsstring>() const noexcept -&gt; const char *override</argsstring>
+        <name>what</name>
+        <qualifiedname>erbsland::conf::Error::what</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="113" column="11" bodyfile="erbsland/conf/Error.cpp" bodystart="52" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a22b7251de578648f31a5c28d12376cad" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(const Location &amp;loc) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="116" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1ac8b4ffb987744c7b6488827b61074767" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(Location &amp;&amp;loc) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;&amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="117" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a6629d506482ddc137b07a6fcaa9d4602" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(const NamePath &amp;path) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="118" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1af6fe16a8b28665a58839bf24e6b3c347" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(NamePath &amp;&amp;path) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;&amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="119" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a9aa7b6803523c9eaf563a11893c2bc3d" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(const std::filesystem::path &amp;fp) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="120" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1aca1ff90fd2e4aeedaf89a224a4117eee" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(std::filesystem::path &amp;&amp;fp) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type>std::filesystem::path &amp;&amp;</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="121" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a161c2957bfcf0a5df3076952ba606014" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(const std::error_code &amp;ec) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type>const std::error_code &amp;</type>
+          <declname>ec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="122" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a79997c56b65e7ce8a153cb84998111dd" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::assignOptional</definition>
+        <argsstring>(std::error_code &amp;&amp;ec) noexcept</argsstring>
+        <name>assignOptional</name>
+        <qualifiedname>erbsland::conf::Error::assignOptional</qualifiedname>
+        <param>
+          <type>std::error_code &amp;&amp;</type>
+          <declname>ec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="123" column="10" bodyfile="erbsland/conf/Error.hpp" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_error_1a00f0788b716dcbe75287e70ec81d8daf" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Error::updateWhatBuffer</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>updateWhatBuffer</name>
+        <qualifiedname>erbsland::conf::Error::updateWhatBuffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Error.hpp" line="124" column="10" bodyfile="erbsland/conf/Error.cpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The exception for all errors.</para>
+<para>@tested <computeroutput>ErrorTest</computeroutput> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>erbsland::conf::Error</label>
+        <link refid="classerbsland_1_1conf_1_1_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>erbsland::conf::Error</label>
+        <link refid="classerbsland_1_1conf_1_1_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/Error.hpp" line="23" column="1" bodyfile="erbsland/conf/Error.hpp" bodystart="23" bodyend="134"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_error_1a439837b7254b178d6b7207da044adb64" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>_category</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1aa2d27bd3a40e0ad4ebade1d80cd629a1" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>_errorCode</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a466b35c2cb1c3496f7182088620aceb9" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>_filePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a6c2da1b98bf5e1f8dc15013fa5e6f89d" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>_location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a1daab01999a888885e1e6cf39b46ad13" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>_message</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a8ac24a787c01f238eac884a881338ebb" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>_namePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a85a93cd65f4a677d769d629e50dbfe53" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>_whatBuffer</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a22b7251de578648f31a5c28d12376cad" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1ac8b4ffb987744c7b6488827b61074767" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a6629d506482ddc137b07a6fcaa9d4602" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1af6fe16a8b28665a58839bf24e6b3c347" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a9aa7b6803523c9eaf563a11893c2bc3d" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1aca1ff90fd2e4aeedaf89a224a4117eee" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a161c2957bfcf0a5df3076952ba606014" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a79997c56b65e7ce8a153cb84998111dd" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>assignOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a915ff6ace711e6bb251b731f94eae275" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>category</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1ae7e5520c64642c0c739141da27040f9a" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>Error</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a18082c82fd80f20da6975c3107b7fc99" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>Error</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a161bb2ac9b20f59bf2dbb4366f2e5144" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>Error</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a654ce86214a8278a00e79727800c020b" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>Error</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1aa35ee3c6beec8db0dc1e94ed9002c7dd" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>errorCode</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1aae733281a6969327321beb60f4c2f7af" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>filePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1ad59cc982b3416a2ea1f7f7af92676c3f" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a49102f2cbeb70745389f3e29a76875b3" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>message</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a9f8a5d63545de0e06fb274faba3b1851" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>namePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1ac2addb6c91832fa0a9bbc20f962524de" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a66084383040a15f2dba62609aa004dc1" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1aa74efef21164d67cdd6713bead9c1156" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a00f0788b716dcbe75287e70ec81d8daf" prot="private" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>updateWhatBuffer</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a323708a35bafc7b25e3eb3475458e89b" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>what</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1af7694421ab96a33e9b546d5b386d0491" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>withLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_error_1a084913126a29f591709952ca7c7d9dc6" prot="public" virt="non-virtual"><scope>erbsland::conf::Error</scope><name>~Error</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

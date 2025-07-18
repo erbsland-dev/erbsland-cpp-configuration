@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacestd" kind="namespace" language="C++">
+    <compoundname>std</compoundname>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_bytes_01_4" prot="public">std::formatter&lt; erbsland::conf::Bytes &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_date_01_4" prot="public">std::formatter&lt; erbsland::conf::Date &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_date_time_01_4" prot="public">std::formatter&lt; erbsland::conf::DateTime &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_error_01_4" prot="public">std::formatter&lt; erbsland::conf::Error &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_error_category_01_4" prot="public">std::formatter&lt; erbsland::conf::ErrorCategory &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_escape_mode_01_4" prot="public">std::formatter&lt; erbsland::conf::EscapeMode &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_location_01_4" prot="public">std::formatter&lt; erbsland::conf::Location &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_name_01_4" prot="public">std::formatter&lt; erbsland::conf::Name &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_name_path_01_4" prot="public">std::formatter&lt; erbsland::conf::NamePath &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_name_type_01_4" prot="public">std::formatter&lt; erbsland::conf::NameType &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_position_01_4" prot="public">std::formatter&lt; erbsland::conf::Position &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_source_identifier_01_4" prot="public">std::formatter&lt; erbsland::conf::SourceIdentifier &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_string_01_4" prot="public">std::formatter&lt; erbsland::conf::String &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_time_01_4" prot="public">std::formatter&lt; erbsland::conf::Time &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_time_delta_01_4" prot="public">std::formatter&lt; erbsland::conf::TimeDelta &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_time_offset_01_4" prot="public">std::formatter&lt; erbsland::conf::TimeOffset &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_time_unit_01_4" prot="public">std::formatter&lt; erbsland::conf::TimeUnit &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_value_01_4" prot="public">std::formatter&lt; erbsland::conf::Value &gt;</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_value_type_01_4" prot="public">std::formatter&lt; erbsland::conf::ValueType &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_bytes_01_4" prot="public">std::hash&lt; erbsland::conf::Bytes &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_name_01_4" prot="public">std::hash&lt; erbsland::conf::Name &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_name_path_01_4" prot="public">std::hash&lt; erbsland::conf::NamePath &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_string_01_4" prot="public">std::hash&lt; erbsland::conf::String &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_time_unit_01_4" prot="public">std::hash&lt; erbsland::conf::TimeUnit &gt;</innerclass>
+    <innerclass refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_value_type_01_4" prot="public">std::hash&lt; erbsland::conf::ValueType &gt;</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

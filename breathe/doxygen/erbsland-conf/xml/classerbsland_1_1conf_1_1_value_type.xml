@@ -1,0 +1,572 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_value_type" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::ValueType</compoundname>
+    <includes refid="_value_type_8hpp" local="no">erbsland/conf/ValueType.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>Enum</name>
+        <qualifiedname>erbsland::conf::ValueType::Enum</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" prot="public">
+          <name>Undefined</name>
+          <briefdescription>
+<para>Undefined type. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a6d4abf67909f4ab77943b195950f4278" prot="public">
+          <name>Integer</name>
+          <briefdescription>
+<para>An integer value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" prot="public">
+          <name>Boolean</name>
+          <briefdescription>
+<para>A boolean value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a511d337895e97a4a194e23de7706bfff" prot="public">
+          <name>Float</name>
+          <briefdescription>
+<para>A floating-point value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" prot="public">
+          <name>Text</name>
+          <briefdescription>
+<para>A text value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1b786bf2abf01f864066b4241b00bcca" prot="public">
+          <name>Date</name>
+          <briefdescription>
+<para>A date value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a9fe19b5e3c7ae680c49b254a18ab96e3" prot="public">
+          <name>Time</name>
+          <briefdescription>
+<para>A time value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1f8a79df0b06bfa910462ca0f5a904f4" prot="public">
+          <name>DateTime</name>
+          <briefdescription>
+<para>A date-time value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ac2d8d76746222b3c28efb0b99ab86fd0" prot="public">
+          <name>Bytes</name>
+          <briefdescription>
+<para>Binary data. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a09c83bc8f80df12ba50f97e344b08b6b" prot="public">
+          <name>TimeDelta</name>
+          <briefdescription>
+<para>A time delta value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" prot="public">
+          <name>RegEx</name>
+          <briefdescription>
+<para>A regular expression value. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" prot="public">
+          <name>ValueList</name>
+          <briefdescription>
+<para>A list of values. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" prot="public">
+          <name>SectionList</name>
+          <briefdescription>
+<para>A list of sections. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434acc74814b39bf4cf31ec5620b4a6be3b6" prot="public">
+          <name>IntermediateSection</name>
+          <briefdescription>
+<para>An intermediate section. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" prot="public">
+          <name>SectionWithNames</name>
+          <briefdescription>
+<para>A section with names. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" prot="public">
+          <name>SectionWithTexts</name>
+          <briefdescription>
+<para>A section with texts. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a3fef6257976ae5255feac9157a84941b" prot="public">
+          <name>Document</name>
+          <briefdescription>
+<para>The document. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="23" column="5" bodyfile="erbsland/conf/ValueType.hpp" bodystart="23" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_type_1a9f13465bec9ab6e6029db9a6d59ef73f" prot="private" static="no">
+        <type>std::tuple&lt; <ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref>, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &gt;</type>
+        <definition>using erbsland::conf::ValueType::ValueToTextEntry =  std::tuple&lt;Enum, String&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValueToTextEntry</name>
+        <qualifiedname>erbsland::conf::ValueType::ValueToTextEntry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="109" column="5" bodyfile="erbsland/conf/ValueType.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_type_1a667fd6c44e5db5191905dce4deeb51d9" prot="private" static="no">
+        <type>std::array&lt; ValueToTextEntry, 17 &gt;</type>
+        <definition>using erbsland::conf::ValueType::ValueToTextMap =  std::array&lt;ValueToTextEntry, 17&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValueToTextMap</name>
+        <qualifiedname>erbsland::conf::ValueType::ValueToTextMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="110" column="5" bodyfile="erbsland/conf/ValueType.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_value_type_1a35dd5a12754ddb0e724ce22791f46554" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref></type>
+        <definition>Enum erbsland::conf::ValueType::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>erbsland::conf::ValueType::_value</qualifiedname>
+        <initializer>{<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">Undefined</ref>}</initializer>
+        <briefdescription>
+<para>The internal value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="108" column="10" bodyfile="erbsland/conf/ValueType.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_value_type_1a2e4a7fd1e605d6e3a5e922bbd1dcd8cb" prot="private" static="yes" mutable="no">
+        <type>ValueToTextMap</type>
+        <definition>ValueType::ValueToTextMap erbsland::conf::ValueType::_valueToTextMap</definition>
+        <argsstring></argsstring>
+        <name>_valueToTextMap</name>
+        <qualifiedname>erbsland::conf::ValueType::_valueToTextMap</qualifiedname>
+        <initializer>= {
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">Undefined</ref>,              <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Undefined&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a6d4abf67909f4ab77943b195950f4278" kindref="member">Integer</ref>,                <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Integer&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" kindref="member">Boolean</ref>,                <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Boolean&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a511d337895e97a4a194e23de7706bfff" kindref="member">Float</ref>,                  <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Float&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" kindref="member">Text</ref>,                   <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Text&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref>,                   <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Date&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref>,                   <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Time&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref>,               <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;DateTime&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref>,                  <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Bytes&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref>,              <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;TimeDelta&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" kindref="member">RegEx</ref>,                  <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;RegEx&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" kindref="member">ValueList</ref>,              <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;ValueList&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" kindref="member">SectionList</ref>,            <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;SectionList&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434acc74814b39bf4cf31ec5620b4a6be3b6" kindref="member">IntermediateSection</ref>,    <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;IntermediateSection&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" kindref="member">SectionWithNames</ref>,       <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;SectionWithNames&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" kindref="member">SectionWithTexts</ref>,       <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;SectionWithTexts&quot;}),
+    std::make_tuple(<ref refid="classerbsland_1_1conf_1_1_document" kindref="compound">Document</ref>,               <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>{u8&quot;Document&quot;}),
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="111" column="27" bodyfile="erbsland/conf/ValueType.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::ValueType::ValueType</definition>
+        <argsstring>()=default</argsstring>
+        <name>ValueType</name>
+        <qualifiedname>erbsland::conf::ValueType::ValueType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an undefined value type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="46" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a98f4f6c286d515226abda97f2e6091bd" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::ValueType::ValueType</definition>
+        <argsstring>(const Enum value) noexcept</argsstring>
+        <name>ValueType</name>
+        <qualifiedname>erbsland::conf::ValueType::ValueType</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new value type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="50" column="15" bodyfile="erbsland/conf/ValueType.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1ac9f2a8a131411addcde3f656c3b9bdec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueType::~ValueType</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ValueType</name>
+        <qualifiedname>erbsland::conf::ValueType::~ValueType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="53" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a1099ad34fa3b3d3b21608f73198cd484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueType::ValueType</definition>
+        <argsstring>(const ValueType &amp;)=default</argsstring>
+        <name>ValueType</name>
+        <qualifiedname>erbsland::conf::ValueType::ValueType</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="54" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a4a6c60f6c8de1fea551fb68cc523d9d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueType::operator=</definition>
+        <argsstring>(const ValueType &amp;) -&gt; ValueType &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::ValueType::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="55" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a32a6fc5e7763a4651d94e00747b0a352" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueType::operator=</definition>
+        <argsstring>(const Enum value) noexcept -&gt; ValueType &amp;</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::ValueType::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="58" column="10" bodyfile="erbsland/conf/ValueType.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1abbbcca8fc912e68bbb9e398105e06602" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::ValueType::operator Enum</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator Enum</name>
+        <qualifiedname>erbsland::conf::ValueType::operator Enum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="59" column="15" bodyfile="erbsland/conf/ValueType.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a21922cfa58fbcc3b630c9eaaf592db83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueType::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(const ValueType &amp;other, _value, other._value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::ValueType::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>_value</type>
+        </param>
+        <param>
+          <type>other.</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="62" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a7b99424e6f87145375c1041c7a166917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueType::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(Enum value, _value, value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::ValueType::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>_value</type>
+        </param>
+        <param>
+          <type>value</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a06b4c81edd317102ab5e613bb33b3ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueType::ERBSLAND_CONF_COMPARE_FRIEND</definition>
+        <argsstring>(Enum a, const ValueType &amp;b, a, b._value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_FRIEND</name>
+        <qualifiedname>erbsland::conf::ValueType::ERBSLAND_CONF_COMPARE_FRIEND</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" kindref="member">Enum</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>a</type>
+        </param>
+        <param>
+          <type>b.</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="64" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1afb17235251388e8a9af28758b25ed518" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::ValueType::isUndefined</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isUndefined</name>
+        <qualifiedname>erbsland::conf::ValueType::isUndefined</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if the type is undefined. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="69" column="21" bodyfile="erbsland/conf/ValueType.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1ab71af0e2a9cee5833a216dbdbc94eaf0" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::ValueType::isMap</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isMap</name>
+        <qualifiedname>erbsland::conf::ValueType::isMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is any kind of value map (a section or document). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="73" column="21" bodyfile="erbsland/conf/ValueType.hpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a6ca4723c5f6e03d708e95c531f928c4b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::ValueType::isList</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isList</name>
+        <qualifiedname>erbsland::conf::ValueType::isList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is any kind of list (section list or value list). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="80" column="21" bodyfile="erbsland/conf/ValueType.hpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a781cae0ccf37f00cd51a09d92cc05ef4" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::ValueType::isSingle</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isSingle</name>
+        <qualifiedname>erbsland::conf::ValueType::isSingle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is a single value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="86" column="21" bodyfile="erbsland/conf/ValueType.hpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a7466c35141a881d005a1304c17b94150" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueType::toText</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::ValueType::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this type into text. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="95" column="11" bodyfile="erbsland/conf/ValueType.cpp" bodystart="34" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_type_1a6699a842d683e9e2dfc4fee92601ca88" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::ValueType::all</definition>
+        <argsstring>() noexcept -&gt; const std::array&lt; ValueType, 17 &gt; &amp;</argsstring>
+        <name>all</name>
+        <qualifiedname>erbsland::conf::ValueType::all</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueType.hpp" line="98" column="18" bodyfile="erbsland/conf/ValueType.hpp" bodystart="98" bodyend="105"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The type of value.</para>
+<para>@tested <computeroutput>ValueTypeTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/ValueType.hpp" line="21" column="1" bodyfile="erbsland/conf/ValueType.hpp" bodystart="21" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a35dd5a12754ddb0e724ce22791f46554" prot="private" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>_value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a2e4a7fd1e605d6e3a5e922bbd1dcd8cb" prot="private" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>_valueToTextMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a6699a842d683e9e2dfc4fee92601ca88" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>all</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Boolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ac2d8d76746222b3c28efb0b99ab86fd0" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Bytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1b786bf2abf01f864066b4241b00bcca" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Date</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1f8a79df0b06bfa910462ca0f5a904f4" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>DateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a3fef6257976ae5255feac9157a84941b" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Document</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Enum</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a06b4c81edd317102ab5e613bb33b3ee3" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ERBSLAND_CONF_COMPARE_FRIEND</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a21922cfa58fbcc3b630c9eaaf592db83" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a7b99424e6f87145375c1041c7a166917" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a511d337895e97a4a194e23de7706bfff" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Float</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a6d4abf67909f4ab77943b195950f4278" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Integer</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434acc74814b39bf4cf31ec5620b4a6be3b6" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>IntermediateSection</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a6ca4723c5f6e03d708e95c531f928c4b" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>isList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1ab71af0e2a9cee5833a216dbdbc94eaf0" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>isMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a781cae0ccf37f00cd51a09d92cc05ef4" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>isSingle</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1afb17235251388e8a9af28758b25ed518" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>isUndefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1abbbcca8fc912e68bbb9e398105e06602" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>operator Enum</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a4a6c60f6c8de1fea551fb68cc523d9d7" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a32a6fc5e7763a4651d94e00747b0a352" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>RegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>SectionList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>SectionWithNames</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>SectionWithTexts</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Text</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a9fe19b5e3c7ae680c49b254a18ab96e3" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Time</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a09c83bc8f80df12ba50f97e344b08b6b" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>TimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a7466c35141a881d005a1304c17b94150" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>Undefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ValueList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a9f13465bec9ab6e6029db9a6d59ef73f" prot="private" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ValueToTextEntry</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a667fd6c44e5db5191905dce4deeb51d9" prot="private" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ValueToTextMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1aebfc929402db6e0967a5b7aaea255bc8" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ValueType</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a98f4f6c286d515226abda97f2e6091bd" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ValueType</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1a1099ad34fa3b3d3b21608f73198cd484" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>ValueType</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_type_1ac9f2a8a131411addcde3f656c3b9bdec" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueType</scope><name>~ValueType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

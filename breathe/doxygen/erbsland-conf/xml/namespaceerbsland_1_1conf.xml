@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceerbsland_1_1conf" kind="namespace" language="C++">
+    <compoundname>erbsland::conf</compoundname>
+    <innerclass refid="classerbsland_1_1conf_1_1_access_check" prot="public">erbsland::conf::AccessCheck</innerclass>
+    <innerclass refid="structerbsland_1_1conf_1_1_access_sources" prot="public">erbsland::conf::AccessSources</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_bytes" prot="public">erbsland::conf::Bytes</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_date" prot="public">erbsland::conf::Date</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_date_time" prot="public">erbsland::conf::DateTime</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_document" prot="public">erbsland::conf::Document</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_document_builder" prot="public">erbsland::conf::DocumentBuilder</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_error" prot="public">erbsland::conf::Error</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_error_category" prot="public">erbsland::conf::ErrorCategory</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_file_access_check" prot="public">erbsland::conf::FileAccessCheck</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_location" prot="public">erbsland::conf::Location</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_name" prot="public">erbsland::conf::Name</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_name_path" prot="public">erbsland::conf::NamePath</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_parser" prot="public">erbsland::conf::Parser</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_position" prot="public">erbsland::conf::Position</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_signature_signer" prot="public">erbsland::conf::SignatureSigner</innerclass>
+    <innerclass refid="structerbsland_1_1conf_1_1_signature_signer_data" prot="public">erbsland::conf::SignatureSignerData</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_signature_validator" prot="public">erbsland::conf::SignatureValidator</innerclass>
+    <innerclass refid="structerbsland_1_1conf_1_1_signature_validator_data" prot="public">erbsland::conf::SignatureValidatorData</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_signer" prot="public">erbsland::conf::Signer</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_source" prot="public">erbsland::conf::Source</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_source_identifier" prot="public">erbsland::conf::SourceIdentifier</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_source_resolver" prot="public">erbsland::conf::SourceResolver</innerclass>
+    <innerclass refid="structerbsland_1_1conf_1_1_source_resolver_context" prot="public">erbsland::conf::SourceResolverContext</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_string" prot="public">erbsland::conf::String</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_time" prot="public">erbsland::conf::Time</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_time_delta" prot="public">erbsland::conf::TimeDelta</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_time_offset" prot="public">erbsland::conf::TimeOffset</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_time_unit" prot="public">erbsland::conf::TimeUnit</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_value" prot="public">erbsland::conf::Value</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_value_iterator" prot="public">erbsland::conf::ValueIterator</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1_value_type" prot="public">erbsland::conf::ValueType</innerclass>
+    <innernamespace refid="namespaceerbsland_1_1conf_1_1impl">erbsland::conf::impl</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_access_check_result_8hpp_1aff6bede73cc4b61a082ce704aa4afca0" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>AccessCheckResult</name>
+        <qualifiedname>erbsland::conf::AccessCheckResult</qualifiedname>
+        <enumvalue id="_access_check_result_8hpp_1aff6bede73cc4b61a082ce704aa4afca0ac322f9346b70efdd31968628d5ee68db" prot="public">
+          <name>Granted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>If the access is granted. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_access_check_result_8hpp_1aff6bede73cc4b61a082ce704aa4afca0a58d036b9b7f0e7eb38cfb90f1cc70a73" prot="public">
+          <name>Denied</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>If the access is denied. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The result of an access check.</para>
+<para>@notest This is part of <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/AccessCheckResult.hpp" line="16" column="1" bodyfile="erbsland/conf/AccessCheckResult.hpp" bodystart="16" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="enum" id="_escape_mode_8hpp_1a689fbb0a8cbe31a18aa492a6f1a83afb" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>EscapeMode</name>
+        <qualifiedname>erbsland::conf::EscapeMode</qualifiedname>
+        <enumvalue id="_escape_mode_8hpp_1a689fbb0a8cbe31a18aa492a6f1a83afba9dffbf69ffba8bc38bc4e01abf4b1675" prot="public">
+          <name>Text</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Escaping for double-quoted text. <verbatim>See reference documentation, chapter Text.
+Even allowed, the tab character is escaped as well.
+Escape characters U+0000-U+001F, `\\`, `&quot;`, U+007F
+Use short formats for `\\\\`, `\\&quot;`, `\\n`, `\\r`, `\\t`.
+Everything else as `\\u{x}`.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_escape_mode_8hpp_1a689fbb0a8cbe31a18aa492a6f1a83afba29282a3dc67ffa446104b73fbb728360" prot="public">
+          <name>FullTextName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Full text name escaping. <verbatim>See reference documentation, chapter &quot;Parser-Specific Usage of Text Names&quot;.
+Also mentioned in the specification for test adapters.
+Escape characters U+0000-U+001F, `\`, `&quot;`, `.`, `=`, U+007F-...
+Escape all characters in `\u{X}` format.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_escape_mode_8hpp_1a689fbb0a8cbe31a18aa492a6f1a83afbaed340f285f0d6015f7957ff053cc4488" prot="public">
+          <name>FullTestAdapter</name>
+          <initializer>= FullTextName</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Full test adapter escaping. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_escape_mode_8hpp_1a689fbb0a8cbe31a18aa492a6f1a83afbad438707fc8fcbcd22047add33c2b8909" prot="public">
+          <name>ErrorText</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Escape for error output and log messages. <verbatim>Escapes all Unicode code points that may disrupt the display or have unexpected side effects.
+Escapes all control codes.
+Escapes backslash and double-quote.
+Use short formats for `\\\\`, `\\&quot;`, `\\n`, `\\r`, `\\t`.
+Everything else as `\\u{x}`.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Escaping modes.</para>
+<para>@notest Tested via <computeroutput>Char</computeroutput> and <computeroutput><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></computeroutput>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/EscapeMode.hpp" line="17" column="1" bodyfile="erbsland/conf/EscapeMode.hpp" bodystart="17" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="_name_type_8hpp_1a36fad00bda833513925f1764fe9f735b" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>NameType</name>
+        <qualifiedname>erbsland::conf::NameType</qualifiedname>
+        <enumvalue id="_name_type_8hpp_1a36fad00bda833513925f1764fe9f735bad2203cb1237cb6460cbad94564e39345" prot="public">
+          <name>Regular</name>
+          <briefdescription>
+<para>A regular name: name. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_name_type_8hpp_1a36fad00bda833513925f1764fe9f735ba9dffbf69ffba8bc38bc4e01abf4b1675" prot="public">
+          <name>Text</name>
+          <briefdescription>
+<para>A text name: &quot;text&quot;. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_name_type_8hpp_1a36fad00bda833513925f1764fe9f735ba88fa71f0a6e0dfedbb46d91cc0b37a50" prot="public">
+          <name>Index</name>
+          <briefdescription>
+<para>An index name: [&lt;index&gt;]. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_name_type_8hpp_1a36fad00bda833513925f1764fe9f735bacb6978aa1ecf66a54ffebe21dc5798eb" prot="public">
+          <name>TextIndex</name>
+          <briefdescription>
+<para>A text index name: &quot;&quot;[&lt;index&gt;]. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of name.</para>
+<para>@tested <computeroutput>NameTypeTest</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NameType.hpp" line="17" column="1" bodyfile="erbsland/conf/NameType.hpp" bodystart="17" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="enum" id="_signature_validator_result_8hpp_1a02d6df1660cda42ac2ac57ca15cec240" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>SignatureValidatorResult</name>
+        <qualifiedname>erbsland::conf::SignatureValidatorResult</qualifiedname>
+        <enumvalue id="_signature_validator_result_8hpp_1a02d6df1660cda42ac2ac57ca15cec240ac4408d335012a56ff58937d78050efad" prot="public">
+          <name>Accept</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The signature is correct. Accept the document. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_signature_validator_result_8hpp_1a02d6df1660cda42ac2ac57ca15cec240ad98ac12774fca5c3cbaffe276840c55f" prot="public">
+          <name>Reject</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The signature is not correct. Reject the document. </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The result of the signature validation.</para>
+<para>@tested Tested via <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureValidatorResult.hpp" line="16" column="1" bodyfile="erbsland/conf/SignatureValidatorResult.hpp" bodystart="16" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_access_check_8hpp_1a3fdee67a5b19220afb31810426a236cb" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_access_check" kindref="compound">AccessCheck</ref> &gt;</type>
+        <definition>using erbsland::conf::AccessCheckPtr = typedef std::shared_ptr&lt;AccessCheck&gt;</definition>
+        <argsstring></argsstring>
+        <name>AccessCheckPtr</name>
+        <qualifiedname>erbsland::conf::AccessCheckPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/AccessCheck.hpp" line="16" column="1" bodyfile="erbsland/conf/AccessCheck.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_document_8hpp_1ac7911335c2985d24950cadcf1739caea" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_document" kindref="compound">Document</ref> &gt;</type>
+        <definition>using erbsland::conf::DocumentPtr = typedef std::shared_ptr&lt;Document&gt;</definition>
+        <argsstring></argsstring>
+        <name>DocumentPtr</name>
+        <qualifiedname>erbsland::conf::DocumentPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Document.hpp" line="13" column="1" bodyfile="erbsland/conf/Document.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_file_access_check_8hpp_1a8b54a1782410f6ca144f4335db89aff5" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_file_access_check" kindref="compound">FileAccessCheck</ref> &gt;</type>
+        <definition>using erbsland::conf::FileAccessCheckPtr = typedef std::shared_ptr&lt;FileAccessCheck&gt;</definition>
+        <argsstring></argsstring>
+        <name>FileAccessCheckPtr</name>
+        <qualifiedname>erbsland::conf::FileAccessCheckPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="16" column="1" bodyfile="erbsland/conf/FileAccessCheck.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_float_8hpp_1ad425004d91b3d2a2acee5b13ade76375" prot="public" static="no">
+        <type>double</type>
+        <definition>using erbsland::conf::Float = typedef double</definition>
+        <argsstring></argsstring>
+        <name>Float</name>
+        <qualifiedname>erbsland::conf::Float</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Floating-point type used throughout the parser.</para>
+<para>@tested <computeroutput>FloatTest</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Float.hpp" line="13" column="1" bodyfile="erbsland/conf/Float.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_integer_8hpp_1ac447cbe8de985989764c696adb9abdc1" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>using erbsland::conf::Integer = typedef int64_t</definition>
+        <argsstring></argsstring>
+        <name>Integer</name>
+        <qualifiedname>erbsland::conf::Integer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Signed integer type used throughout the parser.</para>
+<para>@tested <computeroutput>IntegerTest</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Integer.hpp" line="16" column="1" bodyfile="erbsland/conf/Integer.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_name_8hpp_1a59d56a94b394e008e6faafa21dd08371" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &gt;</type>
+        <definition>using erbsland::conf::NameList = typedef std::vector&lt;Name&gt;</definition>
+        <argsstring></argsstring>
+        <name>NameList</name>
+        <qualifiedname>erbsland::conf::NameList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="234" column="1" bodyfile="erbsland/conf/Name.hpp" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_signature_signer_8hpp_1a79f5b6a55c4e76e70093c71824ca3545" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_signature_signer" kindref="compound">SignatureSigner</ref> &gt;</type>
+        <definition>using erbsland::conf::SignatureSignerPtr = typedef std::shared_ptr&lt;SignatureSigner&gt;</definition>
+        <argsstring></argsstring>
+        <name>SignatureSignerPtr</name>
+        <qualifiedname>erbsland::conf::SignatureSignerPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureSigner.hpp" line="13" column="1" bodyfile="erbsland/conf/SignatureSigner.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_signature_validator_8hpp_1a833c9fdceeb1b62c5f293109184dddd0" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_signature_validator" kindref="compound">SignatureValidator</ref> &gt;</type>
+        <definition>using erbsland::conf::SignatureValidatorPtr = typedef std::shared_ptr&lt;SignatureValidator&gt;</definition>
+        <argsstring></argsstring>
+        <name>SignatureValidatorPtr</name>
+        <qualifiedname>erbsland::conf::SignatureValidatorPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureValidator.hpp" line="16" column="1" bodyfile="erbsland/conf/SignatureValidator.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_source_8hpp_1ac98f1a794da5aac9d199afc5a7c16299" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_source" kindref="compound">Source</ref> &gt;</type>
+        <definition>using erbsland::conf::SourcePtr = typedef std::shared_ptr&lt;Source&gt;</definition>
+        <argsstring></argsstring>
+        <name>SourcePtr</name>
+        <qualifiedname>erbsland::conf::SourcePtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Source.hpp" line="21" column="1" bodyfile="erbsland/conf/Source.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_source_8hpp_1aa2fa0dcf75a47f511c5c16c3120736b8" prot="public" static="no">
+        <type>std::shared_ptr&lt; const <ref refid="classerbsland_1_1conf_1_1_source" kindref="compound">Source</ref> &gt;</type>
+        <definition>using erbsland::conf::SourcePtrConst = typedef std::shared_ptr&lt;const Source&gt;</definition>
+        <argsstring></argsstring>
+        <name>SourcePtrConst</name>
+        <qualifiedname>erbsland::conf::SourcePtrConst</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Source.hpp" line="22" column="1" bodyfile="erbsland/conf/Source.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_source_8hpp_1ae60102aa5a3fa337ef87bd1b7101f8d0" prot="public" static="no">
+        <type>std::vector&lt; SourcePtr &gt;</type>
+        <definition>using erbsland::conf::SourceList = typedef std::vector&lt;SourcePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>SourceList</name>
+        <qualifiedname>erbsland::conf::SourceList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Source.hpp" line="23" column="1" bodyfile="erbsland/conf/Source.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_source_8hpp_1a6fcdb5b436d3330340f15e99103995a6" prot="public" static="no">
+        <type>std::shared_ptr&lt; SourceList &gt;</type>
+        <definition>using erbsland::conf::SourceListPtr = typedef std::shared_ptr&lt;SourceList&gt;</definition>
+        <argsstring></argsstring>
+        <name>SourceListPtr</name>
+        <qualifiedname>erbsland::conf::SourceListPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Source.hpp" line="24" column="1" bodyfile="erbsland/conf/Source.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_source_identifier_8hpp_1ac5658778d574c18f894f9d6d7011d84d" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_source_identifier" kindref="compound">SourceIdentifier</ref> &gt;</type>
+        <definition>using erbsland::conf::SourceIdentifierPtr = typedef std::shared_ptr&lt;SourceIdentifier&gt;</definition>
+        <argsstring></argsstring>
+        <name>SourceIdentifierPtr</name>
+        <qualifiedname>erbsland::conf::SourceIdentifierPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="20" column="1" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_source_resolver_8hpp_1ae2c3b3de5555f4d7fb7172a64d4ec45f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_source_resolver" kindref="compound">SourceResolver</ref> &gt;</type>
+        <definition>using erbsland::conf::SourceResolverPtr = typedef std::shared_ptr&lt;SourceResolver&gt;</definition>
+        <argsstring></argsstring>
+        <name>SourceResolverPtr</name>
+        <qualifiedname>erbsland::conf::SourceResolverPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceResolver.hpp" line="16" column="1" bodyfile="erbsland/conf/SourceResolver.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_value_8hpp_1adb097ff3b82e5c9c9d99b9bec3c205eb" prot="public" static="no">
+        <type>std::shared_ptr&lt; const <ref refid="classerbsland_1_1conf_1_1_value" kindref="compound">Value</ref> &gt;</type>
+        <definition>using erbsland::conf::ConstValuePtr = typedef std::shared_ptr&lt;const Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConstValuePtr</name>
+        <qualifiedname>erbsland::conf::ConstValuePtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="23" column="1" bodyfile="erbsland/conf/Value.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_value_8hpp_1ab642510f8e177817db220052694c532b" prot="public" static="no">
+        <type>std::vector&lt; ConstValuePtr &gt;</type>
+        <definition>using erbsland::conf::ValueList = typedef std::vector&lt;ConstValuePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValueList</name>
+        <qualifiedname>erbsland::conf::ValueList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="24" column="1" bodyfile="erbsland/conf/Value.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_value_iterator_8hpp_1a0257c3ae14d0915972cb018187b50739" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_value" kindref="compound">Value</ref> &gt;</type>
+        <definition>using erbsland::conf::ValuePtr = typedef std::shared_ptr&lt;Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValuePtr</name>
+        <qualifiedname>erbsland::conf::ValuePtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="17" column="1" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_escape_mode_8hpp_1aa274afdf8d521bda48caf450fd7144d1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::toStringView</definition>
+        <argsstring>(const EscapeMode mode) noexcept -&gt; std::string_view</argsstring>
+        <name>toStringView</name>
+        <qualifiedname>erbsland::conf::toStringView</qualifiedname>
+        <param>
+          <type>const EscapeMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert the <computeroutput>EscapeMode</computeroutput> into text.</para>
+<para>@notest Only used in development builds. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/EscapeMode.hpp" line="57" column="17" bodyfile="erbsland/conf/EscapeMode.hpp" bodystart="57" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="_name_type_8hpp_1aa01c7e82053cb6d3f365b924e04f0f3a" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::toStringView</definition>
+        <argsstring>(const NameType nameType) noexcept -&gt; std::string_view</argsstring>
+        <name>toStringView</name>
+        <qualifiedname>erbsland::conf::toStringView</qualifiedname>
+        <param>
+          <type>const NameType</type>
+          <declname>nameType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NameType.hpp" line="29" column="17" bodyfile="erbsland/conf/NameType.hpp" bodystart="29" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="_time_delta_8cpp_1ab6329990c829dbca0df7d4112c22d89b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Operator</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::combineTimeDeltas</definition>
+        <argsstring>(const TimeDelta &amp;a, const TimeDelta &amp;b) -&gt; TimeDelta</argsstring>
+        <name>combineTimeDeltas</name>
+        <qualifiedname>erbsland::conf::combineTimeDeltas</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.cpp" line="16" column="6" bodyfile="erbsland/conf/TimeDelta.cpp" bodystart="16" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="_time_delta_8cpp_1a52c983308fe67448ccee8271133c8f0b" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::operator-</definition>
+        <argsstring>(const TimeDelta &amp;other) noexcept -&gt; TimeDelta</argsstring>
+        <name>operator-</name>
+        <qualifiedname>erbsland::conf::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.cpp" line="48" column="6" bodyfile="erbsland/conf/TimeDelta.cpp" bodystart="48" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/AccessCheck.hpp" line="12" column="1"/>
+  </compounddef>
+</doxygen>

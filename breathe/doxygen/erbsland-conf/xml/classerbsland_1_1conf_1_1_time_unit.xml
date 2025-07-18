@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_time_unit" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::TimeUnit</compoundname>
+    <includes refid="_time_unit_8hpp" local="no">erbsland/conf/TimeUnit.hpp</includes>
+    <innerclass refid="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry" prot="private">erbsland::conf::TimeUnit::ValueEntry</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>Enum</name>
+        <qualifiedname>erbsland::conf::TimeUnit::Enum</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a208790b1f69aa1b59049184a8455ba3c" prot="public">
+          <name>Nanoseconds</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a9e97c15f2d6250c61e033c7c07403304" prot="public">
+          <name>Microseconds</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15ae814a9a579f29b631698a8d4dbd4655d" prot="public">
+          <name>Milliseconds</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a24876deb774415a409708a488ebfe718" prot="public">
+          <name>Seconds</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a776f7d54991eaf0c0da8501187aa24b7" prot="public">
+          <name>Minutes</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15aff19eb81cfe1e5175815960e66087508" prot="public">
+          <name>Hours</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a94b372d4e2e3748668aa32e4a86ed4a1" prot="public">
+          <name>Days</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a4685f1d80e9e88e7739fbaf450b86158" prot="public">
+          <name>Weeks</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a564e3b9f84178959413f3ebf81bbbc3d" prot="public">
+          <name>Months</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15ab1f2d6c2a9ee394cc6d6508fca541e3e" prot="public">
+          <name>Years</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WARNING: The numeric values of the enumeration are used as indices for <computeroutput>_valueMap</computeroutput>. Do not change the order unless <computeroutput>_valueMap</computeroutput> is updated too. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="26" column="5" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="26" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_time_unit_1a4a9ca1f7236ac095017d049e2701ffb1" prot="private" static="no">
+        <type>std::array&lt; ValueEntry, 10 &gt;</type>
+        <definition>using erbsland::conf::TimeUnit::ValueMap =  std::array&lt;ValueEntry, 10&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValueMap</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ValueMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="80" column="5" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_time_unit_1a2b1be5d2be219fe048ae9da4bbb07a62" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">Enum</ref></type>
+        <definition>Enum erbsland::conf::TimeUnit::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>erbsland::conf::TimeUnit::_value</qualifiedname>
+        <initializer>{Seconds}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="84" column="10" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_time_unit_1ab39df45714d1cb3df2feb1456220ee61" prot="private" static="yes" mutable="no">
+        <type>ValueMap</type>
+        <definition>TimeUnit::ValueMap erbsland::conf::TimeUnit::_valueMap</definition>
+        <argsstring></argsstring>
+        <name>_valueMap</name>
+        <qualifiedname>erbsland::conf::TimeUnit::_valueMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="85" column="21" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1ad9dd94f5e54a37ae495e7a474ddaab2d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::TimeUnit::TimeUnit</definition>
+        <argsstring>(Enum value) noexcept</argsstring>
+        <name>TimeUnit</name>
+        <qualifiedname>erbsland::conf::TimeUnit::TimeUnit</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new time unit. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="42" column="15" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1ad04dd2744e815dee51a19f02b3c9d88b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeUnit::TimeUnit</definition>
+        <argsstring>()=default</argsstring>
+        <name>TimeUnit</name>
+        <qualifiedname>erbsland::conf::TimeUnit::TimeUnit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1ab67ee33066a1c9b08625c07fabf8f4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeUnit::~TimeUnit</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TimeUnit</name>
+        <qualifiedname>erbsland::conf::TimeUnit::~TimeUnit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1a5e0d50dc2361107476745b85504461d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeUnit::TimeUnit</definition>
+        <argsstring>(const TimeUnit &amp;)=default</argsstring>
+        <name>TimeUnit</name>
+        <qualifiedname>erbsland::conf::TimeUnit::TimeUnit</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="47" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1aa4fb04a3d2830dcd4763725e2225352f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeUnit::operator=</definition>
+        <argsstring>(const TimeUnit &amp;) -&gt; TimeUnit &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::TimeUnit::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="48" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1abd9f630bbabc3699d0789dde1bd26fad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeUnit::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(const TimeUnit &amp;other, _value, other._value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>_value</type>
+        </param>
+        <param>
+          <type>other.</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="51" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1a3283e1e26218cfdf3d0c78fd673622b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeUnit::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(Enum other, _value, other)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">Enum</ref></type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>_value</type>
+        </param>
+        <param>
+          <type>other</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="52" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1a39344d07416e5cca839f9c03d46f84ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeUnit::ERBSLAND_CONF_COMPARE_FRIEND</definition>
+        <argsstring>(Enum a, const TimeUnit &amp;b, a, b._value)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_FRIEND</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ERBSLAND_CONF_COMPARE_FRIEND</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">Enum</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>a</type>
+        </param>
+        <param>
+          <type>b.</type>
+          <declname>_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="53" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1ad4bb8047c57eb0d95df9844310957c24" prot="public" static="no" constexpr="yes" const="yes" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::TimeUnit::operator Enum</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator Enum</name>
+        <qualifiedname>erbsland::conf::TimeUnit::operator Enum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="56" column="25" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1adb299a73bd45e4a353a73557a42fbd30" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeUnit::textLong</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>textLong</name>
+        <qualifiedname>erbsland::conf::TimeUnit::textLong</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="57" column="11" bodyfile="erbsland/conf/TimeUnit.cpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1a394722f8c4723c0f4b12888f01dbad6f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeUnit::textShort</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>textShort</name>
+        <qualifiedname>erbsland::conf::TimeUnit::textShort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="58" column="11" bodyfile="erbsland/conf/TimeUnit.cpp" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1aae074c697a01767b220fc6cc835d329a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeUnit::textForTest</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>textForTest</name>
+        <qualifiedname>erbsland::conf::TimeUnit::textForTest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="59" column="11" bodyfile="erbsland/conf/TimeUnit.cpp" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1a01e2974e563362d3c3dd163fc3864419" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeUnit::secondFactor</definition>
+        <argsstring>() const noexcept -&gt; double</argsstring>
+        <name>secondFactor</name>
+        <qualifiedname>erbsland::conf::TimeUnit::secondFactor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="60" column="11" bodyfile="erbsland/conf/TimeUnit.cpp" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1a4ae4046ae5e3945ec0d93267edbb7465" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeUnit::nanosecondsFactor</definition>
+        <argsstring>() const noexcept -&gt; int64_t</argsstring>
+        <name>nanosecondsFactor</name>
+        <qualifiedname>erbsland::conf::TimeUnit::nanosecondsFactor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="61" column="11" bodyfile="erbsland/conf/TimeUnit.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1a2ce24fd553984b3333673be3e6c1b94e" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::TimeUnit::all</definition>
+        <argsstring>() noexcept -&gt; const std::array&lt; TimeUnit, 10 &gt; &amp;</argsstring>
+        <name>all</name>
+        <qualifiedname>erbsland::conf::TimeUnit::all</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="64" column="18" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="64" bodyend="69"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_unit_1ae92054fc9472950db5281ec800543934" prot="private" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeUnit::mapEntry</definition>
+        <argsstring>(Enum value) noexcept -&gt; const ValueEntry &amp;</argsstring>
+        <name>mapEntry</name>
+        <qualifiedname>erbsland::conf::TimeUnit::mapEntry</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">Enum</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="81" column="18" bodyfile="erbsland/conf/TimeUnit.cpp" bodystart="85" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A single time unit used in the configuration.</para>
+<para>@tested <computeroutput>TimeUnitTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/TimeUnit.hpp" line="22" column="1" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="22" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a2b1be5d2be219fe048ae9da4bbb07a62" prot="private" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>_value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1ab39df45714d1cb3df2feb1456220ee61" prot="private" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>_valueMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a2ce24fd553984b3333673be3e6c1b94e" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>all</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a94b372d4e2e3748668aa32e4a86ed4a1" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Days</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Enum</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a39344d07416e5cca839f9c03d46f84ca" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>ERBSLAND_CONF_COMPARE_FRIEND</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1abd9f630bbabc3699d0789dde1bd26fad" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a3283e1e26218cfdf3d0c78fd673622b8" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15aff19eb81cfe1e5175815960e66087508" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Hours</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1ae92054fc9472950db5281ec800543934" prot="private" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>mapEntry</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a9e97c15f2d6250c61e033c7c07403304" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Microseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15ae814a9a579f29b631698a8d4dbd4655d" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Milliseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a776f7d54991eaf0c0da8501187aa24b7" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Minutes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a564e3b9f84178959413f3ebf81bbbc3d" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Months</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a208790b1f69aa1b59049184a8455ba3c" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Nanoseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a4ae4046ae5e3945ec0d93267edbb7465" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>nanosecondsFactor</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1ad4bb8047c57eb0d95df9844310957c24" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>operator Enum</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1aa4fb04a3d2830dcd4763725e2225352f" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a01e2974e563362d3c3dd163fc3864419" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>secondFactor</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a24876deb774415a409708a488ebfe718" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Seconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1aae074c697a01767b220fc6cc835d329a" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>textForTest</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1adb299a73bd45e4a353a73557a42fbd30" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>textLong</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a394722f8c4723c0f4b12888f01dbad6f" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>textShort</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1ad9dd94f5e54a37ae495e7a474ddaab2d" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>TimeUnit</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1ad04dd2744e815dee51a19f02b3c9d88b" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>TimeUnit</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5e0d50dc2361107476745b85504461d7" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>TimeUnit</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a4a9ca1f7236ac095017d049e2701ffb1" prot="private" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>ValueMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15a4685f1d80e9e88e7739fbaf450b86158" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Weeks</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15ab1f2d6c2a9ee394cc6d6508fca541e3e" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>Years</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_unit_1ab67ee33066a1c9b08625c07fabf8f4ed" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit</scope><name>~TimeUnit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

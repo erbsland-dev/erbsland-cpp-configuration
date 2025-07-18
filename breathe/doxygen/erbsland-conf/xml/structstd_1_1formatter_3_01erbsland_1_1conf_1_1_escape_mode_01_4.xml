@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_escape_mode_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::formatter&lt; erbsland::conf::EscapeMode &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::formatter&lt; std::string_view &gt;</basecompoundref>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_escape_mode_01_4_1a07e127dcb0fe0f14b09ea6d443e36975" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto std::formatter&lt; erbsland::conf::EscapeMode &gt;::format</definition>
+        <argsstring>(const erbsland::conf::EscapeMode &amp;mode, format_context &amp;ctx) const</argsstring>
+        <name>format</name>
+        <qualifiedname>std::formatter&lt; erbsland::conf::EscapeMode &gt;::format</qualifiedname>
+        <param>
+          <type>const erbsland::conf::EscapeMode &amp;</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/EscapeMode.hpp" line="75" column="10" bodyfile="erbsland/conf/EscapeMode.hpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>std::formatter&lt; erbsland::conf::EscapeMode &gt;</label>
+        <link refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_escape_mode_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::formatter&lt; std::string_view &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>std::formatter&lt; erbsland::conf::EscapeMode &gt;</label>
+        <link refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_escape_mode_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::formatter&lt; std::string_view &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/EscapeMode.hpp" line="74" column="1" bodyfile="erbsland/conf/EscapeMode.hpp" bodystart="74" bodyend="78"/>
+    <listofallmembers>
+      <member refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_escape_mode_01_4_1a07e127dcb0fe0f14b09ea6d443e36975" prot="public" virt="non-virtual"><scope>std::formatter&lt; erbsland::conf::EscapeMode &gt;</scope><name>format</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

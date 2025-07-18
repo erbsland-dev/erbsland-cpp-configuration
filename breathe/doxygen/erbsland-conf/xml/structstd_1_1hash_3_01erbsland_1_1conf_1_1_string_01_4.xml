@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structstd_1_1hash_3_01erbsland_1_1conf_1_1_string_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::hash&lt; erbsland::conf::String &gt;</compoundname>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1hash_3_01erbsland_1_1conf_1_1_string_01_4_1a34bf57bbea8b548a99e01c8f18d39798" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto std::hash&lt; erbsland::conf::String &gt;::operator()</definition>
+        <argsstring>(const erbsland::conf::String &amp;s) const noexcept -&gt; size_t</argsstring>
+        <name>operator()</name>
+        <qualifiedname>std::hash&lt; erbsland::conf::String &gt;::operator()</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">erbsland::conf::String</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="263" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="263" bodyend="267"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/String.hpp" line="262" column="1" bodyfile="erbsland/conf/String.hpp" bodystart="262" bodyend="268"/>
+    <listofallmembers>
+      <member refid="structstd_1_1hash_3_01erbsland_1_1conf_1_1_string_01_4_1a34bf57bbea8b548a99e01c8f18d39798" prot="public" virt="non-virtual"><scope>std::hash&lt; erbsland::conf::String &gt;</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

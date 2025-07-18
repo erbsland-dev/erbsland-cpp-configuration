@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_value_iterator" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::ValueIterator</compoundname>
+    <includes refid="_value_iterator_8hpp" local="no">erbsland/conf/ValueIterator.hpp</includes>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_iterator_1a40462fdd1fb55484c672822ccf3e643c" prot="private" static="no">
+        <type>std::vector&lt; impl::ValuePtr &gt;::const_iterator</type>
+        <definition>using erbsland::conf::ValueIterator::WrappedIterator =  std::vector&lt;impl::ValuePtr&gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>WrappedIterator</name>
+        <qualifiedname>erbsland::conf::ValueIterator::WrappedIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="31" column="5" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_iterator_1a6ede7e2ec0b578db76dd0015b10dc353" prot="public" static="no">
+        <type>std::forward_iterator_tag</type>
+        <definition>using erbsland::conf::ValueIterator::iterator_category =  std::forward_iterator_tag</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <qualifiedname>erbsland::conf::ValueIterator::iterator_category</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="34" column="5" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_iterator_1aee35e8d7bb808560a5bdf96f64f1e4e6" prot="public" static="no">
+        <type>const ValuePtr</type>
+        <definition>using erbsland::conf::ValueIterator::value_type =  const ValuePtr</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>erbsland::conf::ValueIterator::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="35" column="5" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_iterator_1a99061d6060e609c21f89386f417847b2" prot="public" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>using erbsland::conf::ValueIterator::difference_type =  std::ptrdiff_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <qualifiedname>erbsland::conf::ValueIterator::difference_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="36" column="5" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_iterator_1a6c18796ebc5d6274a27711b002010844" prot="public" static="no">
+        <type>const ValuePtr</type>
+        <definition>using erbsland::conf::ValueIterator::pointer =  const ValuePtr</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <qualifiedname>erbsland::conf::ValueIterator::pointer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="37" column="5" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_value_iterator_1a8f3aca0ea8c7a49319ae3c12c58f171e" prot="public" static="no">
+        <type>const ValuePtr</type>
+        <definition>using erbsland::conf::ValueIterator::reference =  const ValuePtr</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>erbsland::conf::ValueIterator::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="38" column="5" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_value_iterator_1a2f333bc56bed09b17bf48d089c4aa2ac" prot="protected" static="no" mutable="no">
+        <type>WrappedIterator</type>
+        <definition>WrappedIterator erbsland::conf::ValueIterator::_current</definition>
+        <argsstring></argsstring>
+        <name>_current</name>
+        <qualifiedname>erbsland::conf::ValueIterator::_current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="76" column="21" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1adb5ba7c259e28ec277de144d37f68bc0" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::ValueIterator::ValueIterator</definition>
+        <argsstring>(WrappedIterator it)</argsstring>
+        <name>ValueIterator</name>
+        <qualifiedname>erbsland::conf::ValueIterator::ValueIterator</qualifiedname>
+        <param>
+          <type>WrappedIterator</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an iterator wrapping the given internal iterator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>it</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The iterator to wrap. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="44" column="24" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1a2f54e373f978f8ad3b751390ed8ca2db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueIterator::ValueIterator</definition>
+        <argsstring>()=default</argsstring>
+        <name>ValueIterator</name>
+        <qualifiedname>erbsland::conf::ValueIterator::ValueIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="47" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1aaf8461f4945bc11a0085efa8d846232b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueIterator::~ValueIterator</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ValueIterator</name>
+        <qualifiedname>erbsland::conf::ValueIterator::~ValueIterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1aadc2887495734c0c6a7187d44bd41419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueIterator::ValueIterator</definition>
+        <argsstring>(const ValueIterator &amp;)=default</argsstring>
+        <name>ValueIterator</name>
+        <qualifiedname>erbsland::conf::ValueIterator::ValueIterator</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="49" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1a6dcb49426ea1793456f73d340d5e7aba" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::ValueIterator::ValueIterator</definition>
+        <argsstring>(ValueIterator &amp;&amp;) noexcept=default</argsstring>
+        <name>ValueIterator</name>
+        <qualifiedname>erbsland::conf::ValueIterator::ValueIterator</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1a4fafe0f369fa871bf421c3b79bcc1a76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator=</definition>
+        <argsstring>(const ValueIterator &amp;) -&gt; ValueIterator &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="51" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1afdaf4766b163a99e36da47853649f3d8" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator=</definition>
+        <argsstring>(ValueIterator &amp;&amp;) noexcept -&gt; ValueIterator &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1a25794ccc2b696838e32e15c5209b23c7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator*</definition>
+        <argsstring>() const noexcept -&gt; reference</argsstring>
+        <name>operator*</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator*</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dereference operator. <simplesect kind="return"><para>A shared pointer to the current value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="57" column="11" bodyfile="erbsland/conf/ValueIterator.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1ac6e1f5474238585e336738f9bf5ca400" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator-&gt;</definition>
+        <argsstring>() const noexcept -&gt; pointer</argsstring>
+        <name>operator-&gt;</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator-&gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Member access operator. <simplesect kind="return"><para>A pointer to the current value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="61" column="11" bodyfile="erbsland/conf/ValueIterator.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1a58b49d050ae60ce4396e01bc766e4d31" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator++</definition>
+        <argsstring>() noexcept -&gt; ValueIterator &amp;</argsstring>
+        <name>operator++</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator++</qualifiedname>
+        <briefdescription>
+<para>Prefix increment. Advances the iterator to the next element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="64" column="10" bodyfile="erbsland/conf/ValueIterator.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1a1e9d35c63a44371f6b42e6011cae00d9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator++</definition>
+        <argsstring>(int) noexcept -&gt; ValueIterator</argsstring>
+        <name>operator++</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator++</qualifiedname>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Postfix increment. Advances the iterator and returns the previous state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="67" column="10" bodyfile="erbsland/conf/ValueIterator.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1ac4f8fb13112a0bbeeae656090cb69750" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator==</definition>
+        <argsstring>(const ValueIterator &amp;other) const noexcept -&gt; bool</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Equality comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="70" column="11" bodyfile="erbsland/conf/ValueIterator.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_iterator_1a8739d318ea82bf72c36b32947002b746" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::ValueIterator::operator!=</definition>
+        <argsstring>(const ValueIterator &amp;other) const noexcept -&gt; bool</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::ValueIterator::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Inequality comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="73" column="11" bodyfile="erbsland/conf/ValueIterator.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Const iterator for the <computeroutput><ref refid="classerbsland_1_1conf_1_1_value" kindref="compound">Value</ref></computeroutput> class.</para>
+<para>This is a simple wrapper around the iterator of the internally used container.</para>
+<para>@tested Tested via <computeroutput><ref refid="classerbsland_1_1conf_1_1_value" kindref="compound">Value</ref></computeroutput> class. </para>
+    </detaileddescription>
+    <location file="erbsland/conf/ValueIterator.hpp" line="30" column="1" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="30" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a2f333bc56bed09b17bf48d089c4aa2ac" prot="protected" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>_current</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a99061d6060e609c21f89386f417847b2" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>difference_type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a6ede7e2ec0b578db76dd0015b10dc353" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>iterator_category</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a8739d318ea82bf72c36b32947002b746" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a25794ccc2b696838e32e15c5209b23c7" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator*</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a58b49d050ae60ce4396e01bc766e4d31" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator++</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a1e9d35c63a44371f6b42e6011cae00d9" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator++</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1ac6e1f5474238585e336738f9bf5ca400" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator-&gt;</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a4fafe0f369fa871bf421c3b79bcc1a76" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1afdaf4766b163a99e36da47853649f3d8" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1ac4f8fb13112a0bbeeae656090cb69750" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a6c18796ebc5d6274a27711b002010844" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>pointer</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a8f3aca0ea8c7a49319ae3c12c58f171e" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>reference</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1aee35e8d7bb808560a5bdf96f64f1e4e6" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>value_type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1adb5ba7c259e28ec277de144d37f68bc0" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>ValueIterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a2f54e373f978f8ad3b751390ed8ca2db" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>ValueIterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1aadc2887495734c0c6a7187d44bd41419" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>ValueIterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a6dcb49426ea1793456f73d340d5e7aba" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>ValueIterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1a40462fdd1fb55484c672822ccf3e643c" prot="private" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>WrappedIterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_iterator_1aaf8461f4945bc11a0085efa8d846232b" prot="public" virt="non-virtual"><scope>erbsland::conf::ValueIterator</scope><name>~ValueIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1659 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_value" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::conf::Value</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; Value &gt;</basecompoundref>
+    <derivedcompoundref refid="classerbsland_1_1conf_1_1_document" prot="public" virt="non-virtual">erbsland::conf::Document</derivedcompoundref>
+    <includes refid="_value_8hpp" local="no">erbsland/conf/Value.hpp</includes>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1af3f8f0281787d3b126ded12744b69b45" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::hasValue</definition>
+        <argsstring>(std::size_t index) const noexcept -&gt; bool=0</argsstring>
+        <name>hasValue</name>
+        <qualifiedname>erbsland::conf::Value::hasValue</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if there is a child-value with the given index, name or name-path.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if there is a value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="79" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a03711d0044bc68918e7a1adc40529955" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::hasValue</definition>
+        <argsstring>(const Name &amp;name) const noexcept -&gt; bool=0</argsstring>
+        <name>hasValue</name>
+        <qualifiedname>erbsland::conf::Value::hasValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="80" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a845160920d802b31bb8831502ab2ab17" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::hasValue</definition>
+        <argsstring>(const NamePath &amp;namePath) const noexcept -&gt; bool=0</argsstring>
+        <name>hasValue</name>
+        <qualifiedname>erbsland::conf::Value::hasValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="81" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aa3f9dd36e93827475ee013e0bb9666e5" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::value</definition>
+        <argsstring>(std::size_t index) const noexcept -&gt; ValuePtr=0</argsstring>
+        <name>value</name>
+        <qualifiedname>erbsland::conf::Value::value</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the child-value at the specified index, name or name-path.</para>
+<para><simplesect kind="return"><para>The child value or a nullptr if the index is out of range. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="89" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a2eff31352205b145e4ac092ee23e3326" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::value</definition>
+        <argsstring>(const Name &amp;name) const noexcept -&gt; ValuePtr=0</argsstring>
+        <name>value</name>
+        <qualifiedname>erbsland::conf::Value::value</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="90" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a1d2a3eaf33fafb1c95d6f09d18b5e272" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::value</definition>
+        <argsstring>(const NamePath &amp;namePath) const noexcept -&gt; ValuePtr=0</argsstring>
+        <name>value</name>
+        <qualifiedname>erbsland::conf::Value::value</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="91" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a41b9ebc974edb8b1781110ef5d0d8cf3" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toInteger</definition>
+        <argsstring>() const noexcept -&gt; Integer=0</argsstring>
+        <name>toInteger</name>
+        <qualifiedname>erbsland::conf::Value::toInteger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this value to a given type.</para>
+<para>Only converts this type or returns its default value. For example, <computeroutput>toText()</computeroutput> does <emphasis>not</emphasis> convert an <computeroutput>Integer</computeroutput> value into text. Use the <computeroutput><ref refid="classerbsland_1_1conf_1_1_value_1af7992802fc0979306e18e8fc40d85228" kindref="member">toTextRepresentation()</ref></computeroutput> function for such conversions.</para>
+<para><simplesect kind="return"><para>The value of the requested type, or if this value has a different type, a default value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="111" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ad05152f19b2d6a8827a6bbb621cf6bc9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toBoolean</definition>
+        <argsstring>() const noexcept -&gt; bool=0</argsstring>
+        <name>toBoolean</name>
+        <qualifiedname>erbsland::conf::Value::toBoolean</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="112" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ad3bc8040f55fca505cee3800f02b0c8b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toFloat</definition>
+        <argsstring>() const noexcept -&gt; Float=0</argsstring>
+        <name>toFloat</name>
+        <qualifiedname>erbsland::conf::Value::toFloat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="113" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a0e3326480f1826239bc76d00313b3b50" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toText</definition>
+        <argsstring>() const noexcept -&gt; String=0</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::Value::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="114" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a4fe6c5645ce4fba801ce716417e5c6b8" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toDate</definition>
+        <argsstring>() const noexcept -&gt; Date=0</argsstring>
+        <name>toDate</name>
+        <qualifiedname>erbsland::conf::Value::toDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="115" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ac5cfac628301dd653e376ec6ae94de1a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toTime</definition>
+        <argsstring>() const noexcept -&gt; Time=0</argsstring>
+        <name>toTime</name>
+        <qualifiedname>erbsland::conf::Value::toTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="116" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aa1c5fc2fabd8ba5a739e4ace3196c90f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toDateTime</definition>
+        <argsstring>() const noexcept -&gt; DateTime=0</argsstring>
+        <name>toDateTime</name>
+        <qualifiedname>erbsland::conf::Value::toDateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="117" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a035762ace4b70a31d3bcd2137b279af6" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toBytes</definition>
+        <argsstring>() const noexcept -&gt; Bytes=0</argsstring>
+        <name>toBytes</name>
+        <qualifiedname>erbsland::conf::Value::toBytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="118" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aef6b4bdb6fcfa5b68abbf7393579e0d2" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toTimeDelta</definition>
+        <argsstring>() const noexcept -&gt; TimeDelta=0</argsstring>
+        <name>toTimeDelta</name>
+        <qualifiedname>erbsland::conf::Value::toTimeDelta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="119" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1acb736b6685033d87efbc7c645a8bf890" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toRegEx</definition>
+        <argsstring>() const noexcept -&gt; String=0</argsstring>
+        <name>toRegEx</name>
+        <qualifiedname>erbsland::conf::Value::toRegEx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="120" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a64e10e10b8eebc57ddafb6847af97c13" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toList</definition>
+        <argsstring>() const noexcept -&gt; ValueList=0</argsstring>
+        <name>toList</name>
+        <qualifiedname>erbsland::conf::Value::toList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="121" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a3335aa867c3daac0da6db9593f5878b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::valueOrThrow</definition>
+        <argsstring>(std::size_t index) const -&gt; ValuePtr</argsstring>
+        <name>valueOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::valueOrThrow</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a value and throw if it is not found.</para>
+<para>These functions work like <computeroutput><ref refid="classerbsland_1_1conf_1_1_value_1aa3f9dd36e93827475ee013e0bb9666e5" kindref="member">value()</ref></computeroutput>, but instead of returning a nullptr when the value is not found they throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> exception.</para>
+<para><simplesect kind="see"><para>value(std::size) </para>
+</simplesect>
+<simplesect kind="return"><para>The child value. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(NotFound) if there is no value at the given index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="197" column="19" bodyfile="erbsland/conf/Value.cpp" bodystart="35" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1af1bf25a44fcba8e0080b4a182cde538c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::valueOrThrow</definition>
+        <argsstring>(const Name &amp;name) const -&gt; ValuePtr</argsstring>
+        <name>valueOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::valueOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="198" column="19" bodyfile="erbsland/conf/Value.cpp" bodystart="45" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ae841e7f5bfcc65d009ce122c8369b178" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::valueOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; ValuePtr</argsstring>
+        <name>valueOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::valueOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="199" column="19" bodyfile="erbsland/conf/Value.cpp" bodystart="55" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a09969d0c021c83d7049896ad327d304c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getInteger</definition>
+        <argsstring>(const NamePath &amp;namePath, Integer defaultValue={}) const noexcept -&gt; Integer</argsstring>
+        <name>getInteger</name>
+        <qualifiedname>erbsland::conf::Value::getInteger</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a value of a given type at the given name path.</para>
+<para>Try to get a value at the given value path with a given type. If there is no value at the name-path or the value does not have the expected type - a default value passed as <computeroutput>defaultValue</computeroutput> parameter is returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path to resolve, relative to this value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value returned if the value can&apos;t be resolved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value or <computeroutput>defaultValue</computeroutput> if there is no matching value at <computeroutput>namePath</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="213" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a1b541114f69b6e41558cee13f760247b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getBoolean</definition>
+        <argsstring>(const NamePath &amp;namePath, bool defaultValue=false) const noexcept -&gt; bool</argsstring>
+        <name>getBoolean</name>
+        <qualifiedname>erbsland::conf::Value::getBoolean</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>defaultValue</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="214" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1acd20e62274c4670c2bba0d33cb6713d9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getFloat</definition>
+        <argsstring>(const NamePath &amp;namePath, Float defaultValue={}) const noexcept -&gt; Float</argsstring>
+        <name>getFloat</name>
+        <qualifiedname>erbsland::conf::Value::getFloat</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>Float</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="215" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a87d8138d2626581e4d2bdfa79984765c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getText</definition>
+        <argsstring>(const NamePath &amp;namePath, const String &amp;defaultValue={}) const noexcept -&gt; String</argsstring>
+        <name>getText</name>
+        <qualifiedname>erbsland::conf::Value::getText</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="216" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ae93eb718993965c1a44e1aa6bcb6a0e5" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getDate</definition>
+        <argsstring>(const NamePath &amp;namePath, const Date &amp;defaultValue={}) const noexcept -&gt; Date</argsstring>
+        <name>getDate</name>
+        <qualifiedname>erbsland::conf::Value::getDate</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="217" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a2fd9b16edb2755450e88d84c0d1d8028" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getTime</definition>
+        <argsstring>(const NamePath &amp;namePath, const Time &amp;defaultValue={}) const noexcept -&gt; Time</argsstring>
+        <name>getTime</name>
+        <qualifiedname>erbsland::conf::Value::getTime</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="218" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ad2daf11f4d11df9fc872b2082de05854" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getDateTime</definition>
+        <argsstring>(const NamePath &amp;namePath, const DateTime &amp;defaultValue={}) const noexcept -&gt; DateTime</argsstring>
+        <name>getDateTime</name>
+        <qualifiedname>erbsland::conf::Value::getDateTime</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="219" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1acfdb711b654c5f92f797aa1b8b43b9ef" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getBytes</definition>
+        <argsstring>(const NamePath &amp;namePath, const Bytes &amp;defaultValue={}) const noexcept -&gt; Bytes</argsstring>
+        <name>getBytes</name>
+        <qualifiedname>erbsland::conf::Value::getBytes</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="220" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a1ca7f1a3359a4d58506b6904c7aa9d0d" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getTimeDelta</definition>
+        <argsstring>(const NamePath &amp;namePath, const TimeDelta &amp;defaultValue={}) const noexcept -&gt; TimeDelta</argsstring>
+        <name>getTimeDelta</name>
+        <qualifiedname>erbsland::conf::Value::getTimeDelta</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="221" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ad367046f32884a94887746772745c3da" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getRegEx</definition>
+        <argsstring>(const NamePath &amp;namePath, const String &amp;defaultValue={}) const noexcept -&gt; String</argsstring>
+        <name>getRegEx</name>
+        <qualifiedname>erbsland::conf::Value::getRegEx</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="222" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="128" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ae86f02b668ca46d9d1d86f1d161b4140" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getList</definition>
+        <argsstring>(const NamePath &amp;namePath) const noexcept -&gt; ValueList</argsstring>
+        <name>getList</name>
+        <qualifiedname>erbsland::conf::Value::getList</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="223" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a9cd5c42a88d556d272f08b021504612c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getIntegerOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; Integer</argsstring>
+        <name>getIntegerOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getIntegerOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a value of a given type at the given name path.</para>
+<para>These functions throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> if no value exists at <computeroutput>namePath</computeroutput> or if the value does not have the expected type.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path to resolve, relative to this value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The requested value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="235" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a992dcb92288deea7ea817f5b921e0f34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getBooleanOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; bool</argsstring>
+        <name>getBooleanOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getBooleanOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="236" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a636268408ee26f99f2d7b06d422d3653" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getFloatOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; Float</argsstring>
+        <name>getFloatOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getFloatOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="237" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a4de401455e3238135781c9fa275bfa22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getTextOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; String</argsstring>
+        <name>getTextOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getTextOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="238" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a9c9ff2515e650148bf4817e7a47e28d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getDateOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; Date</argsstring>
+        <name>getDateOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getDateOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="239" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="177" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a4f0b2927999a0deb1c40010b82d79064" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getTimeOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; Time</argsstring>
+        <name>getTimeOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getTimeOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="240" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a39dad795a2e3427772727bbb147d74ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getDateTimeOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; DateTime</argsstring>
+        <name>getDateTimeOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getDateTimeOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="241" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a712432eed205e03d8816e563db7589db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getBytesOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; Bytes</argsstring>
+        <name>getBytesOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getBytesOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="242" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a04679081db7fb6b6ffad4d473c4c4945" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getTimeDeltaOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; TimeDelta</argsstring>
+        <name>getTimeDeltaOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getTimeDeltaOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="243" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a3bb03fb01993b65cfd3f26fdc09b6898" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getRegExOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; String</argsstring>
+        <name>getRegExOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getRegExOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="244" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="207" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ac59279220f2722c9bcceaecfaec629b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::getListOrThrow</definition>
+        <argsstring>(const NamePath &amp;namePath) const -&gt; ValueList</argsstring>
+        <name>getListOrThrow</name>
+        <qualifiedname>erbsland::conf::Value::getListOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="245" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="202" bodyend="204"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ab26c7c8be9e09b74432ca3eb2752e096" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isInteger</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isInteger</name>
+        <qualifiedname>erbsland::conf::Value::isInteger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if a value is of a certain type.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the value has the tested type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="253" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="253" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a6fade64fb8e817f5e65377b223851412" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isBoolean</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isBoolean</name>
+        <qualifiedname>erbsland::conf::Value::isBoolean</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="254" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="254" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aa9eba45a3e416a95346cec13b0f433a2" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isFloat</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isFloat</name>
+        <qualifiedname>erbsland::conf::Value::isFloat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="255" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="255" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ada7f326d0a52e6eb36eee31203d398a7" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isText</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isText</name>
+        <qualifiedname>erbsland::conf::Value::isText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="256" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="256" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a1be8896e117045a3af9ef3c8fbf386d0" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isDate</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isDate</name>
+        <qualifiedname>erbsland::conf::Value::isDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="257" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="257" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ac2f724950263678c3f13aab401d91703" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isTime</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isTime</name>
+        <qualifiedname>erbsland::conf::Value::isTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="258" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="258" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ab45a240595bf4e14ab547e99042af74e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isDateTime</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isDateTime</name>
+        <qualifiedname>erbsland::conf::Value::isDateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="259" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="259" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ac9d12f0c84f4d7b5317ab4d5c0366128" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isBytes</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isBytes</name>
+        <qualifiedname>erbsland::conf::Value::isBytes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="260" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="260" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1acc7c9925bb961a2d9e2fd06cf2336abd" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isTimeDelta</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isTimeDelta</name>
+        <qualifiedname>erbsland::conf::Value::isTimeDelta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="261" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="261" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ae7e93fd1313b84f94b4ea2ae537a0f9a" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isRegEx</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isRegEx</name>
+        <qualifiedname>erbsland::conf::Value::isRegEx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="262" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="262" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a1852aed3990428eb0ba323d984313976" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isValueList</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isValueList</name>
+        <qualifiedname>erbsland::conf::Value::isValueList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="263" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="263" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a025dc56538cc2066e630a0acf6dd9182" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isDocument</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isDocument</name>
+        <qualifiedname>erbsland::conf::Value::isDocument</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="264" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="264" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a08bf7ebb3ac77fb5bb26feb328b7f94f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isRoot</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isRoot</name>
+        <qualifiedname>erbsland::conf::Value::isRoot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="265" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="265" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1abc12cfcdca28364d5582deb0e0dd1212" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isList</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isList</name>
+        <qualifiedname>erbsland::conf::Value::isList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="266" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="266" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a4b61e63391517af2b3391ffcbd953183" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::isMap</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isMap</name>
+        <qualifiedname>erbsland::conf::Value::isMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="267" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="267" bodyend="267"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a1c27c218d581c91ce8b998e740e3eb12" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual erbsland::conf::Value::~Value</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Value</name>
+        <qualifiedname>erbsland::conf::Value::~Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="33" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a3c991b878670ad2615b6e74e67872dbc" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::name</definition>
+        <argsstring>() const noexcept -&gt; Name=0</argsstring>
+        <name>name</name>
+        <qualifiedname>erbsland::conf::Value::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="38" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aafbad0718998126abf9222771cb2523a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::namePath</definition>
+        <argsstring>() const noexcept -&gt; NamePath=0</argsstring>
+        <name>namePath</name>
+        <qualifiedname>erbsland::conf::Value::namePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The name path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="42" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a416a9198711e66e9049a301b51e3a401" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::hasParent</definition>
+        <argsstring>() const noexcept -&gt; bool=0</argsstring>
+        <name>hasParent</name>
+        <qualifiedname>erbsland::conf::Value::hasParent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this value has a parent. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="46" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1acb1987ba26f76f9c1960e8dbd2e65364" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::parent</definition>
+        <argsstring>() const noexcept -&gt; ValuePtr=0</argsstring>
+        <name>parent</name>
+        <qualifiedname>erbsland::conf::Value::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The parent. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="50" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a364abe6bf80f5008c82f752502a0b86f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::type</definition>
+        <argsstring>() const noexcept -&gt; ValueType=0</argsstring>
+        <name>type</name>
+        <qualifiedname>erbsland::conf::Value::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of this value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="54" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aeb66cc34481107d0d0e41efa08548211" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::hasLocation</definition>
+        <argsstring>() const noexcept -&gt; bool=0</argsstring>
+        <name>hasLocation</name>
+        <qualifiedname>erbsland::conf::Value::hasLocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this value has location info. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="59" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a0bef325c20bdf32272c23d9757a6d698" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::location</definition>
+        <argsstring>() const noexcept -&gt; Location=0</argsstring>
+        <name>location</name>
+        <qualifiedname>erbsland::conf::Value::location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the location info for this value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="63" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a0aa5223dcbad509fc840c133d372ffe9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void erbsland::conf::Value::setLocation</definition>
+        <argsstring>(const Location &amp;newLocation) noexcept=0</argsstring>
+        <name>setLocation</name>
+        <qualifiedname>erbsland::conf::Value::setLocation</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>newLocation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the location info for this value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="67" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ac1f340d9abc33ec32c986b3b4d4c25a1" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::size</definition>
+        <argsstring>() const noexcept -&gt; std::size_t=0</argsstring>
+        <name>size</name>
+        <qualifiedname>erbsland::conf::Value::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of children. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="72" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ae1f221ea59cdc48a16ed3ccd9988d069" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::begin</definition>
+        <argsstring>() const noexcept -&gt; ValueIterator=0</argsstring>
+        <name>begin</name>
+        <qualifiedname>erbsland::conf::Value::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an iterator to the first child value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="96" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aa9e85639c3f0529ee16cfb2b058239ac" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::end</definition>
+        <argsstring>() const noexcept -&gt; ValueIterator=0</argsstring>
+        <name>end</name>
+        <qualifiedname>erbsland::conf::Value::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an iterator to the end of the child values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="100" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1af93586e31660a5ef64564e5cb605534e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; T</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this value to the given type.</para>
+<para>This is a convenience method, to convert a value to one of the supported types. It is implemented calling the various <computeroutput>to&lt;Type&gt;</computeroutput> methods.</para>
+<para>@important<itemizedlist>
+<listitem><para>There are overloads for all integers, converting the signed 64-bit integer into the desired type with the risk of losing information.</para>
+</listitem><listitem><para>There are overloads for all float types, converting a <computeroutput>double</computeroutput> into a <computeroutput>float</computeroutput> if necessary with the risk of losing information.</para>
+</listitem><listitem><para>In this implementation, it is not possible to convert regular expression types, as they use <computeroutput><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></computeroutput> which only convert <computeroutput>Text</computeroutput> values using <computeroutput>toText()</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type to convert this value to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value or a default value if it cannot be converted into the requested type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="141" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a84e1d73bc7315ad56c47c070af6358a5" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; T</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+    <requiresclause>std::is_integral_v&lt;T&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="146" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1adf1def78da8cae61e72fc4885e0ba382" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; T</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+    <requiresclause>std::is_floating_point_v&lt;T&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="151" column="11" bodyfile="erbsland/conf/Value.hpp" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1af7992802fc0979306e18e8fc40d85228" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toTextRepresentation</definition>
+        <argsstring>() const noexcept -&gt; String=0</argsstring>
+        <name>toTextRepresentation</name>
+        <qualifiedname>erbsland::conf::Value::toTextRepresentation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this value to its text representation.</para>
+<para>Converts the types: Text, Integer, Float, Boolean, <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref>, <ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref>, Date-Time, <ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref>, <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref>, RegEx. Sections and lists result in an empty string.</para>
+<para><simplesect kind="return"><para>A string with the text or text representation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="162" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ab519a0f4ab6cb55c1976d2daa0d496f6" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>auto</type>
+        <definition>virtual auto erbsland::conf::Value::toTestText</definition>
+        <argsstring>() const noexcept -&gt; String=0</argsstring>
+        <name>toTestText</name>
+        <qualifiedname>erbsland::conf::Value::toTestText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this value to its test adapter representation.</para>
+<para>This is used by the test adapter to verify the value, as described in the language documentation.</para>
+<para>The general format is <computeroutput>&lt;Type&gt;(&lt;value&gt;)</computeroutput>, where <computeroutput>&lt;Type&gt;</computeroutput> is one of the standardized type names and <computeroutput>&lt;value&gt;</computeroutput> the value representation as specified. For example, an integer value 5, is converted into the text <computeroutput>Integer(5)</computeroutput>. No additional info is added to sections. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="172" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a5dcff3ba5d80f5fb8991adc76a49fa9c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::empty</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>empty</name>
+        <qualifiedname>erbsland::conf::Value::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this container is empty. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="177" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a269883e2f47fd838a1a50237f271c75b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::firstValue</definition>
+        <argsstring>() const noexcept -&gt; ValuePtr</argsstring>
+        <name>firstValue</name>
+        <qualifiedname>erbsland::conf::Value::firstValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the first value of a container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="181" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ab1d7522e559831ff9d6646ffcd6ebe25" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::lastValue</definition>
+        <argsstring>() const noexcept -&gt; ValuePtr</argsstring>
+        <name>lastValue</name>
+        <qualifiedname>erbsland::conf::Value::lastValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the last value of a container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="185" column="11" bodyfile="erbsland/conf/Value.cpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1af57ece3231a86bcabcb2313b551f5661" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="272" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="272" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ac52361099793d4253aafda5d722d0aea" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; String</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="273" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="273" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1add333d0b9a0e538e1049e2c5591b9290" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; Date</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="274" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="274" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a3f66357b3dc39c02dc1a1266aa5d7600" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; Time</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="275" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="275" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1aba2af7c85ce8f5106c7b33d12719a8e8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; DateTime</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="276" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="276" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1afaf534bdb396068fc71035435b92f2a9" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; TimeDelta</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="277" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="277" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1a5c9b063001436365f441c3183472d898" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; Bytes</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="278" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="278" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_value_1ac9d6825e9a821b9916931957bb4b2f67" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto erbsland::conf::Value::convertTo</definition>
+        <argsstring>() const noexcept -&gt; ValueList</argsstring>
+        <name>convertTo</name>
+        <qualifiedname>erbsland::conf::Value::convertTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="279" column="19" bodyfile="erbsland/conf/Value.hpp" bodystart="279" bodyend="279"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The base class and interface for all values.</para>
+<para>@tested <computeroutput>ValueTest</computeroutput> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>erbsland::conf::Document</label>
+        <link refid="classerbsland_1_1conf_1_1_document"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland::conf::Value</label>
+        <link refid="classerbsland_1_1conf_1_1_value"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Value &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>erbsland::conf::Value</label>
+        <link refid="classerbsland_1_1conf_1_1_value"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::enable_shared_from_this&lt; Value &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/Value.hpp" line="31" column="1" bodyfile="erbsland/conf/Value.hpp" bodystart="31" bodyend="269"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae1f221ea59cdc48a16ed3ccd9988d069" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>begin</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af93586e31660a5ef64564e5cb605534e" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a84e1d73bc7315ad56c47c070af6358a5" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1adf1def78da8cae61e72fc4885e0ba382" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af57ece3231a86bcabcb2313b551f5661" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac52361099793d4253aafda5d722d0aea" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1add333d0b9a0e538e1049e2c5591b9290" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3f66357b3dc39c02dc1a1266aa5d7600" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aba2af7c85ce8f5106c7b33d12719a8e8" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1afaf534bdb396068fc71035435b92f2a9" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a5c9b063001436365f441c3183472d898" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac9d6825e9a821b9916931957bb4b2f67" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>convertTo</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a5dcff3ba5d80f5fb8991adc76a49fa9c" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>empty</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aa9e85639c3f0529ee16cfb2b058239ac" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>end</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a269883e2f47fd838a1a50237f271c75b" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>firstValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1b541114f69b6e41558cee13f760247b" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getBoolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a992dcb92288deea7ea817f5b921e0f34" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getBooleanOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acfdb711b654c5f92f797aa1b8b43b9ef" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getBytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a712432eed205e03d8816e563db7589db" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getBytesOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae93eb718993965c1a44e1aa6bcb6a0e5" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getDate</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a9c9ff2515e650148bf4817e7a47e28d0" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getDateOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ad2daf11f4d11df9fc872b2082de05854" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getDateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a39dad795a2e3427772727bbb147d74ec" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getDateTimeOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acd20e62274c4670c2bba0d33cb6713d9" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getFloat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a636268408ee26f99f2d7b06d422d3653" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getFloatOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a09969d0c021c83d7049896ad327d304c" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getInteger</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a9cd5c42a88d556d272f08b021504612c" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getIntegerOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae86f02b668ca46d9d1d86f1d161b4140" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac59279220f2722c9bcceaecfaec629b0" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getListOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ad367046f32884a94887746772745c3da" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getRegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3bb03fb01993b65cfd3f26fdc09b6898" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getRegExOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a87d8138d2626581e4d2bdfa79984765c" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a4de401455e3238135781c9fa275bfa22" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getTextOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a2fd9b16edb2755450e88d84c0d1d8028" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1ca7f1a3359a4d58506b6904c7aa9d0d" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getTimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a04679081db7fb6b6ffad4d473c4c4945" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getTimeDeltaOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a4f0b2927999a0deb1c40010b82d79064" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>getTimeOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aeb66cc34481107d0d0e41efa08548211" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>hasLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a416a9198711e66e9049a301b51e3a401" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>hasParent</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af3f8f0281787d3b126ded12744b69b45" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>hasValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a03711d0044bc68918e7a1adc40529955" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>hasValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a845160920d802b31bb8831502ab2ab17" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>hasValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a6fade64fb8e817f5e65377b223851412" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isBoolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac9d12f0c84f4d7b5317ab4d5c0366128" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isBytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1be8896e117045a3af9ef3c8fbf386d0" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isDate</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab45a240595bf4e14ab547e99042af74e" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isDateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a025dc56538cc2066e630a0acf6dd9182" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isDocument</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aa9eba45a3e416a95346cec13b0f433a2" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isFloat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab26c7c8be9e09b74432ca3eb2752e096" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isInteger</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1abc12cfcdca28364d5582deb0e0dd1212" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a4b61e63391517af2b3391ffcbd953183" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae7e93fd1313b84f94b4ea2ae537a0f9a" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isRegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a08bf7ebb3ac77fb5bb26feb328b7f94f" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isRoot</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ada7f326d0a52e6eb36eee31203d398a7" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac2f724950263678c3f13aab401d91703" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acc7c9925bb961a2d9e2fd06cf2336abd" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isTimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1852aed3990428eb0ba323d984313976" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>isValueList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab1d7522e559831ff9d6646ffcd6ebe25" prot="public" virt="non-virtual"><scope>erbsland::conf::Value</scope><name>lastValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0bef325c20bdf32272c23d9757a6d698" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3c991b878670ad2615b6e74e67872dbc" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aafbad0718998126abf9222771cb2523a" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>namePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acb1987ba26f76f9c1960e8dbd2e65364" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>parent</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0aa5223dcbad509fc840c133d372ffe9" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>setLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac1f340d9abc33ec32c986b3b4d4c25a1" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>size</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ad05152f19b2d6a8827a6bbb621cf6bc9" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toBoolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a035762ace4b70a31d3bcd2137b279af6" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toBytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a4fe6c5645ce4fba801ce716417e5c6b8" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toDate</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aa1c5fc2fabd8ba5a739e4ace3196c90f" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toDateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ad3bc8040f55fca505cee3800f02b0c8b" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toFloat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a41b9ebc974edb8b1781110ef5d0d8cf3" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toInteger</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a64e10e10b8eebc57ddafb6847af97c13" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acb736b6685033d87efbc7c645a8bf890" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toRegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab519a0f4ab6cb55c1976d2daa0d496f6" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toTestText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0e3326480f1826239bc76d00313b3b50" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af7992802fc0979306e18e8fc40d85228" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toTextRepresentation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac5cfac628301dd653e376ec6ae94de1a" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aef6b4bdb6fcfa5b68abbf7393579e0d2" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>toTimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a364abe6bf80f5008c82f752502a0b86f" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aa3f9dd36e93827475ee013e0bb9666e5" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a2eff31352205b145e4ac092ee23e3326" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1d2a3eaf33fafb1c95d6f09d18b5e272" prot="public" virt="pure-virtual"><scope>erbsland::conf::Value</scope><name>value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3335aa867c3daac0da6db9593f5878b6" prot="public" virt="virtual"><scope>erbsland::conf::Value</scope><name>valueOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af1bf25a44fcba8e0080b4a182cde538c" prot="public" virt="virtual"><scope>erbsland::conf::Value</scope><name>valueOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae841e7f5bfcc65d009ce122c8369b178" prot="public" virt="virtual"><scope>erbsland::conf::Value</scope><name>valueOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1c27c218d581c91ce8b998e740e3eb12" prot="public" virt="virtual"><scope>erbsland::conf::Value</scope><name>~Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

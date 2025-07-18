@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_time_offset_8hpp" kind="file" language="C++">
+    <compoundname>TimeOffset.hpp</compoundname>
+    <includes refid="_string_8hpp" local="yes">String.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_time_8hpp" local="yes">erbsland/conf/Time.hpp</includedby>
+    <includedby refid="_time_offset_8cpp" local="yes">erbsland/conf/TimeOffset.cpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/TimeOffset.hpp</label>
+        <link refid="_time_offset_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>chrono</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>format</label>
+      </node>
+      <node id="10">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>impl/Char.hpp</label>
+      </node>
+      <node id="7">
+        <label>impl/ComparisonHelper.hpp</label>
+      </node>
+      <node id="8">
+        <label>impl/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="9">
+        <label>impl/PrivateTag.hpp</label>
+      </node>
+      <node id="11">
+        <label>ranges</label>
+      </node>
+      <node id="12">
+        <label>span</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>erbsland/conf/DateTime.hpp</label>
+        <link refid="_date_time_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/Time.hpp</label>
+        <link refid="_time_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/TimeOffset.hpp</label>
+        <link refid="_time_offset_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_time_offset" prot="public">erbsland::conf::TimeOffset</innerclass>
+    <innerclass refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_time_offset_01_4" prot="public">std::formatter&lt; erbsland::conf::TimeOffset &gt;</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;String.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classerbsland_1_1conf_1_1_time_offset" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref><sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>LOCAL_TIME_OFFSET<sp/>=<sp/>std::chrono::seconds{0x7fffffff};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573" kindref="member">Precision</ref><sp/>:<sp/>uint8_t<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a086247a9b57fde6eefee2a0c4752242d" kindref="member">Automatic</ref>,<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a8f19a8c7566af54ea8981029730e5465" kindref="member">Seconds</ref>,<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573af670ea66cfb0e90bd6090472ad692694" kindref="member">Minutes</ref>,<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a6a7e73161603d87b26a8eac49dab0a9c" kindref="member">Hours</ref>,<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classerbsland_1_1conf_1_1_time_offset_1a933472384797d32634e4e5df406ca5ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a933472384797d32634e4e5df406ca5ba" kindref="member">TimeOffset</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classerbsland_1_1conf_1_1_time_offset_1a6cfb3d15f0dd03ae2c81de14d5f346dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a6cfb3d15f0dd03ae2c81de14d5f346dc" kindref="member">TimeOffset</ref>(std::chrono::seconds<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref>)<sp/>:<sp/>_seconds{<ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref>}<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref><sp/>&lt;<sp/>std::chrono::seconds{-86399}<sp/>||<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref><sp/>&gt;<sp/>std::chrono::seconds{86399})<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Offset<sp/>is<sp/>out<sp/>of<sp/>range&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a933472384797d32634e4e5df406ca5ba" kindref="member">TimeOffset</ref>(int32_t<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref>)<sp/>:<sp/>_seconds{<ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref>}<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(seconds<sp/>&lt;<sp/>-86399<sp/>||<sp/>seconds<sp/>&gt;<sp/>86399)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Offset<sp/>is<sp/>out<sp/>of<sp/>range&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classerbsland_1_1conf_1_1_time_offset_1a9b39e8a262483c67ee6878b25b83223c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a9b39e8a262483c67ee6878b25b83223c" kindref="member">TimeOffset</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1af86b28493ea29f10e931a68a1f9578b9" kindref="member">isNegative</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a779e7bc9f9be0695ae5c9755f8dfeded" kindref="member">hours</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a61179cdaaaa759263db1f1397720eb80" kindref="member">minutes</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref>)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>_seconds{(<ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref><sp/>+<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a61179cdaaaa759263db1f1397720eb80" kindref="member">minutes</ref><sp/>*<sp/>60<sp/>+<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a779e7bc9f9be0695ae5c9755f8dfeded" kindref="member">hours</ref><sp/>*<sp/>3600)<sp/>*<sp/>(<ref refid="classerbsland_1_1conf_1_1_time_offset_1af86b28493ea29f10e931a68a1f9578b9" kindref="member">isNegative</ref><sp/>?<sp/>-1<sp/>:<sp/>1)}<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hours<sp/>&lt;<sp/>0<sp/>||<sp/>hours<sp/>&gt;<sp/>23<sp/>||<sp/>minutes<sp/>&lt;<sp/>0<sp/>||<sp/>minutes<sp/>&gt;<sp/>59<sp/>||<sp/>seconds<sp/>&lt;<sp/>0<sp/>||<sp/>seconds<sp/>&gt;<sp/>59<sp/>||</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_seconds<sp/>&lt;<sp/>std::chrono::seconds{-86399}<sp/>||<sp/>_seconds<sp/>&gt;<sp/>std::chrono::seconds{86399}<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Offset<sp/>is<sp/>out<sp/>of<sp/>range&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>defaults</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">~TimeOffset</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a933472384797d32634e4e5df406ca5ba" kindref="member">TimeOffset</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref>&amp;)<sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref>&amp;<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>accessors</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a2890559574408dabd9b0e77614e1e29a" kindref="member">isLocalTime</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a58098201fc8761b392fc275d9def1060" kindref="member">isUTC</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a279a3e60720e763cc809982422d9ca2e" kindref="member">totalSeconds</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/>std::chrono::<ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1af86b28493ea29f10e931a68a1f9578b9" kindref="member">isNegative</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" kindref="member">seconds</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a61179cdaaaa759263db1f1397720eb80" kindref="member">minutes</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a779e7bc9f9be0695ae5c9755f8dfeded" kindref="member">hours</ref>()<sp/>const<sp/>noexcept<sp/>-&gt;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>conversion</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1aaca3e61c403d9a2ab57d61f1e797d075" kindref="member">toText</ref>(<ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573" kindref="member">Precision</ref><sp/>precision<sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573" kindref="member">Precision</ref>::<ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a086247a9b57fde6eefee2a0c4752242d" kindref="member">Automatic</ref>)<sp/>const<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="136" refid="classerbsland_1_1conf_1_1_time_offset_1a5c2fa020e0d13042f2460a11a39435f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>constexpr<sp/>static<sp/>auto<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset_1a5c2fa020e0d13042f2460a11a39435f9" kindref="member">utc</ref>()<sp/>noexcept<sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref>{0};<sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::seconds<sp/>_seconds{LOCAL_TIME_OFFSET};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="147" refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_time_offset_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">std::formatter&lt;erbsland::conf::TimeOffset&gt;<sp/>:<sp/>std::formatter&lt;std::string&gt;<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>format(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">erbsland::conf::TimeOffset</ref><sp/>timeOffset,<sp/>format_context&amp;<sp/>ctx)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::formatter&lt;std::string&gt;::format(timeOffset.<ref refid="classerbsland_1_1conf_1_1_time_offset_1aaca3e61c403d9a2ab57d61f1e797d075" kindref="member">toText</ref>().toCharString(),<sp/>ctx);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/TimeOffset.hpp"/>
+  </compounddef>
+</doxygen>

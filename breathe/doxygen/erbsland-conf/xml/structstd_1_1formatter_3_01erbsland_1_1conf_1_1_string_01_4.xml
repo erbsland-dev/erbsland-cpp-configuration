@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_string_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>std::formatter&lt; erbsland::conf::String &gt;</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::formatter&lt; std::string &gt;</basecompoundref>
+    <templateparamlist>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_string_01_4_1abbf611a271f5640775a74f881c7b4c13" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto std::formatter&lt; erbsland::conf::String &gt;::format</definition>
+        <argsstring>(erbsland::conf::String str, format_context &amp;ctx) const</argsstring>
+        <name>format</name>
+        <qualifiedname>std::formatter&lt; erbsland::conf::String &gt;::format</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">erbsland::conf::String</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>format_context &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="272" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="272" bodyend="274"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>std::formatter&lt; erbsland::conf::String &gt;</label>
+        <link refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_string_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::formatter&lt; std::string &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>std::formatter&lt; erbsland::conf::String &gt;</label>
+        <link refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_string_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::formatter&lt; std::string &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/String.hpp" line="271" column="1" bodyfile="erbsland/conf/String.hpp" bodystart="271" bodyend="275"/>
+    <listofallmembers>
+      <member refid="structstd_1_1formatter_3_01erbsland_1_1conf_1_1_string_01_4_1abbf611a271f5640775a74f881c7b4c13" prot="public" virt="non-virtual"><scope>std::formatter&lt; erbsland::conf::String &gt;</scope><name>format</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

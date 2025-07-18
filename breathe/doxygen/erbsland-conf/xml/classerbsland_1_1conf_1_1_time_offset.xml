@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_time_offset" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::TimeOffset</compoundname>
+    <includes refid="_time_offset_8hpp" local="no">erbsland/conf/TimeOffset.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573" prot="public" static="no" strong="yes">
+        <type>uint8_t</type>
+        <name>Precision</name>
+        <qualifiedname>erbsland::conf::TimeOffset::Precision</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a086247a9b57fde6eefee2a0c4752242d" prot="public">
+          <name>Automatic</name>
+          <briefdescription>
+<para>Depends on if minutes, and seconds are zero. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a8f19a8c7566af54ea8981029730e5465" prot="public">
+          <name>Seconds</name>
+          <briefdescription>
+<para>Format: [+-]hh:mm:ss. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573af670ea66cfb0e90bd6090472ad692694" prot="public">
+          <name>Minutes</name>
+          <briefdescription>
+<para>Format: [+-]hh:mm. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a6a7e73161603d87b26a8eac49dab0a9c" prot="public">
+          <name>Hours</name>
+          <briefdescription>
+<para>Format: [+-]hh. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The precision used for the text format. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="28" column="5" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_time_offset_1a8815da265a50c90e05e5908bce7579b7" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::TimeOffset::LOCAL_TIME_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>LOCAL_TIME_OFFSET</name>
+        <qualifiedname>erbsland::conf::TimeOffset::LOCAL_TIME_OFFSET</qualifiedname>
+        <initializer>= std::chrono::seconds{0x7fffffff}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Magic number to mark local time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="23" column="27" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="23" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_time_offset_1a05ace993ce6ed39c4bfc9fe51d5c4955" prot="private" static="no" mutable="no">
+        <type>std::chrono::seconds</type>
+        <definition>std::chrono::seconds erbsland::conf::TimeOffset::_seconds</definition>
+        <argsstring></argsstring>
+        <name>_seconds</name>
+        <qualifiedname>erbsland::conf::TimeOffset::_seconds</qualifiedname>
+        <initializer>{LOCAL_TIME_OFFSET}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="139" column="26" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="139" bodyend="139"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a933472384797d32634e4e5df406ca5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeOffset::TimeOffset</definition>
+        <argsstring>()=default</argsstring>
+        <name>TimeOffset</name>
+        <qualifiedname>erbsland::conf::TimeOffset::TimeOffset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create local time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a6cfb3d15f0dd03ae2c81de14d5f346dc" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::TimeOffset::TimeOffset</definition>
+        <argsstring>(std::chrono::seconds seconds)</argsstring>
+        <name>TimeOffset</name>
+        <qualifiedname>erbsland::conf::TimeOffset::TimeOffset</qualifiedname>
+        <param>
+          <type>std::chrono::seconds</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a time offset from the given number of seconds.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The offset in seconds. Zero for UTC. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the offset is out of the valid range. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="45" column="24" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a39155716dd7b33df2f9ff080d7c12450" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::TimeOffset::TimeOffset</definition>
+        <argsstring>(int32_t seconds)</argsstring>
+        <name>TimeOffset</name>
+        <qualifiedname>erbsland::conf::TimeOffset::TimeOffset</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="50" column="24" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a9b39e8a262483c67ee6878b25b83223c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::TimeOffset::TimeOffset</definition>
+        <argsstring>(bool isNegative, int hours, int minutes, int seconds)</argsstring>
+        <name>TimeOffset</name>
+        <qualifiedname>erbsland::conf::TimeOffset::TimeOffset</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>isNegative</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hours</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minutes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a time offset from the given hours, minutes and seconds.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isNegative</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If this is a negative offset. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hours</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hours in the range 0-23. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minutes in the range 0-59. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seconds in the range 0-59. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if one of the values is out of the valid range. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="64" column="15" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="64" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a666e410252c2367d93e1567843d001b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeOffset::~TimeOffset</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TimeOffset</name>
+        <qualifiedname>erbsland::conf::TimeOffset::~TimeOffset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="73" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1addd88301b0e13cfce0661fe7a95b0214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeOffset::TimeOffset</definition>
+        <argsstring>(const TimeOffset &amp;)=default</argsstring>
+        <name>TimeOffset</name>
+        <qualifiedname>erbsland::conf::TimeOffset::TimeOffset</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="74" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a798ffb4d38a87ecb4d5fc1e1531e0c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::operator=</definition>
+        <argsstring>(const TimeOffset &amp;) -&gt; TimeOffset &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::TimeOffset::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_offset" kindref="compound">TimeOffset</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="75" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a2890559574408dabd9b0e77614e1e29a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::isLocalTime</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isLocalTime</name>
+        <qualifiedname>erbsland::conf::TimeOffset::isLocalTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is local time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="80" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a58098201fc8761b392fc275d9def1060" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::isUTC</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isUTC</name>
+        <qualifiedname>erbsland::conf::TimeOffset::isUTC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is UTC (zero offset) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="84" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a279a3e60720e763cc809982422d9ca2e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::totalSeconds</definition>
+        <argsstring>() const noexcept -&gt; std::chrono::seconds</argsstring>
+        <name>totalSeconds</name>
+        <qualifiedname>erbsland::conf::TimeOffset::totalSeconds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the offset as positive or negative total number of seconds.</para>
+<para><simplesect kind="return"><para>The offset in seconds, and zero for UTC and local time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="90" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1af86b28493ea29f10e931a68a1f9578b9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::isNegative</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isNegative</name>
+        <qualifiedname>erbsland::conf::TimeOffset::isNegative</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If this offset is negative.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if this is a negative offset, <computeroutput>false</computeroutput> for zero, local time and positive offsets. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="96" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::seconds</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>seconds</name>
+        <qualifiedname>erbsland::conf::TimeOffset::seconds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The second part of the offset.</para>
+<para><simplesect kind="return"><para>The second part of the offset, always in the positive range 0-59. Zero for local time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="102" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a61179cdaaaa759263db1f1397720eb80" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::minutes</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>minutes</name>
+        <qualifiedname>erbsland::conf::TimeOffset::minutes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The minute part of the offset.</para>
+<para><simplesect kind="return"><para>The minute part of the offset, always in the positive range 0-59. Zero for local time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="108" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a779e7bc9f9be0695ae5c9755f8dfeded" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::hours</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>hours</name>
+        <qualifiedname>erbsland::conf::TimeOffset::hours</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The hour part of the offset.</para>
+<para><simplesect kind="return"><para>The hour part of the offset, always in the positive range 0-23. Zero for local time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="114" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="56" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1aaca3e61c403d9a2ab57d61f1e797d075" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::TimeOffset::toText</definition>
+        <argsstring>(Precision precision=Precision::Automatic) const noexcept -&gt; String</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::TimeOffset::toText</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573" kindref="member">Precision</ref></type>
+          <declname>precision</declname>
+          <defval><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a086247a9b57fde6eefee2a0c4752242d" kindref="member">Precision::Automatic</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this offset into text.</para>
+<para>Returns an empty text for local time. Returns &quot;z&quot; for UTC For <computeroutput>precision</computeroutput> set to <computeroutput><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a086247a9b57fde6eefee2a0c4752242d" kindref="member">Precision::Automatic</ref></computeroutput>, the minimal required elements are returned. if minutes and seconds are zero, only the hours are returned. If minutes are non-zero, the minutes are returned too and if seconds are not zero, the seconds are returned as well.</para>
+<para><itemizedlist>
+<listitem><para><computeroutput><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a6a7e73161603d87b26a8eac49dab0a9c" kindref="member">Precision::Hours</ref></computeroutput>: Returns an offset in the format &quot;+01&quot;.</para>
+</listitem><listitem><para><computeroutput><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573af670ea66cfb0e90bd6090472ad692694" kindref="member">Precision::Minutes</ref></computeroutput>: Returns an offset in the format &quot;-01:23&quot;.</para>
+</listitem><listitem><para><computeroutput><ref refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573a8f19a8c7566af54ea8981029730e5465" kindref="member">Precision::Seconds</ref></computeroutput>: Returns an offset in the format &quot;+01:14:35&quot;. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="129" column="11" bodyfile="erbsland/conf/TimeOffset.cpp" bodystart="64" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_offset_1a5c2fa020e0d13042f2460a11a39435f9" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr auto</type>
+        <definition>static constexpr auto erbsland::conf::TimeOffset::utc</definition>
+        <argsstring>() noexcept -&gt; TimeOffset</argsstring>
+        <name>utc</name>
+        <qualifiedname>erbsland::conf::TimeOffset::utc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a UTC offset.</para>
+<para>This static method is more expressive than an offset with zero seconds. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeOffset.hpp" line="136" column="28" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="136" bodyend="136"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A time offset.</para>
+<para>@tested <computeroutput>TimeOffsetTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/TimeOffset.hpp" line="19" column="1" bodyfile="erbsland/conf/TimeOffset.hpp" bodystart="19" bodyend="140"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a05ace993ce6ed39c4bfc9fe51d5c4955" prot="private" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>_seconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a779e7bc9f9be0695ae5c9755f8dfeded" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>hours</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a2890559574408dabd9b0e77614e1e29a" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>isLocalTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1af86b28493ea29f10e931a68a1f9578b9" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>isNegative</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a58098201fc8761b392fc275d9def1060" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>isUTC</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a8815da265a50c90e05e5908bce7579b7" prot="private" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>LOCAL_TIME_OFFSET</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a61179cdaaaa759263db1f1397720eb80" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>minutes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a798ffb4d38a87ecb4d5fc1e1531e0c44" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1aa6a80f4e2bbc8eabb99ff0f9bbcff573" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>Precision</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1ac5dcbc535950682e6453f1f442c4f9e7" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>seconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a933472384797d32634e4e5df406ca5ba" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>TimeOffset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a6cfb3d15f0dd03ae2c81de14d5f346dc" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>TimeOffset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a39155716dd7b33df2f9ff080d7c12450" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>TimeOffset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a9b39e8a262483c67ee6878b25b83223c" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>TimeOffset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1addd88301b0e13cfce0661fe7a95b0214" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>TimeOffset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a279a3e60720e763cc809982422d9ca2e" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>totalSeconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1aaca3e61c403d9a2ab57d61f1e797d075" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a5c2fa020e0d13042f2460a11a39435f9" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>utc</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_offset_1a666e410252c2367d93e1567843d001b3" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeOffset</scope><name>~TimeOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

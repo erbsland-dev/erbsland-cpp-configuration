@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_source_identifier" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::SourceIdentifier</compoundname>
+    <includes refid="_source_identifier_8hpp" local="no">erbsland/conf/SourceIdentifier.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_source_identifier_1a60710c948c0313d86388a633dd7f6553" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::SourceIdentifier::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::_name</qualifiedname>
+        <briefdescription>
+<para>The name of the source. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="136" column="12" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_source_identifier_1a10ee39ebcb52877f508b24d73632ee34" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::SourceIdentifier::_path</definition>
+        <argsstring></argsstring>
+        <name>_path</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::_path</qualifiedname>
+        <briefdescription>
+<para>The path of the source. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="137" column="12" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1ad4b72dd70ae54474940e1c5142eca828" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::SourceIdentifier::SourceIdentifier</definition>
+        <argsstring>(String name, String path, impl::PrivateTag) noexcept</argsstring>
+        <name>SourceIdentifier</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::SourceIdentifier</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>impl::PrivateTag</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="39" column="5" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1ab3c28812eb0101cff04b64dd2e292901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::SourceIdentifier::~SourceIdentifier</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SourceIdentifier</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::~SourceIdentifier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="73" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1a8742bb251960b56f193e1617cbf5cf35" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::SourceIdentifier::operator==</definition>
+        <argsstring>(const SourceIdentifier &amp;other) const noexcept -&gt; bool</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_source_identifier" kindref="compound">SourceIdentifier</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="76" column="11" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1a3c7446167e08efcc8816670ba15df12d" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::SourceIdentifier::operator!=</definition>
+        <argsstring>(const SourceIdentifier &amp;other) const noexcept -&gt; bool</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_source_identifier" kindref="compound">SourceIdentifier</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="79" column="11" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1a0ff23d020b42c6582154beb092f4922c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::SourceIdentifier::name</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>name</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the name of the source. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="86" column="11" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1a4ca42c5054a2a5d229376f7000499e11" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::SourceIdentifier::path</definition>
+        <argsstring>() const noexcept -&gt; const String &amp;</argsstring>
+        <name>path</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the path of the source. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="90" column="11" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1a29aa5484c9ba5c37edf5f438bd2b233f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::SourceIdentifier::toText</definition>
+        <argsstring>() const noexcept -&gt; String</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a text representation of this source identifier.</para>
+<para><simplesect kind="return"><para>A text representation of the identifier. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="97" column="11" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="97" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1aa8d61f42203f9ccee1b91828eeaab48f" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::SourceIdentifier::create</definition>
+        <argsstring>(String name, String path) noexcept -&gt; SourceIdentifierPtr</argsstring>
+        <name>create</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::create</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory function to create a shared source identifier.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Shared-pointer to the new instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="49" column="18" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1a7da04fca066174edcbfbf1f6ee8cdb11" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::SourceIdentifier::createForFile</definition>
+        <argsstring>(String path) noexcept -&gt; SourceIdentifierPtr</argsstring>
+        <name>createForFile</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::createForFile</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new source identifier for a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Shared-pointer to the new instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="58" column="18" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="58" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1acf75deb5e36e79ee35153c2b73ad5c3a" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::SourceIdentifier::createForText</definition>
+        <argsstring>() noexcept -&gt; SourceIdentifierPtr</argsstring>
+        <name>createForText</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::createForText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new source identifier for text.</para>
+<para><simplesect kind="return"><para>Shared-pointer to the new instance. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="68" column="18" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_identifier_1acadc7d595e28106179c4fdfbc464e45a" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::SourceIdentifier::areEqual</definition>
+        <argsstring>(const SourceIdentifierPtr &amp;a, const SourceIdentifierPtr &amp;b) noexcept -&gt; bool</argsstring>
+        <name>areEqual</name>
+        <qualifiedname>erbsland::conf::SourceIdentifier::areEqual</qualifiedname>
+        <param>
+          <type>const SourceIdentifierPtr &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const SourceIdentifierPtr &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A helper function to easily compare two source identifier pointers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first identifier. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second identifier. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if both identifier pointers are either nullptr, or compare to the same values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceIdentifier.hpp" line="115" column="17" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="115" bodyend="123"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Lightweight identifier for a configuration source.</para>
+<para>Instances of this class are usually shared between locations so that the parser and higher layers can refer to the same source without copying the underlying name and path strings.</para>
+<para>@tested <computeroutput>SourceIdentifierTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/SourceIdentifier.hpp" line="31" column="1" bodyfile="erbsland/conf/SourceIdentifier.hpp" bodystart="31" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a60710c948c0313d86388a633dd7f6553" prot="private" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>_name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a10ee39ebcb52877f508b24d73632ee34" prot="private" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>_path</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1acadc7d595e28106179c4fdfbc464e45a" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>areEqual</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1aa8d61f42203f9ccee1b91828eeaab48f" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>create</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a7da04fca066174edcbfbf1f6ee8cdb11" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>createForFile</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1acf75deb5e36e79ee35153c2b73ad5c3a" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>createForText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a0ff23d020b42c6582154beb092f4922c" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a3c7446167e08efcc8816670ba15df12d" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a8742bb251960b56f193e1617cbf5cf35" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a4ca42c5054a2a5d229376f7000499e11" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>path</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1ad4b72dd70ae54474940e1c5142eca828" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>SourceIdentifier</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1a29aa5484c9ba5c37edf5f438bd2b233f" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_identifier_1ab3c28812eb0101cff04b64dd2e292901" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceIdentifier</scope><name>~SourceIdentifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

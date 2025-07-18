@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_date" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::Date</compoundname>
+    <includes refid="_date_8hpp" local="no">erbsland/conf/Date.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_date_1a6cf3e0142d65616841bcf31d37f8c668" prot="private" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t erbsland::conf::Date::_daysSinceEpoch</definition>
+        <argsstring></argsstring>
+        <name>_daysSinceEpoch</name>
+        <qualifiedname>erbsland::conf::Date::_daysSinceEpoch</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="89" column="13" bodyfile="erbsland/conf/Date.hpp" bodystart="89" bodyend="89"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a049d5d01eba05cf1151b132872eee3c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Date::Date</definition>
+        <argsstring>()=default</argsstring>
+        <name>Date</name>
+        <qualifiedname>erbsland::conf::Date::Date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an undefined date. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a1a549a99e3c46f9ca1efbf4a422de3f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Date::Date</definition>
+        <argsstring>(int year, int month, int day)</argsstring>
+        <name>Date</name>
+        <qualifiedname>erbsland::conf::Date::Date</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new date.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The year in the range 1-9999. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The month in the range 1-12. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The day in the range 1-31. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if any of the parameters is out of the valid range or the date is not valid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="34" column="5" bodyfile="erbsland/conf/Date.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a9e4ffc87a0731652df562308a8377a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Date::~Date</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Date</name>
+        <qualifiedname>erbsland::conf::Date::~Date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="37" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1af6b138a55f41112ad0652b6e9ad3910f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Date::Date</definition>
+        <argsstring>(const Date &amp;)=default</argsstring>
+        <name>Date</name>
+        <qualifiedname>erbsland::conf::Date::Date</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="38" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a171d30786a4ea370fee5bf33ed0db709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::operator=</definition>
+        <argsstring>(const Date &amp;) -&gt; Date &amp;=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Date::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1aac3d894eed0be940dbd5d3ceb16c93e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Date::ERBSLAND_CONF_COMPARE_MEMBER</definition>
+        <argsstring>(const Date &amp;other, _daysSinceEpoch, other._daysSinceEpoch)</argsstring>
+        <name>ERBSLAND_CONF_COMPARE_MEMBER</name>
+        <qualifiedname>erbsland::conf::Date::ERBSLAND_CONF_COMPARE_MEMBER</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>_daysSinceEpoch</type>
+        </param>
+        <param>
+          <type>other.</type>
+          <declname>_daysSinceEpoch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a679b98edd26b6e57cb1486d96f09f943" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::isUndefined</definition>
+        <argsstring>() const noexcept -&gt; bool</argsstring>
+        <name>isUndefined</name>
+        <qualifiedname>erbsland::conf::Date::isUndefined</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is an undefined date. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="47" column="11" bodyfile="erbsland/conf/Date.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1aa07c7940b728d0bd876ed225aa577483" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::year</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>year</name>
+        <qualifiedname>erbsland::conf::Date::year</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The year of the date, or zero for undefined dates. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="51" column="11" bodyfile="erbsland/conf/Date.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1af626fec357dc450eed1223d8aade807d" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::month</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>month</name>
+        <qualifiedname>erbsland::conf::Date::month</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The month of the date or zero for undefined dates. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="55" column="11" bodyfile="erbsland/conf/Date.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a38154f62613ab2cf124ce4c9e8f249f9" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::day</definition>
+        <argsstring>() const noexcept -&gt; int</argsstring>
+        <name>day</name>
+        <qualifiedname>erbsland::conf::Date::day</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The day of the date or zero for undefined dates. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="59" column="11" bodyfile="erbsland/conf/Date.cpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1ad4af33e093febdfd57381b2b95021f91" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::toDaysSinceEpoch</definition>
+        <argsstring>() const noexcept -&gt; int64_t</argsstring>
+        <name>toDaysSinceEpoch</name>
+        <qualifiedname>erbsland::conf::Date::toDaysSinceEpoch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this date into days since epoch.</para>
+<para>Epoch is the fictive date 0000-01-01.</para>
+<para><simplesect kind="return"><para>The days since the fictive (invalid) date 0000-01-01. Returns zero for undefined dates. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="68" column="11" bodyfile="erbsland/conf/Date.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a52ab7521b390c21b59dfbc6be653cd47" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::toText</definition>
+        <argsstring>() const noexcept -&gt; String</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::Date::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this date into text.</para>
+<para>Uses the ISO format yyyy-mm-dd.</para>
+<para><simplesect kind="return"><para>The formatted date or an empty string for undefined dates. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="76" column="11" bodyfile="erbsland/conf/Date.cpp" bodystart="45" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_date_1a5e0aab9bd95f858f8d7bf8efe22dab70" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Date::isValid</definition>
+        <argsstring>(int year, int month, int day) noexcept -&gt; bool</argsstring>
+        <name>isValid</name>
+        <qualifiedname>erbsland::conf::Date::isValid</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if the given values are valid.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The year in the range 1-9999. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The month in the range 1-12. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The day in the range 1-31. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the values describe a valid date, otherwise <computeroutput>false</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Date.hpp" line="86" column="17" bodyfile="erbsland/conf/Date.cpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A date value</para>
+<para>@tested <computeroutput>DateTest</computeroutput> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/Date.hpp" line="21" column="1" bodyfile="erbsland/conf/Date.hpp" bodystart="21" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_date_1a6cf3e0142d65616841bcf31d37f8c668" prot="private" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>_daysSinceEpoch</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a049d5d01eba05cf1151b132872eee3c0" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>Date</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a1a549a99e3c46f9ca1efbf4a422de3f7" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>Date</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1af6b138a55f41112ad0652b6e9ad3910f" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>Date</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a38154f62613ab2cf124ce4c9e8f249f9" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>day</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1aac3d894eed0be940dbd5d3ceb16c93e1" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>ERBSLAND_CONF_COMPARE_MEMBER</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a679b98edd26b6e57cb1486d96f09f943" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>isUndefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a5e0aab9bd95f858f8d7bf8efe22dab70" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>isValid</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1af626fec357dc450eed1223d8aade807d" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>month</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a171d30786a4ea370fee5bf33ed0db709" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1ad4af33e093febdfd57381b2b95021f91" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>toDaysSinceEpoch</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a52ab7521b390c21b59dfbc6be653cd47" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1aa07c7940b728d0bd876ed225aa577483" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>year</name></member>
+      <member refid="classerbsland_1_1conf_1_1_date_1a9e4ffc87a0731652df562308a8377a48" prot="public" virt="non-virtual"><scope>erbsland::conf::Date</scope><name>~Date</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
