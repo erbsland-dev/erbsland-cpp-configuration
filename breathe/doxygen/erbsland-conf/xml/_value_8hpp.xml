@@ -1,0 +1,756 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_value_8hpp" kind="file" language="C++">
+    <compoundname>Value.hpp</compoundname>
+    <includes refid="_bytes_8hpp" local="yes">Bytes.hpp</includes>
+    <includes refid="_date_8hpp" local="yes">Date.hpp</includes>
+    <includes refid="_date_time_8hpp" local="yes">DateTime.hpp</includes>
+    <includes refid="_float_8hpp" local="yes">Float.hpp</includes>
+    <includes refid="_integer_8hpp" local="yes">Integer.hpp</includes>
+    <includes refid="_location_8hpp" local="yes">Location.hpp</includes>
+    <includes refid="_name_path_8hpp" local="yes">NamePath.hpp</includes>
+    <includes refid="_reg_ex_8hpp" local="yes">RegEx.hpp</includes>
+    <includes refid="_test_format_8hpp" local="yes">TestFormat.hpp</includes>
+    <includes refid="_time_8hpp" local="yes">Time.hpp</includes>
+    <includes refid="_time_delta_8hpp" local="yes">TimeDelta.hpp</includes>
+    <includes refid="_value_iterator_8hpp" local="yes">ValueIterator.hpp</includes>
+    <includes refid="_value_type_8hpp" local="yes">ValueType.hpp</includes>
+    <includes local="yes">impl/SaturationMath.hpp</includes>
+    <includes local="yes">impl/utf8/U8Format.hpp</includes>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Bytes.hpp</label>
+        <link refid="_bytes_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Date.hpp</label>
+        <link refid="_date_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>DateTime.hpp</label>
+        <link refid="_date_time_8hpp_source"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>ErrorCategory.hpp</label>
+        <link refid="_error_category_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>Float.hpp</label>
+        <link refid="_float_8hpp_source"/>
+      </node>
+      <node id="45">
+        <label>Integer.hpp</label>
+        <link refid="_integer_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Name.hpp</label>
+        <link refid="_name_8hpp_source"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>NamePath.hpp</label>
+        <link refid="_name_path_8hpp_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>NameType.hpp</label>
+        <link refid="_name_type_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Position.hpp</label>
+        <link refid="_position_8hpp_source"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>RegEx.hpp</label>
+        <link refid="_reg_ex_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>SourceIdentifier.hpp</label>
+        <link refid="_source_identifier_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>Time.hpp</label>
+        <link refid="_time_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>TimeDelta.hpp</label>
+        <link refid="_time_delta_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>TimeOffset.hpp</label>
+        <link refid="_time_offset_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>TimeUnit.hpp</label>
+        <link refid="_time_unit_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>ValueIterator.hpp</label>
+        <link refid="_value_iterator_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
+        <label>array</label>
+      </node>
+      <node id="8">
+        <label>bitset</label>
+      </node>
+      <node id="40">
+        <label>chrono</label>
+      </node>
+      <node id="19">
+        <label>cstddef</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="37">
+        <label>exception</label>
+      </node>
+      <node id="38">
+        <label>filesystem</label>
+      </node>
+      <node id="6">
+        <label>format</label>
+      </node>
+      <node id="14">
+        <label>functional</label>
+      </node>
+      <node id="9">
+        <label>impl/Char.hpp</label>
+      </node>
+      <node id="10">
+        <label>impl/ComparisonHelper.hpp</label>
+      </node>
+      <node id="11">
+        <label>impl/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="29">
+        <label>impl/Defaults.hpp</label>
+      </node>
+      <node id="18">
+        <label>impl/Definitions.hpp</label>
+      </node>
+      <node id="36">
+        <label>impl/HashHelper.hpp</label>
+      </node>
+      <node id="27">
+        <label>impl/InternalView.hpp</label>
+      </node>
+      <node id="12">
+        <label>impl/PrivateTag.hpp</label>
+      </node>
+      <node id="55">
+        <label>impl/SaturationMath.hpp</label>
+      </node>
+      <node id="47">
+        <label>impl/utf8/U8Format.hpp</label>
+      </node>
+      <node id="30">
+        <label>impl/utf8/U8StringView.hpp</label>
+      </node>
+      <node id="53">
+        <label>iterator</label>
+      </node>
+      <node id="51">
+        <label>map</label>
+      </node>
+      <node id="31">
+        <label>memory</label>
+      </node>
+      <node id="39">
+        <label>optional</label>
+      </node>
+      <node id="15">
+        <label>ranges</label>
+      </node>
+      <node id="16">
+        <label>span</label>
+      </node>
+      <node id="17">
+        <label>string</label>
+      </node>
+      <node id="50">
+        <label>unordered_map</label>
+      </node>
+      <node id="32">
+        <label>utility</label>
+      </node>
+      <node id="20">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_value" prot="public">erbsland::conf::Value</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Bytes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Date.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DateTime.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Float.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Integer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Location.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;NamePath.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;RegEx.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TestFormat.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Time.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TimeDelta.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueIterator.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ValueType.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/SaturationMath.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/utf8/U8Format.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Value;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ConstValuePtr<sp/>=<sp/>std::shared_ptr&lt;const<sp/>Value&gt;;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ValueList<sp/>=<sp/>std::vector&lt;ConstValuePtr&gt;;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classerbsland_1_1conf_1_1_value" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_value" kindref="compound">Value</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::enable_shared_from_this&lt;Value&gt;<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="classerbsland_1_1conf_1_1_value_1a1c27c218d581c91ce8b998e740e3eb12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a1c27c218d581c91ce8b998e740e3eb12" kindref="member">~Value</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>basic<sp/>properties.</highlight></codeline>
+<codeline lineno="44" refid="classerbsland_1_1conf_1_1_value_1a0ae7869adafecaffacaab2ffe9305a9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0ae7869adafecaffacaab2ffe9305a9f" kindref="member">name</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classerbsland_1_1conf_1_1_value_1a0014c19280f9158a581a78c1e37198ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0014c19280f9158a581a78c1e37198ea" kindref="member">hasParent</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classerbsland_1_1conf_1_1_value_1a3c6680a45f68789ec84e612d47fb7c94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a3c6680a45f68789ec84e612d47fb7c94" kindref="member">parent</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>location</highlight></codeline>
+<codeline lineno="65" refid="classerbsland_1_1conf_1_1_value_1ae8cf2d3d42044d806bbcf783550a163a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ae8cf2d3d42044d806bbcf783550a163a" kindref="member">hasLocation</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classerbsland_1_1conf_1_1_value_1a08b6843e11181a7aef7d355b75cc8822" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a08b6843e11181a7aef7d355b75cc8822" kindref="member">location</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classerbsland_1_1conf_1_1_value_1a0aa5223dcbad509fc840c133d372ffe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0aa5223dcbad509fc840c133d372ffe9" kindref="member">setLocation</ref>(const<sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/>&amp;newLocation)<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>lists</highlight></codeline>
+<codeline lineno="78" refid="classerbsland_1_1conf_1_1_value_1ab7b3d0c8b83c5720414f80bcae498ef4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ab7b3d0c8b83c5720414f80bcae498ef4" kindref="member">size</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classerbsland_1_1conf_1_1_value_1a01855dcefb75f562d508c47856b4a9f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a01855dcefb75f562d508c47856b4a9f6" kindref="member">hasValue</ref>(const<sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>(const<sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classerbsland_1_1conf_1_1_value_1adebbe5b680b1744ca83d0e749fe7f2c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1adebbe5b680b1744ca83d0e749fe7f2c7" kindref="member">valueOrThrow</ref>(const<sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classerbsland_1_1conf_1_1_value_1a9ba1fd552239264a3d5662e024b71d2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a9ba1fd552239264a3d5662e024b71d2b" kindref="member">begin</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classerbsland_1_1conf_1_1_value_1a67bdf16466d307bf9f865786090cc42f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_value_iterator" kindref="compound">ValueIterator</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a67bdf16466d307bf9f865786090cc42f" kindref="member">end</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>conversions</highlight></codeline>
+<codeline lineno="133"></codeline>
+<codeline lineno="136" refid="classerbsland_1_1conf_1_1_value_1aadbf779926a761de50c3df2001ad5e9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>Integer<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aadbf779926a761de50c3df2001ad5e9d" kindref="member">asInteger</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="140" refid="classerbsland_1_1conf_1_1_value_1a5e9a22321ab7e8aed45466ec2b53efc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>Integer<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a5e9a22321ab7e8aed45466ec2b53efc6" kindref="member">asIntegerOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="143" refid="classerbsland_1_1conf_1_1_value_1ab7f4440010ae562ebbdf0e0b755a04d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ab7f4440010ae562ebbdf0e0b755a04d6" kindref="member">asBoolean</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="147" refid="classerbsland_1_1conf_1_1_value_1af2a39b4e1a0b330ef6a6be073424e244" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1af2a39b4e1a0b330ef6a6be073424e244" kindref="member">asBooleanOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="150" refid="classerbsland_1_1conf_1_1_value_1aaea2e147a80759857d0ee486d8f0357a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>Float<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aaea2e147a80759857d0ee486d8f0357a" kindref="member">asFloat</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="154" refid="classerbsland_1_1conf_1_1_value_1ad0b221c5f03816ecda34d352f06473c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>Float<sp/><ref refid="classerbsland_1_1conf_1_1_value_1ad0b221c5f03816ecda34d352f06473c7" kindref="member">asFloatOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="157" refid="classerbsland_1_1conf_1_1_value_1ac0c72f69cdbb452159f251e4f02e9610" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ac0c72f69cdbb452159f251e4f02e9610" kindref="member">asText</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="161" refid="classerbsland_1_1conf_1_1_value_1a7b06a38a96e18633536d6b29c1116715" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a7b06a38a96e18633536d6b29c1116715" kindref="member">asTextOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="164" refid="classerbsland_1_1conf_1_1_value_1a7d202b9fb4181560cf6c47d23c526d85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a7d202b9fb4181560cf6c47d23c526d85" kindref="member">asDate</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="168" refid="classerbsland_1_1conf_1_1_value_1a4be545244f502e7c2aed88d499fbdcd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a4be545244f502e7c2aed88d499fbdcd2" kindref="member">asDateOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="171" refid="classerbsland_1_1conf_1_1_value_1a00fd52c04f8da05cfd1e543f4b53c435" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a00fd52c04f8da05cfd1e543f4b53c435" kindref="member">asTime</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="175" refid="classerbsland_1_1conf_1_1_value_1ac3ae32fb0a2511bf0745e30f59978c5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ac3ae32fb0a2511bf0745e30f59978c5d" kindref="member">asTimeOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="178" refid="classerbsland_1_1conf_1_1_value_1aea91f54005c1555a0274c32d4274c932" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1aea91f54005c1555a0274c32d4274c932" kindref="member">asDateTime</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="182" refid="classerbsland_1_1conf_1_1_value_1a9b9f9ca2165dd55065318cc057c42980" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a9b9f9ca2165dd55065318cc057c42980" kindref="member">asDateTimeOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="185" refid="classerbsland_1_1conf_1_1_value_1a5cc0a22a7ed0a70e5e2a6b328f26e664" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a5cc0a22a7ed0a70e5e2a6b328f26e664" kindref="member">asBytes</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="189" refid="classerbsland_1_1conf_1_1_value_1a250280394d448bc345676b1f1552304c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a250280394d448bc345676b1f1552304c" kindref="member">asBytesOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="192" refid="classerbsland_1_1conf_1_1_value_1a30e3bbb93684c496774da9b2237d6f6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a30e3bbb93684c496774da9b2237d6f6b" kindref="member">asTimeDelta</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="196" refid="classerbsland_1_1conf_1_1_value_1a2488f6612cedce1fa70cd10ff5b93504" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a2488f6612cedce1fa70cd10ff5b93504" kindref="member">asTimeDeltaOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="199" refid="classerbsland_1_1conf_1_1_value_1a36c470b57ed352eca737a2a96ecafd61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a36c470b57ed352eca737a2a96ecafd61" kindref="member">asRegEx</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="203" refid="classerbsland_1_1conf_1_1_value_1a95930b124e50f602bf4824a32989d831" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/><ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a95930b124e50f602bf4824a32989d831" kindref="member">asRegExOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="208" refid="classerbsland_1_1conf_1_1_value_1aba2eea2ad9d48e3eb1eb92f0af6a0299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>ValueList<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aba2eea2ad9d48e3eb1eb92f0af6a0299" kindref="member">asValueList</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="214" refid="classerbsland_1_1conf_1_1_value_1a2a76770eb17b712fbcac18288bf5950f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>ValueList<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a2a76770eb17b712fbcac18288bf5950f" kindref="member">asValueListOrThrow</ref>()<sp/>const<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>template&lt;typename<sp/>T&gt;</highlight></codeline>
+<codeline lineno="232" refid="classerbsland_1_1conf_1_1_value_1a76db36593b45bae493b3bd6661656f62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a76db36593b45bae493b3bd6661656f62" kindref="member">asType</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ValueType::from&lt;T&gt;().raw()<sp/>!=<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">ValueType::Undefined</ref>,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;no<sp/>type<sp/>support<sp/>available<sp/>for<sp/>the<sp/>specified<sp/>template<sp/>argument.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="240" refid="classerbsland_1_1conf_1_1_value_1a611e2a052b98b9d64d81efe70289401c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a611e2a052b98b9d64d81efe70289401c" kindref="member">asTypeOrThrow</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ValueType::from&lt;T&gt;().raw()<sp/>!=<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">ValueType::Undefined</ref>,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;no<sp/>type<sp/>support<sp/>available<sp/>for<sp/>the<sp/>specified<sp/>template<sp/>argument.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref>(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493affdbe99e7a1a22795d33095209d761ca" kindref="member">ErrorCategory::TypeMismatch</ref>,<sp/></highlight><highlight class="stringliteral">&quot;asTypeOrThrow()<sp/>does<sp/>not<sp/>support<sp/>the<sp/>given<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a76db36593b45bae493b3bd6661656f62" kindref="member">asType</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>impl::saturatingCast&lt;T,<sp/>Integer&gt;(<ref refid="classerbsland_1_1conf_1_1_value_1aadbf779926a761de50c3df2001ad5e9d" kindref="member">asInteger</ref>());</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a611e2a052b98b9d64d81efe70289401c" kindref="member">asTypeOrThrow</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a5e9a22321ab7e8aed45466ec2b53efc6" kindref="member">asIntegerOrThrow</ref>();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(impl::willSaturatingCastOverflow&lt;T,<sp/>Integer&gt;(<ref refid="classerbsland_1_1conf_1_1_value_1aadbf779926a761de50c3df2001ad5e9d" kindref="member">asInteger</ref>()))<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>Error(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493affdbe99e7a1a22795d33095209d761ca" kindref="member">ErrorCategory::TypeMismatch</ref>,<sp/>u8</highlight><highlight class="stringliteral">&quot;The<sp/>value<sp/>exceeds<sp/>the<sp/>expected<sp/>range.&quot;</highlight><highlight class="normal">,<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>(),<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a08b6843e11181a7aef7d355b75cc8822" kindref="member">location</ref>());</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_floating_point_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a76db36593b45bae493b3bd6661656f62" kindref="member">asType</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aaea2e147a80759857d0ee486d8f0357a" kindref="member">asFloat</ref>();</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Float))<sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!std::isfinite(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>max<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">Float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::numeric_limits&lt;T&gt;::max());</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lowest<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">Float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::numeric_limits&lt;T&gt;::lowest());</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>&gt;<sp/>max)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::numeric_limits&lt;T&gt;::max();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>&lt;<sp/>lowest)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::numeric_limits&lt;T&gt;::lowest();</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_floating_point_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a611e2a052b98b9d64d81efe70289401c" kindref="member">asTypeOrThrow</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_value_1ad0b221c5f03816ecda34d352f06473c7" kindref="member">asFloatOrThrow</ref>();</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Float))<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!std::isfinite(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>max<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">Float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::numeric_limits&lt;T&gt;::max());</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lowest<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">Float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::numeric_limits&lt;T&gt;::lowest());</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>&gt;<sp/>max<sp/>||<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>&lt;<sp/>lowest)<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>Error(<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493affdbe99e7a1a22795d33095209d761ca" kindref="member">ErrorCategory::TypeMismatch</ref>,</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8</highlight><highlight class="stringliteral">&quot;The<sp/>value<sp/>exceeds<sp/>the<sp/>expected<sp/>range.&quot;</highlight><highlight class="normal">,<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>(),<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a08b6843e11181a7aef7d355b75cc8822" kindref="member">location</ref>());</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"></codeline>
+<codeline lineno="309" refid="classerbsland_1_1conf_1_1_value_1a6da6501174daccd9a68571a6f0d20b09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a6da6501174daccd9a68571a6f0d20b09" kindref="member">toTextRepresentation</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323" refid="classerbsland_1_1conf_1_1_value_1a70eb87e71e4d8a4d6c1c4f6013559f3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70eb87e71e4d8a4d6c1c4f6013559f3e" kindref="member">toTestText</ref>(<ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref><sp/>format<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333" refid="classerbsland_1_1conf_1_1_value_1a44fe8ac89f4acd4d1e180f5fe501925f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a44fe8ac89f4acd4d1e180f5fe501925f" kindref="member">toTestValueTree</ref>(<ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref><sp/>format<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>Convenience<sp/>methods.</highlight></codeline>
+<codeline lineno="340" refid="classerbsland_1_1conf_1_1_value_1ae9339fd923f011515b19b641e084a1f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ae9339fd923f011515b19b641e084a1f0" kindref="member">empty</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346" refid="classerbsland_1_1conf_1_1_value_1aa7100d9f071b3db003bfafa1abb77a23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aa7100d9f071b3db003bfafa1abb77a23" kindref="member">firstValue</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="classerbsland_1_1conf_1_1_value_1aab2e7a023c294c6ce93d50b7a2e4206c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aab2e7a023c294c6ce93d50b7a2e4206c" kindref="member">lastValue</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>template&lt;typename<sp/>T&gt;</highlight></codeline>
+<codeline lineno="372" refid="classerbsland_1_1conf_1_1_value_1afd16873810f0108c491ae79e802e3048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1afd16873810f0108c491ae79e802e3048" kindref="member">get</ref>(const<sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/>T<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1afd16873810f0108c491ae79e802e3048" kindref="member">get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/>T<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1ab25f883197245bc9a36e0a774569e402" kindref="member">getInteger</ref>(<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">Integer</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(defaultValue)));</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_floating_point_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1afd16873810f0108c491ae79e802e3048" kindref="member">get</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/>T<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1abf1156ec48123d04ba45fed9b65c33ea" kindref="member">getFloat</ref>(<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">Float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(defaultValue)));</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="389" refid="classerbsland_1_1conf_1_1_value_1a4cd643d2982132afb7edd84db4afbc6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a4cd643d2982132afb7edd84db4afbc6d" kindref="member">getOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;getOrThrow()<sp/>not<sp/>implemented<sp/>for<sp/>the<sp/>given<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_integral_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a4cd643d2982132afb7edd84db4afbc6d" kindref="member">getOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1a58e4dadf9ed5f594bc5d971403360182" kindref="member">getIntegerOrThrow</ref>(<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>));</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">requires</highlight><highlight class="normal"><sp/>std::is_floating_point_v&lt;T&gt;</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>T<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a4cd643d2982132afb7edd84db4afbc6d" kindref="member">getOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classerbsland_1_1conf_1_1_value_1acba0f6e243b0da1d25c76bf56f62afc5" kindref="member">getFloatOrThrow</ref>(<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>));</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="405" refid="classerbsland_1_1conf_1_1_value_1ab25f883197245bc9a36e0a774569e402" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>Integer<sp/><ref refid="classerbsland_1_1conf_1_1_value_1ab25f883197245bc9a36e0a774569e402" kindref="member">getInteger</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/>Integer<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="409" refid="classerbsland_1_1conf_1_1_value_1a58e4dadf9ed5f594bc5d971403360182" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>Integer<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a58e4dadf9ed5f594bc5d971403360182" kindref="member">getIntegerOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="411" refid="classerbsland_1_1conf_1_1_value_1a61959884fa50283d50906def0d8c1f82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a61959884fa50283d50906def0d8c1f82" kindref="member">getBoolean</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>defaultValue<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="413" refid="classerbsland_1_1conf_1_1_value_1a54b6eaa1cbf6d69fcbe9f8a85a64a937" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a54b6eaa1cbf6d69fcbe9f8a85a64a937" kindref="member">getBooleanOrThrow</ref>(const<sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/>const<sp/>;</highlight></codeline>
+<codeline lineno="415" refid="classerbsland_1_1conf_1_1_value_1abf1156ec48123d04ba45fed9b65c33ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>Float<sp/><ref refid="classerbsland_1_1conf_1_1_value_1abf1156ec48123d04ba45fed9b65c33ea" kindref="member">getFloat</ref>(const<sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/>Float<sp/>defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="417" refid="classerbsland_1_1conf_1_1_value_1acba0f6e243b0da1d25c76bf56f62afc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>Float<sp/><ref refid="classerbsland_1_1conf_1_1_value_1acba0f6e243b0da1d25c76bf56f62afc5" kindref="member">getFloatOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="419" refid="classerbsland_1_1conf_1_1_value_1a3d70a295b360b46cd2b64f6bc4f26475" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a3d70a295b360b46cd2b64f6bc4f26475" kindref="member">getText</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="421" refid="classerbsland_1_1conf_1_1_value_1ae4a96084c26342d94d81fdd5b82be3ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ae4a96084c26342d94d81fdd5b82be3ea" kindref="member">getTextOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="423" refid="classerbsland_1_1conf_1_1_value_1a823c9e0cce1a4722373d33650244c6c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a823c9e0cce1a4722373d33650244c6c9" kindref="member">getDate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref><sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="425" refid="classerbsland_1_1conf_1_1_value_1ae5e3c5068a874dff1bb1abf4b201b4b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ae5e3c5068a874dff1bb1abf4b201b4b1" kindref="member">getDateOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="427" refid="classerbsland_1_1conf_1_1_value_1a3d293b01cd01cb72b15157c701e63973" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a3d293b01cd01cb72b15157c701e63973" kindref="member">getTime</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref><sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="429" refid="classerbsland_1_1conf_1_1_value_1a7e713567fe609cfc3488fd9ae232b99e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a7e713567fe609cfc3488fd9ae232b99e" kindref="member">getTimeOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="431" refid="classerbsland_1_1conf_1_1_value_1aec80efd2a80c9f5dd088bd895806f55a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1aec80efd2a80c9f5dd088bd895806f55a" kindref="member">getDateTime</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref><sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="433" refid="classerbsland_1_1conf_1_1_value_1af6bcae0829b9eba311c28d428b60c4e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1af6bcae0829b9eba311c28d428b60c4e9" kindref="member">getDateTimeOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="435" refid="classerbsland_1_1conf_1_1_value_1a1dbd01d516522cb2050585133fb7702d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a1dbd01d516522cb2050585133fb7702d" kindref="member">getBytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="437" refid="classerbsland_1_1conf_1_1_value_1ac50e4985bbacaa2b0f030bca2f868a53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ac50e4985bbacaa2b0f030bca2f868a53" kindref="member">getBytesOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="439" refid="classerbsland_1_1conf_1_1_value_1adaabacd920cde2b0ee205861562e5beb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1adaabacd920cde2b0ee205861562e5beb" kindref="member">getTimeDelta</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="441" refid="classerbsland_1_1conf_1_1_value_1af5f82ca6fc9428390a8872ba7e06488d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1af5f82ca6fc9428390a8872ba7e06488d" kindref="member">getTimeDeltaOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="443" refid="classerbsland_1_1conf_1_1_value_1ab456e2426da8f7653a1229dbbda82210" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ab456e2426da8f7653a1229dbbda82210" kindref="member">getRegEx</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref><sp/>&amp;defaultValue<sp/>=<sp/>{})<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="445" refid="classerbsland_1_1conf_1_1_value_1a8da2628ade1d9dc9910123061fb2a9db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a8da2628ade1d9dc9910123061fb2a9db" kindref="member">getRegExOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="448" refid="classerbsland_1_1conf_1_1_value_1a61c74d6e0e04f7e04d64c7549e69b535" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValueList<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a61c74d6e0e04f7e04d64c7549e69b535" kindref="member">getValueList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="450" refid="classerbsland_1_1conf_1_1_value_1ae5b4607448e8453f19674f8cd4160f74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValueList<sp/><ref refid="classerbsland_1_1conf_1_1_value_1ae5b4607448e8453f19674f8cd4160f74" kindref="member">getValueListOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="452"></codeline>
+<codeline lineno="459"></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::vector&lt;T&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a8871f837d8d2e8bfaea1f0a97ca0ff6f" kindref="member">getList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"></highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::vector&lt;T&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a2383d0f367e6f6c6adaf2be9a361b33c" kindref="member">getListOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="471"></codeline>
+<codeline lineno="478"></codeline>
+<codeline lineno="481" refid="classerbsland_1_1conf_1_1_value_1ad8fe79727e0904e3a7620b5d39dcf415" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1ad8fe79727e0904e3a7620b5d39dcf415" kindref="member">getSectionWithNames</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="485" refid="classerbsland_1_1conf_1_1_value_1ad9848d3c14ea63b977ecca14a1d6496e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1ad9848d3c14ea63b977ecca14a1d6496e" kindref="member">getSectionWithNamesOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="487" refid="classerbsland_1_1conf_1_1_value_1aee513e9e40ca72d17347ce6fb6934612" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aee513e9e40ca72d17347ce6fb6934612" kindref="member">getSectionWithTexts</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="489" refid="classerbsland_1_1conf_1_1_value_1af51d0155b814798f9c0a2e6e2878dea0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1af51d0155b814798f9c0a2e6e2878dea0" kindref="member">getSectionWithTextsOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="491" refid="classerbsland_1_1conf_1_1_value_1a1e9d573aaeb8e0157b790f2b0084d1a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a1e9d573aaeb8e0157b790f2b0084d1a6" kindref="member">getSectionList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="493" refid="classerbsland_1_1conf_1_1_value_1aa2e41332596276d351f5b432bb8a2530" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>ValuePtr<sp/><ref refid="classerbsland_1_1conf_1_1_value_1aa2e41332596276d351f5b432bb8a2530" kindref="member">getSectionListOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="495"></codeline>
+<codeline lineno="501"></codeline>
+<codeline lineno="503" refid="classerbsland_1_1conf_1_1_value_1ab1cf30a869532b30cf4ec99d587a740c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ab1cf30a869532b30cf4ec99d587a740c" kindref="member">isInteger</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a6d4abf67909f4ab77943b195950f4278" kindref="member">ValueType::Integer</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="505" refid="classerbsland_1_1conf_1_1_value_1ae0d2134f493588fd74bcd17e77d6cad2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ae0d2134f493588fd74bcd17e77d6cad2" kindref="member">isBoolean</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434aab0171f18edd9953cd2a76770c6c4778" kindref="member">ValueType::Boolean</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="507" refid="classerbsland_1_1conf_1_1_value_1a0f4d636f335206bf66628ee84ad329a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0f4d636f335206bf66628ee84ad329a1" kindref="member">isFloat</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a511d337895e97a4a194e23de7706bfff" kindref="member">ValueType::Float</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="509" refid="classerbsland_1_1conf_1_1_value_1ab104b5597621cca98e8e12fcce382907" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1ab104b5597621cca98e8e12fcce382907" kindref="member">isText</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a7c8c24edce013a82fe88156526f46ea9" kindref="member">ValueType::Text</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="511" refid="classerbsland_1_1conf_1_1_value_1a052dc61906e8e081cf71a202340cab9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a052dc61906e8e081cf71a202340cab9f" kindref="member">isDate</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1b786bf2abf01f864066b4241b00bcca" kindref="member">ValueType::Date</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="513" refid="classerbsland_1_1conf_1_1_value_1a71231a8e00d73c6954e03180aacdced3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a71231a8e00d73c6954e03180aacdced3" kindref="member">isTime</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a9fe19b5e3c7ae680c49b254a18ab96e3" kindref="member">ValueType::Time</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="515" refid="classerbsland_1_1conf_1_1_value_1a33357a09740a067ce51fb85992e092a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a33357a09740a067ce51fb85992e092a5" kindref="member">isDateTime</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1f8a79df0b06bfa910462ca0f5a904f4" kindref="member">ValueType::DateTime</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="517" refid="classerbsland_1_1conf_1_1_value_1a4c52b43a6ea1ed25dda0071f0517d359" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a4c52b43a6ea1ed25dda0071f0517d359" kindref="member">isBytes</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ac2d8d76746222b3c28efb0b99ab86fd0" kindref="member">ValueType::Bytes</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="519" refid="classerbsland_1_1conf_1_1_value_1a690dcbe6fbb2060ebd7f8a171e3ba500" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a690dcbe6fbb2060ebd7f8a171e3ba500" kindref="member">isTimeDelta</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a09c83bc8f80df12ba50f97e344b08b6b" kindref="member">ValueType::TimeDelta</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="521" refid="classerbsland_1_1conf_1_1_value_1a9c414f77a2be4ffb181b539c39bd5724" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a9c414f77a2be4ffb181b539c39bd5724" kindref="member">isRegEx</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a1cf3617cf3fe34073916ed6019746106" kindref="member">ValueType::RegEx</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="523" refid="classerbsland_1_1conf_1_1_value_1a3c73cbf382565480afd247d66d73a180" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a3c73cbf382565480afd247d66d73a180" kindref="member">isValueList</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" kindref="member">ValueType::ValueList</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="525" refid="classerbsland_1_1conf_1_1_value_1aa3886fc1e3a01942c26daf8ae81a96ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1aa3886fc1e3a01942c26daf8ae81a96ec" kindref="member">isDocument</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a3fef6257976ae5255feac9157a84941b" kindref="member">ValueType::Document</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="527" refid="classerbsland_1_1conf_1_1_value_1a5a7736da82b0028c0e7385ae79c08449" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a5a7736da82b0028c0e7385ae79c08449" kindref="member">isRoot</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a3fef6257976ae5255feac9157a84941b" kindref="member">ValueType::Document</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="529" refid="classerbsland_1_1conf_1_1_value_1a67c3ab9aed5ea7b5ff60221fd74d37e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a67c3ab9aed5ea7b5ff60221fd74d37e5" kindref="member">isSectionWithNames</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae2b9798697979c798741db66b52a64f1" kindref="member">ValueType::SectionWithNames</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="531" refid="classerbsland_1_1conf_1_1_value_1a7d9dc95bcec11334664c23481cc52a80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a7d9dc95bcec11334664c23481cc52a80" kindref="member">isSectionWithTexts</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ad255f7b39931c620472ef1e3ffa96fbf" kindref="member">ValueType::SectionWithTexts</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="533" refid="classerbsland_1_1conf_1_1_value_1a3ec459bbae80c0b0972a5e63a734edcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a3ec459bbae80c0b0972a5e63a734edcd" kindref="member">isSectionList</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>()<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ae4a9a3713b6fbf4d8dccc0a31fa691d5" kindref="member">ValueType::SectionList</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542" refid="classerbsland_1_1conf_1_1_value_1aef28baea613e257e2f52598b2ebd6929" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1aef28baea613e257e2f52598b2ebd6929" kindref="member">isList</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>().<ref refid="classerbsland_1_1conf_1_1_value_type_1a328d6b8e308dd9cbb5c6d21d4809a134" kindref="member">isList</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="549" refid="classerbsland_1_1conf_1_1_value_1a787130a43bd7a390b45b1bf5f379762c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a787130a43bd7a390b45b1bf5f379762c" kindref="member">isMap</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" kindref="member">type</ref>().<ref refid="classerbsland_1_1conf_1_1_value_type_1a49d72c8e39ab90c29ebd0526fa04ee3c" kindref="member">isMap</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="551"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="555" refid="classerbsland_1_1conf_1_1_value_1a2383d0f367e6f6c6adaf2be9a361b33c" refkind="member"><highlight class="normal">std::vector&lt;T&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a2383d0f367e6f6c6adaf2be9a361b33c" kindref="member">Value::getListOrThrow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;namePath)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>valueAtPath<sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_value_1adebbe5b680b1744ca83d0e749fe7f2c7" kindref="member">valueOrThrow</ref>(<ref refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" kindref="member">namePath</ref>);</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>expectedType<sp/>=<sp/>ValueType::from&lt;T&gt;();</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expectedType.raw()<sp/>!=<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434ab377e6a72365412f51f54b78d21c20b4" kindref="member">ValueType::Undefined</ref>,</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;no<sp/>type<sp/>support<sp/>available<sp/>for<sp/>the<sp/>specified<sp/>template<sp/>argument.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(valueAtPath-&gt;type()<sp/>==<sp/>expectedType)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>convert<sp/>a<sp/>single<sp/>value<sp/>into<sp/>a<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::vector&lt;T&gt;{{valueAtPath-&gt;asType&lt;T&gt;()}};</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(valueAtPath-&gt;type()<sp/>!=<sp/><ref refid="classerbsland_1_1conf_1_1_value_type_1a09cd2030bb74fd1ae7184189ae8aa434a184ad18f8f5330440d3e2d9c4d2580bb" kindref="member">ValueType::ValueList</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref>(</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493affdbe99e7a1a22795d33095209d761ca" kindref="member">ErrorCategory::TypeMismatch</ref>,</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>impl::u8format(</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8</highlight><highlight class="stringliteral">&quot;Expected<sp/>a<sp/>list<sp/>of<sp/>&apos;{}&apos;<sp/>values,<sp/>but<sp/>got<sp/>a<sp/>single<sp/>value<sp/>of<sp/>type<sp/>&apos;{}&apos;.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expectedType,</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>valueAtPath-&gt;type()),</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>valueAtPath-&gt;namePath(),</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>valueAtPath-&gt;location());</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>valueList<sp/>=<sp/>valueAtPath-&gt;asValueList();</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;T&gt;<sp/>result;</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/>result.reserve(valueList.size());</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref><sp/>:<sp/>valueList)<sp/>{</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>-&gt;type()<sp/>!=<sp/>expectedType)<sp/>{</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref>(</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493affdbe99e7a1a22795d33095209d761ca" kindref="member">ErrorCategory::TypeMismatch</ref>,</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>impl::u8format(</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u8</highlight><highlight class="stringliteral">&quot;Expected<sp/>all<sp/>values<sp/>in<sp/>the<sp/>list<sp/>to<sp/>be<sp/>of<sp/>type<sp/>&apos;{}&apos;,<sp/>but<sp/>found<sp/>an<sp/>element<sp/>of<sp/>type<sp/>&apos;{}&apos;.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="583"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expectedType,</highlight></codeline>
+<codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>-&gt;type()),</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>-&gt;namePath(),</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>-&gt;location());</highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.push_back(<ref refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" kindref="member">value</ref>-&gt;asType&lt;T&gt;());</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="591"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"></highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="595" refid="classerbsland_1_1conf_1_1_value_1a8871f837d8d2e8bfaea1f0a97ca0ff6f" refkind="member"><highlight class="normal">std::vector&lt;T&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_value_1a8871f837d8d2e8bfaea1f0a97ca0ff6f" kindref="member">Value::getList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike<sp/>&amp;namePath)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="596"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getListOrThrow&lt;T&gt;(namePath);</highlight></codeline>
+<codeline lineno="598"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref>&amp;)<sp/>{</highlight></codeline>
+<codeline lineno="599"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{};</highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="601"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="605"><highlight class="normal"></highlight></codeline>
+<codeline lineno="606"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/Value.hpp"/>
+  </compounddef>
+</doxygen>
