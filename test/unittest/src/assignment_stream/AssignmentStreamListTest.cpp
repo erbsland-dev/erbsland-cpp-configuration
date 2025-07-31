@@ -62,7 +62,7 @@ public:
         requireAssignment();
         REQUIRE_EQUAL(assignment.type(), AssignmentType::Value);
         REQUIRE_EQUAL(assignment.value()->type(), ValueType::ValueList);
-        const auto valueList = assignment.value()->toList();
+        const auto valueList = assignment.value()->asValueList();
         REQUIRE_EQUAL(valueList.size(), 8);
         const auto expectedValues = std::array<std::array<int, 8>, 8>{
             std::array{1,   3,   6,  10,  15,  21,  28,  36},
@@ -77,12 +77,12 @@ public:
         for (std::size_t i = 0; i < valueList.size(); ++i) {
             const auto &rowValue = valueList[i];
             REQUIRE_EQUAL(rowValue->type(), ValueType::ValueList);
-            const auto row = rowValue->toList();
+            const auto row = rowValue->asValueList();
             REQUIRE_EQUAL(row.size(), 8);
             for (std::size_t j = 0; j < valueList.size(); ++j) {
                 const auto &value = row[j];
                 REQUIRE_EQUAL(value->type(), ValueType::Integer);
-                REQUIRE_EQUAL(value->toInteger(), expectedValues[i][j]);
+                REQUIRE_EQUAL(value->asInteger(), expectedValues[i][j]);
             }
         }
         ++generatorIterator;

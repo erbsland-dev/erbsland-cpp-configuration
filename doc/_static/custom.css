@@ -40,6 +40,18 @@
     border-bottom: 5px solid #e4d3aa;
 }
 
+details.sd-dropdown.code-dropdown {
+    border: none;
+}
+
+details.sd-dropdown.code-dropdown .sd-card-header {
+    border: 1px solid var(--sd-color-card-border);
+}
+
+details.sd-dropdown.code-dropdown .sd-summary-content {
+    padding: 0;
+}
+
 @media screen and (max-width: 768px) {
     .banner {
         margin: 0;

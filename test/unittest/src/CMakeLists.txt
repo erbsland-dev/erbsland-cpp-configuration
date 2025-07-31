@@ -3,11 +3,12 @@
 
 add_subdirectory(assignment_stream)
 add_subdirectory(decoder)
+add_subdirectory(document_api)
 add_subdirectory(lexer)
 add_subdirectory(parser)
 add_subdirectory(string)
 add_subdirectory(utf8)
-add_subdirectory(value)
+add_subdirectory(value_types)
 
 target_sources(unittest PRIVATE
         DefaultsTest.cpp
@@ -21,10 +22,6 @@ target_sources(unittest PRIVATE
         GeneratorTest.cpp
         HashHelperTest.cpp
         LocationTest.cpp
-        NamePathLexerTest.cpp
-        NamePathTest.cpp
-        NameTest.cpp
-        NameTypeTest.cpp
         NumberBaseTest.cpp
         PositionTest.cpp
         SaturationMathTest.cpp
@@ -32,6 +29,7 @@ target_sources(unittest PRIVATE
         SourceCreateTest.cpp
         SourceIdentifierTest.cpp
         StringSourceTest.cpp
+        TestFormatTest.cpp
         TestHelper.hpp
         TokenTypeTest.cpp
         main.cpp

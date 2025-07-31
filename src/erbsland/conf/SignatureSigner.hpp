@@ -17,6 +17,7 @@ using SignatureSignerPtr = std::shared_ptr<SignatureSigner>;
 ///
 class SignatureSigner {
 public:
+    /// Default destructor.
     virtual ~SignatureSigner() = default;
 
 public:
@@ -31,5 +32,4 @@ public:
 
 
 }
-
 

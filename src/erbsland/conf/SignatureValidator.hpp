@@ -20,6 +20,7 @@ using SignatureValidatorPtr = std::shared_ptr<SignatureValidator>;
 ///
 class SignatureValidator {
 public:
+    /// Default destructor.
     virtual ~SignatureValidator() = default;
 
 public:
@@ -37,4 +38,3 @@ public:
 
 
 }
-

@@ -20,6 +20,7 @@ using AccessCheckPtr = std::shared_ptr<AccessCheck>;
 ///
 class AccessCheck {
 public:
+    /// Default destructor.
     virtual ~AccessCheck() = default;
 
 public:
@@ -32,6 +33,7 @@ public:
     /// @param sources The sources that are verified.
     /// @return Return either `AccessResult::Granted` or `AccessResult::Denied`.
     /// @throws Error Alternatively, throw an `Error` with the `ErrorCategory::Access`.
+    ///
     /// @notest This is part of `Parser`
     ///
     virtual auto check(const AccessSources &sources) -> AccessCheckResult = 0;
@@ -39,4 +41,3 @@ public:
 
 
 }
-

@@ -7,6 +7,7 @@
 
 #include "../../Date.hpp"
 #include "../../DateTime.hpp"
+#include "../../RegEx.hpp"
 #include "../../Time.hpp"
 #include "../../TimeDelta.hpp"
 
@@ -27,9 +28,6 @@ public:
 public:
     [[nodiscard]] auto type() const noexcept -> ValueType override { return tValueType; }
     [[nodiscard]] auto toTextRepresentation() const noexcept -> String override { return _value.toText(); }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}({})", type(), _value.toText());
-    }
 
 protected:
     StorageType _value;
@@ -43,7 +41,8 @@ protected:
 class DateTimeValue final : public ValueWithConvertibleType<DateTime, ValueType::DateTime> {
 public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
-    [[nodiscard]] auto toDateTime() const noexcept -> DateTime override { return _value; }
+    [[nodiscard]] auto asDateTime() const noexcept -> DateTime override { return _value; }
+    [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override { return _value; }
 };
 
 
@@ -54,7 +53,8 @@ public:
 class DateValue final : public ValueWithConvertibleType<Date, ValueType::Date> {
 public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
-    [[nodiscard]] auto toDate() const noexcept -> Date override { return _value; }
+    [[nodiscard]] auto asDate() const noexcept -> Date override { return _value; }
+    [[nodiscard]] auto asDateOrThrow() const -> Date override { return _value; }
 };
 
 
@@ -65,7 +65,8 @@ public:
 class TimeValue final : public ValueWithConvertibleType<Time, ValueType::Time> {
 public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
-    [[nodiscard]] auto toTime() const noexcept -> Time override { return _value; }
+    [[nodiscard]] auto asTime() const noexcept -> Time override { return _value; }
+    [[nodiscard]] auto asTimeOrThrow() const -> Time override { return _value; }
 };
 
 
@@ -76,10 +77,20 @@ public:
 class TimeDeltaValue final : public ValueWithConvertibleType<TimeDelta, ValueType::TimeDelta> {
 public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
-    [[nodiscard]] auto toTimeDelta() const noexcept -> TimeDelta override { return _value; }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}({})", type(), _value.toTestText());
-    }
+    [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override { return _value; }
+    [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override { return _value; }
+};
+
+
+/// The value implementation for the `RegEx` type.
+///
+/// @tested `ValueTest`
+///
+class RegExValue final : public ValueWithConvertibleType<RegEx, ValueType::RegEx> {
+public:
+    using ValueWithConvertibleType::ValueWithConvertibleType;
+    [[nodiscard]] auto asRegEx() const noexcept -> RegEx override { return _value; }
+    [[nodiscard]] auto asRegExOrThrow() const -> RegEx override { return _value; }
 };
 
 

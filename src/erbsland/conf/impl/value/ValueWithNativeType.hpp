@@ -41,10 +41,8 @@ protected:
 class BooleanValue final : public ValueWithNativeType<bool, ValueType::Boolean> {
 public:
     using ValueWithNativeType::ValueWithNativeType;
-    [[nodiscard]] auto toBoolean() const noexcept -> bool override { return _value; }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}({})", type(), _value);
-    }
+    [[nodiscard]] auto asBoolean() const noexcept -> bool override { return _value; }
+    [[nodiscard]] auto asBooleanOrThrow() const -> bool override { return _value; }
 };
 
 
@@ -55,10 +53,8 @@ public:
 class FloatValue final : public ValueWithNativeType<Float, ValueType::Float> {
 public:
     using ValueWithNativeType::ValueWithNativeType;
-    [[nodiscard]] auto toFloat() const noexcept -> Float override { return _value; }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}({})", type(), _value);
-    }
+    [[nodiscard]] auto asFloat() const noexcept -> Float override { return _value; }
+    [[nodiscard]] auto asFloatOrThrow() const -> Float override { return _value; }
 };
 
 
@@ -69,10 +65,8 @@ public:
 class IntegerValue final : public ValueWithNativeType<Integer, ValueType::Integer> {
 public:
     using ValueWithNativeType::ValueWithNativeType;
-    [[nodiscard]] auto toInteger() const noexcept -> Integer override { return _value; }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}({})", type(), _value);
-    }
+    [[nodiscard]] auto asInteger() const noexcept -> Integer override { return _value; }
+    [[nodiscard]] auto asIntegerOrThrow() const -> Integer override { return _value; }
 };
 
 
@@ -83,24 +77,8 @@ public:
 class TextValue final : public ValueWithNativeType<String, ValueType::Text> {
 public:
     using ValueWithNativeType::ValueWithNativeType;
-    [[nodiscard]] auto toText() const noexcept -> String override { return _value; }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}(\"{}\")", type(), _value.toEscaped(EscapeMode::FullTestAdapter));
-    }
-};
-
-
-/// The value implementation for the `RegEx` type.
-///
-/// @tested `ValueTest`
-///
-class RegExValue final : public ValueWithNativeType<String, ValueType::RegEx> {
-public:
-    using ValueWithNativeType::ValueWithNativeType;
-    [[nodiscard]] auto toRegEx() const noexcept -> String override { return _value; }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}(\"{}\")", type(), _value.toEscaped(EscapeMode::FullTestAdapter));
-    }
+    [[nodiscard]] auto asText() const noexcept -> String override { return _value; }
+    [[nodiscard]] auto asTextOrThrow() const -> String override { return _value; }
 };
 
 

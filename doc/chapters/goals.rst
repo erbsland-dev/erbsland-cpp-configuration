@@ -5,6 +5,18 @@
 Goals
 *****
 
+.. grid:: 2
+
+    .. grid-item-card:: :fas:`link-slash;sd-text-success` Minimal Dependencies
+        :shadow: md
+
+        Only requires C++20 and the standard library—nothing else.
+
+    .. grid-item-card:: :fas:`code;sd-text-success` Expressive Interface
+        :shadow: md
+
+        Reduces boilerplate in user code, making integration clean and concise.
+
 Overview
 ========
 

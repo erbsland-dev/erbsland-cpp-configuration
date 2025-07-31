@@ -33,16 +33,31 @@ public:
     explicit Location(SourceIdentifierPtr sourceIdentifier, const Position position = {}) noexcept
         : _sourceIdentifier{std::move(sourceIdentifier)}, _position{position} {
     }
-    // defaults
+
+    /// Default copy constructor.
     Location(const Location&) = default;
+    /// Default move constructor.
     Location(Location&&) = default;
+    /// Default copy assignment.
     auto operator=(const Location&) -> Location& = default;
+    /// Default move assignment.
     auto operator=(Location&&) -> Location& = default;
 
 public: // operators
+    /// Compare this location to another for equality.
+    ///
+    /// @param other The location to compare.
+    /// @return `true` if both the source identifier and position are equal.
+    ///
     auto operator==(const Location &other) const noexcept -> bool {
         return SourceIdentifier::areEqual(_sourceIdentifier, other._sourceIdentifier) && _position == other._position;
     }
+
+    /// Compare this location to another for inequality.
+    ///
+    /// @param other The location to compare.
+    /// @return `true` if the locations are not equal, `false` otherwise.
+    ///
     auto operator!=(const Location &other) const noexcept -> bool {
         return !operator==(other);
     }
@@ -96,4 +111,3 @@ struct std::formatter<erbsland::conf::Location> : std::formatter<std::string> {
         return std::formatter<std::string>::format(location.toText().toCharString(), ctx);
     }
 };
-

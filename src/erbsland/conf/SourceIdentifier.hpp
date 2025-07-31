@@ -30,8 +30,7 @@ using SourceIdentifierPtr = std::shared_ptr<SourceIdentifier>;
 ///
 class SourceIdentifier {
 public:
-    /// @internal
-    /// Create a new source identifier.
+    /// Create a new source identifier with explicit name and path.
     ///
     /// @param name The name of the source.
     /// @param path The path of the source.
@@ -69,13 +68,24 @@ public:
         return std::make_shared<SourceIdentifier>(impl::defaults::textSourceIdentifier, String{}, impl::PrivateTag{});
     }
 
-    // defaults
+    /// Default destructor.
     ~SourceIdentifier() = default;
 
 public: // operators
+    /// Compare this source identifier to another for equality.
+    ///
+    /// @param other The other identifier to compare.
+    /// @return `true` if both identifiers have the same name and path.
+    ///
     [[nodiscard]] auto operator==(const SourceIdentifier &other) const noexcept -> bool {
         return _name == other._name && _path == other._path;
     }
+
+    /// Compare this source identifier to another for inequality.
+    ///
+    /// @param other The other identifier to compare.
+    /// @return `true` if the identifiers differ.
+    ///
     [[nodiscard]] auto operator!=(const SourceIdentifier &other) const noexcept -> bool {
         return !operator==(other);
     };

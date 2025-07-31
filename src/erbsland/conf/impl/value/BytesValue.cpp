@@ -21,10 +21,5 @@ auto BytesValue::toTextRepresentation() const noexcept -> String {
 }
 
 
-auto BytesValue::toTestText() const noexcept -> String {
-    return u8format(u8"{}({})", type(), _value.toHex());
-}
-
-
 }
 

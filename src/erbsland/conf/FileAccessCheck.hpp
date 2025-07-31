@@ -25,6 +25,8 @@ using FileAccessCheckPtr = std::shared_ptr<FileAccessCheck>;
 ///
 class FileAccessCheck : public AccessCheck {
 public:
+    /// The feature flags controlling file access restrictions.
+    ///
     enum Feature : uint8_t {
         /// Allow *included sources* to be in the same directory as the including document (recommended, default).
         ///
@@ -80,8 +82,9 @@ public:
         return std::make_shared<FileAccessCheck>();
     }
 
-    // defaults
+    /// Default constructor.
     FileAccessCheck() = default;
+    /// Default destructor.
     ~FileAccessCheck() override = default;
 
 public:
@@ -134,4 +137,3 @@ private:
 
 
 }
-

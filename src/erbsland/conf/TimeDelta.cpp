@@ -6,6 +6,7 @@
 #include "impl/SaturationMath.hpp"
 #include "impl/utf8/U8Format.hpp"
 
+#include <algorithm>
 #include <functional>
 #include <numeric>
 #include <ranges>
@@ -90,27 +91,15 @@ auto TimeDelta::toText() const -> String {
                 result.append(u8", ");
             }
             result.append(impl::u8format("{}", count));
-            if (unit.textShort().empty()) {
+            if (unit.toTextShort().empty()) {
                 result.append(u8" ");
-                result.append(unit.textLong());
+                result.append(unit.toTextLong());
             } else {
-                result.append(unit.textShort());
+                result.append(unit.toTextShort());
             }
         }
     }
     return result;
-}
-
-
-auto TimeDelta::toTestText() const -> String {
-    if (_counts.empty()) {
-        return u8"<none>";
-    }
-    if (_counts.size() > 1) {
-        return u8"<multiple>";
-    }
-    auto [unit, count] = *_counts.begin();
-    return impl::u8format("{},{}", count, unit.textForTest());
 }
 
 

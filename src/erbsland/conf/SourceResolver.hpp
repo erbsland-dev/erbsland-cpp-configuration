@@ -20,12 +20,13 @@ using SourceResolverPtr = std::shared_ptr<SourceResolver>;
 ///
 class SourceResolver {
 public:
+    /// Default destructor.
     virtual ~SourceResolver() = default;
 
 public:
     /// Resolve Sources
     ///
-    /// This function is called when the parser encounters an `\@include` command.
+    /// This function is called when the parser encounters an <code>include</code> meta-command.
     ///
     /// The raw and unprocessed text of the command and the source of the parsed document are given as
     /// arguments to this function.
@@ -38,14 +39,14 @@ public:
     /// the sequence they are parsed.
     ///
     /// @param context The resolve context.
-    /// @return A list of sources (see @ref SourceList) to include in the document.
-    /// @throws Error Throw `Error` with `ErrorCategory::Syntax` if the include text does not match the required format.
-    /// @tested Tested via `Parser` class.
+    /// @return A list of sources (see @c SourceList) to include in the document.
+    /// @throws Error Throw @c Error with @c ErrorCategory::Syntax if the include text does not match the required format.
+    ///
+    /// @tested Tested via @c Parser class.
     ///
     virtual auto resolve(const SourceResolverContext &context) -> SourceListPtr = 0;
 };
 
 
 }
-
 

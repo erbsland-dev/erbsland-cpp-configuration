@@ -19,10 +19,9 @@ namespace erbsland::conf {
 /// This class represents a name path that points to elements in a configuration document. It allows building
 /// paths freely, using individual name elements.
 ///
-/// Please note that other than the two different forms in configuration documents, relative and absolute paths use
-/// the same text representation when converted from and into text.
-/// Relative paths have no name separator prefixed, as this is the case in configuration documents.
-/// This lack of difference is due the API treats both forms the same.
+/// Note that, unlike in configuration documents where relative and absolute paths differ by a leading separator,
+/// both forms use the same text representation in this API. This lack of differentiation exists because the
+/// API treats both forms the same.
 /// Addressing a value is always done using relative paths, and the element on which you call the "value" method
 /// decides if you start to resolve the path from the root or from a branch in the document.
 ///
@@ -32,31 +31,51 @@ class NamePath final {
 public:
     // Required definitions to be used with std algorithms.
     // Only provide const access to the elements of a name path.
+    /// Iterator over the names in the path.
     using iterator = NameList::const_iterator;
+    /// Constant iterator over the names in the path.
     using const_iterator = NameList::const_iterator;
+    /// The element type of the name path.
     using value_type = Name;
+    /// Reference to a name element.
     using reference = const Name&;
+    /// Constant reference to a name element.
     using const_reference = const Name&;
+    /// Unsigned integer type for sizes.
     using size_type = std::size_t;
+    /// Signed integer type for differences.
     using difference_type = std::ptrdiff_t;
+    /// Pointer to a name element.
     using pointer = const Name*;
+    /// Constant pointer to a name element.
     using const_pointer = const Name*;
+    /// Reverse iterator over the names in the path.
     using reverse_iterator = std::reverse_iterator<iterator>;
+    /// Constant reverse iterator over the names in the path.
     using const_reverse_iterator = std::reverse_iterator<const_iterator>;
+    /// Category type of constant iterators.
     using const_iterator_category = std::forward_iterator_tag;
+    /// Category type of iterators.
     using iterator_category = std::forward_iterator_tag;
 
 public:
-    /// @{
     /// Create a name path with one single name.
     ///
+    /// @param name The name.
+    ///
     NamePath(const Name &name) : _names{1, name} {} // NOLINT(*-explicit-constructor)
+
+    /// Create a name path with one single name.
+    ///
+    /// @param name The name.
+    ///
     NamePath(Name &&name) { // NOLINT(*-explicit-constructor)
         _names.emplace_back(std::move(name));
     }
-    /// @}
 
     /// Create a name path from the given sequence of names.
+    ///
+    /// @param names A list of names.
     ///
     explicit NamePath(NameList names)
         : _names{std::move(names)} {
@@ -64,11 +83,16 @@ public:
 
     /// Create a name path from the given sequence of names.
     ///
+    /// @param names A span of names.
+    ///
     explicit NamePath(const std::span<const Name> names)
         : _names{names.begin(), names.end()} {
     }
 
     /// Create a name path from the given sequence of names.
+    ///
+    /// @param begin The start iterator.
+    /// @param end The stop iterator.
     ///
     explicit NamePath(
         const NameList::const_iterator begin,
@@ -77,12 +101,15 @@ public:
         _names{begin, end} {
     }
 
-    // defaults
+    /// Default constructor.
     NamePath() = default;
+    /// Default destructor.
     ~NamePath() = default;
 
 public: // operators
+    /// Default comparison.
     auto operator<=>(const NamePath&) const -> std::strong_ordering = default;
+    /// Default comparison.
     auto operator==(const NamePath&) const -> bool = default;
 
 public: // accessors and tests.
@@ -118,6 +145,8 @@ public: // accessors and tests.
 
 public: // tests
     /// Test if this path contains an index (index or text-index).
+    ///
+    /// @return `true` if this path contains any index or text-index element, `false` otherwise.
     ///
     [[nodiscard]] auto containsIndex() const noexcept -> bool {
         return std::any_of(_names.begin(), _names.end(), [](const auto& name) {
@@ -213,6 +242,16 @@ private:
 };
 
 
+/// A name-path or convertible value.
+///
+using NamePathLike = std::variant<Name, NamePath, String, std::size_t>;
+
+
+/// Convert a name-path like value into a name path.
+///
+[[nodiscard]] auto toNamePath(const NamePathLike& namePathLike) -> NamePath;
+
+
 }
 
 
@@ -234,4 +273,3 @@ struct std::formatter<erbsland::conf::NamePath> : std::formatter<std::string> {
         return std::formatter<std::string>::format(namePath.toText().toCharString(), ctx);
     }
 };
-

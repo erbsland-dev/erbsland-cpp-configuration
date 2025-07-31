@@ -21,7 +21,7 @@ public:
     ///
     explicit Signer(const SignatureSignerPtr &signatureSigner);
 
-    // defaults
+    /// Default destructor.
     ~Signer() = default;
 
 public:
@@ -50,5 +50,4 @@ private:
 
 
 }
-
 

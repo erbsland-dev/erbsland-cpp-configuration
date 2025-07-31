@@ -5,16 +5,51 @@ This project provides a full-featured, dependency-free implementation of the [Er
 
 ## Project Status
 
-*Pre-release notice:*  
-We are preparing for the 1.0.0 release, planned for August 2025.
-
 - Fully implements the [Erbsland Configuration Language](https://erbsland-dev.github.io/erbsland-lang-config-doc/).
-- Thoroughly tested and stable for use in active development.
-- The API is considered stable. No breaking changes are expected before the 1.0.0 release.
+- Thoroughly tested and stable for use in productive development.
+- The API is stable.
+- The documentation covers the most important features.
 
-## Language Conformance
+## Quick Start
 
-This parser serves as the reference implementation for the Erbsland Configuration Language. It follows the official specification without deviations.
+```cpp
+#include <erbsland/all_conf.hpp>
+
+#include <filesystem>
+#include <iostream>
+#include <format>
+
+using namespace el::conf;
+
+int main(int argc, char **argv) {
+    if (argc < 2) {
+        std::cout << "Usage: " << argv[0] << " <config-file>\n";
+        return 1;
+    }
+
+    const auto configFile = std::filesystem::path{argv[1]};
+    try {
+        Parser parser;
+        const auto source = Source::fromFile(configFile);
+        const auto doc = parser.parseOrThrow(source);
+
+        auto width = doc->getIntegerOrThrow(u8"field.width");
+        auto height = doc->getIntegerOrThrow(u8"field.height");
+
+        std::cout << std::format("Field width = {}, height = {}\n", width, height);
+        return 0;
+    } catch (const Error &error) {
+        std::cerr << error.toText().toCharString() << "\n";
+        return 1;
+    }
+}
+```
+
+## Documentation
+
+Please read the documentation for more information about the parser and its features:
+
+👉 [Erbsland Configuration Parser Documentation](https://cpp-configuration.erbsland.dev)
 
 ## About the Erbsland Configuration Language
 
@@ -39,7 +74,7 @@ version: 1
 
 Supported data types include text, integer, floating-point, boolean, date, time, datetime, time-delta, regular expressions, code, and byte sequences. These can be grouped into sections, nested via name paths, or organized into lists.
 
-A detailed guide and specification are available here:
+A detailed language specification is available here:
 
 👉 [Erbsland Configuration Language Documentation](https://erbsland-dev.github.io/erbsland-lang-config-doc/)
 
@@ -47,12 +82,6 @@ A detailed guide and specification are available here:
 
 - A C++20-compliant compiler (clang, gcc, or MSVC)
 - CMake 3.23 or higher
-
-## Contributing, Bugs & Feedback
-
-We welcome your feedback, ideas, and reports. If you encounter any issues or would like to request a feature:
-
-▶️ [Submit an Issue](https://github.com/erbsland-dev/erbsland-cpp-configuration/issues/)
 
 ## License
 

@@ -30,7 +30,7 @@ public:
         WITH_CONTEXT(requireValue("main.value_8", ValueType::DateTime, DateTime{Date{2026, 8, 10}, Time{17, 54, 12, 0, TimeOffset::utc()}}));
         WITH_CONTEXT(requireValue("main.value_9", ValueType::Bytes, Bytes::fromHex("010203fdfeff")));
         WITH_CONTEXT(requireValue("main.value_10", ValueType::TimeDelta, TimeDelta{TimeUnit::Years, 10}));
-        WITH_CONTEXT(requireValue("main.value_11", ValueType::RegEx, TestForRegEx{u8"regex"}));
+        WITH_CONTEXT(requireValue("main.value_11", ValueType::RegEx, RegEx{u8"regex"}));
 
         WITH_CONTEXT(requireValue("main.value_12", ValueType::Integer, Integer{12345}));
         WITH_CONTEXT(requireValue("main.value_13", ValueType::Text, String{u8"This is Text"}));
@@ -52,11 +52,11 @@ public:
         WITH_CONTEXT(requireValue("code.value_4", ValueType::Text, String{u8"    Code\\n"}));
         WITH_CONTEXT(requireValue("code.value_5", ValueType::Text, String{u8"if len(lines) == 3:\n    print(f\"{lines}\\n\")\nexit(0)"}));
         WITH_CONTEXT(requireSectionMap("regex"));
-        WITH_CONTEXT(requireValue("regex.value_1", ValueType::RegEx, TestForRegEx{u8"^\\w+\\.[Ee][Ll][Cc][Ll]$"}));
-        WITH_CONTEXT(requireValue("regex.value_2", ValueType::RegEx, TestForRegEx{u8"\n^\\w+\\.[Ee][Ll][Cc][Ll]$\n"}));
-        WITH_CONTEXT(requireValue("regex.value_3", ValueType::RegEx, TestForRegEx{u8"^\\w+\\.[Ee][Ll][Cc][Ll]$"}));
-        WITH_CONTEXT(requireValue("regex.value_4", ValueType::RegEx, TestForRegEx{u8"    ^\\w+\\.[Ee][Ll][Cc][Ll]$"}));
-        WITH_CONTEXT(requireValue("regex.value_5", ValueType::RegEx, TestForRegEx{u8"^\\w+\n    \\.[Ee][Ll][Cc][Ll]\n$"}));
+        WITH_CONTEXT(requireValue("regex.value_1", ValueType::RegEx, RegEx{u8"^\\w+\\.[Ee][Ll][Cc][Ll]$"}));
+        WITH_CONTEXT(requireValue("regex.value_2", ValueType::RegEx, RegEx{u8"\n^\\w+\\.[Ee][Ll][Cc][Ll]$\n"}));
+        WITH_CONTEXT(requireValue("regex.value_3", ValueType::RegEx, RegEx{u8"^\\w+\\.[Ee][Ll][Cc][Ll]$"}));
+        WITH_CONTEXT(requireValue("regex.value_4", ValueType::RegEx, RegEx{u8"    ^\\w+\\.[Ee][Ll][Cc][Ll]$"}));
+        WITH_CONTEXT(requireValue("regex.value_5", ValueType::RegEx, RegEx{u8"^\\w+\n    \\.[Ee][Ll][Cc][Ll]\n$"}));
         WITH_CONTEXT(requireSectionMap("bytes"));
         WITH_CONTEXT(requireValue("bytes.value_1", ValueType::Bytes, Bytes::fromHex("01020304e1e2e3e4")));
         WITH_CONTEXT(requireValue("bytes.value_2", ValueType::Bytes, Bytes::fromHex("01020304e1e2e3e4")));

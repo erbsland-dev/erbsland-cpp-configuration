@@ -14,7 +14,7 @@
 
 #include <vector>
 #include <ranges>
-
+#include <algorithm>
 
 
 TESTED_TARGETS(Parser)

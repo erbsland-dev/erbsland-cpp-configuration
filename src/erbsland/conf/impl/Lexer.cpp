@@ -30,7 +30,25 @@ auto Lexer::tokens() -> TokenGenerator {
         decoder().initialize();
         // This is the main state. We assume that the read character is always the first character of a new line.
         while (decoder().character() != Char::EndOfData) {
-            if (decoder().character() == CharClass::EndOfLineStart) {
+            if (decoder().character() == CharClass::Spacing) {
+                // Manually handle spacing to improve the error reporting.
+                EL_YIELD(lexer::expectSpacing(decoder())); // read the spacing
+                // Now see what we get at this point
+                if (decoder().character() == CharClass::EndOfLineStart) {
+                    EL_YIELD_FROM(lexer::expectEndOfLine(decoder(), lexer::ExpectMore::No));
+                } else {
+                    if (decoder().character() == CharClass::NameStart) {
+                        decoder().throwSyntaxError(
+                            u8"Value names must appear at the beginning of a line without leading spaces.");
+                    }
+                    if (decoder().character() == CharClass::SectionStart) {
+                        decoder().throwSyntaxError(
+                            u8"Section declarations must start at the beginning of a line without any indentation.");
+                    }
+                    decoder().throwSyntaxOrUnexpectedEndError(
+                        u8"Unexpected content after indentation: only a comments or an empty lines was expected at this point.");
+                }
+            } if (decoder().character() == CharClass::EndOfLineStart) {
                 EL_YIELD_FROM(lexer::expectEndOfLine(decoder(), lexer::ExpectMore::No));
             } else if (decoder().character() == CharClass::NameStart) {
                 EL_YIELD_FROM(lexer::expectNameAndValue(decoder()));

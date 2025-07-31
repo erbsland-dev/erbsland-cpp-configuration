@@ -11,6 +11,9 @@
 #include "ValueWithConvertibleType.hpp"
 #include "ValueWithNativeType.hpp"
 
+#include "../utf8/U8Format.hpp"
+
+#include <algorithm>
 #include <cassert>
 #include <ranges>
 
@@ -67,14 +70,6 @@ void Value::setLocation(const Location &newLocation) noexcept {
 }
 
 
-auto Value::toList() const noexcept -> conf::ValueList {
-    if (type().isSingle()) {
-        return {std::dynamic_pointer_cast<const conf::Value>(shared_from_this())};
-    }
-    return {};
-}
-
-
 void Value::setParent(const conf::ValuePtr &parent) {
     _parent = parent;
 }
@@ -82,6 +77,40 @@ void Value::setParent(const conf::ValuePtr &parent) {
 
 void Value::addValue(const ValuePtr &childValue) {
     throw std::logic_error("Child values are not supported for this type.");
+}
+
+
+void Value::throwAsTypeMismatch(const conf::Value &thisValue, ValueType expectedType) {
+    throw Error(
+        ErrorCategory::TypeMismatch,
+        u8format(u8"A value has not the required type. Expected '{}' but got '{}'.", expectedType, thisValue.type()),
+        thisValue.location(),
+        thisValue.namePath()
+    );
+}
+
+
+void Value::throwValueNotFound(const conf::Value &thisValue, const NamePathLike &namePath) {
+
+    throwErrorWithPath(
+        ErrorCategory::ValueNotFound,
+        u8"A value was not found.",
+        thisValue,
+        namePath);
+}
+
+
+void Value::throwTypeMismatch(
+    const conf::Value &thisValue,
+    ValueType expectedType,
+    ValueType actualType,
+    const NamePathLike &namePath) {
+
+    throwErrorWithPath(
+        ErrorCategory::TypeMismatch,
+        u8format(u8"A value has not the required type. Expected '{}' but got '{}'.", expectedType, actualType),
+        thisValue,
+        namePath);
 }
 
 
@@ -140,12 +169,12 @@ auto Value::createTimeDelta(const TimeDelta &value) noexcept -> ValuePtr {
 }
 
 
-auto Value::createRegEx(const String &value) noexcept -> ValuePtr {
+auto Value::createRegEx(const RegEx &value) noexcept -> ValuePtr {
     return std::make_shared<RegExValue>(value);
 }
 
 
-auto Value::createRegEx(String &&value) noexcept -> ValuePtr {
+auto Value::createRegEx(RegEx &&value) noexcept -> ValuePtr {
     return std::make_shared<RegExValue>(std::move(value));
 }
 

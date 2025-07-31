@@ -21,8 +21,12 @@ namespace erbsland::conf {
 ///
 class TimeUnit final {
 public:
-    /// WARNING: The numeric values of the enumeration are used as indices for
+    /// The enumeration.
+    ///
+    /// @internal
+    /// @warning The numeric values of the enumeration are used as indices for
     /// `_valueMap`. Do not change the order unless `_valueMap` is updated too.
+    ///
     enum Enum : uint8_t {
         Nanoseconds = 0,
         Microseconds,
@@ -37,15 +41,24 @@ public:
     };
 
 public:
+    /// @name Construction and Assignment
+    /// @{
+
     /// Create a new time unit.
+    ///
+    /// @param value The enum value.
     ///
     constexpr TimeUnit(Enum value) noexcept : _value{value} {} // NOLINT(*-explicit-constructor)
 
-    // defaults
+    /// Default constructor.
     TimeUnit() = default;
+    /// Default destructor.
     ~TimeUnit() = default;
+    /// Default copy constructor.
     TimeUnit(const TimeUnit &) = default;
+    /// Default copy assignment.
     auto operator=(const TimeUnit &) -> TimeUnit& = default;
+    /// @}
 
 public: // comparison
     ERBSLAND_CONF_COMPARE_MEMBER(const TimeUnit &other, _value, other._value);
@@ -53,14 +66,26 @@ public: // comparison
     ERBSLAND_CONF_COMPARE_FRIEND(Enum a, const TimeUnit &b, a, b._value);
 
 public: // conversion
+    /// @name Conversion
+    /// @{
+
+    /// Cast this into its enum value.
     [[nodiscard]] constexpr explicit operator Enum() const noexcept { return _value; }
-    [[nodiscard]] auto textLong() const noexcept -> const String&;
-    [[nodiscard]] auto textShort() const noexcept -> const String&;
-    [[nodiscard]] auto textForTest() const noexcept -> const String&;
+    /// Get this unit as a long text.
+    [[nodiscard]] auto toTextLong() const noexcept -> const String&;
+    /// Get this unit as a short text.
+    [[nodiscard]] auto toTextShort() const noexcept -> const String&;
+    /// Get this unit as a lowercase, singular text
+    [[nodiscard]] auto toTextLowercaseSingular() const noexcept -> const String&;
+    /// Get the second factor of this unit.
     [[nodiscard]] auto secondFactor() const noexcept -> double;
+    /// Get the nanosecond factor of this unit.
     [[nodiscard]] auto nanosecondsFactor() const noexcept -> int64_t;
+    /// @}
 
 public: // enumeration
+    /// Get an array with all time units.
+    ///
     [[nodiscard]] static auto all() noexcept -> const std::array<TimeUnit, 10>& {
         static const std::array<TimeUnit, 10> values = {
             Nanoseconds, Microseconds, Milliseconds, Seconds, Minutes, Hours, Days, Weeks, Months, Years
@@ -101,7 +126,6 @@ struct std::hash<erbsland::conf::TimeUnit> {
 template <>
 struct std::formatter<erbsland::conf::TimeUnit> : std::formatter<std::string> {
     auto format(const erbsland::conf::TimeUnit timeUnit, format_context& ctx) const {
-        return std::formatter<std::string>::format(timeUnit.textLong().toCharString(), ctx);
+        return std::formatter<std::string>::format(timeUnit.toTextLong().toCharString(), ctx);
     }
 };
-

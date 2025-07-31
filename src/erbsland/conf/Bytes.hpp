@@ -23,7 +23,10 @@ namespace erbsland::conf {
 ///
 class Bytes {
 public:
+    /// A vector of bytes.
+    ///
     using ByteVector = std::vector<std::byte>;
+
     ERBSLAND_CONF_CONTAINER_DEFINITIONS(ByteVector);
 
 public: // construction.
@@ -103,29 +106,31 @@ public: // Conversion
         return Bytes{data};
     }
 
+    /// @name Convert from Hexadecimal String
+    ///
     /// Convert a string of hex characters into a sequence of bytes.
     ///
     /// Spaces are ignored and the text is parsed case-insensitive.
     /// In case of an error, an empty sequence is returned.
     ///
+    /// @{
+
     /// @param hex The string with the hex characters.
     /// @return The sequence of bytes or an empty sequence on error.
-    ///
     [[nodiscard]] static auto fromHex(std::string_view hex) noexcept -> Bytes;
-
-    /// @see fromHex(std::string_view)
-    /// Passing a `nullptr` returns an empty byte sequence.
+    /// @param hex The string with the hex characters.
+    /// @return The sequence of bytes or an empty sequence on error.
     [[nodiscard]] static auto fromHex(const char *hex) noexcept -> Bytes;
-
-    /// @see fromHex(std::string_view)
+    /// @param hex The string with the hex characters.
+    /// @return The sequence of bytes or an empty sequence on error.
     [[nodiscard]] static auto fromHex(const String &hex) noexcept -> Bytes;
-
-    /// @see fromHex(std::string_view)
+    /// @param hex The string with the hex characters.
+    /// @return The sequence of bytes or an empty sequence on error.
     [[nodiscard]] static auto fromHex(std::u8string_view hex) noexcept -> Bytes;
-
-    /// @see fromHex(std::string_view)
-    /// Passing a `nullptr` returns an empty byte sequence.
+    /// @param hex The string with the hex characters.
+    /// @return The sequence of bytes or an empty sequence on error.
     [[nodiscard]] static auto fromHex(const char8_t *hex) noexcept -> Bytes;
+    /// @}
 
     /// Convert this sequence of bytes to a string of hex characters.
     ///
@@ -139,6 +144,8 @@ public: // wrapper around the underlying vector
 
 public: // convenience methods
     /// Append another byte-sequence to this one.
+    ///
+    /// @param bytes A byte sequence.
     ///
     void append(const Bytes &bytes) noexcept {
         _data.insert(_data.end(), bytes.begin(), bytes.end());

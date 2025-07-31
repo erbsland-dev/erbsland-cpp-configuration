@@ -263,7 +263,7 @@ auto AssignmentStream::handleValue() -> Assignment {
     }
     case TokenType::MultiLineRegexOpen: {
         auto text = handleMultiLineRegEx();
-        auto value = Value::createRegEx(std::move(text));
+        auto value = Value::createRegEx(RegEx(std::move(text)));
         return createAssignment(std::move(value));
     }
     case TokenType::MultiLineBytesOpen: {
@@ -296,7 +296,7 @@ auto AssignmentStream::handleValueOrValueList() -> std::vector<ValuePtr> {
             value = Value::createText(std::get<String>(token().content()));
             break;
         case TokenType::RegEx:
-            value = Value::createRegEx(std::get<String>(token().content()));
+            value = Value::createRegEx(RegEx{std::get<String>(token().content())});
             break;
         case TokenType::Date:
             value = Value::createDate(std::get<Date>(token().content()));

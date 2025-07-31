@@ -20,7 +20,6 @@ target_sources(erbsland-configuration-parser PRIVATE
         Value.hpp
         ValueMap.cpp
         ValueMap.hpp
-        ValueWithChildren.cpp
         ValueWithChildren.hpp
         ValueWithConvertibleType.hpp
         ValueWithNativeType.hpp

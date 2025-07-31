@@ -46,11 +46,11 @@ public:
     /// - Builds required intermediate sections.
     /// - Registers this as the current section and name path.
     ///
-    /// @param namePath The name-path of the new section map.
+    /// @param namePathLike The name-path of the new section map.
     /// @param location The location where this new section is defined.
     /// @throws Error (Syntax, NameConflict) on any problem.
     ///
-    void addSectionMap(const NamePath &namePath, const Location &location = {});
+    void addSectionMap(const NamePathLike &namePathLike, const Location &location = {});
 
     /// Add or extend a section list in the document at the given name path.
     ///
@@ -59,11 +59,11 @@ public:
     /// - Creates a new section list or extends an existing one.
     /// - Registers this as the current section and name path.
     ///
-    /// @param namePath The name-path of the new section map.
+    /// @param namePathLike The name-path of the new section map.
     /// @param location The location where this new section is defined.
     /// @throws Error (Syntax, NameConflict) on any problem.
     ///
-    void addSectionList(const NamePath &namePath, const Location &location = {});
+    void addSectionList(const NamePathLike &namePathLike, const Location &location = {});
 
     /// Add a value to this document.
     ///
@@ -71,13 +71,13 @@ public:
     /// - Detects conflicts if a regular named value is added to a section with text names.
     /// - Converts an empty section with names into a section with texts if required.
     ///
-    /// @param namePath Either a name path with two or more elements to resolve the path to a section and
+    /// @param namePathLike Either a name path with two or more elements to resolve the path to a section and
     ///     add the value to it, or a single name element to add the value to the current section.
     /// @param value The value to add to the section.
     /// @param location The location of the assignment for error messages.
     /// @throws Error (Syntax, NameConflict) on any problem.
     ///
-    void addValue(const NamePath &namePath, const ValuePtr &value, const Location &location = {});
+    void addValue(const NamePathLike &namePathLike, const ValuePtr &value, const Location &location = {});
 
     /// Get the built document and reset the builder.
     ///
@@ -85,22 +85,18 @@ public:
 
 public: // methods for the public interface.
     template<typename T>
-    void addValueT(const NamePath &namePath, const T &value) {
+    void addValueT(const NamePathLike &namePath, const T &value) {
         static_assert(false, "addValue is not implemented for this type.");
     }
 
     template<typename T> requires (std::is_integral_v<T>)
-    void addValueT(const NamePath &namePath, const T &value) {
+    void addValueT(const NamePathLike &namePath, const T &value) {
         addValue(namePath, Value::createInteger(static_cast<Integer>(value)));
     }
 
     template<typename T> requires (std::is_floating_point_v<T>)
-    void addValueT(const NamePath &namePath, const T &value) {
+    void addValueT(const NamePathLike &namePath, const T &value) {
         addValue(namePath, Value::createFloat(static_cast<Float>(value)));
-    }
-
-    void addRegEx(const NamePath &namePath, const String &value) {
-        addValue(namePath, Value::createRegEx(value));
     }
 
 private:
@@ -109,47 +105,52 @@ private:
 
 
 template<>
-inline void DocumentBuilder::addValueT<String>(const NamePath &namePath, const String &value) {
+inline void DocumentBuilder::addValueT<String>(const NamePathLike &namePath, const String &value) {
     addValue(namePath, Value::createText(value));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<std::u8string>(const NamePath &namePath, const std::u8string &value) {
+inline void DocumentBuilder::addValueT<std::u8string>(const NamePathLike &namePath, const std::u8string &value) {
     addValue(namePath, Value::createText(String{value}));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<std::string>(const NamePath &namePath, const std::string &value) {
+inline void DocumentBuilder::addValueT<std::string>(const NamePathLike &namePath, const std::string &value) {
     addValue(namePath, Value::createText(String{value}));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<bool>(const NamePath &namePath, const bool &value) {
+inline void DocumentBuilder::addValueT<bool>(const NamePathLike &namePath, const bool &value) {
     addValue(namePath, Value::createBoolean(value));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<Date>(const NamePath &namePath, const Date &value) {
+inline void DocumentBuilder::addValueT<Date>(const NamePathLike &namePath, const Date &value) {
     addValue(namePath, Value::createDate(value));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<Time>(const NamePath &namePath, const Time &value) {
+inline void DocumentBuilder::addValueT<Time>(const NamePathLike &namePath, const Time &value) {
     addValue(namePath, Value::createTime(value));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<DateTime>(const NamePath &namePath, const DateTime &value) {
+inline void DocumentBuilder::addValueT<DateTime>(const NamePathLike &namePath, const DateTime &value) {
     addValue(namePath, Value::createDateTime(value));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<Bytes>(const NamePath &namePath, const Bytes &value) {
+inline void DocumentBuilder::addValueT<Bytes>(const NamePathLike &namePath, const Bytes &value) {
     addValue(namePath, Value::createBytes(value));
 }
 
 template<>
-inline void DocumentBuilder::addValueT<TimeDelta>(const NamePath &namePath, const TimeDelta &value) {
+inline void DocumentBuilder::addValueT<RegEx>(const NamePathLike &namePath, const RegEx &value) {
+    addValue(namePath, Value::createRegEx(value));
+}
+
+template<>
+inline void DocumentBuilder::addValueT<TimeDelta>(const NamePathLike &namePath, const TimeDelta &value) {
     addValue(namePath, Value::createTimeDelta(value));
 }
 

@@ -3,6 +3,7 @@
 #pragma once
 
 
+#include "TestFormat.hpp"
 #include "TimeOffset.hpp"
 
 #include "impl/ComparisonHelper.hpp"
@@ -22,7 +23,8 @@ class DateTime;
 /// @note About the implementation of the comparison operators:
 ///     Comparison of two times, without date and/or mixed offsets is very limited and usually makes no sense,
 ///     as for a proper comparison of a point-in-time the date for the given time is required as well.
-///     Therefore, as this time class is a simple wrapper, for time-comparison, local-time is assumed to be UTC.
+///     Therefore, as this time class is a minimal data class, for time-comparison, local-time is assumed to be UTC.
+///
 /// @tested `TimeTest`
 ///
 class Time final {
@@ -52,16 +54,20 @@ public:
     ///
     Time(int64_t nanoseconds, TimeOffset offset);
 
-    // defaults
+    /// Default destructor.
     ~Time() = default;
+    /// Default copy constructor.
     Time(const Time&) = default;
+    /// Default copy assignment.
     auto operator=(const Time&) -> Time& = default;
 
 public: // operators
     ERBSLAND_CONF_COMPARE_MEMBER(const Time& other, nanosecondsForComparison(), other.nanosecondsForComparison());
 
 public: // accessors
-    /// Test if this time is undefined (created with default constructor).
+    /// Test if this time is undefined (created with the default constructor).
+    ///
+    /// @return `true` if this time is undefined.
     ///
     [[nodiscard]] auto isUndefined() const noexcept -> bool {
         return _nanoseconds < std::chrono::nanoseconds{0};
@@ -127,4 +133,3 @@ struct std::formatter<erbsland::conf::Time> : std::formatter<std::string> {
         return std::formatter<std::string>::format(time.toText().toCharString(), ctx);
     }
 };
-

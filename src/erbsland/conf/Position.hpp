@@ -25,16 +25,32 @@ public:
     ///
     constexpr Position(int line, int column) : _line(line), _column(column) {}
 
-    // defaults
+    /// Default constructor.
     Position() = default;
+    /// Default destructor.
     ~Position() = default;
+    /// Default copy constructor.
     Position(const Position &) = default;
+    /// Default move constructor.
     Position(Position &&) = default;
+    /// Default copy assignment.
     auto operator=(const Position &) -> Position& = default;
+    /// Default move assignment.
     auto operator=(Position &&) -> Position& = default;
 
 public: // comparison
+    /// Compare this position to another for equality.
+    ///
+    /// @param other The other position to compare.
+    /// @return `true` if both line and column are identical.
+    ///
     auto operator==(const Position &other) const noexcept -> bool { return _line == other._line && _column == other._column; }
+
+    /// Compare this position to another for inequality.
+    ///
+    /// @param other The other position to compare.
+    /// @return `true` if positions differ, `false` otherwise.
+    ///
     auto operator!=(const Position &other) const noexcept -> bool { return !operator==(other); }
 
 public: // accessors
@@ -87,4 +103,3 @@ struct std::formatter<erbsland::conf::Position> : std::formatter<std::string> {
         return std::formatter<std::string>::format(position.toText().toCharString(), ctx);
     }
 };
-

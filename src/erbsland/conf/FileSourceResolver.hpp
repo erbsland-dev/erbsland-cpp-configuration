@@ -13,8 +13,6 @@
 namespace erbsland::conf {
 
 
-namespace impl { class U8Iterator; }
-
 class FileSourceResolver;
 using FileSourceResolverPtr = std::shared_ptr<FileSourceResolver>;
 
@@ -24,49 +22,14 @@ using FileSourceResolverPtr = std::shared_ptr<FileSourceResolver>;
 /// The file source resolver supports the recommended format to include files. It works with relative and
 /// absolute paths and also has support for wildcards.
 ///
-/// Here a few examples:
-/// <code language="text">
-/// @include "file:example.elcl"              # File in the same directory.
-/// @include "file:sub/example.elcl"          # File in a subdirectory of the current configuration file.
-/// @include "file:../example.elcl"           # File in the parent directory (if access rules allow it)
-/// @include "file:/usr/local/example.elcl"   # Absolute path.
-/// </code>
+/// Here are a few examples:
 ///
-/// ## Wildcards
-///
-/// Please note: This implementation has no full globbing support that you would from a shell. The wildcard
-/// support is limited to a maximum of *one* `**` and *one* `*` wildcard.
-///
-/// ### The '*' Wildcard
-///
-/// Each path can contain a maximum of *one* `*` wildcard in the *filename* portion of the path.
-///
-/// <code language="text">
-/// @include "file:sub/*.elcl"  # Includes all files in the sub directory `sub` with the suffix `.elcl`
-/// @include "file:server_*"    # Includes all files from the current directory that start with `server_`
-/// </code>
-///
-/// Using multiple `*` Wildcards, or using it in a directory part of the path with result in an error.
-///
-/// ### The `**` Wildcard
-///
-/// Each path can contain a maximum of *one* `**` wildcard in the *directory* portion of the path.
-///
-/// <code language="text">
-/// # Include all `server_*` ELCL configuration files from this directory and all subdirectories of the current path.
-/// @include "file:**/server_*.elcl"
-/// # Include all ELCL files in the `/usr/local/app/` directory and from all subdirectories.
-/// @include "file:/usr/local/app/**/*.elcl"
-/// </code>
-///
-/// The `**` wildcard must stand alone, with no prefixed or suffixed characters.
-///
-/// @note This class assumes that the `resolve` method is called from the parser, and therefore the text encoding
-///     is already verified. It assumes there are no UTF-8 encoding errors in the text.
-///
-/// @note File and directory names can contain deliberately inserted UTF-8 encoding errors or other control characters.
-///     For this reason, the resolver checks the UTF-8 encoding of all paths and stops if any incorrect UTF-8
-///     encoding was found.
+/// @code
+/// &at;include "file:example.elcl"              # File in the same directory.
+/// &at;include "file:sub/example.elcl"          # File in a subdirectory of the current configuration file.
+/// &at;include "file:../example.elcl"           # File in the parent directory (if access rules allow it)
+/// &at;include "file:/usr/local/example.elcl"   # Absolute path.
+/// @endcode
 ///
 class FileSourceResolver : public SourceResolver {
 public:
@@ -89,8 +52,9 @@ public:
         return std::make_shared<FileSourceResolver>();
     }
 
-    // defaults
+    /// Default constructor.
     FileSourceResolver() = default;
+    /// Default destructor.
     ~FileSourceResolver() override = default;
 
 public: // Settings.

@@ -10,6 +10,7 @@
 
 #include "../utf8/U8Format.hpp"
 
+#include <algorithm>
 #include <cassert>
 #include <ranges>
 

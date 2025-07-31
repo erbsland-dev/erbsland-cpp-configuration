@@ -34,6 +34,20 @@ auto NamePath::fromText(const String &text) -> NamePath {
 }
 
 
+auto toNamePath(const NamePathLike &namePathLike) -> NamePath {
+    if (const auto *namePath = std::get_if<NamePath>(&namePathLike)) {
+        return *namePath;
+    }
+    if (const auto *name = std::get_if<Name>(&namePathLike)) {
+        return {*name};
+    }
+    if (const auto *text = std::get_if<String>(&namePathLike)) {
+        return NamePath::fromText(*text);
+    }
+    return NamePath{Name::createIndex(std::get<std::size_t>(namePathLike))};
+}
+
+
 #ifdef ERBSLAND_CONF_INTERNAL_VIEWS
 auto internalView(const NamePath &object) -> impl::InternalViewPtr {
     auto result = impl::InternalView::create();

@@ -1,0 +1,18 @@
+
+*[field.room]
+x: 3
+y: 3
+width: 8
+height: 8
+
+*[field.room]
+x: 16
+y: 3
+width: 8
+height: 8
+
+*[field.room]
+x: 10
+y: 8
+width: 8
+height: 2

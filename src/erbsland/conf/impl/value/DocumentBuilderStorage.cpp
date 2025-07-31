@@ -228,7 +228,7 @@ void DocumentBuilderStorage::applyContainerRules(
             container->setLocation(location);
         }
     } else if (container->type() == ValueType::SectionWithNames) {
-        if (namePath.back().type() == NameType::Text) {
+        if (value->name().type() == NameType::Text) {
             if (container->empty()) {
                 container->transform(ValueType::SectionWithTexts);
             } else {
@@ -241,7 +241,7 @@ void DocumentBuilderStorage::applyContainerRules(
             }
         }
     } else if (container->type() == ValueType::SectionWithTexts) {
-        if (namePath.back().type() == NameType::Regular) {
+        if (value->name().type() == NameType::Regular) {
             throw Error{
                 ErrorCategory::NameConflict,
                 u8"Values and sections with text-names can not be mixed with regular names.",

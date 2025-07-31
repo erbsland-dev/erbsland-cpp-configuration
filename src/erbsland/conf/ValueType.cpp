@@ -3,6 +3,7 @@
 #include "ValueType.hpp"
 
 
+#include <algorithm>
 #include <cassert>
 #include <ranges>
 

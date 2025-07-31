@@ -28,30 +28,48 @@ namespace impl {
 /// @tested Tested via `Value` class.
 ///
 class ValueIterator final {
+    /// @private
     using WrappedIterator = std::vector<impl::ValuePtr>::const_iterator;
 
 public:
+    /// @private
     using iterator_category = std::forward_iterator_tag;
+    /// @private
     using value_type = const ValuePtr;
+    /// @private
     using difference_type = std::ptrdiff_t;
+    /// @private
     using pointer = const ValuePtr;
+    /// @private
     using reference = const ValuePtr;
 
 public:
+    /// @name Construction and Assignment
+    /// @{
+
     /// Create an iterator wrapping the given internal iterator.
     ///
     /// @param it The iterator to wrap.
     constexpr explicit ValueIterator(WrappedIterator it) : _current{it} {}
 
-    // defaults
+    /// Default constructor.
     ValueIterator() = default;
+    /// Default destructor.
     ~ValueIterator() = default;
+    /// Default copy constructor.
     ValueIterator(const ValueIterator&) = default;
+    /// Default move constructor.
     ValueIterator(ValueIterator&&) noexcept = default;
+    /// Default copy assignment.
     auto operator=(const ValueIterator&) -> ValueIterator& = default;
+    /// Default move assignment.
     auto operator=(ValueIterator&&) noexcept -> ValueIterator& = default;
+    /// @}
 
-public: // operators
+public:
+    /// @name Operators
+    /// @{
+
     /// Dereference operator.
     /// @return A shared pointer to the current value.
     [[nodiscard]] auto operator*() const noexcept -> reference;
@@ -67,15 +85,18 @@ public: // operators
     auto operator++(int) noexcept -> ValueIterator;
 
     /// Equality comparison.
+    /// @param other The other iterator for comparison.
     [[nodiscard]] auto operator==(const ValueIterator& other) const noexcept -> bool;
 
     /// Inequality comparison.
+    /// @param other The other iterator for comparison.
     [[nodiscard]] auto operator!=(const ValueIterator& other) const noexcept -> bool;
 
-protected:
+    /// @}
+
+private:
     WrappedIterator _current;
 };
 
 
 }
-

@@ -5,6 +5,8 @@
 
 #include "Value.hpp"
 
+#include <numeric>
+
 
 namespace erbsland::conf::impl {
 
@@ -14,6 +16,7 @@ ValueMap::ValueMap(List &&valueList) : _valueList(std::move(valueList)) {
     for (const auto &value : _valueList) {
         value->setName(Name::createIndex(index));
         _valueMap.insert_or_assign(value->name(), value);
+        index += 1;
     }
 }
 
@@ -28,40 +31,117 @@ auto ValueMap::size() const noexcept -> std::size_t {
 }
 
 
-auto ValueMap::hasValue(const std::size_t index) const noexcept -> bool {
-    return index < _valueList.size();
+auto ValueMap::hasValue(const NamePathLike &namePathLike) const noexcept -> bool {
+    try {
+        if (const auto *text = std::get_if<String>(&namePathLike)) {
+            return hasValueImpl(NamePath::fromText(*text));
+        }
+        if (const auto *namePath = std::get_if<NamePath>(&namePathLike)) {
+            return hasValueImpl(*namePath);
+        }
+        if (const auto *name = std::get_if<Name>(&namePathLike)) {
+            return hasValueImpl(*name);
+        }
+        return hasValueImpl(std::get<std::size_t>(namePathLike));
+    } catch (const Error&) {
+        return false;
+    }
 }
 
 
-auto ValueMap::hasValue(const Name &name) const noexcept -> bool {
+void ValueMap::setParent(const conf::ValuePtr &parent) {
+    for (const auto &value : _valueList) {
+        value->setParent(parent);
+    }
+}
+
+
+auto ValueMap::hasValueImpl(const NamePath &namePath) const noexcept -> bool {
+    if (namePath.empty()) {
+        return false;
+    }
+    const auto result = std::accumulate(
+        std::next(namePath.begin()),
+        namePath.end(),
+        valueImpl(namePath.front()),
+        [&](const ValuePtr& currentValue, auto const &nextName) {
+            return currentValue ? currentValue->valueImpl(nextName) : nullptr;
+        }
+    );
+    return result != nullptr;
+}
+
+
+auto ValueMap::hasValueImpl(const Name &name) const noexcept -> bool {
     return _valueMap.contains(name);
 }
 
 
-auto ValueMap::hasValue(const NamePath &namePath) const noexcept -> bool {
-    if (namePath.empty()) {
-        return false;
-    }
-    auto currentValue = value(namePath.at(0));
-    for (std::size_t i = 1; i < namePath.size(); ++i) {
-        currentValue = std::dynamic_pointer_cast<Value>(currentValue->value(namePath.at(i)));
-        if (currentValue == nullptr) {
-            return false;
-        }
-    }
-    return true;
+auto ValueMap::hasValueImpl(std::size_t index) const noexcept -> bool {
+    return index < _valueList.size();
 }
 
 
-auto ValueMap::value(const std::size_t index) const noexcept -> ValuePtr {
-    if (_valueList.size() <= index) {
+auto ValueMap::value(const NamePathLike &namePathLike) const -> ValuePtr {
+    try {
+        if (const auto *text = std::get_if<String>(&namePathLike)) {
+            return valueImpl(NamePath::fromText(*text));
+        }
+        if (const auto *namePath = std::get_if<NamePath>(&namePathLike)) {
+            return valueImpl(*namePath);
+        }
+        if (const auto *name = std::get_if<Name>(&namePathLike)) {
+            return valueImpl(*name);
+        }
+        return valueImpl(std::get<std::size_t>(namePathLike));
+    } catch (const Error&) {
         return {};
     }
-    return _valueList[index];
 }
 
 
-auto ValueMap::value(const Name &name) const noexcept -> ValuePtr {
+auto ValueMap::valueOrThrow(const NamePathLike &namePathLike, const conf::Value &value) const -> ValuePtr {
+    ValuePtr result;
+    if (const auto *text = std::get_if<String>(&namePathLike)) {
+        result = valueImpl(NamePath::fromText(*text));
+    } else if (const auto *namePath = std::get_if<NamePath>(&namePathLike)) {
+        result = valueImpl(*namePath);
+    } else if (const auto *name = std::get_if<Name>(&namePathLike)) {
+        result = valueImpl(*name);
+    } else {
+        return valueImpl(std::get<std::size_t>(namePathLike));
+    }
+    if (result == nullptr) {
+        Value::throwValueNotFound(value, namePathLike);
+    }
+    return result;
+}
+
+
+auto ValueMap::valueImpl(const NamePath &namePath) const -> ValuePtr {
+    if (namePath.empty()) {
+        return {};
+    }
+    const auto result = std::accumulate(
+        std::next(namePath.begin()),
+        namePath.end(),
+        valueImpl(namePath.front()),
+        [&](const ValuePtr& currentValue, auto const &nextName) {
+            return currentValue ? currentValue->valueImpl(nextName) : nullptr;
+        }
+    );
+    return result;
+}
+
+
+auto ValueMap::valueImpl(const Name &name) const -> ValuePtr {
+    if (name.isTextIndex()) {
+        const auto index = name.asIndex();
+        if (!_textIndexesAllowed || index >= _valueList.size()) {
+            return {};
+        }
+        return _valueList[index];
+    }
     auto it = _valueMap.find(name);
     if (it == _valueMap.end()) {
         return {};
@@ -70,18 +150,11 @@ auto ValueMap::value(const Name &name) const noexcept -> ValuePtr {
 }
 
 
-auto ValueMap::value(const NamePath &namePath) const -> ValuePtr {
-    if (namePath.empty()) {
+auto ValueMap::valueImpl(std::size_t index) const -> ValuePtr {
+    if (index >= _valueList.size()) {
         return {};
     }
-    auto currentValue = value(namePath.at(0));
-    for (std::size_t i = 1; i < namePath.size(); ++i) {
-        currentValue = std::dynamic_pointer_cast<Value>(currentValue->value(namePath.at(i)));
-        if (currentValue == nullptr) {
-            return {};
-        }
-    }
-    return currentValue;
+    return _valueList[index];
 }
 
 

@@ -26,7 +26,7 @@ namespace erbsland::conf::impl {
     using reverse_iterator = WRAPPED_TYPE::reverse_iterator; \
     using const_reverse_iterator = WRAPPED_TYPE::const_reverse_iterator;
 
-/// Implement common access method of a container.
+/// Implement common access methods of a container.
 ///
 /// Expects that the container definitions, via `ERBSLAND_CONF_CONTAINER_DEFINITIONS` are already defined.
 ///

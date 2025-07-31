@@ -19,29 +19,43 @@ namespace erbsland::conf {
 
 /// This parser reads the Erbsland Configuration Language.
 ///
+/// *Multithreading*: This parser is **reentrant**, and therefore it can be used in multiple threads, as long each
+/// thread uses an individual instance of the parser.
+///
+/// @tested `ParserAccessTest`, `ParserBasicTest`, `ParserComplianceTest`, `ParserErrorClassTest`,
+///     `ParserIncludeTest`, `ParserSignatureTest`
+///
 class Parser final {
 public:
+    /// Default constructor.
     Parser() = default;
+    /// Default destructor.
     ~Parser() = default;
 
 public:
     /// Set a custom source resolver used to resolve include directives while parsing.
     ///
-    /// By default, the `FileSourceResolver` is used which supports `file:` includes in the format
-    /// recommended in the documentation.
+    /// By default, an instance of `FileSourceResolver` is used, which supports file-based includes, as specified
+    /// in the format recommended in the documentation.
     ///
-    /// @param sourceResolver The custom source resolver, or `nullptr` to disable the `\@include` meta-command.
+    /// @param sourceResolver The custom source resolver, or `nullptr` to disable the `include` meta-command.
     ///
     void setSourceResolver(const SourceResolverPtr &sourceResolver) noexcept;
 
     /// Set a custom access check.
     ///
+    /// By default, an instance of `FileAccessCheck` with default options is used. This instance limits included files
+    /// to the same directory and subdirectories of the including configuration.
+    ///
     /// @param accessCheck An instance of a source access check implementation, or `nullptr` to disable
-    ///     the `\@include` meta-command.
+    ///     the `include` meta-command.
     ///
     void setAccessCheck(const AccessCheckPtr &accessCheck) noexcept;
 
     /// Set a signature validator.
+    ///
+    /// By default, no signature validator is set. This allows parsing all unsigned configuration documents.
+    /// Documents with a `signature` meta-value get rejected by the parser.
     ///
     /// @param signatureValidator An instance of a signature validator implementation, or `nullptr` to
     ///     disable signature validation.
@@ -66,6 +80,8 @@ public:
 
     /// Access the last error.
     ///
+    /// @return The error object of the last error.
+    ///
     auto lastError() const noexcept -> Error;
 
 private:
@@ -75,4 +91,3 @@ private:
 
 
 }
-

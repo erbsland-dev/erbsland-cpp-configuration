@@ -153,7 +153,7 @@ public:
         REQUIRE_NOTHROW(builder.addDateTime(u8"main.value_7", DateTime{Date{2025, 12, 26}, Time{22, 11, 33, 123456000, TimeOffset::utc()}}));
         REQUIRE_NOTHROW(builder.addBytes(u8"main.value_8", Bytes::fromHex("0102aabbcc")));
         REQUIRE_NOTHROW(builder.addTimeDelta(u8"main.value_9", TimeDelta{TimeUnit::Hours, 5}));
-        REQUIRE_NOTHROW(builder.addRegEx(u8"main.value_10", String{u8"abc"}));
+        REQUIRE_NOTHROW(builder.addRegEx(u8"main.value_10", RegEx{u8"abc"}));
         auto expectedValueMap = ExpectedValueMap{
                 {u8"main", u8"SectionWithNames()"},
                 {u8"main.value_1", u8"Integer(12345)"},
@@ -181,7 +181,7 @@ public:
         REQUIRE_NOTHROW(builder.addDateTime(NamePath::fromText(u8"main.value_7"), DateTime{Date{2025, 12, 26}, Time{22, 11, 33, 123456000, TimeOffset::utc()}}));
         REQUIRE_NOTHROW(builder.addBytes(NamePath::fromText(u8"main.value_8"), Bytes::fromHex("0102aabbcc")));
         REQUIRE_NOTHROW(builder.addTimeDelta(NamePath::fromText(u8"main.value_9"), TimeDelta{TimeUnit::Hours, 5}));
-        REQUIRE_NOTHROW(builder.addRegEx(NamePath::fromText(u8"main.value_10"), String{u8"abc"}));
+        REQUIRE_NOTHROW(builder.addRegEx(NamePath::fromText(u8"main.value_10"), RegEx{u8"abc"}));
         auto expectedValueMap = ExpectedValueMap{
                     {u8"main", u8"SectionWithNames()"},
                     {u8"main.value_1", u8"Integer(12345)"},

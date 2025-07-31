@@ -139,7 +139,7 @@ public:
         REQUIRE_NOTHROW(builder.addValue(NamePath::fromText("main.value_9"), impl::Value::createTimeDelta(
             TimeDelta{TimeUnit::Hours, 5}), location));
         REQUIRE_NOTHROW(builder.addValue(NamePath::fromText("main.value_10"), impl::Value::createRegEx(
-            String{u8"abc"}), location));
+            RegEx{u8"abc"}), location));
         std::vector<impl::ValuePtr> valueList;
         valueList.emplace_back(impl::Value::createInteger(1));
         valueList.emplace_back(impl::Value::createInteger(2));
@@ -373,9 +373,6 @@ public:
             [[nodiscard]] auto type() const noexcept -> ValueType override {
                 return ValueType::Undefined;
             }
-            [[nodiscard]] auto toTestText() const noexcept -> String override {
-                return {};
-            }
         };
         REQUIRE_THROWS(builder.addValue(NamePath::fromText("main.section"), std::make_shared<UndefinedValue>(), location));
     }
@@ -434,7 +431,7 @@ public:
 
     void testAddingRegEx() {
         REQUIRE_NOTHROW(builder.addSectionMap(NamePath::fromText(u8"main"), location));
-        REQUIRE_NOTHROW(builder.addRegEx(NamePath::fromText("main.value_1"), u8"abc"));
+        REQUIRE_NOTHROW(builder.addValueT(NamePath::fromText("main.value_1"), RegEx{u8"abc"}));
 
         auto expectedValueMap = ExpectedValueMap{
             {u8"main", u8"SectionWithNames()"},

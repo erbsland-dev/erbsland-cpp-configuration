@@ -10,7 +10,7 @@ babel==2.17.0
     # via sphinx
 breathe==4.36.0
     # via -r requirements.in
-certifi==2025.7.9
+certifi==2025.7.14
     # via requests
 charset-normalizer==3.4.2
     # via requests
@@ -40,9 +40,12 @@ sphinx==8.2.3
     # via
     #   -r requirements.in
     #   breathe
+    #   sphinx-copybutton
     #   sphinx-design
     #   sphinx-rtd-theme
     #   sphinxcontrib-jquery
+sphinx-copybutton==0.5.2
+    # via -r requirements.in
 sphinx-design==0.6.1
     # via -r requirements.in
 sphinx-rtd-theme==3.0.2

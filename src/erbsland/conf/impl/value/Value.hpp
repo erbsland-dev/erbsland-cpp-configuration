@@ -44,12 +44,13 @@ public:
     [[nodiscard]] auto hasParent() const noexcept -> bool override;
     [[nodiscard]] auto parent() const noexcept -> conf::ValuePtr override;
     [[nodiscard]] auto size() const noexcept -> size_t override { return 0; }
-    [[nodiscard]] auto hasValue(std::size_t index) const noexcept -> bool override { return false; }
-    [[nodiscard]] auto hasValue(const Name &name) const noexcept -> bool override { return false; }
-    [[nodiscard]] auto hasValue(const NamePath &namePath) const noexcept -> bool override { return false; }
-    [[nodiscard]] auto value(std::size_t index) const noexcept -> conf::ValuePtr override { return {}; }
-    [[nodiscard]] auto value(const Name &name) const noexcept -> conf::ValuePtr override { return {}; }
-    [[nodiscard]] auto value(const NamePath &namePath) const noexcept -> conf::ValuePtr override { return {}; }
+    [[nodiscard]] auto hasValue(const NamePathLike &namePath) const noexcept -> bool override { return false; }
+    [[nodiscard]] auto value(const NamePathLike &namePath) const noexcept -> conf::ValuePtr override {
+        return {};
+    }
+    [[nodiscard]] auto valueOrThrow(const NamePathLike &namePath) const -> conf::ValuePtr override {
+        throwValueNotFound(*this, namePath);
+    }
     [[nodiscard]] auto begin() const noexcept -> ValueIterator override { return {}; }
     [[nodiscard]] auto end() const noexcept -> ValueIterator override { return {}; }
     [[nodiscard]] auto hasLocation() const noexcept -> bool override;
@@ -57,18 +58,53 @@ public:
     void setLocation(const Location &newLocation) noexcept override;
 
     // empty defaults
-    [[nodiscard]] auto toInteger() const noexcept -> int64_t override { return 0LL; }
-    [[nodiscard]] auto toBoolean() const noexcept -> bool override { return false; }
-    [[nodiscard]] auto toFloat() const noexcept -> double override { return 0.0; }
-    [[nodiscard]] auto toText() const noexcept -> String override { return {}; }
-    [[nodiscard]] auto toDate() const noexcept -> Date override { return {}; }
-    [[nodiscard]] auto toTime() const noexcept -> Time override { return {}; }
-    [[nodiscard]] auto toDateTime() const noexcept -> DateTime override { return {}; }
-    [[nodiscard]] auto toBytes() const noexcept -> Bytes override { return {}; }
-    [[nodiscard]] auto toTimeDelta() const noexcept -> TimeDelta override { return {}; }
-    [[nodiscard]] auto toRegEx() const noexcept -> String override { return {}; }
-    [[nodiscard]] auto toTextRepresentation() const noexcept -> String override { return {}; }
-    [[nodiscard]] auto toList() const noexcept -> conf::ValueList override;
+    [[nodiscard]] auto asInteger() const noexcept -> int64_t override { return 0LL; }
+    [[nodiscard]] auto asBoolean() const noexcept -> bool override { return false; }
+    [[nodiscard]] auto asFloat() const noexcept -> double override { return 0.0; }
+    [[nodiscard]] auto asText() const noexcept -> String override { return {}; }
+    [[nodiscard]] auto asDate() const noexcept -> Date override { return {}; }
+    [[nodiscard]] auto asTime() const noexcept -> Time override { return {}; }
+    [[nodiscard]] auto asDateTime() const noexcept -> DateTime override { return {}; }
+    [[nodiscard]] auto asBytes() const noexcept -> Bytes override { return {}; }
+    [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override { return {}; }
+    [[nodiscard]] auto asRegEx() const noexcept -> RegEx override { return {}; }
+    [[nodiscard]] auto asValueList() const noexcept -> conf::ValueList override { return {}; }
+    [[nodiscard]] auto asIntegerOrThrow() const -> int64_t override {
+        throwAsTypeMismatch(*this, ValueType::Integer);
+    }
+    [[nodiscard]] auto asBooleanOrThrow() const -> bool override {
+        throwAsTypeMismatch(*this, ValueType::Boolean);
+    }
+    [[nodiscard]] auto asFloatOrThrow() const -> double override {
+        throwAsTypeMismatch(*this, ValueType::Float);
+    }
+    [[nodiscard]] auto asTextOrThrow() const -> String override {
+        throwAsTypeMismatch(*this, ValueType::Text);
+    }
+    [[nodiscard]] auto asDateOrThrow() const -> Date override {
+        throwAsTypeMismatch(*this, ValueType::Date);
+    }
+    [[nodiscard]] auto asTimeOrThrow() const -> Time override {
+        throwAsTypeMismatch(*this, ValueType::Time);
+    }
+    [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override {
+        throwAsTypeMismatch(*this, ValueType::DateTime);
+    }
+    [[nodiscard]] auto asBytesOrThrow() const -> Bytes override {
+        throwAsTypeMismatch(*this, ValueType::Bytes);
+    }
+    [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override {
+        throwAsTypeMismatch(*this, ValueType::TimeDelta);
+    }
+    [[nodiscard]] auto asRegExOrThrow() const -> RegEx override {
+        throwAsTypeMismatch(*this, ValueType::RegEx);
+    }
+    [[nodiscard]] auto asValueListOrThrow() const -> ValueList override {
+        throwAsTypeMismatch(*this, ValueType::ValueList);
+    }
+    [[nodiscard]] auto toTextRepresentation() const noexcept -> String override {
+        return {};
+    }
 
 public: // modification
     /// Set the name for this value.
@@ -99,8 +135,8 @@ public: // factory methods
     [[nodiscard]] static auto createBytes(const Bytes &value) noexcept -> ValuePtr;
     [[nodiscard]] static auto createBytes(Bytes &&value) noexcept -> ValuePtr;
     [[nodiscard]] static auto createTimeDelta(const TimeDelta &value) noexcept -> ValuePtr;
-    [[nodiscard]] static auto createRegEx(const String &value) noexcept -> ValuePtr;
-    [[nodiscard]] static auto createRegEx(String &&value) noexcept -> ValuePtr;
+    [[nodiscard]] static auto createRegEx(const RegEx &value) noexcept -> ValuePtr;
+    [[nodiscard]] static auto createRegEx(RegEx &&value) noexcept -> ValuePtr;
     [[nodiscard]] static auto createValueList(std::vector<ValuePtr> &&valueList) noexcept -> ValuePtr;
 
     [[nodiscard]] static auto createSectionList() noexcept -> ValuePtr;
@@ -112,6 +148,97 @@ public: // factory methods
 public: // implement `Container`
     void setParent(const conf::ValuePtr &parent) override;
     void addValue(const ValuePtr &childValue) override;
+
+public: // helper methods.
+    /// Fast name-based access for child-values.
+    ///
+    [[nodiscard]] virtual auto valueImpl(const Name &name) const noexcept -> ValuePtr {
+        return nullptr;
+    }
+
+    [[noreturn]] static void throwAsTypeMismatch(
+        const conf::Value &thisValue,
+        ValueType expectedType);
+
+    template<typename MessageFwd>
+    [[noreturn]] static void throwErrorWithPath(
+        const ErrorCategory errorCategory,
+        MessageFwd &&message,
+        const conf::Value &thisValue,
+        const NamePathLike &namePath) {
+
+        auto path = thisValue.namePath();
+        path.append(toNamePath(namePath));
+        throw Error(
+            errorCategory,
+            std::forward<MessageFwd>(message),
+            std::move(path));
+    }
+
+    [[noreturn]] static void throwValueNotFound(
+        const conf::Value &thisValue,
+        const NamePathLike &namePath);
+
+    [[noreturn]] static void throwTypeMismatch(
+        const conf::Value &thisValue,
+        ValueType expectedType,
+        ValueType actualType,
+        const NamePathLike &namePath);
+
+    template<ValueType::Enum tValueType>
+    [[nodiscard]] static auto getterOrThrow(
+        const conf::Value &thisValue,
+        const NamePathLike &namePath) -> conf::ValuePtr {
+
+        const auto valuePtr = thisValue.value(namePath);
+        if (valuePtr == nullptr) {
+            throwValueNotFound(thisValue, namePath);
+        }
+        if (valuePtr->type() != tValueType) {
+            throwTypeMismatch(thisValue, tValueType, valuePtr->type(), namePath);
+        }
+        return valuePtr;
+    }
+
+    template<typename ReturnType, ValueType::Enum tValueType>
+    [[nodiscard]] static auto valueGetterOrThrow(
+        const conf::Value &thisValue,
+        const NamePathLike &namePath) -> ReturnType {
+
+        const auto valuePtr = getterOrThrow<tValueType>(thisValue, namePath);
+        return valuePtr->template asType<ReturnType>();
+    }
+
+    template<ValueType::Enum tValueType>
+    [[nodiscard]] static auto sectionGetter(
+        const conf::Value &thisValue,
+        const NamePathLike &namePath) noexcept -> conf::ValuePtr {
+
+        auto valuePtr = thisValue.value(namePath);
+        if (valuePtr == nullptr) {
+            return nullptr;
+        }
+        if (valuePtr->type() != tValueType) {
+            return nullptr;
+        }
+        return valuePtr;
+    }
+
+    template<typename T>
+    [[nodiscard]] static auto valueGetter(
+        const conf::Value &thisValue,
+        const NamePathLike &namePath,
+        const T &defaultValue) noexcept -> T {
+
+        const auto valuePtr = thisValue.value(namePath);
+        if (valuePtr == nullptr) {
+            return defaultValue;
+        }
+        if (valuePtr->type() != ValueType::from<T>()) {
+            return defaultValue;
+        }
+        return valuePtr->asType<T>();
+    }
 
 protected:
     Name _name; ///< The name of the value.

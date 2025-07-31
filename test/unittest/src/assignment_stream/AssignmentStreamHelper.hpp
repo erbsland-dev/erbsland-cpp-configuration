@@ -81,12 +81,6 @@ public:
         ++generatorIterator;
     }
 
-    /// placeholder type to test for regular expressions.
-    struct TestForRegEx {
-        TestForRegEx(const String &expected) : expected(expected) {}
-        String expected;
-    };
-
     template<typename T>
     void requireValue(
         const String &expectedNamePath,
@@ -97,11 +91,7 @@ public:
         REQUIRE_EQUAL(assignment.namePath().toText(), expectedNamePath);
         REQUIRE_EQUAL(assignment.type(), AssignmentType::Value);
         REQUIRE_EQUAL(assignment.value()->type(), expectedValueType);
-        if constexpr (std::is_same_v<T, TestForRegEx>) {
-            REQUIRE_EQUAL(assignment.value()->toRegEx(), expectedValue.expected);
-        } else {
-            REQUIRE_EQUAL(assignment.value()->convertTo<T>(), expectedValue);
-        }
+        REQUIRE_EQUAL(assignment.value()->asType<T>(), expectedValue);
         ++generatorIterator;
     }
 
@@ -124,7 +114,7 @@ public:
         REQUIRE_EQUAL(assignment.namePath().toText(), expectedNamePath);
         REQUIRE_EQUAL(assignment.type(), AssignmentType::Value);
         REQUIRE_EQUAL(assignment.value()->type(), ValueType::Float);
-        auto actualValue = assignment.value()->toFloat();
+        auto actualValue = assignment.value()->asFloat();
         runWithContext(SOURCE_LOCATION(), [&]() {
             compareFloat(actualValue, expectedValue);
         }, [&]() -> std::string {
@@ -149,7 +139,7 @@ public:
         REQUIRE_EQUAL(assignment.namePath().toText(), expectedNamePath);
         REQUIRE_EQUAL(assignment.type(), AssignmentType::Value);
         REQUIRE_EQUAL(assignment.value()->type(), ValueType::ValueList);
-        const auto valueList = assignment.value()->toList();
+        const auto valueList = assignment.value()->asValueList();
         REQUIRE_EQUAL(valueList.size(), expectedList.size());
         for (std::size_t i = 0; i < valueList.size(); ++i) {
             const auto &value = valueList[i];
@@ -161,7 +151,7 @@ public:
                     if constexpr (std::is_same_v<T, impl::NoContent>) {
                         // ignore no content
                     } else {
-                        const auto actualValue = value->convertTo<T>();
+                        const auto actualValue = value->asType<T>();
                         REQUIRE_EQUAL(actualValue, expectedValue);
                     }
                 }, expectedContent);
@@ -182,11 +172,7 @@ public:
         REQUIRE_EQUAL(assignment.namePath().toText(), expectedNamePath);
         REQUIRE_EQUAL(assignment.type(), AssignmentType::MetaValue);
         REQUIRE_EQUAL(assignment.value()->type(), expectedValueType);
-        if constexpr (std::is_same_v<T, TestForRegEx>) {
-            REQUIRE_EQUAL(assignment.value()->toRegEx(), expectedValue.expected);
-        } else {
-            REQUIRE_EQUAL(assignment.value()->convertTo<T>(), expectedValue);
-        }
+        REQUIRE_EQUAL(assignment.value()->asType<T>(), expectedValue);
         ++generatorIterator;
     }
 

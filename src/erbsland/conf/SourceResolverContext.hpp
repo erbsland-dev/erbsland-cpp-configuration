@@ -14,11 +14,11 @@ namespace erbsland::conf {
 /// @tested Tested via `Parser` class.
 ///
 struct SourceResolverContext {
-    /// The raw and unprocessed text from the `\@include`-command.
+    /// The raw and unprocessed text from the `include`-command.
     ///
     String includeText;
 
-    /// The source identifier of the document with the `\@include`-command.
+    /// The source identifier of the document with the `include`-command.
     ///
     SourceIdentifierPtr sourceIdentifier;
 };

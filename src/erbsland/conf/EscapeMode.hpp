@@ -19,9 +19,10 @@ enum class EscapeMode : uint8_t {
     ///
     /// See reference documentation, chapter Text.
     /// Even allowed, the tab character is escaped as well.
-    /// Escape characters U+0000-U+001F, `\\`, `"`, U+007F
-    /// Use short formats for `\\\\`, `\\"`, `\\n`, `\\r`, `\\t`.
-    /// Everything else as `\\u{x}`.
+    ///
+    /// - Escape characters U+0000-U+001F, <code>\\</code>, <code>\"</code>, U+007F
+    /// - Use short formats for <code>\\\\</code>, <code>\\"</code>, <code>\\n</code>, <code>\\r</code>, <code>\\t</code>.
+    /// - Everything else as <code>\\u{x}</code>.
     ///
     Text,
 
@@ -29,8 +30,9 @@ enum class EscapeMode : uint8_t {
     ///
     /// See reference documentation, chapter "Parser-Specific Usage of Text Names".
     /// Also mentioned in the specification for test adapters.
-    /// Escape characters U+0000-U+001F, `\`, `"`, `.`, `=`, U+007F-...
-    /// Escape all characters in `\u{X}` format.
+    ///
+    /// - Escape characters U+0000-U+001F, <code>\\</code>, <code>\"</code>, <code>.</code>, <code>=</code>, U+007F-...
+    /// - Escape all characters in <code>\\u{X}</code> format.
     ///
     FullTextName,
 
@@ -40,11 +42,11 @@ enum class EscapeMode : uint8_t {
 
     /// Escape for error output and log messages.
     ///
-    /// Escapes all Unicode code points that may disrupt the display or have unexpected side effects.
-    /// Escapes all control codes.
-    /// Escapes backslash and double-quote.
-    /// Use short formats for `\\\\`, `\\"`, `\\n`, `\\r`, `\\t`.
-    /// Everything else as `\\u{x}`.
+    /// - Escapes all Unicode code points that may disrupt the display or have unexpected side effects.
+    /// - Escapes all control codes.
+    /// - Escapes backslash and double-quote.
+    /// - Use short formats for <code>\\\\</code>, <code>\\"</code>, <code>\\n</code>, <code>\\r</code>, <code>\\t</code>.
+    /// - Everything else as <code>\\u{x}</code>.
     ///
     ErrorText,
 };

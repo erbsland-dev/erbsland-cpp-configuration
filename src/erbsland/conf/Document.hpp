@@ -17,10 +17,14 @@ using DocumentPtr = std::shared_ptr<Document>;
 ///
 class Document : public Value {
 public:
+    /// The flat map type mapping name paths to constant value pointers.
+    ///
+    /// Maps each name path to the corresponding constant value in the document.
+    ///
     using FlatValueMap = std::map<NamePath, ConstValuePtr>;
 
 public:
-    // defaults
+    /// Default destructor.
     ~Document() override = default;
 
 public:
@@ -33,4 +37,3 @@ public:
 
 
 }
-

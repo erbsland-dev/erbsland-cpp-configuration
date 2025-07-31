@@ -28,21 +28,21 @@ auto Error::toText() const noexcept -> String {
         result.append(_message);
     }
     if (_namePath.has_value()) {
-        result.append(u8"; name path: ");
+        result.append(u8" name path = ");
         result.append(_namePath.value().toText());
     }
     if (_filePath.has_value()) {
         auto pathStr = String{_filePath.value().u8string()};
         pathStr = impl::U8StringView{pathStr}.toSafeText();
-        result.append(impl::u8format("; file path: \"{}\"", pathStr));
+        result.append(impl::u8format(" file path = \"{}\"", pathStr));
     }
     if (_errorCode.has_value()) {
         auto safeErrorStr = String{_errorCode.value().message()};
         safeErrorStr = impl::U8StringView{safeErrorStr}.toSafeText();
-        result.append(impl::u8format("; error: {}", safeErrorStr));
+        result.append(impl::u8format(" system error = \"{}\"", safeErrorStr));
     }
     if (_location.has_value() && !_location.value().isUndefined()) {
-        result.append(u8"; at: ");
+        result.append(u8" at location = ");
         result.append(_location.value().toText());
     }
     return result;

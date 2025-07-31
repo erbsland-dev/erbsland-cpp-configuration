@@ -20,6 +20,8 @@ namespace erbsland::conf {
 ///
 class ErrorCategory {
 public:
+    /// The underlying enum type representing distinct categories of errors.
+    ///
     enum Enum : uint8_t {
         // Error categories defined by the language specification
         IO                  = 1, ///< A problem occurred while reading data from an I/O stream.
@@ -37,29 +39,48 @@ public:
         Internal            = 99, ///< The parser encountered an unexpected internal error.
         // Additional categories for the API of this parser.
         ValueNotFound       = 101, ///< A value with a given name-path couldn't be found.
-        WrongType           = 102, ///< A value exists but has the wrong type for a conversion.
+        TypeMismatch        = 102, ///< A value exists but has the wrong type for a conversion.
     };
 
 private:
     constexpr static auto _enumCount = 15;
 
 public:
-    /// Create an undefined value type.
+    /// Create an internal error category.
     ///
     constexpr ErrorCategory() = default;
 
-    /// Create a new value type.
+    /// Create a new error category.
+    ///
+    /// @param value The error category enum.
     ///
     constexpr ErrorCategory(Enum value) noexcept : _value{value} {} // NOLINT(*-explicit-constructor)
 
-    // defaults
+    /// Default destructor.
     ~ErrorCategory() = default;
+    /// Default copy constructor.
     ErrorCategory(const ErrorCategory &) = default;
+    /// Default copy assignment.
     auto operator=(const ErrorCategory &) -> ErrorCategory& = default;
 
 public: // operators
+    /// Assign a new enum value to this error category.
+    ///
+    /// @param value The enum value to assign.
+    /// @return Reference to this error category.
+    ///
     auto operator=(Enum value) noexcept -> ErrorCategory& { _value = value; return *this; }
+
+    /// Convert to the underlying enum value.
+    ///
+    /// @return The enum representation of this error category.
+    ///
     constexpr explicit operator Enum() const noexcept { return _value; }
+
+    /// Convert to the integer error code.
+    ///
+    /// @return The numeric code of this error category.
+    ///
     explicit operator int() const noexcept { return toCode(); }
 
 public: // comparison
@@ -70,14 +91,18 @@ public: // comparison
 public: // conversion
     /// Get the text representation of this error category.
     ///
+    /// @return A text representation of this error category.
+    ///
     [[nodiscard]] auto toText() const noexcept -> const String&;
 
     /// Get the code for this error category.
     ///
+    /// @return The error code.
+    ///
     [[nodiscard]] auto toCode() const noexcept -> int;
 
 private:
-    Enum _value{Internal}; ///< The internal value.
+    Enum _value = Internal; ///< The internal value.
     using ValueEntry = std::tuple<Enum, int, String>;
     using ValueMap = std::array<ValueEntry, _enumCount>;
     static ValueMap _valueMap;
@@ -93,4 +118,3 @@ struct std::formatter<erbsland::conf::ErrorCategory> : std::formatter<std::strin
         return std::formatter<std::string>::format(errorCategory.toText().toCharString(), ctx);
     }
 };
-

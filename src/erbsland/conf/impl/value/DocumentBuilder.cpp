@@ -17,7 +17,8 @@ void DocumentBuilder::reset() noexcept {
 }
 
 
-void DocumentBuilder::addSectionMap(const NamePath &namePath, const Location &location) {
+void DocumentBuilder::addSectionMap(const NamePathLike &namePathLike, const Location &location) {
+    auto namePath = toNamePath(namePathLike);
     if (namePath.empty()) {
         throw Error{
             ErrorCategory::Syntax,
@@ -57,7 +58,8 @@ void DocumentBuilder::addSectionMap(const NamePath &namePath, const Location &lo
 }
 
 
-void DocumentBuilder::addSectionList(const NamePath &namePath, const Location &location) {
+void DocumentBuilder::addSectionList(const NamePathLike &namePathLike, const Location &location) {
+    auto namePath = toNamePath(namePathLike);
     if (namePath.empty()) {
         throw Error{
             ErrorCategory::Syntax,
@@ -109,11 +111,8 @@ void DocumentBuilder::addSectionList(const NamePath &namePath, const Location &l
 }
 
 
-void DocumentBuilder::addValue(
-    const NamePath &namePath,
-    const ValuePtr &value,
-    const Location &location) {
-
+void DocumentBuilder::addValue(const NamePathLike &namePathLike, const ValuePtr &value, const Location &location) {
+    auto namePath = toNamePath(namePathLike);
     if (value == nullptr) {
         throw std::invalid_argument{"value must not be null."};
     }

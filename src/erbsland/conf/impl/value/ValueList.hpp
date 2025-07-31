@@ -21,24 +21,18 @@ public:
     [[nodiscard]] auto type() const noexcept -> ValueType override {
         return ValueType::ValueList;
     }
-    [[nodiscard]] auto toList() const noexcept -> conf::ValueList override {
+    [[nodiscard]] auto asValueList() const noexcept -> conf::ValueList override {
+        return {_children.begin(), _children.end()};
+    }
+    [[nodiscard]] auto asValueListOrThrow() const -> conf::ValueList override {
         return {_children.begin(), _children.end()};
     }
 
 public:
     /// Initialize the child values.
     ///
-    /// - Set the parent to this value list.
-    /// - Set the name with the index of the value in this list.
-    ///
     void initializeChildren() {
-        const auto thisPtr = shared_from_this();
-        std::size_t index = 0;
-        for (const auto &value : _children.valueList()) {
-            value->setParent(thisPtr);
-            value->setName(Name::createIndex(index));
-            index += 1;
-        }
+        _children.setParent(shared_from_this());
     }
 };
 

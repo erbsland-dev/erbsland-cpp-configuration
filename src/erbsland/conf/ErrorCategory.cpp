@@ -25,7 +25,7 @@ ErrorCategory::ValueMap ErrorCategory::_valueMap = {
     std::make_tuple(Internal,          99, String{u8"Internal"}),
     // Additional categories for the API of this parser.
     std::make_tuple(ValueNotFound,    101, String{u8"ValueNotFound"}),
-    std::make_tuple(WrongType,        102, String{u8"WrongType"}),
+    std::make_tuple(TypeMismatch,     102, String{u8"TypeMismatch"}),
 };
 
 

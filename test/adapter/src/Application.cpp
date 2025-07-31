@@ -8,6 +8,7 @@
 #include <complex>
 #include <string_view>
 #include <ranges>
+#include <algorithm>
 #include <iostream>
 #include <stdexcept>
 

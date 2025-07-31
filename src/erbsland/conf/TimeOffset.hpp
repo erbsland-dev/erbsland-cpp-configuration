@@ -17,7 +17,6 @@ namespace erbsland::conf {
 /// @tested `TimeOffsetTest`
 ///
 class TimeOffset final {
-private:
     /// Magic number to mark local time.
     ///
     static constexpr auto LOCAL_TIME_OFFSET = std::chrono::seconds{0x7fffffff};
@@ -47,6 +46,7 @@ public:
             throw std::out_of_range("Offset is out of range");
         }
     }
+    /// @copydoc TimeOffset(std::chrono::seconds)
     constexpr explicit TimeOffset(int32_t seconds) : _seconds{seconds} {
         if (seconds < -86399 || seconds > 86399) {
             throw std::out_of_range("Offset is out of range");
@@ -69,13 +69,15 @@ public:
         }
     }
 
-    // defaults
+    /// Default destructor.
     ~TimeOffset() = default;
+    /// Default copy constructor.
     TimeOffset(const TimeOffset&) = default;
+    /// Default copy assignment.
     auto operator=(const TimeOffset&) -> TimeOffset& = default;
 
 public: // accessors
-    /// Test if this is local time.
+    /// Test if this is a local time.
     ///
     [[nodiscard]] auto isLocalTime() const noexcept -> bool;
 
@@ -83,7 +85,7 @@ public: // accessors
     ///
     [[nodiscard]] auto isUTC() const noexcept -> bool;
 
-    /// Get the offset as positive or negative total number of seconds.
+    /// Get the offset as a positive or negative total number of seconds.
     ///
     /// @return The offset in seconds, and zero for UTC and local time.
     ///
@@ -149,4 +151,3 @@ struct std::formatter<erbsland::conf::TimeOffset> : std::formatter<std::string> 
         return std::formatter<std::string>::format(timeOffset.toText().toCharString(), ctx);
     }
 };
-

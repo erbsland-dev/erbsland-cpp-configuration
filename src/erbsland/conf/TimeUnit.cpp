@@ -91,17 +91,17 @@ auto TimeUnit::mapEntry(Enum value) noexcept -> const ValueEntry & {
 }
 
 
-auto TimeUnit::textLong() const noexcept -> const String& {
+auto TimeUnit::toTextLong() const noexcept -> const String& {
     return mapEntry(_value).textLong;
 }
 
 
-auto TimeUnit::textShort() const noexcept -> const String& {
+auto TimeUnit::toTextShort() const noexcept -> const String& {
     return mapEntry(_value).textShort;
 }
 
 
-auto TimeUnit::textForTest() const noexcept -> const String & {
+auto TimeUnit::toTextLowercaseSingular() const noexcept -> const String & {
     return mapEntry(_value).textForTest;
 }
 

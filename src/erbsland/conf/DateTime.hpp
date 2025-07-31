@@ -10,12 +10,13 @@
 namespace erbsland::conf {
 
 
-/// A date-time value.
+/// A date-time value, with a date, time and time-offset part.
 ///
-/// @note As this date-time class is a simple wrapper, for time-comparison, local-time is assumed to be UTC.
-/// Query the current offset for a local-time, can be an expensive operation. To keep this wrapper simple,
-/// comparison is kept minimalistic. Date-times with different offsets are properly compared, with the
-/// offset applied to the compared point-in-time.
+/// @important As this date-time class is meant to be converted into a full features date-time instance,
+/// for time-comparison, local-time is assumed to be UTC.
+/// As querying the current offset for a local-time is omitted, as this would add unnecessary complexity
+/// to this data class.
+/// Date-times with different offsets are properly compared, with the offset applied to the compared point-in-time.
 ///
 /// @tested `DateTimeTest`
 ///
@@ -27,35 +28,51 @@ public:
 
     /// Create a new date-time value.
     ///
-    /// @tparam FwdDate  A date type that can be forwarded to the internal \c Date
-    ///                  constructor.
-    /// @tparam FwdTime  A time type that can be forwarded to the internal \c Time
-    ///                  constructor.
-    /// @param date      The date component.
-    /// @param time      The time component.
+    /// @tparam FwdDate A date type that can be forwarded to the internal `Date` constructor.
+    /// @tparam FwdTime  A time type that can be forwarded to the internal `Time` constructor.
+    /// @param date The date component.
+    /// @param time The time component.
+    ///
     template <typename FwdDate, typename FwdTime>
     DateTime(FwdDate &&date, FwdTime &&time)
         : _date{std::forward<FwdDate>(date)}, _time{std::forward<FwdTime>(time)} {
     }
 
-    // defaults
+    /// Default destructor.
     ~DateTime() = default;
+    /// Default copy constructor.
     DateTime(const DateTime&) = default;
+    /// Default copy assignment.
     auto operator=(const DateTime &other) -> DateTime& = default;
 
 public: // operators
     ERBSLAND_CONF_COMPARE_MEMBER(const DateTime &other, valueForComparison(), other.valueForComparison());
 
 public: // accessors
+    /// Test if this date/time is undefined.
+    ///
+    /// @return `true` if this date-time is undefined.
+    ///
     [[nodiscard]] auto isUndefined() const noexcept -> bool { return _date.isUndefined(); }
+
+    /// Access the date part.
+    ///
+    /// @return The date part.
+    ///
     [[nodiscard]] auto date() const noexcept -> const Date& { return _date; }
+
+    /// Access the time part.
+    ///
+    /// @return The time part.
+    ///
     [[nodiscard]] auto time() const noexcept -> const Time& { return _time; }
 
 public: // conversion
     /// Convert this date-time into text.
     ///
     /// Uses the ISO format yyyy-mm-dd hh:mm:ss.zzz, with these rules:
-    /// - If there are second fraction, only the minimum required digits for the fractions are displayed.
+    ///
+    /// - If there is a second fraction, only the minimum required digits for the fractions are displayed.
     /// - For UTC times, the suffix `z` is added.
     /// - For times with offset, the offset with hours and minutes `+02:00` is added.
     /// - Local times have no suffix.

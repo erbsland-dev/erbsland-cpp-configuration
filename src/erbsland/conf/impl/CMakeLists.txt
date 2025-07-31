@@ -19,11 +19,11 @@ target_sources(erbsland-configuration-parser PRIVATE
         Char.cpp
         Char.hpp
         CharClass.hpp
+        CharStream.cpp
+        CharStream.hpp
         ComparisonHelper.hpp
         ContainerWrappingHelper.hpp
         Content.hpp
-        CharStream.cpp
-        CharStream.hpp
         Defaults.hpp
         Definitions.hpp
         Generator.hpp
@@ -41,9 +41,11 @@ target_sources(erbsland-configuration-parser PRIVATE
         PrivateTag.hpp
         SaturationMath.hpp
         Signer.hpp
+        TestTextHelper.hpp
         TimeHelper.cpp
         TimeHelper.hpp
         TokenGenerator.hpp
         TokenType.hpp
+        ValueTreeHelper.hpp
         YieldMacros.hpp
 )

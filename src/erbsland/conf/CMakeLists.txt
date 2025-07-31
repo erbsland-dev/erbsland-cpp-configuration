@@ -39,6 +39,7 @@ target_sources(erbsland-configuration-parser PRIVATE
         Parser.hpp
         Position.cpp
         Position.hpp
+        RegEx.hpp
         SignatureSigner.hpp
         SignatureSignerData.hpp
         SignatureValidator.hpp
@@ -52,6 +53,7 @@ target_sources(erbsland-configuration-parser PRIVATE
         SourceResolverContext.hpp
         String.cpp
         String.hpp
+        TestFormat.hpp
         Time.cpp
         Time.hpp
         TimeDelta.cpp

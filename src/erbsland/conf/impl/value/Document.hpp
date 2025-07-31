@@ -36,93 +36,93 @@ public: // implement Value
     [[nodiscard]] auto type() const noexcept -> ValueType override {
         return ValueType::Document;
     }
-    [[nodiscard]] auto hasLocation() const noexcept -> bool override {
-        return !_location.isUndefined();
-    }
-    [[nodiscard]] auto location() const noexcept -> Location override {
-        return _location;
-    }
-    void setLocation(const Location &newLocation) noexcept override {
-        _location = newLocation;
-    }
-    [[nodiscard]] auto size() const noexcept -> std::size_t override {
-        return _children.size();
-    }
-    [[nodiscard]] auto hasValue(std::size_t index) const noexcept -> bool override {
-        return _children.hasValue(index);
-    }
-    [[nodiscard]] auto hasValue(const Name &name) const noexcept -> bool override {
-        return _children.hasValue(name);
-    }
-    [[nodiscard]] auto hasValue(const NamePath &namePath) const noexcept -> bool override {
-        return _children.hasValue(namePath);
-    }
-    [[nodiscard]] auto value(const NamePath &namePath) const noexcept -> conf::ValuePtr override {
-        return _children.value(namePath);
-    }
-    [[nodiscard]] auto value(std::size_t index) const noexcept -> conf::ValuePtr override {
-        return _children.value(index);
-    }
-    [[nodiscard]] auto value(const Name &name) const noexcept -> conf::ValuePtr override {
-        return _children.value(name);
-    }
-    [[nodiscard]] auto begin() const noexcept -> ValueIterator override {
-        return _children.begin();
-    }
-    [[nodiscard]] auto end() const noexcept -> ValueIterator override {
-        return _children.end();
-    }
-    [[nodiscard]] auto toInteger() const noexcept -> Integer override {
+    [[nodiscard]] auto hasLocation() const noexcept -> bool override;
+    [[nodiscard]] auto location() const noexcept -> Location override;
+    void setLocation(const Location &newLocation) noexcept override;
+    [[nodiscard]] auto size() const noexcept -> std::size_t override;
+    [[nodiscard]] auto hasValue(const NamePathLike &namePath) const noexcept -> bool override;
+    [[nodiscard]] auto value(const NamePathLike &namePath) const noexcept -> conf::ValuePtr override;
+    [[nodiscard]] auto valueOrThrow(const NamePathLike &namePath) const -> conf::ValuePtr override;
+    [[nodiscard]] auto begin() const noexcept -> ValueIterator override;
+    [[nodiscard]] auto end() const noexcept -> ValueIterator override;
+    [[nodiscard]] auto asInteger() const noexcept -> Integer override {
         return {};
     }
-    [[nodiscard]] auto toBoolean() const noexcept -> bool override {
+    [[nodiscard]] auto asBoolean() const noexcept -> bool override {
         return false;
     }
-    [[nodiscard]] auto toFloat() const noexcept -> Float override {
+    [[nodiscard]] auto asFloat() const noexcept -> Float override {
         return {};
     }
-    [[nodiscard]] auto toText() const noexcept -> String override {
+    [[nodiscard]] auto asText() const noexcept -> String override {
         return {};
     }
-    [[nodiscard]] auto toDate() const noexcept -> Date override {
+    [[nodiscard]] auto asDate() const noexcept -> Date override {
         return {};
     }
-    [[nodiscard]] auto toTime() const noexcept -> Time override {
+    [[nodiscard]] auto asTime() const noexcept -> Time override {
         return {};
     }
-    [[nodiscard]] auto toDateTime() const noexcept -> DateTime override {
+    [[nodiscard]] auto asDateTime() const noexcept -> DateTime override {
         return {};
     }
-    [[nodiscard]] auto toBytes() const noexcept -> Bytes override {
+    [[nodiscard]] auto asBytes() const noexcept -> Bytes override {
         return {};
     }
-    [[nodiscard]] auto toTimeDelta() const noexcept -> TimeDelta override {
+    [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override {
         return {};
     }
-    [[nodiscard]] auto toRegEx() const noexcept -> String override {
+    [[nodiscard]] auto asRegEx() const noexcept -> RegEx override {
         return {};
     }
-    [[nodiscard]] auto toList() const noexcept -> conf::ValueList override {
+    [[nodiscard]] auto asValueList() const noexcept -> conf::ValueList override {
         return {};
     }
+
+    [[nodiscard]] auto asIntegerOrThrow() const -> Integer override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::Integer);
+    }
+    [[nodiscard]] auto asBooleanOrThrow() const -> bool override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::Boolean);
+    }
+    [[nodiscard]] auto asFloatOrThrow() const -> Float override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::Float);
+    }
+    [[nodiscard]] auto asTextOrThrow() const -> String override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::Text);
+    }
+    [[nodiscard]] auto asDateOrThrow() const -> Date override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::Date);
+    }
+    [[nodiscard]] auto asTimeOrThrow() const -> Time override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::Time);
+    }
+    [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::DateTime);
+    }
+    [[nodiscard]] auto asBytesOrThrow() const -> Bytes override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::Bytes);
+    }
+    [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::TimeDelta);
+    }
+    [[nodiscard]] auto asRegExOrThrow() const -> RegEx override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::RegEx);
+    }
+    [[nodiscard]] auto asValueListOrThrow() const -> ValueList override {
+        impl::Value::throwAsTypeMismatch(*this, ValueType::ValueList);
+    }
+
     [[nodiscard]] auto toTextRepresentation() const noexcept -> String override {
         return {};
-    }
-    [[nodiscard]] auto toTestText() const noexcept -> String override {
-        return u8format(u8"{}()", type());
     }
 
 public: // implement `Document`
     [[nodiscard]] auto toFlatValueMap() const noexcept -> FlatValueMap override;
 
 public: // implement `Container`
-    void setParent(const conf::ValuePtr &parent) override {
-        throw std::logic_error("The document must not have a parent.");
-    }
-
-    void addValue(const ValuePtr &childValue) override {
-        _children.addValue(childValue);
-    }
+    void setParent(const conf::ValuePtr &parent) override;
+    void addValue(const ValuePtr &childValue) override;
 
 private:
     Location _location; ///< The location of the document.

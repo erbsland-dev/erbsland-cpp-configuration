@@ -11,7 +11,9 @@
 namespace erbsland::conf::impl {
 
 
-/// A generic class for all section-like containers.
+/// A generic base class for all section-like containers.
+///
+/// This base class exists primarily to allow transforming one section type into another.
 ///
 /// @tested `ValueTest`
 ///
@@ -20,21 +22,23 @@ public:
     explicit Section(const ValueType valueType) : _valueType{valueType} {}
 
 public:
-    [[nodiscard]] auto type() const noexcept -> ValueType override { return _valueType; };
+    [[nodiscard]] auto type() const noexcept -> ValueType override { return _valueType; }
 
     void transform(const ValueType targetType) override {
         if (_valueType == ValueType::IntermediateSection) {
             if (targetType != ValueType::SectionWithNames && targetType != ValueType::SectionWithTexts) {
                 throw std::logic_error{"Cannot convert intermediate section into the chosen type."};
             }
-            _valueType = targetType;
         } else if (_valueType == ValueType::SectionWithNames) {
             if (targetType != ValueType::SectionWithTexts) {
                 throw std::logic_error{"Cannot convert section with names into the chosen type."};
             }
-            _valueType = targetType;
         } else {
             throw std::logic_error{"Cannot convert section into the chosen type."};
+        }
+        _valueType = targetType;
+        if (targetType == ValueType::SectionWithTexts) {
+            _children.setTextIndexesAllowed(true);
         }
     }
 

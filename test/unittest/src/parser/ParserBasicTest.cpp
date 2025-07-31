@@ -128,5 +128,66 @@ public:
         parser = std::make_shared<Parser>();
         REQUIRE_THROWS_AS(Error, doc = parser->parseOrThrow(source));
     }
+
+    void testMixedTextAndRegular() {
+        source->lines = {
+            u8"# Erbsland Configuration Language Test File\n",
+            u8"[main]\n",
+            u8"value1 = 1\n",
+            u8"value2 = 2\n",
+            u8"value3 = 3\n",
+            u8"[main.sub_text.\"one\"]\n",
+            u8"value = 10\n",
+            u8"[main.sub_text.\"two\"]\n",
+            u8"value = 20\n",
+            u8"[main.sub_text.\"three\"]\n",
+            u8"value = 30\n",
+            u8"[sub.sub.sub.\"one\"]\n",
+            u8"value = 101\n",
+            u8"[sub.sub.sub.\"two\"]\n",
+            u8"value = 102\n",
+            u8"[sub.sub.sub.\"three\"]\n",
+            u8"value = 103\n",
+            u8"[text.\"one\"]\n",
+            u8"value = 201\n",
+            u8"[text.\"two\"]\n",
+            u8"value = 202\n",
+            u8"[text.\"three\"]\n",
+            u8"value = 203\n",
+        };
+        parser = std::make_shared<Parser>();
+        REQUIRE_NOTHROW(doc = parser->parseOrThrow(source));
+        REQUIRE_FALSE(doc->empty());
+        auto expectedValueMap = ExpectedValueMap{
+            {u8"main", u8"SectionWithNames()"},
+            {u8"main.value1", u8"Integer(1)"},
+            {u8"main.value2", u8"Integer(2)"},
+            {u8"main.value3", u8"Integer(3)"},
+            {u8"main.sub_text", u8"SectionWithTexts()"},
+            {u8"main.sub_text.\"one\"", u8"SectionWithNames()"},
+            {u8"main.sub_text.\"one\".value", u8"Integer(10)"},
+            {u8"main.sub_text.\"two\"", u8"SectionWithNames()"},
+            {u8"main.sub_text.\"two\".value", u8"Integer(20)"},
+            {u8"main.sub_text.\"three\"", u8"SectionWithNames()"},
+            {u8"main.sub_text.\"three\".value", u8"Integer(30)"},
+            {u8"sub", u8"IntermediateSection()"},
+            {u8"sub.sub", u8"IntermediateSection()"},
+            {u8"sub.sub.sub", u8"SectionWithTexts()"},
+            {u8"sub.sub.sub.\"one\"", u8"SectionWithNames()"},
+            {u8"sub.sub.sub.\"one\".value", u8"Integer(101)"},
+            {u8"sub.sub.sub.\"two\"", u8"SectionWithNames()"},
+            {u8"sub.sub.sub.\"two\".value", u8"Integer(102)"},
+            {u8"sub.sub.sub.\"three\"", u8"SectionWithNames()"},
+            {u8"sub.sub.sub.\"three\".value", u8"Integer(103)"},
+            {u8"text", u8"SectionWithTexts()"},
+            {u8"text.\"one\"", u8"SectionWithNames()"},
+            {u8"text.\"one\".value", u8"Integer(201)"},
+            {u8"text.\"two\"", u8"SectionWithNames()"},
+            {u8"text.\"two\".value", u8"Integer(202)"},
+            {u8"text.\"three\"", u8"SectionWithNames()"},
+            {u8"text.\"three\".value", u8"Integer(203)"},
+        };
+        WITH_CONTEXT(verifyValueMap(expectedValueMap));
+    }
 };
 

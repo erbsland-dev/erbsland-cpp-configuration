@@ -40,6 +40,7 @@ using SourceListPtr = std::shared_ptr<SourceList>;
 ///
 class Source {
 public:
+    /// Default destructor.
     virtual ~Source() = default;
 
 public: // accessors
@@ -142,4 +143,3 @@ public: // testing
 
 
 }
-

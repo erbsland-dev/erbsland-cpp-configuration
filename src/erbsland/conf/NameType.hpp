@@ -19,9 +19,9 @@ enum class NameType : uint8_t {
     Regular,
     /// A text name: "text"
     Text,
-    /// An index name: [<index>]
+    /// An index name: [&lt;index&gt;]
     Index,
-    /// A text index name: ""[<index>]
+    /// A text index name: ""[&lt;index&gt;]
     TextIndex,
 };
 

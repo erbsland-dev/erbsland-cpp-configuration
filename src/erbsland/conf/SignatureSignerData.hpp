@@ -9,6 +9,8 @@
 namespace erbsland::conf {
 
 
+/// The data for the signer implementation.
+///
 struct SignatureSignerData final {
 
     /// The source identifier of the document.

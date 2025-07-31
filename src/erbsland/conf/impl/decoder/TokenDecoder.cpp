@@ -3,6 +3,7 @@
 #include "TokenDecoder.hpp"
 
 
+#include <algorithm>
 #include <ranges>
 
 

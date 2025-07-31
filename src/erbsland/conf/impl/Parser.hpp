@@ -168,7 +168,7 @@ private:
 
     void processMetaValue(const Assignment &assignment) {
         if (assignment.namePath().back() == Name::metaSignature()) {
-            currentContext().setSignatureText(assignment.value()->toText());
+            currentContext().setSignatureText(assignment.value()->asText());
         } else if (assignment.namePath().back() == Name::metaInclude()) {
             const auto includeLevel = currentContext().includeLevel() + 1U;
             if (includeLevel >= limits::maxDocumentNesting) {
@@ -178,7 +178,7 @@ private:
                     assignment.location()};
             }
             SourceResolverContext const resolveContext{
-                .includeText = assignment.value()->toText(),
+                .includeText = assignment.value()->asText(),
                 .sourceIdentifier = sourceIdentifier()
             };
             if (_settings.sourceResolver == nullptr) {
