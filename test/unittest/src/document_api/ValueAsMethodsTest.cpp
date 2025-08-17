@@ -329,7 +329,6 @@ public:
     }
 
     void testFloatRanges() {
-
         setupTemplate2("-1.0e+300");
         REQUIRE(compareFloat(value->asType<Float>(), -1.0e+300));
         REQUIRE(compareFloat(value->asType<double>(), -1.0e+300));
@@ -340,5 +339,18 @@ public:
         REQUIRE_EQUAL(value->asType<double>(), 1.0e+300);
         REQUIRE_EQUAL(value->asType<float>(), std::numeric_limits<float>::max());
         REQUIRE_THROWS_AS(Error, value->asTypeOrThrow<float>());
+    }
+
+    void testAsList() {
+        setupTemplate2("1, 2, 3");
+        REQUIRE_EQUAL(value->asList<int>(), std::vector<int>({1, 2, 3}));
+        REQUIRE_EQUAL(value->asList<uint64_t>(), std::vector<uint64_t>({1U, 2U, 3U}));
+        REQUIRE_EQUAL(value->asListOrThrow<int>(), std::vector<int>({1, 2, 3}));
+        REQUIRE_EQUAL(value->asListOrThrow<uint64_t>(), std::vector<uint64_t>({1U, 2U, 3U}));
+        REQUIRE(value->asList<std::string>().empty());
+        REQUIRE_THROWS_AS(Error, value->asListOrThrow<std::string>());
+        setupTemplate2("1, 2, true");
+        REQUIRE(value->asList<int>().empty());
+        REQUIRE_THROWS_AS(Error, value->asListOrThrow<int>());
     }
 };

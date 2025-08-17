@@ -299,6 +299,23 @@ public: // conversions
     }
     /// @}
 
+    /// @name Get as Uniform Value Lists
+    ///
+    /// - Tries to get this value as uniform lists that consist of values of the same type.
+    /// - If this is a single value that matches the type, a list with one element is returned.
+    ///
+    /// @{
+
+    /// @return A list with values of this type, or an empty list on any problem.
+    template<typename T>
+    [[nodiscard]] auto asList() const noexcept -> std::vector<T>;
+
+    /// @return A list with values of this type.
+    /// @throws Error In case of any type mismatch or syntax error in the name path.
+    template<typename T>
+    [[nodiscard]] auto asListOrThrow() const -> std::vector<T>;
+    /// @}
+
     /// Convert this value to its text representation.
     ///
     /// Converts the types: Text, Integer, Float, Boolean, Date, Time, Date-Time, Bytes, TimeDelta, RegEx.
@@ -552,26 +569,25 @@ public: // Convenience methods.
 
 
 template <typename T>
-auto Value::getListOrThrow(const NamePathLike &namePath) const -> std::vector<T> {
-    auto valueAtPath = valueOrThrow(namePath);
+auto Value::asListOrThrow() const -> std::vector<T> {
     constexpr auto expectedType = ValueType::from<T>();
     static_assert(
         expectedType.raw() != ValueType::Undefined,
         "no type support available for the specified template argument.");
-    if (valueAtPath->type() == expectedType) { // convert a single value into a list.
-        return std::vector<T>{{valueAtPath->asType<T>()}};
+    if (type() == expectedType) { // convert a single value into a list.
+        return std::vector<T>{{asType<T>()}};
     }
-    if (valueAtPath->type() != ValueType::ValueList) {
+    if (type() != ValueType::ValueList) {
         throw Error(
             ErrorCategory::TypeMismatch,
             impl::u8format(
                 u8"Expected a list of '{}' values, but got a single value of type '{}'.",
                 expectedType,
-                valueAtPath->type()),
-            valueAtPath->namePath(),
-            valueAtPath->location());
+                type()),
+            namePath(),
+            location());
     }
-    const auto valueList = valueAtPath->asValueList();
+    const auto valueList = asValueList();
     std::vector<T> result;
     result.reserve(valueList.size());
     for (const auto &value : valueList) {
@@ -592,9 +608,30 @@ auto Value::getListOrThrow(const NamePathLike &namePath) const -> std::vector<T>
 
 
 template <typename T>
+auto Value::getListOrThrow(const NamePathLike &namePath) const -> std::vector<T> {
+    auto valueAtPath = valueOrThrow(namePath);
+    constexpr auto expectedType = ValueType::from<T>();
+    static_assert(
+        expectedType.raw() != ValueType::Undefined,
+        "no type support available for the specified template argument.");
+    return valueAtPath->asListOrThrow<T>();
+}
+
+
+template <typename T>
 auto Value::getList(const NamePathLike &namePath) const noexcept -> std::vector<T> {
     try {
         return getListOrThrow<T>(namePath);
+    } catch (const Error&) {
+        return {};
+    }
+}
+
+
+template <typename T>
+auto Value::asList() const noexcept -> std::vector<T> {
+    try {
+        return asListOrThrow<T>();
     } catch (const Error&) {
         return {};
     }
