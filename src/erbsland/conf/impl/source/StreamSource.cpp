@@ -115,7 +115,7 @@ void StreamSource::refillBuffer() {
         close(); // If we throw an exception, close both the stream and source.
         throw Error(
             ErrorCategory::IO,
-            String(u8"Failed read from file. Error:") + String{e.what()}.toEscaped(EscapeMode::ErrorText),
+            String(u8"Failed read from file. Error:") + String{std::string{e.what()}}.toEscaped(EscapeMode::ErrorText),
             Location{identifier()});
     }
 }

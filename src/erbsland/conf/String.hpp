@@ -63,38 +63,15 @@ public: // construction
     /// @param str Pointer to UTF-8 characters.
     /// @param size Number of characters to read.
     ///
-    explicit constexpr String(const char8_t *str, std::size_t size) noexcept {
-        if (str != nullptr) {
-            _string.assign(str, size);
-        }
+    constexpr String(const char8_t *str, const std::size_t size) noexcept
+        : _string{str != nullptr ? std::u8string_view(str, size) : std::u8string_view{}} {
     }
 
     /// Construct from a UTF-8 string view.
     ///
     /// @param str The UTF-8 string view to copy.
     ///
-    explicit constexpr String(const std::u8string_view str) noexcept : _string{str} {}
-
-    /// Construct from a null-terminated narrow string.
-    ///
-    /// @param str The null-terminated narrow character string.
-    ///
-    String(const char *str) noexcept {
-        if (str != nullptr) {
-            _string = reinterpret_cast<const char8_t*>(str);
-        }
-    }
-
-    /// Construct from a narrow character pointer and size.
-    ///
-    /// @param str Pointer to narrow characters.
-    /// @param size Number of characters to read.
-    ///
-    String(const char *str, std::size_t size) noexcept {
-        if (str != nullptr) {
-            _string.assign(reinterpret_cast<const char8_t*>(str), size);
-        }
-    }
+    constexpr String(const std::u8string_view str) noexcept : _string{str} {}
 
     /// Copy construct from the underlying UTF-8 string.
     ///
@@ -125,13 +102,28 @@ public: // construction
     constexpr String(InputIt begin, InputIt end) noexcept : _string{begin, end} {}
 
     // All `char` constructors
-    /// Construct from a narrow literal string.
+    /// Construct from a null-terminated string.
     ///
     /// @tparam N The length of the literal including the null terminator.
-    /// @param literal The narrow literal string.
+    /// @param literal The literal to copy.
     ///
     template<std::size_t N>
     constexpr String(const char (&literal)[N]) noexcept : _string{reinterpret_cast<const char8_t*>(literal), N - 1} {}
+
+    /// Construct from a character pointer and size.
+    ///
+    /// @param str Pointer to narrow characters.
+    /// @param size Number of characters to read.
+    ///
+    String(const char *str, const std::size_t size) noexcept
+        : _string{str != nullptr ? std::u8string_view(reinterpret_cast<const char8_t*>(str), size) : std::u8string_view{}} {
+    }
+
+    /// Construct from a standard string view.
+    ///
+    /// @param str The standard string view to the string to copy.
+    ///
+    String(const std::string_view str) noexcept : _string{reinterpret_cast<const char8_t*>(str.data()), str.size()} {}
 
     /// Construct from a standard narrow string.
     ///

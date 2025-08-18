@@ -108,7 +108,7 @@ public:
         _values[name] = String{value};
     }
     void setValue(const String &name, const bool value) noexcept {
-        _values[name] = String{value ? "true" : "false"};
+        _values[name] = String{value ? std::u8string_view{u8"true"} : std::u8string_view{u8"false"}};
     }
     template<typename T> requires (std::is_integral_v<T>)
     void setValue(const String &name, const T &value) noexcept {
