@@ -335,5 +335,10 @@ public:
         const auto sec = doc->getSectionWithTexts(path);
         REQUIRE_EQUAL(sec->size(), 3U);
         REQUIRE_EQUAL(doc->getSectionWithTextsOrThrow(path)->size(), 3U);
+
+        const auto invalidPath = NamePath::fromText(u8"main.value1");
+        ValuePtr invalidSec;
+        REQUIRE_NOTHROW(invalidSec = doc->getSectionWithTexts(invalidPath));
+        REQUIRE_EQUAL(invalidSec, nullptr);
     }
 };

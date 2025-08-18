@@ -193,7 +193,7 @@ auto Value::getSectionListOrThrow(const NamePathLike &namePath) const -> ValuePt
 
 
 auto Value::getSectionWithTexts(const NamePathLike &namePath) const noexcept -> ValuePtr {
-    return impl::Value::getterOrThrow<ValueType::SectionWithTexts>(*this, namePath);
+    return impl::Value::sectionGetter<ValueType::SectionWithTexts>(*this, namePath);
 }
 
 
