@@ -1,0 +1,806 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_name_path" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::NamePath</compoundname>
+    <includes refid="_name_path_8hpp" local="no">erbsland/conf/NamePath.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1abe41884d1e4ce97bccc481255d0692ab" prot="public" static="no">
+        <type>NameList::const_iterator</type>
+        <definition>using erbsland::conf::NamePath::iterator =  NameList::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <qualifiedname>erbsland::conf::NamePath::iterator</qualifiedname>
+        <briefdescription>
+<para>Iterator over the names in the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="35" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1adc17375ad85a00657991e3bf6e9d1dce" prot="public" static="no">
+        <type>NameList::const_iterator</type>
+        <definition>using erbsland::conf::NamePath::const_iterator =  NameList::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <qualifiedname>erbsland::conf::NamePath::const_iterator</qualifiedname>
+        <briefdescription>
+<para>Constant iterator over the names in the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="37" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1af67dc18c8bb10c5cfecab1b157eb48fd" prot="public" static="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></type>
+        <definition>using erbsland::conf::NamePath::value_type =  Name</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>erbsland::conf::NamePath::value_type</qualifiedname>
+        <briefdescription>
+<para>The element type of the name path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="39" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1aa8c2d0a49b4d266275f7d63407514f47" prot="public" static="no">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>using erbsland::conf::NamePath::reference =  const Name&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>erbsland::conf::NamePath::reference</qualifiedname>
+        <briefdescription>
+<para>Reference to a name element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="41" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1ad62367fbc2c1a23a0a433d566bcc420d" prot="public" static="no">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>using erbsland::conf::NamePath::const_reference =  const Name&amp;</definition>
+        <argsstring></argsstring>
+        <name>const_reference</name>
+        <qualifiedname>erbsland::conf::NamePath::const_reference</qualifiedname>
+        <briefdescription>
+<para>Constant reference to a name element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="43" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a8b77359e0965f6376e33ed00b893dd37" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>using erbsland::conf::NamePath::size_type =  std::size_t</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <qualifiedname>erbsland::conf::NamePath::size_type</qualifiedname>
+        <briefdescription>
+<para>Unsigned integer type for sizes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="45" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a74c623b9ee5fa04e9d2afcb3c70d230a" prot="public" static="no">
+        <type>std::ptrdiff_t</type>
+        <definition>using erbsland::conf::NamePath::difference_type =  std::ptrdiff_t</definition>
+        <argsstring></argsstring>
+        <name>difference_type</name>
+        <qualifiedname>erbsland::conf::NamePath::difference_type</qualifiedname>
+        <briefdescription>
+<para>Signed integer type for differences. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="47" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a8eb4b0ddd943d26ad01f7b9a9c1e0537" prot="public" static="no">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> *</type>
+        <definition>using erbsland::conf::NamePath::pointer =  const Name*</definition>
+        <argsstring></argsstring>
+        <name>pointer</name>
+        <qualifiedname>erbsland::conf::NamePath::pointer</qualifiedname>
+        <briefdescription>
+<para>Pointer to a name element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="49" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a433114e1119c09173ffa6d8cfa71f1a3" prot="public" static="no">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> *</type>
+        <definition>using erbsland::conf::NamePath::const_pointer =  const Name*</definition>
+        <argsstring></argsstring>
+        <name>const_pointer</name>
+        <qualifiedname>erbsland::conf::NamePath::const_pointer</qualifiedname>
+        <briefdescription>
+<para>Constant pointer to a name element. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="51" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a51e4ed17abb8a4a191d55605aca1391f" prot="public" static="no">
+        <type>std::reverse_iterator&lt; <ref refid="classerbsland_1_1conf_1_1_name_path_1abe41884d1e4ce97bccc481255d0692ab" kindref="member">iterator</ref> &gt;</type>
+        <definition>using erbsland::conf::NamePath::reverse_iterator =  std::reverse_iterator&lt;iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>reverse_iterator</name>
+        <qualifiedname>erbsland::conf::NamePath::reverse_iterator</qualifiedname>
+        <briefdescription>
+<para>Reverse iterator over the names in the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="53" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a482859aa142a24f794e38989443f1ae3" prot="public" static="no">
+        <type>std::reverse_iterator&lt; <ref refid="classerbsland_1_1conf_1_1_name_path_1adc17375ad85a00657991e3bf6e9d1dce" kindref="member">const_iterator</ref> &gt;</type>
+        <definition>using erbsland::conf::NamePath::const_reverse_iterator =  std::reverse_iterator&lt;const_iterator&gt;</definition>
+        <argsstring></argsstring>
+        <name>const_reverse_iterator</name>
+        <qualifiedname>erbsland::conf::NamePath::const_reverse_iterator</qualifiedname>
+        <briefdescription>
+<para>Constant reverse iterator over the names in the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="55" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a009ebce9ee20242c5d677756aeda3214" prot="public" static="no">
+        <type>std::forward_iterator_tag</type>
+        <definition>using erbsland::conf::NamePath::const_iterator_category =  std::forward_iterator_tag</definition>
+        <argsstring></argsstring>
+        <name>const_iterator_category</name>
+        <qualifiedname>erbsland::conf::NamePath::const_iterator_category</qualifiedname>
+        <briefdescription>
+<para>Category type of constant iterators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="57" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_path_1a183ecddd43b337b2f02a7e0103c03c6e" prot="public" static="no">
+        <type>std::forward_iterator_tag</type>
+        <definition>using erbsland::conf::NamePath::iterator_category =  std::forward_iterator_tag</definition>
+        <argsstring></argsstring>
+        <name>iterator_category</name>
+        <qualifiedname>erbsland::conf::NamePath::iterator_category</qualifiedname>
+        <briefdescription>
+<para>Category type of iterators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="59" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_name_path_1a51eb6d4991ca832e75be0fb1c32090ce" prot="private" static="no" mutable="no">
+        <type>NameList</type>
+        <definition>NameList erbsland::conf::NamePath::_names</definition>
+        <argsstring></argsstring>
+        <name>_names</name>
+        <qualifiedname>erbsland::conf::NamePath::_names</qualifiedname>
+        <briefdescription>
+<para>The list of names that build the name path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="241" column="14" bodyfile="erbsland/conf/NamePath.hpp" bodystart="241" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a43dc13a24886c2485edfc158b05ae072" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::NamePath::NamePath</definition>
+        <argsstring>(const Name &amp;name)</argsstring>
+        <name>NamePath</name>
+        <qualifiedname>erbsland::conf::NamePath::NamePath</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a name path with one single name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="66" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a1b2e87e56d2e48ef00a79a2b30f96a15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::NamePath::NamePath</definition>
+        <argsstring>(Name &amp;&amp;name)</argsstring>
+        <name>NamePath</name>
+        <qualifiedname>erbsland::conf::NamePath::NamePath</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;&amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a name path with one single name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="72" column="5" bodyfile="erbsland/conf/NamePath.hpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a97e6d940ec0c2f730b06cd8f270fd69c" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::NamePath::NamePath</definition>
+        <argsstring>(NameList names)</argsstring>
+        <name>NamePath</name>
+        <qualifiedname>erbsland::conf::NamePath::NamePath</qualifiedname>
+        <param>
+          <type>NameList</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a name path from the given sequence of names.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="80" column="14" bodyfile="erbsland/conf/NamePath.hpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1af700d0ec0d9739ec36e399b7a99cc74a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::NamePath::NamePath</definition>
+        <argsstring>(const std::span&lt; const Name &gt; names)</argsstring>
+        <name>NamePath</name>
+        <qualifiedname>erbsland::conf::NamePath::NamePath</qualifiedname>
+        <param>
+          <type>const std::span&lt; const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &gt;</type>
+          <declname>names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a name path from the given sequence of names.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A span of names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="88" column="14" bodyfile="erbsland/conf/NamePath.hpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a7ed15c03bf7093beda2726471b2a2c34" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::NamePath::NamePath</definition>
+        <argsstring>(const NameList::const_iterator begin, const NameList::const_iterator end)</argsstring>
+        <name>NamePath</name>
+        <qualifiedname>erbsland::conf::NamePath::NamePath</qualifiedname>
+        <param>
+          <type>const NameList::const_iterator</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const NameList::const_iterator</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a name path from the given sequence of names.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start iterator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stop iterator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="97" column="14" bodyfile="erbsland/conf/NamePath.hpp" bodystart="97" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a7891d8f1951c10e18e52cd98c5690ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::NamePath::NamePath</definition>
+        <argsstring>()=default</argsstring>
+        <name>NamePath</name>
+        <qualifiedname>erbsland::conf::NamePath::NamePath</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="105" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1ac91116c05b7e1ffb7fbab374ab7ce275" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::NamePath::~NamePath</definition>
+        <argsstring>()=default</argsstring>
+        <name>~NamePath</name>
+        <qualifiedname>erbsland::conf::NamePath::~NamePath</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="107" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1ad304d1a3f4a27367e9e9c84269bb9312" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::strong_ordering</type>
+        <definition>std::strong_ordering erbsland::conf::NamePath::operator&lt;=&gt;</definition>
+        <argsstring>(const NamePath &amp;) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>erbsland::conf::NamePath::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="111" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a639182cf7760551af913e4c65185100c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::NamePath::operator==</definition>
+        <argsstring>(const NamePath &amp;) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::NamePath::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default comparison. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="113" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a04de045202004f6ff2f86869e49a944b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::NamePath::empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>empty</name>
+        <qualifiedname>erbsland::conf::NamePath::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this is an empty path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="118" column="11" bodyfile="erbsland/conf/NamePath.hpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a10b7db3c00c5dbfe6093548f01629cef" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::NamePath::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <qualifiedname>erbsland::conf::NamePath::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of elements in this path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="124" column="18" bodyfile="erbsland/conf/NamePath.hpp" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1afa4cb3662e5e045821ed97a95487358d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>const Name &amp; erbsland::conf::NamePath::at</definition>
+        <argsstring>(const std::size_t index) const</argsstring>
+        <name>at</name>
+        <qualifiedname>erbsland::conf::NamePath::at</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access one name in the name path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="130" column="17" bodyfile="erbsland/conf/NamePath.hpp" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a39c348e399f6d64ab3f41791b8828a8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>const Name &amp; erbsland::conf::NamePath::front</definition>
+        <argsstring>() const</argsstring>
+        <name>front</name>
+        <qualifiedname>erbsland::conf::NamePath::front</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the first element. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="136" column="17" bodyfile="erbsland/conf/NamePath.hpp" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a92ff87e1a35bf1f72f5487dd8262e321" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>const Name &amp; erbsland::conf::NamePath::back</definition>
+        <argsstring>() const</argsstring>
+        <name>back</name>
+        <qualifiedname>erbsland::conf::NamePath::back</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access the last element. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="142" column="17" bodyfile="erbsland/conf/NamePath.hpp" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a1b77756adb95f01fe85179113db257e0" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::NamePath::containsIndex</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>containsIndex</name>
+        <qualifiedname>erbsland::conf::NamePath::containsIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if this path contains an index (index or text-index).</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if this path contains any index or text-index element, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="151" column="11" bodyfile="erbsland/conf/NamePath.hpp" bodystart="151" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a8b8ec7916314910b5385658054de8d96" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>NameList::const_iterator</type>
+        <definition>NameList::const_iterator erbsland::conf::NamePath::begin</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>begin</name>
+        <qualifiedname>erbsland::conf::NamePath::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an iterator to the first name in the path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="160" column="31" bodyfile="erbsland/conf/NamePath.hpp" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1acb0f22f14a25804fd4dffa579b7017b1" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>NameList::const_iterator</type>
+        <definition>NameList::const_iterator erbsland::conf::NamePath::end</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>end</name>
+        <qualifiedname>erbsland::conf::NamePath::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get an iterator to the end of the path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="166" column="31" bodyfile="erbsland/conf/NamePath.hpp" bodystart="166" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1aaacfc6dd59bb9e402e189b73d70b9e04" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::span&lt; const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &gt;</type>
+        <definition>std::span&lt; const Name &gt; erbsland::conf::NamePath::view</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>view</name>
+        <qualifiedname>erbsland::conf::NamePath::view</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access a view of all elements. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="172" column="16" bodyfile="erbsland/conf/NamePath.hpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a1f3be1b40f7ea40194cf4d34bd7e1bd8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::NamePath::parent</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>parent</name>
+        <qualifiedname>erbsland::conf::NamePath::parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the parent path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="179" column="11" bodyfile="erbsland/conf/NamePath.hpp" bodystart="179" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a10b254c7d05695706d67b0fc5d74cca2" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Fwd</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void erbsland::conf::NamePath::append</definition>
+        <argsstring>(Fwd &amp;&amp;name) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::NamePath::append</qualifiedname>
+        <param>
+          <type>Fwd &amp;&amp;</type>
+          <declname>name</declname>
+        </param>
+    <requiresclause>std::is_convertible_v&lt;Fwd, Name&gt;    </requiresclause>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append a name to this path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name to append to this path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="191" column="10" bodyfile="erbsland/conf/NamePath.hpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a607d429e0700ae7693fcb62c381c3f22" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::NamePath::append</definition>
+        <argsstring>(const NamePath &amp;namePath) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::NamePath::append</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append another name path to this path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="199" column="10" bodyfile="erbsland/conf/NamePath.hpp" bodystart="199" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1ab54e9bbec57dbe9519355f119968a327" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::NamePath::prepend</definition>
+        <argsstring>(const NamePath &amp;namePath) noexcept</argsstring>
+        <name>prepend</name>
+        <qualifiedname>erbsland::conf::NamePath::prepend</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref> &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepend another name path in front of this path.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path to prepend. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="210" column="10" bodyfile="erbsland/conf/NamePath.hpp" bodystart="210" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1ac3c998e88fc2419bb7d8f666b6510fef" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::NamePath::toText</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::NamePath::toText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this name path into a string.</para>
+<para><simplesect kind="return"><para>The name path in text form, or an empty string for an empty path or if the path is not valid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="222" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_path_1a16735a8799cbfe996ecd46e52e64fdb2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref></type>
+        <definition>static NamePath erbsland::conf::NamePath::fromText</definition>
+        <argsstring>(const String &amp;text)</argsstring>
+        <name>fromText</name>
+        <qualifiedname>erbsland::conf::NamePath::fromText</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a name path from a text.</para>
+<para>Convert name paths for accessing value elements, therefore, it supports the name path extensions for the API. Create a name path from the given text: e.g. &quot;main.server[2].path&quot;, or just &quot;main&quot;, &quot;[1]&quot;, &quot;\&quot;text\&quot;&quot;, &quot;\&quot;\&quot;[1]&quot; as the path may start at any value element in the value-tree.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path in its text form. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Syntax, Encoding, Limit) In case of any problem with the name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/NamePath.hpp" line="233" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A name-path.</para>
+<para>This class represents a name path that points to elements in a configuration document. It allows building paths freely, using individual name elements.</para>
+<para>Note that, unlike in configuration documents where relative and absolute paths differ by a leading separator, both forms use the same text representation in this API. This lack of differentiation exists because the API treats both forms the same. Addressing a value is always done using relative paths, and the element on which you call the &quot;value&quot; method decides if you start to resolve the path from the root or from a branch in the document.</para>
+<para><simplesect kind="par"><title>Tested:</title><para><computeroutput>NamePathTest</computeroutput>, <computeroutput>NamePathLexerTest</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/NamePath.hpp" line="30" column="1" bodyfile="erbsland/conf/NamePath.hpp" bodystart="30" bodyend="242"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a51eb6d4991ca832e75be0fb1c32090ce" prot="private" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>_names</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a10b254c7d05695706d67b0fc5d74cca2" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a607d429e0700ae7693fcb62c381c3f22" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1afa4cb3662e5e045821ed97a95487358d" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>at</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a92ff87e1a35bf1f72f5487dd8262e321" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>back</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a8b8ec7916314910b5385658054de8d96" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>begin</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1adc17375ad85a00657991e3bf6e9d1dce" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>const_iterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a009ebce9ee20242c5d677756aeda3214" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>const_iterator_category</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a433114e1119c09173ffa6d8cfa71f1a3" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>const_pointer</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1ad62367fbc2c1a23a0a433d566bcc420d" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>const_reference</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a482859aa142a24f794e38989443f1ae3" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>const_reverse_iterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a1b77756adb95f01fe85179113db257e0" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>containsIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a74c623b9ee5fa04e9d2afcb3c70d230a" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>difference_type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a04de045202004f6ff2f86869e49a944b" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>empty</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1acb0f22f14a25804fd4dffa579b7017b1" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>end</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a16735a8799cbfe996ecd46e52e64fdb2" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>fromText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a39c348e399f6d64ab3f41791b8828a8d" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>front</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1abe41884d1e4ce97bccc481255d0692ab" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>iterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a183ecddd43b337b2f02a7e0103c03c6e" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>iterator_category</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a43dc13a24886c2485edfc158b05ae072" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>NamePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a1b2e87e56d2e48ef00a79a2b30f96a15" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>NamePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a97e6d940ec0c2f730b06cd8f270fd69c" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>NamePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1af700d0ec0d9739ec36e399b7a99cc74a" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>NamePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a7ed15c03bf7093beda2726471b2a2c34" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>NamePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a7891d8f1951c10e18e52cd98c5690ee5" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>NamePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1ad304d1a3f4a27367e9e9c84269bb9312" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a639182cf7760551af913e4c65185100c" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a1f3be1b40f7ea40194cf4d34bd7e1bd8" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>parent</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a8eb4b0ddd943d26ad01f7b9a9c1e0537" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>pointer</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1ab54e9bbec57dbe9519355f119968a327" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>prepend</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1aa8c2d0a49b4d266275f7d63407514f47" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>reference</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a51e4ed17abb8a4a191d55605aca1391f" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>reverse_iterator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a10b7db3c00c5dbfe6093548f01629cef" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>size</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1a8b77359e0965f6376e33ed00b893dd37" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>size_type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1ac3c998e88fc2419bb7d8f666b6510fef" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1af67dc18c8bb10c5cfecab1b157eb48fd" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>value_type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1aaacfc6dd59bb9e402e189b73d70b9e04" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>view</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_path_1ac91116c05b7e1ffb7fbab374ab7ce275" prot="public" virt="non-virtual"><scope>erbsland::conf::NamePath</scope><name>~NamePath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
