@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceerbsland_1_1conf_1_1impl" kind="namespace" language="C++">
+    <compoundname>erbsland::conf::impl</compoundname>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_value_iterator_8hpp_1a41bf58e8338307540f5bccb4e42aa761" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1_value" kindref="compound">Value</ref> &gt;</type>
+        <definition>using erbsland::conf::impl::ValuePtr = typedef std::shared_ptr&lt;Value&gt;</definition>
+        <argsstring></argsstring>
+        <name>ValuePtr</name>
+        <qualifiedname>erbsland::conf::impl::ValuePtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/ValueIterator.hpp" line="20" column="5" bodyfile="erbsland/conf/ValueIterator.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/ValueIterator.hpp" line="18" column="1"/>
+  </compounddef>
+</doxygen>

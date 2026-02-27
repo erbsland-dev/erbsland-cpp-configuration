@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use Validation-Rules as Embedded ELCL Document &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Use Validation-Rules Built from Code" href="tutorial-validation-rules-code.html" />
+    <link rel="prev" title="Install Validation-Rules Static Libraries" href="install-validation-rules-libraries.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="integration-submodule.html">Integrate the Parser as Submodule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration-submodule-validation-rules.html">Integrate Validation Rules as a Submodule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install-parser-as-library.html">Install the Parser as Static Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install-validation-rules-libraries.html">Install Validation-Rules Static Libraries</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Use Validation-Rules as Embedded ELCL Document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when-to-use-this-approach">When to Use This Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-add-the-required-headers">Step 1: Add the Required Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-embed-the-rules-document">Step 2: Embed the Rules Document</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-build-and-apply-the-rules">Step 3: Build and Apply the Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complete-example">Complete Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#try-a-failing-input">Try a Failing Input</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial-validation-rules-code.html">Use Validation-Rules Built from Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run-unit-tests.html">How to Run the Unit Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Usage</a></li>
+      <li class="breadcrumb-item active">Use Validation-Rules as Embedded ELCL Document</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/usage/tutorial-validation-rules-embedded-elcl.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="use-validation-rules-as-embedded-elcl-document">
+<span id="index-0"></span><h1>Use Validation-Rules as Embedded ELCL Document<a class="headerlink" href="#use-validation-rules-as-embedded-elcl-document" title="Link to this heading"></a></h1>
+<p>This tutorial shows how you can define validation rules as an embedded
+ELCL document and apply them to a parsed configuration.</p>
+<p>This approach keeps the rules readable and close to the configuration
+syntax itself, while still allowing you to embed everything directly
+into your C++ application.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before using validation rules, link exactly one validation-rules
+library variant as described in
+<a class="reference internal" href="integration-submodule-validation-rules.html"><span class="doc">Integrate Validation Rules as a Submodule</span></a>.</p>
+</div>
+<section id="when-to-use-this-approach">
+<h2>When to Use This Approach<a class="headerlink" href="#when-to-use-this-approach" title="Link to this heading"></a></h2>
+<p>Embedded ELCL validation documents are ideal for quick starts and
+moderate rule sets.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1.0%" />
+<col style="width: 99.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="fas fa-plus sd-text-success"></span></p></td>
+<td><p>Small embedded rule sets are easy to read and maintain.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="fas fa-plus sd-text-success"></span></p></td>
+<td><p>Rules stay close to the configuration format they validate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="fas fa-minus sd-text-warning"></span></p></td>
+<td><p>Less suitable for very large or highly dynamic rule sets.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="fas fa-minus sd-text-warning"></span></p></td>
+<td><p>Errors in the rules document are detected at runtime, not at compile time.</p></td>
+</tr>
+</tbody>
+</table>
+<p>If your rules are mostly static and maintained by humans, this approach
+is often clearer than constructing rules in C++ code.</p>
+</section>
+<section id="step-1-add-the-required-headers">
+<h2>Step 1: Add the Required Headers<a class="headerlink" href="#step-1-add-the-required-headers" title="Link to this heading"></a></h2>
+<p>Include both the configuration and validation-rules headers:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/all_conf.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/all_conf_vr.hpp&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;format&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="step-2-embed-the-rules-document">
+<h2>Step 2: Embed the Rules Document<a class="headerlink" href="#step-2-embed-the-rules-document" title="Link to this heading"></a></h2>
+<p>The rules document is standard ELCL text.
+Embed it as a C++ raw string literal and parse it using
+<a class="reference internal" href="../reference/parser.html#_CPPv4N8erbsland4conf6Parser16parseTextOrThrowERK6String" title="erbsland::conf::Parser::parseTextOrThrow"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">Parser::parseTextOrThrow()</span></code></a>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">rulesDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseTextOrThrow</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span>
+<span class="s">[server]</span>
+<span class="s">type: &quot;section&quot;</span>
+
+<span class="s">[server.host]</span>
+<span class="s">type: &quot;text&quot;</span>
+<span class="s">default: &quot;127.0.0.1&quot;</span>
+
+<span class="s">[server.port]</span>
+<span class="s">type: &quot;integer&quot;</span>
+<span class="s">minimum: 1024</span>
+<span class="s">maximum: 65535</span>
+
+<span class="s">[server.mode]</span>
+<span class="s">type: &quot;text&quot;</span>
+<span class="s">in: &quot;dev&quot;, &quot;prod&quot;</span>
+<span class="s">default: &quot;dev&quot;</span>
+<span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do not indent the ELCL content inside the raw string literal.
+Leading whitespace becomes part of the text and may change parsing
+behavior.</p>
+</div>
+</section>
+<section id="step-3-build-and-apply-the-rules">
+<h2>Step 3: Build and Apply the Rules<a class="headerlink" href="#step-3-build-and-apply-the-rules" title="Link to this heading"></a></h2>
+<p>Convert the parsed rules document into a
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">vr::Rules</span></code> instance and validate your configuration document:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">vr</span><span class="o">::</span><span class="n">Rules</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">rules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Rules</span><span class="o">::</span><span class="n">createFromDocument</span><span class="p">(</span><span class="n">rulesDocument</span><span class="p">);</span>
+
+<span class="c1">// Validate configuration for schema version 1</span>
+<span class="n">rules</span><span class="o">-&gt;</span><span class="n">validate</span><span class="p">(</span><span class="n">configDocument</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>During validation, the library:</p>
+<ul class="simple">
+<li><p>Verifies structure (sections and keys)</p></li>
+<li><p>Checks value types</p></li>
+<li><p>Applies constraints (e.g., <code class="docutils literal notranslate"><span class="pre">minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">in</span></code>)</p></li>
+<li><p>Inserts default values where defined</p></li>
+</ul>
+<p>If validation fails, an <a class="reference internal" href="../reference/error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">Error</span></code></a> with category
+<a class="reference internal" href="../reference/error.html#_CPPv4N8erbsland4conf13ErrorCategory4Enum10ValidationE" title="erbsland::conf::ErrorCategory::Enum::Validation"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">Validation</span></code></a> is thrown.</p>
+</section>
+<section id="complete-example">
+<h2>Complete Example<a class="headerlink" href="#complete-example" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/all_conf.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/all_conf_vr.hpp&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;format&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">el</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">erbsland</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">;</span>
+
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">configDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseTextOrThrow</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span>
+<span class="s">[server]</span>
+<span class="s">port: 8443</span>
+<span class="s">        </span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">rulesDocument</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseTextOrThrow</span><span class="p">(</span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span>
+<span class="s">[server]</span>
+<span class="s">type: &quot;section&quot;</span>
+
+<span class="s">[server.host]</span>
+<span class="s">type: &quot;text&quot;</span>
+<span class="s">default: &quot;127.0.0.1&quot;</span>
+
+<span class="s">[server.port]</span>
+<span class="s">type: &quot;integer&quot;</span>
+<span class="s">minimum: 1024</span>
+<span class="s">maximum: 65535</span>
+
+<span class="s">[server.mode]</span>
+<span class="s">type: &quot;text&quot;</span>
+<span class="s">in: &quot;dev&quot;, &quot;prod&quot;</span>
+<span class="s">default: &quot;dev&quot;</span>
+<span class="s">        </span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">rules</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">vr</span><span class="o">::</span><span class="n">Rules</span><span class="o">::</span><span class="n">createFromDocument</span><span class="p">(</span><span class="n">rulesDocument</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">rules</span><span class="o">-&gt;</span><span class="n">validate</span><span class="p">(</span><span class="n">configDocument</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="n">configDocument</span><span class="o">-&gt;</span><span class="n">getOrThrow</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;server.host&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="n">configDocument</span><span class="o">-&gt;</span><span class="n">getOrThrow</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;server.port&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="n">configDocument</span><span class="o">-&gt;</span><span class="n">getOrThrow</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;server.mode&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;host={} port={} mode={}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">host</span><span class="p">,</span><span class="w"> </span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">toText</span><span class="p">().</span><span class="n">toCharString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="try-a-failing-input">
+<h2>Try a Failing Input<a class="headerlink" href="#try-a-failing-input" title="Link to this heading"></a></h2>
+<p>Change the port in the configuration to <code class="docutils literal notranslate"><span class="pre">80</span></code> and run validation again.</p>
+<p>Because the rule defines <code class="docutils literal notranslate"><span class="pre">minimum:</span> <span class="pre">1024</span></code>, validation will fail and
+throw an error describing the violated constraint.</p>
+<p>This is a good way to verify that your rules behave exactly as intended.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install-validation-rules-libraries.html" class="btn btn-neutral float-left" title="Install Validation-Rules Static Libraries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial-validation-rules-code.html" class="btn btn-neutral float-right" title="Use Validation-Rules Built from Code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

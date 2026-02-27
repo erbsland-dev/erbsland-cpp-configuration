@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_rule_8hpp" kind="file" language="C++">
+    <compoundname>Rule.hpp</compoundname>
+    <includes refid="_constraint_8hpp" local="yes">Constraint.hpp</includes>
+    <includes refid="_rule_type_8hpp" local="yes">RuleType.hpp</includes>
+    <includes refid="_name_path_8hpp" local="yes">../NamePath.hpp</includes>
+    <includes refid="_string_8hpp" local="yes">../String.hpp</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="_rules_8hpp" local="yes">erbsland/conf/vr/Rules.hpp</includedby>
+    <includedby refid="vr_2all_8hpp" local="yes">erbsland/conf/vr/all.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>../impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="6">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Name.hpp</label>
+        <link refid="_name_8hpp_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>../NamePath.hpp</label>
+        <link refid="_name_path_8hpp_source"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>NameType.hpp</label>
+        <link refid="_name_type_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Position.hpp</label>
+        <link refid="_position_8hpp_source"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>SourceIdentifier.hpp</label>
+        <link refid="_source_identifier_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>../ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Constraint.hpp</label>
+        <link refid="_constraint_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ConstraintType.hpp</label>
+        <link refid="_constraint_type_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/vr/Rule.hpp</label>
+        <link refid="_rule_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>RuleType.hpp</label>
+        <link refid="_rule_type_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>algorithm</label>
+      </node>
+      <node id="24">
+        <label>array</label>
+      </node>
+      <node id="13">
+        <label>bitset</label>
+      </node>
+      <node id="7">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>format</label>
+      </node>
+      <node id="19">
+        <label>functional</label>
+      </node>
+      <node id="14">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="29">
+        <label>impl/constants/Defaults.hpp</label>
+      </node>
+      <node id="30">
+        <label>impl/utf8/U8StringView.hpp</label>
+      </node>
+      <node id="15">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="16">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="39">
+        <label>impl/utilities/HashHelper.hpp</label>
+      </node>
+      <node id="27">
+        <label>impl/utilities/InternalView.hpp</label>
+      </node>
+      <node id="17">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="40">
+        <label>limits</label>
+      </node>
+      <node id="31">
+        <label>memory</label>
+      </node>
+      <node id="20">
+        <label>optional</label>
+      </node>
+      <node id="21">
+        <label>ranges</label>
+      </node>
+      <node id="22">
+        <label>span</label>
+      </node>
+      <node id="23">
+        <label>string</label>
+      </node>
+      <node id="35">
+        <label>unordered_map</label>
+      </node>
+      <node id="32">
+        <label>utility</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>erbsland/conf/vr/Rule.hpp</label>
+        <link refid="_rule_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_rule" prot="public">erbsland::conf::vr::Rule</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf_1_1vr">erbsland::conf::vr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2025-2026<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Constraint.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;RuleType.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../NamePath.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../String.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf::vr<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Rule;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">RulePtr<sp/>=<sp/>std::shared_ptr&lt;Rule&gt;;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classerbsland_1_1conf_1_1vr_1_1_rule" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule" kindref="compound">Rule</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule" kindref="compound">~Rule</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a730c3355d32c92a906dc283aa00e1bc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a730c3355d32c92a906dc283aa00e1bc9" kindref="member">namePath</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1af942e9b4b3dbdef9a8c9daf5b5c60c54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_type" kindref="compound">RuleType</ref><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1af942e9b4b3dbdef9a8c9daf5b5c60c54" kindref="member">type</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1ad1599f51787f2cbf99015022cfb78ecd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1ad1599f51787f2cbf99015022cfb78ecd" kindref="member">title</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1af82d9a9fc22744603c6c735a7c1b781c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1af82d9a9fc22744603c6c735a7c1b781c" kindref="member">description</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a8c59b2eb13eb4d4e06a502d1ed0a05ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a8c59b2eb13eb4d4e06a502d1ed0a05ff" kindref="member">hasDefault</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a97af7600ff8dd416e8e7907f52fb7d54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a97af7600ff8dd416e8e7907f52fb7d54" kindref="member">hasCustomError</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1abcc9b7f1602b153f5e069145e48acd6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1abcc9b7f1602b153f5e069145e48acd6c" kindref="member">customError</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a2a17de7a6e3aad846f39697ed4261332" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;ConstraintPtr&gt;<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a2a17de7a6e3aad846f39697ed4261332" kindref="member">constraints</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a212d9f0c93cfa4ac90854bb2dad83b92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a212d9f0c93cfa4ac90854bb2dad83b92" kindref="member">isOptional</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a98ac8d2d2cd979900d387b243bdfb4e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>CaseSensitivity<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a98ac8d2d2cd979900d387b243bdfb4e7" kindref="member">caseSensitivity</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1abeaf9fa5444ccc21e2c1a4dd063248e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1abeaf9fa5444ccc21e2c1a4dd063248e5" kindref="member">isSecret</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="51" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1acf77f8d4dccbf3028a0cae5f5c54dfc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::vector&lt;RulePtr&gt;<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1acf77f8d4dccbf3028a0cae5f5c54dfc8" kindref="member">children</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>location</highlight></codeline>
+<codeline lineno="55" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1ad3033bb314d11c8bc0aaa6ee2b0a3f55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1ad3033bb314d11c8bc0aaa6ee2b0a3f55" kindref="member">hasLocation</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a89e5a1effce525227d27c36d51bb6038" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>virtual<sp/>const<sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a89e5a1effce525227d27c36d51bb6038" kindref="member">location</ref>()<sp/>const<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59" refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a8daa20cb73a5ee8218dfae32c9c0a477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a8daa20cb73a5ee8218dfae32c9c0a477" kindref="member">setLocation</ref>(const<sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/>&amp;newLocation)<sp/>noexcept<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/vr/Rule.hpp"/>
+  </compounddef>
+</doxygen>

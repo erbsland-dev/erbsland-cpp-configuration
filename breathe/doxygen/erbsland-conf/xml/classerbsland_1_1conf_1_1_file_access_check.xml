@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_file_access_check" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::FileAccessCheck</compoundname>
+    <basecompoundref refid="classerbsland_1_1conf_1_1_access_check" prot="public" virt="non-virtual">erbsland::conf::AccessCheck</basecompoundref>
+    <includes refid="_file_access_check_8hpp" local="no">erbsland/conf/FileAccessCheck.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>Feature</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::Feature</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4aad62204fccdcdca8d04ac1841f7b90a3" prot="public">
+          <name>SameDirectory</name>
+          <briefdescription>
+<para>Allow <emphasis>included sources</emphasis> to be in the same directory as the including document (recommended, default). </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    Example: If the including document has the path `config/main.elcl` documents that are in the directory
+    `config`, like `config/other.elcl` are accepted.
+
+    If this feature is disabled, documents in the same directory as the including document are rejected.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a0ebff71509260f41b280b13023e6f3b7" prot="public">
+          <name>Subdirectories</name>
+          <briefdescription>
+<para>Allow <emphasis>included sources</emphasis> in subdirectories of the parent document (recommended, default). </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    Example: If the including document has the path `config/main.elcl` documents that are in subdirectories of
+    `config`, like `config/sub/other.elcl` are accepted.
+
+    If this feature is disabled, documents in subdirectories of the including document are rejected.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a60a45ffee5a43bbbfe92263469099b68" prot="public">
+          <name>AnyDirectory</name>
+          <briefdescription>
+<para>Not Recommended: Allow <emphasis>included sources</emphasis> in any directory. </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    Included sources can be anywhere in the filesystem and on shares. Paths can point anywhere.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a28900cf76388befbd9ca2a649f2cd062" prot="public">
+          <name>OnlyFileSources</name>
+          <briefdescription>
+<para>Only allow file sources and reject everything else. </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    If this feature is enabled, this access check only accepts file sources. Sources of any other type
+    e.g. &quot;text&quot; sources are rejected. If this feature is disabled, which is the default, this check only
+    focuses on &quot;file&quot; sources and grants access to any other sources.
+
+    Granting non-file source is designed to allow chaining multiple checks.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4aba69ea2b7d1dd815eaa341b486c0cef4" prot="public">
+          <name>LimitSize</name>
+          <briefdescription>
+<para>Limit the maximum size of a file to 100MB (recommended, default). </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4abda3fa4f5b672ebf36a763571da8df9c" prot="public">
+          <name>RequireSuffix</name>
+          <briefdescription>
+<para>Only allow file sources with an <computeroutput>.elcl</computeroutput> suffix. </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    If this feature is set, this access check only accepts file sources with an `.elcl` suffix.
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a00408920a368946610fb8f9a235a9d25" prot="public">
+          <name>_featureCount</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The feature flags controlling file access restrictions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="30" column="5" bodyfile="erbsland/conf/FileAccessCheck.hpp" bodystart="30" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_file_access_check_1abb9db6dba0426dd4a30580246452bc7e" prot="private" static="no" mutable="no">
+        <type>std::bitset&lt; _featureCount &gt;</type>
+        <definition>std::bitset&lt;_featureCount&gt; erbsland::conf::FileAccessCheck::_features</definition>
+        <argsstring></argsstring>
+        <name>_features</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::_features</qualifiedname>
+        <initializer>{0b10011}</initializer>
+        <briefdescription>
+<para>The enabled features. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="135" column="17" bodyfile="erbsland/conf/FileAccessCheck.hpp" bodystart="135" bodyend="135"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1ac4dfcc433d0c0ae44c9aca7d51678a52" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FileAccessCheckPtr</type>
+        <definition>static FileAccessCheckPtr erbsland::conf::FileAccessCheck::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::create</qualifiedname>
+        <briefdescription>
+<para>Create a custom file access check instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="81" column="31" bodyfile="erbsland/conf/FileAccessCheck.hpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1ab4f61409bf36a8a2eac4c04208b5241a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::FileAccessCheck::FileAccessCheck</definition>
+        <argsstring>()=default</argsstring>
+        <name>FileAccessCheck</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::FileAccessCheck</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="86" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a55c0bd6816fa145808c478104c14bfc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::FileAccessCheck::~FileAccessCheck</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~FileAccessCheck</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::~FileAccessCheck</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="88" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a475e04e612e83abdfd647df79777f87e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::FileAccessCheck::enable</definition>
+        <argsstring>(Feature feature)</argsstring>
+        <name>enable</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::enable</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4" kindref="member">Feature</ref></type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+<para>Enable a feature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="93" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1abb9d74356bf5e6a996063ed8fe7fba73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::FileAccessCheck::disable</definition>
+        <argsstring>(Feature feature)</argsstring>
+        <name>disable</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::disable</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4" kindref="member">Feature</ref></type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+<para>Disable a feature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="97" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a0e753851aa2af792b36061409650f3c5" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::FileAccessCheck::isEnabled</definition>
+        <argsstring>(Feature feature) const noexcept</argsstring>
+        <name>isEnabled</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::isEnabled</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4" kindref="member">Feature</ref></type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+<para>Test if a feature is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="101" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a69c848a5c8b4cb9f851f69ac5e82b2d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AccessCheckResult</type>
+        <definition>AccessCheckResult erbsland::conf::FileAccessCheck::check</definition>
+        <argsstring>(const AccessSources &amp;sources) override</argsstring>
+        <name>check</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::check</qualifiedname>
+        <reimplements refid="classerbsland_1_1conf_1_1_access_check_1a6c7bd2239f032c431e6c1f1d165bbc8e">check</reimplements>
+        <param>
+          <type>const <ref refid="structerbsland_1_1conf_1_1_access_sources" kindref="compound">AccessSources</ref> &amp;</type>
+          <declname>sources</declname>
+        </param>
+        <briefdescription>
+<para>The check function is called for every source, including the initial source that is passed to the <computeroutput>parse()</computeroutput> function call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You can either grant or deny access to this source. If you deny the access to the source, the parser will throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" kindref="member">ErrorCategory::Access</ref></computeroutput>.</para>
+<para>Instead of returning <computeroutput>AccessResult::Denied</computeroutput>, you can also throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" kindref="member">ErrorCategory::Access</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sources that are verified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return either <computeroutput>AccessResult::Granted</computeroutput> or <computeroutput>AccessResult::Denied</computeroutput>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alternatively, throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with the <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" kindref="member">ErrorCategory::Access</ref></computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Not Tested:</title><para>This is part of <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="104" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a6cee3f6c9d5a3fff378ce0b38f1d2876" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::FileAccessCheck::fileAccessCheck</definition>
+        <argsstring>(const AccessSources &amp;sources) const</argsstring>
+        <name>fileAccessCheck</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::fileAccessCheck</qualifiedname>
+        <param>
+          <type>const <ref refid="structerbsland_1_1conf_1_1_access_sources" kindref="compound">AccessSources</ref> &amp;</type>
+          <declname>sources</declname>
+        </param>
+        <briefdescription>
+<para>Check the file access. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sources structure to check. Must contain a valid file source. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="111" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a26cf5a23a890941903c323da01588885" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void erbsland::conf::FileAccessCheck::throwAccessError</definition>
+        <argsstring>(String message, std::filesystem::path path={}, std::optional&lt; std::error_code &gt; errorCode={})</argsstring>
+        <name>throwAccessError</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::throwAccessError</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::filesystem::path</type>
+          <declname>path</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>std::optional&lt; std::error_code &gt;</type>
+          <declname>errorCode</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Throw an access error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The affected path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional error code. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="119" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a4fc81911eedc17ed08dc8e1db7ab9fd6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path erbsland::conf::FileAccessCheck::extractSourcePath</definition>
+        <argsstring>(const AccessSources &amp;sources) const</argsstring>
+        <name>extractSourcePath</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::extractSourcePath</qualifiedname>
+        <param>
+          <type>const <ref refid="structerbsland_1_1conf_1_1_access_sources" kindref="compound">AccessSources</ref> &amp;</type>
+          <declname>sources</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="125" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1ac4e953078756c5d81a46b67fcb8a855e" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path erbsland::conf::FileAccessCheck::extractParentDirectory</definition>
+        <argsstring>(const AccessSources &amp;sources) const</argsstring>
+        <name>extractParentDirectory</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::extractParentDirectory</qualifiedname>
+        <param>
+          <type>const <ref refid="structerbsland_1_1conf_1_1_access_sources" kindref="compound">AccessSources</ref> &amp;</type>
+          <declname>sources</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="126" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1a0eccb842b2ba2eb99a88a3c42501661b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void erbsland::conf::FileAccessCheck::canonicalizePaths</definition>
+        <argsstring>(std::filesystem::path &amp;sourcePath, std::filesystem::path &amp;parentDirectory)</argsstring>
+        <name>canonicalizePaths</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::canonicalizePaths</qualifiedname>
+        <param>
+          <type>std::filesystem::path &amp;</type>
+          <declname>sourcePath</declname>
+        </param>
+        <param>
+          <type>std::filesystem::path &amp;</type>
+          <declname>parentDirectory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="127" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_access_check_1ac479a32f59c01beb3c05c15cccef05d0" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileAccessCheck::requireSourceInParentDirectory</definition>
+        <argsstring>(const std::filesystem::path &amp;sourcePath, const std::filesystem::path &amp;parentDirectory) -&gt; bool</argsstring>
+        <name>requireSourceInParentDirectory</name>
+        <qualifiedname>erbsland::conf::FileAccessCheck::requireSourceInParentDirectory</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>sourcePath</declname>
+        </param>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>parentDirectory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileAccessCheck.hpp" line="130" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A basic file access check. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>By default, the <computeroutput>CanonicalizePath</computeroutput>, <computeroutput>SameDirectory</computeroutput>, <computeroutput>Subdirectories</computeroutput> features are activated.</para>
+<para><itemizedlist>
+<listitem><para>If neither <computeroutput>SameDirectory</computeroutput>, <computeroutput>Subdirectories</computeroutput> or <computeroutput>AnyDirectory</computeroutput> is set, all file sources are rejected.</para>
+</listitem><listitem><para>If a file is included from a non-file source and <computeroutput>AnyDirectory</computeroutput> is not set, the source is rejected. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>erbsland::conf::AccessCheck</label>
+        <link refid="classerbsland_1_1conf_1_1_access_check"/>
+      </node>
+      <node id="1">
+        <label>erbsland::conf::FileAccessCheck</label>
+        <link refid="classerbsland_1_1conf_1_1_file_access_check"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>erbsland::conf::AccessCheck</label>
+        <link refid="classerbsland_1_1conf_1_1_access_check"/>
+      </node>
+      <node id="1">
+        <label>erbsland::conf::FileAccessCheck</label>
+        <link refid="classerbsland_1_1conf_1_1_file_access_check"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/FileAccessCheck.hpp" line="26" column="1" bodyfile="erbsland/conf/FileAccessCheck.hpp" bodystart="26" bodyend="136"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a00408920a368946610fb8f9a235a9d25" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>_featureCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1abb9db6dba0426dd4a30580246452bc7e" prot="private" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>_features</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a60a45ffee5a43bbbfe92263469099b68" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>AnyDirectory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a0eccb842b2ba2eb99a88a3c42501661b" prot="private" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>canonicalizePaths</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a69c848a5c8b4cb9f851f69ac5e82b2d6" prot="public" virt="virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>check</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1ac4dfcc433d0c0ae44c9aca7d51678a52" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>create</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1abb9d74356bf5e6a996063ed8fe7fba73" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>disable</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a475e04e612e83abdfd647df79777f87e" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>enable</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1ac4e953078756c5d81a46b67fcb8a855e" prot="private" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>extractParentDirectory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a4fc81911eedc17ed08dc8e1db7ab9fd6" prot="private" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>extractSourcePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>Feature</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1ab4f61409bf36a8a2eac4c04208b5241a" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>FileAccessCheck</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6cee3f6c9d5a3fff378ce0b38f1d2876" prot="protected" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>fileAccessCheck</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a0e753851aa2af792b36061409650f3c5" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>isEnabled</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4aba69ea2b7d1dd815eaa341b486c0cef4" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>LimitSize</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a28900cf76388befbd9ca2a649f2cd062" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>OnlyFileSources</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1ac479a32f59c01beb3c05c15cccef05d0" prot="private" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>requireSourceInParentDirectory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4abda3fa4f5b672ebf36a763571da8df9c" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>RequireSuffix</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4aad62204fccdcdca8d04ac1841f7b90a3" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>SameDirectory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a6a2716be15c84d0f2ef05cd64aa11ae4a0ebff71509260f41b280b13023e6f3b7" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>Subdirectories</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a26cf5a23a890941903c323da01588885" prot="protected" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>throwAccessError</name></member>
+      <member refid="classerbsland_1_1conf_1_1_access_check_1af2a5a60e0b83686753d9b7e9ad634b14" prot="public" virt="virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>~AccessCheck</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_access_check_1a55c0bd6816fa145808c478104c14bfc1" prot="public" virt="non-virtual"><scope>erbsland::conf::FileAccessCheck</scope><name>~FileAccessCheck</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

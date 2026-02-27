@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_bytes_8hpp" kind="file" language="C++">
+    <compoundname>Bytes.hpp</compoundname>
+    <includes refid="_string_8hpp" local="yes">String.hpp</includes>
+    <includes local="yes">impl/Definitions.hpp</includes>
+    <includes local="yes">impl/utilities/ComparisonHelper.hpp</includes>
+    <includes local="yes">impl/utilities/ContainerWrappingHelper.hpp</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">span</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_value_8hpp" local="yes">erbsland/conf/Value.hpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>erbsland/conf/Bytes.hpp</label>
+        <link refid="_bytes_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="10">
+        <label>bitset</label>
+      </node>
+      <node id="22">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>format</label>
+      </node>
+      <node id="16">
+        <label>functional</label>
+      </node>
+      <node id="21">
+        <label>impl/Definitions.hpp</label>
+      </node>
+      <node id="11">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="12">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="13">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="14">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="17">
+        <label>optional</label>
+      </node>
+      <node id="18">
+        <label>ranges</label>
+      </node>
+      <node id="19">
+        <label>span</label>
+      </node>
+      <node id="20">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>erbsland/conf/Bytes.hpp</label>
+        <link refid="_bytes_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_bytes" prot="public">erbsland::conf::Bytes</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Erbsland<sp/>DEV.<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;String.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/Definitions.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/utilities/ComparisonHelper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/utilities/ContainerWrappingHelper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;span&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classerbsland_1_1conf_1_1_bytes" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref><sp/>=<sp/>std::vector&lt;std::byte&gt;;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>construction.</highlight></codeline>
+<codeline lineno="35" refid="classerbsland_1_1conf_1_1_bytes_1adb75b607e7265616142c1f3dd3f788ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1adb75b607e7265616142c1f3dd3f788ba" kindref="member">Bytes</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classerbsland_1_1conf_1_1_bytes_1abe3258d048c30e0286f72768e0d31757" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1abe3258d048c30e0286f72768e0d31757" kindref="member">Bytes</ref>(<ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref><sp/>data)<sp/>noexcept<sp/>:<sp/>_data{std::move(data)}<sp/>{}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classerbsland_1_1conf_1_1_bytes_1a4a21f0b14935dac44f2eac01bd2af4a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a4a21f0b14935dac44f2eac01bd2af4a9" kindref="member">Bytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::span&lt;std::byte&gt;<sp/>data)<sp/>noexcept<sp/>:<sp/>_data{data.begin(),<sp/>data.end()}<sp/>{};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>Conversion</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight><highlight class="comment">/*<sp/>requires<sp/>removed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classerbsland_1_1conf_1_1_bytes_1a6b84d03ae53bc2e7f7cc2605d330c4fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a6b84d03ae53bc2e7f7cc2605d330c4fc" kindref="member">from</ref>(std::initializer_list&lt;T&gt;<sp/>list)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref><sp/>data;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.reserve(list.size());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::transform(list.begin(),<sp/>list.end(),<sp/>std::back_inserter(data),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](T<sp/>v)<sp/>{<sp/>return<sp/>static_cast&lt;std::byte&gt;(v);<sp/>});</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref>{data};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight><highlight class="comment">/*<sp/>requires<sp/>removed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classerbsland_1_1conf_1_1_bytes_1ac3846f1e8175f60f2bca5dbf04f15373" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1ac3846f1e8175f60f2bca5dbf04f15373" kindref="member">convertFrom</ref>(std::initializer_list&lt;T&gt;<sp/>list)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref><sp/>data;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.reserve(list.size());</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::transform(list.begin(),<sp/>list.end(),<sp/>std::back_inserter(data),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](T<sp/>v)<sp/>{<sp/>return<sp/>static_cast&lt;std::byte&gt;(v);<sp/>});</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref>{data};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::input_iterator<sp/>It&gt;</highlight><highlight class="comment">/*<sp/>requires<sp/>removed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classerbsland_1_1conf_1_1_bytes_1ac8b2c2dd066aeab0ab91a7b7813e4f1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1ac8b2c2dd066aeab0ab91a7b7813e4f1f" kindref="member">from</ref>(It<sp/>begin,<sp/>It<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref><sp/>data;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>std::distance(begin,<sp/>end);<sp/>dist<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.reserve(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dist));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::transform(begin,<sp/>end,<sp/>std::back_inserter(data),<sp/>[](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::byte</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(v);<sp/>});</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref>{data};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::input_iterator<sp/>It&gt;</highlight><highlight class="comment">/*<sp/>requires<sp/>removed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classerbsland_1_1conf_1_1_bytes_1a16d1d2103cb505aa92bf410f8f5b5dce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a16d1d2103cb505aa92bf410f8f5b5dce" kindref="member">convertFrom</ref>(It<sp/>begin,<sp/>It<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref><sp/>data;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>std::distance(begin,<sp/>end);<sp/>dist<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.reserve(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dist));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::transform(begin,<sp/>end,<sp/>std::back_inserter(data),<sp/>[](</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::byte</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(v);<sp/>});</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref>{data};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"></codeline>
+<codeline lineno="120" refid="classerbsland_1_1conf_1_1_bytes_1ab85e7e302935de9cd8c285a794a95598" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1ab85e7e302935de9cd8c285a794a95598" kindref="member">fromHex</ref>(std::string_view<sp/>hex)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="123" refid="classerbsland_1_1conf_1_1_bytes_1a8230bbe0eb08491d991f96ed0aaca147" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a8230bbe0eb08491d991f96ed0aaca147" kindref="member">fromHex</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hex)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="126" refid="classerbsland_1_1conf_1_1_bytes_1a04e00980626029ab63ae3d468fe7f09f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a04e00980626029ab63ae3d468fe7f09f" kindref="member">fromHex</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/>&amp;hex)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="129" refid="classerbsland_1_1conf_1_1_bytes_1a0f0c1544e64b0e51a7e7ee10fed1cca6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a0f0c1544e64b0e51a7e7ee10fed1cca6" kindref="member">fromHex</ref>(std::u8string_view<sp/>hex)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="132" refid="classerbsland_1_1conf_1_1_bytes_1a39bd3552c0af3b04084ed15998b86184" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a39bd3552c0af3b04084ed15998b86184" kindref="member">fromHex</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char8_t</highlight><highlight class="normal"><sp/>*hex)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="134"></codeline>
+<codeline lineno="137" refid="classerbsland_1_1conf_1_1_bytes_1a3d33689a78b9de73f1e25284feccc990" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a3d33689a78b9de73f1e25284feccc990" kindref="member">toHex</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classerbsland_1_1conf_1_1_bytes_1a2d72bd58673e6a25d8b667f41507ab0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a2d72bd58673e6a25d8b667f41507ab0e" kindref="member">toHexForErrors</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>wrapper<sp/>around<sp/>the<sp/>underlying<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>convenience<sp/>methods</highlight></codeline>
+<codeline lineno="153" refid="classerbsland_1_1conf_1_1_bytes_1afd65b718dd187e0e57b970abd1388df6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1afd65b718dd187e0e57b970abd1388df6" kindref="member">append</ref>(const<sp/><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref><sp/>&amp;bytes)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_data.insert(_data.end(),<sp/>bytes.begin(),<sp/>bytes.end());</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref><sp/>_data;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/Bytes.hpp"/>
+  </compounddef>
+</doxygen>

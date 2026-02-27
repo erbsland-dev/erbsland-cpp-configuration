@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1_signature_signer_data" kind="struct" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::SignatureSignerData</compoundname>
+    <includes refid="_signature_signer_data_8hpp" local="no">erbsland/conf/SignatureSignerData.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_signature_signer_data_1a3410ef9aca27f548e07e40874bbd68b1" prot="public" static="no" mutable="no">
+        <type>SourceIdentifierPtr</type>
+        <definition>SourceIdentifierPtr erbsland::conf::SignatureSignerData::sourceIdentifier</definition>
+        <argsstring></argsstring>
+        <name>sourceIdentifier</name>
+        <qualifiedname>erbsland::conf::SignatureSignerData::sourceIdentifier</qualifiedname>
+        <briefdescription>
+<para>The source identifier of the document. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureSignerData.hpp" line="18" column="25" bodyfile="erbsland/conf/SignatureSignerData.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_signature_signer_data_1ac5c258756402deb29a0aab95ee6d526e" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::SignatureSignerData::signingPersonText</definition>
+        <argsstring></argsstring>
+        <name>signingPersonText</name>
+        <qualifiedname>erbsland::conf::SignatureSignerData::signingPersonText</qualifiedname>
+        <briefdescription>
+<para>The raw and unprocessed text for the signer that was passed to the <computeroutput>sign</computeroutput> method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureSignerData.hpp" line="22" column="12" bodyfile="erbsland/conf/SignatureSignerData.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_signature_signer_data_1a81b25cc1324a1d892767227ff65698f3" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::SignatureSignerData::documentDigest</definition>
+        <argsstring></argsstring>
+        <name>documentDigest</name>
+        <qualifiedname>erbsland::conf::SignatureSignerData::documentDigest</qualifiedname>
+        <briefdescription>
+<para>The cryptographic hash of the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The hash always has the format <computeroutput>&lt;type&gt; &lt;hash as a lowercase hex byte sequence&gt;</computeroutput>. As the responsibility of the application is only the verification of the signature, decoding of this text shouldn&apos;t be necessary. Instead, the application should compare and sign/verify this text as it is. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureSignerData.hpp" line="30" column="12" bodyfile="erbsland/conf/SignatureSignerData.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The data for the signer implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>erbsland::conf::SignatureSignerData</label>
+        <link refid="structerbsland_1_1conf_1_1_signature_signer_data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>documentDigest</edgelabel>
+          <edgelabel>signingPersonText</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::String</label>
+        <link refid="classerbsland_1_1conf_1_1_string"/>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/SignatureSignerData.hpp" line="14" column="1" bodyfile="erbsland/conf/SignatureSignerData.hpp" bodystart="14" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1_signature_signer_data_1a81b25cc1324a1d892767227ff65698f3" prot="public" virt="non-virtual"><scope>erbsland::conf::SignatureSignerData</scope><name>documentDigest</name></member>
+      <member refid="structerbsland_1_1conf_1_1_signature_signer_data_1ac5c258756402deb29a0aab95ee6d526e" prot="public" virt="non-virtual"><scope>erbsland::conf::SignatureSignerData</scope><name>signingPersonText</name></member>
+      <member refid="structerbsland_1_1conf_1_1_signature_signer_data_1a3410ef9aca27f548e07e40874bbd68b1" prot="public" virt="non-virtual"><scope>erbsland::conf::SignatureSignerData</scope><name>sourceIdentifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

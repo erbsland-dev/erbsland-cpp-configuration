@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceerbsland_1_1conf_1_1vr" kind="namespace" language="C++">
+    <compoundname>erbsland::conf::vr</compoundname>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_constraint" prot="public">erbsland::conf::vr::Constraint</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" prot="public">erbsland::conf::vr::ConstraintType</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_rule" prot="public">erbsland::conf::vr::Rule</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_rules" prot="public">erbsland::conf::vr::Rules</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder" prot="public">erbsland::conf::vr::RulesBuilder</innerclass>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_rule_type" prot="public">erbsland::conf::vr::RuleType</innerclass>
+    <innernamespace refid="namespaceerbsland_1_1conf_1_1vr_1_1builder">erbsland::conf::vr::builder</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_value_8hpp_1acdf5ec4c5641cace74a1d3fe409a5a9c" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1vr_1_1_rule" kindref="compound">Rule</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt; Rule &gt; erbsland::conf::vr::RulePtr</definition>
+        <argsstring></argsstring>
+        <name>RulePtr</name>
+        <qualifiedname>erbsland::conf::vr::RulePtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Value.hpp" line="34" column="1" bodyfile="erbsland/conf/Value.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_constraint_8hpp_1ac39a35e3c5032399134c072899affd76" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint" kindref="compound">Constraint</ref> &gt;</type>
+        <definition>using erbsland::conf::vr::ConstraintPtr = typedef std::shared_ptr&lt;Constraint&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConstraintPtr</name>
+        <qualifiedname>erbsland::conf::vr::ConstraintPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="17" column="1" bodyfile="erbsland/conf/vr/Constraint.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_rules_8hpp_1a964d4547c44107a8e317cf476398d0f2" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="classerbsland_1_1conf_1_1vr_1_1_rules" kindref="compound">Rules</ref> &gt;</type>
+        <definition>using erbsland::conf::vr::RulesPtr = typedef std::shared_ptr&lt;Rules&gt;</definition>
+        <argsstring></argsstring>
+        <name>RulesPtr</name>
+        <qualifiedname>erbsland::conf::vr::RulesPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rules.hpp" line="19" column="1" bodyfile="erbsland/conf/vr/Rules.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/Value.hpp" line="32" column="1"/>
+  </compounddef>
+</doxygen>

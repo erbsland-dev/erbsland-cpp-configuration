@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goals &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../_static/ansi.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Requirements" href="requirements.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/index.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Goals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full-feature-coverage">Full Feature Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#secure-by-design">Secure by Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependency-free">Dependency-Free</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modern-readable-c">Modern, Readable C++</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#robustness-over-performance">Robustness Over Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Goals</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapters/goals.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="goals">
+<span id="index-0"></span><h1>Goals<a class="headerlink" href="#goals" title="Link to this heading"></a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-md docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-link-slash sd-text-success"></span> Minimal Dependencies</div>
+<p class="sd-card-text">Only requires C++20 and the standard library—nothing else.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-md docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-code sd-text-success"></span> Expressive Interface</div>
+<p class="sd-card-text">Reduces boilerplate in user code, making integration clean and concise.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This C++ parser serves as the <strong>reference implementation</strong> for the <em>Erbsland Configuration Language</em> (ELCL). Its primary goals are security, robustness, and full feature coverage—offering a clean, understandable codebase that serves both as a production-ready parser and as a guide for implementors of other ELCL parsers.</p>
+</section>
+<section id="full-feature-coverage">
+<h2>Full Feature Coverage<a class="headerlink" href="#full-feature-coverage" title="Link to this heading"></a></h2>
+<p>The parser supports the entire ELCL specification, including:</p>
+<ul class="simple">
+<li><p>Core features such as names, values, and sections</p></li>
+<li><p>Standard features like multiline values, byte counts, and value lists</p></li>
+<li><p>Advanced types such as regular expressions, code blocks, and time deltas</p></li>
+</ul>
+<p>As the reference implementation, it ensures compatibility with all language features and serves as the basis for validating conformance through the official test suite.</p>
+</section>
+<section id="secure-by-design">
+<h2>Secure by Design<a class="headerlink" href="#secure-by-design" title="Link to this heading"></a></h2>
+<p>Security was a core focus from the start:</p>
+<ul class="simple">
+<li><p>The parser is implemented in <strong>plain, explicit C++</strong>, avoiding code generation or macro-based lexers.</p></li>
+<li><p>Input handling and buffer processing are written defensively, with <strong>comprehensive error checks</strong>.</p></li>
+<li><p>It is designed to safely handle data from untrusted sources, making it suitable for embedded, backend, or toolchain usage.</p></li>
+</ul>
+<p>This approach ensures predictable behavior and minimizes the risk of memory or parsing vulnerabilities.</p>
+</section>
+<section id="dependency-free">
+<h2>Dependency-Free<a class="headerlink" href="#dependency-free" title="Link to this heading"></a></h2>
+<p>The parser is intentionally designed with <strong>zero external dependencies</strong>:</p>
+<ul class="simple">
+<li><p>No third-party libraries are required.</p></li>
+<li><p>Self-contained implementations are included for tasks such as:
+- Unicode-aware string handling
+- Basic date/time parsing
+- Value formatting and escaping</p></li>
+</ul>
+<p>This makes the parser <strong>easy to integrate</strong> into any C++ project and ideal as a portable reference for reimplementations in other programming languages.</p>
+</section>
+<section id="modern-readable-c">
+<h2>Modern, Readable C++<a class="headerlink" href="#modern-readable-c" title="Link to this heading"></a></h2>
+<p>Written in modern C++ (up to C++20), the codebase is:</p>
+<ul class="simple">
+<li><p>Compatible with a wide range of C++ compilers</p></li>
+<li><p>Cleanly structured for readability and extensibility</p></li>
+<li><p>Explicit rather than clever—emphasizing clarity over abstraction</p></li>
+</ul>
+<p>You should be able to understand and extend the parser without reverse-engineering dense templates or macro magic.</p>
+</section>
+<section id="robustness-over-performance">
+<h2>Robustness Over Performance<a class="headerlink" href="#robustness-over-performance" title="Link to this heading"></a></h2>
+<p>Parsing configuration files is rarely a performance bottleneck, but <strong>robust behavior</strong> is critical:</p>
+<ul class="simple">
+<li><p>The parser prioritizes <strong>correctness, consistency, and transparency</strong> over raw speed.</p></li>
+<li><p>Error reporting is designed to help users quickly find and fix mistakes in their configuration files.</p></li>
+<li><p>Performance optimizations are applied where helpful, but never at the cost of readability or correctness.</p></li>
+</ul>
+<p>This focus ensures the parser remains a trustworthy building block for your systems.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="requirements.html" class="btn btn-neutral float-left" title="Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

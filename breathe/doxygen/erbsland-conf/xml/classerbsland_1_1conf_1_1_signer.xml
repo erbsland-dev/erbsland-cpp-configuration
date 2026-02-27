@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_signer" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::Signer</compoundname>
+    <includes refid="_signer_8hpp" local="no">erbsland/conf/Signer.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_signer_1a9146cb346b0df15d5b7acae2d481a4ed" prot="private" static="no" mutable="no">
+        <type>SignatureSignerPtr</type>
+        <definition>SignatureSignerPtr erbsland::conf::Signer::_signatureSigner</definition>
+        <argsstring></argsstring>
+        <name>_signatureSigner</name>
+        <qualifiedname>erbsland::conf::Signer::_signatureSigner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Signer.hpp" line="48" column="24" bodyfile="erbsland/conf/Signer.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_signer_1a2db0b2269449f8f6a856def825d66f0d" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Signer::Signer</definition>
+        <argsstring>(SignatureSignerPtr signatureSigner)</argsstring>
+        <name>Signer</name>
+        <qualifiedname>erbsland::conf::Signer::Signer</qualifiedname>
+        <param>
+          <type>SignatureSignerPtr</type>
+          <declname>signatureSigner</declname>
+        </param>
+        <briefdescription>
+<para>Create a new signer tool using the given implementation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signatureSigner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signature signer implementation to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Signer.hpp" line="22" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_signer_1a0780446b00539079070998ffd55924b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Signer::~Signer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Signer</name>
+        <qualifiedname>erbsland::conf::Signer::~Signer</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Signer.hpp" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_signer_1aee0be68b677038015cf1a9a7072dd090" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Signer::sign</definition>
+        <argsstring>(std::filesystem::path sourcePath, std::filesystem::path destinationPath, String signingPersonText)</argsstring>
+        <name>sign</name>
+        <qualifiedname>erbsland::conf::Signer::sign</qualifiedname>
+        <param>
+          <type>std::filesystem::path</type>
+          <declname>sourcePath</declname>
+        </param>
+        <param>
+          <type>std::filesystem::path</type>
+          <declname>destinationPath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>signingPersonText</declname>
+        </param>
+        <briefdescription>
+<para>Sign a document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This signs a given document. The signed document is not parsed, and therefore its syntax is not checked. It is recommended that you use <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> to verify the document before signing it.</para>
+<para><itemizedlist>
+<listitem><para>The encoding of the document is checked, as UTF-8 is fully decoded/encoded.</para>
+</listitem><listitem><para>The line lengths are checked, as the document is read line-by-line.</para>
+</listitem><listitem><para>An existing initial <computeroutput>\@signature</computeroutput> line is skipped and replaced in the destination.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sourcePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the document to sign. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destinationPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path where the signed document is stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signingPersonText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text identifying the signing person. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(IO, Encoding) in case of any problem with the signing process. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Signer.hpp" line="42" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The tool to sign configuration documents. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/Signer.hpp" line="16" column="1" bodyfile="erbsland/conf/Signer.hpp" bodystart="16" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_signer_1a9146cb346b0df15d5b7acae2d481a4ed" prot="private" virt="non-virtual"><scope>erbsland::conf::Signer</scope><name>_signatureSigner</name></member>
+      <member refid="classerbsland_1_1conf_1_1_signer_1aee0be68b677038015cf1a9a7072dd090" prot="public" virt="non-virtual"><scope>erbsland::conf::Signer</scope><name>sign</name></member>
+      <member refid="classerbsland_1_1conf_1_1_signer_1a2db0b2269449f8f6a856def825d66f0d" prot="public" virt="non-virtual"><scope>erbsland::conf::Signer</scope><name>Signer</name></member>
+      <member refid="classerbsland_1_1conf_1_1_signer_1a0780446b00539079070998ffd55924b7" prot="public" virt="non-virtual"><scope>erbsland::conf::Signer</scope><name>~Signer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

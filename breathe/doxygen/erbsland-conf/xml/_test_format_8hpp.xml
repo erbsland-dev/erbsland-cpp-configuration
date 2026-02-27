@@ -1,0 +1,579 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_test_format_8hpp" kind="file" language="C++">
+    <compoundname>TestFormat.hpp</compoundname>
+    <includes local="no">bitset</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_string_8hpp" local="yes">erbsland/conf/String.hpp</includedby>
+    <includedby refid="_time_8hpp" local="yes">erbsland/conf/Time.hpp</includedby>
+    <includedby refid="_time_delta_8hpp" local="yes">erbsland/conf/TimeDelta.hpp</includedby>
+    <includedby refid="_value_8hpp" local="yes">erbsland/conf/Value.hpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>erbsland/conf/TestFormat.hpp</label>
+        <link refid="_test_format_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bitset</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16">
+        <label>erbsland/conf/AccessCheck.hpp</label>
+        <link refid="_access_check_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>erbsland/conf/AccessSources.hpp</label>
+        <link refid="_access_sources_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/Bytes.hpp</label>
+        <link refid="_bytes_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>erbsland/conf/Date.hpp</label>
+        <link refid="_date_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>erbsland/conf/DateTime.hpp</label>
+        <link refid="_date_time_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>erbsland/conf/Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>erbsland/conf/ErrorCategory.hpp</label>
+        <link refid="_error_category_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>erbsland/conf/FileAccessCheck.hpp</label>
+        <link refid="_file_access_check_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>erbsland/conf/FileSourceResolver.hpp</label>
+        <link refid="_file_source_resolver_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>erbsland/conf/Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>erbsland/conf/Name.hpp</label>
+        <link refid="_name_8hpp_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>erbsland/conf/NamePath.hpp</label>
+        <link refid="_name_path_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>erbsland/conf/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>erbsland/conf/RegEx.hpp</label>
+        <link refid="_reg_ex_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>erbsland/conf/SignatureSigner.hpp</label>
+        <link refid="_signature_signer_8hpp_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>erbsland/conf/SignatureSignerData.hpp</label>
+        <link refid="_signature_signer_data_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>erbsland/conf/SignatureValidator.hpp</label>
+        <link refid="_signature_validator_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>erbsland/conf/SignatureValidatorData.hpp</label>
+        <link refid="_signature_validator_data_8hpp_source"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>erbsland/conf/Signer.hpp</label>
+        <link refid="_signer_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>erbsland/conf/Source.hpp</label>
+        <link refid="_source_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>erbsland/conf/SourceIdentifier.hpp</label>
+        <link refid="_source_identifier_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>erbsland/conf/SourceResolver.hpp</label>
+        <link refid="_source_resolver_8hpp_source"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>erbsland/conf/SourceResolverContext.hpp</label>
+        <link refid="_source_resolver_context_8hpp_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>erbsland/conf/StringConvertible.hpp</label>
+        <link refid="_string_convertible_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/TestFormat.hpp</label>
+        <link refid="_test_format_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>erbsland/conf/Time.hpp</label>
+        <link refid="_time_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>erbsland/conf/TimeDelta.hpp</label>
+        <link refid="_time_delta_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>erbsland/conf/TimeOffset.hpp</label>
+        <link refid="_time_offset_8hpp_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>erbsland/conf/TimeUnit.hpp</label>
+        <link refid="_time_unit_8hpp_source"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>erbsland/conf/ValueType.hpp</label>
+        <link refid="_value_type_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="23">
+        <label>erbsland/conf/vr/Constraint.hpp</label>
+        <link refid="_constraint_8hpp_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>erbsland/conf/vr/ConstraintType.hpp</label>
+        <link refid="_constraint_type_8hpp_source"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>erbsland/conf/vr/Rule.hpp</label>
+        <link refid="_rule_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>erbsland/conf/vr/RuleType.hpp</label>
+        <link refid="_rule_type_8hpp_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+      <node id="29">
+        <label>erbsland/conf/vr/builder/DefaultValueFactory.hpp</label>
+        <link refid="_default_value_factory_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>erbsland/conf/vr/builder/NamePathHelper.hpp</label>
+        <link refid="_name_path_helper_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>erbsland/conf/vr/builder/TypeTraits.hpp</label>
+        <link refid="_type_traits_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>erbsland/conf/vr/builder/all.hpp</label>
+        <link refid="vr_2builder_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_test_format" prot="public">erbsland::conf::TestFormat</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_test_format_8hpp_1af4761e61f69e54232355381200ba1ee5" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto operator|</definition>
+        <argsstring>(const erbsland::conf::TestFormat::Flag left, const erbsland::conf::TestFormat::Flag right) noexcept -&gt; erbsland::conf::TestFormat</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">erbsland::conf::TestFormat::Flag</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">erbsland::conf::TestFormat::Flag</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="111" column="14" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="111" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="_test_format_8hpp_1af8ba08cf3feb579ade742c410b3821bd" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto operator|</definition>
+        <argsstring>(const erbsland::conf::TestFormat::Flag left, const erbsland::conf::TestFormat right) noexcept -&gt; erbsland::conf::TestFormat</argsstring>
+        <name>operator|</name>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">erbsland::conf::TestFormat::Flag</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">erbsland::conf::TestFormat</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="120" column="14" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="120" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2025<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;bitset&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classerbsland_1_1conf_1_1_test_format" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">Flag</ref><sp/>:<sp/>uint8_t<sp/>{</highlight></codeline>
+<codeline lineno="25" refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14abe4480092b1631dafc5b2eff3e2875fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14abe4480092b1631dafc5b2eff3e2875fb" kindref="member">ShowContainerSize</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14afd8dab0f0a195d196211b08b264f4ee6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14afd8dab0f0a195d196211b08b264f4ee6" kindref="member">ShowPosition</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14a371c2a62be22612e32a7bf17dba0f3e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14a371c2a62be22612e32a7bf17dba0f3e7" kindref="member">ShowSourceIdentifier</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_flagCount</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49" refid="classerbsland_1_1conf_1_1_test_format_1a883441a5990b223cc5709a13e53e6135" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a883441a5990b223cc5709a13e53e6135" kindref="member">TestFormat</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight><highlight class="comment">/*<sp/>requires<sp/>removed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classerbsland_1_1conf_1_1_test_format_1a17115fcac60bf4433eaec895b9a6e116" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a17115fcac60bf4433eaec895b9a6e116" kindref="member">TestFormat</ref>(Args...<sp/>flags)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">...(flags)<sp/>&lt;=<sp/>_flagCount);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(_flags.set(flags),<sp/>...);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57" refid="classerbsland_1_1conf_1_1_test_format_1a216ad93fc18acf68280ae4a8dc12b7ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a216ad93fc18acf68280ae4a8dc12b7ae" kindref="member">~TestFormat</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59" refid="classerbsland_1_1conf_1_1_test_format_1ac3b32fe8aa7d023e68ff396ca5055c2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1ac3b32fe8aa7d023e68ff396ca5055c2a" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61" refid="classerbsland_1_1conf_1_1_test_format_1acba197dfbb77659218186a67b4cc4d33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1acba197dfbb77659218186a67b4cc4d33" kindref="member">operator=</ref>(<ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63" refid="classerbsland_1_1conf_1_1_test_format_1ab44429e995e5c46846a327321db0ea37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1ab44429e995e5c46846a327321db0ea37" kindref="member">TestFormat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65" refid="classerbsland_1_1conf_1_1_test_format_1ad23a62b2c5df2dc752998ade36424605" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1ad23a62b2c5df2dc752998ade36424605" kindref="member">TestFormat</ref>(<ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69" refid="classerbsland_1_1conf_1_1_test_format_1a0189d60d47cd28811921aa5ebd1d0d46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a0189d60d47cd28811921aa5ebd1d0d46" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71" refid="classerbsland_1_1conf_1_1_test_format_1aab195eb11d2878c500997f08a22af544" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1aab195eb11d2878c500997f08a22af544" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73" refid="classerbsland_1_1conf_1_1_test_format_1acabf014f3fda5ea889c9b76d67c58198" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1acabf014f3fda5ea889c9b76d67c58198" kindref="member">operator|</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>{_flags<sp/>|<sp/>other._flags};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77" refid="classerbsland_1_1conf_1_1_test_format_1a4572a0b90109fb1b1897882adf96c89b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a4572a0b90109fb1b1897882adf96c89b" kindref="member">operator|</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">Flag</ref><sp/>flag)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>_flags;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags.set(flag);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>{flags};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83" refid="classerbsland_1_1conf_1_1_test_format_1a0a8cc40d0b1fa24d60e5ccb09197e79b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a0a8cc40d0b1fa24d60e5ccb09197e79b" kindref="member">operator|=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_flags<sp/>|=<sp/>other._flags;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88" refid="classerbsland_1_1conf_1_1_test_format_1a93d783014d6c2b76c056dc857896b56d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a93d783014d6c2b76c056dc857896b56d" kindref="member">operator|=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">Flag</ref><sp/>flag)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_flags.set(flag);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96" refid="classerbsland_1_1conf_1_1_test_format_1a3ba33d2101dec28f674afd0824fbacab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a3ba33d2101dec28f674afd0824fbacab" kindref="member">isSet</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">Flag</ref><sp/>flag)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_flags.test(flag);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a883441a5990b223cc5709a13e53e6135" kindref="member">TestFormat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::bitset&lt;_flagCount&gt;<sp/>&amp;flags)<sp/>:<sp/>_flags(flags)<sp/>{}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>std::bitset&lt;_flagCount&gt;<sp/>_flags;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator|(</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">erbsland::conf::TestFormat::Flag</ref><sp/>left,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">erbsland::conf::TestFormat::Flag</ref><sp/>right)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">erbsland::conf::TestFormat</ref><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">erbsland::conf::TestFormat</ref>(left);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>|=<sp/>right;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">[[nodiscard]]<sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>operator|(</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">erbsland::conf::TestFormat::Flag</ref><sp/>left,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">erbsland::conf::TestFormat</ref><sp/>right)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">erbsland::conf::TestFormat</ref><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>right;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>|=<sp/>left;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/TestFormat.hpp"/>
+  </compounddef>
+</doxygen>

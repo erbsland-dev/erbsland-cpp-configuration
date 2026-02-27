@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Source" href="source.html" />
+    <link rel="prev" title="Value" href="value.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf8DocumentE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::Document</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf11DocumentPtrE"><code class="docutils literal notranslate"><span class="pre">DocumentPtr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf15DocumentBuilderE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::DocumentBuilder</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Document</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/document.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="document">
+<h1>Document<a class="headerlink" href="#document" title="Link to this heading"></a></h1>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8DocumentE">
+<span id="_CPPv3N8erbsland4conf8DocumentE"></span><span id="_CPPv2N8erbsland4conf8DocumentE"></span><span id="erbsland::conf::Document"></span><span class="target" id="classerbsland_1_1conf_1_1_document"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Document</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="value.html#_CPPv4N8erbsland4conf5ValueE" title="erbsland::conf::Value"><span class="n"><span class="pre">Value</span></span></a><a class="headerlink" href="#_CPPv4N8erbsland4conf8DocumentE" title="Link to this definition"></a><br /></dt>
+<dd><p>A configuration document. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Document12FlatValueMapE">
+<span id="_CPPv3N8erbsland4conf8Document12FlatValueMapE"></span><span id="_CPPv2N8erbsland4conf8Document12FlatValueMapE"></span><span class="target" id="classerbsland_1_1conf_1_1_document_1a7f184978346c663dd325e28d52b5852d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FlatValueMap</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf8NamePathE" title="erbsland::conf::NamePath"><span class="n"><span class="pre">NamePath</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="value.html#_CPPv4N8erbsland4conf13ConstValuePtrE" title="erbsland::conf::ConstValuePtr"><span class="n"><span class="pre">ConstValuePtr</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Document12FlatValueMapE" title="Link to this definition"></a><br /></dt>
+<dd><p>The flat map type mapping name paths to constant value pointers. </p>
+<p>Maps each name path to the corresponding constant value in the document. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8DocumentD0Ev">
+<span id="_CPPv3N8erbsland4conf8DocumentD0Ev"></span><span id="_CPPv2N8erbsland4conf8DocumentD0Ev"></span><span id="erbsland::conf::Document::~Document"></span><span class="target" id="classerbsland_1_1conf_1_1_document_1ac153620900b7856a63fd69b051da4710"></span><span class="sig-name descname"><span class="n"><span class="pre">~Document</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8DocumentD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Document14toFlatValueMapEv">
+<span id="_CPPv3NK8erbsland4conf8Document14toFlatValueMapEv"></span><span id="_CPPv2NK8erbsland4conf8Document14toFlatValueMapEv"></span><span id="erbsland::conf::Document::toFlatValueMapC"></span><span class="target" id="classerbsland_1_1conf_1_1_document_1a5ebf54789ff7e49ee111540b1b1f9b07"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8Document12FlatValueMapE" title="erbsland::conf::Document::FlatValueMap"><span class="n"><span class="pre">FlatValueMap</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toFlatValueMap</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Document14toFlatValueMapEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert the value structure of this document into a flat map of values. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A flat map with all sections and values of this document. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf11DocumentPtrE">
+<span id="_CPPv3N8erbsland4conf11DocumentPtrE"></span><span id="_CPPv2N8erbsland4conf11DocumentPtrE"></span><span class="target" id="_document_8hpp_1ac7911335c2985d24950cadcf1739caea"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">DocumentPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf8DocumentE" title="erbsland::conf::Document"><span class="n"><span class="pre">Document</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf11DocumentPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilderE">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilderE"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilderE"></span><span id="erbsland::conf::DocumentBuilder"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DocumentBuilder</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilderE" title="Link to this definition"></a><br /></dt>
+<dd><p>Builds Configuration Documents Programmatically. </p>
+<p>The document builder allows building the value trees of configuration documents programmatically. It expects a logical sequence of sections and values and raises exceptions on name collisions.</p>
+<p><strong>Details:</strong></p>
+<p><ul class="simple">
+<li><p>The correct document syntax is fully checked when adding values. If the resulting document would become erroneous, an <code class="docutils literal notranslate"><a class="reference internal" href="error.html#classerbsland_1_1conf_1_1_error"><span class="std std-ref"><span class="pre">Error</span></span></a></code> (<code class="docutils literal notranslate"><span class="pre">Syntax</span></code>) is thrown.</p></li>
+<li><p>Values can only be added to existing sections.</p></li>
+<li><p>If you use a single name, when adding a value, it is automatically added to the last section.</p></li>
+<li><p>If you use more than one name in the name path, it is added to the specified section.</p></li>
+<li><p>When creating sections, this builder automatically creates intermediate sections and converts existing ones into section maps.</p></li>
+<li><p><a class="reference internal" href="name.html#classerbsland_1_1conf_1_1_name"><span class="std std-ref">Name</span></a> paths can be specified as text <code class="docutils literal notranslate"><a class="reference internal" href="name.html#classerbsland_1_1conf_1_1_name"><span class="std std-ref"><span class="pre">Name</span></span></a></code> or <code class="docutils literal notranslate"><a class="reference internal" href="name.html#classerbsland_1_1conf_1_1_name_path"><span class="std std-ref"><span class="pre">NamePath</span></span></a></code> objects.</p></li>
+</ul>
+</p>
+<p><strong>Limitations:</strong></p>
+<p><ul class="simple">
+<li><p>You must not use indexes or text-indexes in name paths to access specific elements in lists.</p></li>
+<li><p>This builder interface does not support adding locations to the elements.</p></li>
+</ul>
+</p>
+<p><strong>Example usage:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DocumentPtr</span> <span class="n">buildDocument</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">DocumentBuilder</span> <span class="n">builder</span><span class="p">;</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">addSectionMap</span><span class="p">(</span><span class="n">u8</span><span class="s2">&quot;main&quot;</span><span class="p">);</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">addValue</span><span class="p">(</span><span class="n">u8</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">String</span><span class="p">{</span><span class="s2">&quot;hello&quot;</span><span class="p">});</span>
+    <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="n">getDocumentAndReset</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder15DocumentBuilderEv">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder15DocumentBuilderEv"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder15DocumentBuilderEv"></span><span id="erbsland::conf::DocumentBuilder::DocumentBuilder"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1afd9b9d6f6636c41cac8402262861f1a8"></span><span class="sig-name descname"><span class="n"><span class="pre">DocumentBuilder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder15DocumentBuilderEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Default constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilderD0Ev">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilderD0Ev"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilderD0Ev"></span><span id="erbsland::conf::DocumentBuilder::~DocumentBuilder"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1aab7a192c9d05c8cd81f952e1964eac9f"></span><span class="sig-name descname"><span class="n"><span class="pre">~DocumentBuilder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilderD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder13addSectionMapERK12NamePathLike">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder13addSectionMapERK12NamePathLike"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder13addSectionMapERK12NamePathLike"></span><span id="erbsland::conf::DocumentBuilder::addSectionMap__NamePathLikeCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1ac79190e881a1fcdafd9bbe23a62799c8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addSectionMap</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder13addSectionMapERK12NamePathLike" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a section map with the given name path to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>namePath</strong> – The name path of the element. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder14addSectionListERK12NamePathLike">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder14addSectionListERK12NamePathLike"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder14addSectionListERK12NamePathLike"></span><span id="erbsland::conf::DocumentBuilder::addSectionList__NamePathLikeCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1a9f5a6792ea3e09f7000f017a7d3ef305"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addSectionList</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder14addSectionListERK12NamePathLike" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a section list with the given name path to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>namePath</strong> – The name path of the element. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN8erbsland4conf15DocumentBuilder8addValueEvRK12NamePathLikeRK1T">
+<span id="_CPPv3I0EN8erbsland4conf15DocumentBuilder8addValueERK12NamePathLikeRK1T"></span><span id="_CPPv2I0EN8erbsland4conf15DocumentBuilder8addValueERK12NamePathLikeRK1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN8erbsland4conf15DocumentBuilder8addValueEvRK12NamePathLikeRK1T" title="erbsland::conf::DocumentBuilder::addValue::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN8erbsland4conf15DocumentBuilder8addValueEvRK12NamePathLikeRK1T" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The value for the new element. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder10addIntegerERK12NamePathLikeK7Integer">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder10addIntegerERK12NamePathLikeK7Integer"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder10addIntegerERK12NamePathLikeK7Integer"></span><span id="erbsland::conf::DocumentBuilder::addInteger__NamePathLikeCR.IntegerC"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1af856bea8a30a7b1c37be4412c3e49795"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addInteger</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="data.html#_CPPv4N8erbsland4conf7IntegerE" title="erbsland::conf::Integer"><span class="n"><span class="pre">Integer</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder10addIntegerERK12NamePathLikeK7Integer" title="Link to this definition"></a><br /></dt>
+<dd><p>Add an integer value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The integer value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder10addBooleanERK12NamePathLikeKb">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder10addBooleanERK12NamePathLikeKb"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder10addBooleanERK12NamePathLikeKb"></span><span id="erbsland::conf::DocumentBuilder::addBoolean__NamePathLikeCR.bC"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1a678d8a75dce46d4e97404ff1c96db5da"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addBoolean</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder10addBooleanERK12NamePathLikeKb" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a boolean value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The boolean value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder8addFloatERK12NamePathLikeK5Float">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder8addFloatERK12NamePathLikeK5Float"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder8addFloatERK12NamePathLikeK5Float"></span><span id="erbsland::conf::DocumentBuilder::addFloat__NamePathLikeCR.FloatC"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1a00d0151d1873567689037b0dbbb21251"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addFloat</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="data.html#_CPPv4N8erbsland4conf5FloatE" title="erbsland::conf::Float"><span class="n"><span class="pre">Float</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder8addFloatERK12NamePathLikeK5Float" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a float value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The floating-point value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder7addTextERK12NamePathLikeRK6String">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder7addTextERK12NamePathLikeRK6String"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder7addTextERK12NamePathLikeRK6String"></span><span id="erbsland::conf::DocumentBuilder::addText__NamePathLikeCR.StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1a0c5cf731b4968f0472d5aee6e3698507"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addText</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder7addTextERK12NamePathLikeRK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a text value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The text value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder7addDateERK12NamePathLikeRK4Date">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder7addDateERK12NamePathLikeRK4Date"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder7addDateERK12NamePathLikeRK4Date"></span><span id="erbsland::conf::DocumentBuilder::addDate__NamePathLikeCR.DateCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1aea5a5580219b466c6059f3c5f78d84df"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addDate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="data.html#_CPPv4N8erbsland4conf4DateE" title="erbsland::conf::Date"><span class="n"><span class="pre">Date</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder7addDateERK12NamePathLikeRK4Date" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a date value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The date value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder7addTimeERK12NamePathLikeRK4Time">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder7addTimeERK12NamePathLikeRK4Time"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder7addTimeERK12NamePathLikeRK4Time"></span><span id="erbsland::conf::DocumentBuilder::addTime__NamePathLikeCR.TimeCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1a67ad64c03de224f8acd40f1f7fec5189"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTime</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="data.html#_CPPv4N8erbsland4conf4TimeE" title="erbsland::conf::Time"><span class="n"><span class="pre">Time</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder7addTimeERK12NamePathLikeRK4Time" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a time value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The time value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder11addDateTimeERK12NamePathLikeRK8DateTime">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder11addDateTimeERK12NamePathLikeRK8DateTime"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder11addDateTimeERK12NamePathLikeRK8DateTime"></span><span id="erbsland::conf::DocumentBuilder::addDateTime__NamePathLikeCR.DateTimeCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1aa652a339f9905c64b887c0c1cf49ac44"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addDateTime</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="data.html#_CPPv4N8erbsland4conf8DateTimeE" title="erbsland::conf::DateTime"><span class="n"><span class="pre">DateTime</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder11addDateTimeERK12NamePathLikeRK8DateTime" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a date-time value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The date-time value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder8addBytesERK12NamePathLikeRK5Bytes">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder8addBytesERK12NamePathLikeRK5Bytes"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder8addBytesERK12NamePathLikeRK5Bytes"></span><span id="erbsland::conf::DocumentBuilder::addBytes__NamePathLikeCR.BytesCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1ae84f948a4b9d1c70d0caf32c4466cff7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addBytes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="data.html#_CPPv4N8erbsland4conf5BytesE" title="erbsland::conf::Bytes"><span class="n"><span class="pre">Bytes</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder8addBytesERK12NamePathLikeRK5Bytes" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a byte array value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The byte array value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder12addTimeDeltaERK12NamePathLikeRK9TimeDelta">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder12addTimeDeltaERK12NamePathLikeRK9TimeDelta"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder12addTimeDeltaERK12NamePathLikeRK9TimeDelta"></span><span id="erbsland::conf::DocumentBuilder::addTimeDelta__NamePathLikeCR.TimeDeltaCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1a95746a7849eda3d29f8bf71d8dcb5b99"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimeDelta</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="data.html#_CPPv4N8erbsland4conf9TimeDeltaE" title="erbsland::conf::TimeDelta"><span class="n"><span class="pre">TimeDelta</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder12addTimeDeltaERK12NamePathLikeRK9TimeDelta" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a time delta value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The time delta value to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder8addRegExERK12NamePathLikeRK5RegEx">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder8addRegExERK12NamePathLikeRK5RegEx"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder8addRegExERK12NamePathLikeRK5RegEx"></span><span id="erbsland::conf::DocumentBuilder::addRegEx__NamePathLikeCR.RegExCR"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1ac0b2e0fe5586de3e0821e965f45bfcb9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addRegEx</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">RegEx</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder8addRegExERK12NamePathLikeRK5RegEx" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a regular expression value to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name path of the element. </p></li>
+<li><p><strong>value</strong> – The regular expression to add. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder5resetEv">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder5resetEv"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder5resetEv"></span><span id="erbsland::conf::DocumentBuilder::reset"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1a03f3f4b2db6ca0d3005cef95b8dfe7d7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder5resetEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Reset the builder and discard the current document. </p>
+<p>This will reset the builder into its initial state and discard any document that is currently being built. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15DocumentBuilder19getDocumentAndResetEv">
+<span id="_CPPv3N8erbsland4conf15DocumentBuilder19getDocumentAndResetEv"></span><span id="_CPPv2N8erbsland4conf15DocumentBuilder19getDocumentAndResetEv"></span><span id="erbsland::conf::DocumentBuilder::getDocumentAndReset"></span><span class="target" id="classerbsland_1_1conf_1_1_document_builder_1af27fdd11bd9d108fd7b590242aab79ba"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDocumentAndReset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf15DocumentBuilder19getDocumentAndResetEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the document and reset the builder. </p>
+<p>This will finalize and return the currently built document and reset the builder into its initial state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The built document. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="value.html" class="btn btn-neutral float-left" title="Value" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="source.html" class="btn btn-neutral float-right" title="Source" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

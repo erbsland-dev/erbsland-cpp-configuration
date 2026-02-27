@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_date_8hpp" kind="file" language="C++">
+    <compoundname>Date.hpp</compoundname>
+    <includes refid="_error_8hpp" local="yes">Error.hpp</includes>
+    <includes local="yes">impl/utilities/ComparisonHelper.hpp</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_date_time_8hpp" local="yes">erbsland/conf/DateTime.hpp</includedby>
+    <includedby refid="_value_8hpp" local="yes">erbsland/conf/Value.hpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <includedby refid="_type_traits_8hpp" local="yes">erbsland/conf/vr/builder/TypeTraits.hpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/Date.hpp</label>
+        <link refid="_date_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ErrorCategory.hpp</label>
+        <link refid="_error_category_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Name.hpp</label>
+        <link refid="_name_8hpp_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>NamePath.hpp</label>
+        <link refid="_name_path_8hpp_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>NameType.hpp</label>
+        <link refid="_name_type_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Position.hpp</label>
+        <link refid="_position_8hpp_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>SourceIdentifier.hpp</label>
+        <link refid="_source_identifier_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>algorithm</label>
+      </node>
+      <node id="23">
+        <label>array</label>
+      </node>
+      <node id="12">
+        <label>bitset</label>
+      </node>
+      <node id="39">
+        <label>chrono</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="37">
+        <label>exception</label>
+      </node>
+      <node id="38">
+        <label>filesystem</label>
+      </node>
+      <node id="7">
+        <label>format</label>
+      </node>
+      <node id="18">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="28">
+        <label>impl/constants/Defaults.hpp</label>
+      </node>
+      <node id="29">
+        <label>impl/utf8/U8StringView.hpp</label>
+      </node>
+      <node id="14">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="15">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="35">
+        <label>impl/utilities/HashHelper.hpp</label>
+      </node>
+      <node id="26">
+        <label>impl/utilities/InternalView.hpp</label>
+      </node>
+      <node id="16">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="36">
+        <label>limits</label>
+      </node>
+      <node id="30">
+        <label>memory</label>
+      </node>
+      <node id="19">
+        <label>optional</label>
+      </node>
+      <node id="20">
+        <label>ranges</label>
+      </node>
+      <node id="21">
+        <label>span</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="31">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>erbsland/conf/Date.hpp</label>
+        <link refid="_date_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/DateTime.hpp</label>
+        <link refid="_date_time_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+      <node id="8">
+        <label>erbsland/conf/vr/builder/TypeTraits.hpp</label>
+        <link refid="_type_traits_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>erbsland/conf/vr/builder/all.hpp</label>
+        <link refid="vr_2builder_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_date" prot="public">erbsland::conf::Date</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Error.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/utilities/ComparisonHelper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classerbsland_1_1conf_1_1_date" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref><sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classerbsland_1_1conf_1_1_date_1a049d5d01eba05cf1151b132872eee3c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a049d5d01eba05cf1151b132872eee3c0" kindref="member">Date</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classerbsland_1_1conf_1_1_date_1a1a549a99e3c46f9ca1efbf4a422de3f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a1a549a99e3c46f9ca1efbf4a422de3f7" kindref="member">Date</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1afc78076d91b52b9b2098f39b10a092e5" kindref="member">year</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a2e6387e8ffeb1f0eef2d5c651647e508" kindref="member">month</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a200c10d37c41558a7de9080fa22f2d49" kindref="member">day</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>defaults</highlight></codeline>
+<codeline lineno="39" refid="classerbsland_1_1conf_1_1_date_1a9e4ffc87a0731652df562308a8377a48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a9e4ffc87a0731652df562308a8377a48" kindref="member">~Date</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="classerbsland_1_1conf_1_1_date_1af6b138a55f41112ad0652b6e9ad3910f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_date_1af6b138a55f41112ad0652b6e9ad3910f" kindref="member">Date</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43" refid="classerbsland_1_1conf_1_1_date_1a0dd0536f786089d6422f7893eaf3773b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_date_1a0dd0536f786089d6422f7893eaf3773b" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>accessors</highlight></codeline>
+<codeline lineno="53" refid="classerbsland_1_1conf_1_1_date_1a7d7edb101ce3e7b3dfc4924d728c7296" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a7d7edb101ce3e7b3dfc4924d728c7296" kindref="member">isUndefined</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_daysSinceEpoch<sp/>&lt;=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classerbsland_1_1conf_1_1_date_1afc78076d91b52b9b2098f39b10a092e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1afc78076d91b52b9b2098f39b10a092e5" kindref="member">year</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classerbsland_1_1conf_1_1_date_1a2e6387e8ffeb1f0eef2d5c651647e508" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a2e6387e8ffeb1f0eef2d5c651647e508" kindref="member">month</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classerbsland_1_1conf_1_1_date_1a200c10d37c41558a7de9080fa22f2d49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a200c10d37c41558a7de9080fa22f2d49" kindref="member">day</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>conversion</highlight></codeline>
+<codeline lineno="80" refid="classerbsland_1_1conf_1_1_date_1a7e49e5a0cd04ab9f29e2552f36ae23c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>int64_t<sp/><ref refid="classerbsland_1_1conf_1_1_date_1a7e49e5a0cd04ab9f29e2552f36ae23c5" kindref="member">toDaysSinceEpoch</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_daysSinceEpoch;<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classerbsland_1_1conf_1_1_date_1ad37853a5aa9602b96cc3e73281d9610c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_date_1ad37853a5aa9602b96cc3e73281d9610c" kindref="member">toText</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="98" refid="classerbsland_1_1conf_1_1_date_1abca984966212a7745b3739e7ecb82fc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1abca984966212a7745b3739e7ecb82fc2" kindref="member">isValid</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1afc78076d91b52b9b2098f39b10a092e5" kindref="member">year</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a2e6387e8ffeb1f0eef2d5c651647e508" kindref="member">month</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_date_1a200c10d37c41558a7de9080fa22f2d49" kindref="member">day</ref>)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>_daysSinceEpoch{0};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/Date.hpp"/>
+  </compounddef>
+</doxygen>

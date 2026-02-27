@@ -1,0 +1,618 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Error &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Location and Position" href="location.html" />
+    <link rel="prev" title="Name and Name-Path" href="name.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Error</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::Error</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategoryE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::ErrorCategory</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Error</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/error.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="error">
+<h1>Error<a class="headerlink" href="#error" title="Link to this heading"></a></h1>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">throw</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="n">ErrorCategory</span><span class="o">::</span><span class="n">Syntax</span><span class="p">,</span><span class="w"> </span><span class="sa">u8</span><span class="s">&quot;my message&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">auto</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="linenos">2</span><span class="k">throw</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="n">ErrorCategory</span><span class="o">::</span><span class="n">Syntax</span><span class="p">,</span><span class="w"> </span><span class="sa">u8</span><span class="s">&quot;my message&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="c1">// ...</span>
+<span class="linenos">3</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">system_error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="n">ErrorCategory</span><span class="o">::</span><span class="n">IO</span><span class="p">,</span><span class="w"> </span><span class="sa">u8</span><span class="s">&quot;System error&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">code</span><span class="p">());</span>
+<span class="linenos">5</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">Location</span><span class="w"> </span><span class="n">location</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="linenos">2</span><span class="n">NamePath</span><span class="w"> </span><span class="n">namePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="linenos">3</span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="w"> </span><span class="n">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="linenos">4</span><span class="n">std</span><span class="o">::</span><span class="n">error_code</span><span class="w"> </span><span class="n">errorCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span>
+<span class="linenos">5</span><span class="k">throw</span><span class="w"> </span><span class="n">Error</span><span class="p">(</span><span class="n">ErrorCategory</span><span class="o">::</span><span class="n">Syntax</span><span class="p">,</span><span class="w"> </span><span class="sa">u8</span><span class="s">&quot;my message&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">,</span><span class="w"> </span><span class="n">namePath</span><span class="p">,</span><span class="w"> </span><span class="n">filePath</span><span class="p">,</span><span class="w"> </span><span class="n">errorCode</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="c1">// ... parse document, etc ...</span>
+<span class="linenos">3</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">toText</span><span class="p">().</span><span class="n">toCharString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">6</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf5ErrorE">
+<span id="_CPPv3N8erbsland4conf5ErrorE"></span><span id="_CPPv2N8erbsland4conf5ErrorE"></span><span id="erbsland::conf::Error"></span><span class="target" id="classerbsland_1_1conf_1_1_error"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">exception</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf5ErrorE" title="Link to this definition"></a><br /></dt>
+<dd><p>The exception for all errors. </p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ErrorTest</span></code></p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3Msg">
+<span id="_CPPv3I0EN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3Msg"></span><span id="_CPPv2I0EN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3Msg"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Msg</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classerbsland_1_1conf_1_1_error_1ae7e5520c64642c0c739141da27040f9a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategoryE" title="erbsland::conf::ErrorCategory"><span class="n"><span class="pre">ErrorCategory</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">category</span></span>, <a class="reference internal" href="#_CPPv4I0EN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3Msg" title="erbsland::conf::Error::Error::Msg"><span class="n"><span class="pre">Msg</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4I0EN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3Msg" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new error with the given message. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> – The error category. </p></li>
+<li><p><strong>message</strong> – The string with the message. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0DpEN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3MsgDpRR4Args">
+<span id="_CPPv3I0DpEN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3MsgDpRR4Args"></span><span id="_CPPv2I0DpEN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3MsgDpRR4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Msg</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classerbsland_1_1conf_1_1_error_1a2fd722a56fefb67858e2f56be38ca844"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategoryE" title="erbsland::conf::ErrorCategory"><span class="n"><span class="pre">ErrorCategory</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">category</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3MsgDpRR4Args" title="erbsland::conf::Error::Error::Msg"><span class="n"><span class="pre">Msg</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3MsgDpRR4Args" title="erbsland::conf::Error::Error::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4I0DpEN8erbsland4conf5Error5ErrorEK13ErrorCategoryRR3MsgDpRR4Args" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new error with the given message, location, and file path. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> – The error category. </p></li>
+<li><p><strong>message</strong> – The string with the message. </p></li>
+<li><p><strong>args</strong> – Optional arguments for the error message. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf5Error5ErrorERK5Error">
+<span id="_CPPv3N8erbsland4conf5Error5ErrorERK5Error"></span><span id="_CPPv2N8erbsland4conf5Error5ErrorERK5Error"></span><span id="erbsland::conf::Error::Error__ErrorCR"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a161bb2ac9b20f59bf2dbb4366f2e5144"></span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf5Error5ErrorERK5Error" title="erbsland::conf::Error::Error"><span class="n"><span class="pre">Error</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf5Error5ErrorERK5Error" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf5Error5ErrorERR5Error">
+<span id="_CPPv3N8erbsland4conf5Error5ErrorERR5Error"></span><span id="_CPPv2N8erbsland4conf5Error5ErrorERR5Error"></span><span id="erbsland::conf::Error::Error__ErrorRR"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a654ce86214a8278a00e79727800c020b"></span><span class="sig-name descname"><span class="n"><span class="pre">Error</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf5Error5ErrorERR5Error" title="erbsland::conf::Error::Error"><span class="n"><span class="pre">Error</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf5Error5ErrorERR5Error" title="Link to this definition"></a><br /></dt>
+<dd><p>Default move constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf5ErrorD0Ev">
+<span id="_CPPv3N8erbsland4conf5ErrorD0Ev"></span><span id="_CPPv2N8erbsland4conf5ErrorD0Ev"></span><span id="erbsland::conf::Error::~Error"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a084913126a29f591709952ca7c7d9dc6"></span><span class="sig-name descname"><span class="n"><span class="pre">~Error</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf5ErrorD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf5ErroraSERK5Error">
+<span id="_CPPv3N8erbsland4conf5ErroraSERK5Error"></span><span id="_CPPv2N8erbsland4conf5ErroraSERK5Error"></span><span id="erbsland::conf::Error::assign-operator__ErrorCR"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a2e82fb93a505feac93de102f04fca38f"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf5ErroraSERK5Error" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf5ErroraSERR5Error">
+<span id="_CPPv3N8erbsland4conf5ErroraSERR5Error"></span><span id="_CPPv2N8erbsland4conf5ErroraSERR5Error"></span><span id="erbsland::conf::Error::assign-operator__ErrorRR"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1add620b43205127e3b7ac44c7add698fe"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf5ErroraSERR5Error" title="Link to this definition"></a><br /></dt>
+<dd><p>Default move assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error8categoryEv">
+<span id="_CPPv3NK8erbsland4conf5Error8categoryEv"></span><span id="_CPPv2NK8erbsland4conf5Error8categoryEv"></span><span id="erbsland::conf::Error::categoryC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a8d0eb1492021e62b248e23dade22845f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategoryE" title="erbsland::conf::ErrorCategory"><span class="n"><span class="pre">ErrorCategory</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">category</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error8categoryEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the error category. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The error category. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error7messageEv">
+<span id="_CPPv3NK8erbsland4conf5Error7messageEv"></span><span id="_CPPv2NK8erbsland4conf5Error7messageEv"></span><span id="erbsland::conf::Error::messageC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">message</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error7messageEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the message. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The message text. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error8locationEv">
+<span id="_CPPv3NK8erbsland4conf5Error8locationEv"></span><span id="_CPPv2NK8erbsland4conf5Error8locationEv"></span><span id="erbsland::conf::Error::locationC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a2b05d540de23acbedf20c47813c40e37"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="location.html#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">location</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error8locationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the location. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The location, or an undefined location if none was set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error8namePathEv">
+<span id="_CPPv3NK8erbsland4conf5Error8namePathEv"></span><span id="_CPPv2NK8erbsland4conf5Error8namePathEv"></span><span id="erbsland::conf::Error::namePathC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1addfdbb838a8e00abffa5170f7f2acd8b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf8NamePathE" title="erbsland::conf::NamePath"><span class="n"><span class="pre">NamePath</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">namePath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error8namePathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the name-path. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name-path, or an empty name-path if none was set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error8filePathEv">
+<span id="_CPPv3NK8erbsland4conf5Error8filePathEv"></span><span id="_CPPv2NK8erbsland4conf5Error8filePathEv"></span><span id="erbsland::conf::Error::filePathC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a94bafd56dc0ae26523c349adf6e7e74b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filePath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error8filePathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the file path. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The file path, or an empty file path if none was set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error9errorCodeEv">
+<span id="_CPPv3NK8erbsland4conf5Error9errorCodeEv"></span><span id="_CPPv2NK8erbsland4conf5Error9errorCodeEv"></span><span id="erbsland::conf::Error::errorCodeC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a3852a8152eeacb96dcd755053b578555"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">error_code</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">errorCode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error9errorCodeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the system-error code. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The system-error code, or an undefined one if none was set. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error12withLocationERK8Location">
+<span id="_CPPv3NK8erbsland4conf5Error12withLocationERK8Location"></span><span id="_CPPv2NK8erbsland4conf5Error12withLocationERK8Location"></span><span id="erbsland::conf::Error::withLocation__LocationCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a8ee3dd71783d7f0dea8521a502278be4"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">withLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="location.html#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error12withLocationERK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a copy with the given location added or replaced. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>location</strong> – The location to add or replace. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A copy of this error, with the location added or replaced. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error23withNamePathAndLocationERK8NamePathRK8Location">
+<span id="_CPPv3NK8erbsland4conf5Error23withNamePathAndLocationERK8NamePathRK8Location"></span><span id="_CPPv2NK8erbsland4conf5Error23withNamePathAndLocationERK8NamePathRK8Location"></span><span id="erbsland::conf::Error::withNamePathAndLocation__NamePathCR.LocationCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a3419d9c06472e6a4dcbb7e6d673ed977"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">withNamePathAndLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf8NamePathE" title="erbsland::conf::NamePath"><span class="n"><span class="pre">NamePath</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="location.html#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error23withNamePathAndLocationERK8NamePathRK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a copy with the given name-path location added or replaced. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name-path to add or replace. </p></li>
+<li><p><strong>location</strong> – The location to add or replace. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A copy of this error, with the name-path and location added or replaced. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error17withMessagePrefixERK6String">
+<span id="_CPPv3NK8erbsland4conf5Error17withMessagePrefixERK6String"></span><span id="_CPPv2NK8erbsland4conf5Error17withMessagePrefixERK6String"></span><span id="erbsland::conf::Error::withMessagePrefix__StringCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1ab104adfb611b7deb31f343d6a7ec3caa"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">withMessagePrefix</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">prefix</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error17withMessagePrefixERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a copy, adding a prefix to the error message. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> – The prefix to add to the error message. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A copy of this error, with the message prefixed. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error11withMessageERK6String">
+<span id="_CPPv3NK8erbsland4conf5Error11withMessageERK6String"></span><span id="_CPPv2NK8erbsland4conf5Error11withMessageERK6String"></span><span id="erbsland::conf::Error::withMessage__StringCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a2fa37e99dad07ef6e32e69fb6c29abf9"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">withMessage</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error11withMessageERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a copy, replacing the error message. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> – The new message. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A copy of this error, with the message replaced. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error6toTextEv">
+<span id="_CPPv3NK8erbsland4conf5Error6toTextEv"></span><span id="_CPPv2NK8erbsland4conf5Error6toTextEv"></span><span id="erbsland::conf::Error::toTextC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a135f1d44b8609002d09c2cfc4411eb01"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error6toTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert this error into a text representation. </p>
+<p>This method creates a text representation of this error message that is safe to be used in logs, console-outputs, or user-interfaces. Exceedingly long paths and texts are trimmed and control characters are escaped. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The string representation of this error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf5Error4whatEv">
+<span id="_CPPv3NK8erbsland4conf5Error4whatEv"></span><span id="_CPPv2NK8erbsland4conf5Error4whatEv"></span><span id="erbsland::conf::Error::whatC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_1a5b3839edc8f84f36a50befa7e0fcdc33"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">what</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf5Error4whatEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Return a null-terminated string describing the error (std::exception interface). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A C-string with the error message; suitable for logging or exception handling. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategoryE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategoryE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategoryE"></span><span id="erbsland::conf::ErrorCategory"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ErrorCategory</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategoryE" title="Link to this definition"></a><br /></dt>
+<dd><p>The category of an error. </p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ErrorCategoryTest</span></code></p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4EnumE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4EnumE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4EnumE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Enum</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4EnumE" title="Link to this definition"></a><br /></dt>
+<dd><p>The underlying enum type representing distinct categories of errors. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum2IOE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum2IOE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum2IOE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af54c675aef04f12889398a8593ab2c66"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IO</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum2IOE" title="Link to this definition"></a><br /></dt>
+<dd><p>A problem occurred while reading data from an I/O stream. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum8EncodingE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum8EncodingE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum8EncodingE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493af5a35167b07cf67b73f856f422ee41bb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Encoding</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum8EncodingE" title="Link to this definition"></a><br /></dt>
+<dd><p>The document contains a problem with UTF-8 encoding. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum13UnexpectedEndE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum13UnexpectedEndE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum13UnexpectedEndE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a3aa38a94d051d866ddaa774d691de986"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UnexpectedEnd</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum13UnexpectedEndE" title="Link to this definition"></a><br /></dt>
+<dd><p>The document ended unexpectedly. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum9CharacterE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum9CharacterE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum9CharacterE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493acd9fce4e937f06edbae6d48d62656324"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Character</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum9CharacterE" title="Link to this definition"></a><br /></dt>
+<dd><p>The document contains a control character that is not allowed. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum6SyntaxE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum6SyntaxE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum6SyntaxE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Syntax</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum6SyntaxE" title="Link to this definition"></a><br /></dt>
+<dd><p>The document has a syntax error. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum13LimitExceededE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum13LimitExceededE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum13LimitExceededE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a94bffbef93a2ce79226c6cee581664f8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LimitExceeded</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum13LimitExceededE" title="Link to this definition"></a><br /></dt>
+<dd><p>The size of a name, text, or buffer exceeds the permitted limit. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum12NameConflictE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum12NameConflictE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum12NameConflictE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a05b41f0f40e3fda9c1eace82462fdc14"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NameConflict</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum12NameConflictE" title="Link to this definition"></a><br /></dt>
+<dd><p>The same name has already been defined earlier in the document. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum11IndentationE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum11IndentationE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum11IndentationE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493ad60cee61ec645fefcbee254c3a58cf6f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Indentation</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum11IndentationE" title="Link to this definition"></a><br /></dt>
+<dd><p>The indentation of a continued line does not match the previous line. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum11UnsupportedE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum11UnsupportedE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum11UnsupportedE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a4983393422505a01c89211a9712d8a1e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Unsupported</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum11UnsupportedE" title="Link to this definition"></a><br /></dt>
+<dd><p>The requested feature/version is not supported by this parser. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum9SignatureE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum9SignatureE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum9SignatureE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a2f312d0109e223272247a7d45514c0ed"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Signature</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum9SignatureE" title="Link to this definition"></a><br /></dt>
+<dd><p>The document’s signature was rejected. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum6AccessE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum6AccessE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum6AccessE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Access</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum6AccessE" title="Link to this definition"></a><br /></dt>
+<dd><p>The document was rejected due to an access check. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum10ValidationE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum10ValidationE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum10ValidationE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a1bcb4284b8131f826528df6b2959cf38"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Validation</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum10ValidationE" title="Link to this definition"></a><br /></dt>
+<dd><p>The document did not meet one of the validation rules. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum8InternalE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum8InternalE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum8InternalE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a0bcbcac219b1df2b6c76e274ab146b59"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Internal</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum8InternalE" title="Link to this definition"></a><br /></dt>
+<dd><p>The parser encountered an unexpected internal error. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum13ValueNotFoundE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum13ValueNotFoundE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum13ValueNotFoundE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a744e0b81ef3a8794126baba6ccda8d82"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValueNotFound</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum13ValueNotFoundE" title="Link to this definition"></a><br /></dt>
+<dd><p>A value with a given name-path couldn’t be found. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory4Enum12TypeMismatchE">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory4Enum12TypeMismatchE"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory4Enum12TypeMismatchE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493affdbe99e7a1a22795d33095209d761ca"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TypeMismatch</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory4Enum12TypeMismatchE" title="Link to this definition"></a><br /></dt>
+<dd><p>A value exists but has the wrong type for a conversion. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory13ErrorCategoryEv">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory13ErrorCategoryEv"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory13ErrorCategoryEv"></span><span id="erbsland::conf::ErrorCategory::ErrorCategoryCE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1af8aafe0269d721c9440d41af330782b5"></span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ErrorCategory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory13ErrorCategoryEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Create an internal error category. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory13ErrorCategoryE4Enum">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory13ErrorCategoryE4Enum"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory13ErrorCategoryE4Enum"></span><span id="erbsland::conf::ErrorCategory::ErrorCategory__EnumCE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1ab94fae3f1f36cb671e18e86603580e2d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ErrorCategory</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategory4EnumE" title="erbsland::conf::ErrorCategory::Enum"><span class="n"><span class="pre">Enum</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory13ErrorCategoryE4Enum" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new error category. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The error category enum. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategoryD0Ev">
+<span id="_CPPv3N8erbsland4conf13ErrorCategoryD0Ev"></span><span id="_CPPv2N8erbsland4conf13ErrorCategoryD0Ev"></span><span id="erbsland::conf::ErrorCategory::~ErrorCategory"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a1bf8e06badd3d4bfd741f69f5154c42b"></span><span class="sig-name descname"><span class="n"><span class="pre">~ErrorCategory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategoryD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategory13ErrorCategoryERK13ErrorCategory">
+<span id="_CPPv3N8erbsland4conf13ErrorCategory13ErrorCategoryERK13ErrorCategory"></span><span id="_CPPv2N8erbsland4conf13ErrorCategory13ErrorCategoryERK13ErrorCategory"></span><span id="erbsland::conf::ErrorCategory::ErrorCategory__ErrorCategoryCR"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a0415cb0d693ddb027c34e9f621fcc9b0"></span><span class="sig-name descname"><span class="n"><span class="pre">ErrorCategory</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategory13ErrorCategoryERK13ErrorCategory" title="erbsland::conf::ErrorCategory::ErrorCategory"><span class="n"><span class="pre">ErrorCategory</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategory13ErrorCategoryERK13ErrorCategory" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategoryaSERK13ErrorCategory">
+<span id="_CPPv3N8erbsland4conf13ErrorCategoryaSERK13ErrorCategory"></span><span id="_CPPv2N8erbsland4conf13ErrorCategoryaSERK13ErrorCategory"></span><span id="erbsland::conf::ErrorCategory::assign-operator__ErrorCategoryCR"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a661194a68daf6a7989788ab1f823fccf"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategoryE" title="erbsland::conf::ErrorCategory"><span class="n"><span class="pre">ErrorCategory</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategoryE" title="erbsland::conf::ErrorCategory"><span class="n"><span class="pre">ErrorCategory</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategoryaSERK13ErrorCategory" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13ErrorCategoryaSE4Enum">
+<span id="_CPPv3N8erbsland4conf13ErrorCategoryaSE4Enum"></span><span id="_CPPv2N8erbsland4conf13ErrorCategoryaSE4Enum"></span><span id="erbsland::conf::ErrorCategory::assign-operator__Enum"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a631103306ee7df0805a94e9d6c743637"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategoryE" title="erbsland::conf::ErrorCategory"><span class="n"><span class="pre">ErrorCategory</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategory4EnumE" title="erbsland::conf::ErrorCategory::Enum"><span class="n"><span class="pre">Enum</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13ErrorCategoryaSE4Enum" title="Link to this definition"></a><br /></dt>
+<dd><p>Assign a new enum value to this error category. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The enum value to assign. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Reference to this error category. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf13ErrorCategorycv4EnumEv">
+<span id="_CPPv3NK8erbsland4conf13ErrorCategorycv4EnumEv"></span><span id="_CPPv2NK8erbsland4conf13ErrorCategorycv4EnumEv"></span><span id="erbsland::conf::ErrorCategory::castto-Enum-operatorCCE"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a86af35d83142ef3e7735d39eb52932de"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf13ErrorCategory4EnumE" title="erbsland::conf::ErrorCategory::Enum"><span class="n"><span class="pre">Enum</span></span></a></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf13ErrorCategorycv4EnumEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert to the underlying enum value. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The enum representation of this error category. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf13ErrorCategorycviEv">
+<span id="_CPPv3NK8erbsland4conf13ErrorCategorycviEv"></span><span id="_CPPv2NK8erbsland4conf13ErrorCategorycviEv"></span><span id="erbsland::conf::ErrorCategory::castto-i-operatorC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1abbca9bf5528657a0577790712164ff2f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf13ErrorCategorycviEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert to the integer error code. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The numeric code of this error category. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf13ErrorCategory6toTextEv">
+<span id="_CPPv3NK8erbsland4conf13ErrorCategory6toTextEv"></span><span id="_CPPv2NK8erbsland4conf13ErrorCategory6toTextEv"></span><span id="erbsland::conf::ErrorCategory::toTextC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a00c2fb5732a1f1c76da175e366a03ff1"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">toText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf13ErrorCategory6toTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the text representation of this error category. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A text representation of this error category. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf13ErrorCategory6toCodeEv">
+<span id="_CPPv3NK8erbsland4conf13ErrorCategory6toCodeEv"></span><span id="_CPPv2NK8erbsland4conf13ErrorCategory6toCodeEv"></span><span id="erbsland::conf::ErrorCategory::toCodeC"></span><span class="target" id="classerbsland_1_1conf_1_1_error_category_1a2ce835d1f744e4f4ee0aa8dcc6e3cfff"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toCode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf13ErrorCategory6toCodeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the code for this error category. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The error code. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="name.html" class="btn btn-neutral float-left" title="Name and Name-Path" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="location.html" class="btn btn-neutral float-right" title="Location and Position" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

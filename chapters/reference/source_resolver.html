@@ -1,0 +1,401 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Source Resolver &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Access Check" href="access_check.html" />
+    <link rel="prev" title="Signer" href="signer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Source Resolver</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf14SourceResolverE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::SourceResolver</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf21SourceResolverContextE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::SourceResolverContext</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf17SourceResolverPtrE"><code class="docutils literal notranslate"><span class="pre">SourceResolverPtr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf18FileSourceResolverE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::FileSourceResolver</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf21FileSourceResolverPtrE"><code class="docutils literal notranslate"><span class="pre">FileSourceResolverPtr</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Source Resolver</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/source_resolver.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="source-resolver">
+<h1>Source Resolver<a class="headerlink" href="#source-resolver" title="Link to this heading"></a></h1>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#pragma once</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/conf/SourceResolver.hpp&gt;</span>
+<span class="linenos"> 4</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;erbsland/conf/FileSourceResolver.hpp&gt;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="k">using</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">SourceResolver</span><span class="p">;</span>
+<span class="linenos"> 7</span><span class="k">using</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">SourceResolverPtr</span><span class="p">;</span>
+<span class="linenos"> 8</span><span class="k">using</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">SourceResolverContext</span><span class="p">;</span>
+<span class="linenos"> 9</span><span class="k">using</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">SourceList</span><span class="p">;</span>
+<span class="linenos">10</span><span class="k">using</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">SourceListPtr</span><span class="p">;</span>
+<span class="linenos">11</span><span class="k">using</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">FileSourceResolver</span><span class="p">;</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="k">class</span><span class="w"> </span><span class="nc">MySourceResolver</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SourceResolver</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">14</span><span class="k">public</span><span class="o">:</span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">MySourceResolver</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">_fallbackResolver</span><span class="p">(</span><span class="n">FileSourceResolver</span><span class="o">::</span><span class="n">create</span><span class="p">())</span><span class="w"> </span><span class="p">{}</span>
+<span class="linenos">16</span><span class="w">    </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">create</span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">SourceResolverPtr</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MySourceResolver</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="k">public</span><span class="o">:</span>
+<span class="linenos">21</span><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">resolve</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">SourceResolverContext</span><span class="w"> </span><span class="o">&amp;</span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">SourceListPtr</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">22</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">context</span><span class="p">.</span><span class="n">includeText</span><span class="p">.</span><span class="n">starts_with</span><span class="p">(</span><span class="sa">u8</span><span class="s">&quot;my:&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">23</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">_fallbackResolver</span><span class="o">-&gt;</span><span class="n">resolve</span><span class="p">(</span><span class="n">context</span><span class="p">);</span>
+<span class="linenos">24</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">25</span><span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">SourceList</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="linenos">26</span><span class="w">        </span><span class="c1">// ...add my sources...</span>
+<span class="linenos">27</span><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="linenos">28</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="k">private</span><span class="o">:</span>
+<span class="linenos">31</span><span class="w">    </span><span class="n">SourceResolverPtr</span><span class="w"> </span><span class="n">_fallbackResolver</span><span class="p">;</span>
+<span class="linenos">32</span><span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf14SourceResolverE">
+<span id="_CPPv3N8erbsland4conf14SourceResolverE"></span><span id="_CPPv2N8erbsland4conf14SourceResolverE"></span><span id="erbsland::conf::SourceResolver"></span><span class="target" id="classerbsland_1_1conf_1_1_source_resolver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SourceResolver</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf14SourceResolverE" title="Link to this definition"></a><br /></dt>
+<dd><p>The interface for any source resolver implementation. </p>
+<p>Subclassed by <a class="reference internal" href="#classerbsland_1_1conf_1_1_file_source_resolver"><span class="std std-ref">erbsland::conf::FileSourceResolver</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf14SourceResolverD0Ev">
+<span id="_CPPv3N8erbsland4conf14SourceResolverD0Ev"></span><span id="_CPPv2N8erbsland4conf14SourceResolverD0Ev"></span><span id="erbsland::conf::SourceResolver::~SourceResolver"></span><span class="target" id="classerbsland_1_1conf_1_1_source_resolver_1af8c9df096bebcc172a4081a0e61072d1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SourceResolver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf14SourceResolverD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf14SourceResolver7resolveERK21SourceResolverContext">
+<span id="_CPPv3N8erbsland4conf14SourceResolver7resolveERK21SourceResolverContext"></span><span id="_CPPv2N8erbsland4conf14SourceResolver7resolveERK21SourceResolverContext"></span><span id="erbsland::conf::SourceResolver::resolve__SourceResolverContextCR"></span><span class="target" id="classerbsland_1_1conf_1_1_source_resolver_1aef21c0e281148027beb8c54483eab01a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf13SourceListPtrE" title="erbsland::conf::SourceListPtr"><span class="n"><span class="pre">SourceListPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resolve</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf21SourceResolverContextE" title="erbsland::conf::SourceResolverContext"><span class="n"><span class="pre">SourceResolverContext</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">context</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf14SourceResolver7resolveERK21SourceResolverContext" title="Link to this definition"></a><br /></dt>
+<dd><p>Resolve Sources. </p>
+<p>This function is called when the parser encounters an <code class="docutils literal notranslate"><span class="pre">include</span></code> meta-command.</p>
+<p>The raw and unprocessed text of the command and the source of the parsed document are given as arguments to this function. This function must either return a list of sources that match the expression or throw an <code class="docutils literal notranslate"><a class="reference internal" href="error.html#classerbsland_1_1conf_1_1_error"><span class="std std-ref"><span class="pre">Error</span></span></a></code> exception. If an exception is thrown, the parsing will be stopped and the thrown exception will be passed to the caller of <code class="docutils literal notranslate"><span class="pre">parse()</span></code>.</p>
+<p>If a list is returned, the parser will parse the sources in the given order and include the parsed contents in the document. The returned sources should be in a closed state. The parser will open them in the sequence they are parsed.</p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p>Tested via <code class="docutils literal notranslate"><a class="reference internal" href="parser.html#classerbsland_1_1conf_1_1_parser"><span class="std std-ref"><span class="pre">Parser</span></span></a></code> class. </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>context</strong> – The resolve context. </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n">Error</span></a></span></span> – Throw <code class="docutils literal notranslate"><a class="reference internal" href="error.html#classerbsland_1_1conf_1_1_error"><span class="std std-ref"><span class="pre">Error</span></span></a></code> with <code class="docutils literal notranslate"><a class="reference internal" href="error.html#classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a"><span class="std std-ref"><span class="pre">ErrorCategory::Syntax</span></span></a></code> if the include text does not match the required format.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of sources (see <code class="docutils literal notranslate"><span class="pre">SourceList</span></code>) to include in the document. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf21SourceResolverContextE">
+<span id="_CPPv3N8erbsland4conf21SourceResolverContextE"></span><span id="_CPPv2N8erbsland4conf21SourceResolverContextE"></span><span id="erbsland::conf::SourceResolverContext"></span><span class="target" id="structerbsland_1_1conf_1_1_source_resolver_context"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SourceResolverContext</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf21SourceResolverContextE" title="Link to this definition"></a><br /></dt>
+<dd><p>The context for resolving sources. </p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p>Tested via <code class="docutils literal notranslate"><a class="reference internal" href="parser.html#classerbsland_1_1conf_1_1_parser"><span class="std std-ref"><span class="pre">Parser</span></span></a></code> class. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf21SourceResolverContext11includeTextE">
+<span id="_CPPv3N8erbsland4conf21SourceResolverContext11includeTextE"></span><span id="_CPPv2N8erbsland4conf21SourceResolverContext11includeTextE"></span><span id="erbsland::conf::SourceResolverContext::includeText__String"></span><span class="target" id="structerbsland_1_1conf_1_1_source_resolver_context_1a0169cc3e76f89ef12f852aa608d10f54"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">includeText</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf21SourceResolverContext11includeTextE" title="Link to this definition"></a><br /></dt>
+<dd><p>The raw and unprocessed text from the <code class="docutils literal notranslate"><span class="pre">include</span></code>-command. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf21SourceResolverContext16sourceIdentifierE">
+<span id="_CPPv3N8erbsland4conf21SourceResolverContext16sourceIdentifierE"></span><span id="_CPPv2N8erbsland4conf21SourceResolverContext16sourceIdentifierE"></span><span id="erbsland::conf::SourceResolverContext::sourceIdentifier__SourceIdentifierPtr"></span><span class="target" id="structerbsland_1_1conf_1_1_source_resolver_context_1a889e58d01320b30eca0e3a1f60ed9e3a"></span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sourceIdentifier</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf21SourceResolverContext16sourceIdentifierE" title="Link to this definition"></a><br /></dt>
+<dd><p>The source identifier of the document with the <code class="docutils literal notranslate"><span class="pre">include</span></code>-command. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf17SourceResolverPtrE">
+<span id="_CPPv3N8erbsland4conf17SourceResolverPtrE"></span><span id="_CPPv2N8erbsland4conf17SourceResolverPtrE"></span><span class="target" id="_source_resolver_8hpp_1ae2c3b3de5555f4d7fb7172a64d4ec45f"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SourceResolverPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf14SourceResolverE" title="erbsland::conf::SourceResolver"><span class="n"><span class="pre">SourceResolver</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf17SourceResolverPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolverE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolverE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolverE"></span><span id="erbsland::conf::FileSourceResolver"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileSourceResolver</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf14SourceResolverE" title="erbsland::conf::SourceResolver"><span class="n"><span class="pre">SourceResolver</span></span></a><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolverE" title="Link to this definition"></a><br /></dt>
+<dd><p>A file source resolver. </p>
+<p>The file source resolver supports the recommended format to include files. It works with relative and absolute paths and also has support for wildcards.</p>
+<p>Here are a few examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">at</span><span class="p">;</span><span class="n">include</span> <span class="s2">&quot;file:example.elcl&quot;</span>              <span class="c1"># File in the same directory.</span>
+<span class="o">&amp;</span><span class="n">at</span><span class="p">;</span><span class="n">include</span> <span class="s2">&quot;file:sub/example.elcl&quot;</span>          <span class="c1"># File in a subdirectory of the current configuration file.</span>
+<span class="o">&amp;</span><span class="n">at</span><span class="p">;</span><span class="n">include</span> <span class="s2">&quot;file:../example.elcl&quot;</span>           <span class="c1"># File in the parent directory (if access rules allow it)</span>
+<span class="o">&amp;</span><span class="n">at</span><span class="p">;</span><span class="n">include</span> <span class="s2">&quot;file:/usr/local/example.elcl&quot;</span>   <span class="c1"># Absolute path.</span>
+</pre></div>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7FeatureE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7FeatureE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7FeatureE"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84e"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Feature</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7FeatureE" title="Link to this definition"></a><br /></dt>
+<dd><p>Features of the file source resolver. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7Feature17RecursiveWildcardE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7Feature17RecursiveWildcardE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7Feature17RecursiveWildcardE"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84eae8eb91f3d4466133083b16267ba7886e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RecursiveWildcard</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7Feature17RecursiveWildcardE" title="Link to this definition"></a><br /></dt>
+<dd><p>Support for recursive wildcards. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7Feature16FilenameWildcardE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7Feature16FilenameWildcardE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7Feature16FilenameWildcardE"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea99ec6811d65c794ad36bbec27e0eda2a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FilenameWildcard</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7Feature16FilenameWildcardE" title="Link to this definition"></a><br /></dt>
+<dd><p>Support for filename wildcards. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7Feature13AbsolutePathsE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7Feature13AbsolutePathsE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7Feature13AbsolutePathsE"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea6576b64a5c2573f52ad7a651ee1e8b40"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AbsolutePaths</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7Feature13AbsolutePathsE" title="Link to this definition"></a><br /></dt>
+<dd><p>Support for absolute paths. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7Feature14WindowsUNCPathE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7Feature14WindowsUNCPathE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7Feature14WindowsUNCPathE"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea3a19913a08b8117e432f7e72ea2b78e8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WindowsUNCPath</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7Feature14WindowsUNCPathE" title="Link to this definition"></a><br /></dt>
+<dd><p>Support for Windows UNC paths. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7Feature12FileProtocolE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7Feature12FileProtocolE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7Feature12FileProtocolE"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea13f36cb23516d9fb1462cc3bdcc157cc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileProtocol</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7Feature12FileProtocolE" title="Link to this definition"></a><br /></dt>
+<dd><p>Support for the <code class="docutils literal notranslate"><span class="pre">file:</span></code> protocol prefix. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7Feature13_featureCountE">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7Feature13_featureCountE"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7Feature13_featureCountE"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea273df0be0983a42636a6fd1c9304cc27"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_featureCount</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7Feature13_featureCountE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver18FileSourceResolverEv">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver18FileSourceResolverEv"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver18FileSourceResolverEv"></span><span id="erbsland::conf::FileSourceResolver::FileSourceResolver"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1ad6886b64dc310019c628023346e1d7b1"></span><span class="sig-name descname"><span class="n"><span class="pre">FileSourceResolver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver18FileSourceResolverEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Default constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolverD0Ev">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolverD0Ev"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolverD0Ev"></span><span id="erbsland::conf::FileSourceResolver::~FileSourceResolver"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1adb8971fd7e01e2721afd92973cb5bbb1"></span><span class="sig-name descname"><span class="n"><span class="pre">~FileSourceResolver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolverD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver6enableE7Feature">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver6enableE7Feature"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver6enableE7Feature"></span><span id="erbsland::conf::FileSourceResolver::enable__Feature"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1a7f6fc682cb009c047881881ed80eb895"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf18FileSourceResolver7FeatureE" title="erbsland::conf::FileSourceResolver::Feature"><span class="n"><span class="pre">Feature</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">feature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver6enableE7Feature" title="Link to this definition"></a><br /></dt>
+<dd><p>Enable a feature. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7disableE7Feature">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7disableE7Feature"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7disableE7Feature"></span><span id="erbsland::conf::FileSourceResolver::disable__Feature"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1afff291ce8667d15aac612c3f4c432f22"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disable</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf18FileSourceResolver7FeatureE" title="erbsland::conf::FileSourceResolver::Feature"><span class="n"><span class="pre">Feature</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">feature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7disableE7Feature" title="Link to this definition"></a><br /></dt>
+<dd><p>Disable a feature. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf18FileSourceResolver9isEnabledE7Feature">
+<span id="_CPPv3NK8erbsland4conf18FileSourceResolver9isEnabledE7Feature"></span><span id="_CPPv2NK8erbsland4conf18FileSourceResolver9isEnabledE7Feature"></span><span id="erbsland::conf::FileSourceResolver::isEnabled__FeatureC"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1a5afe475be2dc4c0454e33635b0b18a77"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isEnabled</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf18FileSourceResolver7FeatureE" title="erbsland::conf::FileSourceResolver::Feature"><span class="n"><span class="pre">Feature</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">feature</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf18FileSourceResolver9isEnabledE7Feature" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if a feature enabled. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver7resolveERK21SourceResolverContext">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver7resolveERK21SourceResolverContext"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver7resolveERK21SourceResolverContext"></span><span id="erbsland::conf::FileSourceResolver::resolve__SourceResolverContextCR"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1ac00c1b45ea6f03dfab4a6c9da222e89e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf13SourceListPtrE" title="erbsland::conf::SourceListPtr"><span class="n"><span class="pre">SourceListPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resolve</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf21SourceResolverContextE" title="erbsland::conf::SourceResolverContext"><span class="n"><span class="pre">SourceResolverContext</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">context</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver7resolveERK21SourceResolverContext" title="Link to this definition"></a><br /></dt>
+<dd><p>Resolve Sources. </p>
+<p>This function is called when the parser encounters an <code class="docutils literal notranslate"><span class="pre">include</span></code> meta-command.</p>
+<p>The raw and unprocessed text of the command and the source of the parsed document are given as arguments to this function. This function must either return a list of sources that match the expression or throw an <code class="docutils literal notranslate"><a class="reference internal" href="error.html#classerbsland_1_1conf_1_1_error"><span class="std std-ref"><span class="pre">Error</span></span></a></code> exception. If an exception is thrown, the parsing will be stopped and the thrown exception will be passed to the caller of <code class="docutils literal notranslate"><span class="pre">parse()</span></code>.</p>
+<p>If a list is returned, the parser will parse the sources in the given order and include the parsed contents in the document. The returned sources should be in a closed state. The parser will open them in the sequence they are parsed.</p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p>Tested via <code class="docutils literal notranslate"><a class="reference internal" href="parser.html#classerbsland_1_1conf_1_1_parser"><span class="std std-ref"><span class="pre">Parser</span></span></a></code> class. </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>context</strong> – The resolve context. </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n">Error</span></a></span></span> – Throw <code class="docutils literal notranslate"><a class="reference internal" href="error.html#classerbsland_1_1conf_1_1_error"><span class="std std-ref"><span class="pre">Error</span></span></a></code> with <code class="docutils literal notranslate"><a class="reference internal" href="error.html#classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a"><span class="std std-ref"><span class="pre">ErrorCategory::Syntax</span></span></a></code> if the include text does not match the required format.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of sources (see <code class="docutils literal notranslate"><span class="pre">SourceList</span></code>) to include in the document. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18FileSourceResolver6createEv">
+<span id="_CPPv3N8erbsland4conf18FileSourceResolver6createEv"></span><span id="_CPPv2N8erbsland4conf18FileSourceResolver6createEv"></span><span id="erbsland::conf::FileSourceResolver::create"></span><span class="target" id="classerbsland_1_1conf_1_1_file_source_resolver_1a3e0cd935d85ef806314b3a3fa86314f1"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf21FileSourceResolverPtrE" title="erbsland::conf::FileSourceResolverPtr"><span class="n"><span class="pre">FileSourceResolverPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">create</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf18FileSourceResolver6createEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new instance of the file source resolver. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf21FileSourceResolverPtrE">
+<span id="_CPPv3N8erbsland4conf21FileSourceResolverPtrE"></span><span id="_CPPv2N8erbsland4conf21FileSourceResolverPtrE"></span><span class="target" id="_file_source_resolver_8hpp_1a5890c070b55145dda8eb4883d0607175"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">FileSourceResolverPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf18FileSourceResolverE" title="erbsland::conf::FileSourceResolver"><span class="n"><span class="pre">FileSourceResolver</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf21FileSourceResolverPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="signer.html" class="btn btn-neutral float-left" title="Signer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="access_check.html" class="btn btn-neutral float-right" title="Access Check" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

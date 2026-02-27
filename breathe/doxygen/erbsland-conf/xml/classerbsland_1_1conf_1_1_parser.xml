@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_parser" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::Parser</compoundname>
+    <includes refid="_parser_8hpp" local="no">erbsland/conf/Parser.hpp</includes>
+    <sectiondef kind="user-defined">
+      <header>Convenience Methods</header>
+      <description><para>These methods are convenience methods to call <computeroutput>parse</computeroutput> or <computeroutput>parseOrThrow</computeroutput>.</para>
+<para>They construct a <computeroutput><ref refid="classerbsland_1_1conf_1_1_source" kindref="compound">Source</ref></computeroutput> from the given parameters and call <computeroutput>parse</computeroutput> or <computeroutput>parseOrThrow</computeroutput> using this source. </para>
+</description>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a2475d92e0163cc38dd7f250c3d60d310" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseFileOrThrow</definition>
+        <argsstring>(const String &amp;path)</argsstring>
+        <name>parseFileOrThrow</name>
+        <qualifiedname>erbsland::conf::Parser::parseFileOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given file into a configuration document and throw an exception on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="95" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1aa9959c91653114b343c47e617aa554dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseFileOrThrow</definition>
+        <argsstring>(const std::filesystem::path &amp;path)</argsstring>
+        <name>parseFileOrThrow</name>
+        <qualifiedname>erbsland::conf::Parser::parseFileOrThrow</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given file into a configuration document and throw an exception on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="99" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a71aa357565feb77eb0c34fb6c4fb8d77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseFile</definition>
+        <argsstring>(const String &amp;path)</argsstring>
+        <name>parseFile</name>
+        <qualifiedname>erbsland::conf::Parser::parseFile</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given file into a configuration document and return a null pointer on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="103" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a00f318d1bcb817f5f8b2f33c1c7d6e42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseFile</definition>
+        <argsstring>(const std::filesystem::path &amp;path)</argsstring>
+        <name>parseFile</name>
+        <qualifiedname>erbsland::conf::Parser::parseFile</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given file into a configuration document and return a null pointer on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="107" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a4560bdbc2402e0f5ab68b6342608a547" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseTextOrThrow</definition>
+        <argsstring>(const String &amp;text)</argsstring>
+        <name>parseTextOrThrow</name>
+        <qualifiedname>erbsland::conf::Parser::parseTextOrThrow</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given text into a configuration document and throw an exception on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="111" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a01b1098f20e4941bd404d9d49db282c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Fwd</type>
+          </param>
+        </templateparamlist>
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseTextOrThrow</definition>
+        <argsstring>(Fwd &amp;&amp;text)</argsstring>
+        <name>parseTextOrThrow</name>
+        <qualifiedname>erbsland::conf::Parser::parseTextOrThrow</qualifiedname>
+        <param>
+          <type>Fwd &amp;&amp;</type>
+          <declname>text</declname>
+        </param>
+    <requiresclause>StringConvertible&lt;Fwd&gt;    </requiresclause>
+        <briefdescription>
+<para>Parse the given text into a configuration document and throw an exception on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="117" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1ae532a5e7d449c6051a447d05e3ccc5ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseText</definition>
+        <argsstring>(const String &amp;text)</argsstring>
+        <name>parseText</name>
+        <qualifiedname>erbsland::conf::Parser::parseText</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given text into a configuration document and return a null pointer on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="121" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a0a6b31794247e5fa841b935d7ed6e79e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Fwd</type>
+          </param>
+        </templateparamlist>
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseText</definition>
+        <argsstring>(Fwd &amp;&amp;text)</argsstring>
+        <name>parseText</name>
+        <qualifiedname>erbsland::conf::Parser::parseText</qualifiedname>
+        <param>
+          <type>Fwd &amp;&amp;</type>
+          <declname>text</declname>
+        </param>
+    <requiresclause>StringConvertible&lt;Fwd&gt;    </requiresclause>
+        <briefdescription>
+<para>Parse the given text into a configuration document and return a null pointer on error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="127" column="18" bodyfile="erbsland/conf/Parser.hpp" bodystart="127" bodyend="129"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_parser_1a1a66caa06c6bba6908bffcd605bbbaa2" prot="private" static="no" mutable="no">
+        <type>impl::ParserSettings</type>
+        <definition>impl::ParserSettings erbsland::conf::Parser::_settings</definition>
+        <argsstring></argsstring>
+        <name>_settings</name>
+        <qualifiedname>erbsland::conf::Parser::_settings</qualifiedname>
+        <briefdescription>
+<para>The parser settings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="133" column="26" bodyfile="erbsland/conf/Parser.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_parser_1a92509f0350a54812e31178450e018121" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; <ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref> &gt;</type>
+        <definition>std::optional&lt;Error&gt; erbsland::conf::Parser::_lastError</definition>
+        <argsstring></argsstring>
+        <name>_lastError</name>
+        <qualifiedname>erbsland::conf::Parser::_lastError</qualifiedname>
+        <briefdescription>
+<para>The last error that occurred. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="134" column="19" bodyfile="erbsland/conf/Parser.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a36bcc51a6d61089e94188e4f2f6353af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Parser::Parser</definition>
+        <argsstring>()=default</argsstring>
+        <name>Parser</name>
+        <qualifiedname>erbsland::conf::Parser::Parser</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a58fcdbe88d6033c2b3e23c967c8b6ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Parser::~Parser</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Parser</name>
+        <qualifiedname>erbsland::conf::Parser::~Parser</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="34" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1ad64c05722c3691bfae839965422fe350" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Parser::setSourceResolver</definition>
+        <argsstring>(const SourceResolverPtr &amp;sourceResolver) noexcept</argsstring>
+        <name>setSourceResolver</name>
+        <qualifiedname>erbsland::conf::Parser::setSourceResolver</qualifiedname>
+        <param>
+          <type>const SourceResolverPtr &amp;</type>
+          <declname>sourceResolver</declname>
+        </param>
+        <briefdescription>
+<para>Set a custom source resolver used to resolve include directives while parsing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default, an instance of <computeroutput><ref refid="classerbsland_1_1conf_1_1_file_source_resolver" kindref="compound">FileSourceResolver</ref></computeroutput> is used, which supports file-based includes, as specified in the format recommended in the documentation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sourceResolver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The custom source resolver, or <computeroutput>nullptr</computeroutput> to disable the <computeroutput>include</computeroutput> meta-command. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="44" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a2f872d919d6efca50efad33577565484" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Parser::setAccessCheck</definition>
+        <argsstring>(const AccessCheckPtr &amp;accessCheck) noexcept</argsstring>
+        <name>setAccessCheck</name>
+        <qualifiedname>erbsland::conf::Parser::setAccessCheck</qualifiedname>
+        <param>
+          <type>const AccessCheckPtr &amp;</type>
+          <declname>accessCheck</declname>
+        </param>
+        <briefdescription>
+<para>Set a custom access check. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default, an instance of <computeroutput><ref refid="classerbsland_1_1conf_1_1_file_access_check" kindref="compound">FileAccessCheck</ref></computeroutput> with default options is used. This instance limits included files to the same directory and subdirectories of the including configuration.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>accessCheck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An instance of a source access check implementation, or <computeroutput>nullptr</computeroutput> to disable the <computeroutput>include</computeroutput> meta-command. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="54" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a039fc014a0d7588b47b93d59a3498454" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Parser::setSignatureValidator</definition>
+        <argsstring>(const SignatureValidatorPtr &amp;signatureValidator) noexcept</argsstring>
+        <name>setSignatureValidator</name>
+        <qualifiedname>erbsland::conf::Parser::setSignatureValidator</qualifiedname>
+        <param>
+          <type>const SignatureValidatorPtr &amp;</type>
+          <declname>signatureValidator</declname>
+        </param>
+        <briefdescription>
+<para>Set a signature validator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default, no signature validator is set. This allows parsing all unsigned configuration documents. Documents with a <computeroutput>signature</computeroutput> meta-value get rejected by the parser.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>signatureValidator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An instance of a signature validator implementation, or <computeroutput>nullptr</computeroutput> to disable signature validation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="64" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1a77ff1d08ea10557fe62858801613b8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parseOrThrow</definition>
+        <argsstring>(const SourcePtr &amp;source)</argsstring>
+        <name>parseOrThrow</name>
+        <qualifiedname>erbsland::conf::Parser::parseOrThrow</qualifiedname>
+        <param>
+          <type>const SourcePtr &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given source into a configuration document and throw an exception on any error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source to parse. Should be closed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The root node of the parsed configuration tree. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if there was any problem with the parsed source or document. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="72" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1ac94d27e60a3905a300c4e12fd59f3cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::Parser::parse</definition>
+        <argsstring>(const SourcePtr &amp;source)</argsstring>
+        <name>parse</name>
+        <qualifiedname>erbsland::conf::Parser::parse</qualifiedname>
+        <param>
+          <type>const SourcePtr &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+<para>Parse the given source into a configuration document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source to parse. Should be closed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The root node of the parsed configuration tree or nullptr on any error. Use <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser_1ae189977a87681680cc9f9ed754870a65" kindref="member">lastError()</ref></computeroutput> to access the last error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="80" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_parser_1ae189977a87681680cc9f9ed754870a65" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></type>
+        <definition>Error erbsland::conf::Parser::lastError</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>lastError</name>
+        <qualifiedname>erbsland::conf::Parser::lastError</qualifiedname>
+        <briefdescription>
+<para>Access the last error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The error object of the last error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Parser.hpp" line="86" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This parser reads the Erbsland Configuration Language. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><emphasis>Multithreading</emphasis>: This parser is <bold>reentrant</bold>, and therefore it can be used in multiple threads, as long each thread uses an individual instance of the parser.</para>
+<para><simplesect kind="par"><title>Tested:</title><para><computeroutput>ParserAccessTest</computeroutput>, <computeroutput>ParserBasicTest</computeroutput>, <computeroutput>ParserComplianceTest</computeroutput>, <computeroutput>ParserErrorClassTest</computeroutput>, <computeroutput>ParserIncludeTest</computeroutput>, <computeroutput>ParserSignatureTest</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/Parser.hpp" line="29" column="1" bodyfile="erbsland/conf/Parser.hpp" bodystart="29" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a92509f0350a54812e31178450e018121" prot="private" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>_lastError</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a1a66caa06c6bba6908bffcd605bbbaa2" prot="private" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>_settings</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1ae189977a87681680cc9f9ed754870a65" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>lastError</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1ac94d27e60a3905a300c4e12fd59f3cf8" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parse</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a71aa357565feb77eb0c34fb6c4fb8d77" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseFile</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a00f318d1bcb817f5f8b2f33c1c7d6e42" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseFile</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a2475d92e0163cc38dd7f250c3d60d310" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseFileOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1aa9959c91653114b343c47e617aa554dd" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseFileOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a77ff1d08ea10557fe62858801613b8cb" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a36bcc51a6d61089e94188e4f2f6353af" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>Parser</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1ae532a5e7d449c6051a447d05e3ccc5ac" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a0a6b31794247e5fa841b935d7ed6e79e" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a4560bdbc2402e0f5ab68b6342608a547" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseTextOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a01b1098f20e4941bd404d9d49db282c8" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>parseTextOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a2f872d919d6efca50efad33577565484" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>setAccessCheck</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a039fc014a0d7588b47b93d59a3498454" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>setSignatureValidator</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1ad64c05722c3691bfae839965422fe350" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>setSourceResolver</name></member>
+      <member refid="classerbsland_1_1conf_1_1_parser_1a58fcdbe88d6033c2b3e23c967c8b6ee0" prot="public" virt="non-virtual"><scope>erbsland::conf::Parser</scope><name>~Parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

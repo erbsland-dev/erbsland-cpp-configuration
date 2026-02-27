@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parser &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Value" href="value.html" />
+    <link rel="prev" title="Reference" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Parser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#minimal-example">Minimal Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#without-exceptions">Without Exceptions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#with-customized-behaviour">With Customized Behaviour</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf6ParserE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::Parser</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Parser</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/parser.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parser">
+<h1>Parser<a class="headerlink" href="#parser" title="Link to this heading"></a></h1>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<section id="minimal-example">
+<h3>Minimal Example<a class="headerlink" href="#minimal-example" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">;</span>
+<span class="linenos">3</span><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseOrThrow</span><span class="p">(</span><span class="n">Source</span><span class="o">::</span><span class="n">fromFile</span><span class="p">(</span><span class="sa">u8</span><span class="s">&quot;configuration.elcl&quot;</span><span class="p">))</span>
+<span class="linenos">4</span><span class="w">    </span><span class="c1">// ...</span>
+<span class="linenos">5</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">6</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">toText</span><span class="p">().</span><span class="n">toCharString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="linenos">7</span><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">8</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="without-exceptions">
+<h3>Without Exceptions<a class="headerlink" href="#without-exceptions" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">;</span>
+<span class="linenos">2</span><span class="k">auto</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="n">Source</span><span class="o">::</span><span class="n">fromFile</span><span class="p">(</span><span class="sa">u8</span><span class="s">&quot;configuration.elcl&quot;</span><span class="p">))</span>
+<span class="linenos">3</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">document</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">4</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">lastError</span><span class="p">().</span><span class="n">toText</span><span class="p">().</span><span class="n">toCharString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="linenos">5</span><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">6</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="with-customized-behaviour">
+<h3>With Customized Behaviour<a class="headerlink" href="#with-customized-behaviour" title="Link to this heading"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">;</span>
+<span class="w">    </span><span class="n">parser</span><span class="p">.</span><span class="n">setSourceResolver</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MySourceResolver</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">    </span><span class="n">parser</span><span class="p">.</span><span class="n">setAccessCheck</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MyAccessCheck</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">    </span><span class="n">parser</span><span class="p">.</span><span class="n">setSignatureValidator</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">MySignatureValidator</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseOrThrow</span><span class="p">(</span><span class="n">Source</span><span class="o">::</span><span class="n">fromFile</span><span class="p">(</span><span class="sa">u8</span><span class="s">&quot;configuration.elcl&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">toText</span><span class="p">().</span><span class="n">toCharString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="access_check.html#_CPPv4N8erbsland4conf11AccessCheckE" title="erbsland::conf::AccessCheck"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">AccessCheck</span></code></a>, <a class="reference internal" href="source_resolver.html#_CPPv4N8erbsland4conf14SourceResolverE" title="erbsland::conf::SourceResolver"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SourceResolver</span></code></a> and <a class="reference internal" href="signature_validator.html#_CPPv4N8erbsland4conf18SignatureValidatorE" title="erbsland::conf::SignatureValidator"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">SignatureValidator</span></code></a> for details.</p>
+</section>
+</section>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6ParserE">
+<span id="_CPPv3N8erbsland4conf6ParserE"></span><span id="_CPPv2N8erbsland4conf6ParserE"></span><span id="erbsland::conf::Parser"></span><span class="target" id="classerbsland_1_1conf_1_1_parser"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Parser</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6ParserE" title="Link to this definition"></a><br /></dt>
+<dd><p>This parser reads the Erbsland Configuration Language. </p>
+<p><em>Multithreading</em>: This parser is <strong>reentrant</strong>, and therefore it can be used in multiple threads, as long each thread uses an individual instance of the parser.</p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ParserAccessTest</span></code>, <code class="docutils literal notranslate"><span class="pre">ParserBasicTest</span></code>, <code class="docutils literal notranslate"><span class="pre">ParserComplianceTest</span></code>, <code class="docutils literal notranslate"><span class="pre">ParserErrorClassTest</span></code>, <code class="docutils literal notranslate"><span class="pre">ParserIncludeTest</span></code>, <code class="docutils literal notranslate"><span class="pre">ParserSignatureTest</span></code></p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-convenience-methods">Convenience Methods</p>
+<p>These methods are convenience methods to call <code class="docutils literal notranslate"><span class="pre">parse</span></code> or <code class="docutils literal notranslate"><span class="pre">parseOrThrow</span></code>.</p>
+<p>They construct a <code class="docutils literal notranslate"><a class="reference internal" href="source.html#classerbsland_1_1conf_1_1_source"><span class="std std-ref"><span class="pre">Source</span></span></a></code> from the given parameters and call <code class="docutils literal notranslate"><span class="pre">parse</span></code> or <code class="docutils literal notranslate"><span class="pre">parseOrThrow</span></code> using this source. </p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser16parseFileOrThrowERK6String">
+<span id="_CPPv3N8erbsland4conf6Parser16parseFileOrThrowERK6String"></span><span id="_CPPv2N8erbsland4conf6Parser16parseFileOrThrowERK6String"></span><span id="erbsland::conf::Parser::parseFileOrThrow__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a2475d92e0163cc38dd7f250c3d60d310"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseFileOrThrow</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser16parseFileOrThrowERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given file into a configuration document and throw an exception on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser16parseFileOrThrowERKNSt10filesystem4pathE">
+<span id="_CPPv3N8erbsland4conf6Parser16parseFileOrThrowERKNSt10filesystem4pathE"></span><span id="_CPPv2N8erbsland4conf6Parser16parseFileOrThrowERKNSt10filesystem4pathE"></span><span id="erbsland::conf::Parser::parseFileOrThrow__std::filesystem::pathCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1aa9959c91653114b343c47e617aa554dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseFileOrThrow</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser16parseFileOrThrowERKNSt10filesystem4pathE" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given file into a configuration document and throw an exception on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser9parseFileERK6String">
+<span id="_CPPv3N8erbsland4conf6Parser9parseFileERK6String"></span><span id="_CPPv2N8erbsland4conf6Parser9parseFileERK6String"></span><span id="erbsland::conf::Parser::parseFile__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a71aa357565feb77eb0c34fb6c4fb8d77"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser9parseFileERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given file into a configuration document and return a null pointer on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser9parseFileERKNSt10filesystem4pathE">
+<span id="_CPPv3N8erbsland4conf6Parser9parseFileERKNSt10filesystem4pathE"></span><span id="_CPPv2N8erbsland4conf6Parser9parseFileERKNSt10filesystem4pathE"></span><span id="erbsland::conf::Parser::parseFile__std::filesystem::pathCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a00f318d1bcb817f5f8b2f33c1c7d6e42"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser9parseFileERKNSt10filesystem4pathE" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given file into a configuration document and return a null pointer on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser16parseTextOrThrowERK6String">
+<span id="_CPPv3N8erbsland4conf6Parser16parseTextOrThrowERK6String"></span><span id="_CPPv2N8erbsland4conf6Parser16parseTextOrThrowERK6String"></span><span id="erbsland::conf::Parser::parseTextOrThrow__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a4560bdbc2402e0f5ab68b6342608a547"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseTextOrThrow</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser16parseTextOrThrowERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given text into a configuration document and throw an exception on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN8erbsland4conf6Parser16parseTextOrThrowE11DocumentPtrRR3Fwd">
+<span id="_CPPv3I0EN8erbsland4conf6Parser16parseTextOrThrowERR3Fwd"></span><span id="_CPPv2I0EN8erbsland4conf6Parser16parseTextOrThrowERR3Fwd"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Fwd</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classerbsland_1_1conf_1_1_parser_1a01b1098f20e4941bd404d9d49db282c8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseTextOrThrow</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN8erbsland4conf6Parser16parseTextOrThrowE11DocumentPtrRR3Fwd" title="erbsland::conf::Parser::parseTextOrThrow::Fwd"><span class="n"><span class="pre">Fwd</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN8erbsland4conf6Parser16parseTextOrThrowE11DocumentPtrRR3Fwd" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given text into a configuration document and throw an exception on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser9parseTextERK6String">
+<span id="_CPPv3N8erbsland4conf6Parser9parseTextERK6String"></span><span id="_CPPv2N8erbsland4conf6Parser9parseTextERK6String"></span><span id="erbsland::conf::Parser::parseText__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1ae532a5e7d449c6051a447d05e3ccc5ac"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseText</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser9parseTextERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given text into a configuration document and return a null pointer on error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN8erbsland4conf6Parser9parseTextE11DocumentPtrRR3Fwd">
+<span id="_CPPv3I0EN8erbsland4conf6Parser9parseTextERR3Fwd"></span><span id="_CPPv2I0EN8erbsland4conf6Parser9parseTextERR3Fwd"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Fwd</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classerbsland_1_1conf_1_1_parser_1a0a6b31794247e5fa841b935d7ed6e79e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseText</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN8erbsland4conf6Parser9parseTextE11DocumentPtrRR3Fwd" title="erbsland::conf::Parser::parseText::Fwd"><span class="n"><span class="pre">Fwd</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN8erbsland4conf6Parser9parseTextE11DocumentPtrRR3Fwd" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given text into a configuration document and return a null pointer on error. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser6ParserEv">
+<span id="_CPPv3N8erbsland4conf6Parser6ParserEv"></span><span id="_CPPv2N8erbsland4conf6Parser6ParserEv"></span><span id="erbsland::conf::Parser::Parser"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a36bcc51a6d61089e94188e4f2f6353af"></span><span class="sig-name descname"><span class="n"><span class="pre">Parser</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser6ParserEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Default constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6ParserD0Ev">
+<span id="_CPPv3N8erbsland4conf6ParserD0Ev"></span><span id="_CPPv2N8erbsland4conf6ParserD0Ev"></span><span id="erbsland::conf::Parser::~Parser"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a58fcdbe88d6033c2b3e23c967c8b6ee0"></span><span class="sig-name descname"><span class="n"><span class="pre">~Parser</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6ParserD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser17setSourceResolverERK17SourceResolverPtr">
+<span id="_CPPv3N8erbsland4conf6Parser17setSourceResolverERK17SourceResolverPtr"></span><span id="_CPPv2N8erbsland4conf6Parser17setSourceResolverERK17SourceResolverPtr"></span><span id="erbsland::conf::Parser::setSourceResolver__SourceResolverPtrCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1ad64c05722c3691bfae839965422fe350"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSourceResolver</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="source_resolver.html#_CPPv4N8erbsland4conf17SourceResolverPtrE" title="erbsland::conf::SourceResolverPtr"><span class="n"><span class="pre">SourceResolverPtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sourceResolver</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser17setSourceResolverERK17SourceResolverPtr" title="Link to this definition"></a><br /></dt>
+<dd><p>Set a custom source resolver used to resolve include directives while parsing. </p>
+<p>By default, an instance of <code class="docutils literal notranslate"><a class="reference internal" href="source_resolver.html#classerbsland_1_1conf_1_1_file_source_resolver"><span class="std std-ref"><span class="pre">FileSourceResolver</span></span></a></code> is used, which supports file-based includes, as specified in the format recommended in the documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sourceResolver</strong> – The custom source resolver, or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> to disable the <code class="docutils literal notranslate"><span class="pre">include</span></code> meta-command. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser14setAccessCheckERK14AccessCheckPtr">
+<span id="_CPPv3N8erbsland4conf6Parser14setAccessCheckERK14AccessCheckPtr"></span><span id="_CPPv2N8erbsland4conf6Parser14setAccessCheckERK14AccessCheckPtr"></span><span id="erbsland::conf::Parser::setAccessCheck__AccessCheckPtrCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a2f872d919d6efca50efad33577565484"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAccessCheck</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="access_check.html#_CPPv4N8erbsland4conf14AccessCheckPtrE" title="erbsland::conf::AccessCheckPtr"><span class="n"><span class="pre">AccessCheckPtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">accessCheck</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser14setAccessCheckERK14AccessCheckPtr" title="Link to this definition"></a><br /></dt>
+<dd><p>Set a custom access check. </p>
+<p>By default, an instance of <code class="docutils literal notranslate"><a class="reference internal" href="access_check.html#classerbsland_1_1conf_1_1_file_access_check"><span class="std std-ref"><span class="pre">FileAccessCheck</span></span></a></code> with default options is used. This instance limits included files to the same directory and subdirectories of the including configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>accessCheck</strong> – An instance of a source access check implementation, or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> to disable the <code class="docutils literal notranslate"><span class="pre">include</span></code> meta-command. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser21setSignatureValidatorERK21SignatureValidatorPtr">
+<span id="_CPPv3N8erbsland4conf6Parser21setSignatureValidatorERK21SignatureValidatorPtr"></span><span id="_CPPv2N8erbsland4conf6Parser21setSignatureValidatorERK21SignatureValidatorPtr"></span><span id="erbsland::conf::Parser::setSignatureValidator__SignatureValidatorPtrCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a039fc014a0d7588b47b93d59a3498454"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSignatureValidator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="signature_validator.html#_CPPv4N8erbsland4conf21SignatureValidatorPtrE" title="erbsland::conf::SignatureValidatorPtr"><span class="n"><span class="pre">SignatureValidatorPtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">signatureValidator</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser21setSignatureValidatorERK21SignatureValidatorPtr" title="Link to this definition"></a><br /></dt>
+<dd><p>Set a signature validator. </p>
+<p>By default, no signature validator is set. This allows parsing all unsigned configuration documents. Documents with a <code class="docutils literal notranslate"><span class="pre">signature</span></code> meta-value get rejected by the parser.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>signatureValidator</strong> – An instance of a signature validator implementation, or <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> to disable signature validation. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser12parseOrThrowERK9SourcePtr">
+<span id="_CPPv3N8erbsland4conf6Parser12parseOrThrowERK9SourcePtr"></span><span id="_CPPv2N8erbsland4conf6Parser12parseOrThrowERK9SourcePtr"></span><span id="erbsland::conf::Parser::parseOrThrow__SourcePtrCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1a77ff1d08ea10557fe62858801613b8cb"></span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseOrThrow</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser12parseOrThrowERK9SourcePtr" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given source into a configuration document and throw an exception on any error. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>source</strong> – The source to parse. Should be closed. </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n">Error</span></a></span></span> – if there was any problem with the parsed source or document. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The root node of the parsed configuration tree. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Parser5parseERK9SourcePtr">
+<span id="_CPPv3N8erbsland4conf6Parser5parseERK9SourcePtr"></span><span id="_CPPv2N8erbsland4conf6Parser5parseERK9SourcePtr"></span><span id="erbsland::conf::Parser::parse__SourcePtrCR"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1ac94d27e60a3905a300c4e12fd59f3cf8"></span><a class="reference internal" href="document.html#_CPPv4N8erbsland4conf11DocumentPtrE" title="erbsland::conf::DocumentPtr"><span class="n"><span class="pre">DocumentPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parse</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">source</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Parser5parseERK9SourcePtr" title="Link to this definition"></a><br /></dt>
+<dd><p>Parse the given source into a configuration document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>source</strong> – The source to parse. Should be closed. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The root node of the parsed configuration tree or nullptr on any error. Use <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_parser_1ae189977a87681680cc9f9ed754870a65"><span class="std std-ref"><span class="pre">lastError()</span></span></a></code> to access the last error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf6Parser9lastErrorEv">
+<span id="_CPPv3NK8erbsland4conf6Parser9lastErrorEv"></span><span id="_CPPv2NK8erbsland4conf6Parser9lastErrorEv"></span><span id="erbsland::conf::Parser::lastErrorC"></span><span class="target" id="classerbsland_1_1conf_1_1_parser_1ae189977a87681680cc9f9ed754870a65"></span><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n"><span class="pre">Error</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf6Parser9lastErrorEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the last error. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The error object of the last error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="value.html" class="btn btn-neutral float-right" title="Value" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

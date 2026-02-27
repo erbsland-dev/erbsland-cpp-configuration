@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_constraints_8hpp" kind="file" language="C++">
+    <compoundname>Constraints.hpp</compoundname>
+    <includes local="yes">constraint/Chars.hpp</includes>
+    <includes local="yes">constraint/ConstraintOptions.hpp</includes>
+    <includes local="yes">constraint/Contains.hpp</includes>
+    <includes local="yes">constraint/Ends.hpp</includes>
+    <includes local="yes">constraint/Equals.hpp</includes>
+    <includes local="yes">constraint/In.hpp</includes>
+    <includes local="yes">constraint/Key.hpp</includes>
+    <includes local="yes">constraint/Matches.hpp</includes>
+    <includes local="yes">constraint/Maximum.hpp</includes>
+    <includes local="yes">constraint/Minimum.hpp</includes>
+    <includes local="yes">constraint/Multiple.hpp</includes>
+    <includes local="yes">constraint/Starts.hpp</includes>
+    <includedby refid="_rules_builder_8hpp" local="yes">erbsland/conf/vr/RulesBuilder.hpp</includedby>
+    <includedby refid="vr_2builder_2all_8hpp" local="yes">erbsland/conf/vr/builder/all.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>erbsland/conf/vr/builder/Constraints.hpp</label>
+        <link refid="_constraints_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>constraint/Chars.hpp</label>
+      </node>
+      <node id="3">
+        <label>constraint/ConstraintOptions.hpp</label>
+      </node>
+      <node id="4">
+        <label>constraint/Contains.hpp</label>
+      </node>
+      <node id="5">
+        <label>constraint/Ends.hpp</label>
+      </node>
+      <node id="6">
+        <label>constraint/Equals.hpp</label>
+      </node>
+      <node id="7">
+        <label>constraint/In.hpp</label>
+      </node>
+      <node id="8">
+        <label>constraint/Key.hpp</label>
+      </node>
+      <node id="9">
+        <label>constraint/Matches.hpp</label>
+      </node>
+      <node id="10">
+        <label>constraint/Maximum.hpp</label>
+      </node>
+      <node id="11">
+        <label>constraint/Minimum.hpp</label>
+      </node>
+      <node id="12">
+        <label>constraint/Multiple.hpp</label>
+      </node>
+      <node id="13">
+        <label>constraint/Starts.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/vr/builder/Constraints.hpp</label>
+        <link refid="_constraints_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/vr/builder/all.hpp</label>
+        <link refid="vr_2builder_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2026<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Chars.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/ConstraintOptions.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Contains.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Ends.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Equals.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/In.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Key.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Matches.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Maximum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Minimum.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Multiple.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;constraint/Starts.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/vr/builder/Constraints.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern" kind="struct" language="C++" prot="private">
+    <compoundname>erbsland::conf::FileSourceResolver::FilenamePattern</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1a1b27e8aeb27848c40350e8315433921d" prot="public" static="no" mutable="no">
+        <type>std::u8string_view</type>
+        <definition>std::u8string_view erbsland::conf::FileSourceResolver::FilenamePattern::prefix</definition>
+        <argsstring></argsstring>
+        <name>prefix</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::FilenamePattern::prefix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="78" column="28" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1ab73c893a8fa73906e22a2a1cb68f9f19" prot="public" static="no" mutable="no">
+        <type>std::u8string_view</type>
+        <definition>std::u8string_view erbsland::conf::FileSourceResolver::FilenamePattern::suffix</definition>
+        <argsstring></argsstring>
+        <name>suffix</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::FilenamePattern::suffix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="79" column="28" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1ad847f99d5ba14f8b6f7cf2372e10fa37" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool erbsland::conf::FileSourceResolver::FilenamePattern::hasWildcard</definition>
+        <argsstring></argsstring>
+        <name>hasWildcard</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::FilenamePattern::hasWildcard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="80" column="14" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1a9b33254531daf8302cb9b624f6794ed1" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::FileSourceResolver::FilenamePattern::matches</definition>
+        <argsstring>(const std::filesystem::directory_entry &amp;entry) const noexcept</argsstring>
+        <name>matches</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::FilenamePattern::matches</qualifiedname>
+        <param>
+          <type>const std::filesystem::directory_entry &amp;</type>
+          <declname>entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="82" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/FileSourceResolver.hpp" line="77" column="5" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="77" bodyend="83"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1ad847f99d5ba14f8b6f7cf2372e10fa37" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver::FilenamePattern</scope><name>hasWildcard</name></member>
+      <member refid="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1a9b33254531daf8302cb9b624f6794ed1" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver::FilenamePattern</scope><name>matches</name></member>
+      <member refid="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1a1b27e8aeb27848c40350e8315433921d" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver::FilenamePattern</scope><name>prefix</name></member>
+      <member refid="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern_1ab73c893a8fa73906e22a2a1cb68f9f19" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver::FilenamePattern</scope><name>suffix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

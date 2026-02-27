@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_b41c5c4d7454583cf5805bfff8d8e8b9" kind="dir">
+    <compoundname>erbsland/conf/vr</compoundname>
+    <innerdir refid="dir_5ef5b4ab487d2858fdd72a13c821285f">erbsland/conf/vr/builder</innerdir>
+    <innerfile refid="vr_2all_8hpp">all.hpp</innerfile>
+    <innerfile refid="_constraint_8hpp">Constraint.hpp</innerfile>
+    <innerfile refid="_constraint_type_8hpp">ConstraintType.hpp</innerfile>
+    <innerfile refid="_rule_8hpp">Rule.hpp</innerfile>
+    <innerfile refid="_rules_8hpp">Rules.hpp</innerfile>
+    <innerfile refid="_rules_builder_8hpp">RulesBuilder.hpp</innerfile>
+    <innerfile refid="_rule_type_8hpp">RuleType.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/"/>
+  </compounddef>
+</doxygen>

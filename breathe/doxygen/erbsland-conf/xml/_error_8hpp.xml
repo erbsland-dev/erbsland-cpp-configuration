@@ -1,0 +1,507 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_error_8hpp" kind="file" language="C++">
+    <compoundname>Error.hpp</compoundname>
+    <includes refid="_error_category_8hpp" local="yes">ErrorCategory.hpp</includes>
+    <includes refid="_location_8hpp" local="yes">Location.hpp</includes>
+    <includes refid="_name_path_8hpp" local="yes">NamePath.hpp</includes>
+    <includes refid="_string_8hpp" local="yes">String.hpp</includes>
+    <includes local="no">exception</includes>
+    <includes local="no">filesystem</includes>
+    <includes local="no">optional</includes>
+    <includedby refid="_date_8hpp" local="yes">erbsland/conf/Date.hpp</includedby>
+    <includedby refid="_source_8hpp" local="yes">erbsland/conf/Source.hpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/Error.hpp</label>
+        <link refid="_error_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ErrorCategory.hpp</label>
+        <link refid="_error_category_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Name.hpp</label>
+        <link refid="_name_8hpp_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>NamePath.hpp</label>
+        <link refid="_name_path_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>NameType.hpp</label>
+        <link refid="_name_type_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Position.hpp</label>
+        <link refid="_position_8hpp_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>SourceIdentifier.hpp</label>
+        <link refid="_source_identifier_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="22">
+        <label>array</label>
+      </node>
+      <node id="11">
+        <label>bitset</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="36">
+        <label>exception</label>
+      </node>
+      <node id="37">
+        <label>filesystem</label>
+      </node>
+      <node id="6">
+        <label>format</label>
+      </node>
+      <node id="17">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="27">
+        <label>impl/constants/Defaults.hpp</label>
+      </node>
+      <node id="28">
+        <label>impl/utf8/U8StringView.hpp</label>
+      </node>
+      <node id="13">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="14">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="34">
+        <label>impl/utilities/HashHelper.hpp</label>
+      </node>
+      <node id="25">
+        <label>impl/utilities/InternalView.hpp</label>
+      </node>
+      <node id="15">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="35">
+        <label>limits</label>
+      </node>
+      <node id="29">
+        <label>memory</label>
+      </node>
+      <node id="18">
+        <label>optional</label>
+      </node>
+      <node id="19">
+        <label>ranges</label>
+      </node>
+      <node id="20">
+        <label>span</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="30">
+        <label>utility</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13">
+        <label>erbsland/conf/AccessCheck.hpp</label>
+        <link refid="_access_check_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>erbsland/conf/AccessSources.hpp</label>
+        <link refid="_access_sources_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/Date.hpp</label>
+        <link refid="_date_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/DateTime.hpp</label>
+        <link refid="_date_time_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/Error.hpp</label>
+        <link refid="_error_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>erbsland/conf/FileAccessCheck.hpp</label>
+        <link refid="_file_access_check_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>erbsland/conf/FileSourceResolver.hpp</label>
+        <link refid="_file_source_resolver_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>erbsland/conf/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>erbsland/conf/Source.hpp</label>
+        <link refid="_source_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>erbsland/conf/SourceResolver.hpp</label>
+        <link refid="_source_resolver_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+      <node id="9">
+        <label>erbsland/conf/vr/builder/TypeTraits.hpp</label>
+        <link refid="_type_traits_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>erbsland/conf/vr/builder/all.hpp</label>
+        <link refid="vr_2builder_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_error" prot="public">erbsland::conf::Error</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Erbsland<sp/>DEV.<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ErrorCategory.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Location.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;NamePath.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;String.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classerbsland_1_1conf_1_1_error" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::exception<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Msg&gt;</highlight></codeline>
+<codeline lineno="27" refid="classerbsland_1_1conf_1_1_error_1ae7e5520c64642c0c739141da27040f9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error_1ae7e5520c64642c0c739141da27040f9a" kindref="member">Error</ref>(</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a8d0eb1492021e62b248e23dade22845f" kindref="member">category</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msg&amp;&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04" kindref="member">message</ref>)<sp/>noexcept</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_category{<ref refid="classerbsland_1_1conf_1_1_error_1a8d0eb1492021e62b248e23dade22845f" kindref="member">category</ref>},</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_message{std::forward&lt;Msg&gt;(<ref refid="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04" kindref="member">message</ref>)}<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Msg,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>Args&gt;</highlight><highlight class="comment">/*<sp/>requires<sp/>removed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classerbsland_1_1conf_1_1_error_1a2fd722a56fefb67858e2f56be38ca844" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a2fd722a56fefb67858e2f56be38ca844" kindref="member">Error</ref>(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a8d0eb1492021e62b248e23dade22845f" kindref="member">category</ref>,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Msg&amp;&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04" kindref="member">message</ref>,<sp/>Args&amp;&amp;...<sp/>args)<sp/>noexcept</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_category{<ref refid="classerbsland_1_1conf_1_1_error_1a8d0eb1492021e62b248e23dade22845f" kindref="member">category</ref>},</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_message{std::forward&lt;Msg&gt;(<ref refid="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04" kindref="member">message</ref>)}<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(assignOptional(std::forward&lt;Args&gt;(args)),<sp/>...);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classerbsland_1_1conf_1_1_error_1a161bb2ac9b20f59bf2dbb4366f2e5144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a161bb2ac9b20f59bf2dbb4366f2e5144" kindref="member">Error</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/>&amp;)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53" refid="classerbsland_1_1conf_1_1_error_1a654ce86214a8278a00e79727800c020b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a654ce86214a8278a00e79727800c020b" kindref="member">Error</ref>(<ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="55" refid="classerbsland_1_1conf_1_1_error_1a084913126a29f591709952ca7c7d9dc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref>()<sp/>noexcept<sp/>override<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="57" refid="classerbsland_1_1conf_1_1_error_1a2e82fb93a505feac93de102f04fca38f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/>&amp;<sp/>operator=(const<sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/>&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="59" refid="classerbsland_1_1conf_1_1_error_1add620b43205127e3b7ac44c7add698fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/>&amp;<sp/>operator=(<ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/>&amp;&amp;)<sp/>noexcept<sp/>=<sp/>default;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>accessors</highlight></codeline>
+<codeline lineno="64" refid="classerbsland_1_1conf_1_1_error_1a8d0eb1492021e62b248e23dade22845f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_error_category" kindref="compound">ErrorCategory</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a8d0eb1492021e62b248e23dade22845f" kindref="member">category</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_category;<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04" kindref="member">message</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_message;<sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classerbsland_1_1conf_1_1_error_1a2b05d540de23acbedf20c47813c40e37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a2b05d540de23acbedf20c47813c40e37" kindref="member">location</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_location.value_or(<ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref>{});</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classerbsland_1_1conf_1_1_error_1addfdbb838a8e00abffa5170f7f2acd8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1addfdbb838a8e00abffa5170f7f2acd8b" kindref="member">namePath</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_namePath.value_or(<ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref>{});</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classerbsland_1_1conf_1_1_error_1a94bafd56dc0ae26523c349adf6e7e74b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::filesystem::path<sp/><ref refid="classerbsland_1_1conf_1_1_error_1a94bafd56dc0ae26523c349adf6e7e74b" kindref="member">filePath</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_filePath.value_or(std::filesystem::path{});</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classerbsland_1_1conf_1_1_error_1a3852a8152eeacb96dcd755053b578555" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::error_code<sp/><ref refid="classerbsland_1_1conf_1_1_error_1a3852a8152eeacb96dcd755053b578555" kindref="member">errorCode</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_errorCode.value_or(std::error_code{});</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98" refid="classerbsland_1_1conf_1_1_error_1a8ee3dd71783d7f0dea8521a502278be4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a8ee3dd71783d7f0dea8521a502278be4" kindref="member">withLocation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_error_1a2b05d540de23acbedf20c47813c40e37" kindref="member">location</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classerbsland_1_1conf_1_1_error_1a3419d9c06472e6a4dcbb7e6d673ed977" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a3419d9c06472e6a4dcbb7e6d673ed977" kindref="member">withNamePathAndLocation</ref>(</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_error_1addfdbb838a8e00abffa5170f7f2acd8b" kindref="member">namePath</ref>,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_error_1a2b05d540de23acbedf20c47813c40e37" kindref="member">location</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>-&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classerbsland_1_1conf_1_1_error_1ab104adfb611b7deb31f343d6a7ec3caa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1ab104adfb611b7deb31f343d6a7ec3caa" kindref="member">withMessagePrefix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/>&amp;prefix)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classerbsland_1_1conf_1_1_error_1a2fa37e99dad07ef6e32e69fb6c29abf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a2fa37e99dad07ef6e32e69fb6c29abf9" kindref="member">withMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/>&amp;<ref refid="classerbsland_1_1conf_1_1_error_1ab206982f6a258b3a124d1c4c4adb0c04" kindref="member">message</ref>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>conversion</highlight></codeline>
+<codeline lineno="124" refid="classerbsland_1_1conf_1_1_error_1a135f1d44b8609002d09c2cfc4411eb01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_error_1a135f1d44b8609002d09c2cfc4411eb01" kindref="member">toText</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>implement<sp/>std::exception</highlight></codeline>
+<codeline lineno="129" refid="classerbsland_1_1conf_1_1_error_1a5b3839edc8f84f36a50befa7e0fcdc33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classerbsland_1_1conf_1_1_error_1a5b3839edc8f84f36a50befa7e0fcdc33" kindref="member">what</ref>()<sp/>const<sp/>noexcept<sp/>override;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(const<sp/><ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/>&amp;loc)<sp/>noexcept<sp/>{<sp/>_location<sp/>=<sp/>loc;<sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(<ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref><sp/>&amp;&amp;loc)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_location<sp/>=<sp/>std::move(loc);<sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePath<sp/>&amp;path)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_namePath<sp/>=<sp/>path;<sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(NamePath<sp/>&amp;&amp;path)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_namePath<sp/>=<sp/>std::move(path);<sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path<sp/>&amp;fp)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_filePath<sp/>=<sp/>fp;<sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(std::filesystem::path<sp/>&amp;&amp;fp)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_filePath<sp/>=<sp/>std::move(fp);<sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::error_code<sp/>&amp;ec)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_errorCode<sp/>=<sp/>ec;<sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>assignOptional(std::error_code<sp/>&amp;&amp;ec)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_errorCode<sp/>=<sp/>std::move(ec);<sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateWhatBuffer()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>ErrorCategory<sp/>_category{<ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a0bcbcac219b1df2b6c76e274ab146b59" kindref="member">ErrorCategory::Internal</ref>};<sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>_message;<sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>std::optional&lt;Location&gt;<sp/>_location;<sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>std::optional&lt;NamePath&gt;<sp/>_namePath;<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>std::optional&lt;std::filesystem::path&gt;<sp/>_filePath;<sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>std::optional&lt;std::error_code&gt;<sp/>_errorCode;<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::string<sp/>_whatBuffer;<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/Error.hpp"/>
+  </compounddef>
+</doxygen>

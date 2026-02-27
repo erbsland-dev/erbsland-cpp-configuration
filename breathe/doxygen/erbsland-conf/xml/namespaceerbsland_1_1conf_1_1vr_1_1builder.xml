@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceerbsland_1_1conf_1_1vr_1_1builder" kind="namespace" language="C++">
+    <compoundname>erbsland::conf::vr::builder</compoundname>
+    <innernamespace refid="namespaceerbsland_1_1conf_1_1vr_1_1builder_1_1detail">erbsland::conf::vr::builder::detail</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_type_traits_8hpp_1acff7a523970823c998ea4c61fd5e5380" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsInteger</definition>
+        <argsstring></argsstring>
+        <name>IsInteger</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsInteger</qualifiedname>
+        <initializer>= std::is_integral_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>&gt; &amp;&amp; !std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, bool&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="17" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a49a7ea741a8682d2676aaaf9d759f46b" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsFloat</definition>
+        <argsstring></argsstring>
+        <name>IsFloat</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsFloat</qualifiedname>
+        <initializer>= std::is_floating_point_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="20" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a5e94c5925bfed91db9326ddc12a5279d" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsBoolean</definition>
+        <argsstring></argsstring>
+        <name>IsBoolean</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsBoolean</qualifiedname>
+        <initializer>= std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, bool&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="23" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a9eab68571653a411b707bda6f55ed256" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsDate</definition>
+        <argsstring></argsstring>
+        <name>IsDate</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsDate</qualifiedname>
+        <initializer>= std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="26" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1af046d5cf06296a18b369e6553f6d698d" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsDateTime</definition>
+        <argsstring></argsstring>
+        <name>IsDateTime</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsDateTime</qualifiedname>
+        <initializer>= std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, <ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="29" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a47ff75669f2272df2d8ddd27468e472a" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsString</definition>
+        <argsstring></argsstring>
+        <name>IsString</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsString</qualifiedname>
+        <initializer>= std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="32" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a7108e8bd3c5044ec0731a6f796c67e3a" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsCString</definition>
+        <argsstring></argsstring>
+        <name>IsCString</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsCString</qualifiedname>
+        <initializer>= std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, const char *&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="35" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a7d67155b6944764715f06cbcb02644b1" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsStdString</definition>
+        <argsstring></argsstring>
+        <name>IsStdString</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsStdString</qualifiedname>
+        <initializer>= std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, std::string&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="38" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a34e4ea2f68676625f98d6e3cc1372393" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsStringLike</definition>
+        <argsstring></argsstring>
+        <name>IsStringLike</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsStringLike</qualifiedname>
+        <initializer>= IsString&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>&gt; || IsCString&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>&gt; || IsStdString&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="41" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_type_traits_8hpp_1a4e70fa3492130ba52b30fd8ce6dcbd13" prot="public" static="no" constexpr="yes" mutable="no">
+        <templateparamlist>
+          <param>
+            <type>typename ValueType</type>
+          </param>
+        </templateparamlist>
+        <type>auto constexpr</type>
+        <definition>auto constexpr erbsland::conf::vr::builder::IsIntegerPair</definition>
+        <argsstring></argsstring>
+        <name>IsIntegerPair</name>
+        <qualifiedname>erbsland::conf::vr::builder::IsIntegerPair</qualifiedname>
+        <initializer>= std::is_same_v&lt;<ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref>, std::pair&lt;Integer, Integer&gt;&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/TypeTraits.hpp" line="44" column="16" bodyfile="erbsland/conf/vr/builder/TypeTraits.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="15" column="1"/>
+  </compounddef>
+</doxygen>

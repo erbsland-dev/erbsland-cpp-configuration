@@ -1,0 +1,691 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_document_builder" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::DocumentBuilder</compoundname>
+    <includes refid="_document_builder_8hpp" local="no">erbsland/conf/DocumentBuilder.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_document_builder_1a1cf7b528538dfe4a45a2aa2b38ec5c22" prot="private" static="no" mutable="no">
+        <type>impl::DocumentBuilder</type>
+        <definition>impl::DocumentBuilder erbsland::conf::DocumentBuilder::_builder</definition>
+        <argsstring></argsstring>
+        <name>_builder</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::_builder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="184" column="27" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1afd9b9d6f6636c41cac8402262861f1a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::DocumentBuilder::DocumentBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>DocumentBuilder</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::DocumentBuilder</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1aab7a192c9d05c8cd81f952e1964eac9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::DocumentBuilder::~DocumentBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DocumentBuilder</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::~DocumentBuilder</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a20b2f604e7f4f0e7b110497c65077dd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::DocumentBuilder::DocumentBuilder</definition>
+        <argsstring>(const DocumentBuilder &amp;)=delete</argsstring>
+        <name>DocumentBuilder</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::DocumentBuilder</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_document_builder" kindref="compound">DocumentBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="53" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a2fe6b584b0be20614690c2b3c3905e13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder" kindref="compound">DocumentBuilder</ref> &amp;</type>
+        <definition>DocumentBuilder &amp; erbsland::conf::DocumentBuilder::DocumentBuilder</definition>
+        <argsstring>(DocumentBuilder &amp;&amp;)=delete</argsstring>
+        <name>DocumentBuilder</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::DocumentBuilder</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder" kindref="compound">DocumentBuilder</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="55" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1ac79190e881a1fcdafd9bbe23a62799c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addSectionMap</definition>
+        <argsstring>(const NamePathLike &amp;namePath)</argsstring>
+        <name>addSectionMap</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addSectionMap</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+<para>Add a section map with the given name path to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="63" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a9f5a6792ea3e09f7000f017a7d3ef305" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addSectionList</definition>
+        <argsstring>(const NamePathLike &amp;namePath)</argsstring>
+        <name>addSectionList</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addSectionList</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <briefdescription>
+<para>Add a section list with the given name path to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="71" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">typename</ref> <ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">T</ref></type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void erbsland::conf::DocumentBuilder::addValue</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const T &amp;value)</argsstring>
+        <name>addValue</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addValue</qualifiedname>
+        <param>
+          <type>const NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value for the new element. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="81" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1af856bea8a30a7b1c37be4412c3e49795" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addInteger</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const Integer value)</argsstring>
+        <name>addInteger</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addInteger</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> Integer</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add an integer value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="89" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a678d8a75dce46d4e97404ff1c96db5da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addBoolean</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const bool value)</argsstring>
+        <name>addBoolean</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addBoolean</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">bool</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a boolean value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="97" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a00d0151d1873567689037b0dbbb21251" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addFloat</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const Float value)</argsstring>
+        <name>addFloat</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addFloat</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> Float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a float value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The floating-point value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="105" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a0c5cf731b4968f0472d5aee6e3698507" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addText</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const String &amp;value)</argsstring>
+        <name>addText</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addText</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a text value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="113" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1aea5a5580219b466c6059f3c5f78d84df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addDate</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const Date &amp;value)</argsstring>
+        <name>addDate</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addDate</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a date value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The date value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="121" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a67ad64c03de224f8acd40f1f7fec5189" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addTime</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const Time &amp;value)</argsstring>
+        <name>addTime</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addTime</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a time value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="129" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1aa652a339f9905c64b887c0c1cf49ac44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addDateTime</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const DateTime &amp;value)</argsstring>
+        <name>addDateTime</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addDateTime</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a date-time value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The date-time value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="137" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1ae84f948a4b9d1c70d0caf32c4466cff7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addBytes</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const Bytes &amp;value)</argsstring>
+        <name>addBytes</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addBytes</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a byte array value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte array value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="145" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a95746a7849eda3d29f8bf71d8dcb5b99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addTimeDelta</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const TimeDelta &amp;value)</argsstring>
+        <name>addTimeDelta</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addTimeDelta</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a time delta value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time delta value to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="153" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1ac0b2e0fe5586de3e0821e965f45bfcb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::addRegEx</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const RegEx &amp;value)</argsstring>
+        <name>addRegEx</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::addRegEx</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">const</ref> <ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Add a regular expression value to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name path of the element. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The regular expression to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="161" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1a03f3f4b2db6ca0d3005cef95b8dfe7d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">void</ref></type>
+        <definition>void erbsland::conf::DocumentBuilder::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::reset</qualifiedname>
+        <briefdescription>
+<para>Reset the builder and discard the current document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This will reset the builder into its initial state and discard any document that is currently being built. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="169" column="10" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_builder_1af27fdd11bd9d108fd7b590242aab79ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DocumentPtr</type>
+        <definition>DocumentPtr erbsland::conf::DocumentBuilder::getDocumentAndReset</definition>
+        <argsstring>()</argsstring>
+        <name>getDocumentAndReset</name>
+        <qualifiedname>erbsland::conf::DocumentBuilder::getDocumentAndReset</qualifiedname>
+        <briefdescription>
+<para>Get the document and reset the builder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This will finalize and return the currently built document and reset the builder into its initial state.</para>
+<para><simplesect kind="return"><para>The built document. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/DocumentBuilder.hpp" line="179" column="18" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="179" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Builds Configuration Documents Programmatically. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The document builder allows building the value trees of configuration documents programmatically. It expects a logical sequence of sections and values and raises exceptions on name collisions.</para>
+<para><bold>Details:</bold></para>
+<para><itemizedlist>
+<listitem><para>The correct document syntax is fully checked when adding values. If the resulting document would become erroneous, an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> (<computeroutput>Syntax</computeroutput>) is thrown.</para>
+</listitem><listitem><para>Values can only be added to existing sections.</para>
+</listitem><listitem><para>If you use a single name, when adding a value, it is automatically added to the last section.</para>
+</listitem><listitem><para>If you use more than one name in the name path, it is added to the specified section.</para>
+</listitem><listitem><para>When creating sections, this builder automatically creates intermediate sections and converts existing ones into section maps.</para>
+</listitem><listitem><para><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> paths can be specified as text <computeroutput><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></computeroutput> or <computeroutput><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref></computeroutput> objects.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Limitations:</bold></para>
+<para><itemizedlist>
+<listitem><para>You must not use indexes or text-indexes in name paths to access specific elements in lists.</para>
+</listitem><listitem><para>This builder interface does not support adding locations to the elements.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Example usage:</bold></para>
+<para><programlisting><codeline><highlight class="normal">DocumentPtr<sp/><ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">buildDocument</ref>()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_document_builder_1afd9b9d6f6636c41cac8402262861f1a8" kindref="member">DocumentBuilder</ref><sp/>builder;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>builder.addSectionMap(<ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">u8</ref></highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>builder.addValue(<ref refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" kindref="member">u8</ref></highlight><highlight class="stringliteral">&quot;value&quot;</highlight><highlight class="normal">,<sp/>String{</highlight><highlight class="stringliteral">&quot;hello&quot;</highlight><highlight class="normal">});</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>builder.getDocumentAndReset();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="erbsland/conf/DocumentBuilder.hpp" line="45" column="1" bodyfile="erbsland/conf/DocumentBuilder.hpp" bodystart="45" bodyend="185"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a1cf7b528538dfe4a45a2aa2b38ec5c22" prot="private" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>_builder</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a678d8a75dce46d4e97404ff1c96db5da" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addBoolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1ae84f948a4b9d1c70d0caf32c4466cff7" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addBytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1aea5a5580219b466c6059f3c5f78d84df" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addDate</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1aa652a339f9905c64b887c0c1cf49ac44" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addDateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a00d0151d1873567689037b0dbbb21251" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addFloat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1af856bea8a30a7b1c37be4412c3e49795" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addInteger</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1ac0b2e0fe5586de3e0821e965f45bfcb9" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addRegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a9f5a6792ea3e09f7000f017a7d3ef305" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addSectionList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1ac79190e881a1fcdafd9bbe23a62799c8" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addSectionMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a0c5cf731b4968f0472d5aee6e3698507" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a67ad64c03de224f8acd40f1f7fec5189" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a95746a7849eda3d29f8bf71d8dcb5b99" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addTimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1af562aee5e86a61e26391a144ce7a80aa" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>addValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1afd9b9d6f6636c41cac8402262861f1a8" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>DocumentBuilder</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a20b2f604e7f4f0e7b110497c65077dd5" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>DocumentBuilder</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a2fe6b584b0be20614690c2b3c3905e13" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>DocumentBuilder</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1af27fdd11bd9d108fd7b590242aab79ba" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>getDocumentAndReset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1a03f3f4b2db6ca0d3005cef95b8dfe7d7" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>reset</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_builder_1aab7a192c9d05c8cd81f952e1964eac9f" prot="public" virt="non-virtual"><scope>erbsland::conf::DocumentBuilder</scope><name>~DocumentBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

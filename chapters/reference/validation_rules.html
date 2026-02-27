@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validation Rules &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Namespace" href="namespace.html" />
+    <link rel="prev" title="Data Classes" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Validation Rules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tutorials">Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr12RulesBuilderE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::vr::RulesBuilder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr4RuleE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::vr::Rule</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr7RulePtrE"><code class="docutils literal notranslate"><span class="pre">RulePtr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::vr::RuleType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr10ConstraintE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::vr::Constraint</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr13ConstraintPtrE"><code class="docutils literal notranslate"><span class="pre">ConstraintPtr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::vr::ConstraintType</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Validation Rules</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/validation_rules.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="validation-rules">
+<h1>Validation Rules<a class="headerlink" href="#validation-rules" title="Link to this heading"></a></h1>
+<section id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../usage/tutorial-validation-rules-embedded-elcl.html"><span class="doc">Use Validation-Rules as Embedded ELCL Document</span></a> - Define validation rules from an embedded ELCL document.</p></li>
+<li><p><a class="reference internal" href="../usage/tutorial-validation-rules-code.html"><span class="doc">Use Validation-Rules Built from Code</span></a> - Build validation rules directly in C++ with <code class="docutils literal notranslate"><span class="pre">RulesBuilder</span></code>.</p></li>
+</ul>
+</section>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr12RulesBuilderE">
+<span id="_CPPv3N8erbsland4conf2vr12RulesBuilderE"></span><span id="_CPPv2N8erbsland4conf2vr12RulesBuilderE"></span><span id="erbsland::conf::vr::RulesBuilder"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RulesBuilder</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr12RulesBuilderE" title="Link to this definition"></a><br /></dt>
+<dd><p>A builder to create validation rules programmatically. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpEN8erbsland4conf2vr12RulesBuilder7addRuleEvRK12NamePathLikeK8RuleTypeDp10Attributes">
+<span id="_CPPv3IDpEN8erbsland4conf2vr12RulesBuilder7addRuleERK12NamePathLikeK8RuleTypeDp10Attributes"></span><span id="_CPPv2IDpEN8erbsland4conf2vr12RulesBuilder7addRuleERK12NamePathLikeK8RuleTypeDp10Attributes"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Attributes</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a9e985ac71a9ad91544fddf67ac366da8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addRule</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ruleType</span></span>, <a class="reference internal" href="#_CPPv4IDpEN8erbsland4conf2vr12RulesBuilder7addRuleEvRK12NamePathLikeK8RuleTypeDp10Attributes" title="erbsland::conf::vr::RulesBuilder::addRule::Attributes"><span class="n"><span class="pre">Attributes</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">attributes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpEN8erbsland4conf2vr12RulesBuilder7addRuleEvRK12NamePathLikeK8RuleTypeDp10Attributes" title="Link to this definition"></a><br /></dt>
+<dd><p>Add a rule to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name-path of the new rule. </p></li>
+<li><p><strong>ruleType</strong> – The type of the new rule. </p></li>
+<li><p><strong>attributes</strong> – All the attributes for the rule definition. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpEN8erbsland4conf2vr12RulesBuilder14addAlternativeEvRK12NamePathLikeK8RuleTypeDp10Attributes">
+<span id="_CPPv3IDpEN8erbsland4conf2vr12RulesBuilder14addAlternativeERK12NamePathLikeK8RuleTypeDp10Attributes"></span><span id="_CPPv2IDpEN8erbsland4conf2vr12RulesBuilder14addAlternativeERK12NamePathLikeK8RuleTypeDp10Attributes"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Attributes</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1ab8b32c1ac00fc67347139e151701788c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addAlternative</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf12NamePathLikeE" title="erbsland::conf::NamePathLike"><span class="n"><span class="pre">NamePathLike</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">namePath</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ruleType</span></span>, <a class="reference internal" href="#_CPPv4IDpEN8erbsland4conf2vr12RulesBuilder14addAlternativeEvRK12NamePathLikeK8RuleTypeDp10Attributes" title="erbsland::conf::vr::RulesBuilder::addAlternative::Attributes"><span class="n"><span class="pre">Attributes</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">attributes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpEN8erbsland4conf2vr12RulesBuilder14addAlternativeEvRK12NamePathLikeK8RuleTypeDp10Attributes" title="Link to this definition"></a><br /></dt>
+<dd><p>Add an alternative to the document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>namePath</strong> – The name-path of the new rule. </p></li>
+<li><p><strong>ruleType</strong> – The type of the new rule. </p></li>
+<li><p><strong>attributes</strong> – All the attributes for the rule definition. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr12RulesBuilder5resetEv">
+<span id="_CPPv3N8erbsland4conf2vr12RulesBuilder5resetEv"></span><span id="_CPPv2N8erbsland4conf2vr12RulesBuilder5resetEv"></span><span id="erbsland::conf::vr::RulesBuilder::reset"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a771534bbc44dbb891d9d07cda820d12b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr12RulesBuilder5resetEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Reset the builder and discard the current rules. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr12RulesBuilder9takeRulesEv">
+<span id="_CPPv3N8erbsland4conf2vr12RulesBuilder9takeRulesEv"></span><span id="_CPPv2N8erbsland4conf2vr12RulesBuilder9takeRulesEv"></span><span id="erbsland::conf::vr::RulesBuilder::takeRules"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a1d76748b0e4ac9983e60a7b6a162ac72"></span><span class="n"><span class="pre">RulesPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">takeRules</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr12RulesBuilder9takeRulesEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Finalize the rules document and return the rules. </p>
+<p>This will finalize the currently processed rules document and return it to the caller. The builder is reset afterward and can be reused to create a new rules document.</p>
+<p>If errors are found while finalizing the rules document, an exception is thrown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n">Error</span></a></span></span> – (Validation) on any logical error found. E.g. missing key references. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The finalized rules document. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr4RuleE">
+<span id="_CPPv3N8erbsland4conf2vr4RuleE"></span><span id="_CPPv2N8erbsland4conf2vr4RuleE"></span><span id="erbsland::conf::vr::Rule"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Rule</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr4RuleE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule8namePathEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule8namePathEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule8namePathEv"></span><span id="erbsland::conf::vr::Rule::namePathC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a730c3355d32c92a906dc283aa00e1bc9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="name.html#_CPPv4N8erbsland4conf8NamePathE" title="erbsland::conf::NamePath"><span class="n"><span class="pre">NamePath</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">namePath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule8namePathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The target name-path of this rule. </p>
+<p>This is the name path of the value in the validated document. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule4typeEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule4typeEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule4typeEv"></span><span id="erbsland::conf::vr::Rule::typeC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1af942e9b4b3dbdef9a8c9daf5b5c60c54"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule4typeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The type of the rule. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule5titleEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule5titleEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule5titleEv"></span><span id="erbsland::conf::vr::Rule::titleC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1ad1599f51787f2cbf99015022cfb78ecd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">title</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule5titleEv" title="Link to this definition"></a><br /></dt>
+<dd><p>An optional title. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule11descriptionEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule11descriptionEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule11descriptionEv"></span><span id="erbsland::conf::vr::Rule::descriptionC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1af82d9a9fc22744603c6c735a7c1b781c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule11descriptionEv" title="Link to this definition"></a><br /></dt>
+<dd><p>An optional description. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule10hasDefaultEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule10hasDefaultEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule10hasDefaultEv"></span><span id="erbsland::conf::vr::Rule::hasDefaultC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a8c59b2eb13eb4d4e06a502d1ed0a05ff"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasDefault</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule10hasDefaultEv" title="Link to this definition"></a><br /></dt>
+<dd><p>If this rule has a default. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule14hasCustomErrorEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule14hasCustomErrorEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule14hasCustomErrorEv"></span><span id="erbsland::conf::vr::Rule::hasCustomErrorC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a97af7600ff8dd416e8e7907f52fb7d54"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasCustomError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule14hasCustomErrorEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if this rule has a custom error message. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule11customErrorEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule11customErrorEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule11customErrorEv"></span><span id="erbsland::conf::vr::Rule::customErrorC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1abcc9b7f1602b153f5e069145e48acd6c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">customError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule11customErrorEv" title="Link to this definition"></a><br /></dt>
+<dd><p>A custom error message for the rule. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule11constraintsEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule11constraintsEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule11constraintsEv"></span><span id="erbsland::conf::vr::Rule::constraintsC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a2a17de7a6e3aad846f39697ed4261332"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr13ConstraintPtrE" title="erbsland::conf::vr::ConstraintPtr"><span class="n"><span class="pre">ConstraintPtr</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">constraints</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule11constraintsEv" title="Link to this definition"></a><br /></dt>
+<dd><p>A list of constraints. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule10isOptionalEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule10isOptionalEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule10isOptionalEv"></span><span id="erbsland::conf::vr::Rule::isOptionalC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a212d9f0c93cfa4ac90854bb2dad83b92"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOptional</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule10isOptionalEv" title="Link to this definition"></a><br /></dt>
+<dd><p>If this rule is optional. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule15caseSensitivityEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule15caseSensitivityEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule15caseSensitivityEv"></span><span id="erbsland::conf::vr::Rule::caseSensitivityC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a98ac8d2d2cd979900d387b243bdfb4e7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">CaseSensitivity</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">caseSensitivity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule15caseSensitivityEv" title="Link to this definition"></a><br /></dt>
+<dd><p>If constraints are tested case-sensitive. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule8isSecretEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule8isSecretEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule8isSecretEv"></span><span id="erbsland::conf::vr::Rule::isSecretC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1abeaf9fa5444ccc21e2c1a4dd063248e5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isSecret</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule8isSecretEv" title="Link to this definition"></a><br /></dt>
+<dd><p>If the validated value is a secret. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule8childrenEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule8childrenEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule8childrenEv"></span><span id="erbsland::conf::vr::Rule::childrenC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1acf77f8d4dccbf3028a0cae5f5c54dfc8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr7RulePtrE" title="erbsland::conf::vr::RulePtr"><span class="n"><span class="pre">RulePtr</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">children</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule8childrenEv" title="Link to this definition"></a><br /></dt>
+<dd><p>A list of child rules. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule11hasLocationEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule11hasLocationEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule11hasLocationEv"></span><span id="erbsland::conf::vr::Rule::hasLocationC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1ad3033bb314d11c8bc0aaa6ee2b0a3f55"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasLocation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule11hasLocationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if there is location info. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr4Rule8locationEv">
+<span id="_CPPv3NK8erbsland4conf2vr4Rule8locationEv"></span><span id="_CPPv2NK8erbsland4conf2vr4Rule8locationEv"></span><span id="erbsland::conf::vr::Rule::locationC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a89e5a1effce525227d27c36d51bb6038"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="location.html#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">location</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr4Rule8locationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the location info. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr4Rule11setLocationERK8Location">
+<span id="_CPPv3N8erbsland4conf2vr4Rule11setLocationERK8Location"></span><span id="_CPPv2N8erbsland4conf2vr4Rule11setLocationERK8Location"></span><span id="erbsland::conf::vr::Rule::setLocation__LocationCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a8daa20cb73a5ee8218dfae32c9c0a477"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="location.html#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newLocation</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr4Rule11setLocationERK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the location info. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr7RulePtrE">
+<span id="_CPPv3N8erbsland4conf2vr7RulePtrE"></span><span id="_CPPv2N8erbsland4conf2vr7RulePtrE"></span><span id="erbsland::conf::vr::RulePtr"></span><span class="target" id="_value_8hpp_1acdf5ec4c5641cace74a1d3fe409a5a9c"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr4RuleE" title="erbsland::conf::vr::Rule"><span class="n"><span class="pre">Rule</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vr</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">RulePtr</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr7RulePtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleTypeE">
+<span id="_CPPv3N8erbsland4conf2vr8RuleTypeE"></span><span id="_CPPv2N8erbsland4conf2vr8RuleTypeE"></span><span id="erbsland::conf::vr::RuleType"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RuleType</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-construction-and-assignment">Construction and Assignment</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleType8RuleTypeEv">
+<span id="_CPPv3N8erbsland4conf2vr8RuleType8RuleTypeEv"></span><span id="_CPPv2N8erbsland4conf2vr8RuleType8RuleTypeEv"></span><span id="erbsland::conf::vr::RuleType::RuleType"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1ae545ace4ce7bd7885fbdeb578ade636b"></span><span class="sig-name descname"><span class="n"><span class="pre">RuleType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleType8RuleTypeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Create an undefined value type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleType8RuleTypeEK4Enum">
+<span id="_CPPv3N8erbsland4conf2vr8RuleType8RuleTypeEK4Enum"></span><span id="_CPPv2N8erbsland4conf2vr8RuleType8RuleTypeEK4Enum"></span><span id="erbsland::conf::vr::RuleType::RuleType__EnumC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1aec5035cfedaaaa50052c29377c11eccb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RuleType</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleType8RuleTypeEK4Enum" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new value type. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The enum value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleType8RuleTypeERK8RuleType">
+<span id="_CPPv3N8erbsland4conf2vr8RuleType8RuleTypeERK8RuleType"></span><span id="_CPPv2N8erbsland4conf2vr8RuleType8RuleTypeERK8RuleType"></span><span id="erbsland::conf::vr::RuleType::RuleType__RuleTypeCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a595fedf5345474c5a1d294db39c99315"></span><span class="sig-name descname"><span class="n"><span class="pre">RuleType</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleType8RuleTypeERK8RuleType" title="erbsland::conf::vr::RuleType::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleType8RuleTypeERK8RuleType" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleTypeD0Ev">
+<span id="_CPPv3N8erbsland4conf2vr8RuleTypeD0Ev"></span><span id="_CPPv2N8erbsland4conf2vr8RuleTypeD0Ev"></span><span id="erbsland::conf::vr::RuleType::~RuleType"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a2fe4b098c4885c8f666bd6de82010bd0"></span><span class="sig-name descname"><span class="n"><span class="pre">~RuleType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleTypeD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleTypeaSERK8RuleType">
+<span id="_CPPv3N8erbsland4conf2vr8RuleTypeaSERK8RuleType"></span><span id="_CPPv2N8erbsland4conf2vr8RuleTypeaSERK8RuleType"></span><span id="erbsland::conf::vr::RuleType::assign-operator__RuleTypeCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a30727ccda02a09ce1b1e497dceae122c"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleTypeaSERK8RuleType" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy assignment. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-operators">Operators</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleTypeaSEK4Enum">
+<span id="_CPPv3N8erbsland4conf2vr8RuleTypeaSEK4Enum"></span><span id="_CPPv2N8erbsland4conf2vr8RuleTypeaSEK4Enum"></span><span id="erbsland::conf::vr::RuleType::assign-operator__EnumC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1aa885e098c38fe584c933bcb13cf40935"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleTypeaSEK4Enum" title="Link to this definition"></a><br /></dt>
+<dd><p>Assign an enum. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleTypecv4EnumEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleTypecv4EnumEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleTypecv4EnumEv"></span><span id="erbsland::conf::vr::RuleType::castto-Enum-operatorCCE"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1ae6d694a7a68c21614eb44ae6bef2e4e7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleTypecv4EnumEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Cast back to the enum value. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-tests">Tests</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType11isUndefinedEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType11isUndefinedEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType11isUndefinedEv"></span><span id="erbsland::conf::vr::RuleType::isUndefinedCCE"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a6104102c5b298ed9523c0c9a7700519a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUndefined</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType11isUndefinedEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if the type is undefined. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType6isListEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType6isListEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType6isListEv"></span><span id="erbsland::conf::vr::RuleType::isListC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1ac4f6769f89d42e65cb5392cc662e8f28"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isList</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType6isListEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if this type represents any kind of list. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType8isScalarEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType8isScalarEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType8isScalarEv"></span><span id="erbsland::conf::vr::RuleType::isScalarC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1ac55b782ba2090ebf58f8d5c976486853"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isScalar</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType8isScalarEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if this type represents a scalar value. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType15acceptsDefaultsEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType15acceptsDefaultsEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType15acceptsDefaultsEv"></span><span id="erbsland::conf::vr::RuleType::acceptsDefaultsC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a5f933713fd8ca6c0902f6aeb170a1ccb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">acceptsDefaults</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType15acceptsDefaultsEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if this rule type accepts defaults. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType16matchesValueTypeE9ValueType">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType16matchesValueTypeE9ValueType"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType16matchesValueTypeE9ValueType"></span><span id="erbsland::conf::vr::RuleType::matchesValueType__ValueTypeC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a523cb37fcf2643be83f4cb60461f674f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">matchesValueType</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="value.html#_CPPv4N8erbsland4conf9ValueTypeE" title="erbsland::conf::ValueType"><span class="n"><span class="pre">ValueType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">valueType</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType16matchesValueTypeE9ValueType" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if this rule type matches a value type. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType6toTextEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType6toTextEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType6toTextEv"></span><span id="erbsland::conf::vr::RuleType::toTextC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1ad22017294fccb7d27cff299775f74f6c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">toText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType6toTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert this type into text. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType11toValueTypeEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType11toValueTypeEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType11toValueTypeEv"></span><span id="erbsland::conf::vr::RuleType::toValueTypeC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1aa43978a10fbc7f7660a001eb78ab240e"></span><a class="reference internal" href="value.html#_CPPv4N8erbsland4conf9ValueTypeE" title="erbsland::conf::ValueType"><span class="n"><span class="pre">ValueType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toValueType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType11toValueTypeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert this type into a value type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType21expectedValueTypeTextEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType21expectedValueTypeTextEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType21expectedValueTypeTextEv"></span><span id="erbsland::conf::vr::RuleType::expectedValueTypeTextC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a1436a667866343f3eee811d29c8db218"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">expectedValueTypeText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType21expectedValueTypeTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the expected type text for this rule type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr8RuleType3rawEv">
+<span id="_CPPv3NK8erbsland4conf2vr8RuleType3rawEv"></span><span id="_CPPv2NK8erbsland4conf2vr8RuleType3rawEv"></span><span id="erbsland::conf::vr::RuleType::rawCCE"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a848e24a622c59b9e95b4f10d17a3e657"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">raw</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr8RuleType3rawEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the underlying enum value. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleType8fromTextERK6String">
+<span id="_CPPv3N8erbsland4conf2vr8RuleType8fromTextERK6String"></span><span id="_CPPv2N8erbsland4conf2vr8RuleType8fromTextERK6String"></span><span id="erbsland::conf::vr::RuleType::fromText__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a52fa7a350db535e918ccb91c9c1ce39d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromText</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleType8fromTextERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a validation type from a given text. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The validation type or <code class="docutils literal notranslate"><span class="pre">Undefined</span></code> if the text does not match any valid type. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr8RuleType3allEv">
+<span id="_CPPv3N8erbsland4conf2vr8RuleType3allEv"></span><span id="_CPPv2N8erbsland4conf2vr8RuleType3allEv"></span><span id="erbsland::conf::vr::RuleType::all"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_rule_type_1aed31eae4dafdd8d45dc135a9521df97b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr8RuleTypeE" title="erbsland::conf::vr::RuleType"><span class="n"><span class="pre">RuleType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">19</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">all</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr8RuleType3allEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get an array with all value types. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr10ConstraintE">
+<span id="_CPPv3N8erbsland4conf2vr10ConstraintE"></span><span id="_CPPv2N8erbsland4conf2vr10ConstraintE"></span><span id="erbsland::conf::vr::Constraint"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Constraint</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr10ConstraintE" title="Link to this definition"></a><br /></dt>
+<dd><p>A constraint for a validation-rule. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr10Constraint4nameEv">
+<span id="_CPPv3NK8erbsland4conf2vr10Constraint4nameEv"></span><span id="_CPPv2NK8erbsland4conf2vr10Constraint4nameEv"></span><span id="erbsland::conf::vr::Constraint::nameC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a78379c1000c8bdb1cdf2890b78eee7fc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr10Constraint4nameEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The name. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr10Constraint4typeEv">
+<span id="_CPPv3NK8erbsland4conf2vr10Constraint4typeEv"></span><span id="_CPPv2NK8erbsland4conf2vr10Constraint4typeEv"></span><span id="erbsland::conf::vr::Constraint::typeC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1afa1f7d95efefbf42b67bc9c03ea3ee32"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE" title="erbsland::conf::vr::ConstraintType"><span class="n"><span class="pre">ConstraintType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr10Constraint4typeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr10Constraint14hasCustomErrorEv">
+<span id="_CPPv3NK8erbsland4conf2vr10Constraint14hasCustomErrorEv"></span><span id="_CPPv2NK8erbsland4conf2vr10Constraint14hasCustomErrorEv"></span><span id="erbsland::conf::vr::Constraint::hasCustomErrorC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a05f546ccbe0af9ed1d1466a5c4d7ce93"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasCustomError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr10Constraint14hasCustomErrorEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if a custom error message set. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr10Constraint11customErrorEv">
+<span id="_CPPv3NK8erbsland4conf2vr10Constraint11customErrorEv"></span><span id="_CPPv2NK8erbsland4conf2vr10Constraint11customErrorEv"></span><span id="erbsland::conf::vr::Constraint::customErrorC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a8e34525eadda456366e874bb2c4e8e24"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">customError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr10Constraint11customErrorEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The custom error message. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr10Constraint9isNegatedEv">
+<span id="_CPPv3NK8erbsland4conf2vr10Constraint9isNegatedEv"></span><span id="_CPPv2NK8erbsland4conf2vr10Constraint9isNegatedEv"></span><span id="erbsland::conf::vr::Constraint::isNegatedC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a99ff26b0147d562f12e45610ff6c4751"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isNegated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr10Constraint9isNegatedEv" title="Link to this definition"></a><br /></dt>
+<dd><p>If the result of this constraint test is negated. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr10Constraint11hasLocationEv">
+<span id="_CPPv3NK8erbsland4conf2vr10Constraint11hasLocationEv"></span><span id="_CPPv2NK8erbsland4conf2vr10Constraint11hasLocationEv"></span><span id="erbsland::conf::vr::Constraint::hasLocationC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a18d035908dd8b1a3e70648912c74c1c5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasLocation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr10Constraint11hasLocationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if there is location info. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr10Constraint8locationEv">
+<span id="_CPPv3NK8erbsland4conf2vr10Constraint8locationEv"></span><span id="_CPPv2NK8erbsland4conf2vr10Constraint8locationEv"></span><span id="erbsland::conf::vr::Constraint::locationC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1aced87c240f280d476e87ce605d958127"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="location.html#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">location</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr10Constraint8locationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the location info. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr10Constraint11setLocationERK8Location">
+<span id="_CPPv3N8erbsland4conf2vr10Constraint11setLocationERK8Location"></span><span id="_CPPv2N8erbsland4conf2vr10Constraint11setLocationERK8Location"></span><span id="erbsland::conf::vr::Constraint::setLocation__LocationCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a75870f6312dfc53b900371a6a1c30f2f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="location.html#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newLocation</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr10Constraint11setLocationERK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the location info. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr13ConstraintPtrE">
+<span id="_CPPv3N8erbsland4conf2vr13ConstraintPtrE"></span><span id="_CPPv2N8erbsland4conf2vr13ConstraintPtrE"></span><span class="target" id="_constraint_8hpp_1ac39a35e3c5032399134c072899affd76"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vr</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">ConstraintPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr10ConstraintE" title="erbsland::conf::vr::Constraint"><span class="n"><span class="pre">Constraint</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr13ConstraintPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintTypeE">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintTypeE"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintTypeE"></span><span id="erbsland::conf::vr::ConstraintType"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstraintType</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-construction-and-assignment">Construction and Assignment</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintType14ConstraintTypeEv">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintType14ConstraintTypeEv"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintType14ConstraintTypeEv"></span><span id="erbsland::conf::vr::ConstraintType::ConstraintType"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a7170183141c320abb70b405e0249af89"></span><span class="sig-name descname"><span class="n"><span class="pre">ConstraintType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintType14ConstraintTypeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Create an undefined value type. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintType14ConstraintTypeEK4Enum">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintType14ConstraintTypeEK4Enum"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintType14ConstraintTypeEK4Enum"></span><span id="erbsland::conf::vr::ConstraintType::ConstraintType__EnumC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a7274dd167b7d5c948f7cdbdd7560c08a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstraintType</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintType14ConstraintTypeEK4Enum" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new value type. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The enum value. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintType14ConstraintTypeERK14ConstraintType">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintType14ConstraintTypeERK14ConstraintType"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintType14ConstraintTypeERK14ConstraintType"></span><span id="erbsland::conf::vr::ConstraintType::ConstraintType__ConstraintTypeCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1ad4d891e0d8e34276d3f0be875d9d25f5"></span><span class="sig-name descname"><span class="n"><span class="pre">ConstraintType</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintType14ConstraintTypeERK14ConstraintType" title="erbsland::conf::vr::ConstraintType::ConstraintType"><span class="n"><span class="pre">ConstraintType</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintType14ConstraintTypeERK14ConstraintType" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintTypeD0Ev">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintTypeD0Ev"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintTypeD0Ev"></span><span id="erbsland::conf::vr::ConstraintType::~ConstraintType"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a93888aa407fea216c1a211bf07de3808"></span><span class="sig-name descname"><span class="n"><span class="pre">~ConstraintType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintTypeaSERK14ConstraintType">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintTypeaSERK14ConstraintType"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintTypeaSERK14ConstraintType"></span><span id="erbsland::conf::vr::ConstraintType::assign-operator__ConstraintTypeCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a42ffef4369a89c948ed2b9828b32d397"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE" title="erbsland::conf::vr::ConstraintType"><span class="n"><span class="pre">ConstraintType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE" title="erbsland::conf::vr::ConstraintType"><span class="n"><span class="pre">ConstraintType</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeaSERK14ConstraintType" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy assignment. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-operators">Operators</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintTypeaSEK4Enum">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintTypeaSEK4Enum"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintTypeaSEK4Enum"></span><span id="erbsland::conf::vr::ConstraintType::assign-operator__EnumC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a69439dd1cd265cbaf84358669f7c8e50"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE" title="erbsland::conf::vr::ConstraintType"><span class="n"><span class="pre">ConstraintType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeaSEK4Enum" title="Link to this definition"></a><br /></dt>
+<dd><p>Assign an enum. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr14ConstraintTypecv4EnumEv">
+<span id="_CPPv3NK8erbsland4conf2vr14ConstraintTypecv4EnumEv"></span><span id="_CPPv2NK8erbsland4conf2vr14ConstraintTypecv4EnumEv"></span><span id="erbsland::conf::vr::ConstraintType::castto-Enum-operatorCCE"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a9991409bf182b2ec9add19e2de4f45f9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr14ConstraintTypecv4EnumEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Cast back to the enum value. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-tests">Tests</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr14ConstraintType11isUndefinedEv">
+<span id="_CPPv3NK8erbsland4conf2vr14ConstraintType11isUndefinedEv"></span><span id="_CPPv2NK8erbsland4conf2vr14ConstraintType11isUndefinedEv"></span><span id="erbsland::conf::vr::ConstraintType::isUndefinedCCE"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a537b1c7f8bba71095f192927f0caa520"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUndefined</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr14ConstraintType11isUndefinedEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if the type is undefined. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr14ConstraintType6toTextEv">
+<span id="_CPPv3NK8erbsland4conf2vr14ConstraintType6toTextEv"></span><span id="_CPPv2NK8erbsland4conf2vr14ConstraintType6toTextEv"></span><span id="erbsland::conf::vr::ConstraintType::toTextC"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8e47cac98e85c5410c6af154dcca6e7e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">toText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr14ConstraintType6toTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert this type into text. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf2vr14ConstraintType3rawEv">
+<span id="_CPPv3NK8erbsland4conf2vr14ConstraintType3rawEv"></span><span id="_CPPv2NK8erbsland4conf2vr14ConstraintType3rawEv"></span><span id="erbsland::conf::vr::ConstraintType::rawCCE"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a050437f2e11d6cc28cb5380825370e11"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="n"><span class="pre">Enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">raw</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf2vr14ConstraintType3rawEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Access the underlying enum value. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintType8fromTextERK6String">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintType8fromTextERK6String"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintType8fromTextERK6String"></span><span id="erbsland::conf::vr::ConstraintType::fromText__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a3fbf8702dc4d9369013a8b06114934ee"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE" title="erbsland::conf::vr::ConstraintType"><span class="n"><span class="pre">ConstraintType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromText</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintType8fromTextERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a validation type from a given text. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The validation type or <code class="docutils literal notranslate"><span class="pre">Undefined</span></code> if the text does not match any valid type. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf2vr14ConstraintType3allEv">
+<span id="_CPPv3N8erbsland4conf2vr14ConstraintType3allEv"></span><span id="_CPPv2N8erbsland4conf2vr14ConstraintType3allEv"></span><span id="erbsland::conf::vr::ConstraintType::all"></span><span class="target" id="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a9a0a990ef0629ef26992edba8d188444"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf2vr14ConstraintTypeE" title="erbsland::conf::vr::ConstraintType"><span class="n"><span class="pre">ConstraintType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">15</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">all</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf2vr14ConstraintType3allEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get an array with all value types. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data Classes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace.html" class="btn btn-neutral float-right" title="Namespace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,3422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_string" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::String</compoundname>
+    <includes refid="_string_8hpp" local="no">erbsland/conf/String.hpp</includes>
+    <sectiondef kind="user-defined">
+      <header>String Conversion</header>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a1ccae3950222803b7a4e79af29f3b859" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string erbsland::conf::String::toCharString</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toCharString</name>
+        <qualifiedname>erbsland::conf::String::toCharString</qualifiedname>
+        <briefdescription>
+<para>Convert the wrapped string into a <computeroutput>char</computeroutput> based <computeroutput>std::string</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This helper performs the required conversion from <computeroutput>char8_t</computeroutput> to <computeroutput>char</computeroutput> and is primarily meant for interoperability with APIs that expect a regular <computeroutput>std::string</computeroutput>. <simplesect kind="return"><para>A <computeroutput>char</computeroutput> based string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="587" column="18" bodyfile="erbsland/conf/String.hpp" bodystart="587" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a9d05410d224dac58d5490e56c96b5953" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>static String erbsland::conf::String::fromCharString</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>fromCharString</name>
+        <qualifiedname>erbsland::conf::String::fromCharString</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Convert and verify UTF-8 data from a <computeroutput>char</computeroutput> based <computeroutput>std:string</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to convert and verify. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if the string contains UTF-8 encoding errors or invalid Unicode code-points. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="575" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a51d4a8921f9ebcd4de14b9a489058e0e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>static String erbsland::conf::String::fromCharString</definition>
+        <argsstring>(std::string_view strView)</argsstring>
+        <name>fromCharString</name>
+        <qualifiedname>erbsland::conf::String::fromCharString</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>strView</declname>
+        </param>
+        <briefdescription>
+<para>Convert and verify UTF-8 data from a <computeroutput>char</computeroutput> based <computeroutput>std:string</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>strView</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to convert and verify. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if the string contains UTF-8 encoding errors or invalid Unicode code-points. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="580" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_string_1a500c73a1520dc8ac8da383569bbe6bbe" prot="private" static="no">
+        <type>std::u8string</type>
+        <definition>using erbsland::conf::String::WrappedString =  std::u8string</definition>
+        <argsstring></argsstring>
+        <name>WrappedString</name>
+        <qualifiedname>erbsland::conf::String::WrappedString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="39" column="5" bodyfile="erbsland/conf/String.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_string_1af7c9b53c265dd8db4ed64033796e8ef1" prot="public" static="no">
+        <type>std::span&lt; const std::byte &gt;</type>
+        <definition>using erbsland::conf::String::ConstByteSpan =  std::span&lt;const std::byte&gt;</definition>
+        <argsstring></argsstring>
+        <name>ConstByteSpan</name>
+        <qualifiedname>erbsland::conf::String::ConstByteSpan</qualifiedname>
+        <briefdescription>
+<para>A span of bytes referencing the underlying data of the string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="43" column="5" bodyfile="erbsland/conf/String.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_string_1a94aa320d23789a2f2605629bd09add08" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::String::npos</definition>
+        <argsstring></argsstring>
+        <name>npos</name>
+        <qualifiedname>erbsland::conf::String::npos</qualifiedname>
+        <initializer>= WrappedString::npos</initializer>
+        <briefdescription>
+<para>Constant representing an invalid or not-found position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="49" column="27" bodyfile="erbsland/conf/String.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_string_1ae5f3d5e7f7c3873c22453b277d5af68d" prot="private" static="no" mutable="no">
+        <type>WrappedString</type>
+        <definition>WrappedString erbsland::conf::String::_string</definition>
+        <argsstring></argsstring>
+        <name>_string</name>
+        <qualifiedname>erbsland::conf::String::_string</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="696" column="19" bodyfile="erbsland/conf/String.hpp" bodystart="696" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a3b587c34d7f4e16abb12e2eef3093ad8" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(const char8_t(&amp;literal)[N]) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const char8_t(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Construct from a UTF-8 string literal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the literal including the null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UTF-8 literal to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="57" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a3b41eecc4fb38028dbe695da7454e890" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(const char8_t *str, const std::size_t size) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const char8_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a UTF-8 character pointer and size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to UTF-8 characters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters to read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="62" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a7cd1f139ad3ab5b4f8df70c58b323f71" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(const std::u8string_view str) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const std::u8string_view</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a UTF-8 string view. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UTF-8 string view to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="68" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a19a567db86d619377b63a763fb2e6b85" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(const WrappedString &amp;str) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const WrappedString &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Copy construct from the underlying UTF-8 string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to wrap. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="72" column="24" bodyfile="erbsland/conf/String.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ad6c21869284368e8e7d2dd9747aaaa2c" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(WrappedString &amp;&amp;str) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>WrappedString &amp;&amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Move construct from the underlying UTF-8 string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to move from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="76" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ada467259cafeb076262b572bda2542e4" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(std::size_t count, value_type c) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Construct a string with a repeated character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to repeat. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="81" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a49ab71ff791317148b8af1daaee80541" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename InputIt</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(InputIt begin, InputIt end) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>InputIt</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>InputIt</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Construct a string from a character range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>InputIt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input iterator type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the first character. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to one-past-last character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="88" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a9530fec9524039f14bd02bb00764ec2d" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(const char(&amp;literal)[N]) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const char(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Construct from a null-terminated string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the literal including the null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The literal to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="95" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a76b8bf30f589c8bdc7f8d77bd548cea6" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::String</definition>
+        <argsstring>(const char *str, const std::size_t size) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a character pointer and size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to narrow characters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters to read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="100" column="5" bodyfile="erbsland/conf/String.hpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a89e8e5c21ef742f265ec978eaa4ae7d1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::String</definition>
+        <argsstring>(const std::string_view str) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const std::string_view</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a standard string view. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The standard string view to the string to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="106" column="5" bodyfile="erbsland/conf/String.hpp" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a6bac04c5cdf69cb3324c9c784e31c39d" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::String</definition>
+        <argsstring>(const std::string &amp;str) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a standard narrow string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The std::string to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="110" column="14" bodyfile="erbsland/conf/String.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1af496355151b07e87c5e987ffc31d9f25" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::String::String</definition>
+        <argsstring>(std::size_t count, char c) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Construct a string with a repeated narrow character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to repeat. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="115" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a26fe0b170ac3a29cc22ec5413d079fee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::String</definition>
+        <argsstring>()=default</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="122" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a8799952d817911fafa3a22fcadf54c04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::~String</definition>
+        <argsstring>()=default</argsstring>
+        <name>~String</name>
+        <qualifiedname>erbsland::conf::String::~String</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="124" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a6794d011e44b108d4b7a8ee222fa5716" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::String</definition>
+        <argsstring>(const String &amp;) noexcept=default</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="126" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a32e878b7fb5b175cb48b02b8d2a02030" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::String</definition>
+        <argsstring>(String &amp;&amp;) noexcept=default</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+<para>Default move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="128" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a98e92f301fbbed0f772d41e18539be12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator=</definition>
+        <argsstring>(const String &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::String::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default copy assignment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="130" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1adf9b8e15b9dfadf560ec38f7e0af89bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator=</definition>
+        <argsstring>(String &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::String::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+<para>Default move assignment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="132" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aaad7f85f858223ca563ccb93721df63d" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::operator+</definition>
+        <argsstring>(const String &amp;other) const noexcept</argsstring>
+        <name>operator+</name>
+        <qualifiedname>erbsland::conf::String::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Concatenate two strings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> to append to a copy of this one. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> with the combined contents. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="140" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a74c95fabbcfc15c9a9ab956c7e26442c" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(const String &amp;other) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Append another string to this string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="147" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac7e588c22c9929fe21ecede218726d75" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(char8_t c) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>char8_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Append a character to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="155" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1afe929ea4d23e8d8f3b02a8921e4b2168" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(char c) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Append a character to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="163" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a16fe417909b0719502ae7f3768c581ce" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::operator==</definition>
+        <argsstring>(const char8_t(&amp;literal)[N]) const noexcept</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::String::operator==</qualifiedname>
+        <param>
+          <type>const char8_t(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Compare this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> to a UTF-8 literal for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UTF-8 literal to compare against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the literal matches exactly. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="174" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aa1fd1295a18377f60eb33fc554385a3d" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::operator!=</definition>
+        <argsstring>(const char8_t(&amp;literal)[N]) const noexcept</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::String::operator!=</qualifiedname>
+        <param>
+          <type>const char8_t(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Compare this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> to a UTF-8 literal for inequality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UTF-8 literal to compare against. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the literal does not match. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="183" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a45515a0283bb791b17b7c90b4ae79906" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::operator+</definition>
+        <argsstring>(const char8_t(&amp;literal)[N]) const noexcept</argsstring>
+        <name>operator+</name>
+        <qualifiedname>erbsland::conf::String::operator+</qualifiedname>
+        <param>
+          <type>const char8_t(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Concatenate a UTF-8 literal to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UTF-8 literal to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> with the literal appended. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="192" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="192" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ad6a72e6da9e400503ab4c5e67f494ba8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::operator+</definition>
+        <argsstring>(const std::u8string &amp;other) const noexcept</argsstring>
+        <name>operator+</name>
+        <qualifiedname>erbsland::conf::String::operator+</qualifiedname>
+        <param>
+          <type>const std::u8string &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Concatenate a std::u8string to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The u8string to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> with the contents appended. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="201" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="201" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a7c39f1f163e58779d48751cd0b88de84" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(const char8_t(&amp;literal)[N]) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>const char8_t(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Append a UTF-8 literal to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UTF-8 literal to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="210" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="210" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a84c6ede19470c2141ddc3f49aab11319" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(const std::u8string &amp;other) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>const std::u8string &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Append a std::u8string to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The u8string to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="218" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1af1ef4bf3f6a56d945a3e4869d7c733be" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::operator==</definition>
+        <argsstring>(const char(&amp;literal)[N]) const noexcept</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::String::operator==</qualifiedname>
+        <param>
+          <type>const char(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Compare this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> to a narrow literal for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The narrow literal to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the literal matches exactly. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="229" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="229" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a73da731dac1e1bad45eee8deddabcd03" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::operator!=</definition>
+        <argsstring>(const char(&amp;literal)[N]) const noexcept</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::String::operator!=</qualifiedname>
+        <param>
+          <type>const char(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Compare this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> to a narrow literal for inequality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The narrow literal to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the literal does not match. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="238" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="238" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac57b820e5ccb078acf290db6a4579cda" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::operator+</definition>
+        <argsstring>(const char(&amp;literal)[N]) const noexcept</argsstring>
+        <name>operator+</name>
+        <qualifiedname>erbsland::conf::String::operator+</qualifiedname>
+        <param>
+          <type>const char(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Concatenate a narrow literal to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The narrow literal to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> with the literal appended. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="247" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="247" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac46d06066d426cf9275f4ee2fe29cda7" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::operator+</definition>
+        <argsstring>(const std::string &amp;other) const noexcept</argsstring>
+        <name>operator+</name>
+        <qualifiedname>erbsland::conf::String::operator+</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Concatenate a std::string to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The std::string to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> with the contents appended. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="254" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="254" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a3576dd1ffc323d361e5af4b736a2b6c4" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(const char(&amp;literal)[N]) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>const char(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Append a narrow literal to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the literal including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The narrow literal to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="263" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="263" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1abbda3eaa0fdfafe852f3152d958235cf" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(const std::string &amp;other) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Append a std::string to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The std::string to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="271" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="271" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a8084d34d0e8741f005bea0bd428f3842" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::operator+=</definition>
+        <argsstring>(const char32_t unicodeChar) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::String::operator+=</qualifiedname>
+        <param>
+          <type>const char32_t</type>
+          <declname>unicodeChar</declname>
+        </param>
+        <briefdescription>
+<para>Append a single Unicode character to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>unicodeChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="280" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="280" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aaf5625a2478db171a0480c11387aaa6b" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr size_type</type>
+        <definition>constexpr size_type erbsland::conf::String::length</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>length</name>
+        <qualifiedname>erbsland::conf::String::length</qualifiedname>
+        <briefdescription>
+<para>Get the number of characters in this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The length of the string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="291" column="26" bodyfile="erbsland/conf/String.hpp" bodystart="291" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a860ccf0fd44da323cb2744731d1ad3cf" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr size_type</type>
+        <definition>constexpr size_type erbsland::conf::String::max_size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>max_size</name>
+        <qualifiedname>erbsland::conf::String::max_size</qualifiedname>
+        <briefdescription>
+<para>Get the maximum number of characters this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> can hold. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The maximum possible size. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="295" column="26" bodyfile="erbsland/conf/String.hpp" bodystart="295" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ae3002c8cc513880953bee55de3747d61" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::clear</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>clear</name>
+        <qualifiedname>erbsland::conf::String::clear</qualifiedname>
+        <briefdescription>
+<para>Erase all characters from this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="298" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="298" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ad4466ac389c5d557ac7e8e092634072f" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::reserve</definition>
+        <argsstring>(size_type size) noexcept</argsstring>
+        <name>reserve</name>
+        <qualifiedname>erbsland::conf::String::reserve</qualifiedname>
+        <param>
+          <type>size_type</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Reserve storage to at least the specified capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum capacity to reserve. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="302" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="302" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a69787e469bd8748bce7c4df87f1a875c" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::shrink_to_fit</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>shrink_to_fit</name>
+        <qualifiedname>erbsland::conf::String::shrink_to_fit</qualifiedname>
+        <briefdescription>
+<para>Reduce memory usage to fit the current size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="305" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="305" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a4604d87702b3827c7348043216cfbc55" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr size_type</type>
+        <definition>constexpr size_type erbsland::conf::String::capacity</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>capacity</name>
+        <qualifiedname>erbsland::conf::String::capacity</qualifiedname>
+        <briefdescription>
+<para>Get the current capacity of the <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The allocated storage size. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="309" column="26" bodyfile="erbsland/conf/String.hpp" bodystart="309" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a4f8f7f3077557cce29457af37d7abfdf" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const String &amp;other) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Append another <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> to this one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="313" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="313" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a86cb46b538283786524bf0ebcc0a5deb" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const char8_t character) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const char8_t</type>
+          <declname>character</declname>
+        </param>
+        <briefdescription>
+<para>Append a character to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>character</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="317" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="317" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a9c297af0c4c274a692db299c7a3f7cf5" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const char character) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const char</type>
+          <declname>character</declname>
+        </param>
+        <briefdescription>
+<para>Append a character to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>character</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="321" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="321" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a1dca4cf4e390d48040b1a2c0e974f3b1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const char8_t(&amp;literal)[N]) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const char8_t(&amp;)</type>
+          <declname>literal</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Append a UTF-8 literal to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The literal length including null terminator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The UTF-8 literal to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="327" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="327" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aa32164f4456e114fd97cfb2423589d35" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const std::u8string &amp;str) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const std::u8string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Append a std::u8string to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The u8string to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="331" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="331" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a4303a252912f1c508a2c483d0524d070" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const std::u8string_view str) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const std::u8string_view</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Append a UTF-8 string view to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The u8string_view to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="335" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="335" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a9410aaae1789d2029f3b0ac07f2d0eb5" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const std::string &amp;str) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Append a std::string to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The std::string to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="339" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="339" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a68a5c14e0753bdac12c74b93cb085517" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const std::string_view str) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const std::string_view</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Append a std::string_view to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string_view to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="343" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="343" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aa9b1b5c93045604af523cb349af2e9c7" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::append</definition>
+        <argsstring>(const char32_t unicodeChar) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::String::append</qualifiedname>
+        <param>
+          <type>const char32_t</type>
+          <declname>unicodeChar</declname>
+        </param>
+        <briefdescription>
+<para>Append a Unicode character to this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>unicodeChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Unicode character to append. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="347" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="347" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ab283cafde6618bd56f93da952b5dc88d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::substr</definition>
+        <argsstring>(size_type pos=0, size_type count=npos) const</argsstring>
+        <name>substr</name>
+        <qualifiedname>erbsland::conf::String::substr</qualifiedname>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+          <defval><ref refid="classerbsland_1_1conf_1_1_string_1a94aa320d23789a2f2605629bd09add08" kindref="member">npos</ref></defval>
+        </param>
+        <briefdescription>
+<para>Extract a substring from this <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The extracted substring. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="353" column="13" bodyfile="erbsland/conf/String.hpp" bodystart="353" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a492606b45ec09537820051f8f56a2bae" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>String &amp; erbsland::conf::String::erase</definition>
+        <argsstring>(size_type index=0, size_type count=npos) noexcept</argsstring>
+        <name>erase</name>
+        <qualifiedname>erbsland::conf::String::erase</qualifiedname>
+        <param>
+          <type>size_type</type>
+          <declname>index</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+          <defval><ref refid="classerbsland_1_1conf_1_1_string_1a94aa320d23789a2f2605629bd09add08" kindref="member">npos</ref></defval>
+        </param>
+        <briefdescription>
+<para>Erase a substring from the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting index to begin erasure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters to erase. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this string after erasure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="359" column="12" bodyfile="erbsland/conf/String.hpp" bodystart="359" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a6e07a99d04a61f4c3a88c0aa19588ec1" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator erbsland::conf::String::erase</definition>
+        <argsstring>(iterator position) noexcept</argsstring>
+        <name>erase</name>
+        <qualifiedname>erbsland::conf::String::erase</qualifiedname>
+        <param>
+          <type>iterator</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Erase the character at the specified position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the character to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator following the removed character. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="364" column="14" bodyfile="erbsland/conf/String.hpp" bodystart="364" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1af92675d62a21a8323f8a48a365a30b73" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator erbsland::conf::String::erase</definition>
+        <argsstring>(const_iterator position) noexcept</argsstring>
+        <name>erase</name>
+        <qualifiedname>erbsland::conf::String::erase</qualifiedname>
+        <param>
+          <type>const_iterator</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Erase the character at the specified position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the character to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator following the removed character. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="369" column="14" bodyfile="erbsland/conf/String.hpp" bodystart="369" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a6ce97280671f69932792816d470538b6" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator erbsland::conf::String::erase</definition>
+        <argsstring>(iterator first, iterator last) noexcept</argsstring>
+        <name>erase</name>
+        <qualifiedname>erbsland::conf::String::erase</qualifiedname>
+        <param>
+          <type>iterator</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>iterator</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Erase a range of characters from the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the first character to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator past the last character to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator following the last removed character. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="375" column="14" bodyfile="erbsland/conf/String.hpp" bodystart="375" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a7b2708430a1c72df31e34c6341ca19c2" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>iterator</type>
+        <definition>iterator erbsland::conf::String::erase</definition>
+        <argsstring>(const_iterator first, const_iterator last) noexcept</argsstring>
+        <name>erase</name>
+        <qualifiedname>erbsland::conf::String::erase</qualifiedname>
+        <param>
+          <type>const_iterator</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>const_iterator</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+<para>Erase a range of characters from the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator to the first character to remove. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator past the last character to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator following the last removed character. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="381" column="14" bodyfile="erbsland/conf/String.hpp" bodystart="381" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a333b342152adeddc5d7c8f929ae49854" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find</definition>
+        <argsstring>(FindStr s, size_type pos, size_type count) const</argsstring>
+        <name>find</name>
+        <qualifiedname>erbsland::conf::String::find</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Find the first occurrence of a substring in the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the search string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The substring to search for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting position of the search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters of the substring. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the first occurrence, or npos if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="390" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="390" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aa47da1fc5b67154569fba1060706ceea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find</definition>
+        <argsstring>(FindStr s, size_type pos=0) const</argsstring>
+        <name>find</name>
+        <qualifiedname>erbsland::conf::String::find</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="399" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="399" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a5a34fbfb583e2566dff2f83792df0fe4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::rfind</definition>
+        <argsstring>(FindStr s, size_type pos, size_type count) const</argsstring>
+        <name>rfind</name>
+        <qualifiedname>erbsland::conf::String::rfind</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Find the last occurrence of a substring in the string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the search string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The substring to search for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting position of the search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters of the substring. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the last occurrence, or npos if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="414" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="414" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a1609cf486f6ce8916eeaee5e92681568" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::rfind</definition>
+        <argsstring>(FindStr s, size_type pos=npos) const</argsstring>
+        <name>rfind</name>
+        <qualifiedname>erbsland::conf::String::rfind</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+          <defval><ref refid="classerbsland_1_1conf_1_1_string_1a94aa320d23789a2f2605629bd09add08" kindref="member">npos</ref></defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="423" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="423" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a5c7241c68be629c941e0895f1a6ade74" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_first_of</definition>
+        <argsstring>(FindStr s, size_type pos, size_type count) const</argsstring>
+        <name>find_first_of</name>
+        <qualifiedname>erbsland::conf::String::find_first_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Find the first occurrence of any character from a set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the search set string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of characters to search for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting position of the search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the first matching character, or npos if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="438" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="438" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1af67d1d2eedeb57c71459ec79cac8c568" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_first_of</definition>
+        <argsstring>(FindStr s, size_type pos=0) const</argsstring>
+        <name>find_first_of</name>
+        <qualifiedname>erbsland::conf::String::find_first_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="447" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="447" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a389089e78295e7451ff48a82dfae1be4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_first_not_of</definition>
+        <argsstring>(FindStr s, size_type pos, size_type count) const</argsstring>
+        <name>find_first_not_of</name>
+        <qualifiedname>erbsland::conf::String::find_first_not_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Find the first character not in a set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the search set string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of characters to exclude. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting position of the search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the first non-matching character, or npos if none. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="462" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="462" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a7c48aef09024ca1a59ea4f77d5fc92ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_first_not_of</definition>
+        <argsstring>(FindStr s, size_type pos=0) const</argsstring>
+        <name>find_first_not_of</name>
+        <qualifiedname>erbsland::conf::String::find_first_not_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="471" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="471" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aeba4da877c9459c9b93ad5634b3b0ca3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_last_of</definition>
+        <argsstring>(FindStr s, size_type pos, size_type count) const</argsstring>
+        <name>find_last_of</name>
+        <qualifiedname>erbsland::conf::String::find_last_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Find the last occurrence of any character from a set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the search set string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of characters to search for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting position of the search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the last matching character, or npos if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="486" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="486" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a8c1bc2d80f05bb00e967841c0893e18d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_last_of</definition>
+        <argsstring>(FindStr s, size_type pos=npos) const</argsstring>
+        <name>find_last_of</name>
+        <qualifiedname>erbsland::conf::String::find_last_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+          <defval><ref refid="classerbsland_1_1conf_1_1_string_1a94aa320d23789a2f2605629bd09add08" kindref="member">npos</ref></defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="495" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="495" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac3f7e18b5aee959bab3bb4824c7ca1b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_last_not_of</definition>
+        <argsstring>(FindStr s, size_type pos, size_type count) const</argsstring>
+        <name>find_last_not_of</name>
+        <qualifiedname>erbsland::conf::String::find_last_not_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Find the last character not in a set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the search set string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of characters to exclude. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting position of the search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of characters in the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The index of the last non-matching character, or npos if none. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="510" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="510" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1afd87893292823c7828ee6775ad9b238b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>size_type</type>
+        <definition>size_type erbsland::conf::String::find_last_not_of</definition>
+        <argsstring>(FindStr s, size_type pos=npos) const</argsstring>
+        <name>find_last_not_of</name>
+        <qualifiedname>erbsland::conf::String::find_last_not_of</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>pos</declname>
+          <defval><ref refid="classerbsland_1_1conf_1_1_string_1a94aa320d23789a2f2605629bd09add08" kindref="member">npos</ref></defval>
+        </param>
+        <briefdescription>
+<para>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="519" column="15" bodyfile="erbsland/conf/String.hpp" bodystart="519" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aa2407133b131c635fe077a0ad8df1b17" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::starts_with</definition>
+        <argsstring>(FindStr s) const noexcept</argsstring>
+        <name>starts_with</name>
+        <qualifiedname>erbsland::conf::String::starts_with</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Check if the string starts with a given prefix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This does a binary comparison to follow the original functionality of the std-library. For a Unicode code-point-based variant, please use <computeroutput>startsWith</computeroutput>. </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the prefix string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The prefix to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the string starts with the prefix, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="534" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="534" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac61082d853a6d1b9ec223994041ca91a" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::ends_with</definition>
+        <argsstring>(FindStr s) const noexcept</argsstring>
+        <name>ends_with</name>
+        <qualifiedname>erbsland::conf::String::ends_with</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Check if the string ends with a given suffix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This does a binary comparison to follow the original functionality of the std-library. For a Unicode code-point-based variant, please use <computeroutput>endsWith</computeroutput>. </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the suffix string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The suffix to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the string ends with the suffix, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="549" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="549" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a85224944efe19c5890fda185fadb3fc3" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename FindStr</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::contains</definition>
+        <argsstring>(FindStr s) const noexcept</argsstring>
+        <name>contains</name>
+        <qualifiedname>erbsland::conf::String::contains</qualifiedname>
+        <param>
+          <type>FindStr</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Check if the string contains a given substring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This does a binary comparison to follow the original functionality of the std-library. To force the Unicode code-point-based variant, please use <computeroutput>contains</computeroutput> with <computeroutput><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></computeroutput>. </para>
+</simplesect>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>FindStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the search string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The substring to search for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the substring is found, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="564" column="10" bodyfile="erbsland/conf/String.hpp" bodystart="564" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a86114ee32264712fce2b75a2f24b5a16" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::String::isValidUtf8</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isValidUtf8</name>
+        <qualifiedname>erbsland::conf::String::isValidUtf8</qualifiedname>
+        <briefdescription>
+<para>Test if the contained UTF-8 data is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests for out-of-range Unicode code-points and UTF-8 encoding errors. <simplesect kind="return"><para><computeroutput>true</computeroutput> if the string contains valid UTF-8, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="602" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a2186b44b2f37c99eac9403ccc08ea624" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::String::characterLength</definition>
+        <argsstring>() const</argsstring>
+        <name>characterLength</name>
+        <qualifiedname>erbsland::conf::String::characterLength</qualifiedname>
+        <briefdescription>
+<para>Get the number of Unicode code-points (characters). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Decodes the string and counts the characters. <simplesect kind="return"><para>The number of characters in this string. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if the string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="608" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac4280196cb6a3b0ac4c1dc8006dccf39" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::String::characterCompare</definition>
+        <argsstring>(const String &amp;other, CaseSensitivity caseSensitivity=CaseSensitivity::CaseSensitive) const -&gt; std::strong_ordering</argsstring>
+        <name>characterCompare</name>
+        <qualifiedname>erbsland::conf::String::characterCompare</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>CaseSensitivity</type>
+          <declname>caseSensitivity</declname>
+          <defval>CaseSensitivity::CaseSensitive</defval>
+        </param>
+        <briefdescription>
+<para>Compare this string with another using Unicode code-points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other string to compare with. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caseSensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Controls whether the comparison is case-sensitive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The three-way comparison result. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if either string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="615" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a9b7d5e371311d5720dc47f01c0237230" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::strong_ordering</type>
+        <definition>std::strong_ordering erbsland::conf::String::nameCompare</definition>
+        <argsstring>(const String &amp;other) const</argsstring>
+        <name>nameCompare</name>
+        <qualifiedname>erbsland::conf::String::nameCompare</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare this string with another using name normalization Example: &quot;this_name&quot; == &quot;THIS_NAME&quot; == &quot;This Name&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other string to compare with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The three-way comparison result. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if either string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="624" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac360787acc3ecefd0333ceae7f3201bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::String::startsWith</definition>
+        <argsstring>(const String &amp;other, CaseSensitivity caseSensitivity=CaseSensitivity::CaseSensitive) const -&gt; bool</argsstring>
+        <name>startsWith</name>
+        <qualifiedname>erbsland::conf::String::startsWith</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>CaseSensitivity</type>
+          <declname>caseSensitivity</declname>
+          <defval>CaseSensitivity::CaseSensitive</defval>
+        </param>
+        <briefdescription>
+<para>Test if this string starts with another string using Unicode code-points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other string for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caseSensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Controls case sensitivity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this string starts with <computeroutput>other</computeroutput>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if either string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="631" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a96a1b5e008e71c1f22d76aa8b12912ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::String::contains</definition>
+        <argsstring>(const String &amp;other, CaseSensitivity caseSensitivity=CaseSensitivity::CaseSensitive) const -&gt; bool</argsstring>
+        <name>contains</name>
+        <qualifiedname>erbsland::conf::String::contains</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>CaseSensitivity</type>
+          <declname>caseSensitivity</declname>
+          <defval>CaseSensitivity::CaseSensitive</defval>
+        </param>
+        <briefdescription>
+<para>Test if this string contains another string using Unicode code-points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The substring to search for. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caseSensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Controls case sensitivity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this string contains <computeroutput>other</computeroutput> as a contiguous subsequence. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if either string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="640" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a0f237b16fbdf97e85be6eaf7bce8bf58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::String::endsWith</definition>
+        <argsstring>(const String &amp;other, CaseSensitivity caseSensitivity=CaseSensitivity::CaseSensitive) const -&gt; bool</argsstring>
+        <name>endsWith</name>
+        <qualifiedname>erbsland::conf::String::endsWith</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type>CaseSensitivity</type>
+          <declname>caseSensitivity</declname>
+          <defval>CaseSensitivity::CaseSensitive</defval>
+        </param>
+        <briefdescription>
+<para>Test if this string ends with another string using Unicode code-points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other string for the comparison. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caseSensitivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Controls case sensitivity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this string ends with <computeroutput>other</computeroutput>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if either string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="649" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a4a41e00e1e62b13dc5d66f0086e1abd4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>StringList</type>
+        <definition>StringList erbsland::conf::String::split</definition>
+        <argsstring>(char32_t character, std::optional&lt; std::size_t &gt; maxSplits={}) const</argsstring>
+        <name>split</name>
+        <qualifiedname>erbsland::conf::String::split</qualifiedname>
+        <param>
+          <type>char32_t</type>
+          <declname>character</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; std::size_t &gt;</type>
+          <declname>maxSplits</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Split this string at a character using Unicode code-points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty segments are included in the result. If <computeroutput>maxSplits</computeroutput> is set, at most that many splits are performed, and the remaining text is returned as the final segment. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>character</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The separator character to split at. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSplits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional maximum number of splits. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The list of split segments. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if the string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="660" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a68aa355afc7c13856048d8e76a586e1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::join</definition>
+        <argsstring>(const StringList &amp;parts) const</argsstring>
+        <name>join</name>
+        <qualifiedname>erbsland::conf::String::join</qualifiedname>
+        <param>
+          <type>const StringList &amp;</type>
+          <declname>parts</declname>
+        </param>
+        <briefdescription>
+<para>Join string parts using this string as the glue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parts to join. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The joined string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="665" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a9e4a32adaac726c572121bc02a68e8a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::transformed</definition>
+        <argsstring>(const std::function&lt; char32_t(char32_t)&gt; &amp;transformer) const</argsstring>
+        <name>transformed</name>
+        <qualifiedname>erbsland::conf::String::transformed</qualifiedname>
+        <param>
+          <type>const std::function&lt; char32_t(char32_t)&gt; &amp;</type>
+          <declname>transformer</declname>
+        </param>
+        <briefdescription>
+<para>Transform this string by applying a function to each decoded character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>transformer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A function that transforms one character into another. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new string with all characters transformed. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if the string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="671" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a6b8c841cf63c909cc3170aa823c8b51f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::String::forEachCharacter</definition>
+        <argsstring>(const std::function&lt; void(char32_t)&gt; &amp;fn) const</argsstring>
+        <name>forEachCharacter</name>
+        <qualifiedname>erbsland::conf::String::forEachCharacter</qualifiedname>
+        <param>
+          <type>const std::function&lt; void(char32_t)&gt; &amp;</type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Call a function for each decoded character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to call for each decoded character. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Encoding) if the string contains invalid UTF-8 data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="676" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1aa365ea24b3fab699ec4dfcba0427e30f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::toSafeText</definition>
+        <argsstring>(std::size_t maximumSize=200) const</argsstring>
+        <name>toSafeText</name>
+        <qualifiedname>erbsland::conf::String::toSafeText</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>maximumSize</declname>
+          <defval>200</defval>
+        </param>
+        <briefdescription>
+<para>Convert text to be safe for output or logs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Escapes characters that may disrupt display or have side effects and truncates to the given number of characters, inserting an ellipsis in the middle when necessary. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maximumSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of characters (default 200). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The safe text. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="684" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a2aa9d17de777572c8e8d59cf9a9e416a" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::String::escapedSize</definition>
+        <argsstring>(EscapeMode mode) const noexcept</argsstring>
+        <name>escapedSize</name>
+        <qualifiedname>erbsland::conf::String::escapedSize</qualifiedname>
+        <param>
+          <type>EscapeMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Get the byte size of the escaped string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Use this function to calculate the size requirements of an escaped string, without the actual conversion. <simplesect kind="return"><para>The byte size of the escaped text (without trailing zero end byte). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="689" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1ac33dfbb1b707f1256d24f0aa09d08b2b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::String::toEscaped</definition>
+        <argsstring>(EscapeMode mode) const noexcept</argsstring>
+        <name>toEscaped</name>
+        <qualifiedname>erbsland::conf::String::toEscaped</qualifiedname>
+        <param>
+          <type>EscapeMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Create an escaped version of this string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The escape mode to use for escaping. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="693" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_string_1a1a5a14af2568e1be754274b4dbe2bac5" prot="private" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::String::String</definition>
+        <argsstring>(const ConstByteSpan byteSpan, impl::PrivateTag) noexcept</argsstring>
+        <name>String</name>
+        <qualifiedname>erbsland::conf::String::String</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string_1af7c9b53c265dd8db4ed64033796e8ef1" kindref="member">ConstByteSpan</ref></type>
+          <declname>byteSpan</declname>
+        </param>
+        <param>
+          <type>impl::PrivateTag</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/String.hpp" line="118" column="14" bodyfile="erbsland/conf/String.hpp" bodystart="118" bodyend="119"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Thin wrapper around <computeroutput>std::u8string</computeroutput>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The class mirrors the API of <computeroutput>std::u8string</computeroutput> closely and adds a few convenience functions. It is primarily intended to ease the integration of the parser into applications that use <computeroutput>std::string</computeroutput> for text processing.</para>
+<para><simplesect kind="par"><title>Tested:</title><para><computeroutput>StringTest</computeroutput>, <computeroutput>StringUtf8Test</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/String.hpp" line="38" column="1" bodyfile="erbsland/conf/String.hpp" bodystart="38" bodyend="697"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_string_1ae5f3d5e7f7c3873c22453b277d5af68d" prot="private" virt="non-virtual"><scope>erbsland::conf::String</scope><name>_string</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a4f8f7f3077557cce29457af37d7abfdf" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a86cb46b538283786524bf0ebcc0a5deb" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a9c297af0c4c274a692db299c7a3f7cf5" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a1dca4cf4e390d48040b1a2c0e974f3b1" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aa32164f4456e114fd97cfb2423589d35" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a4303a252912f1c508a2c483d0524d070" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a9410aaae1789d2029f3b0ac07f2d0eb5" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a68a5c14e0753bdac12c74b93cb085517" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aa9b1b5c93045604af523cb349af2e9c7" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a4604d87702b3827c7348043216cfbc55" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>capacity</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac4280196cb6a3b0ac4c1dc8006dccf39" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>characterCompare</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a2186b44b2f37c99eac9403ccc08ea624" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>characterLength</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ae3002c8cc513880953bee55de3747d61" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>clear</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1af7c9b53c265dd8db4ed64033796e8ef1" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>ConstByteSpan</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a85224944efe19c5890fda185fadb3fc3" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>contains</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a96a1b5e008e71c1f22d76aa8b12912ea" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>contains</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac61082d853a6d1b9ec223994041ca91a" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>ends_with</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a0f237b16fbdf97e85be6eaf7bce8bf58" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>endsWith</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a492606b45ec09537820051f8f56a2bae" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>erase</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a6e07a99d04a61f4c3a88c0aa19588ec1" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>erase</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1af92675d62a21a8323f8a48a365a30b73" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>erase</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a6ce97280671f69932792816d470538b6" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>erase</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a7b2708430a1c72df31e34c6341ca19c2" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>erase</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a2aa9d17de777572c8e8d59cf9a9e416a" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>escapedSize</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a333b342152adeddc5d7c8f929ae49854" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aa47da1fc5b67154569fba1060706ceea" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a389089e78295e7451ff48a82dfae1be4" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_first_not_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a7c48aef09024ca1a59ea4f77d5fc92ea" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_first_not_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a5c7241c68be629c941e0895f1a6ade74" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_first_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1af67d1d2eedeb57c71459ec79cac8c568" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_first_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac3f7e18b5aee959bab3bb4824c7ca1b2" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_last_not_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1afd87893292823c7828ee6775ad9b238b" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_last_not_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aeba4da877c9459c9b93ad5634b3b0ca3" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_last_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a8c1bc2d80f05bb00e967841c0893e18d" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>find_last_of</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a6b8c841cf63c909cc3170aa823c8b51f" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>forEachCharacter</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a9d05410d224dac58d5490e56c96b5953" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>fromCharString</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a51d4a8921f9ebcd4de14b9a489058e0e" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>fromCharString</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a86114ee32264712fce2b75a2f24b5a16" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>isValidUtf8</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a68aa355afc7c13856048d8e76a586e1a" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>join</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aaf5625a2478db171a0480c11387aaa6b" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>length</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a860ccf0fd44da323cb2744731d1ad3cf" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>max_size</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a9b7d5e371311d5720dc47f01c0237230" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>nameCompare</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a94aa320d23789a2f2605629bd09add08" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>npos</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aa1fd1295a18377f60eb33fc554385a3d" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a73da731dac1e1bad45eee8deddabcd03" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aaad7f85f858223ca563ccb93721df63d" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a45515a0283bb791b17b7c90b4ae79906" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ad6a72e6da9e400503ab4c5e67f494ba8" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac57b820e5ccb078acf290db6a4579cda" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac46d06066d426cf9275f4ee2fe29cda7" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a74c95fabbcfc15c9a9ab956c7e26442c" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac7e588c22c9929fe21ecede218726d75" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1afe929ea4d23e8d8f3b02a8921e4b2168" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a7c39f1f163e58779d48751cd0b88de84" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a84c6ede19470c2141ddc3f49aab11319" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a3576dd1ffc323d361e5af4b736a2b6c4" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1abbda3eaa0fdfafe852f3152d958235cf" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a8084d34d0e8741f005bea0bd428f3842" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a98e92f301fbbed0f772d41e18539be12" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1adf9b8e15b9dfadf560ec38f7e0af89bd" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a16fe417909b0719502ae7f3768c581ce" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1af1ef4bf3f6a56d945a3e4869d7c733be" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ad4466ac389c5d557ac7e8e092634072f" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>reserve</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a5a34fbfb583e2566dff2f83792df0fe4" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>rfind</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a1609cf486f6ce8916eeaee5e92681568" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>rfind</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a69787e469bd8748bce7c4df87f1a875c" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>shrink_to_fit</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a4a41e00e1e62b13dc5d66f0086e1abd4" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>split</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aa2407133b131c635fe077a0ad8df1b17" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>starts_with</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac360787acc3ecefd0333ceae7f3201bd" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>startsWith</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a3b587c34d7f4e16abb12e2eef3093ad8" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a3b41eecc4fb38028dbe695da7454e890" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a7cd1f139ad3ab5b4f8df70c58b323f71" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a19a567db86d619377b63a763fb2e6b85" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ad6c21869284368e8e7d2dd9747aaaa2c" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ada467259cafeb076262b572bda2542e4" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a49ab71ff791317148b8af1daaee80541" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a9530fec9524039f14bd02bb00764ec2d" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a76b8bf30f589c8bdc7f8d77bd548cea6" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a89e8e5c21ef742f265ec978eaa4ae7d1" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a6bac04c5cdf69cb3324c9c784e31c39d" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1af496355151b07e87c5e987ffc31d9f25" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a1a5a14af2568e1be754274b4dbe2bac5" prot="private" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a26fe0b170ac3a29cc22ec5413d079fee" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a6794d011e44b108d4b7a8ee222fa5716" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a32e878b7fb5b175cb48b02b8d2a02030" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>String</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ab283cafde6618bd56f93da952b5dc88d" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>substr</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a1ccae3950222803b7a4e79af29f3b859" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>toCharString</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1ac33dfbb1b707f1256d24f0aa09d08b2b" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>toEscaped</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1aa365ea24b3fab699ec4dfcba0427e30f" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>toSafeText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a9e4a32adaac726c572121bc02a68e8a6" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>transformed</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a500c73a1520dc8ac8da383569bbe6bbe" prot="private" virt="non-virtual"><scope>erbsland::conf::String</scope><name>WrappedString</name></member>
+      <member refid="classerbsland_1_1conf_1_1_string_1a8799952d817911fafa3a22fcadf54c04" prot="public" virt="non-virtual"><scope>erbsland::conf::String</scope><name>~String</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

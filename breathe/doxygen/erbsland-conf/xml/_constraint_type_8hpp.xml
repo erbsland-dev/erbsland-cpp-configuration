@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_constraint_type_8hpp" kind="file" language="C++">
+    <compoundname>ConstraintType.hpp</compoundname>
+    <includes local="yes">../impl/utilities/ComparisonHelper.hpp</includes>
+    <includes refid="_string_8hpp" local="yes">../String.hpp</includes>
+    <includes local="no">array</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_constraint_8hpp" local="yes">erbsland/conf/vr/Constraint.hpp</includedby>
+    <includedby refid="vr_2all_8hpp" local="yes">erbsland/conf/vr/all.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>../impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="4">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/vr/ConstraintType.hpp</label>
+        <link refid="_constraint_type_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="22">
+        <label>array</label>
+      </node>
+      <node id="11">
+        <label>bitset</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>format</label>
+      </node>
+      <node id="17">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="13">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="14">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="15">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="18">
+        <label>optional</label>
+      </node>
+      <node id="19">
+        <label>ranges</label>
+      </node>
+      <node id="20">
+        <label>span</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>erbsland/conf/vr/Constraint.hpp</label>
+        <link refid="_constraint_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/vr/ConstraintType.hpp</label>
+        <link refid="_constraint_type_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/vr/Rule.hpp</label>
+        <link refid="_rule_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" prot="public">erbsland::conf::vr::ConstraintType</innerclass>
+    <innerclass refid="structerbsland_1_1conf_1_1vr_1_1_constraint_type_1_1_value_to_text_entry" prot="private">erbsland::conf::vr::ConstraintType::ValueToTextEntry</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf_1_1vr">erbsland::conf::vr</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2025-2026<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../impl/utilities/ComparisonHelper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../String.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf::vr<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" kindref="compound">ConstraintType</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref><sp/>:<sp/>uint8_t<sp/>{</highlight></codeline>
+<codeline lineno="19" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa7230047ab5dbdad0a55b95213420a3a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa7230047ab5dbdad0a55b95213420a3a9" kindref="member">Undefined</ref>,<sp/></highlight></codeline>
+<codeline lineno="20" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfab44573fd5c24870bede4da8acd940217" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfab44573fd5c24870bede4da8acd940217" kindref="member">Chars</ref>,<sp/></highlight></codeline>
+<codeline lineno="21" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfacd84e5371fd1e8834b67c10482af8766" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfacd84e5371fd1e8834b67c10482af8766" kindref="member">Contains</ref>,<sp/></highlight></codeline>
+<codeline lineno="22" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa26a6470680288ab662d7ccaf78d89c8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa26a6470680288ab662d7ccaf78d89c8b" kindref="member">Ends</ref>,<sp/></highlight></codeline>
+<codeline lineno="23" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfad88b67b410a640bc71303ed47b6fc027" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfad88b67b410a640bc71303ed47b6fc027" kindref="member">Equals</ref>,<sp/></highlight></codeline>
+<codeline lineno="24" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa95e3ec950643fc4d3a44476890bc13ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa95e3ec950643fc4d3a44476890bc13ed" kindref="member">In</ref>,<sp/></highlight></codeline>
+<codeline lineno="25" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaced168c6a32caa80f54b8b0ddd88a1d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaced168c6a32caa80f54b8b0ddd88a1d6" kindref="member">Key</ref>,<sp/></highlight></codeline>
+<codeline lineno="26" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaf0459b3b7ea541588ced2330d594ebad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaf0459b3b7ea541588ced2330d594ebad" kindref="member">Matches</ref>,<sp/></highlight></codeline>
+<codeline lineno="27" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa661991a9308ebc8789b72058fac652a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa661991a9308ebc8789b72058fac652a7" kindref="member">Maximum</ref>,<sp/></highlight></codeline>
+<codeline lineno="28" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaa72e9d850ff68b9e3e44dd0cad086a4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaa72e9d850ff68b9e3e44dd0cad086a4d" kindref="member">MaximumVersion</ref>,<sp/></highlight></codeline>
+<codeline lineno="29" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa87635c269cb09f17eb39f92bb0d4fa79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa87635c269cb09f17eb39f92bb0d4fa79" kindref="member">Minimum</ref>,<sp/></highlight></codeline>
+<codeline lineno="30" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa43cf1646db0690a30dd7e1ba76a1b1a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa43cf1646db0690a30dd7e1ba76a1b1a3" kindref="member">MinimumVersion</ref>,<sp/></highlight></codeline>
+<codeline lineno="31" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfadbd61292ce9a7c47ef3117cc3f4ca871" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfadbd61292ce9a7c47ef3117cc3f4ca871" kindref="member">Multiple</ref>,<sp/></highlight></codeline>
+<codeline lineno="32" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfabbbf0534dbc21a7f68501289ca00d9b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfabbbf0534dbc21a7f68501289ca00d9b6" kindref="member">Starts</ref>,<sp/></highlight></codeline>
+<codeline lineno="33" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaf845390830448fa53923c013eff185a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaf845390830448fa53923c013eff185a6" kindref="member">Version</ref>,<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"></codeline>
+<codeline lineno="42" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a7170183141c320abb70b405e0249af89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a7170183141c320abb70b405e0249af89" kindref="member">ConstraintType</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a7274dd167b7d5c948f7cdbdd7560c08a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a7274dd167b7d5c948f7cdbdd7560c08a" kindref="member">ConstraintType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref><sp/>value)<sp/>:<sp/>_value(value)<sp/>{}<sp/></highlight><highlight class="comment">//<sp/>NOLINT(*-explicit-constructor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1ad4d891e0d8e34276d3f0be875d9d25f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1ad4d891e0d8e34276d3f0be875d9d25f5" kindref="member">ConstraintType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" kindref="compound">ConstraintType</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a93888aa407fea216c1a211bf07de3808" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a93888aa407fea216c1a211bf07de3808" kindref="member">~ConstraintType</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a42ffef4369a89c948ed2b9828b32d397" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" kindref="compound">ConstraintType</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a42ffef4369a89c948ed2b9828b32d397" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" kindref="compound">ConstraintType</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>operators</highlight></codeline>
+<codeline lineno="61"></codeline>
+<codeline lineno="63" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a69439dd1cd265cbaf84358669f7c8e50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" kindref="compound">ConstraintType</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a69439dd1cd265cbaf84358669f7c8e50" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref><sp/>value)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>_value<sp/>=<sp/>value;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="65" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a9991409bf182b2ec9add19e2de4f45f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value;<sp/>}<sp/></highlight><highlight class="comment">//<sp/>NOLINT(*-explicit-constructor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>comparison</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>macro<sp/>removed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>tests</highlight></codeline>
+<codeline lineno="77"></codeline>
+<codeline lineno="80" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a537b1c7f8bba71095f192927f0caa520" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a537b1c7f8bba71095f192927f0caa520" kindref="member">isUndefined</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value<sp/>==<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa7230047ab5dbdad0a55b95213420a3a9" kindref="member">Undefined</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>conversion</highlight></codeline>
+<codeline lineno="87" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8e47cac98e85c5410c6af154dcca6e7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8e47cac98e85c5410c6af154dcca6e7e" kindref="member">toText</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a3fbf8702dc4d9369013a8b06114934ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>static<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" kindref="compound">ConstraintType</ref><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a3fbf8702dc4d9369013a8b06114934ee" kindref="member">fromText</ref>(const<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/>&amp;text)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="98" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a050437f2e11d6cc28cb5380825370e11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>constexpr<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a050437f2e11d6cc28cb5380825370e11" kindref="member">raw</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_value;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>enumeration</highlight></codeline>
+<codeline lineno="105" refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a9a0a990ef0629ef26992edba8d188444" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;ConstraintType,<sp/>15&gt;&amp;<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a9a0a990ef0629ef26992edba8d188444" kindref="member">all</ref>()<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;ConstraintType,<sp/>15&gt;<sp/>values<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa7230047ab5dbdad0a55b95213420a3a9" kindref="member">Undefined</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfab44573fd5c24870bede4da8acd940217" kindref="member">Chars</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfacd84e5371fd1e8834b67c10482af8766" kindref="member">Contains</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa26a6470680288ab662d7ccaf78d89c8b" kindref="member">Ends</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfad88b67b410a640bc71303ed47b6fc027" kindref="member">Equals</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa95e3ec950643fc4d3a44476890bc13ed" kindref="member">In</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaced168c6a32caa80f54b8b0ddd88a1d6" kindref="member">Key</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaf0459b3b7ea541588ced2330d594ebad" kindref="member">Matches</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa661991a9308ebc8789b72058fac652a7" kindref="member">Maximum</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaa72e9d850ff68b9e3e44dd0cad086a4d" kindref="member">MaximumVersion</ref>,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa87635c269cb09f17eb39f92bb0d4fa79" kindref="member">Minimum</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa43cf1646db0690a30dd7e1ba76a1b1a3" kindref="member">MinimumVersion</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfadbd61292ce9a7c47ef3117cc3f4ca871" kindref="member">Multiple</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfabbbf0534dbc21a7f68501289ca00d9b6" kindref="member">Starts</ref>,<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfaf845390830448fa53923c013eff185a6" kindref="member">Version</ref></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref><sp/>_value{<ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdfa7230047ab5dbdad0a55b95213420a3a9" kindref="member">Undefined</ref>};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ValueToTextEntry<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref><sp/>value;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/>text;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ValueToTextMap<sp/>=<sp/>std::array&lt;ValueToTextEntry,<sp/>15&gt;;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">TextToValueMap<sp/>=<sp/>std::unordered_map&lt;String,<sp/>Enum&gt;;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ValueToTextMap<sp/>_valueToTextMap;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>TextToValueMap<sp/>_textToValueMap;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/vr/ConstraintType.hpp"/>
+  </compounddef>
+</doxygen>

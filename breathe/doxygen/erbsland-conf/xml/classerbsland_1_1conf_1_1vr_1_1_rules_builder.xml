@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1vr_1_1_rules_builder" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::vr::RulesBuilder</compoundname>
+    <includes refid="_rules_builder_8hpp" local="no">erbsland/conf/vr/RulesBuilder.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a055bb6f5e4b8636a7fc2d8a01f37fa00" prot="private" static="no" mutable="no">
+        <type>impl::RulesBuilder</type>
+        <definition>impl::RulesBuilder erbsland::conf::vr::RulesBuilder::_builder</definition>
+        <argsstring></argsstring>
+        <name>_builder</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::_builder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="71" column="24" bodyfile="erbsland/conf/vr/RulesBuilder.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a8b247af0f17fda96f5cbd656320fde29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::vr::RulesBuilder::RulesBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>RulesBuilder</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::RulesBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="20" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a3676615173a88b75e9b7fc02a3028fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::vr::RulesBuilder::~RulesBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RulesBuilder</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::~RulesBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="21" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a03993302460668dac3c5178fe2edc8d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::vr::RulesBuilder::RulesBuilder</definition>
+        <argsstring>(const RulesBuilder &amp;)=delete</argsstring>
+        <name>RulesBuilder</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::RulesBuilder</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder" kindref="compound">RulesBuilder</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a6665f4e47886e265515963f78857354b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder" kindref="compound">RulesBuilder</ref> &amp;</type>
+        <definition>RulesBuilder &amp; erbsland::conf::vr::RulesBuilder::RulesBuilder</definition>
+        <argsstring>(RulesBuilder &amp;&amp;)=delete</argsstring>
+        <name>RulesBuilder</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::RulesBuilder</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder" kindref="compound">RulesBuilder</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a9e985ac71a9ad91544fddf67ac366da8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Attributes</declname>
+            <defname>Attributes</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void erbsland::conf::vr::RulesBuilder::addRule</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const RuleType ruleType, Attributes... attributes)</argsstring>
+        <name>addRule</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::addRule</qualifiedname>
+        <param>
+          <type>const NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_type" kindref="compound">RuleType</ref></type>
+          <declname>ruleType</declname>
+        </param>
+        <param>
+          <type>Attributes...</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+<para>Add a rule to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name-path of the new rule. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ruleType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the new rule. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All the attributes for the rule definition. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="33" column="10" bodyfile="erbsland/conf/vr/RulesBuilder.hpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1ab8b32c1ac00fc67347139e151701788c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Attributes</declname>
+            <defname>Attributes</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void erbsland::conf::vr::RulesBuilder::addAlternative</definition>
+        <argsstring>(const NamePathLike &amp;namePath, const RuleType ruleType, Attributes... attributes)</argsstring>
+        <name>addAlternative</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::addAlternative</qualifiedname>
+        <param>
+          <type>const NamePathLike &amp;</type>
+          <declname>namePath</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_type" kindref="compound">RuleType</ref></type>
+          <declname>ruleType</declname>
+        </param>
+        <param>
+          <type>Attributes...</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+<para>Add an alternative to the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>namePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name-path of the new rule. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ruleType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the new rule. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All the attributes for the rule definition. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="46" column="10" bodyfile="erbsland/conf/vr/RulesBuilder.hpp" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a771534bbc44dbb891d9d07cda820d12b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::vr::RulesBuilder::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::reset</qualifiedname>
+        <briefdescription>
+<para>Reset the builder and discard the current rules. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="56" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a1d76748b0e4ac9983e60a7b6a162ac72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>RulesPtr</type>
+        <definition>RulesPtr erbsland::conf::vr::RulesBuilder::takeRules</definition>
+        <argsstring>()</argsstring>
+        <name>takeRules</name>
+        <qualifiedname>erbsland::conf::vr::RulesBuilder::takeRules</qualifiedname>
+        <briefdescription>
+<para>Finalize the rules document and return the rules. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This will finalize the currently processed rules document and return it to the caller. The builder is reset afterward and can be reused to create a new rules document.</para>
+<para>If errors are found while finalizing the rules document, an exception is thrown.</para>
+<para><simplesect kind="return"><para>The finalized rules document. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Validation) on any logical error found. E.g. missing key references. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RulesBuilder.hpp" line="68" column="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A builder to create validation rules programmatically. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/RulesBuilder.hpp" line="18" column="1" bodyfile="erbsland/conf/vr/RulesBuilder.hpp" bodystart="18" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a055bb6f5e4b8636a7fc2d8a01f37fa00" prot="private" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>_builder</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1ab8b32c1ac00fc67347139e151701788c" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>addAlternative</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a9e985ac71a9ad91544fddf67ac366da8" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>addRule</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a771534bbc44dbb891d9d07cda820d12b" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>reset</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a8b247af0f17fda96f5cbd656320fde29" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>RulesBuilder</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a03993302460668dac3c5178fe2edc8d7" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>RulesBuilder</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a6665f4e47886e265515963f78857354b" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>RulesBuilder</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a1d76748b0e4ac9983e60a7b6a162ac72" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>takeRules</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_builder_1a3676615173a88b75e9b7fc02a3028fa8" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RulesBuilder</scope><name>~RulesBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

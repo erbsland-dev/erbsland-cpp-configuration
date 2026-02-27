@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signature Validator &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="String" href="string.html" />
+    <link rel="prev" title="Access Check" href="access_check.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Signature Validator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf18SignatureValidatorE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::SignatureValidator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf22SignatureValidatorDataE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::SignatureValidatorData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf24SignatureValidatorResultE"><code class="docutils literal notranslate"><span class="pre">SignatureValidatorResult</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf21SignatureValidatorPtrE"><code class="docutils literal notranslate"><span class="pre">SignatureValidatorPtr</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Signature Validator</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/signature_validator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="signature-validator">
+<h1>Signature Validator<a class="headerlink" href="#signature-validator" title="Link to this heading"></a></h1>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18SignatureValidatorE">
+<span id="_CPPv3N8erbsland4conf18SignatureValidatorE"></span><span id="_CPPv2N8erbsland4conf18SignatureValidatorE"></span><span id="erbsland::conf::SignatureValidator"></span><span class="target" id="classerbsland_1_1conf_1_1_signature_validator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SignatureValidator</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18SignatureValidatorE" title="Link to this definition"></a><br /></dt>
+<dd><p>The interface for signature validation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18SignatureValidatorD0Ev">
+<span id="_CPPv3N8erbsland4conf18SignatureValidatorD0Ev"></span><span id="_CPPv2N8erbsland4conf18SignatureValidatorD0Ev"></span><span id="erbsland::conf::SignatureValidator::~SignatureValidator"></span><span class="target" id="classerbsland_1_1conf_1_1_signature_validator_1ad31d6d12921cfe56d10479a83b6cd1db"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SignatureValidator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18SignatureValidatorD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18SignatureValidator8validateERK22SignatureValidatorData">
+<span id="_CPPv3N8erbsland4conf18SignatureValidator8validateERK22SignatureValidatorData"></span><span id="_CPPv2N8erbsland4conf18SignatureValidator8validateERK22SignatureValidatorData"></span><span id="erbsland::conf::SignatureValidator::validate__SignatureValidatorDataCR"></span><span class="target" id="classerbsland_1_1conf_1_1_signature_validator_1a7f279e87b76823f6f7da210e5c4f3a2d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf24SignatureValidatorResultE" title="erbsland::conf::SignatureValidatorResult"><span class="n"><span class="pre">SignatureValidatorResult</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf22SignatureValidatorDataE" title="erbsland::conf::SignatureValidatorData"><span class="n"><span class="pre">SignatureValidatorData</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18SignatureValidator8validateERK22SignatureValidatorData" title="Link to this definition"></a><br /></dt>
+<dd><p>The method for validating the signature. </p>
+<p>The parser calls this method to validate the signature of a document. The function is called for <em>every document</em>, no matter if it has a signature or not.</p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p>Tested via <code class="docutils literal notranslate"><a class="reference internal" href="parser.html#classerbsland_1_1conf_1_1_parser"><span class="std std-ref"><span class="pre">Parser</span></span></a></code> class. </p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data with the details to validate the signature. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The validation result. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf22SignatureValidatorDataE">
+<span id="_CPPv3N8erbsland4conf22SignatureValidatorDataE"></span><span id="_CPPv2N8erbsland4conf22SignatureValidatorDataE"></span><span id="erbsland::conf::SignatureValidatorData"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_validator_data"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SignatureValidatorData</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf22SignatureValidatorDataE" title="Link to this definition"></a><br /></dt>
+<dd><p>The data from the parser to verify the signature of a document. </p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p>Tested via <code class="docutils literal notranslate"><a class="reference internal" href="parser.html#classerbsland_1_1conf_1_1_parser"><span class="std std-ref"><span class="pre">Parser</span></span></a></code> class. </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf22SignatureValidatorData16sourceIdentifierE">
+<span id="_CPPv3N8erbsland4conf22SignatureValidatorData16sourceIdentifierE"></span><span id="_CPPv2N8erbsland4conf22SignatureValidatorData16sourceIdentifierE"></span><span id="erbsland::conf::SignatureValidatorData::sourceIdentifier__SourceIdentifierPtr"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_validator_data_1a9b05a824712cf6b65bdcbdb5d5e66980"></span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sourceIdentifier</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf22SignatureValidatorData16sourceIdentifierE" title="Link to this definition"></a><br /></dt>
+<dd><p>The source identifier of the verified document. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf22SignatureValidatorData13signatureTextE">
+<span id="_CPPv3N8erbsland4conf22SignatureValidatorData13signatureTextE"></span><span id="_CPPv2N8erbsland4conf22SignatureValidatorData13signatureTextE"></span><span id="erbsland::conf::SignatureValidatorData::signatureText__String"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_validator_data_1a190c39b5cb94f0e6ef2e8dc8487d6424"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">signatureText</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf22SignatureValidatorData13signatureTextE" title="Link to this definition"></a><br /></dt>
+<dd><p>The raw and unprocessed text from the signature. </p>
+<p>If a document has no <code class="docutils literal notranslate"><span class="pre">\&#64;signature</span></code> line, this text is empty. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf22SignatureValidatorData14documentDigestE">
+<span id="_CPPv3N8erbsland4conf22SignatureValidatorData14documentDigestE"></span><span id="_CPPv2N8erbsland4conf22SignatureValidatorData14documentDigestE"></span><span id="erbsland::conf::SignatureValidatorData::documentDigest__String"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_validator_data_1a35e3c514881743fc4fecd25dde2d12ab"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">documentDigest</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf22SignatureValidatorData14documentDigestE" title="Link to this definition"></a><br /></dt>
+<dd><p>The cryptographic hash of the document. </p>
+<p>The hash always has the format <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;</span> <span class="pre">&lt;hash</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">lowercase</span> <span class="pre">hex</span> <span class="pre">byte</span> <span class="pre">sequence&gt;</span></code>. As the responsibility of the application is only the verification of the signature, decoding of this text shouldn’t be necessary. Instead, the application should compare and sign/verify this text as it is. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf24SignatureValidatorResultE">
+<span id="_CPPv3N8erbsland4conf24SignatureValidatorResultE"></span><span id="_CPPv2N8erbsland4conf24SignatureValidatorResultE"></span><span class="target" id="_signature_validator_result_8hpp_1a02d6df1660cda42ac2ac57ca15cec240"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SignatureValidatorResult</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf24SignatureValidatorResultE" title="Link to this definition"></a><br /></dt>
+<dd><p>The result of the signature validation. </p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p>Tested via <code class="docutils literal notranslate"><a class="reference internal" href="parser.html#classerbsland_1_1conf_1_1_parser"><span class="std std-ref"><span class="pre">Parser</span></span></a></code> class. </p>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf24SignatureValidatorResult6AcceptE">
+<span id="_CPPv3N8erbsland4conf24SignatureValidatorResult6AcceptE"></span><span id="_CPPv2N8erbsland4conf24SignatureValidatorResult6AcceptE"></span><span class="target" id="_signature_validator_result_8hpp_1a02d6df1660cda42ac2ac57ca15cec240ac4408d335012a56ff58937d78050efad"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Accept</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf24SignatureValidatorResult6AcceptE" title="Link to this definition"></a><br /></dt>
+<dd><p>The signature is correct. </p>
+<p>Accept the document. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf24SignatureValidatorResult6RejectE">
+<span id="_CPPv3N8erbsland4conf24SignatureValidatorResult6RejectE"></span><span id="_CPPv2N8erbsland4conf24SignatureValidatorResult6RejectE"></span><span class="target" id="_signature_validator_result_8hpp_1a02d6df1660cda42ac2ac57ca15cec240ad98ac12774fca5c3cbaffe276840c55f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Reject</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf24SignatureValidatorResult6RejectE" title="Link to this definition"></a><br /></dt>
+<dd><p>The signature is not correct. </p>
+<p>Reject the document. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf21SignatureValidatorPtrE">
+<span id="_CPPv3N8erbsland4conf21SignatureValidatorPtrE"></span><span id="_CPPv2N8erbsland4conf21SignatureValidatorPtrE"></span><span class="target" id="_signature_validator_8hpp_1a833c9fdceeb1b62c5f293109184dddd0"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SignatureValidatorPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf18SignatureValidatorE" title="erbsland::conf::SignatureValidator"><span class="n"><span class="pre">SignatureValidator</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf21SignatureValidatorPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="access_check.html" class="btn btn-neutral float-left" title="Access Check" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="string.html" class="btn btn-neutral float-right" title="String" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

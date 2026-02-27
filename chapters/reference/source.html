@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Source &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Name and Name-Path" href="name.html" />
+    <link rel="prev" title="Document" href="document.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Source</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf6SourceE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::Source</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf16SourceIdentifierE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::SourceIdentifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf9SourcePtrE"><code class="docutils literal notranslate"><span class="pre">SourcePtr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf14SourcePtrConstE"><code class="docutils literal notranslate"><span class="pre">SourcePtrConst</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf10SourceListE"><code class="docutils literal notranslate"><span class="pre">SourceList</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf13SourceListPtrE"><code class="docutils literal notranslate"><span class="pre">SourceListPtr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE"><code class="docutils literal notranslate"><span class="pre">SourceIdentifierPtr</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Source</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/source.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="source">
+<h1>Source<a class="headerlink" href="#source" title="Link to this heading"></a></h1>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">2</span><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Source</span><span class="o">::</span><span class="n">fromFile</span><span class="p">(</span><span class="sa">u8</span><span class="s">&quot;configuration.elcl&quot;</span><span class="p">);</span>
+<span class="linenos">3</span><span class="w">    </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">;</span>
+<span class="linenos">4</span><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseOrThrow</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<span class="linenos">5</span><span class="w">    </span><span class="c1">// ...</span>
+<span class="linenos">6</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">7</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">toText</span><span class="p">().</span><span class="n">toCharString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="linenos">8</span><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">9</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Source</span><span class="o">::</span><span class="n">fromText</span><span class="p">(</span>
+<span class="linenos"> 3</span><span class="w">        </span><span class="sa">u8</span><span class="s">&quot;[main]</span><span class="se">\n</span><span class="s">&quot;</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="sa">u8</span><span class="s">&quot;value = 12</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Parser</span><span class="w"> </span><span class="n">parser</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parser</span><span class="p">.</span><span class="n">parseOrThrow</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="c1">// ...</span>
+<span class="linenos"> 8</span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">el</span><span class="o">::</span><span class="n">conf</span><span class="o">::</span><span class="n">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">error</span><span class="p">.</span><span class="n">toText</span><span class="p">().</span><span class="n">toCharString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="linenos">11</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6SourceE">
+<span id="_CPPv3N8erbsland4conf6SourceE"></span><span id="_CPPv2N8erbsland4conf6SourceE"></span><span id="erbsland::conf::Source"></span><span class="target" id="classerbsland_1_1conf_1_1_source"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Source</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6SourceE" title="Link to this definition"></a><br /></dt>
+<dd><p>Interface for the data source to read the configuration. </p>
+<p>Implementation notes:</p>
+<p><ul class="simple">
+<li><p>Constructing instances of source subclasses should be a lightweight operation, as sources may be created in batches, e.g. when an <code class="docutils literal notranslate"><span class="pre">\&#64;include</span></code> directive with a recursive pattern is encountered.</p></li>
+<li><p>The constructor of a source shouldn’t throw exceptions, unless a program termination due to internal errors is favourable.</p></li>
+<li><p>Heavy allocations and API calls shall be made in the <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a24bd9655484da160a4efde2c2dc3bed9"><span class="std std-ref"><span class="pre">open()</span></span></a></code> method.</p></li>
+<li><p>Any IO exceptions shall be raised in the <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a24bd9655484da160a4efde2c2dc3bed9"><span class="std std-ref"><span class="pre">open()</span></span></a></code> and/or <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a4c2bb920217a2301041fd829a7f7c6ed"><span class="std std-ref"><span class="pre">readLine()</span></span></a></code> methods.</p></li>
+</ul>
+</p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">SourceCreateTest</span></code></p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6SourceD0Ev">
+<span id="_CPPv3N8erbsland4conf6SourceD0Ev"></span><span id="_CPPv2N8erbsland4conf6SourceD0Ev"></span><span id="erbsland::conf::Source::~Source"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a7fc683f19529747ad94725e9d3210e0b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Source</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6SourceD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf6Source4nameEv">
+<span id="_CPPv3NK8erbsland4conf6Source4nameEv"></span><span id="_CPPv2NK8erbsland4conf6Source4nameEv"></span><span id="erbsland::conf::Source::nameC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a8f61d924b10bcab25f54061df54495ea"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf6Source4nameEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the name of the source. </p>
+<p>The name of the source also specifies its type or protocol. In a source identifier, the source name is separated from the source path by a colon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the source. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf6Source4pathEv">
+<span id="_CPPv3NK8erbsland4conf6Source4pathEv"></span><span id="_CPPv2NK8erbsland4conf6Source4pathEv"></span><span id="erbsland::conf::Source::pathC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a3aac4b9a2502b96be7ef4f8e41b3ca15"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">path</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf6Source4pathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the path of the source. </p>
+<p>The path of the source specifies the location of the source. In a source identifier, the source path is separated from the source name by a colon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The path of the source. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf6Source10identifierEv">
+<span id="_CPPv3NK8erbsland4conf6Source10identifierEv"></span><span id="_CPPv2NK8erbsland4conf6Source10identifierEv"></span><span id="erbsland::conf::Source::identifierC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a8971cde922daa8bbeedba12abc33bd7c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">identifier</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf6Source10identifierEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the source identifier. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The source identifier. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source4openEv">
+<span id="_CPPv3N8erbsland4conf6Source4openEv"></span><span id="_CPPv2N8erbsland4conf6Source4openEv"></span><span id="erbsland::conf::Source::open"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a24bd9655484da160a4efde2c2dc3bed9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source4openEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Open the source. </p>
+<p>The open method is only called <strong>once</strong> in the lifetime of a source. After a successful call of <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a24bd9655484da160a4efde2c2dc3bed9"><span class="std std-ref"><span class="pre">open()</span></span></a></code>, the method <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a10714a9c072189850b1b90aa75f7f41d"><span class="std std-ref"><span class="pre">isOpen()</span></span></a></code> must return <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n">Error</span></a></span></span> – (IO) If an error occurs while opening the source. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf6Source6isOpenEv">
+<span id="_CPPv3NK8erbsland4conf6Source6isOpenEv"></span><span id="_CPPv2NK8erbsland4conf6Source6isOpenEv"></span><span id="erbsland::conf::Source::isOpenC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a10714a9c072189850b1b90aa75f7f41d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf6Source6isOpenEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if the source is open. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the source is open, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf6Source5atEndEv">
+<span id="_CPPv3NK8erbsland4conf6Source5atEndEv"></span><span id="_CPPv2NK8erbsland4conf6Source5atEndEv"></span><span id="erbsland::conf::Source::atEndC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a5c7812c38ca75c57a5eb011edf87e7df"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf6Source5atEndEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if the source reached its end. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the source reached its end, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source8readLineENSt4spanINSt4byteEEE">
+<span id="_CPPv3N8erbsland4conf6Source8readLineENSt4spanINSt4byteEEE"></span><span id="_CPPv2N8erbsland4conf6Source8readLineENSt4spanINSt4byteEEE"></span><span id="erbsland::conf::Source::readLine__std::span:std::byte:"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a4c2bb920217a2301041fd829a7f7c6ed"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readLine</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">byte</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lineBuffer</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source8readLineENSt4spanINSt4byteEEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Reads a line from the source. </p>
+<p>The read line must contain the ending newline sequence if there is any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>lineBuffer</strong> – The buffer to store the read line. </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n">Error</span></a></span></span> – (IO) If an error occurs while reading the line. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of bytes read, or zero if no more data was available (e.g. when the file situation changed since the last end-of-file check.)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source5closeEv">
+<span id="_CPPv3N8erbsland4conf6Source5closeEv"></span><span id="_CPPv2N8erbsland4conf6Source5closeEv"></span><span id="erbsland::conf::Source::close"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1ad8b8bdb3d52cd5134c7ebe4ac00d57d0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source5closeEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Closes the source. </p>
+<p>Closes the source and releases any system resources associated with the source. After a call of <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1ad8b8bdb3d52cd5134c7ebe4ac00d57d0"><span class="std std-ref"><span class="pre">close()</span></span></a></code>, the method <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a10714a9c072189850b1b90aa75f7f41d"><span class="std std-ref"><span class="pre">isOpen()</span></span></a></code> must return <code class="docutils literal notranslate"><span class="pre">false</span></code>. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source8fromFileERK6String">
+<span id="_CPPv3N8erbsland4conf6Source8fromFileERK6String"></span><span id="_CPPv2N8erbsland4conf6Source8fromFileERK6String"></span><span id="erbsland::conf::Source::fromFile__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1a21bfd10aa0c7c145cd60684e34fe8bae"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source8fromFileERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a source for a file path. </p>
+<p>The returned source does not open the file immediately. The file is opened on the first call to <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a24bd9655484da160a4efde2c2dc3bed9"><span class="std std-ref"><span class="pre">open()</span></span></a></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – The path to the file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source8fromFileERKNSt10filesystem4pathE">
+<span id="_CPPv3N8erbsland4conf6Source8fromFileERKNSt10filesystem4pathE"></span><span id="_CPPv2N8erbsland4conf6Source8fromFileERKNSt10filesystem4pathE"></span><span id="erbsland::conf::Source::fromFile__std::filesystem::pathCR"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1ac56c44f456d395e39e1ddbbbba961e59"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source8fromFileERKNSt10filesystem4pathE" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a source for a file path.   </p>
+<p>The returned source does not open the file immediately. The file is opened on the first call to <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_source_1a24bd9655484da160a4efde2c2dc3bed9"><span class="std std-ref"><span class="pre">open()</span></span></a></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – The path to the file.   </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source10fromStringERK6String">
+<span id="_CPPv3N8erbsland4conf6Source10fromStringERK6String"></span><span id="_CPPv2N8erbsland4conf6Source10fromStringERK6String"></span><span id="erbsland::conf::Source::fromString__StringCR"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1abf19ee7d31828248d716975143275c2d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source10fromStringERK6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a source from the given UTF-8 encoded string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – The string with the text. A copy of the string is stored in the source. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source10fromStringERRNSt6stringE">
+<span id="_CPPv3N8erbsland4conf6Source10fromStringERRNSt6stringE"></span><span id="_CPPv2N8erbsland4conf6Source10fromStringERRNSt6stringE"></span><span id="erbsland::conf::Source::fromString__ssRR"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1ad666fb92326053070999bc82299983ec"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromString</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source10fromStringERRNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a source from the given UTF-8 encoded string.   </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – The string with the text. A copy of the string is stored in the source.   </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Source10fromStringERKNSt6stringE">
+<span id="_CPPv3N8erbsland4conf6Source10fromStringERKNSt6stringE"></span><span id="_CPPv2N8erbsland4conf6Source10fromStringERKNSt6stringE"></span><span id="erbsland::conf::Source::fromString__ssCR"></span><span class="target" id="classerbsland_1_1conf_1_1_source_1aedc76bd754086d29e1e1c67f151bc757"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">text</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Source10fromStringERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a source from the given UTF-8 encoded string.   </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> – The string with the text. A copy of the string is stored in the source.   </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf16SourceIdentifierE">
+<span id="_CPPv3N8erbsland4conf16SourceIdentifierE"></span><span id="_CPPv2N8erbsland4conf16SourceIdentifierE"></span><span id="erbsland::conf::SourceIdentifier"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SourceIdentifier</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf16SourceIdentifierE" title="Link to this definition"></a><br /></dt>
+<dd><p>Lightweight identifier for a configuration source. </p>
+<p>Instances of this class are usually shared between locations so that the parser and higher layers can refer to the same source without copying the underlying name and path strings.</p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">SourceIdentifierTest</span></code></p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf16SourceIdentifier16SourceIdentifierE6String6StringN4impl10PrivateTagE">
+<span id="_CPPv3N8erbsland4conf16SourceIdentifier16SourceIdentifierE6String6StringN4impl10PrivateTagE"></span><span id="_CPPv2N8erbsland4conf16SourceIdentifier16SourceIdentifierE6String6StringN4impl10PrivateTagE"></span><span id="erbsland::conf::SourceIdentifier::SourceIdentifier__String.String.impl::PrivateTag"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1ad4b72dd70ae54474940e1c5142eca828"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SourceIdentifier</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span>, <span class="n"><span class="pre">impl</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PrivateTag</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf16SourceIdentifier16SourceIdentifierE6String6StringN4impl10PrivateTagE" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new source identifier with explicit name and path. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the source. </p></li>
+<li><p><strong>path</strong> – The path of the source. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf16SourceIdentifierD0Ev">
+<span id="_CPPv3N8erbsland4conf16SourceIdentifierD0Ev"></span><span id="_CPPv2N8erbsland4conf16SourceIdentifierD0Ev"></span><span id="erbsland::conf::SourceIdentifier::~SourceIdentifier"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1ab3c28812eb0101cff04b64dd2e292901"></span><span class="sig-name descname"><span class="n"><span class="pre">~SourceIdentifier</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf16SourceIdentifierD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf16SourceIdentifiereqERK16SourceIdentifier">
+<span id="_CPPv3NK8erbsland4conf16SourceIdentifiereqERK16SourceIdentifier"></span><span id="_CPPv2NK8erbsland4conf16SourceIdentifiereqERK16SourceIdentifier"></span><span id="erbsland::conf::SourceIdentifier::eq-operator__SourceIdentifierCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1a93b64c1473c2e76014f3259c3950b27b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf16SourceIdentifierE" title="erbsland::conf::SourceIdentifier"><span class="n"><span class="pre">SourceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf16SourceIdentifiereqERK16SourceIdentifier" title="Link to this definition"></a><br /></dt>
+<dd><p>Compare this source identifier to another for equality. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The other identifier to compare. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if both identifiers have the same name and path. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf16SourceIdentifierneERK16SourceIdentifier">
+<span id="_CPPv3NK8erbsland4conf16SourceIdentifierneERK16SourceIdentifier"></span><span id="_CPPv2NK8erbsland4conf16SourceIdentifierneERK16SourceIdentifier"></span><span id="erbsland::conf::SourceIdentifier::neq-operator__SourceIdentifierCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1a5c2128048346f86e3dd3ff661957e67f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf16SourceIdentifierE" title="erbsland::conf::SourceIdentifier"><span class="n"><span class="pre">SourceIdentifier</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf16SourceIdentifierneERK16SourceIdentifier" title="Link to this definition"></a><br /></dt>
+<dd><p>Compare this source identifier to another for inequality. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The other identifier to compare. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the identifiers differ. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf16SourceIdentifier4nameEv">
+<span id="_CPPv3NK8erbsland4conf16SourceIdentifier4nameEv"></span><span id="_CPPv2NK8erbsland4conf16SourceIdentifier4nameEv"></span><span id="erbsland::conf::SourceIdentifier::nameC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1a9fc94302dfb6e0b48dc4ee76b7c94ff1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf16SourceIdentifier4nameEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the name of the source. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf16SourceIdentifier4pathEv">
+<span id="_CPPv3NK8erbsland4conf16SourceIdentifier4pathEv"></span><span id="_CPPv2NK8erbsland4conf16SourceIdentifier4pathEv"></span><span id="erbsland::conf::SourceIdentifier::pathC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1a74d3b8d31cc23381619c510e52358816"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">path</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf16SourceIdentifier4pathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the path of the source. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf16SourceIdentifier6toTextEv">
+<span id="_CPPv3NK8erbsland4conf16SourceIdentifier6toTextEv"></span><span id="_CPPv2NK8erbsland4conf16SourceIdentifier6toTextEv"></span><span id="erbsland::conf::SourceIdentifier::toTextC"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1a67c6bee9c5a01d29ab63bfddd1c578b1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf16SourceIdentifier6toTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get a text representation of this source identifier. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A text representation of the identifier. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf16SourceIdentifier6createE6String6String">
+<span id="_CPPv3N8erbsland4conf16SourceIdentifier6createE6String6String"></span><span id="_CPPv2N8erbsland4conf16SourceIdentifier6createE6String6String"></span><span id="erbsland::conf::SourceIdentifier::create__String.String"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1ae7fbec61945178fa24b8dfbe72100f2f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">create</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf16SourceIdentifier6createE6String6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Factory function to create a shared source identifier. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The source name. </p></li>
+<li><p><strong>path</strong> – The source path. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Shared-pointer to the new instance. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf16SourceIdentifier13createForFileE6String">
+<span id="_CPPv3N8erbsland4conf16SourceIdentifier13createForFileE6String"></span><span id="_CPPv2N8erbsland4conf16SourceIdentifier13createForFileE6String"></span><span id="erbsland::conf::SourceIdentifier::createForFile__String"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1a1af0d3dd9ef3795caa909479a8182fec"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createForFile</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf16SourceIdentifier13createForFileE6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new source identifier for a file. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> – The source path. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Shared-pointer to the new instance. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf16SourceIdentifier13createForTextEv">
+<span id="_CPPv3N8erbsland4conf16SourceIdentifier13createForTextEv"></span><span id="_CPPv2N8erbsland4conf16SourceIdentifier13createForTextEv"></span><span id="erbsland::conf::SourceIdentifier::createForText"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1acac8e13bd8d1a5bcd5b110f99427c2d9"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createForText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf16SourceIdentifier13createForTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new source identifier for text. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shared-pointer to the new instance. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf16SourceIdentifier8areEqualERK19SourceIdentifierPtrRK19SourceIdentifierPtr">
+<span id="_CPPv3N8erbsland4conf16SourceIdentifier8areEqualERK19SourceIdentifierPtrRK19SourceIdentifierPtr"></span><span id="_CPPv2N8erbsland4conf16SourceIdentifier8areEqualERK19SourceIdentifierPtrRK19SourceIdentifierPtr"></span><span id="erbsland::conf::SourceIdentifier::areEqual__SourceIdentifierPtrCR.SourceIdentifierPtrCR"></span><span class="target" id="classerbsland_1_1conf_1_1_source_identifier_1a72501bb6eff8d46704bd83a6bd6dcf9d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">areEqual</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">a</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf16SourceIdentifier8areEqualERK19SourceIdentifierPtrRK19SourceIdentifierPtr" title="Link to this definition"></a><br /></dt>
+<dd><p>A helper function to easily compare two source identifier pointers. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – The first identifier. </p></li>
+<li><p><strong>b</strong> – The second identifier. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if both identifier pointers are either nullptr, or compare to the same values. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf9SourcePtrE">
+<span id="_CPPv3N8erbsland4conf9SourcePtrE"></span><span id="_CPPv2N8erbsland4conf9SourcePtrE"></span><span class="target" id="fwd_8hpp_1ac98f1a794da5aac9d199afc5a7c16299"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SourcePtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf6SourceE" title="erbsland::conf::Source"><span class="n"><span class="pre">Source</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf9SourcePtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf14SourcePtrConstE">
+<span id="_CPPv3N8erbsland4conf14SourcePtrConstE"></span><span id="_CPPv2N8erbsland4conf14SourcePtrConstE"></span><span class="target" id="fwd_8hpp_1aa2fa0dcf75a47f511c5c16c3120736b8"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SourcePtrConst</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf6SourceE" title="erbsland::conf::Source"><span class="n"><span class="pre">Source</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf14SourcePtrConstE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf10SourceListE">
+<span id="_CPPv3N8erbsland4conf10SourceListE"></span><span id="_CPPv2N8erbsland4conf10SourceListE"></span><span class="target" id="_source_8hpp_1ae60102aa5a3fa337ef87bd1b7101f8d0"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SourceList</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf9SourcePtrE" title="erbsland::conf::SourcePtr"><span class="n"><span class="pre">SourcePtr</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf10SourceListE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf13SourceListPtrE">
+<span id="_CPPv3N8erbsland4conf13SourceListPtrE"></span><span id="_CPPv2N8erbsland4conf13SourceListPtrE"></span><span class="target" id="_source_8hpp_1a6fcdb5b436d3330340f15e99103995a6"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SourceListPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf10SourceListE" title="erbsland::conf::SourceList"><span class="n"><span class="pre">SourceList</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf13SourceListPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf19SourceIdentifierPtrE">
+<span id="_CPPv3N8erbsland4conf19SourceIdentifierPtrE"></span><span id="_CPPv2N8erbsland4conf19SourceIdentifierPtrE"></span><span class="target" id="_source_identifier_8hpp_1ac5658778d574c18f894f9d6d7011d84d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf16SourceIdentifierE" title="erbsland::conf::SourceIdentifier"><span class="n"><span class="pre">SourceIdentifier</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="document.html" class="btn btn-neutral float-left" title="Document" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="name.html" class="btn btn-neutral float-right" title="Name and Name-Path" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

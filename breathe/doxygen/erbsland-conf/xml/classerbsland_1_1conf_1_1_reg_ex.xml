@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_reg_ex" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::RegEx</compoundname>
+    <includes refid="_reg_ex_8hpp" local="no">erbsland/conf/RegEx.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_reg_ex_1aa4d061375c3346e8e5ab0901e680e6a3" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::RegEx::_text</definition>
+        <argsstring></argsstring>
+        <name>_text</name>
+        <qualifiedname>erbsland::conf::RegEx::_text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="42" column="12" bodyfile="erbsland/conf/RegEx.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_reg_ex_1a801b4f349ced12d02bc258709696ec9e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool erbsland::conf::RegEx::_multiLine</definition>
+        <argsstring></argsstring>
+        <name>_multiLine</name>
+        <qualifiedname>erbsland::conf::RegEx::_multiLine</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="43" column="10" bodyfile="erbsland/conf/RegEx.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_reg_ex_1ac2da87fe669df31bc8291805d29a738a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::RegEx::RegEx</definition>
+        <argsstring>()=default</argsstring>
+        <name>RegEx</name>
+        <qualifiedname>erbsland::conf::RegEx::RegEx</qualifiedname>
+        <briefdescription>
+<para>Create an empty regular expression value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="18" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_reg_ex_1a15cc4bc0dfac7fff71cebaff3f2d8829" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::RegEx::RegEx</definition>
+        <argsstring>(String text, const bool multiLine)</argsstring>
+        <name>RegEx</name>
+        <qualifiedname>erbsland::conf::RegEx::RegEx</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>multiLine</declname>
+        </param>
+        <briefdescription>
+<para>Create a regular expression value from the given string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>multiLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the regular expression was defined as a multi-line regular expression. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="23" column="14" bodyfile="erbsland/conf/RegEx.hpp" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_reg_ex_1a1a23e23379d959bc93118ae3bf710ddb" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::RegEx::operator==</definition>
+        <argsstring>(const RegEx &amp;other) const noexcept</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::RegEx::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="27" column="10" bodyfile="erbsland/conf/RegEx.hpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_reg_ex_1a6c63eab3ebe99e56f4e107ace0086a43" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::RegEx::operator!=</definition>
+        <argsstring>(const RegEx &amp;other) const noexcept</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::RegEx::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare for inequality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="31" column="10" bodyfile="erbsland/conf/RegEx.hpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_reg_ex_1acf28a102de18764c1f24eefabdacff8c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+        <definition>const String &amp; erbsland::conf::RegEx::toText</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::RegEx::toText</qualifiedname>
+        <briefdescription>
+<para>Get the text for this regular expression. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="37" column="19" bodyfile="erbsland/conf/RegEx.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_reg_ex_1a4e3216fe48009f921c5e0a3b81384835" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::RegEx::isMultiLine</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isMultiLine</name>
+        <qualifiedname>erbsland::conf::RegEx::isMultiLine</qualifiedname>
+        <briefdescription>
+<para>Test if this is a multi-line regular expression. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/RegEx.hpp" line="39" column="11" bodyfile="erbsland/conf/RegEx.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class to mark text as regular expressions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/RegEx.hpp" line="15" column="1" bodyfile="erbsland/conf/RegEx.hpp" bodystart="15" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1a801b4f349ced12d02bc258709696ec9e" prot="private" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>_multiLine</name></member>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1aa4d061375c3346e8e5ab0901e680e6a3" prot="private" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>_text</name></member>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1a4e3216fe48009f921c5e0a3b81384835" prot="public" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>isMultiLine</name></member>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1a6c63eab3ebe99e56f4e107ace0086a43" prot="public" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1a1a23e23379d959bc93118ae3bf710ddb" prot="public" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1ac2da87fe669df31bc8291805d29a738a" prot="public" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>RegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1a15cc4bc0dfac7fff71cebaff3f2d8829" prot="public" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>RegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_reg_ex_1acf28a102de18764c1f24eefabdacff8c" prot="public" virt="non-virtual"><scope>erbsland::conf::RegEx</scope><name>toText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

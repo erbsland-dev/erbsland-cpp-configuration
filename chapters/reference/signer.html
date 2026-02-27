@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signer &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Source Resolver" href="source_resolver.html" />
+    <link rel="prev" title="Location and Position" href="location.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Signer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf6SignerE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::Signer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf15SignatureSignerE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::SignatureSigner</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf18SignatureSignerPtrE"><code class="docutils literal notranslate"><span class="pre">SignatureSignerPtr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf19SignatureSignerDataE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::SignatureSignerData</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Signer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/signer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="signer">
+<h1>Signer<a class="headerlink" href="#signer" title="Link to this heading"></a></h1>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6SignerE">
+<span id="_CPPv3N8erbsland4conf6SignerE"></span><span id="_CPPv2N8erbsland4conf6SignerE"></span><span id="erbsland::conf::Signer"></span><span class="target" id="classerbsland_1_1conf_1_1_signer"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Signer</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6SignerE" title="Link to this definition"></a><br /></dt>
+<dd><p>The tool to sign configuration documents. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Signer6SignerE18SignatureSignerPtr">
+<span id="_CPPv3N8erbsland4conf6Signer6SignerE18SignatureSignerPtr"></span><span id="_CPPv2N8erbsland4conf6Signer6SignerE18SignatureSignerPtr"></span><span id="erbsland::conf::Signer::Signer__SignatureSignerPtr"></span><span class="target" id="classerbsland_1_1conf_1_1_signer_1a2db0b2269449f8f6a856def825d66f0d"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Signer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf18SignatureSignerPtrE" title="erbsland::conf::SignatureSignerPtr"><span class="n"><span class="pre">SignatureSignerPtr</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">signatureSigner</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Signer6SignerE18SignatureSignerPtr" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new signer tool using the given implementation. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>signatureSigner</strong> – The signature signer implementation to use. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6SignerD0Ev">
+<span id="_CPPv3N8erbsland4conf6SignerD0Ev"></span><span id="_CPPv2N8erbsland4conf6SignerD0Ev"></span><span id="erbsland::conf::Signer::~Signer"></span><span class="target" id="classerbsland_1_1conf_1_1_signer_1a0780446b00539079070998ffd55924b7"></span><span class="sig-name descname"><span class="n"><span class="pre">~Signer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf6SignerD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf6Signer4signENSt10filesystem4pathENSt10filesystem4pathE6String">
+<span id="_CPPv3N8erbsland4conf6Signer4signENSt10filesystem4pathENSt10filesystem4pathE6String"></span><span id="_CPPv2N8erbsland4conf6Signer4signENSt10filesystem4pathENSt10filesystem4pathE6String"></span><span id="erbsland::conf::Signer::sign__std::filesystem::path.std::filesystem::path.String"></span><span class="target" id="classerbsland_1_1conf_1_1_signer_1aee0be68b677038015cf1a9a7072dd090"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sign</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sourcePath</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">filesystem</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">destinationPath</span></span>, <a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">signingPersonText</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf6Signer4signENSt10filesystem4pathENSt10filesystem4pathE6String" title="Link to this definition"></a><br /></dt>
+<dd><p>Sign a document. </p>
+<p>This signs a given document. The signed document is not parsed, and therefore its syntax is not checked. It is recommended that you use <code class="docutils literal notranslate"><a class="reference internal" href="parser.html#classerbsland_1_1conf_1_1_parser"><span class="std std-ref"><span class="pre">Parser</span></span></a></code> to verify the document before signing it.</p>
+<p><ul class="simple">
+<li><p>The encoding of the document is checked, as UTF-8 is fully decoded/encoded.</p></li>
+<li><p>The line lengths are checked, as the document is read line-by-line.</p></li>
+<li><p>An existing initial <code class="docutils literal notranslate"><span class="pre">\&#64;signature</span></code> line is skipped and replaced in the destination.</p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourcePath</strong> – The path of the document to sign. </p></li>
+<li><p><strong>destinationPath</strong> – The path where the signed document is stored. </p></li>
+<li><p><strong>signingPersonText</strong> – The text identifying the signing person. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="error.html#_CPPv4N8erbsland4conf5ErrorE" title="erbsland::conf::Error"><span class="n">Error</span></a></span></span> – (IO, Encoding) in case of any problem with the signing process. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15SignatureSignerE">
+<span id="_CPPv3N8erbsland4conf15SignatureSignerE"></span><span id="_CPPv2N8erbsland4conf15SignatureSignerE"></span><span id="erbsland::conf::SignatureSigner"></span><span class="target" id="classerbsland_1_1conf_1_1_signature_signer"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SignatureSigner</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf15SignatureSignerE" title="Link to this definition"></a><br /></dt>
+<dd><p>The signer interface to create new signatures when signing documents. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15SignatureSignerD0Ev">
+<span id="_CPPv3N8erbsland4conf15SignatureSignerD0Ev"></span><span id="_CPPv2N8erbsland4conf15SignatureSignerD0Ev"></span><span id="erbsland::conf::SignatureSigner::~SignatureSigner"></span><span class="target" id="classerbsland_1_1conf_1_1_signature_signer_1a3e4fd46e7c1f1f331690af9147f6bd01"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SignatureSigner</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf15SignatureSignerD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf15SignatureSigner4signERK19SignatureSignerData">
+<span id="_CPPv3N8erbsland4conf15SignatureSigner4signERK19SignatureSignerData"></span><span id="_CPPv2N8erbsland4conf15SignatureSigner4signERK19SignatureSignerData"></span><span id="erbsland::conf::SignatureSigner::sign__SignatureSignerDataCR"></span><span class="target" id="classerbsland_1_1conf_1_1_signature_signer_1ac680828819c2e1c5b3b28b57d91063e6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sign</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf19SignatureSignerDataE" title="erbsland::conf::SignatureSignerData"><span class="n"><span class="pre">SignatureSignerData</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf15SignatureSigner4signERK19SignatureSignerData" title="Link to this definition"></a><br /></dt>
+<dd><p>Create the signature text when signing a document. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The data from the document to create the signature from. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The text that shall be added to the <code class="docutils literal notranslate"><span class="pre">\&#64;signature</span></code> meta-value in the stored document. This text must be shorter than 3980 <em>bytes</em> to fit into a single line of the configuration. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf18SignatureSignerPtrE">
+<span id="_CPPv3N8erbsland4conf18SignatureSignerPtrE"></span><span id="_CPPv2N8erbsland4conf18SignatureSignerPtrE"></span><span class="target" id="_signature_signer_8hpp_1a79f5b6a55c4e76e70093c71824ca3545"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="namespace.html#_CPPv48erbsland" title="erbsland"><span class="n"><span class="pre">erbsland</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="namespace.html#_CPPv4N8erbsland4confE" title="erbsland::conf"><span class="n"><span class="pre">conf</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SignatureSignerPtr</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N8erbsland4conf15SignatureSignerE" title="erbsland::conf::SignatureSigner"><span class="n"><span class="pre">SignatureSigner</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf18SignatureSignerPtrE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf19SignatureSignerDataE">
+<span id="_CPPv3N8erbsland4conf19SignatureSignerDataE"></span><span id="_CPPv2N8erbsland4conf19SignatureSignerDataE"></span><span id="erbsland::conf::SignatureSignerData"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_signer_data"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SignatureSignerData</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf19SignatureSignerDataE" title="Link to this definition"></a><br /></dt>
+<dd><p>The data for the signer implementation. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf19SignatureSignerData16sourceIdentifierE">
+<span id="_CPPv3N8erbsland4conf19SignatureSignerData16sourceIdentifierE"></span><span id="_CPPv2N8erbsland4conf19SignatureSignerData16sourceIdentifierE"></span><span id="erbsland::conf::SignatureSignerData::sourceIdentifier__SourceIdentifierPtr"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_signer_data_1a3410ef9aca27f548e07e40874bbd68b1"></span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sourceIdentifier</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf19SignatureSignerData16sourceIdentifierE" title="Link to this definition"></a><br /></dt>
+<dd><p>The source identifier of the document. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf19SignatureSignerData17signingPersonTextE">
+<span id="_CPPv3N8erbsland4conf19SignatureSignerData17signingPersonTextE"></span><span id="_CPPv2N8erbsland4conf19SignatureSignerData17signingPersonTextE"></span><span id="erbsland::conf::SignatureSignerData::signingPersonText__String"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_signer_data_1ac5c258756402deb29a0aab95ee6d526e"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">signingPersonText</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf19SignatureSignerData17signingPersonTextE" title="Link to this definition"></a><br /></dt>
+<dd><p>The raw and unprocessed text for the signer that was passed to the <code class="docutils literal notranslate"><span class="pre">sign</span></code> method. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf19SignatureSignerData14documentDigestE">
+<span id="_CPPv3N8erbsland4conf19SignatureSignerData14documentDigestE"></span><span id="_CPPv2N8erbsland4conf19SignatureSignerData14documentDigestE"></span><span id="erbsland::conf::SignatureSignerData::documentDigest__String"></span><span class="target" id="structerbsland_1_1conf_1_1_signature_signer_data_1a81b25cc1324a1d892767227ff65698f3"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">documentDigest</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf19SignatureSignerData14documentDigestE" title="Link to this definition"></a><br /></dt>
+<dd><p>The cryptographic hash of the document. </p>
+<p>The hash always has the format <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;</span> <span class="pre">&lt;hash</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">lowercase</span> <span class="pre">hex</span> <span class="pre">byte</span> <span class="pre">sequence&gt;</span></code>. As the responsibility of the application is only the verification of the signature, decoding of this text shouldn’t be necessary. Instead, the application should compare and sign/verify this text as it is. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="location.html" class="btn btn-neutral float-left" title="Location and Position" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="source_resolver.html" class="btn btn-neutral float-right" title="Source Resolver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

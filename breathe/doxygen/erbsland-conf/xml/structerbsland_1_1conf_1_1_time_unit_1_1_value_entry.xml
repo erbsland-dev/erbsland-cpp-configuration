@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry" kind="struct" language="C++" prot="private">
+    <compoundname>erbsland::conf::TimeUnit::ValueEntry</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a8f1e8aec5559963dd57ecec8c0fb8daf" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">Enum</ref></type>
+        <definition>Enum erbsland::conf::TimeUnit::ValueEntry::unit</definition>
+        <argsstring></argsstring>
+        <name>unit</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ValueEntry::unit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="98" column="14" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1ae203d51e8681f7c3983ff70493f4f062" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::TimeUnit::ValueEntry::textLong</definition>
+        <argsstring></argsstring>
+        <name>textLong</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ValueEntry::textLong</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="99" column="16" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a2b59f748cbe79ce4353889ed553f0604" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::TimeUnit::ValueEntry::textShort</definition>
+        <argsstring></argsstring>
+        <name>textShort</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ValueEntry::textShort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="100" column="16" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1af644a3e1fbbb26f72da29738e02a0f28" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::TimeUnit::ValueEntry::textForTest</definition>
+        <argsstring></argsstring>
+        <name>textForTest</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ValueEntry::textForTest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="101" column="16" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a8582e9ab0ef7272605591361d881ab39" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double erbsland::conf::TimeUnit::ValueEntry::secondFactor</definition>
+        <argsstring></argsstring>
+        <name>secondFactor</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ValueEntry::secondFactor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="102" column="16" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a2a2c603b4783546403d4f273d8aa81ac" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t erbsland::conf::TimeUnit::ValueEntry::nanosecondsFactor</definition>
+        <argsstring></argsstring>
+        <name>nanosecondsFactor</name>
+        <qualifiedname>erbsland::conf::TimeUnit::ValueEntry::nanosecondsFactor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeUnit.hpp" line="103" column="17" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>erbsland::conf::String</label>
+        <link refid="classerbsland_1_1conf_1_1_string"/>
+      </node>
+      <node id="1">
+        <label>erbsland::conf::TimeUnit::ValueEntry</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>textForTest</edgelabel>
+          <edgelabel>textLong</edgelabel>
+          <edgelabel>textShort</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/TimeUnit.hpp" line="97" column="5" bodyfile="erbsland/conf/TimeUnit.hpp" bodystart="97" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a2a2c603b4783546403d4f273d8aa81ac" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit::ValueEntry</scope><name>nanosecondsFactor</name></member>
+      <member refid="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a8582e9ab0ef7272605591361d881ab39" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit::ValueEntry</scope><name>secondFactor</name></member>
+      <member refid="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1af644a3e1fbbb26f72da29738e02a0f28" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit::ValueEntry</scope><name>textForTest</name></member>
+      <member refid="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1ae203d51e8681f7c3983ff70493f4f062" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit::ValueEntry</scope><name>textLong</name></member>
+      <member refid="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a2b59f748cbe79ce4353889ed553f0604" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit::ValueEntry</scope><name>textShort</name></member>
+      <member refid="structerbsland_1_1conf_1_1_time_unit_1_1_value_entry_1a8f1e8aec5559963dd57ecec8c0fb8daf" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeUnit::ValueEntry</scope><name>unit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

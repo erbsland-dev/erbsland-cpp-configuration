@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_5ef5b4ab487d2858fdd72a13c821285f" kind="dir">
+    <compoundname>erbsland/conf/vr/builder</compoundname>
+    <innerfile refid="vr_2builder_2all_8hpp">all.hpp</innerfile>
+    <innerfile refid="_attributes_8hpp">Attributes.hpp</innerfile>
+    <innerfile refid="_constraints_8hpp">Constraints.hpp</innerfile>
+    <innerfile refid="_default_value_factory_8hpp">DefaultValueFactory.hpp</innerfile>
+    <innerfile refid="_name_path_helper_8hpp">NamePathHelper.hpp</innerfile>
+    <innerfile refid="_type_traits_8hpp">TypeTraits.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/builder/"/>
+  </compounddef>
+</doxygen>
