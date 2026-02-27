@@ -1,4 +1,4 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
@@ -25,6 +25,8 @@ public:
     [[nodiscard]] auto asBytes() const noexcept -> Bytes override { return _value; }
     [[nodiscard]] auto asBytesOrThrow() const -> Bytes override { return _value; }
     [[nodiscard]] auto toTextRepresentation() const noexcept -> String override;
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<BytesValue>(_value); }
+    [[nodiscard]] auto rawStorage() const noexcept -> const Bytes& { return _value; }
 
 private:
     Bytes _value;
@@ -32,4 +34,3 @@ private:
 
 
 }
-

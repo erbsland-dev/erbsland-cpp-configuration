@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 
-#include <erbsland/conf/impl/LexerToken.hpp>
-#include <erbsland/conf/Position.hpp>
+#include <erbsland/conf/impl/lexer/LexerToken.hpp>
 #include <erbsland/conf/Bytes.hpp>
 #include <erbsland/conf/Date.hpp>
 #include <erbsland/conf/DateTime.hpp>
+#include <erbsland/conf/Position.hpp>
 #include <erbsland/conf/Time.hpp>
 #include <erbsland/conf/TimeDelta.hpp>
 #include <erbsland/conf/TimeOffset.hpp>

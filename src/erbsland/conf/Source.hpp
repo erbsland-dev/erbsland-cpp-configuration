@@ -4,9 +4,10 @@
 
 
 #include "Error.hpp"
+#include "fwd.hpp"
 #include "SourceIdentifier.hpp"
 
-#include "impl/InternalView.hpp"
+#include "impl/utilities/InternalView.hpp"
 
 #include <filesystem>
 #include <memory>
@@ -17,9 +18,6 @@
 namespace erbsland::conf {
 
 
-class Source;
-using SourcePtr = std::shared_ptr<Source>;
-using SourcePtrConst = std::shared_ptr<const Source>;
 using SourceList = std::vector<SourcePtr>;
 using SourceListPtr = std::shared_ptr<SourceList>;
 
@@ -39,6 +37,9 @@ using SourceListPtr = std::shared_ptr<SourceList>;
 /// @tested `SourceCreateTest`
 ///
 class Source {
+    // fwd-entry: class Source
+    // fwd-entry: using SourcePtr = std::shared_ptr<Source>
+    // fwd-entry: using SourcePtrConst = std::shared_ptr<const Source>
 public:
     /// Default destructor.
     virtual ~Source() = default;

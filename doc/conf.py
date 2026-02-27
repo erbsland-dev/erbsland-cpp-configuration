@@ -3,6 +3,8 @@ import shutil
 import sys
 from pathlib import Path
 
+import erbsland.conf_pygments.lexer
+
 sys.path.insert(0, str(Path(__file__).parent))
 
 # -- Project information -----------------------------------------------------
@@ -12,7 +14,12 @@ author = "Tobias Erbsland - Erbsland DEV"
 release = "1.0"
 
 # -- General configuration ---------------------------------------------------
-extensions = ["sphinx_rtd_theme", "sphinx_design", "sphinx_copybutton", "breathe", "_ext.ansi"]
+extensions = [
+    "sphinx_rtd_theme",
+    "sphinx_design",
+    "sphinx_copybutton",
+    "breathe",
+    "erbsland.sphinx.ansi"]
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
@@ -22,7 +29,9 @@ html_static_path = ["_static"]
 html_css_files = [
     "custom.css",
     "ansi.css",
-    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+]
+html_js_files = [
+    "https://erbsland.dev/ext/fa7/js/all.min.js"
 ]
 
 # -- Options for Breathe -----------------------------------------------------
@@ -31,10 +40,12 @@ _original_src_dir = _project_dir / "src"
 _processed_src_dir = _project_dir / "_doxygen_input"
 breathe_projects = {"erbsland-conf": _project_dir / "_build/breathe/doxygen/erbsland-conf/xml"}
 breathe_default_project = "erbsland-conf"
-breathe_projects_source = {"erbsland-conf": (_processed_src_dir, ["erbsland/conf"])}
+breathe_projects_source = {"erbsland-conf": (_processed_src_dir, [
+    "erbsland/conf", "erbsland/conf/vr", "erbsland/conf/vr/builder"])}
 breathe_doxygen_config_options = {
     "STRIP_FROM_PATH": _processed_src_dir,
     "STRIP_FROM_INC_PATH": _processed_src_dir,
+    "JAVADOC_AUTOBRIEF": "yes",
     "ALIASES": "\"tested=@par Tested:^^\", \"notest=@par Not Tested:^^\", \"needtest=@par Needs Testing:^^\", \"wip=@par Work in Progress:^^\"",
     "ENABLE_PREPROCESSING": "yes",
     "MACRO_EXPANSION": "no",
@@ -79,7 +90,4 @@ def preprocess_sources():
 
 # -- Add the syntax highlighter ---------------------------------------------
 def setup(app):
-    from _ext.pygments_elcl import ErbslandConfigurationLanguage
-
-    app.add_lexer("erbsland-conf", ErbslandConfigurationLanguage)
     preprocess_sources()

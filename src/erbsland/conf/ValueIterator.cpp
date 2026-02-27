@@ -40,5 +40,16 @@ auto ValueIterator::operator!=(const ValueIterator &other) const noexcept -> boo
 }
 
 
+auto ValueIterator::operator--() noexcept -> ValueIterator& {
+    --_current;
+    return *this;
+}
+
+
+auto ValueIterator::operator--(int) noexcept -> ValueIterator {
+    return ValueIterator(_current--);
+}
+
+
 }
 

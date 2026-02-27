@@ -19,7 +19,7 @@ public:
     ///
     /// @param signatureSigner The signature signer implementation to use.
     ///
-    explicit Signer(const SignatureSignerPtr &signatureSigner);
+    explicit Signer(SignatureSignerPtr signatureSigner);
 
     /// Default destructor.
     ~Signer() = default;

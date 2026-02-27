@@ -5,7 +5,7 @@
 #include <erbsland/conf/impl/utf8/U8Format.hpp>
 #include <erbsland/unittest/UnitTest.hpp>
 
-#include "../TestHelper.hpp"
+#include "TestHelper.hpp"
 
 
 using namespace erbsland::conf;

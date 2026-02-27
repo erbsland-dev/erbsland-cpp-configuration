@@ -19,9 +19,9 @@ public:
     virtual ~StreamTestInterface() = default;
 
 public:
-    virtual void afterOpen(Stream &stream) const {}
-    virtual void beforeRead(Stream &stream) const {}
-    virtual void afterClose(Stream &stream) const {}
+    virtual void afterOpen([[maybe_unused]] Stream &stream) const {}
+    virtual void beforeRead([[maybe_unused]] Stream &stream) const {}
+    virtual void afterClose([[maybe_unused]] Stream &stream) const {}
 };
 
 

@@ -3,7 +3,7 @@
 #pragma once
 
 
-#include "impl/InternalView.hpp"
+#include "impl/utilities/InternalView.hpp"
 
 
 namespace erbsland::conf {

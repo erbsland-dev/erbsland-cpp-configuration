@@ -1,3 +1,6 @@
+..
+    Copyright (c) 2026 Tobias Erbsland - Erbsland DEV. https://erbsland.dev
+    SPDX-License-Identifier: Apache-2.0
 
 .. index::
     single: integration
@@ -12,6 +15,10 @@ Integrate the Parser as Submodule
 The recommended way to include the Erbsland Configuration Parser in your project is by adding it as a Git submodule. This approach is especially suitable for new projects, as it allows you to lock the parser to a specific version. You can then manually update and test new versions when needed, maintaining better control over dependencies.
 
 We also strongly recommend integrating the parser as a **static library**, rather than using dynamic linking. This avoids compatibility issues and simplifies distribution and deployment.
+
+.. note::
+    This page describes the parser-only setup. Linking only ``erbsland-configuration-parser`` compiles only the parser library.
+    To add validation-rules libraries, see :doc:`integration-submodule-validation-rules`.
 
 Project Structure
 =================
@@ -75,4 +82,14 @@ To build your project with this setup, run the following commands from your proj
     ...
     [100%] Linking CXX executable example
     [100%] Built target example
+
+.. card:: Faster Builds Using Ninja
+
+    For faster and more reliable incremental builds, we recommend using *Ninja* as your build tool on all platforms.
+
+    .. code-block:: console
+
+        $ mkdir cmake-build
+        $ cmake . -G Ninja -B cmake-build
+        $ cmake -B cmake-build -j 8
 

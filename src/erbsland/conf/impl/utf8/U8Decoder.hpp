@@ -3,7 +3,8 @@
 #pragma once
 
 
-#include "../Char.hpp"
+#include "../char/Char.hpp"
+
 #include "../../Bytes.hpp"
 #include "../../Error.hpp"
 #include "../../String.hpp"
@@ -13,9 +14,7 @@ namespace erbsland::conf::impl {
 
 
 /// A safe and reliable UTF-8 decoder.
-///
 /// @tested `U8DecoderTest`
-///
 template<typename T> requires (std::is_same_v<std::remove_const_t<T>, std::byte> || (std::is_integral_v<T> && sizeof(T) == 1))
 class U8Decoder final {
 public:
@@ -43,16 +42,13 @@ public:
 
 public: // Accessor
     /// Access the buffer.
-    ///
     [[nodiscard]] auto buffer() const noexcept -> const std::span<T>& {
         return _buffer;
     }
 
 public:
     /// Decode all characters using a custom function.
-    ///
     /// @throws Error (Encoding) If the buffer contains an encoding error.
-    ///
     template<typename Function> requires std::invocable<Function, Char>
     void decodeAll(Function &&decodeFn) const {
         std::size_t position = 0;
@@ -61,10 +57,17 @@ public:
         }
     }
 
-    /// Count all characters in the buffer.
-    ///
+    /// Decode all characters into a vector of `Char`.
     /// @throws Error (Encoding) If the buffer contains an encoding error.
-    ///
+    [[nodiscard]] auto decodeAllToVector() const -> std::vector<Char> {
+        std::vector<Char> result;
+        result.reserve(countAll());
+        decodeAll([&result](const Char &character) -> void { result.push_back(character); });
+        return result;
+    }
+
+    /// Count all characters in the buffer.
+    /// @throws Error (Encoding) If the buffer contains an encoding error.
     [[nodiscard]] auto countAll() const -> std::size_t {
         if (_buffer.empty()) {
             return 0;
@@ -79,10 +82,9 @@ public:
     }
 
     /// Verify the encoding in the buffer.
-    ///
     [[nodiscard]] auto verify() const noexcept -> bool {
         try {
-            decodeAll([](const Char&) {});
+            decodeAll([](const Char&) -> void {});
             return true;
         } catch (const Error&) {
             return false;
@@ -90,11 +92,9 @@ public:
     }
 
     /// Get the byte position of a character.
-    ///
     /// @return The start byte of the character.
     /// @throws std::range_error If the position is not in the buffer.
     /// @throws Error (Encoding) If the buffer contains an encoding error.
-    ///
     [[nodiscard]] auto startByte(std::size_t characterIndex) -> std::size_t {
         if (_buffer.empty()) {
             throw std::range_error("Cannot get position of character in empty buffer.");
@@ -114,21 +114,17 @@ public:
 
 public:
     /// Throw an encoding error at the current document position.
-    ///
     /// @param message The diagnostic text.
     /// @throws Error Always thrown.
-    ///
     static void throwEncodingError(String message) {
         throw Error(ErrorCategory::Encoding, std::move(message));
     }
 
     /// Decode a single UTF-8 character in the buffer and advance the position.
-    ///
     /// @param buffer The byte buffer to decode.
     /// @param position The read position that is advanced after a successful read.
     /// @throws Error (ErrorCategory::Encoding) if there is an encoding error in the data. The position is
     ///     only advanced when a character is successfully read.
-    ///
     [[nodiscard]] static auto decodeChar(std::span<T> buffer, std::size_t &position) -> Char {
         if (position >= buffer.size()) {
             return Char::EndOfData;
@@ -167,7 +163,7 @@ public:
             unicodeValue <<= 6;
             unicodeValue |= static_cast<char32_t>(c & std::byte{0b00111111U});
         }
-        if ((cSize == 3 && unicodeValue < 0x800) || cSize == 4 && unicodeValue < 0x10000) {
+        if ((cSize == 3 && unicodeValue < 0x800) || (cSize == 4 && unicodeValue < 0x10000)) {
             throwEncodingError(u8"Overlong encoding.");
         }
         const auto result = Char{unicodeValue};
@@ -179,14 +175,11 @@ public:
     }
 
     /// Skip a UTF-8 character in the buffer and advance the position.
-    ///
     /// This method is faster than `decodeChar` but does not detect all encoding errors.
-    ///
     /// @param buffer The byte buffer to decode.
     /// @param position The read position that is advanced after a successful read.
     /// @throws Error (ErrorCategory::Encoding) if there is an encoding error in the data. The position is
     ///     only advanced when a character is successfully read.
-    ///
     static void skipChar(std::span<T> buffer, std::size_t &position) {
         if (position >= buffer.size()) {
             return;

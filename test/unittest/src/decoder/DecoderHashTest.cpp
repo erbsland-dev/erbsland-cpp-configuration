@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: Apache-2.0
 
 
-#include "../TestHelper.hpp"
+#include "TestHelper.hpp"
 
+#include <erbsland/conf/impl/char/CharStream.hpp>
 #include <erbsland/conf/Source.hpp>
-#include <erbsland/conf/impl/CharStream.hpp>
 #include <erbsland/unittest/UnitTest.hpp>
 
 

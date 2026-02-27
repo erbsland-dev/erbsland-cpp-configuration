@@ -3,9 +3,8 @@
 #pragma once
 
 
-#include "../NumberBase.hpp"
-
 #include "../decoder/TokenDecoder.hpp"
+#include "../utilities/NumberBase.hpp"
 
 
 namespace erbsland::conf::impl::lexer {
@@ -16,18 +15,27 @@ namespace erbsland::conf::impl::lexer {
 
 /// The result of the `parseNumber` call.
 ///
-struct ParseNumberResult {
-    int64_t value;
-    std::size_t digitCount;
+class ParseNumberResult final {
+public:
+    constexpr ParseNumberResult(int64_t value, std::size_t digitCount) : _value(value), _digitCount(digitCount) {}
+    ~ParseNumberResult() = default;
+
+public:
+    [[nodiscard]] auto value() const noexcept -> int64_t { return _value; }
+    [[nodiscard]] auto digitCount() const noexcept -> std::size_t { return _digitCount; }
 
     void assignTo(int64_t &value) const noexcept {
-        value = this->value;
+        value = _value;
     }
 
     void assignTo(int64_t &value, std::size_t &digitCount) const noexcept {
-        value = this->value;
-        digitCount = this->digitCount;
+        value = _value;
+        digitCount = _digitCount;
     }
+
+private:
+    int64_t _value;
+    std::size_t _digitCount;
 };
 
 /// If number separators are accepted.

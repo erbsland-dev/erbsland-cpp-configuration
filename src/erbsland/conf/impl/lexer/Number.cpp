@@ -3,8 +3,8 @@
 #include "Number.hpp"
 
 
-#include "../SaturationMath.hpp"
-#include "../YieldMacros.hpp"
+#include "../utilities/SaturationMath.hpp"
+#include "../utilities/YieldMacros.hpp"
 
 
 namespace erbsland::conf::impl::lexer {
@@ -74,25 +74,24 @@ auto parseNumber(
     if (fixedDigitCount > 0 && digitCount < fixedDigitCount) {
         // For a fixed digit count, return -1 instead of throwing an error, as this is used to test numbers
         // and backtrack if the number does not have the expected number of digits.
-        return {.value=-1, .digitCount=digitCount};
+        return {-1, digitCount};
     }
     // Checks if the number is in the required 64-bit limits.
     if (sign == Sign::Negative) {
-        if (value > static_cast<uint64_t>(std::numeric_limits<int64_t>::max()) + 1) {
+        const auto negativeLimit = static_cast<uint64_t>(std::numeric_limits<int64_t>::max()) + 1U;
+        if (value > negativeLimit) {
             decoder.throwNumberLimitExceededError();
         }
         // Special handling of the largest negative number to avoid undefined behavior.
-        if (value == static_cast<uint64_t>(std::numeric_limits<int64_t>::max()) + 1) {
-            value = std::numeric_limits<int64_t>::min();
-        } else {
-            value = -value;
+        if (value == negativeLimit) {
+            return {std::numeric_limits<int64_t>::min(), digitCount};
         }
-    } else {
-        if (value > static_cast<uint64_t>(std::numeric_limits<int64_t>::max())) {
-            decoder.throwNumberLimitExceededError();
-        }
+        return {-static_cast<int64_t>(value), digitCount};
     }
-    return {.value=static_cast<int64_t>(value), .digitCount=digitCount};
+    if (value > static_cast<uint64_t>(std::numeric_limits<int64_t>::max())) {
+        decoder.throwNumberLimitExceededError();
+    }
+    return {static_cast<int64_t>(value), digitCount};
 }
 
 

@@ -27,5 +27,6 @@ target_sources(unittest PRIVATE
         LexerTestHelper.hpp
         LexerTokenTest.cpp
         NameLexerTest.cpp
+        TokenTypeTest.cpp
 )
 

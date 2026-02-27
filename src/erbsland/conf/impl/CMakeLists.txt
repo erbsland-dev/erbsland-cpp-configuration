@@ -3,49 +3,20 @@
 
 cmake_minimum_required(VERSION 3.23)
 
+add_subdirectory(assignment)
+add_subdirectory(char)
+add_subdirectory(constants)
 add_subdirectory(crypto)
 add_subdirectory(decoder)
 add_subdirectory(lexer)
+add_subdirectory(parser)
+add_subdirectory(sign)
 add_subdirectory(source)
 add_subdirectory(utf8)
+add_subdirectory(utilities)
 add_subdirectory(value)
+add_subdirectory(vr)
 
 target_sources(erbsland-configuration-parser PRIVATE
-        Assignment.hpp
-        AssignmentGenerator.hpp
-        AssignmentStream.cpp
-        AssignmentStream.hpp
-        AssignmentType.hpp
-        Char.cpp
-        Char.hpp
-        CharClass.hpp
-        CharStream.cpp
-        CharStream.hpp
-        ComparisonHelper.hpp
-        ContainerWrappingHelper.hpp
-        Content.hpp
-        Defaults.hpp
         Definitions.hpp
-        Generator.hpp
-        HashHelper.hpp
-        InternalView.hpp
-        Lexer.cpp
-        Lexer.hpp
-        LexerToken.hpp
-        Limits.hpp
-        NameLexer.hpp
-        NumberBase.hpp
-        Parser.hpp
-        ParserContext.hpp
-        ParserSettings.hpp
-        PrivateTag.hpp
-        SaturationMath.hpp
-        Signer.hpp
-        TestTextHelper.hpp
-        TimeHelper.cpp
-        TimeHelper.hpp
-        TokenGenerator.hpp
-        TokenType.hpp
-        ValueTreeHelper.hpp
-        YieldMacros.hpp
 )

@@ -1,4 +1,3 @@
-
 # Erbsland Configuration Parser for C++
 
 This project provides a full-featured, dependency-free implementation of the [Erbsland Configuration Language](https://erbsland-dev.github.io/erbsland-lang-config-doc/) for modern C++ (C++20 and newer).
@@ -6,9 +5,12 @@ This project provides a full-featured, dependency-free implementation of the [Er
 ## Project Status
 
 - Fully implements the [Erbsland Configuration Language](https://erbsland-dev.github.io/erbsland-lang-config-doc/).
+- Fully implements validation-rules, created via an ELCL document and code-based.
 - Thoroughly tested and stable for use in productive development.
 - The API is stable.
-- The documentation covers the most important features.
+- Complete documentation available.
+
+[![CI](https://github.com/erbsland-dev/erbsland-cpp-configuration/actions/workflows/ci.yml/badge.svg)](https://github.com/erbsland-dev/erbsland-cpp-configuration/actions/workflows/ci.yml) [![Docs](https://github.com/erbsland-dev/erbsland-cpp-configuration/actions/workflows/build-docs.yml/badge.svg)](https://github.com/erbsland-dev/erbsland-cpp-configuration/actions/workflows/build-docs.yml)
 
 ## Quick Start
 
@@ -85,7 +87,7 @@ A detailed language specification is available here:
 
 ## License
 
-Copyright © 2025 Tobias Erbsland – https://erbsland.dev/
+Copyright © 2026 Tobias Erbsland – https://erbsland.dev/
 
 Licensed under the **Apache License, Version 2.0**.
 You may obtain a copy at: http://www.apache.org/licenses/LICENSE-2.0

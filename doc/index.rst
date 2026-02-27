@@ -50,12 +50,11 @@ Topics
 
         Review the technical requirements and environment setup needed to get started with the parser.
 
-    .. grid-item-card:: :fas:`landmark;sd-text-success` License
-        :link: chapters/license
+    .. grid-item-card:: :fas:`timeline;sd-text-success` Change Log
+        :link: chapters/changelog
         :link-type: doc
 
-        Familiarize yourself with the terms of use under the Apache 2.0 license.
-
+        Track new features, improvements, and breaking changes between releases.
 
 Contents at a Glance
 ---------------------
@@ -63,12 +62,13 @@ Contents at a Glance
 .. toctree::
     :maxdepth: 3
 
-    chapters/usage/index
     chapters/get-started/index
+    chapters/usage/index
     chapters/reference/index
     chapters/contribute/index
     chapters/requirements
     chapters/goals
+    chapters/changelog
     chapters/license
 
 Indices and Tables

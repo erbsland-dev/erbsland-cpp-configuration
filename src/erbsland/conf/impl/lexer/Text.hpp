@@ -3,7 +3,7 @@
 #pragma once
 
 
-#include "../TokenGenerator.hpp"
+#include "TokenGenerator.hpp"
 
 #include "../decoder/TokenDecoder.hpp"
 
@@ -55,7 +55,7 @@ void parseString(
 [[nodiscard]] auto parseMultiLineString(
     TokenDecoder &decoder,
     char32_t escapeChar,
-    const EscapeFn &escapeFn,
+    EscapeFn escapeFn,
     TokenType tokenType) -> TokenGenerator;
 
 /// Parse regular single line text.

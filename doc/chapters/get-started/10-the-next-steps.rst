@@ -1,3 +1,7 @@
+..
+    Copyright (c) 2026 Tobias Erbsland - Erbsland DEV. https://erbsland.dev
+    SPDX-License-Identifier: Apache-2.0
+
 **************
 The Next Steps
 **************
@@ -46,3 +50,24 @@ Don't forget to explore the full `Erbsland Configuration Language documentation 
 
     Read the Erbsland Configuration Language Documentation →
 
+If your project requires strict schema checks, optional defaults, and typed constraints, explore the dedicated validation-rules tutorials:
+
+.. button-ref:: /chapters/usage/tutorial-validation-rules-embedded-elcl
+    :ref-type: doc
+    :color: info
+    :align: center
+    :outline:
+    :expand:
+    :class: sd-fs-5 sd-font-weight-bold sd-p-2 sd-mt-4
+
+    Use Validation-Rules as Embedded ELCL Document →
+
+.. button-ref:: /chapters/usage/tutorial-validation-rules-code
+    :ref-type: doc
+    :color: info
+    :align: center
+    :outline:
+    :expand:
+    :class: sd-fs-5 sd-font-weight-bold sd-p-2 sd-mb-4
+
+    Use Validation-Rules Built from Code →

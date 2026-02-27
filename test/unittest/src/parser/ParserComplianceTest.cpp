@@ -1,4 +1,4 @@
-// Copyright (c) 2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 
 
@@ -16,6 +16,10 @@ using namespace el::conf;
 TESTED_TARGETS(Parser)
 class ParserComplianceTest final : public el::UnitTest {
 public:
+    static constexpr auto cTestSuiteEnv = "ERBSLAND_CONF_TEST_SUITE";
+    static constexpr auto cTestSuiteDir = "test/erbsland-lang-config-tests";
+    static constexpr auto cTestSuiteSubdir = "tests/V1_0";
+
     std::filesystem::path testSuitePath;
     std::filesystem::path testFilePath;
     SourcePtr source;
@@ -60,13 +64,37 @@ public:
     }
 
     void testPassOrFail() {
-        testSuitePath = std::filesystem::path(std::getenv("ERBSLAND_CONF_TEST_SUITE"));
-        if (testSuitePath.empty() || !std::filesystem::is_directory(testSuitePath)) {
-            consoleWriteLine(std::format("Test suite directory was not found: {}", testSuitePath.string()));
-            REQUIRE(false);
+        const bool suiteExplicitlyConfigured = (std::getenv(cTestSuiteEnv) != nullptr);
+        if (const auto testSuiteEnv = std::getenv(cTestSuiteEnv); testSuiteEnv != nullptr) {
+            testSuitePath = std::filesystem::path(testSuiteEnv);
+        } else {
+            // If no environment variable is set, the unittest wasn't started using CTest.
+            // In this case, we make a guess about the location, assuming this unittest runs in an IDE
+            // and the build directory is located inside the project directory.
+            auto guessedPath = std::filesystem::path(unitTestExecutablePath()).parent_path();
+            int maxDepth = 5;
+            while (is_directory(guessedPath) && maxDepth-- > 0) {
+                if (is_directory(guessedPath / cTestSuiteDir)) {
+                    testSuitePath = guessedPath / cTestSuiteDir;
+                    break;
+                }
+                guessedPath = guessedPath.parent_path();
+            }
         }
-        testSuitePath /= "tests";
-        testSuitePath /= "V1_0";
+        if (testSuitePath.empty() || !std::filesystem::is_directory(testSuitePath)) {
+            consoleWriteLine(std::format(
+                "Parser compliance test suite directory was not found: {}\n"
+                "Set {} to the local checkout of the compliance test suite to enable this test.",
+                testSuitePath.empty() ? std::string{"<empty>"} : testSuitePath.string(),
+                cTestSuiteEnv));
+            // Only fail if the suite location was explicitly configured. Otherwise, allow
+            // IDE/local runs without the external test suite checkout.
+            if (suiteExplicitlyConfigured) {
+                REQUIRE(false);
+            }
+            return;
+        }
+        testSuitePath /= cTestSuiteSubdir;
         REQUIRE(std::filesystem::is_directory(testSuitePath));
         std::filesystem::recursive_directory_iterator it(testSuitePath);
         std::vector<std::filesystem::directory_entry> entries;

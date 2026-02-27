@@ -1,9 +1,9 @@
-// Copyright (c) 2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #include "FileAccessCheck.hpp"
 
 
-#include "impl/Limits.hpp"
+#include "impl/constants/Limits.hpp"
 #include "impl/utf8/U8StringView.hpp"
 
 #include <filesystem>
@@ -103,8 +103,8 @@ void FileAccessCheck::throwAccessError(
 auto FileAccessCheck::extractSourcePath(const AccessSources &sources) const -> std::filesystem::path {
     auto sourcePath = std::filesystem::path{sources.source->path().toCharString()};
     if (isEnabled(RequireSuffix)) {
-        const auto extension = String{sourcePath.extension()};
-        if (impl::U8StringView{extension}.compare(impl::defaults::fileSuffix, impl::Char::compareCaseInsensitive) != std::strong_ordering::equal) {
+        const auto extension = String{sourcePath.extension().u8string()};
+        if (extension.characterCompare(impl::defaults::fileSuffix, CaseSensitivity::CaseInsensitive) != std::strong_ordering::equal) {
             throwAccessError(
                 u8"The included file does not have the suffix \".elcl\".",
                 sourcePath);

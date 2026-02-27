@@ -1,4 +1,4 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 
 
@@ -79,7 +79,7 @@ public:
             u8"     text→⟨•×☮️       \n\r\r\r",
         };
         for (const auto &str : validTestData) {
-            REQUIRE(U8StringView{str}.isValid());
+            REQUIRE(str.isValidUtf8());
         }
         const auto invalidTestData = std::vector<Bytes>{
             Bytes::fromHex(u8"41 42 43 80 41 42"), // continuation with no start
@@ -112,7 +112,7 @@ public:
                 REQUIRE_THROWS(U8StringView::fromBytes(bytes));
                 // bypass initial UTF-8 check.
                 String str{reinterpret_cast<const char8_t*>(bytes.data()), bytes.size()};
-                REQUIRE_FALSE(U8StringView{str}.isValid());
+                REQUIRE_FALSE(str.isValidUtf8());
             }, [&]() -> std::string {
                 return std::format("Invalid UTF-8 bytes: {}", bytes.toHex());
             });
@@ -156,13 +156,13 @@ public:
             {u8"→⟨•×", 4},
         };
         for (const auto &[str, expectedSize] : testData) {
-            auto actualSize = U8StringView{str}.length();
+            auto actualSize = str.characterLength();
             REQUIRE_EQUAL(actualSize, expectedSize);
         }
         auto invalidBytes = Bytes::fromHex(u8"41 80 42");
         String str{reinterpret_cast<const char8_t*>(invalidBytes.data()), invalidBytes.size()};
         std::size_t length;
-        REQUIRE_THROWS_AS(Error, length = U8StringView{str}.length());
+        REQUIRE_THROWS_AS(Error, length = str.characterLength());
     }
 
     void testUtf8CharStart() {
@@ -247,7 +247,7 @@ public:
                     data.maximumCharacters,
                     data.location,
                     data.elideSequence);
-                REQUIRE_EQUAL(U8StringView{actualText}.length(), data.maximumCharacters);
+                REQUIRE_EQUAL(actualText.characterLength(), data.maximumCharacters);
                 REQUIRE_EQUAL(actualText, data.expectedText);
             }, [&]() -> std::string {
                 std::string result;
@@ -310,5 +310,156 @@ public:
             REQUIRE_EQUAL(actualResult, data.expectedResult);
         }
     }
-};
 
+    void testUtf8StartsWith() {
+        // Default comparator cases
+        struct TestData {
+            String haystack;
+            String needle;
+            bool expected;
+        };
+        const auto defaultData = std::vector<TestData>{
+            {u8"", u8"", true},
+            {u8"", u8"a", false},
+            {u8"a", u8"", true},
+            {u8"abc", u8"abc", true},
+            {u8"abc", u8"ab", true},
+            {u8"abc", u8"abcx", false},
+            {u8"abc", u8"ac", false},
+            {u8"→⟨•×😀abcdef", u8"→", true},
+            {u8"→⟨•×😀abcdef", u8"→⟨•", true},
+            {u8"→⟨•×😀abcdef", u8"→⟨•×😀", true},
+            {u8"→⟨•×😀abcdef", u8"↔", false},
+        };
+        for (const auto &d : defaultData) {
+            REQUIRE_EQUAL(U8StringView{d.haystack}.startsWith(d.needle), d.expected);
+        }
+
+        // Case-insensitive comparator
+        const auto ciData = std::vector<TestData>{
+            {u8"", u8"", true},
+            {u8"Config", u8"con", true},
+            {u8"config", u8"CON", true},
+            {u8"CONFIG", u8"Conf", true},
+            {u8"ABC", u8"abd", false},
+        };
+        for (const auto &d : ciData) {
+            REQUIRE_EQUAL(U8StringView{d.haystack}.startsWith(d.needle, impl::Char::compareCaseInsensitive), d.expected);
+        }
+
+    }
+
+    void testUtf8EndsWith() {
+        // Default comparator cases
+        struct TestData {
+            String haystack;
+            String needle;
+            bool expected;
+        };
+        const auto defaultData = std::vector<TestData>{
+            {u8"", u8"", true},
+            {u8"", u8"a", false},
+            {u8"a", u8"", true},
+            {u8"abc", u8"abc", true},
+            {u8"abc", u8"bc", true},
+            {u8"abc", u8"xbc", false},
+            {u8"abc", u8"abcd", false},
+            {u8"abcdef→⟨•×😀", u8"😀", true},
+            {u8"abcdef→⟨•×😀", u8"•×😀", true},
+            {u8"abcdef→⟨•×😀", u8"×😀x", false},
+        };
+        for (const auto &d : defaultData) {
+            REQUIRE_EQUAL(U8StringView{d.haystack}.endsWith(d.needle), d.expected);
+        }
+
+        // Case-insensitive comparator
+        const auto ciData = std::vector<TestData>{
+            {u8"", u8"", true},
+            {u8"app.LOG", u8".log", true},
+            {u8"app.log", u8".LOG", true},
+            {u8"Readme.MD", u8".md", true},
+            {u8"note.txt", u8".md", false},
+        };
+        for (const auto &d : ciData) {
+            REQUIRE_EQUAL(U8StringView{d.haystack}.endsWith(d.needle, impl::Char::compareCaseInsensitive), d.expected);
+        }
+
+    }
+
+    void testUtf8Contains() {
+        // Default comparator cases
+        struct TestData {
+            String haystack;
+            String needle;
+            bool expected;
+        };
+        const auto defaultData = std::vector<TestData>{
+            {u8"", u8"", true},
+            {u8"", u8"a", false},
+            {u8"a", u8"", true},
+            {u8"abc", u8"abc", true},
+            {u8"abc", u8"ab", true},
+            {u8"abc", u8"bc", true},
+            {u8"abc", u8"ac", false},
+            {u8"xxxabababcxxx", u8"ababc", true},
+            {u8"→⟨•×😀abcdef", u8"→", true},
+            {u8"→⟨•×😀abcdef", u8"⟨•×", true},
+            {u8"→⟨•×😀abcdef", u8"•×😀a", true},
+            {u8"→⟨•×😀abcdef", u8"↔", false},
+        };
+        for (const auto &d : defaultData) {
+            REQUIRE_EQUAL(U8StringView{d.haystack}.contains(d.needle), d.expected);
+        }
+
+        // Case-insensitive comparator
+        const auto ciData = std::vector<TestData>{
+            {u8"", u8"", true},
+            {u8"Config", u8"onF", true},
+            {u8"CONFIG", u8"conf", true},
+            {u8"abc", u8"ABD", false},
+        };
+        for (const auto &d : ciData) {
+            REQUIRE_EQUAL(U8StringView{d.haystack}.contains(d.needle, impl::Char::compareCaseInsensitive), d.expected);
+        }
+    }
+
+    void testFirstByteIndex() {
+        const String text = u8"a😀b😀";
+        const auto view = U8StringView{text};
+        REQUIRE_EQUAL(view.firstByteIndex(impl::Char{U'a'}), 0U);
+        REQUIRE_EQUAL(view.firstByteIndex(impl::Char{U'😀'}), 1U);
+        REQUIRE_EQUAL(view.firstByteIndex(impl::Char{U'😀'}, 5), 6U);
+        REQUIRE_EQUAL(view.firstByteIndex(impl::Char{U'x'}), std::u8string_view::npos);
+        REQUIRE_THROWS_AS(std::range_error, view.firstByteIndex(impl::Char{U'😀'}, 2));
+        REQUIRE_THROWS_AS(std::range_error, view.firstByteIndex(impl::Char{U'😀'}, 100));
+    }
+
+    void testSplit() {
+        const auto list = U8StringView{String{u8",a,,b,"}}.split(impl::Char{U','}, {});
+        REQUIRE_EQUAL(list.size(), 5U);
+        REQUIRE_EQUAL(list[0], u8"");
+        REQUIRE_EQUAL(list[1], u8"a");
+        REQUIRE_EQUAL(list[2], u8"");
+        REQUIRE_EQUAL(list[3], u8"b");
+        REQUIRE_EQUAL(list[4], u8"");
+
+        const auto limited = U8StringView{String{u8"a,b,c,d"}}.split(impl::Char{U','}, 2);
+        REQUIRE_EQUAL(limited.size(), 3U);
+        REQUIRE_EQUAL(limited[0], u8"a");
+        REQUIRE_EQUAL(limited[1], u8"b");
+        REQUIRE_EQUAL(limited[2], u8"c,d");
+    }
+
+    void testJoin() {
+        const auto glueText = String{u8"—"};
+        const auto glue = U8StringView{glueText};
+        const StringList parts{u8"a", u8"", u8"b"};
+        REQUIRE_EQUAL(glue.join(parts), u8"a——b");
+
+        const auto emptyGlueText = String{u8""};
+        const auto emptyGlue = U8StringView{emptyGlueText};
+        const StringList single{u8"only"};
+        REQUIRE_EQUAL(emptyGlue.join(single), u8"only");
+        REQUIRE_EQUAL(emptyGlue.join({}), String{});
+    }
+};

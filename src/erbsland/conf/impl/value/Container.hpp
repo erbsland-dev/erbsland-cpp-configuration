@@ -18,22 +18,17 @@ using ValuePtr = std::shared_ptr<Value>;
 
 
 /// The interface for container classes.
-///
 class Container {
 public:
     virtual ~Container() = default;
 
 public:
     /// Set the parent of this value.
-    ///
     /// @param parent The parent value.
-    ///
     virtual void setParent(const conf::ValuePtr &parent) = 0;
 
     /// Add a child value to this node.
-    ///
     /// @param childValue The child value to add.
-    ///
     virtual void addValue(const ValuePtr &childValue) = 0;
 };
 

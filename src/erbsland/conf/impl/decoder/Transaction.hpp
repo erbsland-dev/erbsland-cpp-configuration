@@ -5,7 +5,8 @@
 
 #include "TransactionHandler.hpp"
 
-#include "../InternalView.hpp"
+#include "../utilities/InternalView.hpp"
+
 #include "../../String.hpp"
 
 #include <cassert>

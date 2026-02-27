@@ -8,8 +8,9 @@
 #include "SignatureValidator.hpp"
 #include "Source.hpp"
 #include "SourceResolver.hpp"
+#include "StringConvertible.hpp"
 
-#include "impl/ParserSettings.hpp"
+#include "impl/parser/ParserSettings.hpp"
 
 #include <optional>
 
@@ -83,6 +84,50 @@ public:
     /// @return The error object of the last error.
     ///
     auto lastError() const noexcept -> Error;
+
+public: // convenience methods
+    /// @name Convenience Methods
+    /// These methods are convenience methods to call `parse` or `parseOrThrow`.
+    /// They construct a `Source` from the given parameters and call `parse` or `parseOrThrow` using this source.
+    /// @{
+
+    /// Parse the given file into a configuration document and throw an exception on error.
+    [[nodiscard]] auto parseFileOrThrow(const String &path) -> DocumentPtr {
+        return parseOrThrow(Source::fromFile(path));
+    }
+    /// Parse the given file into a configuration document and throw an exception on error.
+    [[nodiscard]] auto parseFileOrThrow(const std::filesystem::path &path) -> DocumentPtr {
+        return parseOrThrow(Source::fromFile(path));
+    }
+    /// Parse the given file into a configuration document and return a null pointer on error.
+    [[nodiscard]] auto parseFile(const String &path) -> DocumentPtr {
+        return parse(Source::fromFile(path));
+    }
+    /// Parse the given file into a configuration document and return a null pointer on error.
+    [[nodiscard]] auto parseFile(const std::filesystem::path &path) -> DocumentPtr {
+        return parse(Source::fromFile(path));
+    }
+    /// Parse the given text into a configuration document and throw an exception on error.
+    [[nodiscard]] auto parseTextOrThrow(const String &text) -> DocumentPtr {
+        return parseOrThrow(Source::fromString(text));
+    }
+    /// Parse the given text into a configuration document and throw an exception on error.
+    template<typename Fwd>
+    requires StringConvertible<Fwd>
+    [[nodiscard]] auto parseTextOrThrow(Fwd &&text) -> DocumentPtr {
+        return parseOrThrow(Source::fromString(String(std::forward<Fwd>(text))));
+    }
+    /// Parse the given text into a configuration document and return a null pointer on error.
+    [[nodiscard]] auto parseText(const String &text) -> DocumentPtr {
+        return parse(Source::fromString(text));
+    }
+    /// Parse the given text into a configuration document and return a null pointer on error.
+    template <typename Fwd>
+    requires StringConvertible<Fwd>
+    [[nodiscard]] auto parseText(Fwd &&text) -> DocumentPtr {
+        return parse(Source::fromString(String(std::forward<Fwd>(text))));
+    }
+    /// @}
 
 private:
     impl::ParserSettings _settings; ///< The parser settings.

@@ -3,8 +3,8 @@
 #pragma once
 
 
-#include "../LexerToken.hpp"
-#include "../TokenType.hpp"
+#include "LexerToken.hpp"
+#include "TokenType.hpp"
 
 
 namespace erbsland::conf::impl::lexer {

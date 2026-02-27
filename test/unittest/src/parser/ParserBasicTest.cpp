@@ -5,6 +5,8 @@
 
 #include "ParserTestHelper.hpp"
 
+#include <erbsland/conf/SourceIdentifier.hpp>
+
 
 TESTED_TARGETS(Parser)
 class ParserBasicTest final : public UNITTEST_SUBCLASS(ParserTestHelper) {
@@ -45,6 +47,10 @@ public:
         WITH_CONTEXT(verifySequentialRead());
         REQUIRE(doc != nullptr);
         REQUIRE(doc->empty());
+        const auto location = doc->location();
+        REQUIRE_FALSE(location.isUndefined());
+        REQUIRE(SourceIdentifier::areEqual(location.sourceIdentifier(), source->identifier()));
+        REQUIRE_EQUAL(location.position().isUndefined(), true);
     }
 
     void testEmptyWithComments() {

@@ -6,8 +6,8 @@
 #include "LiteralTables.hpp"
 #include "Number.hpp"
 
-#include "../SaturationMath.hpp"
-#include "../YieldMacros.hpp"
+#include "../utilities/SaturationMath.hpp"
+#include "../utilities/YieldMacros.hpp"
 
 #include <utility>
 

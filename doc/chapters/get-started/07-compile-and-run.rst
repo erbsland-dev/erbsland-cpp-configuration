@@ -1,3 +1,6 @@
+..
+    Copyright (c) 2026 Tobias Erbsland - Erbsland DEV. https://erbsland.dev
+    SPDX-License-Identifier: Apache-2.0
 
 ************************
 Compile and Run Our Game
@@ -30,7 +33,7 @@ The Gameplay
 
 When the game starts, you’ll see a short welcome message followed by the rendered game field. A prompt invites you to enter your next move.
 
-.. ansi-block::
+.. erbsland-ansi::
     :escape-char: ␛
 
     ----------------------------==[ ROBOT ESCAPE ]==-----------------------------
@@ -62,7 +65,7 @@ When the game starts, you’ll see a short welcome message followed by the rende
 
 Each move updates the world: the player and robots move one step, and their paths are visualized using trails. Here's how the game looks after a few steps:
 
-.. ansi-block::
+.. erbsland-ansi::
     :escape-char: ␛
 
     ␛[0m␛[90m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -90,7 +93,7 @@ Each move updates the world: the player and robots move one step, and their path
 
 This is getting intense! The robots are just one step behind...
 
-.. ansi-block::
+.. erbsland-ansi::
     :escape-char: ␛
 
     ␛[0m␛[90m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -118,7 +121,7 @@ This is getting intense! The robots are just one step behind...
 
 And finally—you reach the goal unharmed!
 
-.. ansi-block::
+.. erbsland-ansi::
     :escape-char: ␛
 
     ␛[0m␛[90m░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░

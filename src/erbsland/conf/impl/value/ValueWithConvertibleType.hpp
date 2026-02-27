@@ -1,4 +1,4 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
@@ -28,6 +28,10 @@ public:
 public:
     [[nodiscard]] auto type() const noexcept -> ValueType override { return tValueType; }
     [[nodiscard]] auto toTextRepresentation() const noexcept -> String override { return _value.toText(); }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override {
+        return std::make_shared<ValueWithConvertibleType<StorageType, tValueType>>(_value);
+    }
+    [[nodiscard]] auto rawStorage() const noexcept -> const StorageType& { return _value; }
 
 protected:
     StorageType _value;
@@ -43,6 +47,7 @@ public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
     [[nodiscard]] auto asDateTime() const noexcept -> DateTime override { return _value; }
     [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<DateTimeValue>(_value); }
 };
 
 
@@ -55,6 +60,7 @@ public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
     [[nodiscard]] auto asDate() const noexcept -> Date override { return _value; }
     [[nodiscard]] auto asDateOrThrow() const -> Date override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<DateValue>(_value); }
 };
 
 
@@ -67,6 +73,7 @@ public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
     [[nodiscard]] auto asTime() const noexcept -> Time override { return _value; }
     [[nodiscard]] auto asTimeOrThrow() const -> Time override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<TimeValue>(_value); }
 };
 
 
@@ -79,6 +86,7 @@ public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
     [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override { return _value; }
     [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<TimeDeltaValue>(_value); }
 };
 
 
@@ -91,8 +99,8 @@ public:
     using ValueWithConvertibleType::ValueWithConvertibleType;
     [[nodiscard]] auto asRegEx() const noexcept -> RegEx override { return _value; }
     [[nodiscard]] auto asRegExOrThrow() const -> RegEx override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<RegExValue>(_value); }
 };
 
 
 }
-

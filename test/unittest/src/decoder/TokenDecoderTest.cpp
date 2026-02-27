@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 
-#include "../TestHelper.hpp"
+#include "TestHelper.hpp"
 
 #include <erbsland/conf/Error.hpp>
 #include <erbsland/conf/Source.hpp>

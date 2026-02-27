@@ -12,6 +12,7 @@
 #include "ValueWithNativeType.hpp"
 
 #include "../utf8/U8Format.hpp"
+#include "../vr/Rule.hpp"
 
 #include <algorithm>
 #include <cassert>
@@ -30,7 +31,7 @@ auto Value::namePath() const noexcept -> NamePath {
     if (!hasParent()) { // A standalone value with no parent.
         return _name;
     }
-    conf::ValueList tempValueList;
+    conf::ConstValueList tempValueList;
     tempValueList.reserve(10);
     tempValueList.emplace_back(shared_from_this());
     for (auto value = parent(); value != nullptr && !value->isRoot(); value = value->parent()) {
@@ -55,6 +56,151 @@ auto Value::parent() const noexcept -> conf::ValuePtr {
 }
 
 
+auto Value::size() const noexcept -> std::size_t {
+    return 0;
+}
+
+
+auto Value::hasValue(const NamePathLike &) const noexcept -> bool {
+    return false;
+}
+
+
+auto Value::value(const NamePathLike &) const noexcept -> conf::ValuePtr {
+    return {};
+}
+
+
+auto Value::valueOrThrow(const NamePathLike &namePath) const -> conf::ValuePtr {
+    throwValueNotFound(*this, namePath);
+}
+
+
+auto Value::begin() const noexcept -> ValueIterator {
+    return {};
+}
+
+
+auto Value::end() const noexcept -> ValueIterator {
+    return {};
+}
+
+
+auto Value::asInteger() const noexcept -> int64_t {
+    return 0LL;
+}
+
+
+auto Value::asBoolean() const noexcept -> bool {
+    return false;
+}
+
+
+auto Value::asFloat() const noexcept -> double {
+    return 0.0;
+}
+
+
+auto Value::asText() const noexcept -> String {
+    return {};
+}
+
+
+auto Value::asDate() const noexcept -> Date {
+    return {};
+}
+
+
+auto Value::asTime() const noexcept -> Time {
+    return {};
+}
+
+
+auto Value::asDateTime() const noexcept -> DateTime {
+    return {};
+}
+
+
+auto Value::asBytes() const noexcept -> Bytes {
+    return {};
+}
+
+
+auto Value::asTimeDelta() const noexcept -> TimeDelta {
+    return {};
+}
+
+
+auto Value::asRegEx() const noexcept -> RegEx {
+    return {};
+}
+
+
+auto Value::asValueList() const noexcept -> conf::ValueList {
+    return {};
+}
+
+
+auto Value::asIntegerOrThrow() const -> int64_t {
+    throwAsTypeMismatch(*this, ValueType::Integer);
+}
+
+
+auto Value::asBooleanOrThrow() const -> bool {
+    throwAsTypeMismatch(*this, ValueType::Boolean);
+}
+
+
+auto Value::asFloatOrThrow() const -> double {
+    throwAsTypeMismatch(*this, ValueType::Float);
+}
+
+
+auto Value::asTextOrThrow() const -> String {
+    throwAsTypeMismatch(*this, ValueType::Text);
+}
+
+
+auto Value::asDateOrThrow() const -> Date {
+    throwAsTypeMismatch(*this, ValueType::Date);
+}
+
+
+auto Value::asTimeOrThrow() const -> Time {
+    throwAsTypeMismatch(*this, ValueType::Time);
+}
+
+
+auto Value::asDateTimeOrThrow() const -> DateTime {
+    throwAsTypeMismatch(*this, ValueType::DateTime);
+}
+
+
+auto Value::asBytesOrThrow() const -> Bytes {
+    throwAsTypeMismatch(*this, ValueType::Bytes);
+}
+
+
+auto Value::asTimeDeltaOrThrow() const -> TimeDelta {
+    throwAsTypeMismatch(*this, ValueType::TimeDelta);
+}
+
+
+auto Value::asRegExOrThrow() const -> RegEx {
+    throwAsTypeMismatch(*this, ValueType::RegEx);
+}
+
+
+auto Value::asValueListOrThrow() const -> conf::ValueList {
+    throwAsTypeMismatch(*this, ValueType::ValueList);
+}
+
+
+auto Value::toTextRepresentation() const noexcept -> String {
+    return {};
+}
+
+
 auto Value::hasLocation() const noexcept -> bool {
     return !_location.isUndefined();
 }
@@ -70,13 +216,39 @@ void Value::setLocation(const Location &newLocation) noexcept {
 }
 
 
+auto Value::wasValidated() const noexcept -> bool {
+    return _rule != nullptr;
+}
+
+
+auto Value::validationRule() const noexcept -> vr::RulePtr {
+    return _rule;
+}
+
+
+auto Value::isDefaultValue() const noexcept -> bool {
+    return _isDefaultValue;
+}
+
+
 void Value::setParent(const conf::ValuePtr &parent) {
     _parent = parent;
 }
 
 
-void Value::addValue(const ValuePtr &childValue) {
+void Value::addValue(const ValuePtr &) {
     throw std::logic_error("Child values are not supported for this type.");
+}
+
+
+auto Value::childrenImpl() const noexcept -> const std::vector<ValuePtr> & {
+    static std::vector<ValuePtr> empty;
+    return empty;
+}
+
+
+auto Value::valueImpl([[maybe_unused]] const Name &name) const noexcept -> ValuePtr {
+    return nullptr;
 }
 
 

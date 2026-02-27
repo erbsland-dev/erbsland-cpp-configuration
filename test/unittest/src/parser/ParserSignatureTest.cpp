@@ -4,17 +4,17 @@
 
 #include "ParserTestHelper.hpp"
 
-#include <erbsland/conf/impl/Char.hpp>
-#include <erbsland/conf/impl/utf8/U8StringView.hpp>
-#include <erbsland/conf/SignatureValidator.hpp>
+#include <erbsland/conf/impl/char/Char.hpp>
+#include <erbsland/conf/impl/lexer/Lexer.hpp>
 #include <erbsland/conf/SignatureSigner.hpp>
+#include <erbsland/conf/SignatureValidator.hpp>
 #include <erbsland/conf/Signer.hpp>
-#include <erbsland/conf/impl/Lexer.hpp>
 #include <erbsland/conf/impl/crypto/ShaHash.hpp>
+#include <erbsland/conf/impl/utf8/U8StringView.hpp>
 
-#include <vector>
-#include <ranges>
 #include <algorithm>
+#include <ranges>
+#include <vector>
 
 
 TESTED_TARGETS(Parser)

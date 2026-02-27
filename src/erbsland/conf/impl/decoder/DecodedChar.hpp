@@ -3,8 +3,9 @@
 #pragma once
 
 
-#include "../Char.hpp"
-#include "../InternalView.hpp"
+#include "../char/Char.hpp"
+#include "../utilities/InternalView.hpp"
+
 #include "../../Bytes.hpp"
 #include "../../Position.hpp"
 #include "../../String.hpp"

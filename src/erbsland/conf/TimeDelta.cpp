@@ -3,8 +3,8 @@
 #include "TimeDelta.hpp"
 
 
-#include "impl/SaturationMath.hpp"
 #include "impl/utf8/U8Format.hpp"
+#include "impl/utilities/SaturationMath.hpp"
 
 #include <algorithm>
 #include <functional>

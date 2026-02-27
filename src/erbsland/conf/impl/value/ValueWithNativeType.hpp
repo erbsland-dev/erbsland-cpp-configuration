@@ -1,4 +1,4 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
@@ -28,6 +28,10 @@ public:
             return impl::u8format("{}", _value);
         }
     }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override {
+        return std::make_shared<ValueWithNativeType<StorageType, tValueType>>(_value);
+    }
+    [[nodiscard]] auto rawStorage() const noexcept -> const StorageType& { return _value; }
 
 protected:
     StorageType _value;
@@ -43,6 +47,7 @@ public:
     using ValueWithNativeType::ValueWithNativeType;
     [[nodiscard]] auto asBoolean() const noexcept -> bool override { return _value; }
     [[nodiscard]] auto asBooleanOrThrow() const -> bool override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<BooleanValue>(_value); }
 };
 
 
@@ -55,6 +60,7 @@ public:
     using ValueWithNativeType::ValueWithNativeType;
     [[nodiscard]] auto asFloat() const noexcept -> Float override { return _value; }
     [[nodiscard]] auto asFloatOrThrow() const -> Float override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<FloatValue>(_value); }
 };
 
 
@@ -67,6 +73,7 @@ public:
     using ValueWithNativeType::ValueWithNativeType;
     [[nodiscard]] auto asInteger() const noexcept -> Integer override { return _value; }
     [[nodiscard]] auto asIntegerOrThrow() const -> Integer override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<IntegerValue>(_value); }
 };
 
 
@@ -79,8 +86,8 @@ public:
     using ValueWithNativeType::ValueWithNativeType;
     [[nodiscard]] auto asText() const noexcept -> String override { return _value; }
     [[nodiscard]] auto asTextOrThrow() const -> String override { return _value; }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override { return std::make_shared<TextValue>(_value); }
 };
 
 
 }
-

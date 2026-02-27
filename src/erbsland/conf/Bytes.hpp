@@ -1,13 +1,13 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
 
 #include "String.hpp"
 
-#include "impl/ComparisonHelper.hpp"
-#include "impl/ContainerWrappingHelper.hpp"
 #include "impl/Definitions.hpp"
+#include "impl/utilities/ComparisonHelper.hpp"
+#include "impl/utilities/ContainerWrappingHelper.hpp"
 
 #include <cstddef>
 #include <span>
@@ -86,7 +86,9 @@ public: // Conversion
     requires (std::is_integral_v<std::iter_value_t<It>> && sizeof(std::iter_value_t<It>) == 1)
     [[nodiscard]] static auto from(It begin, It end) -> Bytes {
         ByteVector data;
-        data.reserve(std::distance(begin, end));
+        if (const auto dist = std::distance(begin, end); dist > 0) {
+            data.reserve(static_cast<std::size_t>(dist));
+        }
         std::transform(begin, end, std::back_inserter(data), [](auto v) { return static_cast<std::byte>(v); });
         return Bytes{data};
     }
@@ -101,7 +103,9 @@ public: // Conversion
     requires (std::is_integral_v<std::iter_value_t<It>>)
     [[nodiscard]] static auto convertFrom(It begin, It end) -> Bytes {
         ByteVector data;
-        data.reserve(std::distance(begin, end));
+        if (const auto dist = std::distance(begin, end); dist > 0) {
+            data.reserve(static_cast<std::size_t>(dist));
+        }
         std::transform(begin, end, std::back_inserter(data), [](auto v) { return static_cast<std::byte>(v); });
         return Bytes{data};
     }
@@ -133,10 +137,13 @@ public: // Conversion
     /// @}
 
     /// Convert this sequence of bytes to a string of hex characters.
-    ///
     /// @return The string with the hex characters.
-    ///
     [[nodiscard]] auto toHex() const noexcept -> String;
+
+    /// Convert this sequence of bytes to a string of hex characters.
+    /// If the sequence is longer than 16 bytes, the sequence is shortened and "..." appended to the string.
+    /// @return The string with the hex characters, suitable for error messages.
+    [[nodiscard]] auto toHexForErrors() const noexcept -> String;
 
 public: // wrapper around the underlying vector
     ERBSLAND_CONF_CONTAINER_ACCESS_METHODS(ByteVector, _data);

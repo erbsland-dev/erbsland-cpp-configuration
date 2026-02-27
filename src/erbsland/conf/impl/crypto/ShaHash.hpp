@@ -7,6 +7,8 @@
 
 #include "../../Bytes.hpp"
 
+#include <variant>
+
 
 namespace erbsland::conf::impl::crypto {
 

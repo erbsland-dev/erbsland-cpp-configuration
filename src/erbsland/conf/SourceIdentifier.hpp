@@ -1,13 +1,13 @@
-// Copyright (c) 2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
 
 #include "String.hpp"
 
-#include "impl/Defaults.hpp"
-#include "impl/InternalView.hpp"
+#include "impl/constants/Defaults.hpp"
 #include "impl/utf8/U8StringView.hpp"
+#include "impl/utilities/InternalView.hpp"
 
 #include <memory>
 #include <utility>
@@ -105,7 +105,7 @@ public: // conversion
     /// @return A text representation of the identifier.
     ///
     [[nodiscard]] auto toText() const noexcept -> String {
-        const auto safePath = impl::U8StringView{_path}.toSafeText();
+        const auto safePath = _path.toSafeText();
         if (_name.empty() || _path.empty()) {
             if (!_name.empty()) {
                 return _name;

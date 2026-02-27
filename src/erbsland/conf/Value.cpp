@@ -5,10 +5,15 @@
 
 #include "Error.hpp"
 
-#include "impl/TestTextHelper.hpp"
-#include "impl/TokenType.hpp"
-#include "impl/ValueTreeHelper.hpp"
+#include "impl/lexer/TokenType.hpp"
+#include "impl/utilities/InternalError.hpp"
+#include "impl/utilities/TestTextHelper.hpp"
 #include "impl/value/Value.hpp"
+#include "impl/value/ValueTreeHelper.hpp"
+#include "vr/Rule.hpp"
+
+#include <algorithm>
+#include <ranges>
 
 
 namespace erbsland::conf {
@@ -34,6 +39,89 @@ auto Value::toTestValueTree(const TestFormat format) const noexcept -> String {
         result.append(u8"\n");
     }
     return result;
+}
+
+
+auto Value::isSecret() const noexcept -> bool {
+    if (!wasValidated()) {
+        return false;
+    }
+    return validationRule()->isSecret();
+}
+
+
+auto Value::toValueList() const noexcept -> ConstValueList {
+    if (type() == ValueType::ValueList) {
+        const auto valueList = asValueList();
+        return ConstValueList{valueList.begin(), valueList.end()};
+    }
+    if (type().isScalar()) {
+        return {shared_from_this()};
+    }
+    return {};
+}
+
+
+auto Value::toValueList() noexcept -> ValueList {
+    if (type() == ValueType::ValueList) {
+        return asValueList();
+    }
+    if (type().isScalar()) {
+        return {shared_from_this()};
+    }
+    return {};
+}
+
+
+namespace {
+template<typename tValueMatrix, typename tValue>
+auto toValueMatrixImpl(tValue &value) noexcept -> tValueMatrix {
+    if (value.type().isScalar()) {
+        tValueMatrix matrix{1, 1};
+        matrix.setValue(0, 0, value.shared_from_this());
+        return matrix;
+    }
+    if (value.type() != ValueType::ValueList) {
+        return {};
+    }
+    const auto valueList = value.asValueList();
+    if (valueList.empty()) {
+        return {};
+    }
+    const std::size_t maxColumns =
+        std::ranges::max(valueList | std::views::transform([](const auto& listEntry) -> std::size_t {
+            ERBSLAND_CONF_REQUIRE_SAFETY(listEntry != nullptr, "List entry cannot be null");
+            return (listEntry->type() == ValueType::ValueList) ? listEntry->size() : std::size_t{1};
+        }));
+    if (maxColumns == 0) {
+        return {};
+    }
+    tValueMatrix matrix{valueList.size(), maxColumns};
+    for (std::size_t row = 0; row < valueList.size(); ++row) {
+        const auto &listEntry = valueList[row];
+        ERBSLAND_CONF_REQUIRE_SAFETY(listEntry != nullptr, "Matrix entry cannot be null");
+        if (listEntry->type() != ValueType::ValueList) {
+            matrix.setValue(row, 0, listEntry);
+            continue;
+        }
+        const auto rowList = listEntry->asValueList();
+        for (std::size_t column = 0; column < rowList.size(); ++column) {
+            ERBSLAND_CONF_REQUIRE_SAFETY(rowList[column] != nullptr, "Matrix entry cannot be null");
+            matrix.setValue(row, column, std::const_pointer_cast<Value>(rowList[column]));
+        }
+    }
+    return matrix;
+}
+}
+
+
+auto Value::toValueMatrix() const noexcept -> ConstValueMatrix {
+    return toValueMatrixImpl<ConstValueMatrix, const Value>(*this);
+}
+
+
+auto Value::toValueMatrix() noexcept -> ValueMatrix {
+    return toValueMatrixImpl<ValueMatrix, Value>(*this);
 }
 
 
@@ -73,8 +161,18 @@ auto Value::getFloat(const NamePathLike &namePath, Float defaultValue) const noe
 }
 
 
-auto Value::getText(const NamePathLike &namePath, const String &defaultValue) const noexcept -> String {
+auto Value::getTextString(const NamePathLike &namePath, const String &defaultValue) const noexcept -> String {
     return impl::Value::valueGetter<String>(*this, namePath, defaultValue);
+}
+
+
+auto Value::getTextStdU8String(const NamePathLike &namePath, const std::u8string &defaultValue) const noexcept -> String {
+    return impl::Value::valueGetterWithDefaultToConvert<String>(*this, namePath, defaultValue);
+}
+
+
+auto Value::getTextStdString(const NamePathLike &namePath, const std::string &defaultValue) const noexcept -> String {
+    return impl::Value::valueGetterWithDefaultToConvert<String>(*this, namePath, defaultValue);
 }
 
 
@@ -203,4 +301,3 @@ auto Value::getSectionWithTextsOrThrow(const NamePathLike &namePath) const -> Va
 
 
 }
-

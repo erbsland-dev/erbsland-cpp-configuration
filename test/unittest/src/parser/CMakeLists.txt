@@ -5,6 +5,7 @@ target_sources(unittest PRIVATE
         ParserAccessTest.cpp
         ParserBasicTest.cpp
         ParserComplianceTest.cpp
+        ParserConvenienceTest.cpp
         ParserErrorClassTest.cpp
         ParserIncludeTest.cpp
         ParserSignatureTest.cpp

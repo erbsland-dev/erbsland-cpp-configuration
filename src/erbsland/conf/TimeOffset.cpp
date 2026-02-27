@@ -41,7 +41,7 @@ auto TimeOffset::seconds() const noexcept -> int {
     if (isLocalTime()) {
         return 0;
     }
-    return std::abs(_seconds.count()) % 60;
+    return static_cast<int>(std::abs(_seconds.count()) % 60);
 }
 
 
@@ -49,7 +49,7 @@ auto TimeOffset::minutes() const noexcept -> int {
     if (isLocalTime()) {
         return 0;
     }
-    return (std::abs(_seconds.count()) / 60) % 60;
+    return static_cast<int>((std::abs(_seconds.count()) / 60) % 60);
 }
 
 
@@ -57,7 +57,7 @@ auto TimeOffset::hours() const noexcept -> int {
     if (isLocalTime()) {
         return 0;
     }
-    return std::abs(_seconds.count()) / 3600;
+    return static_cast<int>(std::abs(_seconds.count()) / 3600);
 }
 
 

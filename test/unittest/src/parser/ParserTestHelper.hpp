@@ -3,7 +3,7 @@
 #pragma once
 
 
-#include "../TestHelper.hpp"
+#include "TestHelper.hpp"
 
 #include <erbsland/conf/Parser.hpp>
 #include <erbsland/conf/impl/utf8/U8StringView.hpp>
@@ -117,7 +117,7 @@ public:
         }
         const auto filePath = useTestFileDirectory() / relativePath;
         std::filesystem::create_directories(filePath.parent_path());
-        std::ofstream stream(filePath);
+        std::ofstream stream(filePath, std::ios::binary);
         stream << text.toCharString();
         stream.close();
         return filePath;

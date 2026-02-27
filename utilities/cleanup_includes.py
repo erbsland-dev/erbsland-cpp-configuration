@@ -16,13 +16,21 @@ class ScriptError (Exception):
 
 
 class Include:
+    INCLUDE_CATEGORY_PATTERNS = [
+        (re.compile(r'^"[^.][^/]+"'), 1),
+        (re.compile(r'^"[^./]+/.+"'), 2),
+        (re.compile(r'^"\.\./[^.].+"'), 3),
+        (re.compile(r'^"\.\./\.\./.+"'), 4),
+        (re.compile(r'^<.*\.h(pp)?>'), 5),
+        (re.compile(r'^<[^.]+>'), 6),
+        (re.compile(r'.*'), 7),
+    ]
 
     def __init__(self, path: str, is_global: bool):
         self.path = path
         self.is_global = is_global
         self.check_for_problems()
         self.group_id = self.get_group_id()
-        self.path_weight = self.get_path_weight()
         self.sort_path = self.get_sort_path()
 
     def __eq__(self, other):
@@ -35,41 +43,19 @@ class Include:
             raise ScriptError(f'Include statement with invalid path: {self.path}')
 
     def get_group_id(self) -> int:
+        include_name = self.get_include_name()
+        for pattern, priority in self.INCLUDE_CATEGORY_PATTERNS:
+            if pattern.match(include_name):
+                return priority
+        return 7
+
+    def get_include_name(self) -> str:
         if self.is_global:
-            if not (self.path.endswith('.hpp') or self.path.endswith('.h')):
-                # std header
-                return 8
-            # Any other external include
-            return 7
-        if self.path.startswith('../'):
-            # header outside of local module
-            if self.path.split('/')[-2] == '..':
-                # header in the same tree (only back)
-                return 4
-            # header in a separate module (back, up)
-            return 5
-        if '/' in self.path:
-            # header in submodule
-            return 3
-        # local header
-        return 1
-
-    def get_path_weight(self) -> int:
-        return len(self.path.split('/'))
-
-    @staticmethod
-    def get_sort_name(name: str) -> str:
-        field_width = 80
-        if name == '..':
-            return '~' * field_width
-        if name == 'fwd.hpp':
-            name = name.upper()
-        else:
-            name = name.lower()
-        return name.ljust(field_width, ' ')
+            return f'<{self.path}>'
+        return f'"{self.path}"'
 
     def get_sort_path(self) -> str:
-        return ''.join([self.get_sort_name(x) for x in self.path.split('/')])
+        return self.get_include_name().casefold()
 
 
 class WorkingSet:
@@ -163,7 +149,7 @@ class WorkingSet:
             if self.verbose:
                 print('Ignoring file without relevant includes.')
             return
-        include_list.sort(key=attrgetter('group_id', 'path_weight', 'sort_path'))
+        include_list.sort(key=attrgetter('group_id', 'sort_path'))
         last_group_id = 0
         new_block = '\n\n'
         if include_list:
@@ -191,12 +177,13 @@ class WorkingSet:
 
     def scan_code_files(self):
         paths = list(self.src_dir.rglob('*.hpp'))
+        paths.extend(self.src_dir.rglob('*.tpp'))
         paths.extend(self.src_dir.rglob('*.cpp'))
-        paths.sort()
+        paths.sort(key=lambda p: str(p).casefold())
         for path in paths:
             if path.name in self.EXCLUDED_NAMES:
                 continue
-            self.process_file(path, path.name.endswith(('.hpp', '.h', '.hxx')))
+            self.process_file(path, path.name.endswith(('.hpp', '.h', '.hxx', '.tpp')))
 
     def parse_cmd(self):
         """

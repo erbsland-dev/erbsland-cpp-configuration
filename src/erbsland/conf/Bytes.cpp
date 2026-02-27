@@ -1,9 +1,9 @@
-// Copyright (c) 2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #include "Bytes.hpp"
 
 
-#include "impl/HashHelper.hpp"
+#include "impl/utilities/HashHelper.hpp"
 
 #include <cstring>
 
@@ -40,7 +40,9 @@ auto byteToDigit(const std::byte byte) noexcept -> char {
 template<std::input_iterator It>
 auto convertFromHex(It begin, It end) noexcept -> Bytes {
     std::vector<std::byte> result;
-    result.reserve(std::distance(begin, end) / 2);
+    if (const auto dist = std::distance(begin, end); dist > 0) {
+        result.reserve(static_cast<std::size_t>(dist) / 2U);
+    }
 
     auto skipSpaces = [&]() {
         while (begin != end && isWhitespace(static_cast<char>(*begin))) {
@@ -107,6 +109,22 @@ auto Bytes::toHex() const noexcept -> String {
     for (const auto byte : *this) {
         result.append(byteToDigit(byte >> 4));
         result.append(byteToDigit(byte & std::byte{0x0f}));
+    }
+    return result;
+}
+
+
+auto Bytes::toHexForErrors() const noexcept -> String {
+    String result;
+    result.reserve(35);
+    auto maxLength = std::min(static_cast<std::size_t>(16), size());
+    for (std::size_t i = 0; i < maxLength; ++i) {
+        const auto byte = (*this)[i];
+        result.append(byteToDigit(byte >> 4));
+        result.append(byteToDigit(byte & std::byte{0x0f}));
+    }
+    if (maxLength < size()) {
+        result.append(u8"...");
     }
     return result;
 }

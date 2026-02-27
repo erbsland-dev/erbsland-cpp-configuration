@@ -7,6 +7,7 @@
 #include "ValueMap.hpp"
 
 #include "../utf8/U8Format.hpp"
+#include "../utilities/InternalError.hpp"
 
 
 namespace erbsland::conf::impl {
@@ -28,7 +29,7 @@ public:
     ValueWithChildren() = default;
 
 public: // implement `Value`
-    [[nodiscard]] auto size() const noexcept -> size_t override {
+    [[nodiscard]] auto size() const noexcept -> std::size_t override {
         return _children.size();
     }
     [[nodiscard]] auto hasValue(const NamePathLike &namePath) const noexcept -> bool override {
@@ -49,10 +50,19 @@ public: // implement `Value`
     void addValue(const ValuePtr &childValue) override {
         _children.addValue(childValue);
     }
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override {
+        throwInternalError("Deep copy is not supported for this value type.");
+    }
 
 public: // implement impl::Value
+    [[nodiscard]] auto childrenImpl() const noexcept -> const std::vector<ValuePtr>& override {
+        return _children.valueList();
+    }
     [[nodiscard]] auto valueImpl(const Name &name) const noexcept -> ValuePtr override {
         return _children.valueImpl(name);
+    }
+    void removeDefaultValues() override {
+        _children.removeDefaultValues();
     }
 
 protected:
@@ -61,4 +71,3 @@ protected:
 
 
 }
-

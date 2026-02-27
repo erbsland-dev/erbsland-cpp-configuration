@@ -1,9 +1,9 @@
-// Copyright (c) 2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #include "FileSourceResolver.hpp"
 
 
-#include "impl/Limits.hpp"
+#include "impl/constants/Limits.hpp"
 #include "impl/utf8/U8Format.hpp"
 #include "impl/utf8/U8Iterator.hpp"
 #include "impl/utf8/U8StringView.hpp"
@@ -59,7 +59,7 @@ auto FileSourceResolver::resolve(const SourceResolverContext &context) -> Source
         const auto directoryPath = buildDirectory(context.sourceIdentifier, directory);
         const auto paths = scanForPaths(directoryPath, isRecursive, filenamePattern);
         return createSourcesFromPaths(paths);
-    } catch (const std::system_error &error) {
+    } catch (const std::system_error &) {
         throwError(u8"An unexpected error prevents resolving this include pattern.");
     }
 }
@@ -202,10 +202,10 @@ auto FileSourceResolver::validateDirectoryWildcard(std::u8string_view directory)
         if (directory.find_first_of(u8'/', recursiveWildcardPos + 1) != std::u8string::npos) {
             throwError(u8"The recursive wildcard '**' must not be the last directory element in the path.");
         }
-        if (directory.size() > 2 && directory[recursiveWildcardPos - 1] != u8'/') {
+        if (directory.find_first_not_of(u8'/', recursiveWildcardPos + 2) != std::u8string::npos) {
             throwError(u8"The recursive wildcard '**' must be an individual path element.");
         }
-        if (directory.find_first_not_of(u8'/', recursiveWildcardPos + 2) != std::u8string::npos) {
+        if (recursiveWildcardPos > 0 && directory[recursiveWildcardPos - 1] != u8'/') {
             throwError(u8"The recursive wildcard '**' must be an individual path element.");
         }
         if (recursiveWildcardPos == 0) {
@@ -335,13 +335,13 @@ auto FileSourceResolver::createSourcesFromPaths(const std::vector<std::filesyste
         try {
             path = canonical(path);
             if (!is_regular_file(path)) {
-                throwError(u8"The path of an include file is not a regular file.", path);
+                throwError(u8"The path of an included file is not a regular file.", path);
             }
         } catch (const std::system_error &error) {
             throwError(u8"Could not find the path of an included file.", path, error.code());
         }
         const auto pathStr = String{path.u8string()};
-        if (!U8StringView{pathStr}.isValid()) {
+        if (!pathStr.isValidUtf8()) {
             throwError(u8"The path of an include file is not correctly UTF-8 encoded.");
         }
         result->push_back(Source::fromFile(path));
@@ -357,8 +357,8 @@ auto FileSourceResolver::sortLess(const SourcePtr &a, const SourcePtr &b) noexce
     auto itA = pathA.begin();
     auto itB = pathB.begin();
     for (; itA != pathA.end() && itB != pathB.end(); ++itA, ++itB) {
-        auto aIsDir = itA->ends_with(u8'/');
-        auto bIsDir = itB->ends_with(u8'/');
+        const auto aIsDir = itA->ends_with(u8'/') || itA->ends_with(u8'\\');
+        const auto bIsDir = itB->ends_with(u8'/') || itB->ends_with(u8'\\');
         if (aIsDir == bIsDir) {
             if (*itA == *itB) {
                 continue; // check the next element.
@@ -380,7 +380,7 @@ auto FileSourceResolver::splitPath(const std::u8string &path) noexcept -> std::v
     std::size_t pos = 0;
     std::size_t lastPos = 0;
     while (pos < pathView.size()) {
-        pos = pathView.find_first_of(u8'/', pos);
+        pos = pathView.find_first_of(u8"/\\", pos);
         if (pos == std::u8string::npos) {
             result.push_back(pathView.substr(lastPos));
             break;

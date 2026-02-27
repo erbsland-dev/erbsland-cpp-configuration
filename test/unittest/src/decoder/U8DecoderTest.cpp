@@ -2,11 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 
-#include <erbsland/conf/impl/Char.hpp>
-#include <erbsland/conf/Error.hpp>
-#include <erbsland/unittest/UnitTest.hpp>
-#include <erbsland/conf/impl/utf8/U8Decoder.hpp>
+#include <erbsland/conf/impl/char/Char.hpp>
 #include <erbsland/conf/Bytes.hpp>
+#include <erbsland/conf/Error.hpp>
+#include <erbsland/conf/impl/utf8/U8Decoder.hpp>
+#include <erbsland/unittest/UnitTest.hpp>
 
 #include <vector>
 

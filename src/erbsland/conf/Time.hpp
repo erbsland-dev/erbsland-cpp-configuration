@@ -6,7 +6,7 @@
 #include "TestFormat.hpp"
 #include "TimeOffset.hpp"
 
-#include "impl/ComparisonHelper.hpp"
+#include "impl/utilities/ComparisonHelper.hpp"
 
 #include <chrono>
 #include <cstdint>

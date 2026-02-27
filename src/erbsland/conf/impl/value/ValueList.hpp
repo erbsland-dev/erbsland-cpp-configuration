@@ -1,4 +1,4 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
@@ -27,8 +27,13 @@ public:
     [[nodiscard]] auto asValueListOrThrow() const -> conf::ValueList override {
         return {_children.begin(), _children.end()};
     }
-
-public:
+    [[nodiscard]] auto deepCopy() const -> ValuePtr override {
+        std::vector<ValuePtr> children;
+        for (const auto &child : _children.valueList()) {
+            children.push_back( child->deepCopy());
+        }
+        return std::make_shared<ValueList>(std::move(children));
+    }
     /// Initialize the child values.
     ///
     void initializeChildren() {

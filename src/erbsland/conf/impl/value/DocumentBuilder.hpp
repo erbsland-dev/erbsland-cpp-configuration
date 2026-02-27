@@ -7,6 +7,8 @@
 #include "DocumentBuilderStorage.hpp"
 #include "ValueMap.hpp"
 
+#include "../utilities/TypeTraits.hpp"
+
 #include "../../Date.hpp"
 #include "../../DateTime.hpp"
 #include "../../Float.hpp"
@@ -85,8 +87,8 @@ public:
 
 public: // methods for the public interface.
     template<typename T>
-    void addValueT(const NamePathLike &namePath, const T &value) {
-        static_assert(false, "addValue is not implemented for this type.");
+    void addValueT(const NamePathLike &, const T &) {
+        static_assert(always_false_v<T>, "addValue is not implemented for this type.");
     }
 
     template<typename T> requires (std::is_integral_v<T>)

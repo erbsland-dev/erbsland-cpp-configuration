@@ -5,10 +5,10 @@
 
 #include "StreamTestInterface.hpp"
 
-#include "../Limits.hpp"
-#include "../../Error.hpp"
-
+#include "../constants/Limits.hpp"
 #include "../utf8/U8Format.hpp"
+
+#include "../../Error.hpp"
 
 #include <algorithm>
 #include <cassert>
@@ -94,7 +94,8 @@ void StreamSource::refillBuffer() {
         ERBSLAND_CONF_STREAM_TEST(beforeRead);
         stream().read(reinterpret_cast<char *>(_buffer.data()), static_cast<std::streamsize>(_buffer.size()));
         if (stream().fail()) { // Could not fill the whole buffer.
-            _bufferSize = stream().gcount(); // Determine how much data we got.
+            const auto count = stream().gcount(); // Determine how much data we got.
+            _bufferSize = count > 0 ? static_cast<std::size_t>(count) : 0U;
         } else {
             _bufferSize = _buffer.size();
             stream().peek(); // peek one byte ahead, to see if there is more data.
@@ -126,7 +127,7 @@ auto StreamSource::nextLineLength() noexcept -> std::size_t {
     const auto rangeEnd = _buffer.begin() + _bufferSize;
     const auto newlineIt = std::find(rangeBegin, rangeEnd, std::byte{'\n'});
     if (newlineIt != rangeEnd) {
-        return std::distance(rangeBegin, newlineIt) + 1; // Include the newline in the length.
+        return static_cast<std::size_t>(std::distance(rangeBegin, newlineIt)) + 1U; // Include the newline in the length.
     }
     return 0; // No line end found.
 }

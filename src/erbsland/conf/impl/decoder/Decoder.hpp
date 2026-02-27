@@ -5,7 +5,8 @@
 
 #include "TransactionHandler.hpp"
 
-#include "../Char.hpp"
+#include "../char/Char.hpp"
+
 #include "../../Error.hpp"
 #include "../../Location.hpp"
 #include "../../String.hpp"

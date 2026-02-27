@@ -2,10 +2,10 @@
 // SPDX-License-Identifier: Apache-2.0
 
 
-#include <erbsland/unittest/UnitTest.hpp>
-#include <erbsland/conf/impl/NameLexer.hpp>
-#include <erbsland/conf/impl/utf8/U8Format.hpp>
+#include <erbsland/conf/impl/lexer/NameLexer.hpp>
 #include <erbsland/conf/ErrorCategory.hpp>
+#include <erbsland/conf/impl/utf8/U8Format.hpp>
+#include <erbsland/unittest/UnitTest.hpp>
 
 #include <format>
 

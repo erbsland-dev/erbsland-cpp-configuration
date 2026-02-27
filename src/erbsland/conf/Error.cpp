@@ -1,10 +1,11 @@
-// Copyright (c) 2024 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #include "Error.hpp"
 
 
 #include "impl/utf8/U8Format.hpp"
-#include "impl/utf8/U8StringView.hpp"
+
+#include <vector>
 
 
 namespace erbsland::conf {
@@ -12,39 +13,67 @@ namespace erbsland::conf {
 
 auto Error::withLocation(const Location &location) const noexcept -> Error {
     auto copy = *this;
-    copy._location = std::move(location);
+    copy._location = location;
+    return copy;
+}
+
+
+auto Error::withNamePathAndLocation(const NamePath &namePath, const Location &location) const noexcept -> Error {
+    auto copy = *this;
+    copy._namePath = namePath;
+    copy._location = location;
+    return copy;
+}
+
+
+auto Error::withMessagePrefix(const String &prefix) const noexcept -> Error {
+    auto copy = *this;
+    copy._message = prefix + copy._message;
+    return copy;
+}
+
+
+auto Error::withMessage(const String &message) const noexcept -> Error {
+    auto copy = *this;
+    copy._message = message;
     return copy;
 }
 
 
 auto Error::toText() const noexcept -> String {
     String result;
-    if (_message.empty()) {
-        result.append(_category.toText());
-        result.append(u8" Error");
-    } else {
-        result.append(_category.toText());
+    result.append(_category.toText());
+    result.append(u8" error");
+    if (!_message.empty()) {
         result.append(u8": ");
         result.append(_message);
     }
+    std::vector<String> parts;
     if (_namePath.has_value()) {
-        result.append(u8" name path = ");
-        result.append(_namePath.value().toText());
+        parts.emplace_back(impl::u8format("name path \"{}\"", _namePath.value()));
     }
     if (_filePath.has_value()) {
         auto pathStr = String{_filePath.value().u8string()};
-        pathStr = impl::U8StringView{pathStr}.toSafeText();
-        result.append(impl::u8format(" file path = \"{}\"", pathStr));
-    }
-    if (_errorCode.has_value()) {
-        auto safeErrorStr = String{_errorCode.value().message()};
-        safeErrorStr = impl::U8StringView{safeErrorStr}.toSafeText();
-        result.append(impl::u8format(" system error = \"{}\"", safeErrorStr));
+        parts.emplace_back(impl::u8format("file path \"{}\"", pathStr.toSafeText()));
     }
     if (_location.has_value() && !_location.value().isUndefined()) {
-        result.append(u8" at location = ");
-        result.append(_location.value().toText());
+        parts.emplace_back(impl::u8format(u8"location \"{}\"", _location.value()));
     }
+    if (!parts.empty()) {
+        for (std::size_t i = 0; i < parts.size(); ++i) {
+            if (i == 0) {
+                result.append(u8" at ");
+            } else {
+                result.append(u8", ");
+            }
+            result.append(parts[i]);
+        }
+    }
+    if (_errorCode.has_value()) {
+        auto errorStr = String{_errorCode.value().message()};
+        result.append(impl::u8format("; system error \"{}\"", errorStr.toSafeText()));
+    }
+    result.append(u8".");
     return result;
 }
 

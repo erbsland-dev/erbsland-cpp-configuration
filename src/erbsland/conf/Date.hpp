@@ -5,7 +5,7 @@
 
 #include "Error.hpp"
 
-#include "impl/ComparisonHelper.hpp"
+#include "impl/utilities/ComparisonHelper.hpp"
 
 #include <chrono>
 #include <cstdint>

@@ -6,9 +6,9 @@
 #include "Container.hpp"
 #include "ValueMap.hpp"
 
-#include "../../Document.hpp"
-
 #include "../utf8/U8Format.hpp"
+
+#include "../../Document.hpp"
 
 
 namespace erbsland::conf::impl {
@@ -21,101 +21,46 @@ public:
     ~Document() override = default;
 
 public: // implement Value
-    [[nodiscard]] auto name() const noexcept -> Name override {
-        return {};
-    }
-    [[nodiscard]] auto namePath() const noexcept -> NamePath override {
-        return {};
-    }
-    [[nodiscard]] auto hasParent() const noexcept -> bool override {
-        return false;
-    }
-    [[nodiscard]] auto parent() const noexcept -> conf::ValuePtr override {
-        return {};
-    }
-    [[nodiscard]] auto type() const noexcept -> ValueType override {
-        return ValueType::Document;
-    }
+    [[nodiscard]] auto name() const noexcept -> Name override;
+    [[nodiscard]] auto namePath() const noexcept -> NamePath override;
+    [[nodiscard]] auto hasParent() const noexcept -> bool override;
+    [[nodiscard]] auto parent() const noexcept -> conf::ValuePtr override;
+    [[nodiscard]] auto type() const noexcept -> ValueType override;
     [[nodiscard]] auto hasLocation() const noexcept -> bool override;
     [[nodiscard]] auto location() const noexcept -> Location override;
     void setLocation(const Location &newLocation) noexcept override;
+    [[nodiscard]] auto wasValidated() const noexcept -> bool override;
+    [[nodiscard]] auto validationRule() const noexcept -> vr::RulePtr override;
+    [[nodiscard]] auto isDefaultValue() const noexcept -> bool override;
     [[nodiscard]] auto size() const noexcept -> std::size_t override;
     [[nodiscard]] auto hasValue(const NamePathLike &namePath) const noexcept -> bool override;
     [[nodiscard]] auto value(const NamePathLike &namePath) const noexcept -> conf::ValuePtr override;
     [[nodiscard]] auto valueOrThrow(const NamePathLike &namePath) const -> conf::ValuePtr override;
     [[nodiscard]] auto begin() const noexcept -> ValueIterator override;
     [[nodiscard]] auto end() const noexcept -> ValueIterator override;
-    [[nodiscard]] auto asInteger() const noexcept -> Integer override {
-        return {};
-    }
-    [[nodiscard]] auto asBoolean() const noexcept -> bool override {
-        return false;
-    }
-    [[nodiscard]] auto asFloat() const noexcept -> Float override {
-        return {};
-    }
-    [[nodiscard]] auto asText() const noexcept -> String override {
-        return {};
-    }
-    [[nodiscard]] auto asDate() const noexcept -> Date override {
-        return {};
-    }
-    [[nodiscard]] auto asTime() const noexcept -> Time override {
-        return {};
-    }
-    [[nodiscard]] auto asDateTime() const noexcept -> DateTime override {
-        return {};
-    }
-    [[nodiscard]] auto asBytes() const noexcept -> Bytes override {
-        return {};
-    }
-    [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override {
-        return {};
-    }
-    [[nodiscard]] auto asRegEx() const noexcept -> RegEx override {
-        return {};
-    }
-    [[nodiscard]] auto asValueList() const noexcept -> conf::ValueList override {
-        return {};
-    }
-
-    [[nodiscard]] auto asIntegerOrThrow() const -> Integer override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::Integer);
-    }
-    [[nodiscard]] auto asBooleanOrThrow() const -> bool override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::Boolean);
-    }
-    [[nodiscard]] auto asFloatOrThrow() const -> Float override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::Float);
-    }
-    [[nodiscard]] auto asTextOrThrow() const -> String override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::Text);
-    }
-    [[nodiscard]] auto asDateOrThrow() const -> Date override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::Date);
-    }
-    [[nodiscard]] auto asTimeOrThrow() const -> Time override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::Time);
-    }
-    [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::DateTime);
-    }
-    [[nodiscard]] auto asBytesOrThrow() const -> Bytes override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::Bytes);
-    }
-    [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::TimeDelta);
-    }
-    [[nodiscard]] auto asRegExOrThrow() const -> RegEx override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::RegEx);
-    }
-    [[nodiscard]] auto asValueListOrThrow() const -> ValueList override {
-        impl::Value::throwAsTypeMismatch(*this, ValueType::ValueList);
-    }
-
-    [[nodiscard]] auto toTextRepresentation() const noexcept -> String override {
-        return {};
-    }
+    [[nodiscard]] auto asInteger() const noexcept -> Integer override;
+    [[nodiscard]] auto asBoolean() const noexcept -> bool override;
+    [[nodiscard]] auto asFloat() const noexcept -> Float override;
+    [[nodiscard]] auto asText() const noexcept -> String override;
+    [[nodiscard]] auto asDate() const noexcept -> Date override;
+    [[nodiscard]] auto asTime() const noexcept -> Time override;
+    [[nodiscard]] auto asDateTime() const noexcept -> DateTime override;
+    [[nodiscard]] auto asBytes() const noexcept -> Bytes override;
+    [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override;
+    [[nodiscard]] auto asRegEx() const noexcept -> RegEx override;
+    [[nodiscard]] auto asValueList() const noexcept -> conf::ValueList override;
+    [[nodiscard]] auto asIntegerOrThrow() const -> Integer override;
+    [[nodiscard]] auto asBooleanOrThrow() const -> bool override;
+    [[nodiscard]] auto asFloatOrThrow() const -> Float override;
+    [[nodiscard]] auto asTextOrThrow() const -> String override;
+    [[nodiscard]] auto asDateOrThrow() const -> Date override;
+    [[nodiscard]] auto asTimeOrThrow() const -> Time override;
+    [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override;
+    [[nodiscard]] auto asBytesOrThrow() const -> Bytes override;
+    [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override;
+    [[nodiscard]] auto asRegExOrThrow() const -> RegEx override;
+    [[nodiscard]] auto asValueListOrThrow() const -> conf::ValueList override;
+    [[nodiscard]] auto toTextRepresentation() const noexcept -> String override;
 
 public: // implement `Document`
     [[nodiscard]] auto toFlatValueMap() const noexcept -> FlatValueMap override;
@@ -124,11 +69,17 @@ public: // implement `Container`
     void setParent(const conf::ValuePtr &parent) override;
     void addValue(const ValuePtr &childValue) override;
 
+public: // implementation API
+    /// Set the validation rule for this value.
+    void setValidationRule(RulePtr rule) noexcept;
+    /// Remove default values from direct children.
+    void removeDefaultValues();
+
 private:
     Location _location; ///< The location of the document.
     ValueMap _children; ///< The map with the child values.
+    RulePtr _rule; ///< The validation rule that was used when this value was validated.
 };
 
 
 }
-

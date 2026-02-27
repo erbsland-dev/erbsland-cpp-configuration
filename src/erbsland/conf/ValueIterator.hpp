@@ -1,7 +1,9 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
+
+#include "fwd.hpp"
 
 #include "impl/Definitions.hpp"
 
@@ -13,8 +15,6 @@
 namespace erbsland::conf {
 
 
-class Value;
-using ValuePtr = std::shared_ptr<Value>;
 namespace impl {
     class Value;
     using ValuePtr = std::shared_ptr<Value>;
@@ -33,7 +33,7 @@ class ValueIterator final {
 
 public:
     /// @private
-    using iterator_category = std::forward_iterator_tag;
+    using iterator_category = std::bidirectional_iterator_tag;
     /// @private
     using value_type = const ValuePtr;
     /// @private
@@ -83,6 +83,12 @@ public:
 
     /// Postfix increment. Advances the iterator and returns the previous state.
     auto operator++(int) noexcept -> ValueIterator;
+
+    /// Prefix decrement. Moves the iterator to the previous element.
+    auto operator--() noexcept -> ValueIterator&;
+
+    /// Postfix decrement. Moves the iterator to the previous element and returns the previous state.
+    auto operator--(int) noexcept -> ValueIterator;
 
     /// Equality comparison.
     /// @param other The other iterator for comparison.

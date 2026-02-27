@@ -5,9 +5,10 @@
 
 #include "Error.hpp"
 
-#include "impl/Limits.hpp"
+#include "impl/constants/Limits.hpp"
 #include "impl/utf8/U8Decoder.hpp"
 #include "impl/utf8/U8Format.hpp"
+#include "impl/vr/RulesConstants.hpp"
 
 #include <cassert>
 
@@ -39,6 +40,24 @@ auto Name::createIndex(std::size_t index) -> Name {
 
 auto Name::createTextIndex(std::size_t index) -> Name {
     return Name{NameType::TextIndex, index, impl::PrivateTag{}};
+}
+
+
+auto Name::isReservedValidationRule() const noexcept -> bool {
+    return std::holds_alternative<String>(_value) && std::get<String>(_value).starts_with(impl::vrc::cReservedPrefix);
+}
+
+
+auto Name::isEscapedReservedValidationRule() const noexcept -> bool {
+    return std::holds_alternative<String>(_value) && std::get<String>(_value).starts_with(impl::vrc::cReservedEscape);
+}
+
+
+auto Name::withReservedVRPrefixRemoved() const noexcept -> Name {
+    if (!isReservedValidationRule()) {
+        return *this;
+    }
+    return Name{_type, std::get<String>(_value).substr(impl::vrc::cReservedPrefix.size()), impl::PrivateTag{}};
 }
 
 
@@ -202,6 +221,12 @@ auto Name::allMetaNames() -> const MetaNameArray& {
         createRegular(u8"@features"),
     };
     return metaNames;
+}
+
+
+auto Name::emptyInstance() noexcept -> const Name & {
+    static const auto empty = Name{};
+    return empty;
 }
 
 

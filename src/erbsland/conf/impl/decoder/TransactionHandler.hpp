@@ -3,7 +3,8 @@
 #pragma once
 
 
-#include "../Char.hpp"
+#include "../char/Char.hpp"
+
 #include "../../String.hpp"
 
 

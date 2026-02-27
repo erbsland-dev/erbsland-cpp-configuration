@@ -1,11 +1,11 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
 
 #include "String.hpp"
 
-#include "impl/ComparisonHelper.hpp"
+#include "impl/utilities/ComparisonHelper.hpp"
 
 #include <array>
 #include <cstdint>
@@ -23,13 +23,10 @@ class RegEx;
 
 
 /// The type of value.
-///
 /// @tested `ValueTypeTest`
-///
 class ValueType final {
 public:
     /// The enum for this type.
-    ///
     enum Enum : uint8_t {
         Undefined, ///< Undefined type.
         Integer, ///< An integer value.
@@ -55,13 +52,10 @@ public:
     /// @{
 
     /// Create an undefined value type.
-    ///
     constexpr ValueType() = default;
 
     /// Create a new value type.
-    ///
     /// @param value The enum value.
-    ///
     constexpr ValueType(const Enum value) noexcept : _value{value} {} // NOLINT(*-explicit-constructor)
 
     /// Default destructor.
@@ -94,28 +88,37 @@ public: // tests
     /// @{
 
     /// Test if the type is undefined.
-    ///
     [[nodiscard]] constexpr auto isUndefined() const noexcept -> bool { return _value == Undefined; }
 
     /// Test if this is any kind of value map (a section or document).
-    ///
     [[nodiscard]] constexpr auto isMap() const noexcept -> bool {
         return _value == SectionWithTexts || _value == SectionWithNames || _value == IntermediateSection
             || _value == Document;
     }
 
     /// Test if this is any kind of list (section list or value list).
-    ///
     [[nodiscard]] constexpr auto isList() const noexcept -> bool {
         return _value == ValueList || _value == SectionList;
     }
 
-    /// Test if this is a single value.
-    ///
-    [[nodiscard]] constexpr auto isSingle() const noexcept -> bool {
+    /// Test if this is a structural value.
+    /// Structural values are documents, sections and section lists that organize the content of the document.
+    [[nodiscard]] constexpr auto isStructural() const noexcept -> bool {
+        return _value == SectionWithTexts || _value == SectionWithNames || _value == IntermediateSection
+            || _value == SectionList || _value == Document;
+    }
+
+    /// Test if this is a scalar value.
+    /// A scalar value represents a single value (not a section, section list or value list).
+    /// Scalar values are: Integer, Boolean, Float, Text, Date, Time, DateTime, Bytes, TimeDelta and RegEx.
+    [[nodiscard]] constexpr auto isScalar() const noexcept -> bool {
         return _value == Integer || _value == Boolean || _value == Float || _value == Text ||
             _value == Date || _value == Time || _value == DateTime || _value == Bytes ||
             _value == TimeDelta || _value == RegEx;
+    }
+    /// @deprecated Please use `isScalar()` for new code.
+    [[nodiscard]] constexpr auto isSingle() const noexcept -> bool {
+        return isScalar();
     }
 
     /// @}
@@ -125,10 +128,14 @@ public: // transformation
     ///
     [[nodiscard]] auto toText() const noexcept -> const String&;
 
+    /// Convert this type into a value description for error messages.
+    /// This method creates a human-readable description of this value type, describing the value for
+    /// error reporting and user facing texts.
+    /// @param withArticle Add an English article to the text.
+    [[nodiscard]] auto toValueDescription(bool withArticle) const -> String;
+
     /// Get a value type for a single value, native type.
-    ///
     /// Please note that this method does not support sections or value lists.
-    ///
     template<typename T>
     [[nodiscard]] constexpr static auto from() noexcept -> ValueType {
         using BaseT = std::remove_cvref_t<T>;
@@ -152,34 +159,26 @@ public: // transformation
             return RegEx;
         } else if constexpr (std::is_same_v<BaseT, conf::Bytes>) {
             return Bytes;
+        } else {
+            return Undefined;
         }
-        return Undefined;
     }
 
 public:
     /// Access the underlying enum value.
-    ///
     [[nodiscard]] constexpr auto raw() const noexcept -> Enum {
         return _value;
     }
 
 public: // enumeration
     /// Get an array with all value types.
-    ///
-    [[nodiscard]] static auto all() noexcept -> const std::array<ValueType, 17>& {
-        static const std::array<ValueType, 17> values = {
-            Undefined, Integer, Boolean, Float, Text, Date, Time, DateTime, Bytes,
-            TimeDelta, RegEx, ValueList, SectionList, IntermediateSection, SectionWithNames,
-            SectionWithTexts, Document
-        };
-        return values;
-    }
+    [[nodiscard]] static auto all() noexcept -> const std::array<ValueType, 17>&;
 
 private:
     Enum _value{Undefined}; ///< The internal value.
     using ValueToTextEntry = std::tuple<Enum, String>;
     using ValueToTextMap = std::array<ValueToTextEntry, 17>;
-    static ValueToTextMap _valueToTextMap;
+    static ValueToTextMap _valueToTextMap; ///< A for value and text translations.
 };
 
 
@@ -188,7 +187,7 @@ private:
 
 template <>
 struct std::hash<erbsland::conf::ValueType> {
-    auto operator()(const erbsland::conf::ValueType& unit) const noexcept -> std::size_t {
+    auto operator()(const erbsland::conf::ValueType &unit) const noexcept -> std::size_t {
         return std::hash<std::underlying_type_t<erbsland::conf::ValueType::Enum>>{}(
             static_cast<erbsland::conf::ValueType::Enum>(unit));
     }

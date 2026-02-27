@@ -5,6 +5,7 @@
 
 #include "Document.hpp"
 #include "Value.hpp"
+#include "ValueHelper.hpp"
 
 #include <stdexcept>
 
@@ -53,7 +54,7 @@ auto DocumentBuilderStorage::resolveForSection(
             addChildValue(parentValue, namePath, location, sectionValue);
         } else {
             if (sectionValue->type() == ValueType::SectionList) {
-                sectionValue = std::dynamic_pointer_cast<Value>(sectionValue->lastValue());
+                sectionValue = getImplValue(sectionValue->lastValue());
                 if (sectionValue == nullptr) {
                     throw std::logic_error{"Empty section list element."};
                 }
@@ -105,7 +106,7 @@ auto DocumentBuilderStorage::resolveForValue(const NamePath &namePath, const Loc
                 };
             }
             if (sectionValue->type() == ValueType::SectionList) {
-                sectionValue = std::dynamic_pointer_cast<Value>(sectionValue->lastValue());
+                sectionValue = getImplValue(sectionValue->lastValue());
                 if (sectionValue == nullptr) {
                     throw std::logic_error{"Empty section list element."};
                 }
@@ -125,9 +126,9 @@ auto DocumentBuilderStorage::resolveForValue(const NamePath &namePath, const Loc
 
 auto DocumentBuilderStorage::getChildValue(const ValuePtr &container, const Name &name) const -> ValuePtr {
     if (container == nullptr) {
-        return std::dynamic_pointer_cast<Value>(_document->value(name));
+        return getImplValue(_document->value(name));
     }
-    return std::dynamic_pointer_cast<Value>(container->value(name));
+    return getImplValue(container->value(name));
 }
 
 

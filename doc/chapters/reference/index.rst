@@ -1,3 +1,6 @@
+..
+    Copyright (c) 2026 Tobias Erbsland - Erbsland DEV. https://erbsland.dev
+    SPDX-License-Identifier: Apache-2.0
 
 *********
 Reference
@@ -20,6 +23,7 @@ Reference
     signature_validator
     string
     data
+    validation_rules
     namespace
 
 Alphabetical List
@@ -42,6 +46,8 @@ Alphabetical List
         - The source identifiers to verify in the access function.
     *   - :doc:`Bytes<data>`
         - A sequence of bytes.
+    *   - :doc:`Constraint<validation_rules>`
+        - A constraint of a validation rule.
     *   - :doc:`ConstValuePtr<value>`
         -
     *   - :doc:`Date<data>`
@@ -82,6 +88,10 @@ Alphabetical List
         - This parser reads the Erbsland Configuration Language.
     *   - :doc:`Position<location>`
         - A position inside a document.
+    *   - :doc:`Rule<validation_rules>`
+        - A validation rule.
+    *   - :doc:`RulesBuilder<validation_rules>`
+        - Tool to build validation-rules documents via code.
     *   - :doc:`SignatureSigner<signer>`
         - The signer interface to create new signatures when signing documents.
     *   - :doc:`SignatureSignerData<signer>`
@@ -179,3 +189,5 @@ By Topic
         -   Signature validation interface.
     *   -   :doc:`Value API <value>`
         -   The value API used throughout the document system.
+    *   -   :doc:`Validation Rules <validation_rules>`
+        -   The API to create validation-rules objects for document validation.

@@ -5,7 +5,7 @@
 
 #include "Number.hpp"
 
-#include "../YieldMacros.hpp"
+#include "../utilities/YieldMacros.hpp"
 
 
 namespace erbsland::conf::impl::lexer {
@@ -124,7 +124,8 @@ auto scanTimeValue(TokenDecoder &decoder) -> std::optional<Time> {
             if (digitCount > 9) {
                 decoder.throwSyntaxError(u8"The fraction part in a time must not exceed nine digits.");
             }
-            for (int i = 0; i < 9 - digitCount; ++i) {
+            constexpr std::size_t maxFractionDigits = 9;
+            for (std::size_t i = 0; i < maxFractionDigits - digitCount; ++i) {
                 fraction *= 10; // Shift the fraction to nanoseconds.
             }
         }

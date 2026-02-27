@@ -6,10 +6,9 @@
 #include "Decoder.hpp"
 #include "TransactionStack.hpp"
 
-#include "../Char.hpp"
-#include "../Defaults.hpp"
-#include "../Limits.hpp"
-
+#include "../char/Char.hpp"
+#include "../constants/Defaults.hpp"
+#include "../constants/Limits.hpp"
 #include "../utf8/U8Decoder.hpp"
 
 

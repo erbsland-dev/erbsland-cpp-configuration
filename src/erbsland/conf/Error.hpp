@@ -1,4 +1,4 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
@@ -17,16 +17,12 @@ namespace erbsland::conf {
 
 
 /// The exception for all errors.
-///
 /// @tested `ErrorTest`
-///
 class Error final : public std::exception {
 public:
     /// Create a new error with the given message.
-    ///
     /// @param category The error category.
     /// @param message The string with the message.
-    ///
     template <typename Msg>
     Error(
         const ErrorCategory category,
@@ -37,11 +33,9 @@ public:
     }
 
     /// Create a new error with the given message, location, and file path.
-    ///
     /// @param category The error category.
     /// @param message The string with the message.
     /// @param args Optional arguments for the error message.
-    ///
     template <typename Msg, typename... Args>
     requires ((std::is_same_v<std::decay_t<Args>, Location> ||
                std::is_same_v<std::decay_t<Args>, NamePath> ||
@@ -70,72 +64,72 @@ public:
 
 public: // accessors
     /// Get the error category.
-    ///
     /// @return The error category.
-    ///
     [[nodiscard]] auto category() const noexcept -> ErrorCategory { return _category; }
 
     /// Access the message.
-    ///
     /// @return The message text.
-    ///
     [[nodiscard]] auto message() const noexcept -> const String& { return _message; }
 
     /// Access the location.
-    ///
     /// @return The location, or an undefined location if none was set.
-    ///
     [[nodiscard]] auto location() const noexcept -> Location {
         return _location.value_or(Location{});
     }
 
     /// Access the name-path.
-    ///
     /// @return The name-path, or an empty name-path if none was set.
-    ///
     [[nodiscard]] auto namePath() const noexcept -> NamePath {
         return _namePath.value_or(NamePath{});
     }
 
     /// Access the file path.
-    ///
     /// @return The file path, or an empty file path if none was set.
-    ///
     [[nodiscard]] auto filePath() const noexcept -> std::filesystem::path {
         return _filePath.value_or(std::filesystem::path{});
     }
 
     /// Access the system-error code.
-    ///
     /// @return The system-error code, or an undefined one if none was set.
-    ///
     [[nodiscard]] auto errorCode() const noexcept -> std::error_code {
         return _errorCode.value_or(std::error_code{});
     }
 
 public:
     /// Create a copy with the given location added or replaced.
-    ///
+    /// @param location The location to add or replace.
     /// @return A copy of this error, with the location added or replaced.
-    ///
     [[nodiscard]] auto withLocation(const Location &location) const noexcept -> Error;
+
+    /// Create a copy with the given name-path location added or replaced.
+    /// @param namePath The name-path to add or replace.
+    /// @param location The location to add or replace.
+    /// @return A copy of this error, with the name-path and location added or replaced.
+    [[nodiscard]] auto withNamePathAndLocation(
+        const NamePath &namePath,
+        const Location &location) const noexcept -> Error;
+
+    /// Create a copy, adding a prefix to the error message.
+    /// @param prefix The prefix to add to the error message.
+    /// @return A copy of this error, with the message prefixed.
+    [[nodiscard]] auto withMessagePrefix(const String &prefix) const noexcept -> Error;
+
+    /// Create a copy, replacing the error message.
+    /// @param message The new message.
+    /// @return A copy of this error, with the message replaced.
+    [[nodiscard]] auto withMessage(const String &message) const noexcept -> Error;
 
 public: // conversion
     /// Convert this error into a text representation.
-    ///
     /// This method creates a text representation of this error message that is safe to be used in logs,
     /// console-outputs, or user-interfaces. Exceedingly long paths and texts are trimmed and control characters
     /// are escaped.
-    ///
     /// @return The string representation of this error.
-    ///
     [[nodiscard]] auto toText() const noexcept -> String;
 
 public: // implement std::exception
     /// Return a null-terminated string describing the error (std::exception interface).
-    ///
     /// @return A C-string with the error message; suitable for logging or exception handling.
-    ///
     [[nodiscard]] auto what() const noexcept -> const char* override;
 
 private:

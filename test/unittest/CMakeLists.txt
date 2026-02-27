@@ -3,14 +3,16 @@
 
 cmake_minimum_required(VERSION 3.23)
 
-project(unittest)
+project(unittest LANGUAGES CXX)
 
 add_executable(unittest)
+erbsland_set_required_compiler_options(unittest)
 
 # Add the source directory, to test implementations and not just the interface.
-target_include_directories(unittest PRIVATE ../../src)
-set_property(TARGET unittest PROPERTY CXX_STANDARD 20)
-target_compile_features(unittest PRIVATE cxx_std_20)
+target_include_directories(unittest PRIVATE
+        ../../src
+        src
+)
 target_link_libraries(unittest PRIVATE erbsland-configuration-parser-for-test)
 
 add_subdirectory(src)

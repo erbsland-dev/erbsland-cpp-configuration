@@ -4,10 +4,18 @@
 
 
 #include <array>
+#include <bit>
+#include <cstddef>
 #include <cstdint>
 
 
 namespace erbsland::conf::impl::crypto {
+
+
+/// Rotate the bits in a 64bit value.
+[[nodiscard]] constexpr auto rotl64(const uint64_t value, const int shift) noexcept -> uint64_t {
+    return std::rotl(value, shift);
+}
 
 
 /// The rounding constants for the Keccak F1600 permutation function.
@@ -48,14 +56,14 @@ inline void keccakTheta(KeccakF1600State &state) {
     std::array<uint64_t, 5> c{};
     std::array<uint64_t, 5> d{};
 
-    for (int x = 0; x < 5; ++x) {
+    for (std::size_t x = 0; x < 5; ++x) {
         c[x] = state[x] ^ state[x + 5] ^ state[x + 10] ^ state[x + 15] ^ state[x + 20];
     }
-    for (int x = 0; x < 5; ++x) {
-        d[x] = c[(x + 4) % 5] ^ std::rotl(c[(x + 1) % 5], 1);
+    for (std::size_t x = 0; x < 5; ++x) {
+        d[x] = c[(x + 4) % 5] ^ rotl64(c[(x + 1) % 5], 1);
     }
-    for (int y = 0; y < 5; ++y) {
-        for (int x = 0; x < 5; ++x) {
+    for (std::size_t y = 0; y < 5; ++y) {
+        for (std::size_t x = 0; x < 5; ++x) {
             state[x + 5 * y] ^= d[x];
         }
     }
@@ -64,9 +72,9 @@ inline void keccakTheta(KeccakF1600State &state) {
 /// The \c rho and \c pi steps combined.
 ///
 inline void keccakRhoPi(const KeccakF1600State &inState, KeccakF1600State &outState) {
-    for (int y = 0; y < 5; ++y) {
-        for (int x = 0; x < 5; ++x) {
-            outState[y + 5 * ((2 * x + 3 * y) % 5)] = std::rotl(
+    for (std::size_t y = 0; y < 5; ++y) {
+        for (std::size_t x = 0; x < 5; ++x) {
+            outState[y + 5 * ((2 * x + 3 * y) % 5)] = rotl64(
                 inState[x + 5 * y], cKeccakF1600RotationOffsets[x][y]);
         }
     }
@@ -75,8 +83,8 @@ inline void keccakRhoPi(const KeccakF1600State &inState, KeccakF1600State &outSt
 /// The \c chi step of the permutation.
 ///
 inline void keccakChi(KeccakF1600State &state, const KeccakF1600State &b) {
-    for (int x = 0; x < 5; ++x) {
-        for (int y = 0; y < 5; ++y) {
+    for (std::size_t x = 0; x < 5; ++x) {
+        for (std::size_t y = 0; y < 5; ++y) {
             state[x + 5 * y] = b[x + 5 * y] ^ ((~b[((x + 1) % 5) + 5 * y]) & b[((x + 2) % 5) + 5 * y]);
         }
     }

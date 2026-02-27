@@ -48,11 +48,11 @@ public:
         WITH_CONTEXT(requireEndOfData());
 
         // more escape sequences
-        setupTokenIterator(u8R"([section."😄\u0041\r\n\u{41}⇒\""])" "\n");
+        setupTokenIterator(u8"[section.\x22😄\x5Cu0041\x5Cr\x5Cn\x5Cu{41}⇒\x5C\x22\x22]\n");
         WITH_CONTEXT(requireNextToken(TokenType::SectionMapOpen, u8"["));
         WITH_CONTEXT(requireNextStringToken(TokenType::RegularName, u8"section", u8"section"));
         WITH_CONTEXT(requireNextToken(TokenType::NamePathSeparator, u8"."));
-        WITH_CONTEXT(requireNextStringToken(TokenType::TextName, u8"😄A\r\nA⇒\"", u8R"("😄\u0041\r\n\u{41}⇒\"")"));
+        WITH_CONTEXT(requireNextStringToken(TokenType::TextName, u8"😄A\r\nA⇒\"", u8"\x22😄\x5Cu0041\x5Cr\x5Cn\x5Cu{41}⇒\x5C\x22\x22"));
         WITH_CONTEXT(requireNextToken(TokenType::SectionMapClose, u8"]"));
         WITH_CONTEXT(requireNextToken(TokenType::LineBreak, u8"\n"));
         WITH_CONTEXT(requireEndOfData());

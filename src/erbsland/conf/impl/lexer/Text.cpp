@@ -7,7 +7,7 @@
 #include "Number.hpp"
 #include "ValueMultiLine.hpp"
 
-#include "../YieldMacros.hpp"
+#include "../utilities/YieldMacros.hpp"
 
 
 namespace erbsland::conf::impl::lexer {
@@ -45,7 +45,7 @@ void parseString(
 auto parseMultiLineString(
     TokenDecoder &decoder,
     const char32_t escapeChar,
-    const EscapeFn &escapeFn,
+    EscapeFn escapeFn,
     const TokenType tokenType) -> TokenGenerator {
 
     // Initial check if the line starts with the end marker, so we avoid creating a transaction and capture string.
@@ -113,7 +113,14 @@ void parseUnicodeEscapeSequence(Decoder &decoder, String &target) {
     if (decoder.character() == Char::OpenCBracket) { // dynamic length hex.
         decoder.next();
         decoder.expect(CharClass::HexDigit, u8"Expected a hex digit after the opening bracket.");
-        const auto [number, digits] = parseNumber(decoder, NumberBase::Hexadecimal, Sign::Positive, NumberSeparators::No);
+        const auto numberResult = parseNumber(
+            decoder,
+            NumberBase::Hexadecimal,
+            Sign::Positive,
+            NumberSeparators::No);
+        // TODO: Check if the return value can be used directly.
+        const auto number = numberResult.value();
+        const auto digits = numberResult.digitCount();
         decoder.expectMore(u8"Unexpected end in a Unicode escape sequence.");
         if (digits > 8) {
             decoder.throwSyntaxError(u8"Hex escape sequence is too long.");
@@ -121,7 +128,14 @@ void parseUnicodeEscapeSequence(Decoder &decoder, String &target) {
         decoder.expectAndNext(Char::ClosingCBracket, u8"Expected a closing bracket after the hexadecimal number.");
         character = Char{static_cast<char32_t>(number)};
     } else if (decoder.character() == CharClass::HexDigit) { // fixed length hex.
-        const auto [number, digits] = parseNumber(decoder, NumberBase::Hexadecimal, Sign::Positive, NumberSeparators::No, 4);
+        const auto numberResult = parseNumber(
+            decoder,
+            NumberBase::Hexadecimal,
+            Sign::Positive,
+            NumberSeparators::No,
+            4);
+        // TODO: Check if the return value can be used directly.
+        const auto number = numberResult.value();
         decoder.expectMore(u8"Unexpected end in a Unicode escape sequence.");
         if (number < 0) {
             decoder.throwSyntaxError(u8"Hex escape sequence requires four digits.");

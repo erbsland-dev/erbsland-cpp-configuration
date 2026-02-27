@@ -6,7 +6,7 @@
 #include <erbsland/conf/Bytes.hpp>
 #include <erbsland/conf/Source.hpp>
 #include <erbsland/conf/String.hpp>
-#include <../../../src/erbsland/conf/impl/utf8/U8Format.hpp>
+#include <erbsland/conf/impl/utf8/U8Format.hpp>
 #include <erbsland/unittest/all.hpp>
 
 #include <array>
@@ -14,11 +14,11 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
-#include <string_view>
 #include <random>
 #include <span>
 #include <sstream>
 #include <stdexcept>
+#include <string_view>
 
 
 class TestHelper : public el::UnitTest {
@@ -273,7 +273,7 @@ public: // helper functions to work with generic test files.
 
     auto createTestFile(const erbsland::conf::String &text) -> std::filesystem::path {
         auto filePath = createTemporaryFilePath();
-        std::ofstream stream(filePath);
+        std::ofstream stream(filePath, std::ios::binary);
         stream << text.toCharString();
         stream.close();
         setTestContents(text);
@@ -282,7 +282,7 @@ public: // helper functions to work with generic test files.
 
     auto createTestFile(const erbsland::conf::Bytes &content) -> std::filesystem::path {
         auto filePath = createTemporaryFilePath();
-        std::ofstream stream(filePath);
+        std::ofstream stream(filePath, std::ios::binary);
         stream.write(reinterpret_cast<const char *>(content.data()), static_cast<std::streamsize>(content.size()));
         stream.close();
         setTestContents(content);
@@ -291,7 +291,7 @@ public: // helper functions to work with generic test files.
 
     auto createTestFile(const FileLines &content) -> std::filesystem::path {
         auto filePath = createTemporaryFilePath();
-        std::ofstream stream(filePath);
+        std::ofstream stream(filePath, std::ios::binary);
         for (const auto &line : content) {
             stream.write(reinterpret_cast<const char *>(line.data()), static_cast<std::streamsize>(line.size()));
         }

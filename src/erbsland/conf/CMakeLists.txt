@@ -4,6 +4,7 @@
 cmake_minimum_required(VERSION 3.23)
 
 add_subdirectory(impl)
+add_subdirectory(vr)
 
 target_sources(erbsland-configuration-parser PRIVATE
         AccessCheck.hpp
@@ -11,8 +12,7 @@ target_sources(erbsland-configuration-parser PRIVATE
         AccessSources.hpp
         Bytes.cpp
         Bytes.hpp
-        FileAccessCheck.cpp
-        FileAccessCheck.hpp
+        CaseSensitivity.hpp
         Date.cpp
         Date.hpp
         DateTime.cpp
@@ -24,12 +24,15 @@ target_sources(erbsland-configuration-parser PRIVATE
         ErrorCategory.cpp
         ErrorCategory.hpp
         EscapeMode.hpp
+        FileAccessCheck.cpp
+        FileAccessCheck.hpp
         FileSourceResolver.cpp
         FileSourceResolver.hpp
         Float.hpp
         Integer.hpp
         Location.cpp
         Location.hpp
+        Matrix.hpp
         Name.cpp
         Name.hpp
         NamePath.cpp
@@ -50,9 +53,12 @@ target_sources(erbsland-configuration-parser PRIVATE
         Source.cpp
         Source.hpp
         SourceIdentifier.hpp
+        SourceResolver.hpp
         SourceResolverContext.hpp
         String.cpp
         String.hpp
+        StringList.hpp
+        StringConvertible.hpp
         TestFormat.hpp
         Time.cpp
         Time.hpp
@@ -64,8 +70,15 @@ target_sources(erbsland-configuration-parser PRIVATE
         TimeUnit.hpp
         Value.cpp
         Value.hpp
+        Value_asType.tpp
+        Value_format.tpp
+        Value_get.tpp
+        Value_list.tpp
+        Value_matrix.tpp
         ValueIterator.cpp
         ValueIterator.hpp
+        ValueList.hpp
+        ValueMatrix.hpp
         ValueType.cpp
         ValueType.hpp
 )

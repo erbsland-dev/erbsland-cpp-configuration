@@ -3,7 +3,7 @@
 #pragma once
 
 
-#include "../TokenGenerator.hpp"
+#include "TokenGenerator.hpp"
 
 #include "../decoder/TokenDecoder.hpp"
 

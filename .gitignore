@@ -17,6 +17,10 @@
 *.app
 
 .idea
+.junie
+.codex
+AGENTS.md
+lang-doc
 .venv
 venv
 __pycache__
@@ -24,6 +28,8 @@ __pycache__
 # Hosting and building
 /cmake-*
 .env
+build
 _build
 _doxygen_input
+.output*
 

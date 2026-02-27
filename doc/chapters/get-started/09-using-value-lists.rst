@@ -1,3 +1,6 @@
+..
+    Copyright (c) 2026 Tobias Erbsland - Erbsland DEV. https://erbsland.dev
+    SPDX-License-Identifier: Apache-2.0
 
 *****************
 Using Value Lists
@@ -104,7 +107,7 @@ With our improved configuration logic in place, it's time to compile and run the
  $ cmake --build cmake-build
  $ ./cmake-build/robot-escape/robot-escape configuration.elcl
 
-.. ansi-block::
+.. erbsland-ansi::
     :escape-char: ␛
 
     ----------------------------==[ ROBOT ESCAPE ]==-----------------------------

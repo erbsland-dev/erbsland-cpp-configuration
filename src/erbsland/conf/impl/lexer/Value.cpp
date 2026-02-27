@@ -13,7 +13,7 @@
 #include "ValueMultiLine.hpp"
 #include "ValueText.hpp"
 
-#include "../YieldMacros.hpp"
+#include "../utilities/YieldMacros.hpp"
 
 
 namespace erbsland::conf::impl::lexer {

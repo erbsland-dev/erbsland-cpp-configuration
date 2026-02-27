@@ -7,7 +7,7 @@
 #include "SourceIdentifier.hpp"
 #include "String.hpp"
 
-#include "impl/InternalView.hpp"
+#include "impl/utilities/InternalView.hpp"
 
 
 namespace erbsland::conf {

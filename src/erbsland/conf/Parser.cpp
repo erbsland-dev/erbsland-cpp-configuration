@@ -3,7 +3,7 @@
 #include "Parser.hpp"
 
 
-#include "impl/Parser.hpp"
+#include "impl/parser/Parser.hpp"
 
 
 namespace erbsland::conf {

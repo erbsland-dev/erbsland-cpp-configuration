@@ -183,5 +183,17 @@ void ValueMap::addValue(const ValuePtr &value) {
 }
 
 
+void ValueMap::removeDefaultValues() {
+    std::erase_if(_valueList, [](const auto &childValue) -> bool {
+        return childValue->isDefaultValue();
+    });
+
+    _valueMap.clear();
+    _valueMap.reserve(_valueList.size());
+    for (const auto &childValue : _valueList) {
+        _valueMap.insert_or_assign(childValue->name(), childValue);
+    }
 }
 
+
+}

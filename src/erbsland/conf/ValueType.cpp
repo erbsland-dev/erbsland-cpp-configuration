@@ -41,5 +41,59 @@ auto ValueType::toText() const noexcept -> const String& {
 }
 
 
+auto ValueType::toValueDescription(const bool withArticle) const -> String {
+    String result;
+    switch (_value) {
+    case Integer: result = u8"integer value"; break;
+    case Boolean: result = u8"boolean value"; break;
+    case Float: result = u8"floating-point value"; break;
+    case Text: result = u8"text value"; break;
+    case Date: result = u8"date value"; break;
+    case Time: result = u8"time value"; break;
+    case DateTime: result = u8"date-time value"; break;
+    case Bytes: result = u8"bytes value"; break;
+    case TimeDelta: result = u8"time-delta value"; break;
+    case RegEx: result = u8"regular expression"; break;
+    case ValueList: result = u8"value list"; break;
+    case SectionList: result = u8"section list"; break;
+    case IntermediateSection: result = u8"intermediate section"; break;
+    case SectionWithNames: result = u8"section"; break;
+    case SectionWithTexts: result = u8"section with texts"; break;
+    case Document: result = u8"document"; break;
+    default: break;
+    }
+    if (withArticle && !result.empty()) {
+        if (result.starts_with(u8"i")) {
+            result = String{u8"an "} + result;
+        } else {
+            result = String{u8"a "} + result;
+        }
+    }
+    return result;
 }
 
+
+auto ValueType::all() noexcept -> const std::array<ValueType, 17>& {
+    static const std::array<ValueType, 17> values = {
+        Undefined,
+        Integer,
+        Boolean,
+        Float,
+        Text,
+        Date,
+        Time,
+        DateTime,
+        Bytes,
+        TimeDelta,
+        RegEx,
+        ValueList,
+        SectionList,
+        IntermediateSection,
+        SectionWithNames,
+        SectionWithTexts,
+        Document};
+    return values;
+}
+
+
+}

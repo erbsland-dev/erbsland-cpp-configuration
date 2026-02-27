@@ -3,14 +3,13 @@
 #pragma once
 
 
-#include "../TestHelper.hpp"
+#include "TestHelper.hpp"
 
-#include <erbsland/conf/Integer.hpp>
+#include <erbsland/conf/impl/lexer/Lexer.hpp>
 #include <erbsland/conf/Error.hpp>
+#include <erbsland/conf/Integer.hpp>
 #include <erbsland/conf/Source.hpp>
-
 #include <erbsland/conf/impl/source/FileSource.hpp>
-#include <erbsland/conf/impl/Lexer.hpp>
 
 #include <sstream>
 

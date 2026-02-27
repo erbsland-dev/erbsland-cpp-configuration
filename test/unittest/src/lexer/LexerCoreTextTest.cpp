@@ -20,18 +20,18 @@ public:
 
     void testEscapeSequences() {
         // test escape locations
-        WITH_CONTEXT(verifyValidText(u8R"("text\n")", u8"text\n"));
-        WITH_CONTEXT(verifyValidText(u8R"("\ntext")", u8"\ntext"));
-        WITH_CONTEXT(verifyValidText(u8R"("te\nxt")", u8"te\nxt"));
-        WITH_CONTEXT(verifyValidText(u8R"("\\\\te\\\\xt\\\\")", u8"\\\\te\\\\xt\\\\"));
-        WITH_CONTEXT(verifyValidText(u8R"("\"\"te\"\"xt\"\"")", u8"\"\"te\"\"xt\"\""));
-        WITH_CONTEXT(verifyValidText(u8R"("\$\$te\$\$xt\$\$")", u8"$$te$$xt$$"));
-        WITH_CONTEXT(verifyValidText(u8R"("\n\nte\n\nxt\n\n")", u8"\n\nte\n\nxt\n\n"));
-        WITH_CONTEXT(verifyValidText(u8R"("\N\Nte\N\Nxt\N\N")", u8"\n\nte\n\nxt\n\n"));
-        WITH_CONTEXT(verifyValidText(u8R"("\r\Rte\r\rxt\r\r")", u8"\r\rte\r\rxt\r\r"));
-        WITH_CONTEXT(verifyValidText(u8R"("\t\Tte\t\txt\t\t")", u8"\t\tte\t\txt\t\t"));
-        WITH_CONTEXT(verifyValidText(u8R"("\u0020\U0020te\u0020\u0020xt\u0020\u0020")", u8"  te  xt  "));
-        WITH_CONTEXT(verifyValidText(u8R"("\u{20}\U{20}te\u{20}\u{20}xt\u{20}\u{20}")", u8"  te  xt  "));
+        WITH_CONTEXT(verifyValidText(u8"\"text\\n\"", u8"text\n"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\ntext\"", u8"\ntext"));
+        WITH_CONTEXT(verifyValidText(u8"\"te\\nxt\"", u8"te\nxt"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\\\\\\\te\\\\\\\\xt\\\\\\\\\"", u8"\\\\te\\\\xt\\\\"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\\"\\\"te\\\"\\\"xt\\\"\\\"\"", u8"\"\"te\"\"xt\"\""));
+        WITH_CONTEXT(verifyValidText(u8"\"\\$\\$te\\$\\$xt\\$\\$\"", u8"$$te$$xt$$"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\n\\nte\\n\\nxt\\n\\n\"", u8"\n\nte\n\nxt\n\n"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\N\\Nte\\N\\Nxt\\N\\N\"", u8"\n\nte\n\nxt\n\n"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\r\\Rte\\r\\rxt\\r\\r\"", u8"\r\rte\r\rxt\r\r"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\t\\Tte\\t\\txt\\t\\t\"", u8"\t\tte\t\txt\t\t"));
+        WITH_CONTEXT(verifyValidText(u8"\"\\u0020\\U0020te\\u0020\\u0020xt\\u0020\\u0020\"", u8"  te  xt  "));
+        WITH_CONTEXT(verifyValidText(u8"\"\\u{20}\\U{20}te\\u{20}\\u{20}xt\\u{20}\\u{20}\"", u8"  te  xt  "));
 
         // test range checks
         WITH_CONTEXT(verifyValidText(u8R"("\u{a}")", u8"\n"));

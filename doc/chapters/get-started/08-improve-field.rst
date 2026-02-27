@@ -1,3 +1,6 @@
+..
+    Copyright (c) 2026 Tobias Erbsland - Erbsland DEV. https://erbsland.dev
+    SPDX-License-Identifier: Apache-2.0
 
 ***************************
 Make the Field Configurable
@@ -111,7 +114,7 @@ Let’s compile the updated game and try out the new configurable room layout.
     $ cmake --build cmake-build
     $ ./cmake-build/robot-escape/robot-escape configuration.elcl
 
-.. ansi-block::
+.. erbsland-ansi::
     :escape-char: ␛
 
     ----------------------------==[ ROBOT ESCAPE ]==-----------------------------

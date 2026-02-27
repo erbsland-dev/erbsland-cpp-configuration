@@ -7,6 +7,7 @@ target_sources(erbsland-configuration-parser PRIVATE
         BytesValue.cpp
         BytesValue.hpp
         Container.hpp
+        DirectStorageAccess.hpp
         Document.cpp
         Document.hpp
         DocumentBuilder.cpp
@@ -15,11 +16,14 @@ target_sources(erbsland-configuration-parser PRIVATE
         DocumentBuilderStorage.hpp
         Section.hpp
         SectionList.hpp
-        ValueList.hpp
         Value.cpp
         Value.hpp
+        ValueHelper.hpp
+        ValueList.hpp
         ValueMap.cpp
         ValueMap.hpp
+        ValueTreeHelper.hpp
+        ValueTreeWalker.hpp
         ValueWithChildren.hpp
         ValueWithConvertibleType.hpp
         ValueWithNativeType.hpp

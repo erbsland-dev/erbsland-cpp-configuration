@@ -5,8 +5,8 @@
 
 #include "TimeUnit.hpp"
 
-#include "impl/TimeHelper.hpp"
 #include "impl/utf8/U8Format.hpp"
+#include "impl/utilities/TimeHelper.hpp"
 
 
 namespace erbsland::conf {

@@ -8,8 +8,8 @@
 #include "Transaction.hpp"
 #include "TransactionStack.hpp"
 
-#include "../CharStream.hpp"
-#include "../LexerToken.hpp"
+#include "../char/CharStream.hpp"
+#include "../lexer/LexerToken.hpp"
 
 #include <cassert>
 #include <deque>

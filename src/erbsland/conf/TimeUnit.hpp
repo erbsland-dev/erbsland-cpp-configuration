@@ -5,7 +5,7 @@
 
 #include "String.hpp"
 
-#include "impl/ComparisonHelper.hpp"
+#include "impl/utilities/ComparisonHelper.hpp"
 
 #include <array>
 #include <cstdint>

@@ -44,6 +44,7 @@ public:
 public:
     void setTextIndexesAllowed(const bool allow) { _textIndexesAllowed = allow; }
     void addValue(const ValuePtr &value);
+    void removeDefaultValues();
     [[nodiscard]] auto valueList() const noexcept -> const List& { return _valueList; }
     [[nodiscard]] auto valueMap() const noexcept -> const Map& { return _valueMap; }
     void setParent(const conf::ValuePtr &parent);
@@ -65,4 +66,3 @@ private:
 
 
 }
-

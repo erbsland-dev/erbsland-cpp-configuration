@@ -1,4 +1,4 @@
-// Copyright (c) 2024-2025 Tobias Erbsland - https://erbsland.dev
+// Copyright (c) 2024-2025 Erbsland DEV. https://erbsland.dev
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
@@ -6,6 +6,7 @@
 #include "Container.hpp"
 
 #include "../Definitions.hpp"
+#include "../lexer/Content.hpp"
 
 #include <utility>
 #include <vector>
@@ -17,6 +18,8 @@ namespace erbsland::conf::impl {
 class Value;
 using ValuePtr = std::shared_ptr<Value>;
 using ConstValuePtr = std::shared_ptr<const Value>;
+class Rule;
+using RulePtr = std::shared_ptr<Rule>;
 
 
 /// Internal implementation of the public `conf::Value` interface.
@@ -43,82 +46,68 @@ public:
     [[nodiscard]] auto namePath() const noexcept -> NamePath override;
     [[nodiscard]] auto hasParent() const noexcept -> bool override;
     [[nodiscard]] auto parent() const noexcept -> conf::ValuePtr override;
-    [[nodiscard]] auto size() const noexcept -> size_t override { return 0; }
-    [[nodiscard]] auto hasValue(const NamePathLike &namePath) const noexcept -> bool override { return false; }
-    [[nodiscard]] auto value(const NamePathLike &namePath) const noexcept -> conf::ValuePtr override {
-        return {};
-    }
-    [[nodiscard]] auto valueOrThrow(const NamePathLike &namePath) const -> conf::ValuePtr override {
-        throwValueNotFound(*this, namePath);
-    }
-    [[nodiscard]] auto begin() const noexcept -> ValueIterator override { return {}; }
-    [[nodiscard]] auto end() const noexcept -> ValueIterator override { return {}; }
+    [[nodiscard]] auto size() const noexcept -> std::size_t override;
+    [[nodiscard]] auto hasValue(const NamePathLike &) const noexcept -> bool override;
+    [[nodiscard]] auto value(const NamePathLike &) const noexcept -> conf::ValuePtr override;
+    [[nodiscard]] auto valueOrThrow(const NamePathLike &namePath) const -> conf::ValuePtr override;
+    [[nodiscard]] auto begin() const noexcept -> ValueIterator override;
+    [[nodiscard]] auto end() const noexcept -> ValueIterator override;
     [[nodiscard]] auto hasLocation() const noexcept -> bool override;
     [[nodiscard]] auto location() const noexcept -> Location override;
     void setLocation(const Location &newLocation) noexcept override;
+    [[nodiscard]] auto wasValidated() const noexcept -> bool override;
+    [[nodiscard]] auto validationRule() const noexcept -> vr::RulePtr override;
+    [[nodiscard]] auto isDefaultValue() const noexcept -> bool override;
 
     // empty defaults
-    [[nodiscard]] auto asInteger() const noexcept -> int64_t override { return 0LL; }
-    [[nodiscard]] auto asBoolean() const noexcept -> bool override { return false; }
-    [[nodiscard]] auto asFloat() const noexcept -> double override { return 0.0; }
-    [[nodiscard]] auto asText() const noexcept -> String override { return {}; }
-    [[nodiscard]] auto asDate() const noexcept -> Date override { return {}; }
-    [[nodiscard]] auto asTime() const noexcept -> Time override { return {}; }
-    [[nodiscard]] auto asDateTime() const noexcept -> DateTime override { return {}; }
-    [[nodiscard]] auto asBytes() const noexcept -> Bytes override { return {}; }
-    [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override { return {}; }
-    [[nodiscard]] auto asRegEx() const noexcept -> RegEx override { return {}; }
-    [[nodiscard]] auto asValueList() const noexcept -> conf::ValueList override { return {}; }
-    [[nodiscard]] auto asIntegerOrThrow() const -> int64_t override {
-        throwAsTypeMismatch(*this, ValueType::Integer);
-    }
-    [[nodiscard]] auto asBooleanOrThrow() const -> bool override {
-        throwAsTypeMismatch(*this, ValueType::Boolean);
-    }
-    [[nodiscard]] auto asFloatOrThrow() const -> double override {
-        throwAsTypeMismatch(*this, ValueType::Float);
-    }
-    [[nodiscard]] auto asTextOrThrow() const -> String override {
-        throwAsTypeMismatch(*this, ValueType::Text);
-    }
-    [[nodiscard]] auto asDateOrThrow() const -> Date override {
-        throwAsTypeMismatch(*this, ValueType::Date);
-    }
-    [[nodiscard]] auto asTimeOrThrow() const -> Time override {
-        throwAsTypeMismatch(*this, ValueType::Time);
-    }
-    [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override {
-        throwAsTypeMismatch(*this, ValueType::DateTime);
-    }
-    [[nodiscard]] auto asBytesOrThrow() const -> Bytes override {
-        throwAsTypeMismatch(*this, ValueType::Bytes);
-    }
-    [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override {
-        throwAsTypeMismatch(*this, ValueType::TimeDelta);
-    }
-    [[nodiscard]] auto asRegExOrThrow() const -> RegEx override {
-        throwAsTypeMismatch(*this, ValueType::RegEx);
-    }
-    [[nodiscard]] auto asValueListOrThrow() const -> ValueList override {
-        throwAsTypeMismatch(*this, ValueType::ValueList);
-    }
-    [[nodiscard]] auto toTextRepresentation() const noexcept -> String override {
-        return {};
-    }
+    [[nodiscard]] auto asInteger() const noexcept -> int64_t override;
+    [[nodiscard]] auto asBoolean() const noexcept -> bool override;
+    [[nodiscard]] auto asFloat() const noexcept -> double override;
+    [[nodiscard]] auto asText() const noexcept -> String override;
+    [[nodiscard]] auto asDate() const noexcept -> Date override;
+    [[nodiscard]] auto asTime() const noexcept -> Time override;
+    [[nodiscard]] auto asDateTime() const noexcept -> DateTime override;
+    [[nodiscard]] auto asBytes() const noexcept -> Bytes override;
+    [[nodiscard]] auto asTimeDelta() const noexcept -> TimeDelta override;
+    [[nodiscard]] auto asRegEx() const noexcept -> RegEx override;
+    [[nodiscard]] auto asValueList() const noexcept -> conf::ValueList override;
+    [[nodiscard]] auto asIntegerOrThrow() const -> int64_t override;
+    [[nodiscard]] auto asBooleanOrThrow() const -> bool override;
+    [[nodiscard]] auto asFloatOrThrow() const -> double override;
+    [[nodiscard]] auto asTextOrThrow() const -> String override;
+    [[nodiscard]] auto asDateOrThrow() const -> Date override;
+    [[nodiscard]] auto asTimeOrThrow() const -> Time override;
+    [[nodiscard]] auto asDateTimeOrThrow() const -> DateTime override;
+    [[nodiscard]] auto asBytesOrThrow() const -> Bytes override;
+    [[nodiscard]] auto asTimeDeltaOrThrow() const -> TimeDelta override;
+    [[nodiscard]] auto asRegExOrThrow() const -> RegEx override;
+    [[nodiscard]] auto asValueListOrThrow() const -> ValueList override;
+    [[nodiscard]] auto toTextRepresentation() const noexcept -> String override;
 
 public: // modification
     /// Set the name for this value.
-    ///
     template<typename Fwd>
     void setName(Fwd &&name) noexcept { _name = std::forward<Fwd>(name); }
 
+    /// Set the validation rule for this value.
+    void setValidationRule(RulePtr rule) noexcept { _rule = std::move(rule); }
+
+    /// Mark this value as default value.
+    void markAsDefaultValue() noexcept { _isDefaultValue = true; }
+
     /// Transform a value type into another.
-    ///
     /// @param targetType The target type for the transformation.
-    ///
-    virtual void transform(ValueType targetType) {
+    virtual void transform([[maybe_unused]] ValueType targetType) {
         throw std::runtime_error("Conversion not possible.");
     }
+
+    /// Create a deep copy of this value.
+    /// This creates a deep copy of this value, without the original parent and without a name.
+    /// It is primarily used to store scalar values (and value lists) from validation rules documents.
+    /// The resulting value (value structure) equals the one generated using the `create...` factory methods.
+    /// Implementations that do not support deep-copy must throw an internal error.
+    /// @return A deep copy of the scalar value or value list.
+    [[nodiscard]] virtual auto deepCopy() const -> ValuePtr = 0;
 
 public: // factory methods
     /// @{
@@ -138,7 +127,6 @@ public: // factory methods
     [[nodiscard]] static auto createRegEx(const RegEx &value) noexcept -> ValuePtr;
     [[nodiscard]] static auto createRegEx(RegEx &&value) noexcept -> ValuePtr;
     [[nodiscard]] static auto createValueList(std::vector<ValuePtr> &&valueList) noexcept -> ValuePtr;
-
     [[nodiscard]] static auto createSectionList() noexcept -> ValuePtr;
     [[nodiscard]] static auto createIntermediateSection() noexcept -> ValuePtr;
     [[nodiscard]] static auto createSectionWithNames() noexcept -> ValuePtr;
@@ -150,11 +138,12 @@ public: // implement `Container`
     void addValue(const ValuePtr &childValue) override;
 
 public: // helper methods.
+    /// Fast access to all child-values.
+    [[nodiscard]] virtual auto childrenImpl() const noexcept -> const std::vector<ValuePtr>&;
     /// Fast name-based access for child-values.
-    ///
-    [[nodiscard]] virtual auto valueImpl(const Name &name) const noexcept -> ValuePtr {
-        return nullptr;
-    }
+    [[nodiscard]] virtual auto valueImpl([[maybe_unused]] const Name &name) const noexcept -> ValuePtr;
+    /// Remove default values from direct children.
+    virtual void removeDefaultValues() {}
 
     [[noreturn]] static void throwAsTypeMismatch(
         const conf::Value &thisValue,
@@ -240,13 +229,29 @@ public: // helper methods.
         return valuePtr->asType<T>();
     }
 
+    template<typename T, typename U>
+    [[nodiscard]] static auto valueGetterWithDefaultToConvert(
+    const conf::Value &thisValue,
+    const NamePathLike &namePath,
+    const U &defaultValue) noexcept -> T {
+
+        const auto valuePtr = thisValue.value(namePath);
+        if (valuePtr == nullptr) {
+            return T{defaultValue};
+        }
+        if (valuePtr->type() != ValueType::from<T>()) {
+            return T{defaultValue};
+        }
+        return valuePtr->asType<T>();
+    }
+
 protected:
     Name _name; ///< The name of the value.
-    std::size_t _index{}; ///< The index in the parent container.
     std::weak_ptr<conf::Value> _parent; ///< The parent value.
     Location _location; ///< The location of this value.
+    RulePtr _rule; ///< The validation rule that was used when this value was validated.
+    bool _isDefaultValue{false}; ///< Flag if this is a default value.
 };
 
 
 }
-
