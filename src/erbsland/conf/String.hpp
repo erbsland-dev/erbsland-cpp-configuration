@@ -624,6 +624,20 @@ public: // Extensions
     /// @throws Error (Encoding) if either string contains invalid UTF-8 data.
     [[nodiscard]] auto nameCompare(const String &other) const -> std::strong_ordering;
 
+    /// Test if this string matches the given name.
+    /// This is a convenience function for case-insensitive name comparison using string literals.
+    /// Same as `str.nameCompare(u8"name") == std::strong_ordering::equal`, but without extra copy.
+    /// Example: "this_name" == "THIS_NAME" == "This Name"
+    /// @important Unlike the parser's name handling, this function never fails on invalid names.
+    ///     Characters that are not valid name characters are preserved as-they-are.
+    ///     Consecutive spaces or tabs inside the name are replaced with the same number of underscores.
+    /// @param name The name to compare with.
+    /// @return `true` if this string matches the given name, `false` otherwise.
+    /// @throws Error (Encoding) if either string contains invalid UTF-8 data.
+    [[nodiscard]] auto nameEquals(std::string_view name) const -> bool;
+    /// @overload
+    [[nodiscard]] auto nameEquals(std::u8string_view name) const -> bool;
+
     /// Test if this string starts with another string using Unicode code-points.
     /// @param other The other string for the comparison.
     /// @param caseSensitivity Controls case sensitivity.
@@ -665,6 +679,10 @@ public: // Extensions
     /// @return The joined string.
     [[nodiscard]] auto join(const StringList &parts) const -> String;
 
+    /// Return a string with all spacing (space, tab) removed from beginning and end.
+    /// @return A new string with the spacing removed.
+    [[nodiscard]] auto trimmed() const -> String;
+
     /// Transform this string by applying a function to each decoded character.
     /// @param transformer A function that transforms one character into another.
     /// @return A new string with all characters transformed.
@@ -692,6 +710,13 @@ public: // Extensions
     /// Create an escaped version of this string.
     /// @param mode The escape mode to use for escaping.
     [[nodiscard]] auto toEscaped(EscapeMode mode) const noexcept -> String;
+
+    /// Convert this string to its normalized name form.
+    /// Spaces are converted to underscores and ASCII uppercase letters are converted to lowercase.
+    /// @important Unlike the parser's normalization, this function never fails on invalid input.
+    ///     Characters that are not valid name characters are preserved as-is.
+    ///     Consecutive spaces or tabs inside the name are replaced with the same number of underscores.
+    [[nodiscard]] auto toNameNormalized() const noexcept -> String;
 
 private:
     WrappedString _string;

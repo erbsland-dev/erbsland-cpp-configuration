@@ -54,18 +54,18 @@ public: // operators
     auto operator->() const noexcept -> pointer {
         return &_currentChar;
     }
-    auto operator++() noexcept -> U8Iterator& {
+    auto operator++() -> U8Iterator& {
         _currentPosition = _nextPosition;
         readCurrentChar();
         return *this;
     }
-    auto operator++(int) noexcept -> U8Iterator {
+    auto operator++(int) -> U8Iterator {
         auto copy = *this;
         _currentPosition = _nextPosition;
         readCurrentChar();
         return copy;
     }
-    auto operator+=(difference_type n) noexcept -> U8Iterator& {
+    auto operator+=(difference_type n) -> U8Iterator& {
         if (n <= 0) {
             return *this;
         }

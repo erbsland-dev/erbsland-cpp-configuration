@@ -435,7 +435,8 @@ public:
     }
 
     void testSplit() {
-        const auto list = U8StringView{String{u8",a,,b,"}}.split(impl::Char{U','}, {});
+        const auto text = String{u8",a,,b,"};
+        const auto list = U8StringView{text}.split(impl::Char{U','}, {});
         REQUIRE_EQUAL(list.size(), 5U);
         REQUIRE_EQUAL(list[0], u8"");
         REQUIRE_EQUAL(list[1], u8"a");
@@ -443,7 +444,8 @@ public:
         REQUIRE_EQUAL(list[3], u8"b");
         REQUIRE_EQUAL(list[4], u8"");
 
-        const auto limited = U8StringView{String{u8"a,b,c,d"}}.split(impl::Char{U','}, 2);
+        const auto limitedText = String{u8"a,b,c,d"};
+        const auto limited = U8StringView{limitedText}.split(impl::Char{U','}, 2);
         REQUIRE_EQUAL(limited.size(), 3U);
         REQUIRE_EQUAL(limited[0], u8"a");
         REQUIRE_EQUAL(limited[1], u8"b");
@@ -461,5 +463,101 @@ public:
         const StringList single{u8"only"};
         REQUIRE_EQUAL(emptyGlue.join(single), u8"only");
         REQUIRE_EQUAL(emptyGlue.join({}), String{});
+    }
+
+    void testTrimmed() {
+        const auto emptyText = String{u8""};
+        REQUIRE_EQUAL(U8StringView{emptyText}.trimmed(), String{});
+        const auto trimmedText = String{u8"\t  trimmed text \t"};
+        REQUIRE_EQUAL(U8StringView{trimmedText}.trimmed(), u8"trimmed text");
+        const auto spacingText = String{u8"\t  \t"};
+        REQUIRE_EQUAL(U8StringView{spacingText}.trimmed(), String{});
+        const auto emojiText = String{u8"😀 kept \t"};
+        REQUIRE_EQUAL(U8StringView{emojiText}.trimmed(), u8"😀 kept");
+    }
+
+    void testTransformed() {
+        const auto text = String{u8"aB😀"};
+        const auto transformed = U8StringView{text}.transformed([](const impl::Char character) {
+            if (character == impl::Char{U'a'}) {
+                return impl::Char{U'A'};
+            }
+            if (character == impl::Char{U'B'}) {
+                return impl::Char{U'b'};
+            }
+            if (character == impl::Char{U'😀'}) {
+                return impl::Char{U'😎'};
+            }
+            return character;
+        });
+        REQUIRE_EQUAL(transformed, u8"Ab😎");
+    }
+
+    void testTransformed32() {
+        const auto text = String{u8"Ab😀"};
+        const auto transformed = U8StringView{text}.transformed32([](const char32_t character) {
+            if (character == U'A') {
+                return U'a';
+            }
+            if (character == U'b') {
+                return U'B';
+            }
+            if (character == U'😀') {
+                return U'😁';
+            }
+            return character;
+        });
+        REQUIRE_EQUAL(transformed, u8"aB😁");
+    }
+
+    void testForEachChar() {
+        std::u32string collected;
+        std::size_t count = 0;
+        const auto text = String{u8"A😀z"};
+        U8StringView{text}.forEachChar([&](const impl::Char character) {
+            collected.push_back(character.raw());
+            ++count;
+        });
+        REQUIRE_EQUAL(collected, std::u32string{U"A😀z"});
+        REQUIRE_EQUAL(count, 3U);
+    }
+
+    void testForEachChar32() {
+        String rebuilt;
+        std::size_t count = 0;
+        const auto text = String{u8"A😀z"};
+        U8StringView{text}.forEachChar32([&](const char32_t character) {
+            rebuilt.append(character);
+            ++count;
+        });
+        REQUIRE_EQUAL(rebuilt, u8"A😀z");
+        REQUIRE_EQUAL(count, 3U);
+    }
+
+    void testToSafeText() {
+        const auto text = String{u8"line1\n😀line2"};
+        const auto view = U8StringView{text}; // Keep the backing string alive for the duration of the view.
+        REQUIRE_EQUAL(view.toSafeText(100), u8"line1\\n😀line2");
+
+        const auto longText = String{
+            u8"昨日、東京の小さなカフェで「pancake🍓」と☕️を頼んだら、すごく美味しかった！おすすめ😊"};
+        const auto truncated = U8StringView{longText}.toSafeText(20, ElideLocation::End);
+        REQUIRE_EQUAL(truncated.characterLength(), 20U);
+        REQUIRE(truncated.endsWith(u8"…"));
+
+        const auto invalidBytes = Bytes::fromHex(u8"41 80 42");
+        const auto invalid = String{reinterpret_cast<const char8_t *>(invalidBytes.data()), invalidBytes.size()};
+        REQUIRE_EQUAL(U8StringView{invalid}.toSafeText(), u8"<contains UTF-8 encoding errors>");
+    }
+
+    void testToNameNormalized() {
+        const auto emptyText = String{u8""};
+        REQUIRE_EQUAL(U8StringView{emptyText}.toNameNormalized(), String{});
+        const auto namedText = String{u8"  This Name\tValue "};
+        REQUIRE_EQUAL(U8StringView{namedText}.toNameNormalized(), u8"this_name_value");
+        const auto spacedText = String{u8"\t  A  B\tC"};
+        REQUIRE_EQUAL(U8StringView{spacedText}.toNameNormalized(), u8"a__b_c");
+        const auto validText = String{u8" Already_Valid"};
+        REQUIRE_EQUAL(U8StringView{validText}.toNameNormalized(), u8"already_valid");
     }
 };

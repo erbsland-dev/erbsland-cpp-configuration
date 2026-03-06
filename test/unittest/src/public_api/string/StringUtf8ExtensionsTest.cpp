@@ -73,6 +73,37 @@ public:
         REQUIRE(String{u8"AAAB"}.characterCompare(u8"aaaa", CaseSensitivity::CaseInsensitive) > 0);
     }
 
+    void testNameCompare() {
+        REQUIRE_EQUAL(String{u8"This Name"}.nameCompare(u8"this_name"), std::strong_ordering::equal);
+        REQUIRE_EQUAL(String{u8"Config Path"}.nameCompare(u8"config_path"), std::strong_ordering::equal);
+        REQUIRE(String{u8"alpha"}.nameCompare(u8"beta") < 0);
+    }
+
+    void testNameEquals() {
+        const auto text = String{u8"This Name"};
+
+        REQUIRE(text.nameEquals("this_name"));
+        REQUIRE(text.nameEquals(u8"this_name"));
+        REQUIRE(String{u8"Config Path"}.nameEquals("config_path"));
+        REQUIRE(String{u8"Config Path"}.nameEquals(u8"config_path"));
+
+        REQUIRE_FALSE(text.nameEquals("this_names"));
+        REQUIRE_FALSE(text.nameEquals(u8"this_names"));
+        REQUIRE_FALSE(String{u8"alpha"}.nameEquals("beta"));
+        REQUIRE_FALSE(String{u8"alpha"}.nameEquals(u8"beta"));
+
+        const auto invalidBytes = Bytes::fromHex(u8"41 80 42");
+        const auto invalidUtf8Name = std::u8string_view{
+            reinterpret_cast<const char8_t *>(invalidBytes.data()), invalidBytes.size()};
+        const auto invalidText = String{
+            reinterpret_cast<const char8_t *>(invalidBytes.data()), invalidBytes.size()};
+
+        const auto text2 = String{u8"abc"};
+        REQUIRE_THROWS_AS(Error, text2.nameEquals(invalidUtf8Name));
+        REQUIRE_THROWS_AS(Error, invalidText.nameEquals("ab"));
+        REQUIRE_THROWS_AS(Error, invalidText.nameEquals(u8"ab"));
+    }
+
     void testStartsAndEndsWith() {
         // startsWith
         REQUIRE(String{u8"abc"}.startsWith(u8""));
@@ -145,6 +176,11 @@ public:
         REQUIRE_EQUAL(count, src.characterLength());
     }
 
+    void testTrimmed() {
+        REQUIRE_EQUAL(String{u8"\t  trimmed text \t"}.trimmed(), u8"trimmed text");
+        REQUIRE_EQUAL(String{u8"\t \t"}.trimmed(), String{});
+    }
+
     void testToSafeText() {
         // valid text: toSafeText should be escaped with ErrorText mode and not truncated for large maximum
         auto s = String{u8"line1\n😀line2"};
@@ -158,6 +194,22 @@ public:
         auto invalid = Bytes::fromHex(u8"41 80 42");
         String bad{reinterpret_cast<const char8_t*>(invalid.data()), invalid.size()};
         REQUIRE_EQUAL(bad.toSafeText(), String{u8"<contains UTF-8 encoding errors>"});
+    }
+
+    void testFromCharString() {
+        REQUIRE_EQUAL(String::fromCharString(std::string{"plain😀text"}), u8"plain😀text");
+        REQUIRE_EQUAL(String::fromCharString(std::string_view{"view😀text"}), u8"view😀text");
+
+        const auto invalid = std::string{'A', static_cast<char>(0x80), 'B'};
+        REQUIRE_THROWS_AS(Error, String::fromCharString(invalid));
+        REQUIRE_THROWS_AS(Error, String::fromCharString(std::string_view{invalid.data(), invalid.size()}));
+    }
+
+    void testEscapingAndNameNormalizationWrappers() {
+        const auto text = String{u8"line\n"};
+        REQUIRE_EQUAL(text.escapedSize(EscapeMode::Text), impl::U8StringView{text}.escapedSize(EscapeMode::Text));
+        REQUIRE_EQUAL(text.toEscaped(EscapeMode::FullTextName), impl::U8StringView{text}.toEscaped(EscapeMode::FullTextName));
+        REQUIRE_EQUAL(String{u8"  This Name\tValue "}.toNameNormalized(), u8"this_name_value");
     }
 };
 

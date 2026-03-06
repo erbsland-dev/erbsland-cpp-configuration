@@ -6,6 +6,9 @@
 #include "U8Decoder.hpp"
 #include "U8Iterator.hpp"
 
+#include <algorithm>
+#include <ranges>
+
 
 namespace erbsland::conf::impl {
 
@@ -219,6 +222,33 @@ auto U8StringView::join(const StringList &parts) const noexcept -> String {
 }
 
 
+auto U8StringView::trimmed() -> String {
+    if (_string.empty()) {
+        return {};
+    }
+    std::size_t spacingBegin = 0;
+    for (char8_t const character : _string) {
+        if (character == ' ' || character == '\t') {
+            spacingBegin += 1;
+        } else {
+            break;
+        }
+    }
+    if (spacingBegin >= _string.size()) {
+        return {};
+    }
+    auto spacingEnd = _string.size();
+    for (char8_t const character : std::views::reverse(_string)) {
+        if (character == ' ' || character == '\t') {
+            spacingEnd -= 1;
+        } else {
+            break;
+        }
+    }
+    return _string.substr(spacingBegin, spacingEnd - spacingBegin);
+}
+
+
 auto U8StringView::endsWith(const String &other, const Comparator &comparator) const -> bool {
     auto itA = U8Iterator::begin(_string);
     const auto itAEnd = U8Iterator::end(_string);
@@ -270,7 +300,7 @@ void U8StringView::forEachChar32(const CharFunction32 &fn) const {
 }
 
 
-auto U8StringView::escapedSize(const EscapeMode mode) const noexcept -> std::size_t {
+auto U8StringView::escapedSize(const EscapeMode mode) const -> std::size_t {
     std::size_t expectedSize = 0;
     U8Decoder{_string}.decodeAll([&](const Char character) -> void {
         expectedSize += character.escapedUtf8Size(mode);
@@ -280,7 +310,7 @@ auto U8StringView::escapedSize(const EscapeMode mode) const noexcept -> std::siz
 }
 
 
-auto U8StringView::toEscaped(const EscapeMode mode) const noexcept -> String {
+auto U8StringView::toEscaped(const EscapeMode mode) const -> String {
     String result;
     result.reserve(escapedSize(mode));
     U8Decoder{_string}.decodeAll([&](const Char character) -> void {
@@ -299,5 +329,33 @@ auto U8StringView::toSafeText(const std::size_t maximumSize, const ElideLocation
 }
 
 
+auto U8StringView::toNameNormalized() const -> String {
+    if (_string.empty()) {
+        return {};
+    }
+    String result;
+    result.reserve(_string.size()); // assume no size change.
+    bool atStart = true;
+    std::size_t spacingCount = 0;
+    U8Decoder{_string}.decodeAll([&](const Char character) -> void {
+        if (atStart && character.isClass(CharClass::Spacing)) {
+            return;
+        }
+        atStart = false;
+        if (character.isClass(CharClass::Spacing)) {
+            spacingCount += 1;
+            return;
+        }
+        if (spacingCount > 0) {
+            for (std::size_t i = 0; i < spacingCount; ++i) {
+                result.append(u8"_");
+            }
+            spacingCount = 0;
+        }
+        character.appendRegularNameTo(result);
+    });
+    return result;
 }
 
+
+}

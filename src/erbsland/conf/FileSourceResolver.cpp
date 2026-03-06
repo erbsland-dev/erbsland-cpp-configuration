@@ -131,7 +131,8 @@ void FileSourceResolver::verifyUncPath(const String &path) {
     if (slashPosAfterServerName == 2) {
         throwError(u8"The UNC path has no server name. Found three consecutive slashes.");
     }
-    U8StringView{path.substr(2, slashPosAfterServerName - 2)}.forEachChar([](auto c) {
+    const auto serverName = path.substr(2, slashPosAfterServerName - 2);
+    U8StringView{serverName}.forEachChar([](auto c) {
         if (c == impl::CharClass::InvalidWindowsServerName) {
             throwError(u8"The server name in the Windows UNC path contains invalid characters.");
         }
@@ -416,4 +417,3 @@ void FileSourceResolver::throwError(
 
 
 }
-

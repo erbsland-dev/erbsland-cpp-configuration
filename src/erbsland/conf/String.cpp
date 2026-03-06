@@ -42,6 +42,11 @@ auto String::toEscaped(const EscapeMode mode) const noexcept -> String {
 }
 
 
+auto String::toNameNormalized() const noexcept -> String {
+    return impl::U8StringView{*this}.toNameNormalized();
+}
+
+
 auto String::isValidUtf8() const noexcept -> bool {
     return impl::U8StringView{*this}.isValid();
 }
@@ -62,6 +67,16 @@ auto String::characterCompare(const String &other, const CaseSensitivity caseSen
 
 auto String::nameCompare(const String &other) const -> std::strong_ordering {
     return impl::U8StringView{*this}.compare(other, impl::Char::compareName);
+}
+
+
+auto String::nameEquals(const std::string_view name) const -> bool {
+    return impl::U8StringView{*this}.compare(name, impl::Char::compareName) == std::strong_ordering::equal;
+}
+
+
+auto String::nameEquals(const std::u8string_view name) const -> bool {
+    return impl::U8StringView{*this}.compare(name, impl::Char::compareName) == std::strong_ordering::equal;
 }
 
 
@@ -96,6 +111,11 @@ auto String::split(const char32_t character, std::optional<std::size_t> maxSplit
 
 auto String::join(const StringList &parts) const -> String {
     return impl::U8StringView{*this}.join(parts);
+}
+
+
+auto String::trimmed() const -> String {
+    return impl::U8StringView{*this}.trimmed();
 }
 
 
