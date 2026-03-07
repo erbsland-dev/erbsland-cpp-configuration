@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_position" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::Position</compoundname>
+    <includes refid="_position_8hpp" local="no">erbsland/conf/Position.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_position_1a211960e2f8bc9c78fe2bdfb303579915" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int erbsland::conf::Position::_line</definition>
+        <argsstring></argsstring>
+        <name>_line</name>
+        <qualifiedname>erbsland::conf::Position::_line</qualifiedname>
+        <initializer>{-1}</initializer>
+        <briefdescription>
+<para>The line. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="92" column="9" bodyfile="erbsland/conf/Position.hpp" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_position_1ac1bcd44b70ddff851d974e46cd91298e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int erbsland::conf::Position::_column</definition>
+        <argsstring></argsstring>
+        <name>_column</name>
+        <qualifiedname>erbsland::conf::Position::_column</qualifiedname>
+        <initializer>{-1}</initializer>
+        <briefdescription>
+<para>The column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="93" column="9" bodyfile="erbsland/conf/Position.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1aea3d0ebce8bb8811790087c92bd9eab4" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::Position::Position</definition>
+        <argsstring>(int line, int column)</argsstring>
+        <name>Position</name>
+        <qualifiedname>erbsland::conf::Position::Position</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>Create a new position with the given line and column. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="26" column="15" bodyfile="erbsland/conf/Position.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1afc0f7c0a6652b271f77a10c630f1842a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Position::Position</definition>
+        <argsstring>()=default</argsstring>
+        <name>Position</name>
+        <qualifiedname>erbsland::conf::Position::Position</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="29" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a3699d89c2657e83df04294fae28c4572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Position::~Position</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Position</name>
+        <qualifiedname>erbsland::conf::Position::~Position</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="31" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a70960304930aef094f926ac2a2537856" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Position::Position</definition>
+        <argsstring>(const Position &amp;)=default</argsstring>
+        <name>Position</name>
+        <qualifiedname>erbsland::conf::Position::Position</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="33" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a01b5cf19d78be40dd5abc5dea36085b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Position::Position</definition>
+        <argsstring>(Position &amp;&amp;)=default</argsstring>
+        <name>Position</name>
+        <qualifiedname>erbsland::conf::Position::Position</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+<para>Default move constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1ac8e0f1d34702f630dd46d8f56f88cec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;</type>
+        <definition>Position &amp; erbsland::conf::Position::operator=</definition>
+        <argsstring>(const Position &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Position::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default copy assignment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="37" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a4e666f94a45ff23657177ae99cd2bfbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;</type>
+        <definition>Position &amp; erbsland::conf::Position::operator=</definition>
+        <argsstring>(Position &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Position::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+<para>Default move assignment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="39" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a63af65e3985b9fbad2c352f7bc8addd7" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Position::operator==</definition>
+        <argsstring>(const Position &amp;other) const noexcept</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::Position::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare this position to another for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other position to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if both line and column are identical. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="47" column="10" bodyfile="erbsland/conf/Position.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a628057aeba4ad7f7fb16df6dc39461f3" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Position::operator!=</definition>
+        <argsstring>(const Position &amp;other) const noexcept</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::Position::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare this position to another for inequality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other position to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if positions differ, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="54" column="10" bodyfile="erbsland/conf/Position.hpp" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a9f2e6ff61aab35c6380d80c505067b9e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int erbsland::conf::Position::line</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>line</name>
+        <qualifiedname>erbsland::conf::Position::line</qualifiedname>
+        <briefdescription>
+<para>The line, starting from 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="59" column="10" bodyfile="erbsland/conf/Position.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a72f3f3a0555bc442ea235c3f2ad5f717" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int erbsland::conf::Position::column</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>column</name>
+        <qualifiedname>erbsland::conf::Position::column</qualifiedname>
+        <briefdescription>
+<para>The column, starting from 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="63" column="10" bodyfile="erbsland/conf/Position.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a6ed5326a651d0ce1b87b3185172a4159" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Position::isUndefined</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isUndefined</name>
+        <qualifiedname>erbsland::conf::Position::isUndefined</qualifiedname>
+        <briefdescription>
+<para>Test if this position is undefined. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="68" column="11" bodyfile="erbsland/conf/Position.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a090061fb4c8374b2f939e410295d574d" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Position::nextLine</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>nextLine</name>
+        <qualifiedname>erbsland::conf::Position::nextLine</qualifiedname>
+        <briefdescription>
+<para>Increase the line and reset the column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="73" column="10" bodyfile="erbsland/conf/Position.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a3f16cbed0e7bc2b421b3026a11e38479" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Position::nextColumn</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>nextColumn</name>
+        <qualifiedname>erbsland::conf::Position::nextColumn</qualifiedname>
+        <briefdescription>
+<para>Increase the column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="77" column="10" bodyfile="erbsland/conf/Position.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_position_1a99e44e0fb05eb6cb1ac3e748355e2c97" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::Position::toText</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::Position::toText</qualifiedname>
+        <briefdescription>
+<para>Convert this position into a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of this position. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Position.hpp" line="84" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A position inside a document. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Starting with line 1 and column 1. If the line or column are undefined, they are set to -1.</para>
+<para><simplesect kind="par"><title>Tested:</title><para>PositionTest </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/Position.hpp" line="19" column="1" bodyfile="erbsland/conf/Position.hpp" bodystart="19" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_position_1ac1bcd44b70ddff851d974e46cd91298e" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>_column</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a211960e2f8bc9c78fe2bdfb303579915" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>_line</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a72f3f3a0555bc442ea235c3f2ad5f717" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>column</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a6ed5326a651d0ce1b87b3185172a4159" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>isUndefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a9f2e6ff61aab35c6380d80c505067b9e" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>line</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a3f16cbed0e7bc2b421b3026a11e38479" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>nextColumn</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a090061fb4c8374b2f939e410295d574d" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>nextLine</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a628057aeba4ad7f7fb16df6dc39461f3" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1ac8e0f1d34702f630dd46d8f56f88cec5" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a4e666f94a45ff23657177ae99cd2bfbb" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a63af65e3985b9fbad2c352f7bc8addd7" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1aea3d0ebce8bb8811790087c92bd9eab4" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>Position</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1afc0f7c0a6652b271f77a10c630f1842a" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>Position</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a70960304930aef094f926ac2a2537856" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>Position</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a01b5cf19d78be40dd5abc5dea36085b3" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>Position</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a99e44e0fb05eb6cb1ac3e748355e2c97" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_position_1a3699d89c2657e83df04294fae28c4572" prot="public" virt="non-virtual"><scope>erbsland::conf::Position</scope><name>~Position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

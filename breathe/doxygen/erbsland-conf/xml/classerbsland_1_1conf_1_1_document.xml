@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_document" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::conf::Document</compoundname>
+    <basecompoundref refid="classerbsland_1_1conf_1_1_value" prot="public" virt="non-virtual">erbsland::conf::Value</basecompoundref>
+    <includes refid="_document_8hpp" local="no">erbsland/conf/Document.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_document_1a7f184978346c663dd325e28d52b5852d" prot="public" static="no">
+        <type>std::map&lt; <ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref>, ConstValuePtr &gt;</type>
+        <definition>using erbsland::conf::Document::FlatValueMap =  std::map&lt;NamePath, ConstValuePtr&gt;</definition>
+        <argsstring></argsstring>
+        <name>FlatValueMap</name>
+        <qualifiedname>erbsland::conf::Document::FlatValueMap</qualifiedname>
+        <briefdescription>
+<para>The flat map type mapping name paths to constant value pointers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Maps each name path to the corresponding constant value in the document. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Document.hpp" line="24" column="5" bodyfile="erbsland/conf/Document.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_1ac153620900b7856a63fd69b051da4710" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Document::~Document</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~Document</name>
+        <qualifiedname>erbsland::conf::Document::~Document</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Document.hpp" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_document_1a5ebf54789ff7e49ee111540b1b1f9b07" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_document_1a7f184978346c663dd325e28d52b5852d" kindref="member">FlatValueMap</ref></type>
+        <definition>virtual FlatValueMap erbsland::conf::Document::toFlatValueMap</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>toFlatValueMap</name>
+        <qualifiedname>erbsland::conf::Document::toFlatValueMap</qualifiedname>
+        <briefdescription>
+<para>Convert the value structure of this document into a flat map of values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A flat map with all sections and values of this document. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Document.hpp" line="35" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A configuration document. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>erbsland::conf::Document</label>
+        <link refid="classerbsland_1_1conf_1_1_document"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::Value</label>
+        <link refid="classerbsland_1_1conf_1_1_value"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; Value &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>erbsland::conf::Document</label>
+        <link refid="classerbsland_1_1conf_1_1_document"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::Value</label>
+        <link refid="classerbsland_1_1conf_1_1_value"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::enable_shared_from_this&lt; Value &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/Document.hpp" line="18" column="1" bodyfile="erbsland/conf/Document.hpp" bodystart="18" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab7f4440010ae562ebbdf0e0b755a04d6" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asBoolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af2a39b4e1a0b330ef6a6be073424e244" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asBooleanOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a5cc0a22a7ed0a70e5e2a6b328f26e664" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asBytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a250280394d448bc345676b1f1552304c" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asBytesOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a7d202b9fb4181560cf6c47d23c526d85" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asDate</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a4be545244f502e7c2aed88d499fbdcd2" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asDateOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aea91f54005c1555a0274c32d4274c932" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asDateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a9b9f9ca2165dd55065318cc057c42980" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asDateTimeOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aaea2e147a80759857d0ee486d8f0357a" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asFloat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ad0b221c5f03816ecda34d352f06473c7" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asFloatOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aadbf779926a761de50c3df2001ad5e9d" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asInteger</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a5e9a22321ab7e8aed45466ec2b53efc6" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asIntegerOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af06cd31bc3fd7b76231d070d94ce52b2" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>asList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a37b3d22b29422c5caddd628732ed0568" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>asListOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a32df62e935228bfcb4c7cf00130b6755" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>asMatrix</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af63707fb5c8420ecfd358718ebc92621" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>asMatrixOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a36c470b57ed352eca737a2a96ecafd61" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asRegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a95930b124e50f602bf4824a32989d831" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asRegExOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac0c72f69cdbb452159f251e4f02e9610" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a7b06a38a96e18633536d6b29c1116715" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asTextOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a00fd52c04f8da05cfd1e543f4b53c435" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a30e3bbb93684c496774da9b2237d6f6b" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asTimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a2488f6612cedce1fa70cd10ff5b93504" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asTimeDeltaOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac3ae32fb0a2511bf0745e30f59978c5d" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asTimeOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a76db36593b45bae493b3bd6661656f62" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>asType</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a611e2a052b98b9d64d81efe70289401c" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>asTypeOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aba2eea2ad9d48e3eb1eb92f0af6a0299" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asValueList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a2a76770eb17b712fbcac18288bf5950f" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>asValueListOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a9ba1fd552239264a3d5662e024b71d2b" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>begin</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae9339fd923f011515b19b641e084a1f0" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>empty</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a67bdf16466d307bf9f865786090cc42f" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>end</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aa7100d9f071b3db003bfafa1abb77a23" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>firstValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_1a7f184978346c663dd325e28d52b5852d" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>FlatValueMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aad53e41eddee999a3b489b528f14b00a" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>get</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a61959884fa50283d50906def0d8c1f82" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getBoolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a54b6eaa1cbf6d69fcbe9f8a85a64a937" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getBooleanOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1dbd01d516522cb2050585133fb7702d" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getBytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ac50e4985bbacaa2b0f030bca2f868a53" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getBytesOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a823c9e0cce1a4722373d33650244c6c9" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getDate</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae5e3c5068a874dff1bb1abf4b201b4b1" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getDateOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aec80efd2a80c9f5dd088bd895806f55a" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getDateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af6bcae0829b9eba311c28d428b60c4e9" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getDateTimeOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1abf1156ec48123d04ba45fed9b65c33ea" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getFloat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acba0f6e243b0da1d25c76bf56f62afc5" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getFloatOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab25f883197245bc9a36e0a774569e402" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getInteger</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a58e4dadf9ed5f594bc5d971403360182" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getIntegerOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a8871f837d8d2e8bfaea1f0a97ca0ff6f" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a2383d0f367e6f6c6adaf2be9a361b33c" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getListOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aec56c18274cb587498af1c3683c4d7ab" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getMatrix</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aedda13076025ced36e63279ac5958676" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getMatrixOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a7040637e3ef1d7a1f2a5211d03570f69" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab456e2426da8f7653a1229dbbda82210" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getRegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a8da2628ade1d9dc9910123061fb2a9db" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getRegExOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1e9d573aaeb8e0157b790f2b0084d1a6" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getSectionList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aa2e41332596276d351f5b432bb8a2530" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getSectionListOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ad8fe79727e0904e3a7620b5d39dcf415" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getSectionWithNames</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ad9848d3c14ea63b977ecca14a1d6496e" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getSectionWithNamesOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aee513e9e40ca72d17347ce6fb6934612" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getSectionWithTexts</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af51d0155b814798f9c0a2e6e2878dea0" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getSectionWithTextsOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a8285c630a44dc56f03d814e4c8d99c0d" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae4a96084c26342d94d81fdd5b82be3ea" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getTextOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3d293b01cd01cb72b15157c701e63973" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1adaabacd920cde2b0ee205861562e5beb" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getTimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1af5f82ca6fc9428390a8872ba7e06488d" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getTimeDeltaOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a7e713567fe609cfc3488fd9ae232b99e" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getTimeOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a61c74d6e0e04f7e04d64c7549e69b535" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getValueList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae5b4607448e8453f19674f8cd4160f74" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>getValueListOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae8cf2d3d42044d806bbcf783550a163a" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>hasLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0014c19280f9158a581a78c1e37198ea" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>hasParent</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a01855dcefb75f562d508c47856b4a9f6" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>hasValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae0d2134f493588fd74bcd17e77d6cad2" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isBoolean</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a4c52b43a6ea1ed25dda0071f0517d359" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isBytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a052dc61906e8e081cf71a202340cab9f" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isDate</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a33357a09740a067ce51fb85992e092a5" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isDateTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acf23845e7b23cb60bbc9327c1c6a8b02" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>isDefaultValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aa3886fc1e3a01942c26daf8ae81a96ec" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isDocument</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0f4d636f335206bf66628ee84ad329a1" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isFloat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab1cf30a869532b30cf4ec99d587a740c" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isInteger</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aef28baea613e257e2f52598b2ebd6929" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a787130a43bd7a390b45b1bf5f379762c" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a9c414f77a2be4ffb181b539c39bd5724" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isRegEx</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a5a7736da82b0028c0e7385ae79c08449" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isRoot</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a4bac26b4364e986b02b1ffa7376e3c61" prot="public" virt="virtual"><scope>erbsland::conf::Document</scope><name>isSecret</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3ec459bbae80c0b0972a5e63a734edcd" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isSectionList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a67c3ab9aed5ea7b5ff60221fd74d37e5" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isSectionWithNames</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a7d9dc95bcec11334664c23481cc52a80" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isSectionWithTexts</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab104b5597621cca98e8e12fcce382907" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a71231a8e00d73c6954e03180aacdced3" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isTime</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a690dcbe6fbb2060ebd7f8a171e3ba500" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isTimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3c73cbf382565480afd247d66d73a180" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>isValueList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1aab2e7a023c294c6ce93d50b7a2e4206c" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>lastValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a08b6843e11181a7aef7d355b75cc8822" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>location</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0ae7869adafecaffacaab2ffe9305a9f" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0bcef49f4bba89d89a89d927b3534629" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>namePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a3c6680a45f68789ec84e612d47fb7c94" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>parent</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0aa5223dcbad509fc840c133d372ffe9" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>setLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab7b3d0c8b83c5720414f80bcae498ef4" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>size</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_1a5ebf54789ff7e49ee111540b1b1f9b07" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>toFlatValueMap</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a70eb87e71e4d8a4d6c1c4f6013559f3e" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>toTestText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a44fe8ac89f4acd4d1e180f5fe501925f" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>toTestValueTree</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a6da6501174daccd9a68571a6f0d20b09" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>toTextRepresentation</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ab9a34a839ea2d003c1c9835aac460b55" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>toValueList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a181f3895603f5f67a094cf39b5d2a1e2" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>toValueList</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1acfe189b6b57556db09fa6d9c729dac15" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>toValueMatrix</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1ae44d733ab050b0df2959e29b5d4bb951" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>toValueMatrix</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a70b459ca2f4553ded30422eb9a236769" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a7a8425062ffe8dd287ff40e41d13653b" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>validationRule</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a0edf8ed6fa9d9a0a416227e8f354f149" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1adebbe5b680b1744ca83d0e749fe7f2c7" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>valueOrThrow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a68c5a476c0e3ee81c70ecb123379a126" prot="public" virt="pure-virtual"><scope>erbsland::conf::Document</scope><name>wasValidated</name></member>
+      <member refid="classerbsland_1_1conf_1_1_document_1ac153620900b7856a63fd69b051da4710" prot="public" virt="non-virtual"><scope>erbsland::conf::Document</scope><name>~Document</name></member>
+      <member refid="classerbsland_1_1conf_1_1_value_1a1c27c218d581c91ce8b998e740e3eb12" prot="public" virt="virtual"><scope>erbsland::conf::Document</scope><name>~Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

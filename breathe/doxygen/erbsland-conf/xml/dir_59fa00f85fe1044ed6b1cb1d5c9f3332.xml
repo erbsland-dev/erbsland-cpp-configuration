@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_59fa00f85fe1044ed6b1cb1d5c9f3332" kind="dir">
+    <compoundname>erbsland/conf</compoundname>
+    <innerdir refid="dir_b41c5c4d7454583cf5805bfff8d8e8b9">erbsland/conf/vr</innerdir>
+    <innerfile refid="_access_check_8hpp">AccessCheck.hpp</innerfile>
+    <innerfile refid="_access_check_result_8hpp">AccessCheckResult.hpp</innerfile>
+    <innerfile refid="_access_sources_8hpp">AccessSources.hpp</innerfile>
+    <innerfile refid="all_8hpp">all.hpp</innerfile>
+    <innerfile refid="_bytes_8hpp">Bytes.hpp</innerfile>
+    <innerfile refid="_case_sensitivity_8hpp">CaseSensitivity.hpp</innerfile>
+    <innerfile refid="_date_8hpp">Date.hpp</innerfile>
+    <innerfile refid="_date_time_8hpp">DateTime.hpp</innerfile>
+    <innerfile refid="_document_8hpp">Document.hpp</innerfile>
+    <innerfile refid="_document_builder_8hpp">DocumentBuilder.hpp</innerfile>
+    <innerfile refid="_error_8hpp">Error.hpp</innerfile>
+    <innerfile refid="_error_category_8hpp">ErrorCategory.hpp</innerfile>
+    <innerfile refid="_escape_mode_8hpp">EscapeMode.hpp</innerfile>
+    <innerfile refid="_file_access_check_8hpp">FileAccessCheck.hpp</innerfile>
+    <innerfile refid="_file_source_resolver_8hpp">FileSourceResolver.hpp</innerfile>
+    <innerfile refid="_float_8hpp">Float.hpp</innerfile>
+    <innerfile refid="fwd_8hpp">fwd.hpp</innerfile>
+    <innerfile refid="_integer_8hpp">Integer.hpp</innerfile>
+    <innerfile refid="_location_8hpp">Location.hpp</innerfile>
+    <innerfile refid="_matrix_8hpp">Matrix.hpp</innerfile>
+    <innerfile refid="_name_8hpp">Name.hpp</innerfile>
+    <innerfile refid="_name_path_8hpp">NamePath.hpp</innerfile>
+    <innerfile refid="_name_type_8hpp">NameType.hpp</innerfile>
+    <innerfile refid="_parser_8hpp">Parser.hpp</innerfile>
+    <innerfile refid="_position_8hpp">Position.hpp</innerfile>
+    <innerfile refid="_reg_ex_8hpp">RegEx.hpp</innerfile>
+    <innerfile refid="_signature_signer_8hpp">SignatureSigner.hpp</innerfile>
+    <innerfile refid="_signature_signer_data_8hpp">SignatureSignerData.hpp</innerfile>
+    <innerfile refid="_signature_validator_8hpp">SignatureValidator.hpp</innerfile>
+    <innerfile refid="_signature_validator_data_8hpp">SignatureValidatorData.hpp</innerfile>
+    <innerfile refid="_signature_validator_result_8hpp">SignatureValidatorResult.hpp</innerfile>
+    <innerfile refid="_signer_8hpp">Signer.hpp</innerfile>
+    <innerfile refid="_source_8hpp">Source.hpp</innerfile>
+    <innerfile refid="_source_identifier_8hpp">SourceIdentifier.hpp</innerfile>
+    <innerfile refid="_source_resolver_8hpp">SourceResolver.hpp</innerfile>
+    <innerfile refid="_source_resolver_context_8hpp">SourceResolverContext.hpp</innerfile>
+    <innerfile refid="_string_8hpp">String.hpp</innerfile>
+    <innerfile refid="_string_convertible_8hpp">StringConvertible.hpp</innerfile>
+    <innerfile refid="_string_list_8hpp">StringList.hpp</innerfile>
+    <innerfile refid="_test_format_8hpp">TestFormat.hpp</innerfile>
+    <innerfile refid="_time_8hpp">Time.hpp</innerfile>
+    <innerfile refid="_time_delta_8hpp">TimeDelta.hpp</innerfile>
+    <innerfile refid="_time_offset_8hpp">TimeOffset.hpp</innerfile>
+    <innerfile refid="_time_unit_8hpp">TimeUnit.hpp</innerfile>
+    <innerfile refid="_value_8hpp">Value.hpp</innerfile>
+    <innerfile refid="_value_iterator_8hpp">ValueIterator.hpp</innerfile>
+    <innerfile refid="_value_list_8hpp">ValueList.hpp</innerfile>
+    <innerfile refid="_value_matrix_8hpp">ValueMatrix.hpp</innerfile>
+    <innerfile refid="_value_type_8hpp">ValueType.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/"/>
+  </compounddef>
+</doxygen>

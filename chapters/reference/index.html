@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reference &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parser" href="parser.html" />
+    <link rel="prev" title="How to Run the Unit Tests" href="../usage/run-unit-tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="location.html">Location and Position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="alphabetical-list">
+<h2>Alphabetical List<a class="headerlink" href="#alphabetical-list" title="Link to this heading"></a></h2>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="access_check.html"><span class="doc">AccessCheck</span></a></p></td>
+<td><p>The interface to access check implementations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="access_check.html"><span class="doc">AccessCheckPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="access_check.html"><span class="doc">AccessCheckResult</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="access_check.html"><span class="doc">AccessSources</span></a></p></td>
+<td><p>The source identifiers to verify in the access function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="data.html"><span class="doc">Bytes</span></a></p></td>
+<td><p>A sequence of bytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="validation_rules.html"><span class="doc">Constraint</span></a></p></td>
+<td><p>A constraint of a validation rule.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="value.html"><span class="doc">ConstValuePtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="data.html"><span class="doc">Date</span></a></p></td>
+<td><p>A date value with year, month and day parts.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="data.html"><span class="doc">DateTime</span></a></p></td>
+<td><p>A date-time value, with a date, time and time-offset part.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="document.html"><span class="doc">Document</span></a></p></td>
+<td><p>A configuration document.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="document.html"><span class="doc">DocumentBuilder</span></a></p></td>
+<td><p>Builds Configuration Documents Programmatically</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="document.html"><span class="doc">DocumentPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="error.html"><span class="doc">Error</span></a></p></td>
+<td><p>The exception for all errors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="error.html"><span class="doc">ErrorCategory</span></a></p></td>
+<td><p>The category of an error.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="string.html"><span class="doc">EscapeMode</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="access_check.html"><span class="doc">FileAccessCheck</span></a></p></td>
+<td><p>A basic file access check.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="access_check.html"><span class="doc">FileAccessCheckPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source_resolver.html"><span class="doc">FileSourceResolver</span></a></p></td>
+<td><p>A file source resolver.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="source_resolver.html"><span class="doc">FileSourceResolverPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="location.html"><span class="doc">Location</span></a></p></td>
+<td><p>Represents the location in a parsed document.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="name.html"><span class="doc">Name</span></a></p></td>
+<td><p>Represents a single name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="name.html"><span class="doc">NamePath</span></a></p></td>
+<td><p>A name-path.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="name.html"><span class="doc">NamePathLike</span></a></p></td>
+<td><p>A name-path or convertible value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="name.html"><span class="doc">NameType</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="parser.html"><span class="doc">Parser</span></a></p></td>
+<td><p>This parser reads the Erbsland Configuration Language.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="location.html"><span class="doc">Position</span></a></p></td>
+<td><p>A position inside a document.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="validation_rules.html"><span class="doc">Rule</span></a></p></td>
+<td><p>A validation rule.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="validation_rules.html"><span class="doc">RulesBuilder</span></a></p></td>
+<td><p>Tool to build validation-rules documents via code.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="signer.html"><span class="doc">SignatureSigner</span></a></p></td>
+<td><p>The signer interface to create new signatures when signing documents.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="signer.html"><span class="doc">SignatureSignerData</span></a></p></td>
+<td><p>The data for the signer implementation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="signer.html"><span class="doc">SignatureSignerPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="signature_validator.html"><span class="doc">SignatureValidator</span></a></p></td>
+<td><p>The interface for signature validation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="signature_validator.html"><span class="doc">SignatureValidatorData</span></a></p></td>
+<td><p>The data from the parser to verify the signature of a document.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="signature_validator.html"><span class="doc">SignatureValidatorPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="signature_validator.html"><span class="doc">SignatureValidatorResult</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="signer.html"><span class="doc">Signer</span></a></p></td>
+<td><p>The tool to sign configuration documents.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="source.html"><span class="doc">Source</span></a></p></td>
+<td><p>Interface for the data source to read the configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source.html"><span class="doc">SourceIdentifier</span></a></p></td>
+<td><p>Lightweight identifier for a configuration source.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="source.html"><span class="doc">SourceIdentifierPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source.html"><span class="doc">SourceList</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="source.html"><span class="doc">SourceListPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source.html"><span class="doc">SourcePtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="source.html"><span class="doc">SourcePtrConst</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source_resolver.html"><span class="doc">SourceResolver</span></a></p></td>
+<td><p>The interface for any source resolver implementation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="source_resolver.html"><span class="doc">SourceResolverContext</span></a></p></td>
+<td><p>The context for resolving sources.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source_resolver.html"><span class="doc">SourceResolverPtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="string.html"><span class="doc">String</span></a></p></td>
+<td><p>Thin wrapper around std::u8string.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="data.html"><span class="doc">Time</span></a></p></td>
+<td><p>A time value with nanosecond precision and optional offset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="data.html"><span class="doc">TimeDelta</span></a></p></td>
+<td><p>A combined time delta value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="data.html"><span class="doc">TimeOffset</span></a></p></td>
+<td><p>A time offset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="data.html"><span class="doc">TimeUnit</span></a></p></td>
+<td><p>A single time unit used in the configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="value.html"><span class="doc">Value</span></a></p></td>
+<td><p>The base class and interface for all values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="value.html"><span class="doc">ValueIterator</span></a></p></td>
+<td><p>Const iterator for the Value class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="value.html"><span class="doc">ValueList</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="value.html"><span class="doc">ValuePtr</span></a></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="value.html"><span class="doc">ValueType</span></a></p></td>
+<td><p>The type of value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="name.html"><span class="doc">toNamePath</span></a></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="by-topic">
+<h2>By Topic<a class="headerlink" href="#by-topic" title="Link to this heading"></a></h2>
+<table class="docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Topic</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="access_check.html"><span class="doc">Access Check</span></a></p></td>
+<td><p>Describes the access check API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="name.html"><span class="doc">Names and Name-Paths</span></a></p></td>
+<td><p>Covers name and name-path classes and types.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="string.html"><span class="doc">String</span></a></p></td>
+<td><p>The string wrapper interface.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="document.html"><span class="doc">Document API</span></a></p></td>
+<td><p>The document API (see <a class="reference internal" href="value.html"><span class="doc">Value API</span></a> for more details).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="data.html"><span class="doc">Data Classes</span></a></p></td>
+<td><p>Data classes like <code class="docutils literal notranslate"><span class="pre">Date</span></code>, <code class="docutils literal notranslate"><span class="pre">Bytes</span></code>, and others.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="namespace.html"><span class="doc">Namespace</span></a></p></td>
+<td><p>The namespace object and its behavior.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="error.html"><span class="doc">Error</span></a></p></td>
+<td><p>The error class and related helpers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="signer.html"><span class="doc">Signer</span></a></p></td>
+<td><p>The signer tool and its API.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="location.html"><span class="doc">Location</span></a></p></td>
+<td><p>Classes for representing a document location.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source_resolver.html"><span class="doc">Source Resolver</span></a></p></td>
+<td><p>The source resolver and its lookup logic.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="parser.html"><span class="doc">Parser</span></a></p></td>
+<td><p>Parser classes and their API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="source.html"><span class="doc">Source</span></a></p></td>
+<td><p>The source class and related helpers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="signature_validator.html"><span class="doc">Signature Validator</span></a></p></td>
+<td><p>Signature validation interface.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="value.html"><span class="doc">Value API</span></a></p></td>
+<td><p>The value API used throughout the document system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="validation_rules.html"><span class="doc">Validation Rules</span></a></p></td>
+<td><p>The API to create validation-rules objects for document validation.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../usage/run-unit-tests.html" class="btn btn-neutral float-left" title="How to Run the Unit Tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="parser.html" class="btn btn-neutral float-right" title="Parser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="vr_2builder_2all_8hpp" kind="file" language="C++">
+    <compoundname>all.hpp</compoundname>
+    <includes refid="_attributes_8hpp" local="yes">Attributes.hpp</includes>
+    <includes refid="_constraints_8hpp" local="yes">Constraints.hpp</includes>
+    <includes refid="_default_value_factory_8hpp" local="yes">DefaultValueFactory.hpp</includes>
+    <includes refid="_name_path_helper_8hpp" local="yes">NamePathHelper.hpp</includes>
+    <includes refid="_type_traits_8hpp" local="yes">TypeTraits.hpp</includes>
+    <incdepgraph>
+      <node id="30">
+        <label>../../impl/value/Value.hpp</label>
+      </node>
+      <node id="33">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>../../Date.hpp</label>
+        <link refid="_date_8hpp_source"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>../../DateTime.hpp</label>
+        <link refid="_date_time_8hpp_source"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>ErrorCategory.hpp</label>
+        <link refid="_error_category_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>Location.hpp</label>
+        <link refid="_location_8hpp_source"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>Name.hpp</label>
+        <link refid="_name_8hpp_source"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>../../NamePath.hpp</label>
+        <link refid="_name_path_8hpp_source"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>NameType.hpp</label>
+        <link refid="_name_type_8hpp_source"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>Position.hpp</label>
+        <link refid="_position_8hpp_source"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>../../RegEx.hpp</label>
+        <link refid="_reg_ex_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>SourceIdentifier.hpp</label>
+        <link refid="_source_identifier_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>../../Time.hpp</label>
+        <link refid="_time_8hpp_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>../../TimeDelta.hpp</label>
+        <link refid="_time_delta_8hpp_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>TimeOffset.hpp</label>
+        <link refid="_time_offset_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>TimeUnit.hpp</label>
+        <link refid="_time_unit_8hpp_source"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Attributes.hpp</label>
+        <link refid="_attributes_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Constraints.hpp</label>
+        <link refid="_constraints_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>DefaultValueFactory.hpp</label>
+        <link refid="_default_value_factory_8hpp_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>NamePathHelper.hpp</label>
+        <link refid="_name_path_helper_8hpp_source"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>TypeTraits.hpp</label>
+        <link refid="_type_traits_8hpp_source"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/vr/builder/all.hpp</label>
+        <link refid="vr_2builder_2all_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>algorithm</label>
+      </node>
+      <node id="57">
+        <label>array</label>
+      </node>
+      <node id="3">
+        <label>attribute/Attribute.hpp</label>
+      </node>
+      <node id="4">
+        <label>attribute/CaseSensitive.hpp</label>
+      </node>
+      <node id="5">
+        <label>attribute/CustomError.hpp</label>
+      </node>
+      <node id="6">
+        <label>attribute/Default.hpp</label>
+      </node>
+      <node id="7">
+        <label>attribute/Dependency.hpp</label>
+      </node>
+      <node id="8">
+        <label>attribute/Description.hpp</label>
+      </node>
+      <node id="9">
+        <label>attribute/IsOptional.hpp</label>
+      </node>
+      <node id="10">
+        <label>attribute/IsSecret.hpp</label>
+      </node>
+      <node id="11">
+        <label>attribute/KeyIndex.hpp</label>
+      </node>
+      <node id="12">
+        <label>attribute/MaximumVersion.hpp</label>
+      </node>
+      <node id="13">
+        <label>attribute/MinimumVersion.hpp</label>
+      </node>
+      <node id="14">
+        <label>attribute/Title.hpp</label>
+      </node>
+      <node id="15">
+        <label>attribute/Version.hpp</label>
+      </node>
+      <node id="40">
+        <label>bitset</label>
+      </node>
+      <node id="54">
+        <label>chrono</label>
+      </node>
+      <node id="17">
+        <label>constraint/Chars.hpp</label>
+      </node>
+      <node id="18">
+        <label>constraint/ConstraintOptions.hpp</label>
+      </node>
+      <node id="19">
+        <label>constraint/Contains.hpp</label>
+      </node>
+      <node id="20">
+        <label>constraint/Ends.hpp</label>
+      </node>
+      <node id="21">
+        <label>constraint/Equals.hpp</label>
+      </node>
+      <node id="22">
+        <label>constraint/In.hpp</label>
+      </node>
+      <node id="23">
+        <label>constraint/Key.hpp</label>
+      </node>
+      <node id="24">
+        <label>constraint/Matches.hpp</label>
+      </node>
+      <node id="25">
+        <label>constraint/Maximum.hpp</label>
+      </node>
+      <node id="26">
+        <label>constraint/Minimum.hpp</label>
+      </node>
+      <node id="27">
+        <label>constraint/Multiple.hpp</label>
+      </node>
+      <node id="28">
+        <label>constraint/Starts.hpp</label>
+      </node>
+      <node id="34">
+        <label>cstdint</label>
+      </node>
+      <node id="78">
+        <label>exception</label>
+      </node>
+      <node id="79">
+        <label>filesystem</label>
+      </node>
+      <node id="35">
+        <label>format</label>
+      </node>
+      <node id="46">
+        <label>functional</label>
+      </node>
+      <node id="41">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="74">
+        <label>impl/constants/Defaults.hpp</label>
+      </node>
+      <node id="51">
+        <label>impl/utf8/U8Format.hpp</label>
+      </node>
+      <node id="75">
+        <label>impl/utf8/U8StringView.hpp</label>
+      </node>
+      <node id="42">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="43">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="64">
+        <label>impl/utilities/HashHelper.hpp</label>
+      </node>
+      <node id="65">
+        <label>impl/utilities/InternalView.hpp</label>
+      </node>
+      <node id="44">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="66">
+        <label>limits</label>
+      </node>
+      <node id="59">
+        <label>map</label>
+      </node>
+      <node id="76">
+        <label>memory</label>
+      </node>
+      <node id="47">
+        <label>optional</label>
+      </node>
+      <node id="48">
+        <label>ranges</label>
+      </node>
+      <node id="49">
+        <label>span</label>
+      </node>
+      <node id="50">
+        <label>string</label>
+      </node>
+      <node id="81">
+        <label>type_traits</label>
+      </node>
+      <node id="58">
+        <label>unordered_map</label>
+      </node>
+      <node id="77">
+        <label>utility</label>
+      </node>
+      <node id="38">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>©<sp/>2026<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!!!<sp/>WARNING<sp/>-<sp/>THIS<sp/>IS<sp/>A<sp/>GENERATED<sp/>FILE<sp/>-<sp/>DO<sp/>NOT<sp/>EDIT<sp/>MANUALLY<sp/>!!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>was<sp/>generated<sp/>by<sp/>the<sp/>`generate_header_files.py`<sp/>script.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Attributes.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Constraints.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DefaultValueFactory.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;NamePathHelper.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TypeTraits.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/vr/builder/all.hpp"/>
+  </compounddef>
+</doxygen>

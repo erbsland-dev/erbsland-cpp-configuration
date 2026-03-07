@@ -1,0 +1,1040 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_name" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::Name</compoundname>
+    <includes refid="_name_8hpp" local="no">erbsland/conf/Name.hpp</includes>
+    <sectiondef kind="user-defined">
+      <header>Predefined Meta-Names</header>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a264b7c9f19b91e83b7821935cdd236c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>static const Name &amp; erbsland::conf::Name::meta</definition>
+        <argsstring>(Meta metaName)</argsstring>
+        <name>meta</name>
+        <qualifiedname>erbsland::conf::Name::meta</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01" kindref="member">Meta</ref></type>
+          <declname>metaName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>metaName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The meta-name enum. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="200" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1aaf8243c64cd8fe5400e060613f54d000" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>static const Name &amp; erbsland::conf::Name::metaVersion</definition>
+        <argsstring>()</argsstring>
+        <name>metaVersion</name>
+        <qualifiedname>erbsland::conf::Name::metaVersion</qualifiedname>
+        <briefdescription>
+<para>Get the &quot;version&quot; meta-name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="202" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a83c453c20cebc230cc83a65348a79adc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>static const Name &amp; erbsland::conf::Name::metaSignature</definition>
+        <argsstring>()</argsstring>
+        <name>metaSignature</name>
+        <qualifiedname>erbsland::conf::Name::metaSignature</qualifiedname>
+        <briefdescription>
+<para>Get the &quot;signature&quot; meta-name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="204" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a8194b9a8dda090eec2aae26608a1ecbd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>static const Name &amp; erbsland::conf::Name::metaInclude</definition>
+        <argsstring>()</argsstring>
+        <name>metaInclude</name>
+        <qualifiedname>erbsland::conf::Name::metaInclude</qualifiedname>
+        <briefdescription>
+<para>Get the &quot;include&quot; meta-name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="206" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1adf6a0246743f853011c095003bc7c111" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>static const Name &amp; erbsland::conf::Name::metaFeatures</definition>
+        <argsstring>()</argsstring>
+        <name>metaFeatures</name>
+        <qualifiedname>erbsland::conf::Name::metaFeatures</qualifiedname>
+        <briefdescription>
+<para>Get the &quot;features&quot; meta-name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="208" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01" prot="public" static="no" strong="yes">
+        <type>std::size_t</type>
+        <name>Meta</name>
+        <qualifiedname>erbsland::conf::Name::Meta</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01a34b6cd75171affba6957e308dcbd92be" prot="public">
+          <name>Version</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01a8c09001c99ecb6fdd8d6023fcf039054" prot="public">
+          <name>Signature</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01af4d72a64acd8929c0cc9ed96a7a336cc" prot="public">
+          <name>Include</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01a98f770b0af18ca763421bac22b4b6805" prot="public">
+          <name>Features</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01ad69186af02738a9b3ced1bc5b652ba55" prot="public">
+          <name>_count</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enum to address predefined meta-names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="36" column="5" bodyfile="erbsland/conf/Name.hpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_1aec57b683f52ca689b642cd2de63b2a73" prot="public" static="no">
+        <type>std::array&lt; const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>, metaNameCount &gt;</type>
+        <definition>using erbsland::conf::Name::MetaNameArray =  std::array&lt;const Name, metaNameCount&gt;</definition>
+        <argsstring></argsstring>
+        <name>MetaNameArray</name>
+        <qualifiedname>erbsland::conf::Name::MetaNameArray</qualifiedname>
+        <briefdescription>
+<para>The array-type to return all meta-names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="49" column="5" bodyfile="erbsland/conf/Name.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_name_1abb53abb24573f63d33d02aeabbfa0421" prot="private" static="no">
+        <type>std::variant&lt; <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>, std::size_t &gt;</type>
+        <definition>using erbsland::conf::Name::Storage =  std::variant&lt;String, std::size_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>Storage</name>
+        <qualifiedname>erbsland::conf::Name::Storage</qualifiedname>
+        <briefdescription>
+<para>The storage type of this name (depends on the name type). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>NameType::Regular -&gt; <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></para>
+</listitem><listitem><para>NameType::Text -&gt; <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></para>
+</listitem><listitem><para>NameType::Index -&gt; std::size_t</para>
+</listitem><listitem><para>NameType::TextIndex -&gt; std::size_t </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="33" column="5" bodyfile="erbsland/conf/Name.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_name_1a5e0ca81d5f7d917ea81a7e6dca53d7b4" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto erbsland::conf::Name::metaNameCount</definition>
+        <argsstring></argsstring>
+        <name>metaNameCount</name>
+        <qualifiedname>erbsland::conf::Name::metaNameCount</qualifiedname>
+        <initializer>= static_cast&lt;std::size_t&gt;(Meta::_count)</initializer>
+        <briefdescription>
+<para>The number of predefined meta-names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="46" column="27" bodyfile="erbsland/conf/Name.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_name_1ac94faa0b7d95834e7f3c063b9aed3b43" prot="private" static="no" mutable="no">
+        <type>NameType</type>
+        <definition>NameType erbsland::conf::Name::_type</definition>
+        <argsstring></argsstring>
+        <name>_type</name>
+        <qualifiedname>erbsland::conf::Name::_type</qualifiedname>
+        <initializer>{NameType::Regular}</initializer>
+        <briefdescription>
+<para>The type of this name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="227" column="14" bodyfile="erbsland/conf/Name.hpp" bodystart="227" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_name_1a349d9226f693e0c53c9172e627bbb049" prot="private" static="no" mutable="no">
+        <type>Storage</type>
+        <definition>Storage erbsland::conf::Name::_value</definition>
+        <argsstring></argsstring>
+        <name>_value</name>
+        <qualifiedname>erbsland::conf::Name::_value</qualifiedname>
+        <briefdescription>
+<para>The value, depending on the type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="228" column="13" bodyfile="erbsland/conf/Name.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1ab846df5a9f353e45f6671876be4a6bf9" prot="private" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename StorageFwd</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>erbsland::conf::Name::Name</definition>
+        <argsstring>(const NameType type, StorageFwd &amp;&amp;storage, impl::PrivateTag) noexcept</argsstring>
+        <name>Name</name>
+        <qualifiedname>erbsland::conf::Name::Name</qualifiedname>
+        <param>
+          <type>const NameType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>StorageFwd &amp;&amp;</type>
+          <declname>storage</declname>
+        </param>
+        <param>
+          <type>impl::PrivateTag</type>
+        </param>
+    <requiresclause>std::is_convertible_v&lt;StorageFwd, Storage&gt;    </requiresclause>
+        <briefdescription>
+<para>Create a new unchecked name with the given type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>For user code: Please use <computeroutput><ref refid="classerbsland_1_1conf_1_1_name_1a52ea6d0657811f9490324166bc453018" kindref="member">createRegular()</ref></computeroutput>, <computeroutput><ref refid="classerbsland_1_1conf_1_1_name_1a78e5dbfb61df2e03dc0ac54ad43243c0" kindref="member">createText()</ref></computeroutput> and <computeroutput><ref refid="classerbsland_1_1conf_1_1_name_1aaf021e6d480949e8ff0e4360d0e06aca" kindref="member">createIndex()</ref></computeroutput> for future compatibility and additional syntax checks.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>storage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text or index of the name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="62" column="5" bodyfile="erbsland/conf/Name.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a2b8818ec3bc3aae40fa8d4743305af31" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Name::indexDigitCount</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>indexDigitCount</name>
+        <qualifiedname>erbsland::conf::Name::indexDigitCount</qualifiedname>
+        <briefdescription>
+<para>Get the decimal digit-count of the index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="219" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a2b895cecd739870ca81cb8f0317b1a2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Name::Name</definition>
+        <argsstring>()=default</argsstring>
+        <name>Name</name>
+        <qualifiedname>erbsland::conf::Name::Name</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="67" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a57f1e29d45388132ef4e687883655137" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Name::~Name</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Name</name>
+        <qualifiedname>erbsland::conf::Name::~Name</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="69" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a273980df4b043dfc36f3efd808c79ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Name::Name</definition>
+        <argsstring>(const Name &amp;)=default</argsstring>
+        <name>Name</name>
+        <qualifiedname>erbsland::conf::Name::Name</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="72" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a65b0f72e78e111593dfbc3a4d1e99f02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Name::Name</definition>
+        <argsstring>(Name &amp;&amp;)=default</argsstring>
+        <name>Name</name>
+        <qualifiedname>erbsland::conf::Name::Name</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="73" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1addec32b746a15a455016490386fe5aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>Name &amp; erbsland::conf::Name::operator=</definition>
+        <argsstring>(const Name &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Name::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="74" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a20b4bc431aeff5edfda5a7ffe9aa78bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>Name &amp; erbsland::conf::Name::operator=</definition>
+        <argsstring>(Name &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::Name::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="75" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a0e1da57b6a3f56f920fdfe974f90b8a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::strong_ordering</type>
+        <definition>std::strong_ordering erbsland::conf::Name::operator&lt;=&gt;</definition>
+        <argsstring>(const Name &amp;other) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>erbsland::conf::Name::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two names lexicographically. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other name to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A three-way comparison result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="108" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1ac38969fb2ef6d5f4ac67109ddc52a070" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::operator==</definition>
+        <argsstring>(const Name &amp;other) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::Name::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Test two names for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other name to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if both names compare equal. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="113" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1af970a3df9fe07e71c35b3efd9ad0fe6c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>NameType</type>
+        <definition>NameType erbsland::conf::Name::type</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>type</name>
+        <qualifiedname>erbsland::conf::Name::type</qualifiedname>
+        <briefdescription>
+<para>Get the type of this name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="117" column="15" bodyfile="erbsland/conf/Name.hpp" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a010671c4371478c16652d28f467327e5" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>empty</name>
+        <qualifiedname>erbsland::conf::Name::empty</qualifiedname>
+        <briefdescription>
+<para>Test if this is an empty regular name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>An empty name is not valid and created by the default constructor. <simplesect kind="return"><para><computeroutput>true</computeroutput> if this name is empty and of type <computeroutput>Regular</computeroutput>, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="122" column="11" bodyfile="erbsland/conf/Name.hpp" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a0e237015ad6a8364c5909a55bc241d18" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::isRegular</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isRegular</name>
+        <qualifiedname>erbsland::conf::Name::isRegular</qualifiedname>
+        <briefdescription>
+<para>Test if this name is of type <computeroutput>Regular</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the name type is <computeroutput>Regular</computeroutput>, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="128" column="11" bodyfile="erbsland/conf/Name.hpp" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1afe283e8c18668e8b870c6b1957c43e0c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::isText</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isText</name>
+        <qualifiedname>erbsland::conf::Name::isText</qualifiedname>
+        <briefdescription>
+<para>Test if this name is of type <computeroutput>Text</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the name type is <computeroutput>Text</computeroutput>, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="132" column="11" bodyfile="erbsland/conf/Name.hpp" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a8ec4697cf8406dbad2e5da18f0e8b95e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::isIndex</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isIndex</name>
+        <qualifiedname>erbsland::conf::Name::isIndex</qualifiedname>
+        <briefdescription>
+<para>Test if this name is of type <computeroutput>Index</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the name type is <computeroutput>Index</computeroutput>, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="136" column="11" bodyfile="erbsland/conf/Name.hpp" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a274677b86b1e034b0b1b0adc29301e98" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::isTextIndex</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isTextIndex</name>
+        <qualifiedname>erbsland::conf::Name::isTextIndex</qualifiedname>
+        <briefdescription>
+<para>Test if this name is of type <computeroutput>TextIndex</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the name type is <computeroutput>TextIndex</computeroutput>, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="140" column="11" bodyfile="erbsland/conf/Name.hpp" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1ada41e4f74581b0919542d10fe8a86d0c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::isMeta</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isMeta</name>
+        <qualifiedname>erbsland::conf::Name::isMeta</qualifiedname>
+        <briefdescription>
+<para>Test if this is a meta name (regular and starts with &apos;@&apos;). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if the name is <computeroutput>Regular</computeroutput>, non-empty, and begins with an &apos;@&apos; character. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="144" column="11" bodyfile="erbsland/conf/Name.hpp" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a777c45283ddad4ffd924a4c46eb0347b" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::Name::asText</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>asText</name>
+        <qualifiedname>erbsland::conf::Name::asText</qualifiedname>
+        <briefdescription>
+<para>Get the value as text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The value as text. An index is converted into text. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="150" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a87038c6119566e0946f44b822d16705e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Name::asIndex</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>asIndex</name>
+        <qualifiedname>erbsland::conf::Name::asIndex</qualifiedname>
+        <briefdescription>
+<para>Get the value as an index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The value as index, or zero for Root, Regular and Text. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="154" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a97fb921a09b3df72fc553ad1a79a0cca" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Name::pathTextSize</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>pathTextSize</name>
+        <qualifiedname>erbsland::conf::Name::pathTextSize</qualifiedname>
+        <briefdescription>
+<para>Fast, get the size of the path text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="157" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1ae2e89d4ddb0dcb9a5ac9a031cd7f050e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::Name::toPathText</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toPathText</name>
+        <qualifiedname>erbsland::conf::Name::toPathText</qualifiedname>
+        <briefdescription>
+<para>Create a representation of the name for a name path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="160" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a3edf3bec0dc3483dbed14cf28c2dbc6b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Name::hash</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>hash</name>
+        <qualifiedname>erbsland::conf::Name::hash</qualifiedname>
+        <briefdescription>
+<para>Get a hash value for this name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="163" column="18" bodyfile="erbsland/conf/Name.hpp" bodystart="163" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a1f1556e677c9667915443a2fad23b8a7" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::isReservedValidationRule</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isReservedValidationRule</name>
+        <qualifiedname>erbsland::conf::Name::isReservedValidationRule</qualifiedname>
+        <briefdescription>
+<para>Test if this name is a reserved validation-rules name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="172" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a91bfa19302c4c6b3e5ac7ad50a3191da" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Name::isEscapedReservedValidationRule</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isEscapedReservedValidationRule</name>
+        <qualifiedname>erbsland::conf::Name::isEscapedReservedValidationRule</qualifiedname>
+        <briefdescription>
+<para>Test if this name is an escaped reserved validation-rules name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="175" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a7b49427f5c82e3ba5d4f50037d13e08f" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></type>
+        <definition>Name erbsland::conf::Name::withReservedVRPrefixRemoved</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>withReservedVRPrefixRemoved</name>
+        <qualifiedname>erbsland::conf::Name::withReservedVRPrefixRemoved</qualifiedname>
+        <briefdescription>
+<para>Get this name with the reserved prefix removed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="178" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a52ea6d0657811f9490324166bc453018" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></type>
+        <definition>static Name erbsland::conf::Name::createRegular</definition>
+        <argsstring>(const String &amp;name)</argsstring>
+        <name>createRegular</name>
+        <qualifiedname>erbsland::conf::Name::createRegular</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Create a regular name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Converts any valid name into its normalized form.</para>
+</listitem><listitem><para>Spacing around the name is not allowed.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name in any valid format. No spacing around the name is allowed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Syntax, LimitExceeded, Encoding) If there is any problem with the name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="84" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a78e5dbfb61df2e03dc0ac54ad43243c0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></type>
+        <definition>static Name erbsland::conf::Name::createText</definition>
+        <argsstring>(const String &amp;text)</argsstring>
+        <name>createText</name>
+        <qualifiedname>erbsland::conf::Name::createText</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Create a text name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text name (without the double quotes). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Syntax, LimitExceeded, Encoding) If there is any problem with the name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="90" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a7bcf6865e7a163f88838fe8d55740094" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></type>
+        <definition>static Name erbsland::conf::Name::createText</definition>
+        <argsstring>(String &amp;&amp;text)</argsstring>
+        <name>createText</name>
+        <qualifiedname>erbsland::conf::Name::createText</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;&amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Create a text name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text name (without the double quotes). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Syntax, LimitExceeded, Encoding) If there is any problem with the name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="96" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1aaf021e6d480949e8ff0e4360d0e06aca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></type>
+        <definition>static Name erbsland::conf::Name::createIndex</definition>
+        <argsstring>(std::size_t index)</argsstring>
+        <name>createIndex</name>
+        <qualifiedname>erbsland::conf::Name::createIndex</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Create an index name (for list elements). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="99" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1af7cf9f48b3016d24b31dd1eef969e5a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref></type>
+        <definition>static Name erbsland::conf::Name::createTextIndex</definition>
+        <argsstring>(std::size_t index)</argsstring>
+        <name>createTextIndex</name>
+        <qualifiedname>erbsland::conf::Name::createTextIndex</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Create a text index name (for text names in a section). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="102" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1adb8895d9fe171373fe302d1d75430255" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>static String erbsland::conf::Name::normalize</definition>
+        <argsstring>(const String &amp;text)</argsstring>
+        <name>normalize</name>
+        <qualifiedname>erbsland::conf::Name::normalize</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Normalizes and verifies a regular name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Tests if the name only contains valid characters.</para>
+</listitem><listitem><para>Tests if the name does not exceed the length limit.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Syntax, LimitExceeded, Encoding) in case of any problem. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The normalized name. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="187" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1ae0bdb6880d09eaae74137036bf5d2151" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void erbsland::conf::Name::validateText</definition>
+        <argsstring>(const String &amp;text)</argsstring>
+        <name>validateText</name>
+        <qualifiedname>erbsland::conf::Name::validateText</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Verifies a text name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Test for encoding errors and not allowed zero code-points.</para>
+</listitem><listitem><para>Test if the text exceeds the size limit.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(LimitExceeded, Encoding) in case of any problem. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="194" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a0c742a7a47633b0fee69538c854ddb83" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name_1aec57b683f52ca689b642cd2de63b2a73" kindref="member">MetaNameArray</ref> &amp;</type>
+        <definition>static const MetaNameArray &amp; erbsland::conf::Name::allMetaNames</definition>
+        <argsstring>()</argsstring>
+        <name>allMetaNames</name>
+        <qualifiedname>erbsland::conf::Name::allMetaNames</qualifiedname>
+        <briefdescription>
+<para>Access a list of all supported meta-names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="212" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_name_1a587cfb579d7cab5f822bf7477046ab2b" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref> &amp;</type>
+        <definition>static const Name &amp; erbsland::conf::Name::emptyInstance</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>emptyInstance</name>
+        <qualifiedname>erbsland::conf::Name::emptyInstance</qualifiedname>
+        <briefdescription>
+<para>Return an empty instance of a name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Name.hpp" line="215" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a single name. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>A regular name is always converted into its normalized lower-case form.</para>
+</listitem><listitem><para>A text-name is kept as is.</para>
+</listitem><listitem><para>An index-name is neither normalized nor range checked.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Tested:</title><para><computeroutput>NameTest</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/Name.hpp" line="24" column="1" bodyfile="erbsland/conf/Name.hpp" bodystart="24" bodyend="229"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_name_1ac94faa0b7d95834e7f3c063b9aed3b43" prot="private" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>_type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a349d9226f693e0c53c9172e627bbb049" prot="private" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>_value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a0c742a7a47633b0fee69538c854ddb83" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>allMetaNames</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a87038c6119566e0946f44b822d16705e" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>asIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a777c45283ddad4ffd924a4c46eb0347b" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>asText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1aaf021e6d480949e8ff0e4360d0e06aca" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>createIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a52ea6d0657811f9490324166bc453018" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>createRegular</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a78e5dbfb61df2e03dc0ac54ad43243c0" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>createText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a7bcf6865e7a163f88838fe8d55740094" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>createText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1af7cf9f48b3016d24b31dd1eef969e5a1" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>createTextIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a010671c4371478c16652d28f467327e5" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>empty</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a587cfb579d7cab5f822bf7477046ab2b" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>emptyInstance</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a3edf3bec0dc3483dbed14cf28c2dbc6b" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>hash</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a2b8818ec3bc3aae40fa8d4743305af31" prot="private" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>indexDigitCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a91bfa19302c4c6b3e5ac7ad50a3191da" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>isEscapedReservedValidationRule</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a8ec4697cf8406dbad2e5da18f0e8b95e" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>isIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1ada41e4f74581b0919542d10fe8a86d0c" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>isMeta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a0e237015ad6a8364c5909a55bc241d18" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>isRegular</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a1f1556e677c9667915443a2fad23b8a7" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>isReservedValidationRule</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1afe283e8c18668e8b870c6b1957c43e0c" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>isText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a274677b86b1e034b0b1b0adc29301e98" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>isTextIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a4476e6ae5c930bd029930b1e87d9af01" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>Meta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a264b7c9f19b91e83b7821935cdd236c5" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>meta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1adf6a0246743f853011c095003bc7c111" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>metaFeatures</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a8194b9a8dda090eec2aae26608a1ecbd" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>metaInclude</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1aec57b683f52ca689b642cd2de63b2a73" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>MetaNameArray</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a5e0ca81d5f7d917ea81a7e6dca53d7b4" prot="private" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>metaNameCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a83c453c20cebc230cc83a65348a79adc" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>metaSignature</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1aaf8243c64cd8fe5400e060613f54d000" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>metaVersion</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1ab846df5a9f353e45f6671876be4a6bf9" prot="private" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>Name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a2b895cecd739870ca81cb8f0317b1a2e" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>Name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a273980df4b043dfc36f3efd808c79ab1" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>Name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a65b0f72e78e111593dfbc3a4d1e99f02" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>Name</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1adb8895d9fe171373fe302d1d75430255" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>normalize</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a0e1da57b6a3f56f920fdfe974f90b8a1" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1addec32b746a15a455016490386fe5aa4" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a20b4bc431aeff5edfda5a7ffe9aa78bc" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1ac38969fb2ef6d5f4ac67109ddc52a070" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a97fb921a09b3df72fc553ad1a79a0cca" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>pathTextSize</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1abb53abb24573f63d33d02aeabbfa0421" prot="private" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>Storage</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1ae2e89d4ddb0dcb9a5ac9a031cd7f050e" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>toPathText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1af970a3df9fe07e71c35b3efd9ad0fe6c" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>type</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1ae0bdb6880d09eaae74137036bf5d2151" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>validateText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a7b49427f5c82e3ba5d4f50037d13e08f" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>withReservedVRPrefixRemoved</name></member>
+      <member refid="classerbsland_1_1conf_1_1_name_1a57f1e29d45388132ef4e687883655137" prot="public" virt="non-virtual"><scope>erbsland::conf::Name</scope><name>~Name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

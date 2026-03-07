@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1vr_1_1_rule" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::conf::vr::Rule</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a2ab0f18fb1476a262e99d189f383af3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual erbsland::conf::vr::Rule::~Rule</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Rule</name>
+        <qualifiedname>erbsland::conf::vr::Rule::~Rule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="24" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a730c3355d32c92a906dc283aa00e1bc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref></type>
+        <definition>virtual NamePath erbsland::conf::vr::Rule::namePath</definition>
+        <argsstring>() const =0</argsstring>
+        <name>namePath</name>
+        <qualifiedname>erbsland::conf::vr::Rule::namePath</qualifiedname>
+        <briefdescription>
+<para>The target name-path of this rule. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the name path of the value in the validated document. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="29" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1af942e9b4b3dbdef9a8c9daf5b5c60c54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_type" kindref="compound">RuleType</ref></type>
+        <definition>virtual RuleType erbsland::conf::vr::Rule::type</definition>
+        <argsstring>() const =0</argsstring>
+        <name>type</name>
+        <qualifiedname>erbsland::conf::vr::Rule::type</qualifiedname>
+        <briefdescription>
+<para>The type of the rule. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="31" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1ad1599f51787f2cbf99015022cfb78ecd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>virtual String erbsland::conf::vr::Rule::title</definition>
+        <argsstring>() const =0</argsstring>
+        <name>title</name>
+        <qualifiedname>erbsland::conf::vr::Rule::title</qualifiedname>
+        <briefdescription>
+<para>An optional title. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="33" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1af82d9a9fc22744603c6c735a7c1b781c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>virtual String erbsland::conf::vr::Rule::description</definition>
+        <argsstring>() const =0</argsstring>
+        <name>description</name>
+        <qualifiedname>erbsland::conf::vr::Rule::description</qualifiedname>
+        <briefdescription>
+<para>An optional description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="35" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a8c59b2eb13eb4d4e06a502d1ed0a05ff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Rule::hasDefault</definition>
+        <argsstring>() const =0</argsstring>
+        <name>hasDefault</name>
+        <qualifiedname>erbsland::conf::vr::Rule::hasDefault</qualifiedname>
+        <briefdescription>
+<para>If this rule has a default. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="37" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a97af7600ff8dd416e8e7907f52fb7d54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Rule::hasCustomError</definition>
+        <argsstring>() const =0</argsstring>
+        <name>hasCustomError</name>
+        <qualifiedname>erbsland::conf::vr::Rule::hasCustomError</qualifiedname>
+        <briefdescription>
+<para>Test if this rule has a custom error message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="39" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1abcc9b7f1602b153f5e069145e48acd6c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>virtual String erbsland::conf::vr::Rule::customError</definition>
+        <argsstring>() const =0</argsstring>
+        <name>customError</name>
+        <qualifiedname>erbsland::conf::vr::Rule::customError</qualifiedname>
+        <briefdescription>
+<para>A custom error message for the rule. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="41" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a2a17de7a6e3aad846f39697ed4261332" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; ConstraintPtr &gt;</type>
+        <definition>virtual std::vector&lt; ConstraintPtr &gt; erbsland::conf::vr::Rule::constraints</definition>
+        <argsstring>() const =0</argsstring>
+        <name>constraints</name>
+        <qualifiedname>erbsland::conf::vr::Rule::constraints</qualifiedname>
+        <briefdescription>
+<para>A list of constraints. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="43" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a212d9f0c93cfa4ac90854bb2dad83b92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Rule::isOptional</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isOptional</name>
+        <qualifiedname>erbsland::conf::vr::Rule::isOptional</qualifiedname>
+        <briefdescription>
+<para>If this rule is optional. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="45" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a98ac8d2d2cd979900d387b243bdfb4e7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>CaseSensitivity</type>
+        <definition>virtual CaseSensitivity erbsland::conf::vr::Rule::caseSensitivity</definition>
+        <argsstring>() const =0</argsstring>
+        <name>caseSensitivity</name>
+        <qualifiedname>erbsland::conf::vr::Rule::caseSensitivity</qualifiedname>
+        <briefdescription>
+<para>If constraints are tested case-sensitive. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="47" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1abeaf9fa5444ccc21e2c1a4dd063248e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Rule::isSecret</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isSecret</name>
+        <qualifiedname>erbsland::conf::vr::Rule::isSecret</qualifiedname>
+        <briefdescription>
+<para>If the validated value is a secret. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="49" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1acf77f8d4dccbf3028a0cae5f5c54dfc8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; RulePtr &gt;</type>
+        <definition>virtual std::vector&lt; RulePtr &gt; erbsland::conf::vr::Rule::children</definition>
+        <argsstring>() const =0</argsstring>
+        <name>children</name>
+        <qualifiedname>erbsland::conf::vr::Rule::children</qualifiedname>
+        <briefdescription>
+<para>A list of child rules. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="51" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1ad3033bb314d11c8bc0aaa6ee2b0a3f55" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Rule::hasLocation</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>hasLocation</name>
+        <qualifiedname>erbsland::conf::vr::Rule::hasLocation</qualifiedname>
+        <briefdescription>
+<para>Test if there is location info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="55" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a89e5a1effce525227d27c36d51bb6038" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+        <definition>virtual const Location &amp; erbsland::conf::vr::Rule::location</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>location</name>
+        <qualifiedname>erbsland::conf::vr::Rule::location</qualifiedname>
+        <briefdescription>
+<para>Get the location info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="57" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rule_1a8daa20cb73a5ee8218dfae32c9c0a477" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void erbsland::conf::vr::Rule::setLocation</definition>
+        <argsstring>(const Location &amp;newLocation) noexcept=0</argsstring>
+        <name>setLocation</name>
+        <qualifiedname>erbsland::conf::vr::Rule::setLocation</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>newLocation</declname>
+        </param>
+        <briefdescription>
+<para>Set the location info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rule.hpp" line="59" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/Rule.hpp" line="22" column="1" bodyfile="erbsland/conf/vr/Rule.hpp" bodystart="22" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a98ac8d2d2cd979900d387b243bdfb4e7" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>caseSensitivity</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1acf77f8d4dccbf3028a0cae5f5c54dfc8" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>children</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a2a17de7a6e3aad846f39697ed4261332" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>constraints</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1abcc9b7f1602b153f5e069145e48acd6c" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>customError</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1af82d9a9fc22744603c6c735a7c1b781c" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>description</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a97af7600ff8dd416e8e7907f52fb7d54" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>hasCustomError</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a8c59b2eb13eb4d4e06a502d1ed0a05ff" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>hasDefault</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1ad3033bb314d11c8bc0aaa6ee2b0a3f55" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>hasLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a212d9f0c93cfa4ac90854bb2dad83b92" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>isOptional</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1abeaf9fa5444ccc21e2c1a4dd063248e5" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>isSecret</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a89e5a1effce525227d27c36d51bb6038" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>location</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a730c3355d32c92a906dc283aa00e1bc9" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>namePath</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a8daa20cb73a5ee8218dfae32c9c0a477" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>setLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1ad1599f51787f2cbf99015022cfb78ecd" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>title</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1af942e9b4b3dbdef9a8c9daf5b5c60c54" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rule</scope><name>type</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rule_1a2ab0f18fb1476a262e99d189f383af3a" prot="public" virt="virtual"><scope>erbsland::conf::vr::Rule</scope><name>~Rule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

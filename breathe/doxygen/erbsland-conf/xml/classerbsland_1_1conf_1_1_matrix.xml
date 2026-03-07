@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_matrix" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::Matrix</compoundname>
+    <includes refid="_matrix_8hpp" local="no">erbsland/conf/Matrix.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_matrix_1a0b1d6cf95917399e8902bc78808d2019" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Matrix&lt; T &gt;::_rowCount</definition>
+        <argsstring></argsstring>
+        <name>_rowCount</name>
+        <qualifiedname>erbsland::conf::Matrix::_rowCount</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="143" column="17" bodyfile="erbsland/conf/Matrix.hpp" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_matrix_1a771b9696ae6e79e854ae99c5757fde29" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Matrix&lt; T &gt;::_columnCount</definition>
+        <argsstring></argsstring>
+        <name>_columnCount</name>
+        <qualifiedname>erbsland::conf::Matrix::_columnCount</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="144" column="17" bodyfile="erbsland/conf/Matrix.hpp" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_matrix_1ab99b5e1a2dbd742f6fd1c4f9ffc366d3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::size_t &gt;</type>
+        <definition>std::vector&lt;std::size_t&gt; erbsland::conf::Matrix&lt; T &gt;::_actualColumnCounts</definition>
+        <argsstring></argsstring>
+        <name>_actualColumnCounts</name>
+        <qualifiedname>erbsland::conf::Matrix::_actualColumnCounts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="145" column="17" bodyfile="erbsland/conf/Matrix.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_matrix_1adbf8988d5722f30f9f5170dec25a7377" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt;T&gt; erbsland::conf::Matrix&lt; T &gt;::_values</definition>
+        <argsstring></argsstring>
+        <name>_values</name>
+        <qualifiedname>erbsland::conf::Matrix::_values</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="146" column="17" bodyfile="erbsland/conf/Matrix.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a246465df97128d589611cd5a037a2a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Matrix&lt; T &gt;::Matrix</definition>
+        <argsstring>()=default</argsstring>
+        <name>Matrix</name>
+        <qualifiedname>erbsland::conf::Matrix::Matrix</qualifiedname>
+        <briefdescription>
+<para>Create an empty matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1abe2201891e1b4c65ab928a7cfe310c12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Matrix&lt; T &gt;::Matrix</definition>
+        <argsstring>(const std::size_t rowCount, const std::size_t columnCount)</argsstring>
+        <name>Matrix</name>
+        <qualifiedname>erbsland::conf::Matrix::Matrix</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>rowCount</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>columnCount</declname>
+        </param>
+        <briefdescription>
+<para>Create a matrix with a given size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rowCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of rows. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>columnCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of columns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="27" column="5" bodyfile="erbsland/conf/Matrix.hpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a7ad36af882521bfc3a28e03a7783ead5" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Matrix&lt; T &gt;::rowCount</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>rowCount</name>
+        <qualifiedname>erbsland::conf::Matrix::rowCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of rows in this matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="36" column="18" bodyfile="erbsland/conf/Matrix.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1adae1b9fd478ab4c4a1c7a6ba2bb08eed" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Matrix&lt; T &gt;::columnCount</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>columnCount</name>
+        <qualifiedname>erbsland::conf::Matrix::columnCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of columns in this matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="41" column="18" bodyfile="erbsland/conf/Matrix.hpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1aae50a7040b4b52ce516376733093d9dd" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Matrix&lt; T &gt;::actualColumnCount</definition>
+        <argsstring>(const std::size_t row) const noexcept</argsstring>
+        <name>actualColumnCount</name>
+        <qualifiedname>erbsland::conf::Matrix::actualColumnCount</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+<para>Get the actual column count for the given row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of columns defined in the row. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="48" column="18" bodyfile="erbsland/conf/Matrix.hpp" bodystart="48" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1abcd2563a1af9c600900d4fcecd4c422e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::Matrix&lt; T &gt;::isDefined</definition>
+        <argsstring>(const std::size_t row, const std::size_t column) const noexcept</argsstring>
+        <name>isDefined</name>
+        <qualifiedname>erbsland::conf::Matrix::isDefined</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>Test if a value was defined in the original nested list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the value was defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="59" column="11" bodyfile="erbsland/conf/Matrix.hpp" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1ae493e50b827384c6f542878fb9baeb81" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::Matrix&lt; T &gt;::value</definition>
+        <argsstring>(const std::size_t row, const std::size_t column, const T &amp;defaultValue={}) const noexcept -&gt; const T &amp;</argsstring>
+        <name>value</name>
+        <qualifiedname>erbsland::conf::Matrix::value</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>defaultValue</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Access a value by row and column. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>defaultValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value for missing cells. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value or the default value if it was not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="71" column="11" bodyfile="erbsland/conf/Matrix.hpp" bodystart="71" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a037c9db382eb52f0a593f226ba64f55b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T &amp; erbsland::conf::Matrix&lt; T &gt;::valueOrThrow</definition>
+        <argsstring>(const std::size_t row, const std::size_t column) const</argsstring>
+        <name>valueOrThrow</name>
+        <qualifiedname>erbsland::conf::Matrix::valueOrThrow</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+<para>Access a value by row and column and throw on bounds errors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value or a default value if it was not defined. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the row or column is outside the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="87" column="14" bodyfile="erbsland/conf/Matrix.hpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a7730e71ed1ed8acefc9eeb8099bf21a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Matrix&lt; T &gt;::setValue</definition>
+        <argsstring>(const std::size_t row, const std::size_t column, const T &amp;value)</argsstring>
+        <name>setValue</name>
+        <qualifiedname>erbsland::conf::Matrix::setValue</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set a value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>column</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The column index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the row or column is outside the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="97" column="10" bodyfile="erbsland/conf/Matrix.hpp" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a3b532d01db0d67ff7aa505ce7cc9ab31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Matrix&lt; T &gt;::setRow</definition>
+        <argsstring>(const std::size_t row, const std::vector&lt; T &gt; &amp;values)</argsstring>
+        <name>setRow</name>
+        <qualifiedname>erbsland::conf::Matrix::setRow</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Set values for a complete row. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The row index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The values to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the row is outside the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="107" column="10" bodyfile="erbsland/conf/Matrix.hpp" bodystart="107" bodyend="116"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1adf9d467880282d493b669336cf0b6602" prot="private" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t erbsland::conf::Matrix&lt; T &gt;::toIndex</definition>
+        <argsstring>(const std::size_t row, const std::size_t column) const noexcept</argsstring>
+        <name>toIndex</name>
+        <qualifiedname>erbsland::conf::Matrix::toIndex</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="119" column="18" bodyfile="erbsland/conf/Matrix.hpp" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a3ddbe6b0c09c1d670e2a7b845d4da63c" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Matrix&lt; T &gt;::requireRowIndex</definition>
+        <argsstring>(const std::size_t row) const</argsstring>
+        <name>requireRowIndex</name>
+        <qualifiedname>erbsland::conf::Matrix::requireRowIndex</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="123" column="10" bodyfile="erbsland/conf/Matrix.hpp" bodystart="123" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a58438d741edf8d77dde92f27b4ca0f88" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Matrix&lt; T &gt;::requireIndices</definition>
+        <argsstring>(const std::size_t row, const std::size_t column) const</argsstring>
+        <name>requireIndices</name>
+        <qualifiedname>erbsland::conf::Matrix::requireIndices</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="129" column="10" bodyfile="erbsland/conf/Matrix.hpp" bodystart="129" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_matrix_1a0cb7115d10066fde70fbdaab39157c0f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Matrix&lt; T &gt;::updateActualColumnCount</definition>
+        <argsstring>(const std::size_t row, const std::size_t columnCount)</argsstring>
+        <name>updateActualColumnCount</name>
+        <qualifiedname>erbsland::conf::Matrix::updateActualColumnCount</qualifiedname>
+        <param>
+          <type>const std::size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const std::size_t</type>
+          <declname>columnCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Matrix.hpp" line="136" column="10" bodyfile="erbsland/conf/Matrix.hpp" bodystart="136" bodyend="140"/>
+      </memberdef>
+    </sectiondef>
+    <requiresclause>std::default_initializable&lt;T&gt;    </requiresclause>
+    <briefdescription>
+<para>A 2D matrix with a per-row column counts. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Tested:</title><para><computeroutput>MatrixTest</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/Matrix.hpp" line="19" column="1" bodyfile="erbsland/conf/Matrix.hpp" bodystart="19" bodyend="147"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1ab99b5e1a2dbd742f6fd1c4f9ffc366d3" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>_actualColumnCounts</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a771b9696ae6e79e854ae99c5757fde29" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>_columnCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a0b1d6cf95917399e8902bc78808d2019" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>_rowCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1adbf8988d5722f30f9f5170dec25a7377" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>_values</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1aae50a7040b4b52ce516376733093d9dd" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>actualColumnCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1adae1b9fd478ab4c4a1c7a6ba2bb08eed" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>columnCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1abcd2563a1af9c600900d4fcecd4c422e" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>isDefined</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a246465df97128d589611cd5a037a2a44" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>Matrix</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1abe2201891e1b4c65ab928a7cfe310c12" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>Matrix</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a58438d741edf8d77dde92f27b4ca0f88" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>requireIndices</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a3ddbe6b0c09c1d670e2a7b845d4da63c" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>requireRowIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a7ad36af882521bfc3a28e03a7783ead5" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>rowCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a3b532d01db0d67ff7aa505ce7cc9ab31" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>setRow</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a7730e71ed1ed8acefc9eeb8099bf21a4" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>setValue</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1adf9d467880282d493b669336cf0b6602" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>toIndex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a0cb7115d10066fde70fbdaab39157c0f" prot="private" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>updateActualColumnCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1ae493e50b827384c6f542878fb9baeb81" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>value</name></member>
+      <member refid="classerbsland_1_1conf_1_1_matrix_1a037c9db382eb52f0a593f226ba64f55b" prot="public" virt="non-virtual"><scope>erbsland::conf::Matrix</scope><name>valueOrThrow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

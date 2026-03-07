@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1_access_sources" kind="struct" language="C++" prot="public">
+    <compoundname>erbsland::conf::AccessSources</compoundname>
+    <includes refid="_access_sources_8hpp" local="no">erbsland/conf/AccessSources.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_access_sources_1aca1a579e8d581f9f2e5b642fd58e9249" prot="public" static="no" mutable="no">
+        <type>SourceIdentifierPtr</type>
+        <definition>SourceIdentifierPtr erbsland::conf::AccessSources::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>erbsland::conf::AccessSources::source</qualifiedname>
+        <briefdescription>
+<para>The source to verify. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/AccessSources.hpp" line="21" column="25" bodyfile="erbsland/conf/AccessSources.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_access_sources_1af8e63c7a4fa0db0d0b0a15b563fe46fc" prot="public" static="no" mutable="no">
+        <type>SourceIdentifierPtr</type>
+        <definition>SourceIdentifierPtr erbsland::conf::AccessSources::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>erbsland::conf::AccessSources::parent</qualifiedname>
+        <briefdescription>
+<para>The parent source that resolved this new source or <computeroutput>nullptr</computeroutput> if <computeroutput>source</computeroutput> is the root document. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/AccessSources.hpp" line="25" column="25" bodyfile="erbsland/conf/AccessSources.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_access_sources_1a26581ee150fe9397cafc5299b778fb5d" prot="public" static="no" mutable="no">
+        <type>SourceIdentifierPtr</type>
+        <definition>SourceIdentifierPtr erbsland::conf::AccessSources::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>erbsland::conf::AccessSources::root</qualifiedname>
+        <briefdescription>
+<para>The root document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The root document is always present. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/AccessSources.hpp" line="29" column="25" bodyfile="erbsland/conf/AccessSources.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The source identifiers to verify in the access function. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure names the individual source elements for the access function.</para>
+<para><simplesect kind="par"><title>Not Tested:</title><para>This is part of <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/AccessSources.hpp" line="18" column="1" bodyfile="erbsland/conf/AccessSources.hpp" bodystart="18" bodyend="30"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1_access_sources_1af8e63c7a4fa0db0d0b0a15b563fe46fc" prot="public" virt="non-virtual"><scope>erbsland::conf::AccessSources</scope><name>parent</name></member>
+      <member refid="structerbsland_1_1conf_1_1_access_sources_1a26581ee150fe9397cafc5299b778fb5d" prot="public" virt="non-virtual"><scope>erbsland::conf::AccessSources</scope><name>root</name></member>
+      <member refid="structerbsland_1_1conf_1_1_access_sources_1aca1a579e8d581f9f2e5b642fd58e9249" prot="public" virt="non-virtual"><scope>erbsland::conf::AccessSources</scope><name>source</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1vr_1_1_constraint_type_1_1_value_to_text_entry" kind="struct" language="C++" prot="private">
+    <compoundname>erbsland::conf::vr::ConstraintType::ValueToTextEntry</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1vr_1_1_constraint_type_1_1_value_to_text_entry_1a06a51a86a19aff7eb3538cf51aff0bc2" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type_1a8b48ce265eb78f1e9382699d58503cdf" kindref="member">Enum</ref></type>
+        <definition>Enum erbsland::conf::vr::ConstraintType::ValueToTextEntry::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>erbsland::conf::vr::ConstraintType::ValueToTextEntry::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/ConstraintType.hpp" line="116" column="14" bodyfile="erbsland/conf/vr/ConstraintType.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1vr_1_1_constraint_type_1_1_value_to_text_entry_1a10554f524cfc9bd9cf2915bf344cb0a4" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::vr::ConstraintType::ValueToTextEntry::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <qualifiedname>erbsland::conf::vr::ConstraintType::ValueToTextEntry::text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/ConstraintType.hpp" line="117" column="16" bodyfile="erbsland/conf/vr/ConstraintType.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>erbsland::conf::String</label>
+        <link refid="classerbsland_1_1conf_1_1_string"/>
+      </node>
+      <node id="1">
+        <label>erbsland::conf::vr::ConstraintType::ValueToTextEntry</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>text</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/vr/ConstraintType.hpp" line="115" column="5" bodyfile="erbsland/conf/vr/ConstraintType.hpp" bodystart="115" bodyend="118"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1vr_1_1_constraint_type_1_1_value_to_text_entry_1a10554f524cfc9bd9cf2915bf344cb0a4" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::ConstraintType::ValueToTextEntry</scope><name>text</name></member>
+      <member refid="structerbsland_1_1conf_1_1vr_1_1_constraint_type_1_1_value_to_text_entry_1a06a51a86a19aff7eb3538cf51aff0bc2" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::ConstraintType::ValueToTextEntry</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

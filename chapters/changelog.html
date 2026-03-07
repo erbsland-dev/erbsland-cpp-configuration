@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../_static/ansi.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="Goals" href="goals.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage/index.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="goals.html">Goals</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-3-0-2026-02-28">Version 1.3.0 — 2026-02-28</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-changes">Main Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-changes-since-version-1-2">API Changes Since Version 1.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#added-public-types-and-headers">Added Public Types and Headers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-value-api">Extended <code class="docutils literal notranslate"><span class="pre">Value</span></code> API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#valuelist-semantics"><code class="docutils literal notranslate"><span class="pre">ValueList</span></code> Semantics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-parser-convenience-api">Extended <code class="docutils literal notranslate"><span class="pre">Parser</span></code> Convenience API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-name-and-namepath">Extended <code class="docutils literal notranslate"><span class="pre">Name</span></code> and <code class="docutils literal notranslate"><span class="pre">NamePath</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-string-api-unicode-aware">Extended <code class="docutils literal notranslate"><span class="pre">String</span></code> API (Unicode-Aware)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-error">Extended <code class="docutils literal notranslate"><span class="pre">Error</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-bytes">Extended <code class="docutils literal notranslate"><span class="pre">Bytes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-valuetype">Extended <code class="docutils literal notranslate"><span class="pre">ValueType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extended-valueiterator">Extended <code class="docutils literal notranslate"><span class="pre">ValueIterator</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#changed-regex-api">Changed <code class="docutils literal notranslate"><span class="pre">RegEx</span></code> API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#minor-signature-change">Minor Signature Change</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-2-0-2025-08-18">Version 1.2.0 — 2025-08-18</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-1-0-0-2025-07-31">Version 1.0.0 — 2025-07-31</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Changelog</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/chapters/changelog.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="changelog">
+<span id="index-0"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading"></a></h1>
+<section id="version-1-3-0-2026-02-28">
+<h2>Version 1.3.0 — 2026-02-28<a class="headerlink" href="#version-1-3-0-2026-02-28" title="Link to this heading"></a></h2>
+<p>This release introduces full support for validation rules in the configuration parser.</p>
+<p>The validation-rules implementation is intentionally separated from the core parser. It is only compiled if your application links against one of the dedicated validation-rule targets. This keeps the base parser lightweight while allowing you to enable validation when needed.</p>
+<p>See the validation-rules documentation for details and usage examples.</p>
+<section id="main-changes">
+<h3>Main Changes<a class="headerlink" href="#main-changes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Added the new namespace <code class="docutils literal notranslate"><span class="pre">erbsland::conf::vr</span></code> containing all validation-rule interfaces.</p></li>
+<li><p>Extended the documentation:</p>
+<ul>
+<li><p>Added a complete validation-rules reference.</p></li>
+<li><p>Added tutorials demonstrating how to use validation rules.</p></li>
+<li><p>Modernized the documentation build dependencies and configuration.</p></li>
+</ul>
+</li>
+<li><p>Extended the CMake build system:</p>
+<ul>
+<li><p>Added three validation-rule variants:</p>
+<ul>
+<li><p>Without regular expression support</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">std::regex</span></code></p></li>
+<li><p>Using the <em>Erbsland Regular Expression</em> library</p></li>
+</ul>
+</li>
+<li><p>Added an installation workflow for static library builds.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="api-changes-since-version-1-2">
+<h3>API Changes Since Version 1.2<a class="headerlink" href="#api-changes-since-version-1-2" title="Link to this heading"></a></h3>
+<section id="added-public-types-and-headers">
+<h4>Added Public Types and Headers<a class="headerlink" href="#added-public-types-and-headers" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CaseSensitivity</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Matrix&lt;T&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StringList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ValueList</span></code>, <code class="docutils literal notranslate"><span class="pre">ConstValueList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ValueMatrix</span></code>, <code class="docutils literal notranslate"><span class="pre">ConstValueMatrix</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StringConvertible</span></code> and <code class="docutils literal notranslate"><span class="pre">StringLike</span></code> concepts</p></li>
+</ul>
+</section>
+<section id="extended-value-api">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">Value</span></code> API<a class="headerlink" href="#extended-value-api" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Added:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">wasValidated()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validationRule()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isSecret()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isDefaultValue()</span></code></p></li>
+</ul>
+</li>
+<li><p>Added matrix helpers:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">asMatrix()</span></code>, <code class="docutils literal notranslate"><span class="pre">asMatrixOrThrow()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getMatrix()</span></code>, <code class="docutils literal notranslate"><span class="pre">getMatrixOrThrow()</span></code></p></li>
+</ul>
+</li>
+<li><p>Added conversions:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">toValueList()</span></code> (const and non-const)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toValueMatrix()</span></code> (const and non-const)</p></li>
+</ul>
+</li>
+<li><p>Extended text getter templates to accept string-like defaults (<code class="docutils literal notranslate"><span class="pre">String</span></code>, <code class="docutils literal notranslate"><span class="pre">std::string</span></code>, <code class="docutils literal notranslate"><span class="pre">std::u8string</span></code>)</p></li>
+</ul>
+</section>
+<section id="valuelist-semantics">
+<h4><code class="docutils literal notranslate"><span class="pre">ValueList</span></code> Semantics<a class="headerlink" href="#valuelist-semantics" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ValueList</span></code> is now defined as <code class="docutils literal notranslate"><span class="pre">std::vector&lt;ValuePtr&gt;</span></code> (mutable pointers).</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">ConstValueList</span></code> defined as <code class="docutils literal notranslate"><span class="pre">std::vector&lt;ConstValuePtr&gt;</span></code>.</p></li>
+</ul>
+</section>
+<section id="extended-parser-convenience-api">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">Parser</span></code> Convenience API<a class="headerlink" href="#extended-parser-convenience-api" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">parseFileOrThrow(...)</span></code>, <code class="docutils literal notranslate"><span class="pre">parseFile(...)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parseTextOrThrow(...)</span></code>, <code class="docutils literal notranslate"><span class="pre">parseText(...)</span></code></p></li>
+</ul>
+</section>
+<section id="extended-name-and-namepath">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">Name</span></code> and <code class="docutils literal notranslate"><span class="pre">NamePath</span></code><a class="headerlink" href="#extended-name-and-namepath" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Name</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">isReservedValidationRule()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEscapedReservedValidationRule()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">withReservedVRPrefixRemoved()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emptyInstance()</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NamePath</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Index</span></code>, <code class="docutils literal notranslate"><span class="pre">Count</span></code>, <code class="docutils literal notranslate"><span class="pre">npos</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find()</span></code>, <code class="docutils literal notranslate"><span class="pre">containsText()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subPath()</span></code>, <code class="docutils literal notranslate"><span class="pre">popBack()</span></code>, <code class="docutils literal notranslate"><span class="pre">clear()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NamePathList</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="extended-string-api-unicode-aware">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">String</span></code> API (Unicode-Aware)<a class="headerlink" href="#extended-string-api-unicode-aware" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">isValidUtf8()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">characterLength()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">characterCompare()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nameCompare()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startsWith()</span></code>, <code class="docutils literal notranslate"><span class="pre">contains()</span></code>, <code class="docutils literal notranslate"><span class="pre">endsWith()</span></code> with <code class="docutils literal notranslate"><span class="pre">CaseSensitivity</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">split()</span></code>, <code class="docutils literal notranslate"><span class="pre">join()</span></code>, <code class="docutils literal notranslate"><span class="pre">transformed()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">forEachCharacter()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toSafeText()</span></code></p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">char</span></code> and <code class="docutils literal notranslate"><span class="pre">char32_t</span></code> append overloads</p></li>
+</ul>
+</section>
+<section id="extended-error">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">Error</span></code><a class="headerlink" href="#extended-error" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Added copy-and-modify helpers:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">withNamePathAndLocation()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">withMessagePrefix()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">withMessage()</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="extended-bytes">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">Bytes</span></code><a class="headerlink" href="#extended-bytes" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">toHexForErrors()</span></code>.</p></li>
+</ul>
+</section>
+<section id="extended-valuetype">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">ValueType</span></code><a class="headerlink" href="#extended-valuetype" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">isStructural()</span></code></p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">isScalar()</span></code></p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">toValueDescription(bool)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isSingle()</span></code> is now deprecated (use <code class="docutils literal notranslate"><span class="pre">isScalar()</span></code>)</p></li>
+</ul>
+</section>
+<section id="extended-valueiterator">
+<h4>Extended <code class="docutils literal notranslate"><span class="pre">ValueIterator</span></code><a class="headerlink" href="#extended-valueiterator" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Now supports bidirectional iteration:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator--()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator--(int)</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="changed-regex-api">
+<h4>Changed <code class="docutils literal notranslate"><span class="pre">RegEx</span></code> API<a class="headerlink" href="#changed-regex-api" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Constructor now takes multiline state: <code class="docutils literal notranslate"><span class="pre">RegEx(String</span> <span class="pre">text,</span> <span class="pre">bool</span> <span class="pre">multiLine)</span></code></p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">isMultiLine()</span></code></p></li>
+<li><p>Equality comparison now includes multiline state.</p></li>
+</ul>
+</section>
+<section id="minor-signature-change">
+<h4>Minor Signature Change<a class="headerlink" href="#minor-signature-change" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Signer</span></code> constructor now takes <code class="docutils literal notranslate"><span class="pre">SignatureSignerPtr</span></code> by value.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="version-1-2-0-2025-08-18">
+<h2>Version 1.2.0 — 2025-08-18<a class="headerlink" href="#version-1-2-0-2025-08-18" title="Link to this heading"></a></h2>
+<p>This release extended the public API and resolved several issues.</p>
+</section>
+<section id="version-1-0-0-2025-07-31">
+<h2>Version 1.0.0 — 2025-07-31<a class="headerlink" href="#version-1-0-0-2025-07-31" title="Link to this heading"></a></h2>
+<p>First production release of the <em>Erbsland Configuration Parser for C++</em>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="goals.html" class="btn btn-neutral float-left" title="Goals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compile and Run Our Game &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Make the Field Configurable" href="08-improve-field.html" />
+    <link rel="prev" title="Write an Initial Game Version" href="06-initial-game-logic.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-project-structure.html">The Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-cmake-configuration.html">The CMake Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-write-minimal-main.html">Write a Minimal Main Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-compile-and-run.html">Compile and Run the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-provoking-errors.html">Provoking Some Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-initial-game-logic.html">Write an Initial Game Version</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Compile and Run Our Game</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-gameplay">The Gameplay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recap">Recap</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="08-improve-field.html">Make the Field Configurable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09-using-value-lists.html">Using Value Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10-the-next-steps.html">The Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Compile and Run Our Game</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/get-started/07-compile-and-run.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="compile-and-run-our-game">
+<h1>Compile and Run Our Game<a class="headerlink" href="#compile-and-run-our-game" title="Link to this heading"></a></h1>
+<p>Let’s compile our enhanced version of the project and try out the gameplay.</p>
+<ol class="arabic">
+<li><p>First, build the project:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cmake<span class="w"> </span>--build<span class="w"> </span>cmake-build
+<span class="go">...</span>
+</pre></div>
+</div>
+</li>
+<li><p>Make sure to fix any errors we previously introduced in the configuration file.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">configuration.elcl</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-erbsland-conf notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">[</span><span class="na">field</span><span class="p">]</span>
+<span class="linenos">2</span><span class="na">width</span><span class="o">:</span><span class="w"> </span><span class="mi">30</span>
+<span class="linenos">3</span><span class="na">height</span><span class="o">:</span><span class="w"> </span><span class="mi">16</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Now launch the game:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>./cmake-build/robot-escape/robot-escape<span class="w"> </span>configuration.elcl
+</pre></div>
+</div>
+</li>
+</ol>
+<section id="the-gameplay">
+<h2>The Gameplay<a class="headerlink" href="#the-gameplay" title="Link to this heading"></a></h2>
+<p>When the game starts, you’ll see a short welcome message followed by the rendered game field. A prompt invites you to enter your next move.</p>
+<pre class="erbsland-ansi-block literal-block">----------------------------==[ ROBOT ESCAPE ]==-----------------------------
+Welcome to Robot Escape!
+You (☻) must run to the exit (⚑) before any robot (♟) catches you.
+
+<span class="erbsland-ansi-bright-black">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░</span><span class="erbsland-ansi-green">┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>       <span class="erbsland-ansi-bright-red">♟</span>                      <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                 <span class="erbsland-ansi-bright-yellow">☻</span>     <span class="erbsland-ansi-bright-red">♟</span>      <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>        <span class="erbsland-ansi-bright-green">⚑</span>                     <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>            <span class="erbsland-ansi-bright-red">♟</span>                 <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+</span>
+Enter your move (n/e/s/w/q=quit): s</pre>
+<p>Each move updates the world: the player and robots move one step, and their paths are visualized using trails. Here’s how the game looks after a few steps:</p>
+<pre class="erbsland-ansi-block literal-block"><span class="erbsland-ansi-bright-black">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░</span><span class="erbsland-ansi-green">┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>       <span class="erbsland-ansi-bright-red">∙</span>                      <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>       <span class="erbsland-ansi-bright-red">∙</span>                      <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>       <span class="erbsland-ansi-bright-red">∙</span><span class="erbsland-ansi-bright-red">♟</span>                     <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                 <span class="erbsland-ansi-bright-yellow">∙</span>  <span class="erbsland-ansi-bright-red">♟</span><span class="erbsland-ansi-bright-red">∙∙∙</span>      <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>        <span class="erbsland-ansi-bright-green">⚑</span>      <span class="erbsland-ansi-bright-yellow">☻</span><span class="erbsland-ansi-bright-yellow">∙∙</span>            <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>             <span class="erbsland-ansi-bright-red">♟</span>                <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>             <span class="erbsland-ansi-bright-red">∙</span>                <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>            <span class="erbsland-ansi-bright-red">∙∙</span>                <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+</span>
+Enter your move (n/e/s/w/q=quit): w</pre>
+<p>This is getting intense! The robots are just one step behind…</p>
+<pre class="erbsland-ansi-block literal-block"><span class="erbsland-ansi-bright-black">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░</span><span class="erbsland-ansi-green">┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>          <span class="erbsland-ansi-bright-yellow">☻</span><span class="erbsland-ansi-bright-red">♟</span><span class="erbsland-ansi-bright-red">∙</span> <span class="erbsland-ansi-bright-red">♟</span><span class="erbsland-ansi-bright-red">∙</span>              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>          <span class="erbsland-ansi-bright-red">♟</span><span class="erbsland-ansi-bright-yellow">∙</span><span class="erbsland-ansi-bright-red">∙</span>  <span class="erbsland-ansi-bright-red">∙</span>              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>          <span class="erbsland-ansi-bright-red">∙</span><span class="erbsland-ansi-bright-yellow">∙</span><span class="erbsland-ansi-bright-red">∙</span>  <span class="erbsland-ansi-bright-red">∙</span>              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>        <span class="erbsland-ansi-bright-green">⚑</span>                     <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+</span>
+Enter your move (n/e/s/w/q=quit): w</pre>
+<p>And finally—you reach the goal unharmed!</p>
+<pre class="erbsland-ansi-block literal-block"><span class="erbsland-ansi-bright-black">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░</span><span class="erbsland-ansi-green">┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>        <span class="erbsland-ansi-bright-yellow">∙</span><span class="erbsland-ansi-bright-red">∙∙∙∙</span>                 <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>        <span class="erbsland-ansi-bright-yellow">∙</span><span class="erbsland-ansi-bright-red">∙</span><span class="erbsland-ansi-bright-red">♟</span>                   <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>        <span class="erbsland-ansi-bright-red">♟</span><span class="erbsland-ansi-bright-red">∙∙</span>                   <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>        <span class="erbsland-ansi-bright-yellow">☻</span><span class="erbsland-ansi-bright-red">♟</span>                    <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┃</span>                              <span class="erbsland-ansi-green">┃</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░</span><span class="erbsland-ansi-green">┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛</span><span class="erbsland-ansi-bright-black">░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+</span>
+You won!</pre>
+</section>
+<section id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Link to this heading"></a></h2>
+<p>Your game is up and running—and it already feels fun and challenging! Give it a few more rounds, explore different strategies, and start thinking about how you might expand or improve the gameplay.</p>
+<p class="sd-text-center"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-success sd-fs-5 sd-font-weight-bold sd-p-2 sd-my-4 reference internal" href="08-improve-field.html"><span class="doc">Make the Field Configurable →</span></a></span></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="06-initial-game-logic.html" class="btn btn-neutral float-left" title="Write an Initial Game Version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="08-improve-field.html" class="btn btn-neutral float-right" title="Make the Field Configurable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

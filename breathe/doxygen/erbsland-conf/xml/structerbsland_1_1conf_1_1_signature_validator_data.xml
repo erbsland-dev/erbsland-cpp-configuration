@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1_signature_validator_data" kind="struct" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::SignatureValidatorData</compoundname>
+    <includes refid="_signature_validator_data_8hpp" local="no">erbsland/conf/SignatureValidatorData.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_signature_validator_data_1a9b05a824712cf6b65bdcbdb5d5e66980" prot="public" static="no" mutable="no">
+        <type>SourceIdentifierPtr</type>
+        <definition>SourceIdentifierPtr erbsland::conf::SignatureValidatorData::sourceIdentifier</definition>
+        <argsstring></argsstring>
+        <name>sourceIdentifier</name>
+        <qualifiedname>erbsland::conf::SignatureValidatorData::sourceIdentifier</qualifiedname>
+        <briefdescription>
+<para>The source identifier of the verified document. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureValidatorData.hpp" line="20" column="25" bodyfile="erbsland/conf/SignatureValidatorData.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_signature_validator_data_1a190c39b5cb94f0e6ef2e8dc8487d6424" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::SignatureValidatorData::signatureText</definition>
+        <argsstring></argsstring>
+        <name>signatureText</name>
+        <qualifiedname>erbsland::conf::SignatureValidatorData::signatureText</qualifiedname>
+        <briefdescription>
+<para>The raw and unprocessed text from the signature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If a document has no <computeroutput>\@signature</computeroutput> line, this text is empty. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureValidatorData.hpp" line="26" column="12" bodyfile="erbsland/conf/SignatureValidatorData.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_signature_validator_data_1a35e3c514881743fc4fecd25dde2d12ab" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::SignatureValidatorData::documentDigest</definition>
+        <argsstring></argsstring>
+        <name>documentDigest</name>
+        <qualifiedname>erbsland::conf::SignatureValidatorData::documentDigest</qualifiedname>
+        <briefdescription>
+<para>The cryptographic hash of the document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The hash always has the format <computeroutput>&lt;type&gt; &lt;hash as a lowercase hex byte sequence&gt;</computeroutput>. As the responsibility of the application is only the verification of the signature, decoding of this text shouldn&apos;t be necessary. Instead, the application should compare and sign/verify this text as it is. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SignatureValidatorData.hpp" line="34" column="12" bodyfile="erbsland/conf/SignatureValidatorData.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The data from the parser to verify the signature of a document. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Tested:</title><para>Tested via <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> class. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>erbsland::conf::SignatureValidatorData</label>
+        <link refid="structerbsland_1_1conf_1_1_signature_validator_data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>documentDigest</edgelabel>
+          <edgelabel>signatureText</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::String</label>
+        <link refid="classerbsland_1_1conf_1_1_string"/>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/SignatureValidatorData.hpp" line="16" column="1" bodyfile="erbsland/conf/SignatureValidatorData.hpp" bodystart="16" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1_signature_validator_data_1a35e3c514881743fc4fecd25dde2d12ab" prot="public" virt="non-virtual"><scope>erbsland::conf::SignatureValidatorData</scope><name>documentDigest</name></member>
+      <member refid="structerbsland_1_1conf_1_1_signature_validator_data_1a190c39b5cb94f0e6ef2e8dc8487d6424" prot="public" virt="non-virtual"><scope>erbsland::conf::SignatureValidatorData</scope><name>signatureText</name></member>
+      <member refid="structerbsland_1_1conf_1_1_signature_validator_data_1a9b05a824712cf6b65bdcbdb5d5e66980" prot="public" virt="non-virtual"><scope>erbsland::conf::SignatureValidatorData</scope><name>sourceIdentifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

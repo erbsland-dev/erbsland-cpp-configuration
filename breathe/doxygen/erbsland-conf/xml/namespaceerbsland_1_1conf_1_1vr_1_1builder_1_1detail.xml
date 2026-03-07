@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceerbsland_1_1conf_1_1vr_1_1builder_1_1detail" kind="namespace" language="C++">
+    <compoundname>erbsland::conf::vr::builder::detail</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_default_value_factory_8hpp_1aecefd69bde23b16c7f6ef5530adf34d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(Integer value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="18" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="18" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a86bb9bce70e13a51ea1ab6642394e195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="19" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="19" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a0e7312bc07d4c020dc250aaacabc45d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(Float value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>Float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="20" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="20" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a6456c9f26c1e7f5ec7964abd8e1cc4d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const String &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="21" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="21" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a4c30d8c7ab45f8e08d6cde88e267415e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const char *value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="22" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="22" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1aadd8e06d889d26b3ff3e5abade3895ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::string &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="23" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="23" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a5d75ebafdb289d566cc0eb91950f7a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const Date &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="24" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="24" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1af4a8151c49515c3f75860c60e5ad7c71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const Time &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="25" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="25" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a80c931b4eb3f7006703bf12a77b5fcc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const DateTime &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_date_time" kindref="compound">DateTime</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="26" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="26" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a9b870eb6ba2c58050490d07bbaa5cfc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const Bytes &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="27" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="27" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a926300dff72a67b7cc424e56ed22a5dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const TimeDelta &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="28" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="28" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a8d4857ac5497be0f2552bf6c6b359765" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const RegEx &amp;value)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_reg_ex" kindref="compound">RegEx</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="29" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="29" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1aeb6e05af75941d3a8d4c2993692fe27a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::vector&lt; Integer &gt; &amp;values)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::vector&lt; Integer &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="30" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="30" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a397d694e8e300d92592c099f444d4383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::vector&lt; bool &gt; &amp;values)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::vector&lt; bool &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="31" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="31" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1aff519db245c4ad8f42610433823635ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::vector&lt; Float &gt; &amp;values)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::vector&lt; Float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="32" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="32" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1abec08bf0eda972de349930484a85d548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::vector&lt; String &gt; &amp;values)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="33" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="33" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1a1ab561ffd94aa9dd1a87989280fba393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::vector&lt; Bytes &gt; &amp;values)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref> &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="34" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="34" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1aea97bf9431ddd83f78f9a4c6989ba9c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; Integer &gt; &gt; &amp;values)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; Integer &gt; &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="35" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="35" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_default_value_factory_8hpp_1ab2173595fb81cad4092cc1201d42c8d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>impl::ValuePtr</type>
+        <definition>impl::ValuePtr erbsland::conf::vr::builder::detail::createDefaultValue</definition>
+        <argsstring>(const std::vector&lt; std::vector&lt; Float &gt; &gt; &amp;values)</argsstring>
+        <name>createDefaultValue</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::createDefaultValue</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; Float &gt; &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="36" column="17" declfile="erbsland/conf/vr/builder/DefaultValueFactory.hpp" declline="36" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_name_path_helper_8hpp_1a9675c76984a24662377caf8eb3a4eee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref></type>
+        <definition>NamePath erbsland::conf::vr::builder::detail::parseNamePathLike</definition>
+        <argsstring>(const NamePathLike &amp;namePathLike)</argsstring>
+        <name>parseNamePathLike</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::parseNamePathLike</qualifiedname>
+        <param>
+          <type>const NamePathLike &amp;</type>
+          <declname>namePathLike</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/NamePathHelper.hpp" line="14" column="11" declfile="erbsland/conf/vr/builder/NamePathHelper.hpp" declline="14" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_name_path_helper_8hpp_1a7bcf7de28f46b9b1e52dc4359dcb6a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>NamePathList</type>
+        <definition>NamePathList erbsland::conf::vr::builder::detail::parseNamePathList</definition>
+        <argsstring>(const std::vector&lt; NamePathLike &gt; &amp;paths)</argsstring>
+        <name>parseNamePathList</name>
+        <qualifiedname>erbsland::conf::vr::builder::detail::parseNamePathList</qualifiedname>
+        <param>
+          <type>const std::vector&lt; NamePathLike &gt; &amp;</type>
+          <declname>paths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/builder/NamePathHelper.hpp" line="15" column="15" declfile="erbsland/conf/vr/builder/NamePathHelper.hpp" declline="15" declcolumn="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/builder/DefaultValueFactory.hpp" line="15" column="1"/>
+  </compounddef>
+</doxygen>

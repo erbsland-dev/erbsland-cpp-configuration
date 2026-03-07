@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_time_delta_8hpp" kind="file" language="C++">
+    <compoundname>TimeDelta.hpp</compoundname>
+    <includes refid="_test_format_8hpp" local="yes">TestFormat.hpp</includes>
+    <includes refid="_time_unit_8hpp" local="yes">TimeUnit.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">map</includes>
+    <includes local="no">ranges</includes>
+    <includedby refid="_value_8hpp" local="yes">erbsland/conf/Value.hpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <includedby refid="_default_value_factory_8hpp" local="yes">erbsland/conf/vr/builder/DefaultValueFactory.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/TimeDelta.hpp</label>
+        <link refid="_time_delta_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>TimeUnit.hpp</label>
+        <link refid="_time_unit_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="22">
+        <label>array</label>
+      </node>
+      <node id="3">
+        <label>bitset</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>format</label>
+      </node>
+      <node id="17">
+        <label>functional</label>
+      </node>
+      <node id="12">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="13">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="14">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="15">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="24">
+        <label>map</label>
+      </node>
+      <node id="18">
+        <label>optional</label>
+      </node>
+      <node id="19">
+        <label>ranges</label>
+      </node>
+      <node id="20">
+        <label>span</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>unordered_map</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>erbsland/conf/TimeDelta.hpp</label>
+        <link refid="_time_delta_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+      <node id="7">
+        <label>erbsland/conf/vr/builder/DefaultValueFactory.hpp</label>
+        <link refid="_default_value_factory_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>erbsland/conf/vr/builder/all.hpp</label>
+        <link refid="vr_2builder_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_time_delta" prot="public">erbsland::conf::TimeDelta</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2024-2025<sp/>Tobias<sp/>Erbsland<sp/>-<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TestFormat.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TimeUnit.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ranges&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classerbsland_1_1conf_1_1_time_delta" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/>=<sp/>int64_t;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36" refid="classerbsland_1_1conf_1_1_time_delta_1a03b298bd4d8a83323dcdbb9438335816" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a03b298bd4d8a83323dcdbb9438335816" kindref="member">TimeDelta</ref>(<ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref><sp/>unit,<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" kindref="member">count</ref>)<sp/>noexcept<sp/>:<sp/>_counts{std::pair{unit,<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" kindref="member">count</ref>}}<sp/>{};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classerbsland_1_1conf_1_1_time_delta_1a0c500fcd9e0f385e639e43b900758d5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a0c500fcd9e0f385e639e43b900758d5e" kindref="member">TimeDelta</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="classerbsland_1_1conf_1_1_time_delta_1a5ce047dd27304dbafca5c6e0cc6937fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a5ce047dd27304dbafca5c6e0cc6937fb" kindref="member">~TimeDelta</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43" refid="classerbsland_1_1conf_1_1_time_delta_1a9903dbcab44fa4284f56377ecdc5fbc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a9903dbcab44fa4284f56377ecdc5fbc7" kindref="member">TimeDelta</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45" refid="classerbsland_1_1conf_1_1_time_delta_1a88cb3f6eac2276054377e2a291028480" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a88cb3f6eac2276054377e2a291028480" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>operators</highlight></codeline>
+<codeline lineno="55" refid="classerbsland_1_1conf_1_1_time_delta_1af224dcb8e71e3c832fa16d9dda17167f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1af224dcb8e71e3c832fa16d9dda17167f" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::abs(<ref refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" kindref="member">toSeconds</ref>()<sp/>-<sp/>other.toSeconds())<sp/>&lt;<sp/>1e-9;<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classerbsland_1_1conf_1_1_time_delta_1a922bec207521f6c71c5277444e6c2195" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a922bec207521f6c71c5277444e6c2195" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!<ref refid="classerbsland_1_1conf_1_1_time_delta_1af224dcb8e71e3c832fa16d9dda17167f" kindref="member">operator==</ref>(other);<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classerbsland_1_1conf_1_1_time_delta_1a90e353ac7d778dac9541655616eb1413" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a90e353ac7d778dac9541655616eb1413" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" kindref="member">toSeconds</ref>()<sp/>&lt;<sp/>other.toSeconds();<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classerbsland_1_1conf_1_1_time_delta_1aae1ae17be2597f340ca3379533e49d5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1aae1ae17be2597f340ca3379533e49d5f" kindref="member">operator&lt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a90e353ac7d778dac9541655616eb1413" kindref="member">operator&lt;</ref>(other)<sp/>||<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1af224dcb8e71e3c832fa16d9dda17167f" kindref="member">operator==</ref>(other);<sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classerbsland_1_1conf_1_1_time_delta_1af5057c801782e4888bb7117e10c977d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1af5057c801782e4888bb7117e10c977d7" kindref="member">operator&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" kindref="member">toSeconds</ref>()<sp/>&gt;<sp/>other.toSeconds();<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classerbsland_1_1conf_1_1_time_delta_1ab02d9414bf04de39df033b9eea4c484c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ab02d9414bf04de39df033b9eea4c484c" kindref="member">operator&gt;=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1af5057c801782e4888bb7117e10c977d7" kindref="member">operator&gt;</ref>(other)<sp/>||<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1af224dcb8e71e3c832fa16d9dda17167f" kindref="member">operator==</ref>(other);<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classerbsland_1_1conf_1_1_time_delta_1a1e588314e7a8fd2737340d461f644db8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a1e588314e7a8fd2737340d461f644db8" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classerbsland_1_1conf_1_1_time_delta_1ace8896193e3c026c192ba089d39cbe1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ace8896193e3c026c192ba089d39cbe1c" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classerbsland_1_1conf_1_1_time_delta_1a0922c0c490b1a893b1891e68bf23b0a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a0922c0c490b1a893b1891e68bf23b0a9" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classerbsland_1_1conf_1_1_time_delta_1acca9b46464f304d5eb8965048a996d36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1acca9b46464f304d5eb8965048a996d36" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="classerbsland_1_1conf_1_1_time_delta_1ae66954371df48dd5dfc042acd2e48586" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ae66954371df48dd5dfc042acd2e48586" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref><sp/>&amp;other)<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>accessors</highlight></codeline>
+<codeline lineno="130" refid="classerbsland_1_1conf_1_1_time_delta_1ad14f052055b86400436a4d0568896281" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad14f052055b86400436a4d0568896281" kindref="member">isZero</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_counts.empty()<sp/>||<sp/>std::ranges::all_of(_counts,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;pair)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pair.second<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classerbsland_1_1conf_1_1_time_delta_1ad634f10f7b9c25fe264773ab0655f662" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad634f10f7b9c25fe264773ab0655f662" kindref="member">empty</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_counts.empty();<sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classerbsland_1_1conf_1_1_time_delta_1a9787b39f2a5332abb6f4a6d46e768cc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a9787b39f2a5332abb6f4a6d46e768cc8" kindref="member">hasMultipleCounts</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_counts.size()<sp/>&gt;<sp/>1;<sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;TimeUnit::Enum<sp/>tUnit&gt;</highlight></codeline>
+<codeline lineno="152" refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" kindref="member">count</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_counts.contains(tUnit)<sp/>?<sp/>_counts.at(tUnit)<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classerbsland_1_1conf_1_1_time_delta_1ae520d4dd4ac9ede1953a6ce018229831" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ae520d4dd4ac9ede1953a6ce018229831" kindref="member">count</ref>(<ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref><sp/>unit)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_counts.contains(unit)<sp/>?<sp/>_counts.at(unit)<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;TimeUnit::Enum<sp/>tUnit&gt;</highlight></codeline>
+<codeline lineno="171" refid="classerbsland_1_1conf_1_1_time_delta_1a643b27c6e66c1b397e9d169e271fc794" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a643b27c6e66c1b397e9d169e271fc794" kindref="member">setCount</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" kindref="member">count</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_counts[tUnit]<sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="classerbsland_1_1conf_1_1_time_delta_1acab8538d612d58c3690b8ee25a4d432b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1acab8538d612d58c3690b8ee25a4d432b" kindref="member">setCount</ref>(<ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref><sp/>unit,<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" kindref="member">count</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_counts[unit]<sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" kindref="member">count</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="classerbsland_1_1conf_1_1_time_delta_1a8a8b43d9de995eb38bf1c77b15f273b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::vector&lt;TimeUnit&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a8a8b43d9de995eb38bf1c77b15f273b9" kindref="member">units</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;TimeUnit&gt;<sp/>result;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.reserve(_counts.size());</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;unit<sp/>:<sp/>_counts<sp/>|<sp/>std::views::keys)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.push_back(unit);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="classerbsland_1_1conf_1_1_time_delta_1a9292dace82e62be22ed6e00136b3d256" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a9292dace82e62be22ed6e00136b3d256" kindref="member">nanoseconds</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Nanoseconds&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="classerbsland_1_1conf_1_1_time_delta_1a1f5b5e77bec9fbaa842ae3c6feadb7e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a1f5b5e77bec9fbaa842ae3c6feadb7e4" kindref="member">setNanoseconds</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a9292dace82e62be22ed6e00136b3d256" kindref="member">nanoseconds</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Nanoseconds&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1a9292dace82e62be22ed6e00136b3d256" kindref="member">nanoseconds</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="classerbsland_1_1conf_1_1_time_delta_1ab72c02e4dfd3bebdd31d4d12fabf1d4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ab72c02e4dfd3bebdd31d4d12fabf1d4f" kindref="member">microseconds</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Microseconds&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="classerbsland_1_1conf_1_1_time_delta_1a20bc8faa467518ee5b63e2747cceeb35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a20bc8faa467518ee5b63e2747cceeb35" kindref="member">setMicroseconds</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ab72c02e4dfd3bebdd31d4d12fabf1d4f" kindref="member">microseconds</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Microseconds&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ab72c02e4dfd3bebdd31d4d12fabf1d4f" kindref="member">microseconds</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="classerbsland_1_1conf_1_1_time_delta_1add0f85360cce70ca466d5a89f44c0de0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1add0f85360cce70ca466d5a89f44c0de0" kindref="member">milliseconds</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Milliseconds&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="classerbsland_1_1conf_1_1_time_delta_1a03d6d75512436a3a57a42e0458585ec8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a03d6d75512436a3a57a42e0458585ec8" kindref="member">setMilliseconds</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1add0f85360cce70ca466d5a89f44c0de0" kindref="member">milliseconds</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Milliseconds&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1add0f85360cce70ca466d5a89f44c0de0" kindref="member">milliseconds</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="classerbsland_1_1conf_1_1_time_delta_1a3a871fee33d70224e9c4b7aa49784be7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a3a871fee33d70224e9c4b7aa49784be7" kindref="member">seconds</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Seconds&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="classerbsland_1_1conf_1_1_time_delta_1a2f0f25bb3d855afab6827b482e75cf9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a2f0f25bb3d855afab6827b482e75cf9b" kindref="member">setSeconds</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a3a871fee33d70224e9c4b7aa49784be7" kindref="member">seconds</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Seconds&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1a3a871fee33d70224e9c4b7aa49784be7" kindref="member">seconds</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="classerbsland_1_1conf_1_1_time_delta_1acc09b08f0b86f39d6e6026d85d565b26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1acc09b08f0b86f39d6e6026d85d565b26" kindref="member">minutes</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Minutes&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="classerbsland_1_1conf_1_1_time_delta_1afefc9f1a0917bff7b83ffae7a554ce53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1afefc9f1a0917bff7b83ffae7a554ce53" kindref="member">setMinutes</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1acc09b08f0b86f39d6e6026d85d565b26" kindref="member">minutes</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Minutes&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1acc09b08f0b86f39d6e6026d85d565b26" kindref="member">minutes</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="classerbsland_1_1conf_1_1_time_delta_1a09ea33bd403e517c5801fe8ff60f64d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a09ea33bd403e517c5801fe8ff60f64d5" kindref="member">hours</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Hours&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classerbsland_1_1conf_1_1_time_delta_1a8effeddc95b8a1d9de24c0f53b7c908f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a8effeddc95b8a1d9de24c0f53b7c908f" kindref="member">setHours</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a09ea33bd403e517c5801fe8ff60f64d5" kindref="member">hours</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Hours&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1a09ea33bd403e517c5801fe8ff60f64d5" kindref="member">hours</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="classerbsland_1_1conf_1_1_time_delta_1a740bc103504623d4b3adf9419b17990a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a740bc103504623d4b3adf9419b17990a" kindref="member">days</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Days&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="classerbsland_1_1conf_1_1_time_delta_1a130607997118dfc105d7bdc72eef634c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a130607997118dfc105d7bdc72eef634c" kindref="member">setDays</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a740bc103504623d4b3adf9419b17990a" kindref="member">days</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Days&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1a740bc103504623d4b3adf9419b17990a" kindref="member">days</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="classerbsland_1_1conf_1_1_time_delta_1a2181a5e40cd3f0848867b610f5b87804" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a2181a5e40cd3f0848867b610f5b87804" kindref="member">weeks</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Weeks&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="classerbsland_1_1conf_1_1_time_delta_1a63cdd98ac30290cbcbc72b0331ef088a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a63cdd98ac30290cbcbc72b0331ef088a" kindref="member">setWeeks</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a2181a5e40cd3f0848867b610f5b87804" kindref="member">weeks</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Weeks&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1a2181a5e40cd3f0848867b610f5b87804" kindref="member">weeks</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295" refid="classerbsland_1_1conf_1_1_time_delta_1ac48ffe6ddc561d83a32406ef1101c7ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac48ffe6ddc561d83a32406ef1101c7ff" kindref="member">months</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Months&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="classerbsland_1_1conf_1_1_time_delta_1ab84d8b937670958b1719ef88a707cdfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ab84d8b937670958b1719ef88a707cdfb" kindref="member">setMonths</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac48ffe6ddc561d83a32406ef1101c7ff" kindref="member">months</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Months&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac48ffe6ddc561d83a32406ef1101c7ff" kindref="member">months</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="classerbsland_1_1conf_1_1_time_delta_1ad8d533dba60d0923b0c0064d15c183e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad8d533dba60d0923b0c0064d15c183e6" kindref="member">years</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>count&lt;TimeUnit::Years&gt;();<sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="classerbsland_1_1conf_1_1_time_delta_1a09a2971dcd94e95cff14ca4d5cbc67b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a09a2971dcd94e95cff14ca4d5cbc67b6" kindref="member">setYears</ref>(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad8d533dba60d0923b0c0064d15c183e6" kindref="member">years</ref>)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{<sp/>setCount&lt;TimeUnit::Years&gt;(<ref refid="classerbsland_1_1conf_1_1_time_delta_1ad8d533dba60d0923b0c0064d15c183e6" kindref="member">years</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>conversion</highlight></codeline>
+<codeline lineno="324" refid="classerbsland_1_1conf_1_1_time_delta_1a588838c3983764ca9c8cf4e6c441ac41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a588838c3983764ca9c8cf4e6c441ac41" kindref="member">isSecondBased</ref>()<sp/>const<sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac48ffe6ddc561d83a32406ef1101c7ff" kindref="member">months</ref>()<sp/>==<sp/>0<sp/>and<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ad8d533dba60d0923b0c0064d15c183e6" kindref="member">years</ref>()<sp/>==<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332" refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" kindref="member">toSeconds</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="classerbsland_1_1conf_1_1_time_delta_1a3b3397af34eca9548138aa18dc869172" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>int64_t<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a3b3397af34eca9548138aa18dc869172" kindref="member">toNanoseconds</ref>()<sp/>const<sp/>;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343" refid="classerbsland_1_1conf_1_1_time_delta_1a8fb1f3463a91bbc0df67ac827f2dc122" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1a8fb1f3463a91bbc0df67ac827f2dc122" kindref="member">toText</ref>()<sp/>const<sp/>;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;<ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref>&gt;<sp/>_counts;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/TimeDelta.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_access_check" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::conf::AccessCheck</compoundname>
+    <derivedcompoundref refid="classerbsland_1_1conf_1_1_file_access_check" prot="public" virt="non-virtual">erbsland::conf::FileAccessCheck</derivedcompoundref>
+    <includes refid="_access_check_8hpp" local="no">erbsland/conf/AccessCheck.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_access_check_1af2a5a60e0b83686753d9b7e9ad634b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual erbsland::conf::AccessCheck::~AccessCheck</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AccessCheck</name>
+        <qualifiedname>erbsland::conf::AccessCheck::~AccessCheck</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/AccessCheck.hpp" line="24" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_access_check_1a6c7bd2239f032c431e6c1f1d165bbc8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>AccessCheckResult</type>
+        <definition>virtual AccessCheckResult erbsland::conf::AccessCheck::check</definition>
+        <argsstring>(const AccessSources &amp;sources)=0</argsstring>
+        <name>check</name>
+        <qualifiedname>erbsland::conf::AccessCheck::check</qualifiedname>
+        <reimplementedby refid="classerbsland_1_1conf_1_1_file_access_check_1a69c848a5c8b4cb9f851f69ac5e82b2d6">check</reimplementedby>
+        <param>
+          <type>const <ref refid="structerbsland_1_1conf_1_1_access_sources" kindref="compound">AccessSources</ref> &amp;</type>
+          <declname>sources</declname>
+        </param>
+        <briefdescription>
+<para>The check function is called for every source, including the initial source that is passed to the <computeroutput>parse()</computeroutput> function call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>You can either grant or deny access to this source. If you deny the access to the source, the parser will throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" kindref="member">ErrorCategory::Access</ref></computeroutput>.</para>
+<para>Instead of returning <computeroutput>AccessResult::Denied</computeroutput>, you can also throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" kindref="member">ErrorCategory::Access</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sources</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sources that are verified. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return either <computeroutput>AccessResult::Granted</computeroutput> or <computeroutput>AccessResult::Denied</computeroutput>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alternatively, throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with the <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493aa75b57423a13ddd2fafa80ee43b0ae56" kindref="member">ErrorCategory::Access</ref></computeroutput>.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Not Tested:</title><para>This is part of <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/AccessCheck.hpp" line="39" column="31"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The interface to access check implementations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>erbsland::conf::AccessCheck</label>
+        <link refid="classerbsland_1_1conf_1_1_access_check"/>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::FileAccessCheck</label>
+        <link refid="classerbsland_1_1conf_1_1_file_access_check"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="erbsland/conf/AccessCheck.hpp" line="21" column="1" bodyfile="erbsland/conf/AccessCheck.hpp" bodystart="21" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_access_check_1a6c7bd2239f032c431e6c1f1d165bbc8e" prot="public" virt="pure-virtual"><scope>erbsland::conf::AccessCheck</scope><name>check</name></member>
+      <member refid="classerbsland_1_1conf_1_1_access_check_1af2a5a60e0b83686753d9b7e9ad634b14" prot="public" virt="virtual"><scope>erbsland::conf::AccessCheck</scope><name>~AccessCheck</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

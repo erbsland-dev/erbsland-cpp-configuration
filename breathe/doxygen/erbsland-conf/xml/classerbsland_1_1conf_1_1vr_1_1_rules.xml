@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1vr_1_1_rules" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::conf::vr::Rules</compoundname>
+    <includes refid="_rules_8hpp" local="no">erbsland/conf/vr/Rules.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_1a8b67ba48f4bc86e0e501b252986b8057" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual erbsland::conf::vr::Rules::~Rules</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Rules</name>
+        <qualifiedname>erbsland::conf::vr::Rules::~Rules</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rules.hpp" line="27" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_1ad0cd98fe1ede0dff8d0cffaeb72180fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void erbsland::conf::vr::Rules::validate</definition>
+        <argsstring>(const ValuePtr &amp;value, Integer version)=0</argsstring>
+        <name>validate</name>
+        <qualifiedname>erbsland::conf::vr::Rules::validate</qualifiedname>
+        <param>
+          <type>const ValuePtr &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+<para>Validate a document or document branch against these rules. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Validation of the values also assigns additional meta-data to the values. Missing values with defaults are added to the validated branch.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value or document to validate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The version of the document to validate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Validation) On any validation error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rules.hpp" line="38" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_rules_1a89594bfca39d429e0db4656f283e8e40" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>RulesPtr</type>
+        <definition>static RulesPtr erbsland::conf::vr::Rules::createFromDocument</definition>
+        <argsstring>(const DocumentPtr &amp;document)</argsstring>
+        <name>createFromDocument</name>
+        <qualifiedname>erbsland::conf::vr::Rules::createFromDocument</qualifiedname>
+        <param>
+          <type>const DocumentPtr &amp;</type>
+          <declname>document</declname>
+        </param>
+        <briefdescription>
+<para>Create and validate rules from a rules-definition document. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This reads all rules from the given document and validates the resulting rules definition. If the document contains any errors, an exception is thrown.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The document to read rules from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The finalized rules definition. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Validation) on any error found in the document or rule definition. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Rules.hpp" line="49" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A set of validation rules. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/Rules.hpp" line="24" column="1" bodyfile="erbsland/conf/vr/Rules.hpp" bodystart="24" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_1a89594bfca39d429e0db4656f283e8e40" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::Rules</scope><name>createFromDocument</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_1ad0cd98fe1ede0dff8d0cffaeb72180fa" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Rules</scope><name>validate</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_rules_1a8b67ba48f4bc86e0e501b252986b8057" prot="public" virt="virtual"><scope>erbsland::conf::vr::Rules</scope><name>~Rules</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

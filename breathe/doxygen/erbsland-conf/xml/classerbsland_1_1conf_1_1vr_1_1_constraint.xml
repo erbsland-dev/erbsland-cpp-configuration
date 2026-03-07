@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1vr_1_1_constraint" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::conf::vr::Constraint</compoundname>
+    <includes refid="_constraint_8hpp" local="no">erbsland/conf/vr/Constraint.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1ac1982521818604a4d04654e2769ab474" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual erbsland::conf::vr::Constraint::~Constraint</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Constraint</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::~Constraint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="23" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a78379c1000c8bdb1cdf2890b78eee7fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>virtual String erbsland::conf::vr::Constraint::name</definition>
+        <argsstring>() const =0</argsstring>
+        <name>name</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::name</qualifiedname>
+        <briefdescription>
+<para>The name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="27" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1afa1f7d95efefbf42b67bc9c03ea3ee32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1vr_1_1_constraint_type" kindref="compound">ConstraintType</ref></type>
+        <definition>virtual ConstraintType erbsland::conf::vr::Constraint::type</definition>
+        <argsstring>() const =0</argsstring>
+        <name>type</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::type</qualifiedname>
+        <briefdescription>
+<para>The type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="29" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a05f546ccbe0af9ed1d1466a5c4d7ce93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Constraint::hasCustomError</definition>
+        <argsstring>() const =0</argsstring>
+        <name>hasCustomError</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::hasCustomError</qualifiedname>
+        <briefdescription>
+<para>Test if a custom error message set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="31" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a8e34525eadda456366e874bb2c4e8e24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>virtual String erbsland::conf::vr::Constraint::customError</definition>
+        <argsstring>() const =0</argsstring>
+        <name>customError</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::customError</qualifiedname>
+        <briefdescription>
+<para>The custom error message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="33" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a99ff26b0147d562f12e45610ff6c4751" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Constraint::isNegated</definition>
+        <argsstring>() const =0</argsstring>
+        <name>isNegated</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::isNegated</qualifiedname>
+        <briefdescription>
+<para>If the result of this constraint test is negated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="35" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a18d035908dd8b1a3e70648912c74c1c5" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool erbsland::conf::vr::Constraint::hasLocation</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>hasLocation</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::hasLocation</qualifiedname>
+        <briefdescription>
+<para>Test if there is location info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="39" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1aced87c240f280d476e87ce605d958127" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+        <definition>virtual const Location &amp; erbsland::conf::vr::Constraint::location</definition>
+        <argsstring>() const noexcept=0</argsstring>
+        <name>location</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::location</qualifiedname>
+        <briefdescription>
+<para>Get the location info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="41" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1vr_1_1_constraint_1a75870f6312dfc53b900371a6a1c30f2f" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void erbsland::conf::vr::Constraint::setLocation</definition>
+        <argsstring>(const Location &amp;newLocation) noexcept=0</argsstring>
+        <name>setLocation</name>
+        <qualifiedname>erbsland::conf::vr::Constraint::setLocation</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_location" kindref="compound">Location</ref> &amp;</type>
+          <declname>newLocation</declname>
+        </param>
+        <briefdescription>
+<para>Set the location info. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/Constraint.hpp" line="43" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A constraint for a validation-rule. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/vr/Constraint.hpp" line="21" column="1" bodyfile="erbsland/conf/vr/Constraint.hpp" bodystart="21" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1a8e34525eadda456366e874bb2c4e8e24" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>customError</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1a05f546ccbe0af9ed1d1466a5c4d7ce93" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>hasCustomError</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1a18d035908dd8b1a3e70648912c74c1c5" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>hasLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1a99ff26b0147d562f12e45610ff6c4751" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>isNegated</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1aced87c240f280d476e87ce605d958127" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>location</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1a78379c1000c8bdb1cdf2890b78eee7fc" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>name</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1a75870f6312dfc53b900371a6a1c30f2f" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>setLocation</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1afa1f7d95efefbf42b67bc9c03ea3ee32" prot="public" virt="pure-virtual"><scope>erbsland::conf::vr::Constraint</scope><name>type</name></member>
+      <member refid="classerbsland_1_1conf_1_1vr_1_1_constraint_1ac1982521818604a4d04654e2769ab474" prot="public" virt="virtual"><scope>erbsland::conf::vr::Constraint</scope><name>~Constraint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

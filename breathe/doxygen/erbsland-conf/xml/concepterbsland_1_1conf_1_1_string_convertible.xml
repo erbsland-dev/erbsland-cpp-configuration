@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="concepterbsland_1_1conf_1_1_string_convertible" kind="concept">
+    <compoundname>erbsland::conf::StringConvertible</compoundname>
+    <includes refid="_string_convertible_8hpp" local="no">erbsland/conf/StringConvertible.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename T&gt;
+concept <ref refid="concepterbsland_1_1conf_1_1_string_convertible" kindref="compound">erbsland::conf::StringConvertible</ref> =  std::is_convertible_v&lt;T, std::string&gt; || std::is_convertible_v&lt;T, std::u8string&gt; ||
+    std::is_convertible_v&lt;T, std::string_view&gt; || std::is_convertible_v&lt;T, std::u8string_view&gt;    </initializer>
+    <briefdescription>
+<para>Concept to check if a type is convertible to one of the supported string types. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/StringConvertible.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_time_delta" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>erbsland::conf::TimeDelta</compoundname>
+    <includes refid="_time_delta_8hpp" local="no">erbsland/conf/TimeDelta.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" prot="public" static="no">
+        <type>int64_t</type>
+        <definition>using erbsland::conf::TimeDelta::Count =  int64_t</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <qualifiedname>erbsland::conf::TimeDelta::Count</qualifiedname>
+        <briefdescription>
+<para>The integer type used to represent time quantities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="31" column="5" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_time_delta_1af9e96c6069d048bcb2d56c58bf24b858" prot="private" static="no" mutable="no">
+        <type>std::map&lt; <ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref>, <ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref> &gt;</type>
+        <definition>std::map&lt;TimeUnit, Count&gt; erbsland::conf::TimeDelta::_counts</definition>
+        <argsstring></argsstring>
+        <name>_counts</name>
+        <qualifiedname>erbsland::conf::TimeDelta::_counts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="346" column="14" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="346" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a03b298bd4d8a83323dcdbb9438335816" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeDelta::TimeDelta</definition>
+        <argsstring>(TimeUnit unit, Count count) noexcept</argsstring>
+        <name>TimeDelta</name>
+        <qualifiedname>erbsland::conf::TimeDelta::TimeDelta</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref></type>
+          <declname>unit</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Create a time delta with a single unit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="36" column="5" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a0c500fcd9e0f385e639e43b900758d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeDelta::TimeDelta</definition>
+        <argsstring>()=default</argsstring>
+        <name>TimeDelta</name>
+        <qualifiedname>erbsland::conf::TimeDelta::TimeDelta</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="39" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a5ce047dd27304dbafca5c6e0cc6937fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeDelta::~TimeDelta</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TimeDelta</name>
+        <qualifiedname>erbsland::conf::TimeDelta::~TimeDelta</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="41" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a9903dbcab44fa4284f56377ecdc5fbc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TimeDelta::TimeDelta</definition>
+        <argsstring>(const TimeDelta &amp;)=default</argsstring>
+        <name>TimeDelta</name>
+        <qualifiedname>erbsland::conf::TimeDelta::TimeDelta</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default copy constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="43" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a88cb3f6eac2276054377e2a291028480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+        <definition>TimeDelta &amp; erbsland::conf::TimeDelta::operator=</definition>
+        <argsstring>(const TimeDelta &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Default copy assignment. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="45" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1af224dcb8e71e3c832fa16d9dda17167f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::operator==</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two time deltas for near-equality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This comparison allows for small rounding differences in fractional seconds.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other time delta to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the deltas differ by less than one nanosecond in seconds. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="55" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a922bec207521f6c71c5277444e6c2195" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::operator!=</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two time deltas for inequality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other time delta to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if the time deltas differ, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="62" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a90e353ac7d778dac9541655616eb1413" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::operator&lt;</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two time deltas for less-than. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other time delta to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this time delta is less than the other, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="69" column="5" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1aae1ae17be2597f340ca3379533e49d5f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::operator&lt;=</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator&lt;=</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator&lt;=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two time deltas for less-or-equal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other time delta to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this time delta is less than or equal to the other, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="76" column="5" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1af5057c801782e4888bb7117e10c977d7" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::operator&gt;</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator&gt;</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two time deltas for greater-than. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other time delta to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this time delta is greater than the other, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="83" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ab02d9414bf04de39df033b9eea4c484c" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::operator&gt;=</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator&gt;=</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator&gt;=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two time deltas for greater-or-equal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other time delta to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> if this time delta is greater than or equal to the other, <computeroutput>false</computeroutput> otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="90" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a1e588314e7a8fd2737340d461f644db8" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref></type>
+        <definition>TimeDelta erbsland::conf::TimeDelta::operator+</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator+</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Add two time deltas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time delta to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sum of the two time deltas. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="97" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ace8896193e3c026c192ba089d39cbe1c" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref></type>
+        <definition>TimeDelta erbsland::conf::TimeDelta::operator-</definition>
+        <argsstring>(const TimeDelta &amp;other) const noexcept</argsstring>
+        <name>operator-</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Subtract one time delta from another. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time delta to subtract. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The difference of the two time deltas. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="104" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a0922c0c490b1a893b1891e68bf23b0a9" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+        <definition>TimeDelta &amp; erbsland::conf::TimeDelta::operator+=</definition>
+        <argsstring>(const TimeDelta &amp;other) noexcept</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator+=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Add a time delta to this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time delta to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this time delta. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="111" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1acca9b46464f304d5eb8965048a996d36" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+        <definition>TimeDelta &amp; erbsland::conf::TimeDelta::operator-=</definition>
+        <argsstring>(const TimeDelta &amp;other) noexcept</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator-=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Subtract a time delta from this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time delta to subtract. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this time delta. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="118" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ad14f052055b86400436a4d0568896281" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::isZero</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isZero</name>
+        <qualifiedname>erbsland::conf::TimeDelta::isZero</qualifiedname>
+        <briefdescription>
+<para>Test if this time delta is zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="130" column="11" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="130" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ad634f10f7b9c25fe264773ab0655f662" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>empty</name>
+        <qualifiedname>erbsland::conf::TimeDelta::empty</qualifiedname>
+        <briefdescription>
+<para>Test if this time delta is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the case if the time delta is default constructed and contains no counts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="140" column="11" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a9787b39f2a5332abb6f4a6d46e768cc8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::hasMultipleCounts</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>hasMultipleCounts</name>
+        <qualifiedname>erbsland::conf::TimeDelta::hasMultipleCounts</qualifiedname>
+        <briefdescription>
+<para>Test if this time delta combines multiple counts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="144" column="11" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">TimeUnit::Enum</ref></type>
+            <declname>tUnit</declname>
+            <defname>tUnit</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::count</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>count</name>
+        <qualifiedname>erbsland::conf::TimeDelta::count</qualifiedname>
+        <briefdescription>
+<para>Get the count for a specific time unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>tUnit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time unit enum value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The count for the specified unit, or zero if not set. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="152" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ae520d4dd4ac9ede1953a6ce018229831" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::count</definition>
+        <argsstring>(TimeUnit unit) const noexcept</argsstring>
+        <name>count</name>
+        <qualifiedname>erbsland::conf::TimeDelta::count</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref></type>
+          <declname>unit</declname>
+        </param>
+        <briefdescription>
+<para>Get the count for a specific time unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>unit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The count for the specified unit, or zero if not set. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="161" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a643b27c6e66c1b397e9d169e271fc794" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type><ref refid="classerbsland_1_1conf_1_1_time_unit_1a5d8f3f2b57a1c9d25cb14e07ddb60b15" kindref="member">TimeUnit::Enum</ref></type>
+            <declname>tUnit</declname>
+            <defname>tUnit</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setCount</definition>
+        <argsstring>(Count count) noexcept</argsstring>
+        <name>setCount</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setCount</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Set the count for a specific time unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>tUnit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time unit enum value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The count to set for the unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="171" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1acab8538d612d58c3690b8ee25a4d432b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setCount</definition>
+        <argsstring>(TimeUnit unit, Count count) noexcept</argsstring>
+        <name>setCount</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setCount</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref></type>
+          <declname>unit</declname>
+        </param>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Set the count for a specific time unit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>unit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time unit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The count to set for the unit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="180" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="180" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a8a8b43d9de995eb38bf1c77b15f273b9" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classerbsland_1_1conf_1_1_time_unit" kindref="compound">TimeUnit</ref> &gt;</type>
+        <definition>std::vector&lt; TimeUnit &gt; erbsland::conf::TimeDelta::units</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>units</name>
+        <qualifiedname>erbsland::conf::TimeDelta::units</qualifiedname>
+        <briefdescription>
+<para>Get all times units that are defined for this delta. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="186" column="18" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="186" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a9292dace82e62be22ed6e00136b3d256" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::nanoseconds</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>nanoseconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::nanoseconds</qualifiedname>
+        <briefdescription>
+<para>Get the nanosecond component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The nanoseconds count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="199" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="199" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a1f5b5e77bec9fbaa842ae3c6feadb7e4" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setNanoseconds</definition>
+        <argsstring>(Count nanoseconds) noexcept</argsstring>
+        <name>setNanoseconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setNanoseconds</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>nanoseconds</declname>
+        </param>
+        <briefdescription>
+<para>Set the nanosecond component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nanoseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nanoseconds count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="205" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="205" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ab72c02e4dfd3bebdd31d4d12fabf1d4f" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::microseconds</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>microseconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::microseconds</qualifiedname>
+        <briefdescription>
+<para>Get the microsecond component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The microseconds count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="211" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="211" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a20bc8faa467518ee5b63e2747cceeb35" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setMicroseconds</definition>
+        <argsstring>(Count microseconds) noexcept</argsstring>
+        <name>setMicroseconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setMicroseconds</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>microseconds</declname>
+        </param>
+        <briefdescription>
+<para>Set the microsecond component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>microseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The microseconds count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="217" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="217" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1add0f85360cce70ca466d5a89f44c0de0" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::milliseconds</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>milliseconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::milliseconds</qualifiedname>
+        <briefdescription>
+<para>Get the millisecond component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The milliseconds count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="223" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="223" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a03d6d75512436a3a57a42e0458585ec8" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setMilliseconds</definition>
+        <argsstring>(Count milliseconds) noexcept</argsstring>
+        <name>setMilliseconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setMilliseconds</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>milliseconds</declname>
+        </param>
+        <briefdescription>
+<para>Set the millisecond component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>milliseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The milliseconds count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="229" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="229" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a3a871fee33d70224e9c4b7aa49784be7" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::seconds</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>seconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::seconds</qualifiedname>
+        <briefdescription>
+<para>Get the second component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The seconds count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="235" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="235" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a2f0f25bb3d855afab6827b482e75cf9b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setSeconds</definition>
+        <argsstring>(Count seconds) noexcept</argsstring>
+        <name>setSeconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setSeconds</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+<para>Set the second component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seconds count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="241" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="241" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1acc09b08f0b86f39d6e6026d85d565b26" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::minutes</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>minutes</name>
+        <qualifiedname>erbsland::conf::TimeDelta::minutes</qualifiedname>
+        <briefdescription>
+<para>Get the minute component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The minutes count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="247" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="247" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1afefc9f1a0917bff7b83ffae7a554ce53" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setMinutes</definition>
+        <argsstring>(Count minutes) noexcept</argsstring>
+        <name>setMinutes</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setMinutes</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>minutes</declname>
+        </param>
+        <briefdescription>
+<para>Set the minute component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minutes count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="253" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="253" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a09ea33bd403e517c5801fe8ff60f64d5" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::hours</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>hours</name>
+        <qualifiedname>erbsland::conf::TimeDelta::hours</qualifiedname>
+        <briefdescription>
+<para>Get the hour component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The hours count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="259" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="259" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a8effeddc95b8a1d9de24c0f53b7c908f" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setHours</definition>
+        <argsstring>(Count hours) noexcept</argsstring>
+        <name>setHours</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setHours</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>hours</declname>
+        </param>
+        <briefdescription>
+<para>Set the hour component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hours</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hours count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="265" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="265" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a740bc103504623d4b3adf9419b17990a" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::days</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>days</name>
+        <qualifiedname>erbsland::conf::TimeDelta::days</qualifiedname>
+        <briefdescription>
+<para>Get the day component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The days count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="271" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="271" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a130607997118dfc105d7bdc72eef634c" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setDays</definition>
+        <argsstring>(Count days) noexcept</argsstring>
+        <name>setDays</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setDays</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>days</declname>
+        </param>
+        <briefdescription>
+<para>Set the day component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>days</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The days count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="277" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="277" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a2181a5e40cd3f0848867b610f5b87804" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::weeks</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>weeks</name>
+        <qualifiedname>erbsland::conf::TimeDelta::weeks</qualifiedname>
+        <briefdescription>
+<para>Get the week component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The weeks count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="283" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="283" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a63cdd98ac30290cbcbc72b0331ef088a" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setWeeks</definition>
+        <argsstring>(Count weeks) noexcept</argsstring>
+        <name>setWeeks</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setWeeks</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>weeks</declname>
+        </param>
+        <briefdescription>
+<para>Set the week component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weeks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The weeks count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="289" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="289" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ac48ffe6ddc561d83a32406ef1101c7ff" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::months</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>months</name>
+        <qualifiedname>erbsland::conf::TimeDelta::months</qualifiedname>
+        <briefdescription>
+<para>Get the month component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The months count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="295" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="295" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ab84d8b937670958b1719ef88a707cdfb" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setMonths</definition>
+        <argsstring>(Count months) noexcept</argsstring>
+        <name>setMonths</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setMonths</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>months</declname>
+        </param>
+        <briefdescription>
+<para>Set the month component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>months</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The months count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="301" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="301" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1ad8d533dba60d0923b0c0064d15c183e6" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+        <definition>Count erbsland::conf::TimeDelta::years</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>years</name>
+        <qualifiedname>erbsland::conf::TimeDelta::years</qualifiedname>
+        <briefdescription>
+<para>Get the year component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The years count. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="307" column="12" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="307" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a09a2971dcd94e95cff14ca4d5cbc67b6" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::TimeDelta::setYears</definition>
+        <argsstring>(Count years) noexcept</argsstring>
+        <name>setYears</name>
+        <qualifiedname>erbsland::conf::TimeDelta::setYears</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" kindref="member">Count</ref></type>
+          <declname>years</declname>
+        </param>
+        <briefdescription>
+<para>Set the year component of this time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>years</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The years count to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="313" column="10" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="313" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a588838c3983764ca9c8cf4e6c441ac41" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TimeDelta::isSecondBased</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>isSecondBased</name>
+        <qualifiedname>erbsland::conf::TimeDelta::isSecondBased</qualifiedname>
+        <briefdescription>
+<para>Test if this time delta is based on seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is true, if there are no months and years in the time-delta. Only if this function returns <computeroutput>true</computeroutput>, the method <computeroutput><ref refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" kindref="member">toSeconds()</ref></computeroutput> will return a precise conversion. If this method is <computeroutput>false</computeroutput>, the result of <computeroutput><ref refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" kindref="member">toSeconds()</ref></computeroutput> is an approximation.</para>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if this time delta can be precisely converted into seconds. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="324" column="11" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="324" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double erbsland::conf::TimeDelta::toSeconds</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toSeconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::toSeconds</qualifiedname>
+        <briefdescription>
+<para>Converts this time delta into seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function may lose precision in the fractional seconds when very large values for days or weeks are used.</para>
+<para><simplesect kind="return"><para>The time delta in seconds, with fractions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="332" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a3b3397af34eca9548138aa18dc869172" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t erbsland::conf::TimeDelta::toNanoseconds</definition>
+        <argsstring>() const</argsstring>
+        <name>toNanoseconds</name>
+        <qualifiedname>erbsland::conf::TimeDelta::toNanoseconds</qualifiedname>
+        <briefdescription>
+<para>Tries to convert this time-delta to nano-seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of nanoseconds. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::domain_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the resulting nanoseconds value would exceed the 64-bit integer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="339" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_time_delta_1a8fb1f3463a91bbc0df67ac827f2dc122" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::TimeDelta::toText</definition>
+        <argsstring>() const</argsstring>
+        <name>toText</name>
+        <qualifiedname>erbsland::conf::TimeDelta::toText</qualifiedname>
+        <briefdescription>
+<para>Convert this time delta into a text representation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="343" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classerbsland_1_1conf_1_1_time_delta_1ae66954371df48dd5dfc042acd2e48586" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref></type>
+        <definition>TimeDelta operator-</definition>
+        <argsstring>(const TimeDelta &amp;other) noexcept</argsstring>
+        <name>operator-</name>
+        <qualifiedname>erbsland::conf::TimeDelta::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_time_delta" kindref="compound">TimeDelta</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Unary minus for time delta. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time delta to negate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The negated time delta. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TimeDelta.hpp" line="125" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A combined time delta value. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Months and years are incompatible units because they do not map exactly to seconds. When converting time deltas that include months and years, a month counts as 2,628,000 seconds (30.44 days) and a year as 31,557,600 seconds (365.25 days). Therefore, you should carefully examine the delta before converting it to seconds. If you alter a date using this time delta, it is best to add years and months first before adding other units.</para>
+</simplesect>
+<simplesect kind="par"><title>Tested:</title><para><computeroutput>TimeDeltaTest</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/TimeDelta.hpp" line="27" column="1" bodyfile="erbsland/conf/TimeDelta.hpp" bodystart="27" bodyend="347"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1af9e96c6069d048bcb2d56c58bf24b858" prot="private" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>_counts</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ac578d5ef461b10a4ca35bdb6dccd4c15" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>Count</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ad60d8a976c1840d1aa9ffd85a3295d97" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>count</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ae520d4dd4ac9ede1953a6ce018229831" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>count</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a740bc103504623d4b3adf9419b17990a" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>days</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ad634f10f7b9c25fe264773ab0655f662" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>empty</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a9787b39f2a5332abb6f4a6d46e768cc8" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>hasMultipleCounts</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a09ea33bd403e517c5801fe8ff60f64d5" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>hours</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a588838c3983764ca9c8cf4e6c441ac41" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>isSecondBased</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ad14f052055b86400436a4d0568896281" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>isZero</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ab72c02e4dfd3bebdd31d4d12fabf1d4f" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>microseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1add0f85360cce70ca466d5a89f44c0de0" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>milliseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1acc09b08f0b86f39d6e6026d85d565b26" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>minutes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ac48ffe6ddc561d83a32406ef1101c7ff" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>months</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a9292dace82e62be22ed6e00136b3d256" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>nanoseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a922bec207521f6c71c5277444e6c2195" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a1e588314e7a8fd2737340d461f644db8" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator+</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a0922c0c490b1a893b1891e68bf23b0a9" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator+=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ace8896193e3c026c192ba089d39cbe1c" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator-</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ae66954371df48dd5dfc042acd2e48586" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator-</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1acca9b46464f304d5eb8965048a996d36" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator-=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a90e353ac7d778dac9541655616eb1413" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator&lt;</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1aae1ae17be2597f340ca3379533e49d5f" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator&lt;=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a88cb3f6eac2276054377e2a291028480" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1af224dcb8e71e3c832fa16d9dda17167f" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1af5057c801782e4888bb7117e10c977d7" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator&gt;</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ab02d9414bf04de39df033b9eea4c484c" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>operator&gt;=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a3a871fee33d70224e9c4b7aa49784be7" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>seconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a643b27c6e66c1b397e9d169e271fc794" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1acab8538d612d58c3690b8ee25a4d432b" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a130607997118dfc105d7bdc72eef634c" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setDays</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a8effeddc95b8a1d9de24c0f53b7c908f" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setHours</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a20bc8faa467518ee5b63e2747cceeb35" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setMicroseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a03d6d75512436a3a57a42e0458585ec8" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setMilliseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1afefc9f1a0917bff7b83ffae7a554ce53" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setMinutes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ab84d8b937670958b1719ef88a707cdfb" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setMonths</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a1f5b5e77bec9fbaa842ae3c6feadb7e4" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setNanoseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a2f0f25bb3d855afab6827b482e75cf9b" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setSeconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a63cdd98ac30290cbcbc72b0331ef088a" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setWeeks</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a09a2971dcd94e95cff14ca4d5cbc67b6" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>setYears</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a03b298bd4d8a83323dcdbb9438335816" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>TimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a0c500fcd9e0f385e639e43b900758d5e" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>TimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a9903dbcab44fa4284f56377ecdc5fbc7" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>TimeDelta</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a3b3397af34eca9548138aa18dc869172" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>toNanoseconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a088beec1ddacfd7ef019187c9ae59287" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>toSeconds</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a8fb1f3463a91bbc0df67ac827f2dc122" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>toText</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a8a8b43d9de995eb38bf1c77b15f273b9" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>units</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a2181a5e40cd3f0848867b610f5b87804" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>weeks</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1ad8d533dba60d0923b0c0064d15c183e6" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>years</name></member>
+      <member refid="classerbsland_1_1conf_1_1_time_delta_1a5ce047dd27304dbafca5c6e0cc6937fb" prot="public" virt="non-virtual"><scope>erbsland::conf::TimeDelta</scope><name>~TimeDelta</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

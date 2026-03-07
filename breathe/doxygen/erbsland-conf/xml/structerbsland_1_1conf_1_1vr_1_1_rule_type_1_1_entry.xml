@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry" kind="struct" language="C++" prot="private">
+    <compoundname>erbsland::conf::vr::RuleType::Entry</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1afa92a5b4c39f8570217093fd60233517" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1vr_1_1_rule_type_1a0d84aef91553415e8cfd0e8ce5b1c87a" kindref="member">Enum</ref></type>
+        <definition>Enum erbsland::conf::vr::RuleType::Entry::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>erbsland::conf::vr::RuleType::Entry::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RuleType.hpp" line="45" column="14" bodyfile="erbsland/conf/vr/RuleType.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1aec628366833e14e33660277d03918aa3" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::vr::RuleType::Entry::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <qualifiedname>erbsland::conf::vr::RuleType::Entry::text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RuleType.hpp" line="46" column="16" bodyfile="erbsland/conf/vr/RuleType.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1a96588c61ea8d163963c9a54c476d9d50" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_value_type" kindref="compound">ValueType</ref></type>
+        <definition>ValueType erbsland::conf::vr::RuleType::Entry::valueType</definition>
+        <argsstring></argsstring>
+        <name>valueType</name>
+        <qualifiedname>erbsland::conf::vr::RuleType::Entry::valueType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RuleType.hpp" line="47" column="19" bodyfile="erbsland/conf/vr/RuleType.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1a3bb256ab96f6d3b59db6b9000de284a1" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::vr::RuleType::Entry::expectedValueTypeText</definition>
+        <argsstring></argsstring>
+        <name>expectedValueTypeText</name>
+        <qualifiedname>erbsland::conf::vr::RuleType::Entry::expectedValueTypeText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/vr/RuleType.hpp" line="48" column="16" bodyfile="erbsland/conf/vr/RuleType.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>erbsland::conf::String</label>
+        <link refid="classerbsland_1_1conf_1_1_string"/>
+      </node>
+      <node id="3">
+        <label>erbsland::conf::ValueType</label>
+        <link refid="classerbsland_1_1conf_1_1_value_type"/>
+      </node>
+      <node id="1">
+        <label>erbsland::conf::vr::RuleType::Entry</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>expectedValueTypeText</edgelabel>
+          <edgelabel>text</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>valueType</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/vr/RuleType.hpp" line="44" column="5" bodyfile="erbsland/conf/vr/RuleType.hpp" bodystart="44" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1a3bb256ab96f6d3b59db6b9000de284a1" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RuleType::Entry</scope><name>expectedValueTypeText</name></member>
+      <member refid="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1aec628366833e14e33660277d03918aa3" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RuleType::Entry</scope><name>text</name></member>
+      <member refid="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1afa92a5b4c39f8570217093fd60233517" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RuleType::Entry</scope><name>value</name></member>
+      <member refid="structerbsland_1_1conf_1_1vr_1_1_rule_type_1_1_entry_1a96588c61ea8d163963c9a54c476d9d50" prot="public" virt="non-virtual"><scope>erbsland::conf::vr::RuleType::Entry</scope><name>valueType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

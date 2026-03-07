@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Location and Position &mdash; Erbsland Configuration Language Parser for C++ 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/erbsland-ansi/ansi.css?v=76679ccf" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=cba98b8c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/ansi.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="https://erbsland.dev/ext/fa7/js/all.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Signer" href="signer.html" />
+    <link rel="prev" title="Error" href="error.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+ 
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Erbsland Configuration Language Parser for C++
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../get-started/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="value.html">Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="document.html">Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">Name and Name-Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">Error</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Location and Position</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf8LocationE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::Location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE"><code class="docutils literal notranslate"><span class="pre">erbsland::conf::Position</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="signer.html">Signer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_resolver.html">Source Resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access_check.html">Access Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signature_validator.html">Signature Validator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="string.html">String</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html">Data Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validation_rules.html">Validation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#alphabetical-list">Alphabetical List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#by-topic">By Topic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributing Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../goals.html">Goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Erbsland Configuration Language Parser for C++</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference</a></li>
+      <li class="breadcrumb-item active">Location and Position</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/chapters/reference/location.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="location-and-position">
+<h1>Location and Position<a class="headerlink" href="#location-and-position" title="Link to this heading"></a></h1>
+<section id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8LocationE">
+<span id="_CPPv3N8erbsland4conf8LocationE"></span><span id="_CPPv2N8erbsland4conf8LocationE"></span><span id="erbsland::conf::Location"></span><span class="target" id="classerbsland_1_1conf_1_1_location"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Location</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8LocationE" title="Link to this definition"></a><br /></dt>
+<dd><p>Represents the location in a parsed document. </p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p><code class="docutils literal notranslate"><span class="pre">LocationTest</span></code></p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Location8LocationEv">
+<span id="_CPPv3N8erbsland4conf8Location8LocationEv"></span><span id="_CPPv2N8erbsland4conf8Location8LocationEv"></span><span id="erbsland::conf::Location::Location"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1ab8eacfa148d635d64a7cb7eb56821675"></span><span class="sig-name descname"><span class="n"><span class="pre">Location</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Location8LocationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Creates an undefined location. </p>
+<p>Can be tested with <code class="docutils literal notranslate"><a class="reference internal" href="#classerbsland_1_1conf_1_1_location_1ac5b03d69eaa807fea02222a012bedfa5"><span class="std std-ref"><span class="pre">isUndefined()</span></span></a></code>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Location8LocationE19SourceIdentifierPtrK8Position">
+<span id="_CPPv3N8erbsland4conf8Location8LocationE19SourceIdentifierPtrK8Position"></span><span id="_CPPv2N8erbsland4conf8Location8LocationE19SourceIdentifierPtrK8Position"></span><span id="erbsland::conf::Location::Location__SourceIdentifierPtr.PositionC"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1a9e69387384bae68b4244b7360247ac42"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Location</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">sourceIdentifier</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Location8LocationE19SourceIdentifierPtrK8Position" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new location object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourceIdentifier</strong> – The source identifier. </p></li>
+<li><p><strong>position</strong> – The position in the document. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Location8LocationERK8Location">
+<span id="_CPPv3N8erbsland4conf8Location8LocationERK8Location"></span><span id="_CPPv2N8erbsland4conf8Location8LocationERK8Location"></span><span id="erbsland::conf::Location::Location__LocationCR"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1a109b9fe3a15b13676231cdfb6ae00130"></span><span class="sig-name descname"><span class="n"><span class="pre">Location</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8Location8LocationERK8Location" title="erbsland::conf::Location::Location"><span class="n"><span class="pre">Location</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Location8LocationERK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Location8LocationERR8Location">
+<span id="_CPPv3N8erbsland4conf8Location8LocationERR8Location"></span><span id="_CPPv2N8erbsland4conf8Location8LocationERR8Location"></span><span id="erbsland::conf::Location::Location__LocationRR"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1a11b774b0d18ed61186f6ab327d16cb20"></span><span class="sig-name descname"><span class="n"><span class="pre">Location</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf8Location8LocationERR8Location" title="erbsland::conf::Location::Location"><span class="n"><span class="pre">Location</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Location8LocationERR8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Default move constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8LocationaSERK8Location">
+<span id="_CPPv3N8erbsland4conf8LocationaSERK8Location"></span><span id="_CPPv2N8erbsland4conf8LocationaSERK8Location"></span><span id="erbsland::conf::Location::assign-operator__LocationCR"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1ad29c7c05a62385a55cff3ae653a418d2"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8LocationaSERK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8LocationaSERR8Location">
+<span id="_CPPv3N8erbsland4conf8LocationaSERR8Location"></span><span id="_CPPv2N8erbsland4conf8LocationaSERR8Location"></span><span id="erbsland::conf::Location::assign-operator__LocationRR"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1ac60e64be6b1732050ea9073689d60a4d"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8LocationaSERR8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Default move assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8LocationeqERK8Location">
+<span id="_CPPv3NK8erbsland4conf8LocationeqERK8Location"></span><span id="_CPPv2NK8erbsland4conf8LocationeqERK8Location"></span><span id="erbsland::conf::Location::eq-operator__LocationCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1a92e8aa99abe02477de264c38aefd75f3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8LocationeqERK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Compare this location to another for equality. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The location to compare. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if both the source identifier and position are equal. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8LocationneERK8Location">
+<span id="_CPPv3NK8erbsland4conf8LocationneERK8Location"></span><span id="_CPPv2NK8erbsland4conf8LocationneERK8Location"></span><span id="erbsland::conf::Location::neq-operator__LocationCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1af2f55015ac8fcc41bbac251fd591fd80"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8LocationE" title="erbsland::conf::Location"><span class="n"><span class="pre">Location</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8LocationneERK8Location" title="Link to this definition"></a><br /></dt>
+<dd><p>Compare this location to another for inequality. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The location to compare. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the locations are not equal, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Location11isUndefinedEv">
+<span id="_CPPv3NK8erbsland4conf8Location11isUndefinedEv"></span><span id="_CPPv2NK8erbsland4conf8Location11isUndefinedEv"></span><span id="erbsland::conf::Location::isUndefinedC"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1ac5b03d69eaa807fea02222a012bedfa5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUndefined</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Location11isUndefinedEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if this location is undefined. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if undefined, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Location16sourceIdentifierEv">
+<span id="_CPPv3NK8erbsland4conf8Location16sourceIdentifierEv"></span><span id="_CPPv2NK8erbsland4conf8Location16sourceIdentifierEv"></span><span id="erbsland::conf::Location::sourceIdentifierC"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1ac5150716306635918c068b4e8170fb3f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="source.html#_CPPv4N8erbsland4conf19SourceIdentifierPtrE" title="erbsland::conf::SourceIdentifierPtr"><span class="n"><span class="pre">SourceIdentifierPtr</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">sourceIdentifier</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Location16sourceIdentifierEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The source identifier for this location. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Location8positionEv">
+<span id="_CPPv3NK8erbsland4conf8Location8positionEv"></span><span id="_CPPv2NK8erbsland4conf8Location8positionEv"></span><span id="erbsland::conf::Location::positionCCE"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1a96efd0945cee7fa089e774842c4b9d19"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">position</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Location8positionEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the position. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Location6toTextEv">
+<span id="_CPPv3NK8erbsland4conf8Location6toTextEv"></span><span id="_CPPv2NK8erbsland4conf8Location6toTextEv"></span><span id="erbsland::conf::Location::toTextC"></span><span class="target" id="classerbsland_1_1conf_1_1_location_1a1df6af18fc0262e1354aca834272e0c7"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Location6toTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get this location as a text. </p>
+<p>The location is formatted as: (source identifier):(line):(column). If no source identifier is specified, it is replaced by the text <code class="docutils literal notranslate"><span class="pre">&lt;unknown&gt;</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A string with this location information. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8PositionE">
+<span id="_CPPv3N8erbsland4conf8PositionE"></span><span id="_CPPv2N8erbsland4conf8PositionE"></span><span id="erbsland::conf::Position"></span><span class="target" id="classerbsland_1_1conf_1_1_position"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Position</span></span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8PositionE" title="Link to this definition"></a><br /></dt>
+<dd><p>A position inside a document. </p>
+<p>Starting with line 1 and column 1. If the line or column are undefined, they are set to -1.</p>
+<p><dl class="simple">
+<dt><strong>Tested:</strong></dt><dd><p>PositionTest </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position8PositionEii">
+<span id="_CPPv3N8erbsland4conf8Position8PositionEii"></span><span id="_CPPv2N8erbsland4conf8Position8PositionEii"></span><span id="erbsland::conf::Position::Position__i.iCE"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1aea3d0ebce8bb8811790087c92bd9eab4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Position</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">line</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">column</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position8PositionEii" title="Link to this definition"></a><br /></dt>
+<dd><p>Create a new position with the given line and column. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line</strong> – The line. </p></li>
+<li><p><strong>column</strong> – The column. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position8PositionEv">
+<span id="_CPPv3N8erbsland4conf8Position8PositionEv"></span><span id="_CPPv2N8erbsland4conf8Position8PositionEv"></span><span id="erbsland::conf::Position::Position"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1afc0f7c0a6652b271f77a10c630f1842a"></span><span class="sig-name descname"><span class="n"><span class="pre">Position</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position8PositionEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Default constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8PositionD0Ev">
+<span id="_CPPv3N8erbsland4conf8PositionD0Ev"></span><span id="_CPPv2N8erbsland4conf8PositionD0Ev"></span><span id="erbsland::conf::Position::~Position"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a3699d89c2657e83df04294fae28c4572"></span><span class="sig-name descname"><span class="n"><span class="pre">~Position</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8PositionD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position8PositionERK8Position">
+<span id="_CPPv3N8erbsland4conf8Position8PositionERK8Position"></span><span id="_CPPv2N8erbsland4conf8Position8PositionERK8Position"></span><span id="erbsland::conf::Position::Position__PositionCR"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a70960304930aef094f926ac2a2537856"></span><span class="sig-name descname"><span class="n"><span class="pre">Position</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8Position8PositionERK8Position" title="erbsland::conf::Position::Position"><span class="n"><span class="pre">Position</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position8PositionERK8Position" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position8PositionERR8Position">
+<span id="_CPPv3N8erbsland4conf8Position8PositionERR8Position"></span><span id="_CPPv2N8erbsland4conf8Position8PositionERR8Position"></span><span id="erbsland::conf::Position::Position__PositionRR"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a01b5cf19d78be40dd5abc5dea36085b3"></span><span class="sig-name descname"><span class="n"><span class="pre">Position</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf8Position8PositionERR8Position" title="erbsland::conf::Position::Position"><span class="n"><span class="pre">Position</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position8PositionERR8Position" title="Link to this definition"></a><br /></dt>
+<dd><p>Default move constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8PositionaSERK8Position">
+<span id="_CPPv3N8erbsland4conf8PositionaSERK8Position"></span><span id="_CPPv2N8erbsland4conf8PositionaSERK8Position"></span><span id="erbsland::conf::Position::assign-operator__PositionCR"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1ac8e0f1d34702f630dd46d8f56f88cec5"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8PositionaSERK8Position" title="Link to this definition"></a><br /></dt>
+<dd><p>Default copy assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8PositionaSERR8Position">
+<span id="_CPPv3N8erbsland4conf8PositionaSERR8Position"></span><span id="_CPPv2N8erbsland4conf8PositionaSERR8Position"></span><span id="erbsland::conf::Position::assign-operator__PositionRR"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a4e666f94a45ff23657177ae99cd2bfbb"></span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8PositionaSERR8Position" title="Link to this definition"></a><br /></dt>
+<dd><p>Default move assignment. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8PositioneqERK8Position">
+<span id="_CPPv3NK8erbsland4conf8PositioneqERK8Position"></span><span id="_CPPv2NK8erbsland4conf8PositioneqERK8Position"></span><span id="erbsland::conf::Position::eq-operator__PositionCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a63af65e3985b9fbad2c352f7bc8addd7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8PositioneqERK8Position" title="Link to this definition"></a><br /></dt>
+<dd><p>Compare this position to another for equality. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The other position to compare. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if both line and column are identical. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8PositionneERK8Position">
+<span id="_CPPv3NK8erbsland4conf8PositionneERK8Position"></span><span id="_CPPv2NK8erbsland4conf8PositionneERK8Position"></span><span id="erbsland::conf::Position::neq-operator__PositionCRC"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a628057aeba4ad7f7fb16df6dc39461f3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8erbsland4conf8PositionE" title="erbsland::conf::Position"><span class="n"><span class="pre">Position</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8PositionneERK8Position" title="Link to this definition"></a><br /></dt>
+<dd><p>Compare this position to another for inequality. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>other</strong> – The other position to compare. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if positions differ, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Position4lineEv">
+<span id="_CPPv3NK8erbsland4conf8Position4lineEv"></span><span id="_CPPv2NK8erbsland4conf8Position4lineEv"></span><span id="erbsland::conf::Position::lineC"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a9f2e6ff61aab35c6380d80c505067b9e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">line</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Position4lineEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The line, starting from 1. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Position6columnEv">
+<span id="_CPPv3NK8erbsland4conf8Position6columnEv"></span><span id="_CPPv2NK8erbsland4conf8Position6columnEv"></span><span id="erbsland::conf::Position::columnC"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a72f3f3a0555bc442ea235c3f2ad5f717"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">column</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Position6columnEv" title="Link to this definition"></a><br /></dt>
+<dd><p>The column, starting from 1. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Position11isUndefinedEv">
+<span id="_CPPv3NK8erbsland4conf8Position11isUndefinedEv"></span><span id="_CPPv2NK8erbsland4conf8Position11isUndefinedEv"></span><span id="erbsland::conf::Position::isUndefinedC"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a6ed5326a651d0ce1b87b3185172a4159"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUndefined</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Position11isUndefinedEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Test if this position is undefined. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position8nextLineEv">
+<span id="_CPPv3N8erbsland4conf8Position8nextLineEv"></span><span id="_CPPv2N8erbsland4conf8Position8nextLineEv"></span><span id="erbsland::conf::Position::nextLine"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a090061fb4c8374b2f939e410295d574d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nextLine</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position8nextLineEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Increase the line and reset the column. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position10nextColumnEv">
+<span id="_CPPv3N8erbsland4conf8Position10nextColumnEv"></span><span id="_CPPv2N8erbsland4conf8Position10nextColumnEv"></span><span id="erbsland::conf::Position::nextColumn"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a3f16cbed0e7bc2b421b3026a11e38479"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nextColumn</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position10nextColumnEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Increase the column. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK8erbsland4conf8Position6toTextEv">
+<span id="_CPPv3NK8erbsland4conf8Position6toTextEv"></span><span id="_CPPv2NK8erbsland4conf8Position6toTextEv"></span><span id="erbsland::conf::Position::toTextC"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a99e44e0fb05eb6cb1ac3e748355e2c97"></span><a class="reference internal" href="string.html#_CPPv4N8erbsland4conf6StringE" title="erbsland::conf::String"><span class="n"><span class="pre">String</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toText</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK8erbsland4conf8Position6toTextEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Convert this position into a string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The string representation of this position. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position5_lineE">
+<span id="_CPPv3N8erbsland4conf8Position5_lineE"></span><span id="_CPPv2N8erbsland4conf8Position5_lineE"></span><span id="erbsland::conf::Position::_line__i"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1a211960e2f8bc9c78fe2bdfb303579915"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_line</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position5_lineE" title="Link to this definition"></a><br /></dt>
+<dd><p>The line. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8erbsland4conf8Position7_columnE">
+<span id="_CPPv3N8erbsland4conf8Position7_columnE"></span><span id="_CPPv2N8erbsland4conf8Position7_columnE"></span><span id="erbsland::conf::Position::_column__i"></span><span class="target" id="classerbsland_1_1conf_1_1_position_1ac1bcd44b70ddff851d974e46cd91298e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_column</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8erbsland4conf8Position7_columnE" title="Link to this definition"></a><br /></dt>
+<dd><p>The column. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="error.html" class="btn btn-neutral float-left" title="Error" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="signer.html" class="btn btn-neutral float-right" title="Signer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024-2025, Tobias Erbsland - Erbsland DEV.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

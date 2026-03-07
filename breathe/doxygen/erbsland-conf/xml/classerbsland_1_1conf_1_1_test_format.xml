@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_test_format" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::TestFormat</compoundname>
+    <includes refid="_test_format_8hpp" local="no">erbsland/conf/TestFormat.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>Flag</name>
+        <qualifiedname>erbsland::conf::TestFormat::Flag</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14abe4480092b1631dafc5b2eff3e2875fb" prot="public">
+          <name>ShowContainerSize</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Show the size of a container in the type. </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    If enabled, this will display the size of a container (e.g. &lt;code&gt;SectionWithNames(size=20)&lt;/code&gt;)
+    for all value types that can have children (sections, value lists).
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14afd8dab0f0a195d196211b08b264f4ee6" prot="public">
+          <name>ShowPosition</name>
+          <briefdescription>
+<para>Show the position of a value. </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    **Only when rendering value trees:**
+    If enabled, the position of a value is added in square brackets after the value
+    (e.g. &lt;code&gt;Integer(1)[1:2]&lt;/code&gt;).
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14a371c2a62be22612e32a7bf17dba0f3e7" prot="public">
+          <name>ShowSourceIdentifier</name>
+          <briefdescription>
+<para>Show the source identifier of a value. </para>
+          </briefdescription>
+          <detaileddescription>
+<para><verbatim>    **Only when rendering value trees:**
+    If enabled, an identifier for the source is added after the value.
+    The identifier is an upper case letter, like &lt;code&gt;Integer(1)&lt;/code&gt;[A:1:2].
+    The value-tree is followed by a legend, like &lt;code&gt;A: file:/path/example.elcl&lt;/code&gt;
+</verbatim> </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14ac2c32d0c813227b48faee6d7ab128233" prot="public">
+          <name>_flagCount</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The enumeration with the individual flags. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="19" column="5" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="19" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_test_format_1a5b05d57a469018f27c636b2f8a208838" prot="private" static="no" mutable="no">
+        <type>std::bitset&lt; _flagCount &gt;</type>
+        <definition>std::bitset&lt;_flagCount&gt; erbsland::conf::TestFormat::_flags</definition>
+        <argsstring></argsstring>
+        <name>_flags</name>
+        <qualifiedname>erbsland::conf::TestFormat::_flags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="104" column="17" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a883441a5990b223cc5709a13e53e6135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TestFormat::TestFormat</definition>
+        <argsstring>()=default</argsstring>
+        <name>TestFormat</name>
+        <qualifiedname>erbsland::conf::TestFormat::TestFormat</qualifiedname>
+        <briefdescription>
+<para>Create a test format with no flags set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="49" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a17115fcac60bf4433eaec895b9a6e116" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>erbsland::conf::TestFormat::TestFormat</definition>
+        <argsstring>(Args... flags) noexcept</argsstring>
+        <name>TestFormat</name>
+        <qualifiedname>erbsland::conf::TestFormat::TestFormat</qualifiedname>
+        <param>
+          <type>Args...</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Create a test format with the given flag set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="52" column="5" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a216ad93fc18acf68280ae4a8dc12b7ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TestFormat::~TestFormat</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TestFormat</name>
+        <qualifiedname>erbsland::conf::TestFormat::~TestFormat</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="57" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1ac3b32fe8aa7d023e68ff396ca5055c2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        <definition>TestFormat &amp; erbsland::conf::TestFormat::operator=</definition>
+        <argsstring>(const TestFormat &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Assign. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="59" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1acba197dfbb77659218186a67b4cc4d33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        <definition>TestFormat &amp; erbsland::conf::TestFormat::operator=</definition>
+        <argsstring>(TestFormat &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+<para>Move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="61" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1ab44429e995e5c46846a327321db0ea37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TestFormat::TestFormat</definition>
+        <argsstring>(const TestFormat &amp;)=default</argsstring>
+        <name>TestFormat</name>
+        <qualifiedname>erbsland::conf::TestFormat::TestFormat</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Copy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1ad23a62b2c5df2dc752998ade36424605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TestFormat::TestFormat</definition>
+        <argsstring>(TestFormat &amp;&amp;)=default</argsstring>
+        <name>TestFormat</name>
+        <qualifiedname>erbsland::conf::TestFormat::TestFormat</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+<para>Move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="65" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a0189d60d47cd28811921aa5ebd1d0d46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TestFormat::operator==</definition>
+        <argsstring>(const TestFormat &amp;) const =default</argsstring>
+        <name>operator==</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Compare for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="69" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1aab195eb11d2878c500997f08a22af544" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TestFormat::operator!=</definition>
+        <argsstring>(const TestFormat &amp;) const =default</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Compare for unequality. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="71" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1acabf014f3fda5ea889c9b76d67c58198" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref></type>
+        <definition>TestFormat erbsland::conf::TestFormat::operator|</definition>
+        <argsstring>(const TestFormat &amp;other) const noexcept</argsstring>
+        <name>operator|</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator|</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Combine two formats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="73" column="17" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a4572a0b90109fb1b1897882adf96c89b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref></type>
+        <definition>TestFormat erbsland::conf::TestFormat::operator|</definition>
+        <argsstring>(const Flag flag) const noexcept</argsstring>
+        <name>operator|</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator|</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">Flag</ref></type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Combine two formats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="77" column="17" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a0a8cc40d0b1fa24d60e5ccb09197e79b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        <definition>TestFormat &amp; erbsland::conf::TestFormat::operator|=</definition>
+        <argsstring>(const TestFormat &amp;other) noexcept</argsstring>
+        <name>operator|=</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator|=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Combine two formats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="83" column="16" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a93d783014d6c2b76c056dc857896b56d" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_test_format" kindref="compound">TestFormat</ref> &amp;</type>
+        <definition>TestFormat &amp; erbsland::conf::TestFormat::operator|=</definition>
+        <argsstring>(const Flag flag) noexcept</argsstring>
+        <name>operator|=</name>
+        <qualifiedname>erbsland::conf::TestFormat::operator|=</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">Flag</ref></type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Combine two formats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="88" column="16" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a3ba33d2101dec28f674afd0824fbacab" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::TestFormat::isSet</definition>
+        <argsstring>(const Flag flag) const noexcept</argsstring>
+        <name>isSet</name>
+        <qualifiedname>erbsland::conf::TestFormat::isSet</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" kindref="member">Flag</ref></type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Test if a flag is set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="96" column="11" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_test_format_1a54ef9e39df14badb746ff9384d188f0c" prot="private" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::TestFormat::TestFormat</definition>
+        <argsstring>(const std::bitset&lt; _flagCount &gt; &amp;flags)</argsstring>
+        <name>TestFormat</name>
+        <qualifiedname>erbsland::conf::TestFormat::TestFormat</qualifiedname>
+        <param>
+          <type>const std::bitset&lt; _flagCount &gt; &amp;</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/TestFormat.hpp" line="101" column="14" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="101" bodyend="101"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Flags for rendering test output. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="erbsland/conf/TestFormat.hpp" line="15" column="1" bodyfile="erbsland/conf/TestFormat.hpp" bodystart="15" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14ac2c32d0c813227b48faee6d7ab128233" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>_flagCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a5b05d57a469018f27c636b2f8a208838" prot="private" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>_flags</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>Flag</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a3ba33d2101dec28f674afd0824fbacab" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>isSet</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1aab195eb11d2878c500997f08a22af544" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator!=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1ac3b32fe8aa7d023e68ff396ca5055c2a" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1acba197dfbb77659218186a67b4cc4d33" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a0189d60d47cd28811921aa5ebd1d0d46" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator==</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1acabf014f3fda5ea889c9b76d67c58198" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator|</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a4572a0b90109fb1b1897882adf96c89b" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator|</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a0a8cc40d0b1fa24d60e5ccb09197e79b" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator|=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a93d783014d6c2b76c056dc857896b56d" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>operator|=</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14abe4480092b1631dafc5b2eff3e2875fb" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>ShowContainerSize</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14afd8dab0f0a195d196211b08b264f4ee6" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>ShowPosition</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a03f51ce63c4453dd0d647229f2432e14a371c2a62be22612e32a7bf17dba0f3e7" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>ShowSourceIdentifier</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a883441a5990b223cc5709a13e53e6135" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>TestFormat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a17115fcac60bf4433eaec895b9a6e116" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>TestFormat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1ab44429e995e5c46846a327321db0ea37" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>TestFormat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1ad23a62b2c5df2dc752998ade36424605" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>TestFormat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a54ef9e39df14badb746ff9384d188f0c" prot="private" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>TestFormat</name></member>
+      <member refid="classerbsland_1_1conf_1_1_test_format_1a216ad93fc18acf68280ae4a8dc12b7ae" prot="public" virt="non-virtual"><scope>erbsland::conf::TestFormat</scope><name>~TestFormat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

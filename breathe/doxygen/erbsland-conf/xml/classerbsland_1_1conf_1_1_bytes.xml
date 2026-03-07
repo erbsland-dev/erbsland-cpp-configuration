@@ -1,0 +1,518 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_bytes" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::Bytes</compoundname>
+    <includes refid="_bytes_8hpp" local="no">erbsland/conf/Bytes.hpp</includes>
+    <sectiondef kind="user-defined">
+      <header>Convert from Hexadecimal String</header>
+      <description><para>Convert a string of hex characters into a sequence of bytes.</para>
+<para>Spaces are ignored and the text is parsed case-insensitive. In case of an error, an empty sequence is returned. </para>
+</description>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1ab85e7e302935de9cd8c285a794a95598" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::fromHex</definition>
+        <argsstring>(std::string_view hex) noexcept</argsstring>
+        <name>fromHex</name>
+        <qualifiedname>erbsland::conf::Bytes::fromHex</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>hex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the hex characters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes or an empty sequence on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="120" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a8230bbe0eb08491d991f96ed0aaca147" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::fromHex</definition>
+        <argsstring>(const char *hex) noexcept</argsstring>
+        <name>fromHex</name>
+        <qualifiedname>erbsland::conf::Bytes::fromHex</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>hex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the hex characters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes or an empty sequence on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="123" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a04e00980626029ab63ae3d468fe7f09f" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::fromHex</definition>
+        <argsstring>(const String &amp;hex) noexcept</argsstring>
+        <name>fromHex</name>
+        <qualifiedname>erbsland::conf::Bytes::fromHex</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>hex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the hex characters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes or an empty sequence on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="126" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a0f0c1544e64b0e51a7e7ee10fed1cca6" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::fromHex</definition>
+        <argsstring>(std::u8string_view hex) noexcept</argsstring>
+        <name>fromHex</name>
+        <qualifiedname>erbsland::conf::Bytes::fromHex</qualifiedname>
+        <param>
+          <type>std::u8string_view</type>
+          <declname>hex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the hex characters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes or an empty sequence on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="129" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a39bd3552c0af3b04084ed15998b86184" prot="public" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::fromHex</definition>
+        <argsstring>(const char8_t *hex) noexcept</argsstring>
+        <name>fromHex</name>
+        <qualifiedname>erbsland::conf::Bytes::fromHex</qualifiedname>
+        <param>
+          <type>const char8_t *</type>
+          <declname>hex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string with the hex characters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes or an empty sequence on error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="132" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" prot="public" static="no">
+        <type>std::vector&lt; std::byte &gt;</type>
+        <definition>using erbsland::conf::Bytes::ByteVector =  std::vector&lt;std::byte&gt;</definition>
+        <argsstring></argsstring>
+        <name>ByteVector</name>
+        <qualifiedname>erbsland::conf::Bytes::ByteVector</qualifiedname>
+        <briefdescription>
+<para>A vector of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="28" column="5" bodyfile="erbsland/conf/Bytes.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_bytes_1a6ce663aa2c1c4c7f504786ed9a47818a" prot="private" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref></type>
+        <definition>ByteVector erbsland::conf::Bytes::_data</definition>
+        <argsstring></argsstring>
+        <name>_data</name>
+        <qualifiedname>erbsland::conf::Bytes::_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="158" column="16" bodyfile="erbsland/conf/Bytes.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1adb75b607e7265616142c1f3dd3f788ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Bytes::Bytes</definition>
+        <argsstring>()=default</argsstring>
+        <name>Bytes</name>
+        <qualifiedname>erbsland::conf::Bytes::Bytes</qualifiedname>
+        <briefdescription>
+<para>Create an empty sequence of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="35" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1abe3258d048c30e0286f72768e0d31757" prot="public" static="no" constexpr="yes" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr</type>
+        <definition>constexpr erbsland::conf::Bytes::Bytes</definition>
+        <argsstring>(ByteVector data) noexcept</argsstring>
+        <name>Bytes</name>
+        <qualifiedname>erbsland::conf::Bytes::Bytes</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" kindref="member">ByteVector</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create a sequence of bytes from a vector of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="39" column="24" bodyfile="erbsland/conf/Bytes.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a4a21f0b14935dac44f2eac01bd2af4a9" prot="public" static="no" const="no" explicit="yes" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::Bytes::Bytes</definition>
+        <argsstring>(const std::span&lt; std::byte &gt; data) noexcept</argsstring>
+        <name>Bytes</name>
+        <qualifiedname>erbsland::conf::Bytes::Bytes</qualifiedname>
+        <param>
+          <type>const std::span&lt; std::byte &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Create a sequence of bytes from a span of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="43" column="14" bodyfile="erbsland/conf/Bytes.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a3d33689a78b9de73f1e25284feccc990" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::Bytes::toHex</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toHex</name>
+        <qualifiedname>erbsland::conf::Bytes::toHex</qualifiedname>
+        <briefdescription>
+<para>Convert this sequence of bytes to a string of hex characters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string with the hex characters. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="137" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a2d72bd58673e6a25d8b667f41507ab0e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::Bytes::toHexForErrors</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>toHexForErrors</name>
+        <qualifiedname>erbsland::conf::Bytes::toHexForErrors</qualifiedname>
+        <briefdescription>
+<para>Convert this sequence of bytes to a string of hex characters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the sequence is longer than 16 bytes, the sequence is shortened and &quot;...&quot; appended to the string. <simplesect kind="return"><para>The string with the hex characters, suitable for error messages. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="142" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1afd65b718dd187e0e57b970abd1388df6" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::Bytes::append</definition>
+        <argsstring>(const Bytes &amp;bytes) noexcept</argsstring>
+        <name>append</name>
+        <qualifiedname>erbsland::conf::Bytes::append</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref> &amp;</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+<para>Append another byte-sequence to this one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A byte sequence. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="153" column="10" bodyfile="erbsland/conf/Bytes.hpp" bodystart="153" bodyend="155"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a6b84d03ae53bc2e7f7cc2605d330c4fc" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::from</definition>
+        <argsstring>(std::initializer_list&lt; T &gt; list) noexcept</argsstring>
+        <name>from</name>
+        <qualifiedname>erbsland::conf::Bytes::from</qualifiedname>
+        <param>
+          <type>std::initializer_list&lt; T &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Converts a list of 1-byte integers into a sequence of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of ints. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="55" column="19" bodyfile="erbsland/conf/Bytes.hpp" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1ac3846f1e8175f60f2bca5dbf04f15373" prot="public" static="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::convertFrom</definition>
+        <argsstring>(std::initializer_list&lt; T &gt; list) noexcept</argsstring>
+        <name>convertFrom</name>
+        <qualifiedname>erbsland::conf::Bytes::convertFrom</qualifiedname>
+        <param>
+          <type>std::initializer_list&lt; T &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Converts a list of integers into a sequence of bytes, potentially losing the higher bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of ints. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="69" column="19" bodyfile="erbsland/conf/Bytes.hpp" bodystart="69" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1ac8b2c2dd066aeab0ab91a7b7813e4f1f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::input_iterator</type>
+            <declname>It</declname>
+            <defname>It</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::from</definition>
+        <argsstring>(It begin, It end)</argsstring>
+        <name>from</name>
+        <qualifiedname>erbsland::conf::Bytes::from</qualifiedname>
+        <param>
+          <type>It</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>It</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Converts a list of 1-byte integers into a sequence of bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The begin iterator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end iterator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="84" column="19" bodyfile="erbsland/conf/Bytes.hpp" bodystart="84" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_bytes_1a16d1d2103cb505aa92bf410f8f5b5dce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>std::input_iterator</type>
+            <declname>It</declname>
+            <defname>It</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classerbsland_1_1conf_1_1_bytes" kindref="compound">Bytes</ref></type>
+        <definition>static Bytes erbsland::conf::Bytes::convertFrom</definition>
+        <argsstring>(It begin, It end)</argsstring>
+        <name>convertFrom</name>
+        <qualifiedname>erbsland::conf::Bytes::convertFrom</qualifiedname>
+        <param>
+          <type>It</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>It</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Converts a list of integers into a sequence of bytes, potentially losing the higher bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The begin iterator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end iterator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sequence of bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/Bytes.hpp" line="100" column="19" bodyfile="erbsland/conf/Bytes.hpp" bodystart="100" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A sequence of bytes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Tested:</title><para><computeroutput>BytesTest</computeroutput> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="erbsland/conf/Bytes.hpp" line="24" column="1" bodyfile="erbsland/conf/Bytes.hpp" bodystart="24" bodyend="159"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a6ce663aa2c1c4c7f504786ed9a47818a" prot="private" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>_data</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1afd65b718dd187e0e57b970abd1388df6" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>append</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1adb75b607e7265616142c1f3dd3f788ba" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>Bytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1abe3258d048c30e0286f72768e0d31757" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>Bytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a4a21f0b14935dac44f2eac01bd2af4a9" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>Bytes</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a078bc854d6f697a28172a6d13d48f6f1" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>ByteVector</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1ac3846f1e8175f60f2bca5dbf04f15373" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>convertFrom</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a16d1d2103cb505aa92bf410f8f5b5dce" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>convertFrom</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a6b84d03ae53bc2e7f7cc2605d330c4fc" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>from</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1ac8b2c2dd066aeab0ab91a7b7813e4f1f" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>from</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1ab85e7e302935de9cd8c285a794a95598" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>fromHex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a8230bbe0eb08491d991f96ed0aaca147" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>fromHex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a04e00980626029ab63ae3d468fe7f09f" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>fromHex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a0f0c1544e64b0e51a7e7ee10fed1cca6" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>fromHex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a39bd3552c0af3b04084ed15998b86184" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>fromHex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a3d33689a78b9de73f1e25284feccc990" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>toHex</name></member>
+      <member refid="classerbsland_1_1conf_1_1_bytes_1a2d72bd58673e6a25d8b667f41507ab0e" prot="public" virt="non-virtual"><scope>erbsland::conf::Bytes</scope><name>toHexForErrors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structerbsland_1_1conf_1_1_source_resolver_context" kind="struct" language="C++" prot="public">
+    <compoundname>erbsland::conf::SourceResolverContext</compoundname>
+    <includes refid="_source_resolver_context_8hpp" local="no">erbsland/conf/SourceResolverContext.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_source_resolver_context_1a0169cc3e76f89ef12f852aa608d10f54" prot="public" static="no" mutable="no">
+        <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+        <definition>String erbsland::conf::SourceResolverContext::includeText</definition>
+        <argsstring></argsstring>
+        <name>includeText</name>
+        <qualifiedname>erbsland::conf::SourceResolverContext::includeText</qualifiedname>
+        <briefdescription>
+<para>The raw and unprocessed text from the <computeroutput>include</computeroutput>-command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceResolverContext.hpp" line="19" column="12" bodyfile="erbsland/conf/SourceResolverContext.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structerbsland_1_1conf_1_1_source_resolver_context_1a889e58d01320b30eca0e3a1f60ed9e3a" prot="public" static="no" mutable="no">
+        <type>SourceIdentifierPtr</type>
+        <definition>SourceIdentifierPtr erbsland::conf::SourceResolverContext::sourceIdentifier</definition>
+        <argsstring></argsstring>
+        <name>sourceIdentifier</name>
+        <qualifiedname>erbsland::conf::SourceResolverContext::sourceIdentifier</qualifiedname>
+        <briefdescription>
+<para>The source identifier of the document with the <computeroutput>include</computeroutput>-command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceResolverContext.hpp" line="23" column="25" bodyfile="erbsland/conf/SourceResolverContext.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The context for resolving sources. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Tested:</title><para>Tested via <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> class. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>erbsland::conf::SourceResolverContext</label>
+        <link refid="structerbsland_1_1conf_1_1_source_resolver_context"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>includeText</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::String</label>
+        <link refid="classerbsland_1_1conf_1_1_string"/>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/SourceResolverContext.hpp" line="16" column="1" bodyfile="erbsland/conf/SourceResolverContext.hpp" bodystart="16" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structerbsland_1_1conf_1_1_source_resolver_context_1a0169cc3e76f89ef12f852aa608d10f54" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceResolverContext</scope><name>includeText</name></member>
+      <member refid="structerbsland_1_1conf_1_1_source_resolver_context_1a889e58d01320b30eca0e3a1f60ed9e3a" prot="public" virt="non-virtual"><scope>erbsland::conf::SourceResolverContext</scope><name>sourceIdentifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_file_source_resolver" kind="class" language="C++" prot="public">
+    <compoundname>erbsland::conf::FileSourceResolver</compoundname>
+    <basecompoundref refid="classerbsland_1_1conf_1_1_source_resolver" prot="public" virt="non-virtual">erbsland::conf::SourceResolver</basecompoundref>
+    <includes refid="_file_source_resolver_8hpp" local="no">erbsland/conf/FileSourceResolver.hpp</includes>
+    <innerclass refid="structerbsland_1_1conf_1_1_file_source_resolver_1_1_filename_pattern" prot="private">erbsland::conf::FileSourceResolver::FilenamePattern</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84e" prot="public" static="no" strong="no">
+        <type>uint8_t</type>
+        <name>Feature</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::Feature</qualifiedname>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84eae8eb91f3d4466133083b16267ba7886e" prot="public">
+          <name>RecursiveWildcard</name>
+          <briefdescription>
+<para>Support for recursive wildcards. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea99ec6811d65c794ad36bbec27e0eda2a" prot="public">
+          <name>FilenameWildcard</name>
+          <briefdescription>
+<para>Support for filename wildcards. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea6576b64a5c2573f52ad7a651ee1e8b40" prot="public">
+          <name>AbsolutePaths</name>
+          <briefdescription>
+<para>Support for absolute paths. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea3a19913a08b8117e432f7e72ea2b78e8" prot="public">
+          <name>WindowsUNCPath</name>
+          <briefdescription>
+<para>Support for Windows UNC paths. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea13f36cb23516d9fb1462cc3bdcc157cc" prot="public">
+          <name>FileProtocol</name>
+          <briefdescription>
+<para>Support for the <computeroutput>file:</computeroutput> protocol prefix. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea273df0be0983a42636a6fd1c9304cc27" prot="public">
+          <name>_featureCount</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Features of the file source resolver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="38" column="5" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="38" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classerbsland_1_1conf_1_1_file_source_resolver_1a85998f8ae08f51b59cdaba67868b52db" prot="private" static="no" mutable="no">
+        <type>std::bitset&lt; _featureCount &gt;</type>
+        <definition>std::bitset&lt;_featureCount&gt; erbsland::conf::FileSourceResolver::_features</definition>
+        <argsstring></argsstring>
+        <name>_features</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::_features</qualifiedname>
+        <initializer>{0b11111}</initializer>
+        <briefdescription>
+<para>Flags for the features. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="117" column="17" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="117" bodyend="117"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a3e0cd935d85ef806314b3a3fa86314f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>FileSourceResolverPtr</type>
+        <definition>static FileSourceResolverPtr erbsland::conf::FileSourceResolver::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::create</qualifiedname>
+        <briefdescription>
+<para>Create a new instance of the file source resolver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="51" column="34" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1ad6886b64dc310019c628023346e1d7b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::FileSourceResolver::FileSourceResolver</definition>
+        <argsstring>()=default</argsstring>
+        <name>FileSourceResolver</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::FileSourceResolver</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1adb8971fd7e01e2721afd92973cb5bbb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>erbsland::conf::FileSourceResolver::~FileSourceResolver</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~FileSourceResolver</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::~FileSourceResolver</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="58" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a7f6fc682cb009c047881881ed80eb895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::FileSourceResolver::enable</definition>
+        <argsstring>(Feature feature)</argsstring>
+        <name>enable</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::enable</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84e" kindref="member">Feature</ref></type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+<para>Enable a feature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="63" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1afff291ce8667d15aac612c3f4c432f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::FileSourceResolver::disable</definition>
+        <argsstring>(Feature feature)</argsstring>
+        <name>disable</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::disable</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84e" kindref="member">Feature</ref></type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+<para>Disable a feature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="67" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a5afe475be2dc4c0454e33635b0b18a77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool erbsland::conf::FileSourceResolver::isEnabled</definition>
+        <argsstring>(Feature feature) const</argsstring>
+        <name>isEnabled</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::isEnabled</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84e" kindref="member">Feature</ref></type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+<para>Test if a feature enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="71" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1ac00c1b45ea6f03dfab4a6c9da222e89e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>SourceListPtr</type>
+        <definition>SourceListPtr erbsland::conf::FileSourceResolver::resolve</definition>
+        <argsstring>(const SourceResolverContext &amp;context) override</argsstring>
+        <name>resolve</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::resolve</qualifiedname>
+        <reimplements refid="classerbsland_1_1conf_1_1_source_resolver_1aef21c0e281148027beb8c54483eab01a">resolve</reimplements>
+        <param>
+          <type>const <ref refid="structerbsland_1_1conf_1_1_source_resolver_context" kindref="compound">SourceResolverContext</ref> &amp;</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Resolve Sources. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called when the parser encounters an <computeroutput>include</computeroutput> meta-command.</para>
+<para>The raw and unprocessed text of the command and the source of the parsed document are given as arguments to this function. This function must either return a list of sources that match the expression or throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> exception. If an exception is thrown, the parsing will be stopped and the thrown exception will be passed to the caller of <computeroutput>parse()</computeroutput>.</para>
+<para>If a list is returned, the parser will parse the sources in the given order and include the parsed contents in the document. The returned sources should be in a closed state. The parser will open them in the sequence they are parsed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resolve context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of sources (see <computeroutput>SourceList</computeroutput>) to include in the document. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Throw <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a" kindref="member">ErrorCategory::Syntax</ref></computeroutput> if the include text does not match the required format.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Tested:</title><para>Tested via <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> class. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="74" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a5579048688baac6cd96a523d3c4c00c0" prot="private" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::FileSourceResolver::removeFileProtocol</definition>
+        <argsstring>(String &amp;path) const noexcept</argsstring>
+        <name>removeFileProtocol</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::removeFileProtocol</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="86" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a57ad4a25caa84bc3565d6562bd95a730" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void erbsland::conf::FileSourceResolver::normalizePathSeparators</definition>
+        <argsstring>(String &amp;path)</argsstring>
+        <name>normalizePathSeparators</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::normalizePathSeparators</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="87" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a84db653d432088d3c91ca7d976cf74be" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto erbsland::conf::FileSourceResolver::buildDirectory</definition>
+        <argsstring>(const SourceIdentifierPtr &amp;sourceIdentifier, std::u8string_view directory) const -&gt; std::filesystem::path</argsstring>
+        <name>buildDirectory</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::buildDirectory</qualifiedname>
+        <param>
+          <type>const SourceIdentifierPtr &amp;</type>
+          <declname>sourceIdentifier</declname>
+        </param>
+        <param>
+          <type>std::u8string_view</type>
+          <declname>directory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="97" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a548c21b292c503b0ad98d2da238ddbc2" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void erbsland::conf::FileSourceResolver::verifyUncPath</definition>
+        <argsstring>(const String &amp;path)</argsstring>
+        <name>verifyUncPath</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::verifyUncPath</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="88" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1ad11b756916a196302a75a903ba785d9c" prot="private" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::splitDirectoryAndFilename</definition>
+        <argsstring>(const String &amp;path) noexcept -&gt; std::tuple&lt; std::u8string_view, std::u8string_view &gt;</argsstring>
+        <name>splitDirectoryAndFilename</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::splitDirectoryAndFilename</qualifiedname>
+        <param>
+          <type>const <ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="89" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1ad7d90da8c195b2e4d814a9dca6776621" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::getFilenamePattern</definition>
+        <argsstring>(std::u8string_view filename) -&gt; FilenamePattern</argsstring>
+        <name>getFilenamePattern</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::getFilenamePattern</qualifiedname>
+        <param>
+          <type>std::u8string_view</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="91" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a52ee9fdcf32fbe02eeaf239ecfacd000" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::validateDirectoryWildcard</definition>
+        <argsstring>(std::u8string_view directory) -&gt; std::tuple&lt; std::u8string_view, bool &gt;</argsstring>
+        <name>validateDirectoryWildcard</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::validateDirectoryWildcard</qualifiedname>
+        <param>
+          <type>std::u8string_view</type>
+          <declname>directory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="93" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a34682d4e74d3f957906d3fedbdcea716" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::getBaseDirectory</definition>
+        <argsstring>(const SourceIdentifierPtr &amp;sourceIdentifier) -&gt; std::filesystem::path</argsstring>
+        <name>getBaseDirectory</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::getBaseDirectory</qualifiedname>
+        <param>
+          <type>const SourceIdentifierPtr &amp;</type>
+          <declname>sourceIdentifier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="95" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a578ff4d5855a110ef7b949397a5cb6b3" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::scanForPaths</definition>
+        <argsstring>(const std::filesystem::path &amp;directory, bool isRecursive, const FilenamePattern &amp;filenamePattern) -&gt; std::vector&lt; std::filesystem::path &gt;</argsstring>
+        <name>scanForPaths</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::scanForPaths</qualifiedname>
+        <param>
+          <type>const std::filesystem::path &amp;</type>
+          <declname>directory</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isRecursive</declname>
+        </param>
+        <param>
+          <type>const FilenamePattern &amp;</type>
+          <declname>filenamePattern</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="100" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a929a843d1579c77459a653c1774c2c57" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::createSourcesFromPaths</definition>
+        <argsstring>(const std::vector&lt; std::filesystem::path &gt; &amp;paths) -&gt; SourceListPtr</argsstring>
+        <name>createSourcesFromPaths</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::createSourcesFromPaths</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::filesystem::path &gt; &amp;</type>
+          <declname>paths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="104" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a579f66ccc106cbdf99fb5d4a51c29bb8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void erbsland::conf::FileSourceResolver::throwError</definition>
+        <argsstring>(String message, std::optional&lt; std::filesystem::path &gt; path=std::nullopt, std::optional&lt; std::error_code &gt; errorCode=std::nullopt)</argsstring>
+        <name>throwError</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::throwError</qualifiedname>
+        <param>
+          <type><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref></type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; std::filesystem::path &gt;</type>
+          <declname>path</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <param>
+          <type>std::optional&lt; std::error_code &gt;</type>
+          <declname>errorCode</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1a2b3412d741a27fa1dc2b25408642fd65" prot="private" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::sortLess</definition>
+        <argsstring>(const SourcePtr &amp;a, const SourcePtr &amp;b) noexcept -&gt; bool</argsstring>
+        <name>sortLess</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::sortLess</qualifiedname>
+        <param>
+          <type>const SourcePtr &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const SourcePtr &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="110" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_file_source_resolver_1aed821cb5ac172397042916a32035ac0e" prot="private" static="yes" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>static auto erbsland::conf::FileSourceResolver::splitPath</definition>
+        <argsstring>(const std::u8string &amp;path) noexcept -&gt; std::vector&lt; std::u8string_view &gt;</argsstring>
+        <name>splitPath</name>
+        <qualifiedname>erbsland::conf::FileSourceResolver::splitPath</qualifiedname>
+        <param>
+          <type>const std::u8string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/FileSourceResolver.hpp" line="113" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A file source resolver. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The file source resolver supports the recommended format to include files. It works with relative and absolute paths and also has support for wildcards.</para>
+<para>Here are a few examples:</para>
+<para><programlisting><codeline><highlight class="normal">&amp;at;include<sp/></highlight><highlight class="stringliteral">&quot;file:example.elcl&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>File<sp/>in<sp/>the<sp/>same<sp/>directory.</highlight></codeline>
+<codeline><highlight class="normal">&amp;at;include<sp/></highlight><highlight class="stringliteral">&quot;file:sub/example.elcl&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>File<sp/>in<sp/>a<sp/>subdirectory<sp/>of<sp/>the<sp/>current<sp/>configuration<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal">&amp;at;include<sp/></highlight><highlight class="stringliteral">&quot;file:../example.elcl&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>File<sp/>in<sp/>the<sp/>parent<sp/>directory<sp/>(</highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>access<sp/>rules<sp/>allow<sp/>it)</highlight></codeline>
+<codeline><highlight class="normal">&amp;at;include<sp/></highlight><highlight class="stringliteral">&quot;file:/usr/local/example.elcl&quot;</highlight><highlight class="normal"><sp/><sp/><sp/>#<sp/>Absolute<sp/>path.</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>erbsland::conf::FileSourceResolver</label>
+        <link refid="classerbsland_1_1conf_1_1_file_source_resolver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::SourceResolver</label>
+        <link refid="classerbsland_1_1conf_1_1_source_resolver"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>erbsland::conf::FileSourceResolver</label>
+        <link refid="classerbsland_1_1conf_1_1_file_source_resolver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland::conf::SourceResolver</label>
+        <link refid="classerbsland_1_1conf_1_1_source_resolver"/>
+      </node>
+    </collaborationgraph>
+    <location file="erbsland/conf/FileSourceResolver.hpp" line="34" column="1" bodyfile="erbsland/conf/FileSourceResolver.hpp" bodystart="34" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea273df0be0983a42636a6fd1c9304cc27" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>_featureCount</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a85998f8ae08f51b59cdaba67868b52db" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>_features</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea6576b64a5c2573f52ad7a651ee1e8b40" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>AbsolutePaths</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a84db653d432088d3c91ca7d976cf74be" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>buildDirectory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a3e0cd935d85ef806314b3a3fa86314f1" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>create</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a929a843d1579c77459a653c1774c2c57" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>createSourcesFromPaths</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1afff291ce8667d15aac612c3f4c432f22" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>disable</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a7f6fc682cb009c047881881ed80eb895" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>enable</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84e" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>Feature</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea99ec6811d65c794ad36bbec27e0eda2a" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>FilenameWildcard</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea13f36cb23516d9fb1462cc3bdcc157cc" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>FileProtocol</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1ad6886b64dc310019c628023346e1d7b1" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>FileSourceResolver</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a34682d4e74d3f957906d3fedbdcea716" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>getBaseDirectory</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1ad7d90da8c195b2e4d814a9dca6776621" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>getFilenamePattern</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a5afe475be2dc4c0454e33635b0b18a77" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>isEnabled</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a57ad4a25caa84bc3565d6562bd95a730" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>normalizePathSeparators</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84eae8eb91f3d4466133083b16267ba7886e" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>RecursiveWildcard</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a5579048688baac6cd96a523d3c4c00c0" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>removeFileProtocol</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1ac00c1b45ea6f03dfab4a6c9da222e89e" prot="public" virt="virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>resolve</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a578ff4d5855a110ef7b949397a5cb6b3" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>scanForPaths</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a2b3412d741a27fa1dc2b25408642fd65" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>sortLess</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1ad11b756916a196302a75a903ba785d9c" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>splitDirectoryAndFilename</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1aed821cb5ac172397042916a32035ac0e" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>splitPath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a579f66ccc106cbdf99fb5d4a51c29bb8" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>throwError</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a52ee9fdcf32fbe02eeaf239ecfacd000" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>validateDirectoryWildcard</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1a548c21b292c503b0ad98d2da238ddbc2" prot="private" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>verifyUncPath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adbac8de153c0e9c44ed11f49b283c84ea3a19913a08b8117e432f7e72ea2b78e8" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>WindowsUNCPath</name></member>
+      <member refid="classerbsland_1_1conf_1_1_file_source_resolver_1adb8971fd7e01e2721afd92973cb5bbb1" prot="public" virt="non-virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>~FileSourceResolver</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_resolver_1af8c9df096bebcc172a4081a0e61072d1" prot="public" virt="virtual"><scope>erbsland::conf::FileSourceResolver</scope><name>~SourceResolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

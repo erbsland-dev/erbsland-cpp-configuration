@@ -1,0 +1,480 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_name_path_8hpp" kind="file" language="C++">
+    <compoundname>NamePath.hpp</compoundname>
+    <includes refid="_name_8hpp" local="yes">Name.hpp</includes>
+    <includes local="yes">impl/utilities/InternalView.hpp</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">ranges</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_error_8hpp" local="yes">erbsland/conf/Error.hpp</includedby>
+    <includedby refid="_value_8hpp" local="yes">erbsland/conf/Value.hpp</includedby>
+    <includedby refid="all_8hpp" local="yes">erbsland/conf/all.hpp</includedby>
+    <includedby refid="_rule_8hpp" local="yes">erbsland/conf/vr/Rule.hpp</includedby>
+    <includedby refid="_name_path_helper_8hpp" local="yes">erbsland/conf/vr/builder/NamePathHelper.hpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>CaseSensitivity.hpp</label>
+        <link refid="_case_sensitivity_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>EscapeMode.hpp</label>
+        <link refid="_escape_mode_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Name.hpp</label>
+        <link refid="_name_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/NamePath.hpp</label>
+        <link refid="_name_path_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>NameType.hpp</label>
+        <link refid="_name_type_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>String.hpp</label>
+        <link refid="_string_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>StringList.hpp</label>
+        <link refid="_string_list_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>TestFormat.hpp</label>
+        <link refid="_test_format_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>bitset</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>format</label>
+      </node>
+      <node id="18">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>impl/char/Char.hpp</label>
+      </node>
+      <node id="14">
+        <label>impl/utilities/ComparisonHelper.hpp</label>
+      </node>
+      <node id="15">
+        <label>impl/utilities/ContainerWrappingHelper.hpp</label>
+      </node>
+      <node id="23">
+        <label>impl/utilities/HashHelper.hpp</label>
+      </node>
+      <node id="24">
+        <label>impl/utilities/InternalView.hpp</label>
+      </node>
+      <node id="16">
+        <label>impl/utilities/PrivateTag.hpp</label>
+      </node>
+      <node id="25">
+        <label>limits</label>
+      </node>
+      <node id="19">
+        <label>optional</label>
+      </node>
+      <node id="20">
+        <label>ranges</label>
+      </node>
+      <node id="21">
+        <label>span</label>
+      </node>
+      <node id="22">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="14">
+        <label>erbsland/conf/AccessCheck.hpp</label>
+        <link refid="_access_check_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>erbsland/conf/AccessSources.hpp</label>
+        <link refid="_access_sources_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>erbsland/conf/Date.hpp</label>
+        <link refid="_date_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>erbsland/conf/DateTime.hpp</label>
+        <link refid="_date_time_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>erbsland/conf/Error.hpp</label>
+        <link refid="_error_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>erbsland/conf/FileAccessCheck.hpp</label>
+        <link refid="_file_access_check_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>erbsland/conf/FileSourceResolver.hpp</label>
+        <link refid="_file_source_resolver_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland/conf/NamePath.hpp</label>
+        <link refid="_name_path_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>erbsland/conf/Parser.hpp</label>
+        <link refid="_parser_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>erbsland/conf/Source.hpp</label>
+        <link refid="_source_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>erbsland/conf/SourceResolver.hpp</label>
+        <link refid="_source_resolver_8hpp_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>erbsland/conf/Value.hpp</label>
+        <link refid="_value_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>erbsland/conf/all.hpp</label>
+        <link refid="all_8hpp_source"/>
+      </node>
+      <node id="19">
+        <label>erbsland/conf/vr/Rule.hpp</label>
+        <link refid="_rule_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>erbsland/conf/vr/Rules.hpp</label>
+        <link refid="_rules_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>erbsland/conf/vr/RulesBuilder.hpp</label>
+        <link refid="_rules_builder_8hpp_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>erbsland/conf/vr/all.hpp</label>
+        <link refid="vr_2all_8hpp_source"/>
+      </node>
+      <node id="20">
+        <label>erbsland/conf/vr/builder/NamePathHelper.hpp</label>
+        <link refid="_name_path_helper_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>erbsland/conf/vr/builder/TypeTraits.hpp</label>
+        <link refid="_type_traits_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>erbsland/conf/vr/builder/all.hpp</label>
+        <link refid="vr_2builder_2all_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classerbsland_1_1conf_1_1_name_path" prot="public">erbsland::conf::NamePath</innerclass>
+    <innernamespace refid="namespaceerbsland">erbsland</innernamespace>
+    <innernamespace refid="namespaceerbsland_1_1conf">erbsland::conf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2025<sp/>Erbsland<sp/>DEV.<sp/>https://erbsland.dev</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Name.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;impl/utilities/InternalView.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ranges&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">erbsland::conf<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classerbsland_1_1conf_1_1_name_path" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>definitions<sp/>to<sp/>be<sp/>used<sp/>with<sp/>std<sp/>algorithms.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>provide<sp/>const<sp/>access<sp/>to<sp/>the<sp/>elements<sp/>of<sp/>a<sp/>name<sp/>path.</highlight></codeline>
+<codeline lineno="37" refid="classerbsland_1_1conf_1_1_name_path_1abe41884d1e4ce97bccc481255d0692ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1abe41884d1e4ce97bccc481255d0692ab" kindref="member">iterator</ref><sp/>=<sp/>NameList::const_iterator;</highlight></codeline>
+<codeline lineno="39" refid="classerbsland_1_1conf_1_1_name_path_1adc17375ad85a00657991e3bf6e9d1dce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1adc17375ad85a00657991e3bf6e9d1dce" kindref="member">const_iterator</ref><sp/>=<sp/>NameList::const_iterator;</highlight></codeline>
+<codeline lineno="41" refid="classerbsland_1_1conf_1_1_name_path_1af67dc18c8bb10c5cfecab1b157eb48fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">value_type</ref><sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>;</highlight></codeline>
+<codeline lineno="43" refid="classerbsland_1_1conf_1_1_name_path_1aa8c2d0a49b4d266275f7d63407514f47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">reference</ref><sp/>=<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>&amp;;</highlight></codeline>
+<codeline lineno="45" refid="classerbsland_1_1conf_1_1_name_path_1ad62367fbc2c1a23a0a433d566bcc420d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">const_reference</ref><sp/>=<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>&amp;;</highlight></codeline>
+<codeline lineno="47" refid="classerbsland_1_1conf_1_1_name_path_1a8b77359e0965f6376e33ed00b893dd37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1a8b77359e0965f6376e33ed00b893dd37" kindref="member">size_type</ref><sp/>=<sp/>std::size_t;</highlight></codeline>
+<codeline lineno="49" refid="classerbsland_1_1conf_1_1_name_path_1af3b9c84c6d8c52ea7b2afc80853ca500" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1af3b9c84c6d8c52ea7b2afc80853ca500" kindref="member">Index</ref><sp/>=<sp/>std::size_t;</highlight></codeline>
+<codeline lineno="51" refid="classerbsland_1_1conf_1_1_name_path_1a8c7b1a1ac22aecc5821e3cfbc9821e2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1a8c7b1a1ac22aecc5821e3cfbc9821e2e" kindref="member">Count</ref><sp/>=<sp/>std::size_t;</highlight></codeline>
+<codeline lineno="53" refid="classerbsland_1_1conf_1_1_name_path_1a74c623b9ee5fa04e9d2afcb3c70d230a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1a74c623b9ee5fa04e9d2afcb3c70d230a" kindref="member">difference_type</ref><sp/>=<sp/>std::ptrdiff_t;</highlight></codeline>
+<codeline lineno="55" refid="classerbsland_1_1conf_1_1_name_path_1a8eb4b0ddd943d26ad01f7b9a9c1e0537" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">pointer</ref><sp/>=<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>*;</highlight></codeline>
+<codeline lineno="57" refid="classerbsland_1_1conf_1_1_name_path_1a433114e1119c09173ffa6d8cfa71f1a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">const_pointer</ref><sp/>=<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>*;</highlight></codeline>
+<codeline lineno="59" refid="classerbsland_1_1conf_1_1_name_path_1a51e4ed17abb8a4a191d55605aca1391f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1a51e4ed17abb8a4a191d55605aca1391f" kindref="member">reverse_iterator</ref><sp/>=<sp/>std::reverse_iterator&lt;iterator&gt;;</highlight></codeline>
+<codeline lineno="61" refid="classerbsland_1_1conf_1_1_name_path_1a482859aa142a24f794e38989443f1ae3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1a482859aa142a24f794e38989443f1ae3" kindref="member">const_reverse_iterator</ref><sp/>=<sp/>std::reverse_iterator&lt;const_iterator&gt;;</highlight></codeline>
+<codeline lineno="63" refid="classerbsland_1_1conf_1_1_name_path_1a009ebce9ee20242c5d677756aeda3214" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1a009ebce9ee20242c5d677756aeda3214" kindref="member">const_iterator_category</ref><sp/>=<sp/>std::forward_iterator_tag;</highlight></codeline>
+<codeline lineno="65" refid="classerbsland_1_1conf_1_1_name_path_1a183ecddd43b337b2f02a7e0103c03c6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classerbsland_1_1conf_1_1_name_path_1a183ecddd43b337b2f02a7e0103c03c6e" kindref="member">iterator_category</ref><sp/>=<sp/>std::forward_iterator_tag;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classerbsland_1_1conf_1_1_name_path_1ace97185fe8cc5326a33879790fb33543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1af3b9c84c6d8c52ea7b2afc80853ca500" kindref="member">Index</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1ace97185fe8cc5326a33879790fb33543" kindref="member">npos</ref><sp/>=<sp/>std::numeric_limits&lt;Index&gt;::max();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73" refid="classerbsland_1_1conf_1_1_name_path_1a43dc13a24886c2485edfc158b05ae072" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a43dc13a24886c2485edfc158b05ae072" kindref="member">NamePath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref><sp/>&amp;name)<sp/>:<sp/>_names{1,<sp/>name}<sp/>{}<sp/></highlight><highlight class="comment">//<sp/>NOLINT(*-explicit-constructor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classerbsland_1_1conf_1_1_name_path_1a1b2e87e56d2e48ef00a79a2b30f96a15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a1b2e87e56d2e48ef00a79a2b30f96a15" kindref="member">NamePath</ref>(<ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref><sp/>&amp;&amp;name)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>NOLINT(*-explicit-constructor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_names.emplace_back(std::move(name));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classerbsland_1_1conf_1_1_name_path_1a97e6d940ec0c2f730b06cd8f270fd69c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a97e6d940ec0c2f730b06cd8f270fd69c" kindref="member">NamePath</ref>(NameList<sp/>names)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>_names{std::move(names)}<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classerbsland_1_1conf_1_1_name_path_1af700d0ec0d9739ec36e399b7a99cc74a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1af700d0ec0d9739ec36e399b7a99cc74a" kindref="member">NamePath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::span&lt;const<sp/>Name&gt;<sp/>names)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>_names{names.<ref refid="classerbsland_1_1conf_1_1_name_path_1a8b8ec7916314910b5385658054de8d96" kindref="member">begin</ref>(),<sp/>names.<ref refid="classerbsland_1_1conf_1_1_name_path_1acb0f22f14a25804fd4dffa579b7017b1" kindref="member">end</ref>()}<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classerbsland_1_1conf_1_1_name_path_1a7ed15c03bf7093beda2726471b2a2c34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a7ed15c03bf7093beda2726471b2a2c34" kindref="member">NamePath</ref>(</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NameList::const_iterator<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a8b8ec7916314910b5385658054de8d96" kindref="member">begin</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NameList::const_iterator<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1acb0f22f14a25804fd4dffa579b7017b1" kindref="member">end</ref>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_names{<ref refid="classerbsland_1_1conf_1_1_name_path_1a8b8ec7916314910b5385658054de8d96" kindref="member">begin</ref>,<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1acb0f22f14a25804fd4dffa579b7017b1" kindref="member">end</ref>}<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classerbsland_1_1conf_1_1_name_path_1a7891d8f1951c10e18e52cd98c5690ee5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a7891d8f1951c10e18e52cd98c5690ee5" kindref="member">NamePath</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106" refid="classerbsland_1_1conf_1_1_name_path_1ac91116c05b7e1ffb7fbab374ab7ce275" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1ac91116c05b7e1ffb7fbab374ab7ce275" kindref="member">~NamePath</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>operators</highlight></codeline>
+<codeline lineno="110" refid="classerbsland_1_1conf_1_1_name_path_1ad304d1a3f4a27367e9e9c84269bb9312" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::strong_ordering<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1ad304d1a3f4a27367e9e9c84269bb9312" kindref="member">operator&lt;=&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112" refid="classerbsland_1_1conf_1_1_name_path_1a639182cf7760551af913e4c65185100c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a639182cf7760551af913e4c65185100c" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>accessors<sp/>and<sp/>tests.</highlight></codeline>
+<codeline lineno="116" refid="classerbsland_1_1conf_1_1_name_path_1a04de045202004f6ff2f86869e49a944b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a04de045202004f6ff2f86869e49a944b" kindref="member">empty</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classerbsland_1_1conf_1_1_name_path_1a0e98823f651c98e59de2ceef6ea5db9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a8c7b1a1ac22aecc5821e3cfbc9821e2e" kindref="member">Count</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a0e98823f651c98e59de2ceef6ea5db9c" kindref="member">size</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classerbsland_1_1conf_1_1_name_path_1ae2a86e73969e6f3401839cb83667768f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1ae2a86e73969e6f3401839cb83667768f" kindref="member">at</ref>(<ref refid="classerbsland_1_1conf_1_1_name_path_1af3b9c84c6d8c52ea7b2afc80853ca500" kindref="member">Index</ref><sp/>index)<sp/>const<sp/>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classerbsland_1_1conf_1_1_name_path_1a49b5da2a52ba34d24bc8ceb1408c13c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1af3b9c84c6d8c52ea7b2afc80853ca500" kindref="member">Index</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a49b5da2a52ba34d24bc8ceb1408c13c9" kindref="member">find</ref>(const<sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref><sp/>&amp;name)<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classerbsland_1_1conf_1_1_name_path_1a39c348e399f6d64ab3f41791b8828a8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a39c348e399f6d64ab3f41791b8828a8d" kindref="member">front</ref>()<sp/>const<sp/>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classerbsland_1_1conf_1_1_name_path_1a92ff87e1a35bf1f72f5487dd8262e321" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>const<sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>&amp;<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a92ff87e1a35bf1f72f5487dd8262e321" kindref="member">back</ref>()<sp/>const<sp/>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>tests</highlight></codeline>
+<codeline lineno="138" refid="classerbsland_1_1conf_1_1_name_path_1a1b77756adb95f01fe85179113db257e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a1b77756adb95f01fe85179113db257e0" kindref="member">containsIndex</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classerbsland_1_1conf_1_1_name_path_1a7a7b97e717ea6b8d4b470ee6455682e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a7a7b97e717ea6b8d4b470ee6455682e5" kindref="member">containsText</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>iterators</highlight></codeline>
+<codeline lineno="146" refid="classerbsland_1_1conf_1_1_name_path_1a8b8ec7916314910b5385658054de8d96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>NameList::<ref refid="classerbsland_1_1conf_1_1_name_path_1adc17375ad85a00657991e3bf6e9d1dce" kindref="member">const_iterator</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a8b8ec7916314910b5385658054de8d96" kindref="member">begin</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classerbsland_1_1conf_1_1_name_path_1acb0f22f14a25804fd4dffa579b7017b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>NameList::<ref refid="classerbsland_1_1conf_1_1_name_path_1adc17375ad85a00657991e3bf6e9d1dce" kindref="member">const_iterator</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1acb0f22f14a25804fd4dffa579b7017b1" kindref="member">end</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classerbsland_1_1conf_1_1_name_path_1aaacfc6dd59bb9e402e189b73d70b9e04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>std::span&lt;const<sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>&gt;<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1aaacfc6dd59bb9e402e189b73d70b9e04" kindref="member">view</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>working<sp/>with<sp/>the<sp/>name<sp/>path.</highlight></codeline>
+<codeline lineno="156" refid="classerbsland_1_1conf_1_1_name_path_1a7860a531f6dc11123ef4369a7b4ae0ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a7860a531f6dc11123ef4369a7b4ae0ec" kindref="member">parent</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classerbsland_1_1conf_1_1_name_path_1a1be4d6fdd86ce3994888d7724caa0c42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a1be4d6fdd86ce3994888d7724caa0c42" kindref="member">subPath</ref>(<ref refid="classerbsland_1_1conf_1_1_name_path_1af3b9c84c6d8c52ea7b2afc80853ca500" kindref="member">Index</ref><sp/>pos<sp/>=<sp/>0,<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a8c7b1a1ac22aecc5821e3cfbc9821e2e" kindref="member">Count</ref><sp/>count<sp/>=<sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1ace97185fe8cc5326a33879790fb33543" kindref="member">npos</ref>)<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>template&lt;typename<sp/>Fwd&gt;<sp/>requires<sp/>std::is_convertible_v&lt;Fwd,<sp/><ref refid="classerbsland_1_1conf_1_1_name" kindref="compound">Name</ref>&gt;</highlight></codeline>
+<codeline lineno="168" refid="classerbsland_1_1conf_1_1_name_path_1a10b254c7d05695706d67b0fc5d74cca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a10b254c7d05695706d67b0fc5d74cca2" kindref="member">append</ref>(Fwd&amp;&amp;<sp/>name)<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_names.emplace_back(std::forward&lt;Fwd&gt;(name));</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classerbsland_1_1conf_1_1_name_path_1a607d429e0700ae7693fcb62c381c3f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a607d429e0700ae7693fcb62c381c3f22" kindref="member">append</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/>&amp;namePath)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classerbsland_1_1conf_1_1_name_path_1ab54e9bbec57dbe9519355f119968a327" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1ab54e9bbec57dbe9519355f119968a327" kindref="member">prepend</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/>&amp;namePath)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="classerbsland_1_1conf_1_1_name_path_1a31700357edf1a0b1e76b6ec7874457e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a31700357edf1a0b1e76b6ec7874457e3" kindref="member">popBack</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="classerbsland_1_1conf_1_1_name_path_1af2b400ae4c65a43eecd7ff5da0801dde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1af2b400ae4c65a43eecd7ff5da0801dde" kindref="member">clear</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">public:<sp/></highlight><highlight class="comment">//<sp/>conversion</highlight></codeline>
+<codeline lineno="189" refid="classerbsland_1_1conf_1_1_name_path_1ac3c998e88fc2419bb7d8f666b6510fef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1ac3c998e88fc2419bb7d8f666b6510fef" kindref="member">toText</ref>()<sp/>const<sp/>noexcept<sp/>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="classerbsland_1_1conf_1_1_name_path_1a16735a8799cbfe996ecd46e52e64fdb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>static<sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/><ref refid="classerbsland_1_1conf_1_1_name_path_1a16735a8799cbfe996ecd46e52e64fdb2" kindref="member">fromText</ref>(const<sp/><ref refid="classerbsland_1_1conf_1_1_string" kindref="compound">String</ref>&amp;<sp/>text)<sp/>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal">public:</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ERBSLAND_CONF_INTERNAL_VIEWS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>impl::InternalViewPtr<sp/>internalView(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/>&amp;</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>NameList<sp/>_names;<sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="keyword">using<sp/></highlight><highlight class="normal">NamePathLike<sp/>=<sp/>std::variant&lt;Name,<sp/>NamePath,<sp/>String,<sp/>std::size_t&gt;;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="keyword">using<sp/></highlight><highlight class="normal">NamePathList<sp/>=<sp/>std::vector&lt;NamePath&gt;;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">[[nodiscard]]<sp/><ref refid="classerbsland_1_1conf_1_1_name_path" kindref="compound">NamePath</ref><sp/>toNamePath(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>NamePathLike&amp;<sp/>namePathLike)<sp/>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="erbsland/conf/NamePath.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classerbsland_1_1conf_1_1_source_resolver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>erbsland::conf::SourceResolver</compoundname>
+    <derivedcompoundref refid="classerbsland_1_1conf_1_1_file_source_resolver" prot="public" virt="non-virtual">erbsland::conf::FileSourceResolver</derivedcompoundref>
+    <includes refid="_source_resolver_8hpp" local="no">erbsland/conf/SourceResolver.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_resolver_1af8c9df096bebcc172a4081a0e61072d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual erbsland::conf::SourceResolver::~SourceResolver</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SourceResolver</name>
+        <qualifiedname>erbsland::conf::SourceResolver::~SourceResolver</qualifiedname>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceResolver.hpp" line="24" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classerbsland_1_1conf_1_1_source_resolver_1aef21c0e281148027beb8c54483eab01a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>SourceListPtr</type>
+        <definition>virtual SourceListPtr erbsland::conf::SourceResolver::resolve</definition>
+        <argsstring>(const SourceResolverContext &amp;context)=0</argsstring>
+        <name>resolve</name>
+        <qualifiedname>erbsland::conf::SourceResolver::resolve</qualifiedname>
+        <reimplementedby refid="classerbsland_1_1conf_1_1_file_source_resolver_1ac00c1b45ea6f03dfab4a6c9da222e89e">resolve</reimplementedby>
+        <param>
+          <type>const <ref refid="structerbsland_1_1conf_1_1_source_resolver_context" kindref="compound">SourceResolverContext</ref> &amp;</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Resolve Sources. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called when the parser encounters an <computeroutput>include</computeroutput> meta-command.</para>
+<para>The raw and unprocessed text of the command and the source of the parsed document are given as arguments to this function. This function must either return a list of sources that match the expression or throw an <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> exception. If an exception is thrown, the parsing will be stopped and the thrown exception will be passed to the caller of <computeroutput>parse()</computeroutput>.</para>
+<para>If a list is returned, the parser will parse the sources in the given order and include the parsed contents in the document. The returned sources should be in a closed state. The parser will open them in the sequence they are parsed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resolve context. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of sources (see <computeroutput>SourceList</computeroutput>) to include in the document. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Throw <computeroutput><ref refid="classerbsland_1_1conf_1_1_error" kindref="compound">Error</ref></computeroutput> with <computeroutput><ref refid="classerbsland_1_1conf_1_1_error_category_1a0eba29c14803214d9be7aa42ed362493a88f967494f21e71394c62d9888ea6d9a" kindref="member">ErrorCategory::Syntax</ref></computeroutput> if the include text does not match the required format.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="par"><title>Tested:</title><para>Tested via <computeroutput><ref refid="classerbsland_1_1conf_1_1_parser" kindref="compound">Parser</ref></computeroutput> class. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erbsland/conf/SourceResolver.hpp" line="47" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The interface for any source resolver implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>erbsland::conf::FileSourceResolver</label>
+        <link refid="classerbsland_1_1conf_1_1_file_source_resolver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>erbsland::conf::SourceResolver</label>
+        <link refid="classerbsland_1_1conf_1_1_source_resolver"/>
+      </node>
+    </inheritancegraph>
+    <location file="erbsland/conf/SourceResolver.hpp" line="21" column="1" bodyfile="erbsland/conf/SourceResolver.hpp" bodystart="21" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classerbsland_1_1conf_1_1_source_resolver_1aef21c0e281148027beb8c54483eab01a" prot="public" virt="pure-virtual"><scope>erbsland::conf::SourceResolver</scope><name>resolve</name></member>
+      <member refid="classerbsland_1_1conf_1_1_source_resolver_1af8c9df096bebcc172a4081a0e61072d1" prot="public" virt="virtual"><scope>erbsland::conf::SourceResolver</scope><name>~SourceResolver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
